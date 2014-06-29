@@ -154,6 +154,7 @@ so you need Python.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
+* [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 
 ## Audio
 
