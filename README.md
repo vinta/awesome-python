@@ -74,7 +74,7 @@ so you need Python.
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/2/library/os.path.html).
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
-* [django-storages](http://django-storages.readthedocs.org/) - A collection of custom storage backends for Django.
+* [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 
 ## Date and Time
 
@@ -82,8 +82,8 @@ so you need Python.
 
 * [arrow](https://github.com/crsmithdev/arrow) - Better dates & times for Python.
 * [dateutil](https://pypi.python.org/pypi/python-dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/2/library/datetime.html) module.
-* [delorean](http://delorean.readthedocs.org/) - A library for clearing up the inconvenient truths that arise dealing with datetimes in Python.
-* [when.py](http://whenpy.readthedocs.org/) - Providing user-friendly functions to help perform common date and time actions.
+* [delorean](https://github.com/myusuf3/delorean/) - A library for clearing up the inconvenient truths that arise dealing with datetimes in Python.
+* [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
 * [moment](https://github.com/zachwill/moment) - A Python library for dealing with dates/times. Inspired by [Moment.js](http://momentjs.com/).
 
 ## Text Processing
@@ -152,7 +152,7 @@ so you need Python.
 
 * [django-elastic-transcoder](https://github.com/StreetVoice/django-elastic-transcoder) - Django + AWS Elastic Transcoder.
 * [beets](http://beets.radbox.org/) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
-* [pyechonest](https://github.com/echonest/pyechonest) - Python client for the Echo Nest API.
+* [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://developer.echonest.com/docs/) API.
 * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [audioread](https://github.com/sampsyo/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
@@ -198,7 +198,7 @@ so you need Python.
 *Libraries that implement Object-Relational Mapping or datamapping techniques.*
 
 * Relational Databases
-	* [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - The part of Django.
+	* [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
 * NoSQL Databases
@@ -231,6 +231,8 @@ so you need Python.
 * [flask-api](http://www.flaskapi.org/) - An implementation of the same web browsable APIs that django-rest-framework provides.
 * [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
 * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
+* [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
+* [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
 
 ## Authentication and OAuth
 
@@ -240,12 +242,13 @@ so you need Python.
 * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
 * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
 * [python-oauth2](https://github.com/simplegeo/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
+* [rauth](https://github.com/litl/rauth) - A Python library for OAuth 1.0/a, 2.0, and Ofly.
 
 ## Template Engine
 
 *Libraries and tools for templating and lexing.*
 
-* [Jinja2](http://jinja.pocoo.org/docs/) - A modern and designer friendly templating language.
+* [Jinja2](https://github.com/mitsuhiko/jinja2) - A modern and designer friendly templating language.
 
 ## Queue
 
@@ -267,7 +270,7 @@ so you need Python.
 
 *Tools for managing, compressing and minifying website assets.*
 
-* TODO
+* [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline javascript or CSS into a single cached file.
 
 ## Caching
 
@@ -297,7 +300,7 @@ so you need Python.
 
 ## HTML Manipulation
 
-*Libraries for working with HTML.*
+*Libraries for working with HTML and XML.*
 
 * [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
 * [lxml](http://lxml.de/) - A very fast, easy-to-use and versatile library for handling HTML and XML.
@@ -306,6 +309,7 @@ so you need Python.
 * [cssutils](https://pypi.python.org/pypi/cssutils/) - A CSS library for Python.
 * [MarkupSafe](https://github.com/mitsuhiko/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 * [bleach](http://bleach.readthedocs.org/) - A whitelist-based HTML sanitization and text linkification library.
+* [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
 ## Web Crawling
 
@@ -366,7 +370,7 @@ so you need Python.
 
 *Libraries for working with GUI applications.*
 
-* [PySide](http://qt-project.org/wiki/pyside) - Python bindings for the Qt cross-platform application and UI framework
+* [PySide](http://qt-project.org/wiki/pyside) - Python bindings for the Qt cross-platform application and UI framework.
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [kivy](http://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, MacOSX, Android and iOS.
 
@@ -374,7 +378,7 @@ so you need Python.
 
 *Libraries for generating and working with log files.*
 
-* [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python
+* [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
 * [Raven](http://raven.readthedocs.org/) - A Python client for Sentry.
 
@@ -407,6 +411,7 @@ so you need Python.
 *Libraries for dubugging and developing*
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
+* [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
 
@@ -420,6 +425,8 @@ so you need Python.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [PyMC](https://github.com/pymc-devs/pymc) - A module for Bayesian statistical modeling and model fitting which focuses on advanced Markov chain Monte Carlo fitting algorithms.
+* [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
+* [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 
 ## Machine Learning
 
@@ -429,6 +436,7 @@ so you need Python.
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
 * [NuPIC](http://numenta.org/) - Numenta Platform for Intelligent Computing.
 * [Pylearn2](http://deeplearning.net/software/pylearn2/) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
+* [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
 * [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
@@ -439,13 +447,15 @@ so you need Python.
 
 * [PySpark](http://spark.apache.org/docs/latest/programming-guide.html) - The Spark Python API.
 * [dpark](https://github.com/douban/dpark) - Python clone of Spark, a MapReduce alike framework in Python.
+* [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
+* [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
 
 ## Third-party APIs
 
 *Libraries for accessing third party APIs.*
 
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
-* [boto](http://docs.pythonboto.org/) - Python interface to Amazon Web Services.
+* [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 
@@ -453,7 +463,7 @@ so you need Python.
 
 *Useful libraries or tools that don't fit in the categories above.*
 
-* [IPython](http://ipython.org/) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
 
 # Resources
 
