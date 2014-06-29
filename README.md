@@ -98,7 +98,7 @@ so you need Python.
 * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
 * [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
 * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
-* [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser. It provides support for parsing, splitting and formatting SQL statements.
+* [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser.
 * [Pygments](http://pygments.org/) - A generic syntax highlighter.
 * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that handles unicode.
 * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs. Developed by Mozilla.
@@ -106,6 +106,7 @@ so you need Python.
 * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
 * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate chinese hanzi (漢字) to pinyin (拼音).
 * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts.
+* [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
 * [xlwt / xlrd](http://www.python-excel.org/) - A package is for writing and reading data and formatting information from Excel files.
 * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
 * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
@@ -209,7 +210,7 @@ so you need Python.
 
 *Web development frameworks.*
 
-* [Django](https://www.djangoproject.com/) - A high-level Python Web framework that encourages rapid development and clean, pragmatic design.
+* [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
@@ -218,7 +219,7 @@ so you need Python.
 
 *Content Management Systems*
 
-* [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform. Built using the Django framework.
+* [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
 * [Wagtail](http://wagtail.io/) - A Django content management system
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
 
@@ -238,7 +239,7 @@ so you need Python.
 
 *Libraries for implementing authentications schemes.*
 
-* [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism with support for several frameworks and auth providers.
+* [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
 * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
 * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
 * [python-oauth2](https://github.com/simplegeo/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
@@ -282,6 +283,7 @@ so you need Python.
 
 *Libraries for sending and parsing email.*
 
+* [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
 
@@ -354,6 +356,15 @@ so you need Python.
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 
+## Admin Panels
+
+*Libraries for administrative interfaces.*
+
+* [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
+* [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
+* [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
+* [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
+
 ## DevOps Tools
 
 *Software and libraries for DevOps*
@@ -362,7 +373,9 @@ so you need Python.
 * [Ansible](http://www.ansible.com/) - An IT automation tool.
 * [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
 * [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
-* [Fabtools](http://fabtools.readthedocs.org/) - Tools for writing awesome Fabric files.
+* [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
+* [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
+* [gunicorn](http://gunicorn.org/) - A WSGI HTTP Server for UNIX, fast clients and sleepy applications.
 * [Supervisor](http://supervisord.org/) - A Process Control System.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 
@@ -372,7 +385,7 @@ so you need Python.
 
 * [PySide](http://qt-project.org/wiki/pyside) - Python bindings for the Qt cross-platform application and UI framework.
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
-* [kivy](http://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, MacOSX, Android and iOS.
+* [kivy](http://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
 
 ## Logging
 
@@ -380,7 +393,7 @@ so you need Python.
 
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
-* [Raven](http://raven.readthedocs.org/) - A Python client for Sentry.
+* [Raven](http://raven.readthedocs.org/) - The Python client for Sentry.
 
 ## Testing
 
@@ -424,7 +437,7 @@ so you need Python.
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
-* [PyMC](https://github.com/pymc-devs/pymc) - A module for Bayesian statistical modeling and model fitting which focuses on advanced Markov chain Monte Carlo fitting algorithms.
+* [PyMC](https://github.com/pymc-devs/pymc) - Markov Chain Monte Carlo sampling toolkit.
 * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 
@@ -434,9 +447,10 @@ so you need Python.
 
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
-* [NuPIC](http://numenta.org/) - Numenta Platform for Intelligent Computing.
-* [Pylearn2](http://deeplearning.net/software/pylearn2/) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
+* [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
+* [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
 * [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
+* [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
 * [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
@@ -449,6 +463,7 @@ so you need Python.
 * [dpark](https://github.com/douban/dpark) - Python clone of Spark, a MapReduce alike framework in Python.
 * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
 * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
+* [dumbo](https://github.com/klbostee/dumbo) - Python module that allows one to easily write and run Hadoop programs.
 
 ## Third-party APIs
 
@@ -458,6 +473,13 @@ so you need Python.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
+
+## Algorithms and Design Patterns
+
+*Collections of algorithms and design patterns.*
+
+* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
+* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
 
 ## Miscellaneous
 
@@ -482,7 +504,7 @@ so you need Python.
 
 ## Articles
 
-* TODO
+* [More About Unicode in Python 2 and 3](http://lucumr.pocoo.org/2014/1/5/unicode-in-2-and-3/)
 
 # Contributing
 
