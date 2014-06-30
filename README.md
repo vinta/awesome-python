@@ -508,6 +508,15 @@ so you need Python.
 
 # Resources
 
+## Editor Plugins
+
+* Vim
+	* TODO
+* Emacs
+	* TODO
+* Sublime Text
+	* TODO
+
 ## Books
 
 * TODO
