@@ -287,7 +287,7 @@ so you need Python.
 
 *Libraries for caching data.*
 
-* TODO
+* [Beaker Caching & Sessions](http://beaker.readthedocs.org/en/latest/) - Beaker is a library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
 
 ## Email
 
