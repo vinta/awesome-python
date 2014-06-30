@@ -56,6 +56,8 @@ so you need Python.
 - [Resources](#resources)
     - [Books](#books)
     - [Websites](#websites)
+    - [Weekly](#weekly)
+    - [Twitter](#twitter)
     - [Articles](#articles)
 
 ## Environment Management
