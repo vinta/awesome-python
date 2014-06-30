@@ -230,8 +230,9 @@ so you need Python.
 *Content Management Systems*
 
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
-* [Wagtail](http://wagtail.io/) - A Django content management system
+* [Wagtail](http://wagtail.io/) - A Django content management system.
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
+* [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 
 ## RESTful API
 
