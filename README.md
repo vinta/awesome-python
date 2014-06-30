@@ -446,6 +446,7 @@ so you need Python.
 *Libraries for dubugging and developing*
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
+* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
