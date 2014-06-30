@@ -43,6 +43,7 @@ so you need Python.
     - [Admin Panels](#admin-panels)
     - [DevOps Tools](#devops-tools)
     - [GUI](#gui)
+    - [Game Development](#game-development)
     - [Logging](#logging)
     - [Testing](#testing)
     - [Code Analysis and Linter](#code-analysis-and-linter)
@@ -409,6 +410,16 @@ portals with high-traffic.
 * [PySide](http://qt-project.org/wiki/pyside) - Python bindings for the Qt cross-platform application and UI framework.
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [kivy](http://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
+
+## Game Development
+
+*Awesome game development libraries.*
+
+* [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules
+	designed for writing games.
+* [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D
+	games, demos, and other graphical/interactive applications. It is based on
+	pyglet.
 
 ## Logging
 
