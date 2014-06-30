@@ -430,7 +430,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries for making Python faster.*
 
 * [Cython](http://cython.org/) - Optimizing Static Complier for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
-* [PyPy](http://pypy.org/) - An implmentation of Python in Python. The interpreter uses black magic to make python very fast without having to add in additional type information.
+* [PyPy](http://pypy.org/) - An implmentation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 
 ## Logging
 
