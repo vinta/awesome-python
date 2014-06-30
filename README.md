@@ -362,7 +362,8 @@ so you need Python.
 
 *Libraries for fighting spam.*
 
-* TODO
+* [Stopspam](https://github.com/phalt/stopspam) - Intelligent spam detection for Python
+* [Django Simple Spam Blocker](https://github.com/moqada/django-simple-spam-blocker) - Simple spam blocker for Django
 
 ## Networking
 
