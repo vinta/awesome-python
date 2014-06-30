@@ -240,6 +240,8 @@ so you need Python.
 * [Wagtail](http://wagtail.io/) - A Django content management system.
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
+* [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and
+portals with high-traffic.
 
 ## RESTful API
 
