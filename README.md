@@ -43,6 +43,7 @@ so you need Python.
     - [Admin Panels](#admin-panels)
     - [DevOps Tools](#devops-tools)
     - [GUI](#gui)
+    - [Game Development](#game-development)
     - [Logging](#logging)
     - [Testing](#testing)
     - [Code Analysis and Linter](#code-analysis-and-linter)
@@ -52,7 +53,6 @@ so you need Python.
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-    - [Games](#games)
     - [Miscellaneous](#miscellaneous)
 - [Resources](#resources)
 	- [Editor Plugins](#editor-plugins)
@@ -128,7 +128,8 @@ so you need Python.
 *Libraries for working with human languages.*
 
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
-* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks.
+* [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python programming language. It has tools for natural language processing, machine learning, among others.
+* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks. Stands on the giant shoulders of NLTK and Pattern, and plays nicely with both.
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
@@ -146,7 +147,7 @@ so you need Python.
 
 *Libraries for generating project documentation.*
 
-* [Sphinx](http://sphinx-doc.org/) - Python Documentation generator. 
+* [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
 
 ## Imagery
 
@@ -240,6 +241,7 @@ so you need Python.
 * [Wagtail](http://wagtail.io/) - A Django content management system.
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
+* [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
 
 ## RESTful API
 
@@ -339,7 +341,7 @@ so you need Python.
 * [Scrapy](http://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 * [feedparser](http://pythonhosted.org/feedparser/) - Universal feed parser.
-* [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser. 
+* [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 
 ## Web Content Extracting
 
@@ -410,6 +412,22 @@ so you need Python.
 * [kivy](http://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
 * [curses](https://docs.python.org/2/library/curses.html#module-curses) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
+* [pyglet](http://www.pyglet.org/) - A cross-platform windowing and multimedia library for Python.
+
+## Game Development
+
+*Awesome game development libraries.*
+
+* [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules
+	designed for writing games.
+* [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D
+	games, demos, and other graphical/interactive applications. It is based on
+	pyglet.
+* [PySDL2](http://pysdl2.readthedocs.org/en/latest/) - A ctypes based wrapper for the SDL2 library.
+* [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney and maintained by Carnegie Mellon's Entertainment Technology Center. Written in C++, completely wrapped in Python.
+* [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
+* [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
+
 
 ## Logging
 
@@ -448,6 +466,7 @@ so you need Python.
 *Libraries for dubugging and developing*
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
+* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
@@ -499,9 +518,9 @@ so you need Python.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
-* [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API
-* [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python
-* [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK
+* [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
+* [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
+* [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 
 ## Algorithms and Design Patterns
 
@@ -509,17 +528,6 @@ so you need Python.
 
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
-
-## Games
-
-*Libraries for developing games.*
-
-* [Pygame](http://www.pygame.org/news.html) - Popular 2D game engine based on SDL with additional tools for handling sprites, collisions, etc.
-* [PySDL2](http://pysdl2.readthedocs.org/en/latest/) - A ctypes based wrapper for the SDL2 library.
-* [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney and maintained by Carnegie Mellon's Entertainment Technology Center. Written in C++, completely wrapped in Python.
-* [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
-* [pyglet](http://www.pyglet.org/) - Cross platform windowing and multimedia library for Python.
-* [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 
 ## Miscellaneous
 
