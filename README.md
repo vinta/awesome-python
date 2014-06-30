@@ -2,10 +2,6 @@
 
 A curated list of awesome Python frameworks, libraries and resources. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
-![Life is a piece of shit](https://raw.githubusercontent.com/vinta/awesome-python/master/Life%20is%20a%20piece%20of%20shit,%20you%20need%20Python.gif "Life is a piece of shit, you need Python")
-
-so you need Python.
-
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
@@ -241,8 +237,7 @@ so you need Python.
 * [Wagtail](http://wagtail.io/) - A Django content management system.
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
-* [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and
-portals with high-traffic.
+* [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
 
 ## RESTful API
 
@@ -459,6 +454,7 @@ portals with high-traffic.
 *Libraries for dubugging and developing*
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
+* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
@@ -507,6 +503,9 @@ portals with high-traffic.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
+* [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
+* [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
+* [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 
 ## Algorithms and Design Patterns
 
