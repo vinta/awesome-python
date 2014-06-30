@@ -202,10 +202,12 @@ so you need Python.
 
 *Libraties for connecting and operating databases*
 
-* [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
-* [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
-* [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
-* [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+* Relational Databases
+	* [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
+	* [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
+* NoSQL Databases
+	* [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
+	* [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
 
 ## ORM
 
@@ -362,8 +364,9 @@ so you need Python.
 
 *Libraries for fighting spam.*
 
-* [Stopspam](https://github.com/phalt/stopspam) - Intelligent spam detection for Python
-* [Django Simple Spam Blocker](https://github.com/moqada/django-simple-spam-blocker) - Simple spam blocker for Django
+* [Stopspam](https://github.com/phalt/stopspam) - Intelligent spam detection for Python.
+* [django-simple-spam-blocker](https://github.com/moqada/django-simple-spam-blocker) - Simple spam blocker for Django.
+* [django-simple-captcha](https://github.com/mbi/django-simple-captcha) - A simple and highly customizable Django app to add captcha images to any Django form.
 
 ## Networking
 
