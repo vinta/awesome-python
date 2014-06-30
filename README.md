@@ -2,10 +2,6 @@
 
 A curated list of awesome Python frameworks, libraries and resources. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
-![Life is a piece of shit](https://raw.githubusercontent.com/vinta/awesome-python/master/Life%20is%20a%20piece%20of%20shit,%20you%20need%20Python.gif "Life is a piece of shit, you need Python")
-
-so you need Python.
-
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
