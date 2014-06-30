@@ -225,6 +225,7 @@ so you need Python.
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
+* [Web2py](http://web2py.com/) - Free open source full-stack framework for rapid development of web-based applications.
 
 ## CMS
 
