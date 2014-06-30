@@ -224,14 +224,16 @@ so you need Python.
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
+* [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
 
 ## CMS
 
 *Content Management Systems*
 
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
-* [Wagtail](http://wagtail.io/) - A Django content management system
+* [Wagtail](http://wagtail.io/) - A Django content management system.
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
+* [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 
 ## RESTful API
 
