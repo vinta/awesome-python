@@ -410,6 +410,7 @@ portals with high-traffic.
 * [PySide](http://qt-project.org/wiki/pyside) - Python bindings for the Qt cross-platform application and UI framework.
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [kivy](http://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
+* [pyglet](http://www.pyglet.org/) - A cross-platform windowing and multimedia library for Python.
 
 ## Game Development
 
