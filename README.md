@@ -514,6 +514,20 @@ so you need Python.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
 
+## Weekly
+
+* [Pycoder's Weekly](http://pycoders.com/) - A free weekly newsletter, on Fridays, for those interested in Python development and various topics around Python.
+* [Python Weekly](http://www.pythonweekly.com/) - A free weekly newsletter featuring curated news, articles, new releases, jobs etc related to Python.
+
+## Twitter
+
+* [@gvanrossum](https://twitter.com/gvanrossum) - Python BDFL.
+* [@pypi](https://twitter.com/pypi)
+* [@getpy](https://twitter.com/getpy)
+* [@planetpython](https://twitter.com/planetpython)
+* [@pycoders](https://twitter.com/pycoders)
+* [@PythonWeekly](https://twitter.com/PythonWeekly)
+
 ## Articles
 
 * [More About Unicode in Python 2 and 3](http://lucumr.pocoo.org/2014/1/5/unicode-in-2-and-3/)
