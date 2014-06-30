@@ -145,6 +145,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
 * [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
+* [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 
 ## Imagery
 
