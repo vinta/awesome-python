@@ -51,7 +51,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Miscellaneous](#miscellaneous)
 - [Resources](#resources)
-	- [Editor Plugins](#editor-plugins)
+    - [Editor Plugins](#editor-plugins)
     - [Books](#books)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -201,18 +201,18 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraties for connecting and operating databases*
 
 * Relational Databases
-	* [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
-	* [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
+    * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
+    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
 * NoSQL Databases
-	* [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
-	* [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+    * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
+    * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
 
 ## ORM
 
 *Libraries that implement Object-Relational Mapping or datamapping techniques.*
 
 * Relational Databases
-	* [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
+    * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
 * NoSQL Databases
@@ -539,13 +539,13 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 ## Editor Plugins
 
 * Vim
-	* TODO
+    * TODO
 * Emacs
-	* TODO
+    * TODO
 * Sublime Text
-	* [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
-	* [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
-	* [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
+    * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
+    * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
+    * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
 
 ## Books
 
