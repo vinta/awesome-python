@@ -224,6 +224,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that scales with you. Starts as a microframework and scales up to a fullstack solution.
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
+* [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
 
 ## CMS
 
