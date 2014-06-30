@@ -144,6 +144,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries for generating project documentation.*
 
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
+* [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
 
 ## Imagery
 
