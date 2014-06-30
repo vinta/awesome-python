@@ -155,6 +155,7 @@ so you need Python.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
+* [wand](https://github.com/dahlia/wand) - Python bindings for MagickWand, C API for ImageMagick.
 
 ## Audio
 
