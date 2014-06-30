@@ -124,7 +124,8 @@ so you need Python.
 *Libraries for working with human languages.*
 
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
-* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks.
+* [Pattern](http://www.clips.ua.ac.be/pattern) -  A web mining module for the Python programming language. It has tools for natural language processing, machine learning, among others. 
+* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks. Stands on the giant shoulders of NLTK and Pattern, and plays nicely with both.
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
@@ -224,6 +225,7 @@ so you need Python.
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
+* [Web2py](http://web2py.com/) - Free open source full-stack framework for rapid development of web-based applications.
 
 ## CMS
 
