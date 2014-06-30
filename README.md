@@ -127,7 +127,7 @@ so you need Python.
 *Libraries for working with human languages.*
 
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
-* [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python programming language. It has tools for natural language processing, machine learning, among others. 
+* [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python programming language. It has tools for natural language processing, machine learning, among others.
 * [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks. Stands on the giant shoulders of NLTK and Pattern, and plays nicely with both.
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
@@ -146,7 +146,7 @@ so you need Python.
 
 *Libraries for generating project documentation.*
 
-* [Sphinx](http://sphinx-doc.org/) - Python Documentation generator. 
+* [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
 
 ## Imagery
 
@@ -341,7 +341,7 @@ portals with high-traffic.
 * [Scrapy](http://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 * [feedparser](http://pythonhosted.org/feedparser/) - Universal feed parser.
-* [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser. 
+* [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 
 ## Web Content Extracting
 
