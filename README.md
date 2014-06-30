@@ -144,6 +144,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries for generating project documentation.*
 
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
+* [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 
 ## Imagery
 
