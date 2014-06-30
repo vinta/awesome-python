@@ -292,7 +292,8 @@ so you need Python.
 
 *Libraries for caching data.*
 
-* TODO
+* [Beaker Caching & Sessions](http://beaker.readthedocs.org/en/latest/) - Beaker is a library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
+* [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 
 ## Email
 
