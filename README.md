@@ -16,6 +16,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [Video](#video)
     - [Geolocation](#geolocation)
     - [HTTP](#http)
+    - [Database](#database)
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
     - [Web Frameworks](#web-frameworks)
@@ -74,6 +75,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 * [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
 * [wheel](http://pythonwheels.com/) - The new standard of python distribution and are intended to replace eggs.
+* [buildout](http://www.buildout.org/) - Python-based build system for creating, assembling and deploying applications from multiple parts, some of which may be non-Python-based.
 
 ## Files
 
@@ -206,6 +208,12 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
 * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
 
+## Database
+
+*Databases implemented in Python.*
+
+* [ZODB](http://www.zodb.org/) - A native object database for Python. A key-value and object graph database.
+
 ## Database Drivers
 
 *Libraties for connecting and operating databases*
@@ -242,7 +250,9 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that scales with you. Starts as a microframework and scales up to a fullstack solution.
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
 * [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
-* [webpy](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
+* [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
+* [Zope Toolkit](http://docs.zope.org/zopetoolkit/) - A set of libraries intended for reuse by projects to develop web applications or web frameworks.
+* [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, created by the Zope community and formerly known as Zope 3.
 
 ## CMS
 
@@ -253,6 +263,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
+* [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
 
 ## RESTful API
 
@@ -281,6 +292,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries and tools for templating and lexing.*
 
 * [Jinja2](https://github.com/mitsuhiko/jinja2) - A modern and designer friendly templating language.
+* [Chameleon](https://chameleon.readthedocs.org/) - Chameleon is an HTML/XML template engine for Python. Modeled after ZPT, optimized for speed.
 
 ## Queue
 
@@ -463,9 +475,9 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
 * Code Coverage
-    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.  
+    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Error Handler
-	* [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not 
+    * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
 ## Code Analysis and Linter
 
@@ -480,6 +492,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
+* [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
