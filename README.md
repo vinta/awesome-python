@@ -575,6 +575,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 * [Wikipedia](https://wikipedia.readthedocs.org/en/latest/) - A Pythonic wrapper for the Wikipedia API.
 * [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
+* [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 
 ## Algorithms and Design Patterns
 
