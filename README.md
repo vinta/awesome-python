@@ -501,6 +501,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 *Libraries and tools for analysing, parsing and manipulation codebases.*
 
+* [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
 * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
 * [Pylint](http://www.pylint.org/) - A source code analyzer.
 
