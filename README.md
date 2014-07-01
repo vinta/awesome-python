@@ -124,6 +124,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
 * [xlwt / xlrd](http://www.python-excel.org/) - A package is for writing and reading data and formatting information from Excel files.
 * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
+* [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
 * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * [Name Parser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
 
@@ -191,7 +192,6 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
 * [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
 * [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
-
 
 ## Geolocation
 
@@ -335,6 +335,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
+* [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
 
 ## Internationalization
@@ -362,6 +363,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [MarkupSafe](https://github.com/mitsuhiko/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 * [bleach](http://bleach.readthedocs.org/) - A whitelist-based HTML sanitization and text linkification library.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
+* [xhtml2pdf](https://github.com/chrisglass/xhtml2pdf) - HTML/CSS to PDF converter.
 
 ## Web Crawling
 
@@ -420,6 +422,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
+* [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A python wrapper for the 0MQ message library.
 
 ## Admin Panels
@@ -494,6 +497,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
+* Load Testing
+    * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
@@ -529,6 +534,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
+* [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 
 ## Data Visualization
 
@@ -536,7 +542,10 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
+* [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
+* [d3py](https://github.com/mikedewar/d3py) - A plottling library for python, based on [D3.js](http://d3js.org/).
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
+* [Kartograph.py](https://github.com/kartograph/kartograph.py) - Rendering beautiful SVG maps in Python.
 
 ## Machine Learning
 
