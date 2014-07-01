@@ -142,6 +142,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
 * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
 * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
+* [rainbowstream](http://www.rainbowstream.org) - A smart and nice Twitter client on terminal.
 
 ## Documentation
 
