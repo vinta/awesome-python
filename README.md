@@ -322,6 +322,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Tools for managing, compressing and minifying website assets.*
 
 * [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline javascript or CSS into a single cached file.
+* [fanstatic](http://www.fanstatic.org/en/latest/) - Packages, optimizes, and serves static file dependencies as Python packages 
+* [file conveyer](http://fileconveyor.org/) - Monitors changes, processes, and transports assets to CDNs and file storage systems
+* [webassets](http://webassets.readthedocs.org/en/latest/) - Bundles, optimizes, and manages unique cache-busting URLs for static resources
 
 ## Caching
 
