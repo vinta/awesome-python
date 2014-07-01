@@ -40,7 +40,6 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [DevOps Tools](#devops-tools)
     - [GUI](#gui)
     - [Game Development](#game-development)
-    - [High Performance](#high-performance)
     - [Logging](#logging)
     - [Testing](#testing)
     - [Code Analysis and Linter](#code-analysis-and-linter)
