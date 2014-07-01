@@ -74,6 +74,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 * [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
 * [wheel](http://pythonwheels.com/) - The new standard of python distribution and are intended to replace eggs.
+* [buildout](http://www.buildout.org/) -  Python-based build system for creating, assembling and deploying applications from multiple parts, some of which may be non-Python-based. It lets you create a buildout configuration and reproduce the same software later.
 
 ## Files
 
