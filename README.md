@@ -286,6 +286,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries and tools for templating and lexing.*
 
 * [Jinja2](https://github.com/mitsuhiko/jinja2) - A modern and designer friendly templating language.
+* [Zope Page Templates](http://docs.zope.org/zope2/zope2book/AppendixC.html) - HTML/XML generation tool - It is implemented as an XML namespace, and lives inside the attributes of a tag, making it possible to create templates that look like normal HTML/XML to editors.
+* [Chameleon](https://chameleon.readthedocs.org/) - Chameleon is an HTML/XML template engine for Python. Modeled after ZPT, optimized for speed.
 
 ## Queue
 
