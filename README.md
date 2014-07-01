@@ -246,6 +246,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that scales with you. Starts as a microframework and scales up to a fullstack solution.
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
 * [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
+* [Zope Toolkit](http://docs.zope.org/zopetoolkit/) - A set of libraries intended for reuse by projects to develop web applications or web frameworks.
+* [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, created by the Zope community and formerly known as Zope 3.
 
 ## CMS
 
