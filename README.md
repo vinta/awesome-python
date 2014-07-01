@@ -185,6 +185,9 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [shorten.tv](http://www.shorten.tv/) - Video summarization.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
+* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
+
 
 ## Geolocation
 
@@ -239,6 +242,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that scales with you. Starts as a microframework and scales up to a fullstack solution.
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
 * [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
+* [webpy](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 
 ## CMS
 
