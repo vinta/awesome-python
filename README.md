@@ -52,7 +52,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Miscellaneous](#miscellaneous)
 - [Resources](#resources)
-	- [Editor Plugins](#editor-plugins)
+    - [Editor Plugins](#editor-plugins)
     - [Books](#books)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -145,6 +145,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries for generating project documentation.*
 
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
+* [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
+* [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 
 ## Imagery
 
@@ -202,18 +204,18 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraties for connecting and operating databases*
 
 * Relational Databases
-	* [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
-	* [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
+    * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
+    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
 * NoSQL Databases
-	* [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
-	* [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+    * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
+    * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
 
 ## ORM
 
 *Libraries that implement Object-Relational Mapping or datamapping techniques.*
 
 * Relational Databases
-	* [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
+    * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
 * NoSQL Databases
@@ -229,6 +231,9 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
+* [TurboGears](http://www.turbogears.org/) - The Web Framework that scales with you. Starts as a microframework and scales up to a fullstack solution.
+* [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
+* [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
 
 ## CMS
 
@@ -543,13 +548,13 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 ## Editor Plugins
 
 * Vim
-	* TODO
+    * TODO
 * Emacs
-	* TODO
+    * TODO
 * Sublime Text
-	* [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
-	* [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
-	* [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
+    * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
+    * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
+    * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
 
 ## Books
 
