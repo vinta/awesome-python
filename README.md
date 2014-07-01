@@ -484,7 +484,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
 
-## Science and Data Aanalysis
+## Science and Data Analysis
 
 *Libraries for scientific computing and data analyzing.*
 
