@@ -538,6 +538,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
+* [scikit-image](http://scikit-image.org/) - A collection of algorithms for image processing.
+* [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 
 ## Data Visualization
 
