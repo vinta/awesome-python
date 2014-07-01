@@ -51,6 +51,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [Third-party APIs](#third-party-apis)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Miscellaneous](#miscellaneous)
+    - [Foreign Function Interface](#foreign-function-interface)
+    - [High Performance](#high-performance)
 - [Resources](#resources)
     - [Editor Plugins](#editor-plugins)
     - [Books](#books)
@@ -424,22 +426,12 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 *Awesome game development libraries.*
 
-* [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules
-	designed for writing games.
-* [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D
-	games, demos, and other graphical/interactive applications. It is based on
-	pyglet.
+* [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
+* [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications. It is based on pyglet.
 * [PySDL2](http://pysdl2.readthedocs.org/en/latest/) - A ctypes based wrapper for the SDL2 library.
 * [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney and maintained by Carnegie Mellon's Entertainment Technology Center. Written in C++, completely wrapped in Python.
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
-
-## High Performance
-
-*Libraries for making Python faster.*
-
-* [Cython](http://cython.org/) - Optimizing Static Complier for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
-* [PyPy](http://pypy.org/) - An implmentation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 
 ## Logging
 
@@ -546,6 +538,20 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Useful libraries or tools that don't fit in the categories above.*
 
 * [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+
+## Foreign Function Interface
+
+*Libraries for providing foreign function interface.*
+
+* [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
+
+## High Performance
+
+*Libraries for making Python faster.*
+
+* [Cython](http://cython.org/) - Optimizing Static Complier for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
+* [PyPy](http://pypy.org/) - An implmentation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
+* [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 
 # Resources
 
