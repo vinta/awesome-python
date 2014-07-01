@@ -253,6 +253,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
+* [django-cms](https://www.django-cms.org/en/) - An Open source enterprise content management system based on the django framework.
 
 ## RESTful API
 
