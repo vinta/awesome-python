@@ -84,6 +84,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/2/library/os.path.html).
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
 * [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
+* [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 
 ## Date and Time
 
@@ -119,6 +120,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [xlwt / xlrd](http://www.python-excel.org/) - A package is for writing and reading data and formatting information from Excel files.
 * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
 * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+* [Name Parser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
 
 ## Natural Language Processing
 
