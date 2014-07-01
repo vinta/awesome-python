@@ -57,7 +57,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
-    - [Books and Articles](#books-and-articles)
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
