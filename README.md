@@ -40,6 +40,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [DevOps Tools](#devops-tools)
     - [GUI](#gui)
     - [Game Development](#game-development)
+    - [High Performance](#high-performance)
     - [Logging](#logging)
     - [Testing](#testing)
     - [Code Analysis and Linter](#code-analysis-and-linter)
@@ -424,6 +425,12 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 
+## High Performance
+
+*Libraries for making Python faster.*
+
+* [Cython](http://cython.org/) - Optimizing Static Complier for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
+* [PyPy](http://pypy.org/) - An implmentation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 
 ## Logging
 
