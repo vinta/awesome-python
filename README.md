@@ -185,6 +185,9 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [shorten.tv](http://www.shorten.tv/) - Video summarization.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
+* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
+
 
 ## Geolocation
 
