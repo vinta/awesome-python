@@ -528,6 +528,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
+* [Wikipedia](https://wikipedia.readthedocs.org/en/latest/) - A Pythonic wrapper for the Wikipedia API.
+* [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 
 ## Algorithms and Design Patterns
 
