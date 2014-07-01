@@ -351,6 +351,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [furl](https://github.com/gruns/furl) - A small Python library that makes manipulating URLs simple.
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
+* [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure python URL shortening lib.
 
 ## HTML Manipulation
 
