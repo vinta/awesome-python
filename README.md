@@ -448,9 +448,11 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
     * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
+    * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of Behavior Driven Development (BDD).
 * Mock
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
+    * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
 * Fake Data
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
