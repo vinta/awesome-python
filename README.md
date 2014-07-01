@@ -1,6 +1,6 @@
 # Awesome Python
 
-A curated list of awesome Python frameworks, libraries and resources. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
+A curated list of awesome Python frameworks, libraries and software. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
@@ -55,13 +55,12 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     - [Miscellaneous](#miscellaneous)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
-- [Resources](#resources)
     - [Editor Plugins](#editor-plugins)
-    - [Books](#books)
+- [Resources](#resources)
+    - [Books and Articles](#books-and-articles)
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
-    - [Articles](#articles)
 
 ## Environment Management
 
@@ -617,8 +616,6 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 
-# Resources
-
 ## Editor Plugins
 
 * Vim
@@ -630,16 +627,13 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
     * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
 
-## Books
+# Resources
 
-* [Python Cookbook](http://www.amazon.com/Python-Cookbook-David-Beazley/dp/1449340377/)
-* [Expert Python Programming](http://www.amazon.com/Expert-Python-Programming-practices-distributing/dp/184719494X/)
+Where to discover new Python libraries.
 
 ## Websites
 
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
-* [pyvideo.org](http://pyvideo.org/) - Python related video indexed so you can find it.
-* [The Hitchhiker's Guide to Python!](http://docs.python-guide.org/) - The answer to life, the universe, and everything.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
@@ -651,16 +645,11 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 ## Twitter
 
-* [@gvanrossum](https://twitter.com/gvanrossum) - Python BDFL.
 * [@pypi](https://twitter.com/pypi)
 * [@getpy](https://twitter.com/getpy)
 * [@planetpython](https://twitter.com/planetpython)
 * [@pycoders](https://twitter.com/pycoders)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
-
-## Articles
-
-* [pycrumbs](https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md)
 
 # Contributing
 
