@@ -420,6 +420,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [curses](https://docs.python.org/2/library/curses.html#module-curses) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [pyglet](http://www.pyglet.org/) - A cross-platform windowing and multimedia library for Python.
+* [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI (Graphical User Interface) package
+
 
 ## Game Development
 
@@ -455,7 +457,9 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
 * Code Coverage
-    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
+    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.  
+* Error Handler
+	* [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not 
 
 ## Code Analysis and Linter
 
