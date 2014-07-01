@@ -88,6 +88,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
 * [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
+* [pathlib](https://pathlib.readthedocs.org/en/pep428/) - An cross-platform, object-oriented path library (included in Python 3.4)
 
 ## Date and Time
 
