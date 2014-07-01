@@ -105,28 +105,31 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 *Libraries for parsing and manipulating texts.*
 
-* [difflib](https://docs.python.org/2/library/difflib.html) - (Python standard library) Helpers for computing deltas.
-* [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
-* [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
-* [esmre](https://code.google.com/p/esmre/) - Regular expression accelerator.
-* [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Library for parsing, formatting, storing and validating international phone numbers.
-* [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
-* [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
-* [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
-* [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser.
-* [Pygments](http://pygments.org/) - A generic syntax highlighter.
-* [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that handles unicode.
-* [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs. Developed by Mozilla.
-* [unidecode](https://pypi.python.org/pypi/Unidecode) - ASCII transliterations of Unicode text.
-* [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
-* [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate chinese hanzi (漢字) to pinyin (拼音).
-* [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts.
-* [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
-* [xlwt / xlrd](http://www.python-excel.org/) - A package is for writing and reading data and formatting information from Excel files.
-* [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
-* [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
-* [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
-* [Name Parser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
+* General
+    * [difflib](https://docs.python.org/2/library/difflib.html) - (Python standard library) Helpers for computing deltas.
+    * [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
+    * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
+    * [esmre](https://code.google.com/p/esmre/) - Regular expression accelerator.
+    * [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
+    * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that handles unicode.
+    * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs. Developed by Mozilla.
+    * [unidecode](https://pypi.python.org/pypi/Unidecode) - ASCII transliterations of Unicode text.
+    * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
+    * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate chinese hanzi (漢字) to pinyin (拼音).
+    * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts.
+* Specific Format
+    * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+    * [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
+    * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Packages is for writing and reading data and formatting information from Excel files.
+    * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
+    * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
+    * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+* Parser
+    * [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Library for parsing, formatting, storing and validating international phone numbers.
+    * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
+    * [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser.
+    * [Pygments](http://pygments.org/) - A generic syntax highlighter.
+    * [python-nameparser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
 
 ## Natural Language Processing
 
@@ -543,7 +546,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
-* [d3py](https://github.com/mikedewar/d3py) - A plottling library for python, based on [D3.js](http://d3js.org/).
+* [d3py](https://github.com/mikedewar/d3py) - A plottling library for Python, based on [D3.js](http://d3js.org/).
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 * [Kartograph.py](https://github.com/kartograph/kartograph.py) - Rendering beautiful SVG maps in Python.
 
