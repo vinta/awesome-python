@@ -523,13 +523,20 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [SciPy](http://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
-* [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [PyMC](https://github.com/pymc-devs/pymc) - Markov Chain Monte Carlo sampling toolkit.
 * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
-* [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
+* [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
+
+## Data Visualization
+
+*Libraries for visualizing data*
+
+* [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
+* [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 
 ## Machine Learning
 
