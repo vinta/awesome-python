@@ -660,7 +660,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 ## Articles
 
-* [More About Unicode in Python 2 and 3](http://lucumr.pocoo.org/2014/1/5/unicode-in-2-and-3/)
+* [pycrumbs](https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md)
 
 # Contributing
 
