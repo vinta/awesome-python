@@ -568,7 +568,8 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 ## Books
 
-* TODO
+* [Python Cookbook](http://www.amazon.com/Python-Cookbook-David-Beazley/dp/1449340377/)
+* [Expert Python Programming](http://www.amazon.com/Expert-Python-Programming-practices-distributing/dp/184719494X/)
 
 ## Websites
 
