@@ -271,6 +271,10 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 *Libraries and tools for templating and lexing.*
 
 * [Jinja2](https://github.com/mitsuhiko/jinja2) - A modern and designer friendly templating language.
+* [Genshi](http://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
+* [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
+* [Cheetah](http://www.cheetahtemplate.org/) - Python powered template engine.
+* [webstring](http://psilib.sourceforge.net/webstring.html) - A template engine that generate any text format from a template.
 
 ## Queue
 
