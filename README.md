@@ -204,6 +204,12 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
 * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
 
+## Databases
+
+*Databases*
+
+* [ZODB](http://www.zodb.org/) - a native object database for Python. A key-value and object graph database. Most transparent.
+
 ## Database Drivers
 
 *Libraties for connecting and operating databases*
