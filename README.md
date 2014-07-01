@@ -39,6 +39,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Tagging](#tagging)
     - [Processes and Threads](#processes-and-threads)
     - [Networking](#networking)
+    - [Build Tools](#build-tools)
     - [Admin Panels](#admin-panels)
     - [DevOps Tools](#devops-tools)
     - [GUI](#gui)
@@ -426,6 +427,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A python wrapper for the 0MQ message library.
+
+## Build Tools
+
+*Compile software from source code.*
+
+* [SCons](http://www.scons.org/) - The software construction tool.
+* [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
 
 ## Admin Panels
 
