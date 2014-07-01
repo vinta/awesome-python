@@ -473,6 +473,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
+* [winpdb](http://winpdb.org/) - Winpdb - A Platform Independent Python Debugger with GUI
 
 ## Science and Data Aanalysis
 
