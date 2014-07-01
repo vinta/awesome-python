@@ -322,6 +322,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Tools for managing, compressing and minifying website assets.*
 
 * [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline javascript or CSS into a single cached file.
+* [webassets](https://github.com/miracle2k/webassets) - Asset management for Python web development - merge, compress and compile JavaScript, CSS, CoffeeScript, LESS, etc.
 
 ## Caching
 
