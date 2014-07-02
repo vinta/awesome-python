@@ -58,7 +58,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Miscellaneous](#miscellaneous)
-    - [Cryptography](#Cryptography)
+    - [Cryptography](#cryptography)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
     - [Websites](#websites)
