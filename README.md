@@ -86,7 +86,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/2/library/os.path.html).
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
-* [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [pathlib](https://pathlib.readthedocs.org/en/pep428/) - An cross-platform, object-oriented path library (included in Python 3.4)
 
@@ -329,6 +328,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [webassets](http://webassets.readthedocs.org/en/latest/) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
 * [fanstatic](http://www.fanstatic.org/en/latest/) - Packages, optimizes, and serves static file dependencies as Python packages.
 * [fileconveyor](http://fileconveyor.org/) - Monitors changes, processes, and transports assets to CDNs and file storage systems.
+* [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 
 ## Caching
 
@@ -344,8 +344,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
+* [marrow.mailer](https://github.com/marrow/marrow.mailer) - High-performance extensible mail delivery framework.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
-* [Marrow Mailer](https://github.com/marrow/marrow.mailer) - High-performance extensible mail delivery framework.
 
 ## Internationalization
 
