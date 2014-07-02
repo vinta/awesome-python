@@ -86,7 +86,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Distribution
 
-*Libraries to create pacakged executables for release distribution.*
+*Libraries to create packaged executables for release distribution.*
 
 * [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform)
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
