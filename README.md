@@ -37,10 +37,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Forms](#forms)
     - [Anti-spam](#anti-spam)
     - [Tagging](#tagging)
+    - [Admin Panels](#admin-panels)
     - [Processes and Threads](#processes-and-threads)
     - [Networking](#networking)
-    - [Admin Panels](#admin-panels)
-    - [DevOps Tools](#devops-tools)
+    - [WebSocket](#websocket)
     - [GUI](#gui)
     - [Game Development](#game-development)
     - [Logging](#logging)
@@ -48,13 +48,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Code Analysis and Linter](#code-analysis-and-linter)
     - [Debugging Tools](#debugging-tools)
     - [Science and Data Aanalysis](#science-and-data-aanalysis)
+    - [Data Visualization](#data-visualization)
     - [Machine Learning](#machine-learning)
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
-    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-    - [Miscellaneous](#miscellaneous)
+    - [DevOps Tools](#devops-tools)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
+    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+    - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
     - [Websites](#websites)
@@ -427,6 +429,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-taggit](https://github.com/alex/django-taggit) - Simple tagging for Django.
 
+## Admin Panels
+
+*Libraries for administrative interfaces.*
+
+* [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
+* [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
+* [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
+* [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
+
 ## Processes and Threads
 
 *Libraries for woking with processes or threads*
@@ -444,29 +455,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
-
-## Admin Panels
-
-*Libraries for administrative interfaces.*
-
-* [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
-* [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
-* [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
-* [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
-
-## DevOps Tools
-
-*Software and libraries for DevOps*
-
-* [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
-* [Ansible](http://www.ansible.com/) - An IT automation tool.
-* [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
-* [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
-* [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
-* [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [gunicorn](http://gunicorn.org/) - A WSGI HTTP Server for UNIX, fast clients and sleepy applications.
-* [Supervisor](http://supervisord.org/) - A Process Control System.
-* [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 
 ## GUI
 
@@ -608,18 +596,19 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 
-## Algorithms and Design Patterns
+## DevOps Tools
 
-*Collections of algorithms and design patterns.*
+*Software and libraries for DevOps*
 
-* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
-* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
-
-## Miscellaneous
-
-*Useful libraries or tools that don't fit in the categories above.*
-
-* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+* [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
+* [Ansible](http://www.ansible.com/) - An IT automation tool.
+* [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
+* [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
+* [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
+* [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
+* [gunicorn](http://gunicorn.org/) - A WSGI HTTP Server for UNIX, fast clients and sleepy applications.
+* [Supervisor](http://supervisord.org/) - A Process Control System.
+* [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 
 ## Foreign Function Interface
 
@@ -636,7 +625,22 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 
+## Algorithms and Design Patterns
+
+*Collections of algorithms and design patterns.*
+
+* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
+* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
+
+## Miscellaneous
+
+*Useful libraries or tools that don't fit in the categories above.*
+
+* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+
 ## Editor Plugins
+
+*Plugins for various editors*
 
 * Vim
     * TODO
