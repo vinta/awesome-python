@@ -343,6 +343,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
+* [Marrow Mailer](https://github.com/marrow/marrow.mailer) - High-performance extensible mail delivery framework.
 
 ## Internationalization
 
