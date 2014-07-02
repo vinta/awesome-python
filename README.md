@@ -660,6 +660,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for providing foreign function interface.*
 
+* [ctypes](https://docs.python.org/2/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
 * [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
 
 ## High Performance
