@@ -34,6 +34,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [HTML Manipulation](#html-manipulation)
     - [Web Crawling](#web-crawling)
     - [Web Content Extracting](#web-content-extracting)
+    - [Downloader](#downloader)
     - [Forms](#forms)
     - [Anti-spam](#anti-spam)
     - [Tagging](#tagging)
@@ -193,9 +194,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [shorten.tv](http://www.shorten.tv/) - Video summarization.
-* [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
-* [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
-* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
 
 ## Geolocation
 
@@ -401,12 +399,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Haul](https://github.com/vinta/Haul) - An Extensible Image Crawler.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 
-## WebSocket
+## Downloader
 
-*Libraries for woking with WebSocket.*
+*Libraries for downloading*
 
-* [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
-* [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
+* [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
+* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
 
 ## Forms
 
@@ -455,6 +454,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
+
+## WebSocket
+
+*Libraries for woking with WebSocket.*
+
+* [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+* [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 
 ## GUI
 
