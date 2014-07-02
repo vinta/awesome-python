@@ -36,6 +36,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Web Content Extracting](#web-content-extracting)
     - [Downloader](#downloader)
     - [Forms](#forms)
+    - [Data Validation](#data-validation)
     - [Anti-spam](#anti-spam)
     - [Tagging](#tagging)
     - [Build Tools](#build-tools)
