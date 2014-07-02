@@ -5,6 +5,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
+    - [Distribution](#distribution)
     - [Files](#files)
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
@@ -82,6 +83,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
 * [wheel](http://pythonwheels.com/) - The new standard of python distribution and are intended to replace eggs.
+
+## Distribution
+
+*Libraries to create pacakged executables for release distribution.*
+
+* [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform)
+* [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
+* [py2app](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html) - Freezes Python scripts (Mac OS X)
 
 ## Files
 
