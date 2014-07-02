@@ -50,7 +50,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Testing](#testing)
     - [Code Analysis and Linter](#code-analysis-and-linter)
     - [Debugging Tools](#debugging-tools)
-    - [Science and Data Aanalysis](#science-and-data-aanalysis)
+    - [Science and Data Analysis](#science-and-data-analysis)
     - [Data Visualization](#data-visualization)
     - [Machine Learning](#machine-learning)
     - [MapReduce](#mapreduce)
