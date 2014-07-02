@@ -154,6 +154,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
 * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
 * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
+* [httpie](https://github.com/jakubroztocil/httpie) - A user-friendly cURL replacement
+* [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX
+* [pywk](https://github.com/spotify/pywk) - Python awk-like line processing tool
 
 ## Documentation
 
