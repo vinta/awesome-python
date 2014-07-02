@@ -177,6 +177,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [wand](https://github.com/dahlia/wand) - Python bindings for MagickWand, C API for ImageMagick.
+* [pyBarcode](https://pythonhosted.org/pyBarcode/) - Create barcodes in python without needing PIL.
 
 ## Audio
 
