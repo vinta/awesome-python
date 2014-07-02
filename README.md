@@ -342,6 +342,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for sending and parsing email.*
 
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
+* [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
 * [marrow.mailer](https://github.com/marrow/marrow.mailer) - High-performance extensible mail delivery framework.
