@@ -140,7 +140,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python programming language. It has tools for natural language processing, machine learning, among others.
 * [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks. Stands on the giant shoulders of NLTK and Pattern, and plays nicely with both.
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
-* [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
+* [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
 
 ## Command-line Tools
