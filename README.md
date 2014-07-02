@@ -5,10 +5,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
+    - [Distribution](#distribution)
     - [Files](#files)
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
     - [Natural Language Processing](#natural-language-processing)
+    - [Configuration](#configuration)
     - [Command-line Tools](#command-line-tools)
     - [Documentation](#documentation)
     - [Imagery](#imagery)
@@ -82,6 +84,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
 * [wheel](http://pythonwheels.com/) - The new standard of python distribution and are intended to replace eggs.
 
+## Distribution
+
+*Libraries to create packaged executables for release distribution.*
+
+* [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform)
+* [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
+* [py2app](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html) - Freezes Python scripts (Mac OS X)
+
 ## Files
 
 *Libraries for file manipulation and MIME type detection.*
@@ -145,6 +155,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
+
+## Configuration
+
+*Libraries for storing configuration options.*
+
+* [ConfigParser](https://docs.python.org/2/library/configparser.html) - (Python standard library) INI file parser.
+* [ConfigObj](http://www.voidspace.org.uk/python/configobj.html) - INI file parser with validation.
+* [config](http://www.red-dove.com/config-doc/) - Hierarchical config from the author of [logging](https://docs.python.org/2/library/logging.html).
+* [profig](http://profig.readthedocs.org/) - Config from multiple formats with value conversion.
 
 ## Command-line Tools
 
@@ -212,8 +231,24 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for working with HTTP.*
 
-* [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
-* [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+* Clients
+    * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
+    * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+* WSGI Servers
+    * [wsgiref](http://docs.python.org/library/wsgiref.html) - (Python standard library) WSGI reference implementation, single-threaded.
+    * [cherrypy](http://www.cherrypy.org/) - Multi-threaded and very stable.
+    * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
+    * [rocket](http://pypi.python.org/pypi/rocket) - Multi-threaded.
+    * [waitress](http://readthedocs.org/docs/waitress/en/latest/) - Multi-threaded, poweres Pyramid.
+    * [gunicorn](http://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
+    * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
+    * [gevent](http://www.gevent.org/) - Asynchronous (greenlets).
+    * [diesel](http://dieselweb.org/) - Asynchronous (greenlets).
+    * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
+    * [tornado](http://www.tornadoweb.org/) - Asynchronous, powers some parts of Facebook.
+    * [twisted](http://twistedmatrix.com/) - Asynchronous, well tested but... twisted.
+    * [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
+    * [bjoern](http://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
 
 ## Database
 
@@ -643,7 +678,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [gunicorn](http://gunicorn.org/) - A WSGI HTTP Server for UNIX, fast clients and sleepy applications.
 * [Supervisor](http://supervisord.org/) - A Process Control System.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 
@@ -651,6 +685,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for providing foreign function interface.*
 
+* [ctypes](https://docs.python.org/2/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
 * [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
 
 ## High Performance
