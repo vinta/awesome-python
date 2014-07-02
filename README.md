@@ -260,6 +260,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [Zope Toolkit](http://docs.zope.org/zopetoolkit/) - A set of libraries intended for reuse by projects to develop web applications or web frameworks.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, created by the Zope community and formerly known as Zope 3.
+* [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
 ## CMS
 
