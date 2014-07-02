@@ -128,6 +128,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser.
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
+    * [schema](https://github.com/halst/schema) - A library for validating Python data structures.
 
 ## Natural Language Processing
 
