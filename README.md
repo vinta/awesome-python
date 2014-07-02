@@ -231,8 +231,24 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for working with HTTP.*
 
-* [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
-* [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+* Clients
+    * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
+    * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+* WSGI Servers
+    * [wsgiref](http://docs.python.org/library/wsgiref.html) - (Python standard library) WSGI reference implementation, single-threaded.
+    * [cherrypy](http://www.cherrypy.org/) - Multi-threaded and very stable.
+    * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
+    * [rocket](http://pypi.python.org/pypi/rocket) - Multi-threaded.
+    * [waitress](http://readthedocs.org/docs/waitress/en/latest/) - Multi-threaded, poweres Pyramid.
+    * [gunicorn](http://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
+    * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
+    * [gevent](http://www.gevent.org/) - Asynchronous (greenlets).
+    * [diesel](http://dieselweb.org/) - Asynchronous (greenlets).
+    * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
+    * [tornado](http://www.tornadoweb.org/) - Asynchronous, powers some parts of Facebook.
+    * [twisted](http://twistedmatrix.com/) - Asynchronous, well tested but... twisted.
+    * [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
+    * [bjoern](http://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
 
 ## Database
 
@@ -661,7 +677,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [gunicorn](http://gunicorn.org/) - A WSGI HTTP Server for UNIX, fast clients and sleepy applications.
 * [Supervisor](http://supervisord.org/) - A Process Control System.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 
