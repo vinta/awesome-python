@@ -59,6 +59,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Miscellaneous](#miscellaneous)
+    - [Cryptography](#cryptography)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
     - [Websites](#websites)
@@ -658,6 +659,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Useful libraries or tools that don't fit in the categories above.*
 
 * [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+
+## Cryptography
+* [PyCA's Cryptography](https://cryptography.io/en/latest/) - cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
 
 ## Editor Plugins
 
