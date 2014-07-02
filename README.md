@@ -160,6 +160,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
 * [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
 * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+* [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 * [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 
 ## Imagery
