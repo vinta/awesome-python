@@ -43,6 +43,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Processes and Threads](#processes-and-threads)
     - [Networking](#networking)
     - [WebSocket](#websocket)
+    - [Cryptography](#cryptography)
     - [GUI](#gui)
     - [Game Development](#game-development)
     - [Logging](#logging)
@@ -59,7 +60,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Miscellaneous](#miscellaneous)
-    - [Cryptography](#cryptography)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
     - [Websites](#websites)
@@ -222,7 +222,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Database Drivers
 
-*Libraties for connecting and operating databases*
+*Libraties for connecting and operating databases.*
 
 * Relational Databases
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
@@ -262,7 +262,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## CMS
 
-*Content Management Systems*
+*Content management systems*
 
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
 * [Wagtail](http://wagtail.io/) - A Django content management system.
@@ -478,6 +478,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 
+## Cryptography
+
+* [PyCA's Cryptography](https://cryptography.io/en/latest/) - cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
+
 ## GUI
 
 *Libraries for working with graphical user interface applications.*
@@ -543,7 +547,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Debugging Tools
 
-*Libraries for dubugging and developing*
+*Libraries for dubugging and developing.*
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
@@ -570,7 +574,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Data Visualization
 
-*Libraries for visualizing data*
+*Libraries for visualizing data.*
 
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
@@ -582,7 +586,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Machine Learning
 
-*Libraries for Machine Learning*
+*Libraries for Machine Learning.*
 
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
@@ -621,7 +625,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## DevOps Tools
 
-*Software and libraries for DevOps*
+*Software and libraries for DevOps.*
 
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [Ansible](http://www.ansible.com/) - An IT automation tool.
@@ -661,12 +665,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
 
-## Cryptography
-* [PyCA's Cryptography](https://cryptography.io/en/latest/) - cryptography is a package designed to expose cryptographic primitives and recipes to Python developers.
-
 ## Editor Plugins
 
-*Plugins for various editors*
+*Plugins for various editors.*
 
 * Vim
     * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
