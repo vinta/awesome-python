@@ -280,6 +280,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * NoSQL Databases
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
+    * [mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend
 
 ## Web Frameworks
 
