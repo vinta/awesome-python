@@ -160,6 +160,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
 * [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
 * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+* [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 * [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 
 ## Imagery
@@ -287,11 +288,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for implementing authentications schemes.*
 
+* [OAuthLib](https://github.com/idan/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
 * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
 * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
 * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
 * [python-oauth2](https://github.com/simplegeo/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
 * [rauth](https://github.com/litl/rauth) - A Python library for OAuth 1.0/a, 2.0, and Ofly.
+* [Flask-OAuthlib](https://github.com/lepture/flask-oauthlib) - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.
 
 ## Template Engine
 
