@@ -649,7 +649,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Plugins for various editors*
 
 * Vim
-    * TODO
+    * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
 * Emacs
     * TODO
 * Sublime Text
