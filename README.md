@@ -36,6 +36,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Web Content Extracting](#web-content-extracting)
     - [Downloader](#downloader)
     - [Forms](#forms)
+    - [Data Validation](#data-validation)
     - [Anti-spam](#anti-spam)
     - [Tagging](#tagging)
     - [Build Tools](#build-tools)
@@ -421,6 +422,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-crispy-forms](http://django-crispy-forms.readthedocs.org/) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
 * [Deform](http://deform.readthedocs.org/en/latest/) - Python HTML form generation library influenced by the formish form generation library.
 * [WTForms](http://wtforms.readthedocs.org/) - A flexible forms validation and rendering library.
+
+## Data Validation
+
+*Libraries for validating data. Used for forms in many cases.*
+
+* [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
+* [dictshield](https://github.com/exfm/dictshield) - A fast way to validate and trim the values in a dictionary.
+* [colander](http://docs.pylonsproject.org/projects/colander/en/latest/index.html) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
 
 ## Anti-spam
 
