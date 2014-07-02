@@ -336,6 +336,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for caching data.*
 
 * [Beaker Caching & Sessions](http://beaker.readthedocs.org/en/latest/) - Beaker is a library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
+* [Dogpile Cache](http://dogpilecache.readthedocs.org/en/latest/) - Dogpile Cache is next generation replacement for Beaker made by same authors.
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 
 ## Email
@@ -413,6 +414,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for working with forms.*
 
 * [django-crispy-forms](http://django-crispy-forms.readthedocs.org/) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
+* [Deform](http://deform.readthedocs.org/en/latest/) - Python HTML form generation library influenced by the formish form generation library.
 * [WTForms](http://wtforms.readthedocs.org/) - A flexible forms validation and rendering library.
 
 ## Anti-spam
