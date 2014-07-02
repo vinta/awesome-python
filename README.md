@@ -9,6 +9,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
     - [Natural Language Processing](#natural-language-processing)
+    - [Configuration](#configuration)
     - [Command-line Tools](#command-line-tools)
     - [Documentation](#documentation)
     - [Imagery](#imagery)
@@ -145,6 +146,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
+
+## Configuration
+
+*Libraries for storing configuration options.*
+
+* [ConfigParser](https://docs.python.org/2/library/configparser.html) - (Python standard library) INI file parser.
+* [ConfigObj](http://www.voidspace.org.uk/python/configobj.html) - INI file parser with validation.
+* [config](http://www.red-dove.com/config-doc/) - Hierarchical config from the author of [logging](https://docs.python.org/2/library/logging.html).
+* [profig](http://profig.readthedocs.org/) - Config from multiple formats with value conversion.
 
 ## Command-line Tools
 
