@@ -185,6 +185,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Command-line Application Development
     * [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
+    * [Clime](http://clime.mosky.tw) – Clime lets you convert any module into a multi-command CLI program without any configuration.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 * Workflow Tools
@@ -488,6 +489,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for administrative interfaces.*
 
 * [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
+* [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
 * [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
@@ -607,6 +609,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
+* [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
@@ -725,6 +728,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Useful libraries or tools that don't fit in the categories above.*
 
 * [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+* [bpython](http://bpython-interpreter.org) – bpython is a fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
 
 ## Editor Plugins
 
