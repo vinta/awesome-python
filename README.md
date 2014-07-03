@@ -694,6 +694,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Wikipedia](https://wikipedia.readthedocs.org/en/latest/) - A Pythonic wrapper for the Wikipedia API.
 * [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
+* [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
 
 ## DevOps Tools
 
