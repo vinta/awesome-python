@@ -197,6 +197,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [wand](https://github.com/dahlia/wand) - Python bindings for MagickWand, C API for ImageMagick.
 * [pyBarcode](https://pythonhosted.org/pyBarcode/) - Create barcodes in python without needing PIL.
+* [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 
 ## Audio
 
