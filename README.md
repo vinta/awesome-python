@@ -23,6 +23,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
     - [Web Frameworks](#web-frameworks)
+    - [Permissions](#permissions)
     - [CMS](#cms)
     - [RESTful API](#restful-api)
     - [Authentication and OAuth](#authentication-and-oauth)
@@ -303,6 +304,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [Zope Toolkit](http://docs.zope.org/zopetoolkit/) - A set of libraries intended for reuse by projects to develop web applications or web frameworks.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, created by the Zope community and formerly known as Zope 3.
+
+## Permissions
+
+*Permissions.*
+
+* [Carteblanche](http://www.github.com/neuman/python-carteblanche/) - Module to align code with thoughts of users and designers. Also magically handles navigation and permissions.
 
 ## CMS
 
