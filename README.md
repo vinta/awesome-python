@@ -320,7 +320,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for developing RESTful APIs.*
 
-* [cornice](https://cornice.readthedocs.org/en/latest/) - A REST framework for Pyramid
+* [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
 * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit that makes it easy to build Web APIs.
 * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
 * [flask-api](http://www.flaskapi.org/) - An implementation of the same web browsable APIs that django-rest-framework provides.
@@ -504,6 +504,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for woking with processes or threads*
 
+* [multiprocessing](https://docs.python.org/2/library/multiprocessing.html) - (Python standard library) - Process-based "threading" interface.
+* [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
 * [envoy](https://github.com/kennethreitz/envoy) - Python Subprocesses for Humans™.
 * [sh](https://github.com/amoffat/sh) - A full-fledged [subprocess](https://docs.python.org/2/library/subprocess.html) replacement for Python.
 
