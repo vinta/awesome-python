@@ -57,6 +57,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Science and Data Analysis](#science-and-data-analysis)
     - [Data Visualization](#data-visualization)
     - [Machine Learning](#machine-learning)
+    - [Functional Programming](#functional-programming)
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
@@ -651,6 +652,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
+
+## Functional Programming
+
+* [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
+* [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 
 ## MapReduce
 
