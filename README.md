@@ -6,6 +6,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
     - [Distribution](#distribution)
+    - [Build Tools](#build-tools)
     - [Files](#files)
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
@@ -41,7 +42,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Data Validation](#data-validation)
     - [Anti-spam](#anti-spam)
     - [Tagging](#tagging)
-    - [Build Tools](#build-tools)
     - [Admin Panels](#admin-panels)
     - [Processes and Threads](#processes-and-threads)
     - [Networking](#networking)
@@ -95,6 +95,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
 * [py2app](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html) - Freezes Python scripts (Mac OS X)
 * [PyInstaller ](http://www.pyinstaller.org/) - A program that converts Python programs into stand-alone executables (Windows, Linux, Mac OS X, Solaris and AIX)
+
+## Build Tools
+
+*Compile software from source code.*
+
+* [buildout](http://www.buildout.org/) - A build system for creating, assembling and deploying applications from multiple parts, some of which may be non-Python-based.
+* [SCons](http://www.scons.org/) - A software construction tool.
+* [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
 
 ## Files
 
@@ -478,14 +486,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for tagging items.*
 
 * [django-taggit](https://github.com/alex/django-taggit) - Simple tagging for Django.
-
-## Build Tools
-
-*Compile software from source code.*
-
-* [buildout](http://www.buildout.org/) - A build system for creating, assembling and deploying applications from multiple parts, some of which may be non-Python-based.
-* [SCons](http://www.scons.org/) - A software construction tool.
-* [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
 
 ## Admin Panels
 
