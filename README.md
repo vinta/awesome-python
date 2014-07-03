@@ -147,6 +147,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Packages is for writing and reading data and formatting information from Excel files.
     * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
+    * [mm](https://github.com/brianray/mm) - Python powered spreadsheets.
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - a pure-python PDF library capable of splitting, merging and transforming PDF pages.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
