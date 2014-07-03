@@ -527,6 +527,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *WSGI-compatible web servers.*
 
+* [uWSGI](http://projects.unbit.it/uwsgi/) - A project aims at developing a full stack for building hosting services.
 * [wsgiref](http://docs.python.org/library/wsgiref.html) - (Python standard library) WSGI reference implementation, single-threaded.
 * [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
