@@ -449,6 +449,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 * [Haul](https://github.com/vinta/Haul) - An Extensible Image Crawler.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
+* [opengraph](https://github.com/erikriver/opengraph) - A python module to parse the Open Graph Protocol
 
 ## Downloader
 
