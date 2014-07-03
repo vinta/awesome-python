@@ -153,6 +153,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
 * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
+* [cliff](https://cliff.readthedocs.org/en/latest/introduction.html) - A framework for creating command-line programs with multi-level commands 
 * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
 * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 
