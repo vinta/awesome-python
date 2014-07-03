@@ -10,9 +10,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
     - [Natural Language Processing](#natural-language-processing)
+    - [Documentation](#documentation)
     - [Configuration](#configuration)
     - [Command-line Tools](#command-line-tools)
-    - [Documentation](#documentation)
     - [Imagery](#imagery)
     - [Audio](#audio)
     - [Video](#video)
@@ -132,12 +132,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate chinese hanzi (漢字) to pinyin (拼音).
     * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts.
-* Specific Format
+* Specific Formats
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
     * [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Packages is for writing and reading data and formatting information from Excel files.
     * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
+    * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+    * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * Parser
     * [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Library for parsing, formatting, storing and validating international phone numbers.
@@ -157,6 +159,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
+
+## Documentation
+
+*Libraries for generating project documentation.*
+
+* [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
+* [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
+* [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 
 ## Configuration
 
@@ -178,16 +188,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 * Workflow Tools
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX
-
-## Documentation
-
-*Libraries for generating project documentation.*
-
-* [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
-* [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
-* [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
-* [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
-* [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 
 ## Imagery
 
