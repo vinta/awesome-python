@@ -94,6 +94,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform)
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
 * [py2app](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html) - Freezes Python scripts (Mac OS X)
+* [PyInstaller ](http://www.pyinstaller.org/) - A program that converts Python programs into stand-alone executables (Windows, Linux, Mac OS X, Solaris and AIX)
 
 ## Files
 
