@@ -259,6 +259,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
 * NoSQL Databases
+    * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Apache Cassandra.
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
 
@@ -707,6 +708,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [ctypes](https://docs.python.org/2/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
 * [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
+* [SWIG](http://www.swig.org/Doc1.3/Python.html) - Simplified Wrapper and Interface Generator.
 
 ## High Performance
 
