@@ -46,6 +46,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Processes and Threads](#processes-and-threads)
     - [Networking](#networking)
     - [WebSocket](#websocket)
+    - [WSGI Servers](#wsgi-servers)
     - [Cryptography](#cryptography)
     - [GUI](#gui)
     - [Game Development](#game-development)
@@ -232,24 +233,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for working with HTTP.*
 
-* Clients
-    * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
-    * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
-* WSGI Servers
-    * [wsgiref](http://docs.python.org/library/wsgiref.html) - (Python standard library) WSGI reference implementation, single-threaded.
-    * [cherrypy](http://www.cherrypy.org/) - Multi-threaded and very stable.
-    * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
-    * [rocket](http://pypi.python.org/pypi/rocket) - Multi-threaded.
-    * [waitress](http://readthedocs.org/docs/waitress/en/latest/) - Multi-threaded, poweres Pyramid.
-    * [gunicorn](http://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
-    * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
-    * [gevent](http://www.gevent.org/) - Asynchronous (greenlets).
-    * [diesel](http://dieselweb.org/) - Asynchronous (greenlets).
-    * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
-    * [tornado](http://www.tornadoweb.org/) - Asynchronous, powers some parts of Facebook.
-    * [twisted](http://twistedmatrix.com/) - Asynchronous, well tested but... twisted.
-    * [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
-    * [bjoern](http://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
+* [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
+* [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
 
 ## Database
 
@@ -516,6 +501,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
+* [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
 
 ## WebSocket
@@ -524,6 +510,20 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
+
+## WSGI Servers
+
+*WSGI-compatible web servers.*
+
+* [wsgiref](http://docs.python.org/library/wsgiref.html) - (Python standard library) WSGI reference implementation, single-threaded.
+* [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
+* [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
+* [rocket](http://pypi.python.org/pypi/rocket) - Multi-threaded.
+* [waitress](https://waitress.readthedocs.org/en/latest/) - Multi-threaded, poweres Pyramid.
+* [gunicorn](http://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
+* [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
+* [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
+* [bjoern](http://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
 
 ## Cryptography
 
