@@ -409,6 +409,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 * [gunicorn](http://gunicorn.org/) - A WSGI HTTP Server for UNIX, fast clients and sleepy applications.
 * [Supervisor](http://supervisord.org/) - A Process Control System.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
+* [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect
 
 ## GUI
 
