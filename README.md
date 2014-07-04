@@ -218,6 +218,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
+* [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 
 ## Audio
 
