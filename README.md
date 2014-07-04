@@ -29,6 +29,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Template Engine](#template-engine)
     - [Queue](#queue)
     - [Search](#search)
+    - [News Feed](#news-feed)
     - [Asset Management](#asset-management)
     - [Caching](#caching)
     - [Email](#email)
@@ -372,6 +373,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [elasticsearch-py](http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/) - The official low-level Python client for [Elasticsearch](http://www.elasticsearch.org/).
 * [solrpy](https://code.google.com/p/solrpy/) - A Python client for [solr](http://lucene.apache.org/solr/).
 * [Whoosh](http://whoosh.readthedocs.org/) - A fast, pure Python search engine library.
+
+## News Feed
+
+*Libraries for building user's activities.*
+
+* [Feedly](https://github.com/tschellenbach/Feedly) - A library which allows you to build newsfeed and notification systems using Cassandra and/or Redis.
+* [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generate generic activity streams from the actions on your site.
 
 ## Asset Management
 
