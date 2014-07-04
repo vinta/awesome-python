@@ -173,16 +173,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
 * [genius](https://github.com/duanhongyi/genius) - A Chinese segment base on Conditional Random Field.
 
-## Command-line Tools
-
-*Libraries for building command line utilities.*
-
-* [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
-* [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
-* [cliff](https://cliff.readthedocs.org/) - A framework for creating command-line programs with multi-level commands.
-* [docopt](http://docopt.org/) - Pythonic command line arguments parser.
-* [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
-
 ## Documentation
 
 *Libraries for generating project documentation.*
@@ -207,6 +197,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Command-line Application Development
     * [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
+    * [cliff](https://cliff.readthedocs.org/) - A framework for creating command-line programs with multi-level commands.
     * [Clime](http://clime.mosky.tw) – Clime lets you convert any module into a multi-command CLI program without any configuration.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
