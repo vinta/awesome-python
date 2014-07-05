@@ -291,6 +291,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
     * [mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend
+    * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for cassandra by Datastax
 
 ## Web Frameworks
 
@@ -307,6 +308,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, created by the Zope community and formerly known as Zope 3.
 * [guava](https://github.com/flatpeach/guava) - A lightweight and high performance web framework for Python written in C.
+* 
 
 ## CMS
 
@@ -693,6 +695,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [dumbo](https://github.com/klbostee/dumbo) - Python module that allows one to easily write and run Hadoop programs.
 * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data. Integrates with [Apache Storm](https://storm.incubator.apache.org/).
 
+
 ## Third-party APIs
 
 *Libraries for accessing third party APIs.*
@@ -707,6 +710,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
+* [linkedin](https://github.com/ozgur/python-linkedin) - A python interface for Linkedin
+* [readability](https://github.com/buriy/python-readability) - A python interface for Readability to extract content from webpage
+* [hpiLO](https://github.com/seveas/python-hpilo) - A python library to access iLO of HP Hardwares
 
 ## DevOps Tools
 
