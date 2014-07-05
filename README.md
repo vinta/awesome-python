@@ -65,6 +65,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+    - [Workflow Execution](#workflow-execution)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
@@ -744,6 +745,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
+
+## Workflow Execution
+
+*Libraries that enable workflows to be executed (remotely or locally).*
+
+* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [Luigi](https://github.com/spotify/luigi) - A Python module that helps you build complex pipelines of batch jobs.
+* [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 
 ## Miscellaneous
 
