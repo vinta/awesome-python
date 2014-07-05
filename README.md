@@ -291,12 +291,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
 * NoSQL Databases
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
+    * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
-    * [mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend
 
 ## Web Frameworks
 
-*Web development frameworks.*
+*Full stack web frameworks.*
 
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
