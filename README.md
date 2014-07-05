@@ -761,7 +761,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Vim
     * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
 * Emacs
-    * TODO
+    * [Elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
 * Sublime Text
     * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
