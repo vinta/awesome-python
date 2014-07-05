@@ -348,6 +348,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
 * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
 * [Flask-OAuthlib](https://github.com/lepture/flask-oauthlib) - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.
+* [sanction](https://github.com/demianbrecht/sanction) - A dead simple OAuth2 client implementation.
+* [jose](https://github.com/demonware/jose) - Javscript Object Signing and Encryption (JOSE) draft implementation, useful for stateful tokens.
 
 ## Template Engine
 
