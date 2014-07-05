@@ -174,6 +174,16 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
+
+## Command-line Tools
+
+*Libraries for building command line utilities.*
+
+* [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
+* [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
+* [docopt](http://docopt.org/) - Pythonic command line arguments parser.
+* [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
+* [rainbowstream](http://www.rainbowstream.org) - A smart and nice Twitter client on terminal.
 * [genius](https://github.com/duanhongyi/genius) - A Chinese segment base on Conditional Random Field.
 
 ## Documentation
