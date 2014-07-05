@@ -143,6 +143,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate chinese hanzi (漢字) to pinyin (拼音).
     * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts.
+    * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in python.
 * Specific Formats
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
     * [python-docx](https://github.com/mikemaccana/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
