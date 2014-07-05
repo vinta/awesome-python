@@ -652,6 +652,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
+* [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
 
 ## Data Visualization
 
