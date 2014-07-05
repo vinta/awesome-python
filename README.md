@@ -279,7 +279,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
 * NoSQL Databases
-    * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Apache Cassandra.
+    * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra by Datastax.
+    * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
 
@@ -722,6 +723,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [praw](https://github.com/praw-dev/praw) - A Python wrapper for the Reddit API.
+* [linkedin](https://github.com/ozgur/python-linkedin) - A Python interface for LinkedIn.
 
 ## DevOps Tools
 
