@@ -532,6 +532,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
+* [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
 
 ## WebSocket
 
