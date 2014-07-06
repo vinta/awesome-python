@@ -235,6 +235,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [audioread](https://github.com/sampsyo/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
 * [mutagen](https://code.google.com/p/mutagen/) - A Python module to handle audio metadata.
 * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
+* [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
 
 ## Video
 
