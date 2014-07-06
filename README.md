@@ -648,6 +648,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [Open Mining](https://github.com/avelino/mining) - Business Intelligence (BI) in Python (Pandas web interface) 
 * [PyMC](https://github.com/pymc-devs/pymc) - Markov Chain Monte Carlo sampling toolkit.
 * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
