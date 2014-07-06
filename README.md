@@ -273,6 +273,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * Relational Databases
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
+    * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - pure-python MySQL driver from Oracle (in case you don't want or can't install system MySQL library)
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
 * NoSQL Databases
