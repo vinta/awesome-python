@@ -603,6 +603,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for generating and working with log files.*
 
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
+* [logbook](http://pythonhosted.org/Logbook/) -  Logging replacement for Python.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
 * [Raven](http://raven.readthedocs.org/) - The Python client for Sentry.
 
