@@ -88,6 +88,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for package and dependency management.*
 
 * [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
+* [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
 
 ## Distribution
