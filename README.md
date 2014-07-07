@@ -402,6 +402,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [fanstatic](http://www.fanstatic.org/en/latest/) - Packages, optimizes, and serves static file dependencies as Python packages.
 * [fileconveyor](http://fileconveyor.org/) - Monitors changes, processes, and transports assets to CDNs and file storage systems.
 * [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
+* [glue](http://gluecss.com) - Glue is a simple command line tool to generate CSS sprites.
 
 ## Caching
 
