@@ -512,6 +512,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
 * [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
+* [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
 * [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
