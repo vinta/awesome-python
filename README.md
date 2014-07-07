@@ -237,6 +237,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [mutagen](https://code.google.com/p/mutagen/) - A Python module to handle audio metadata.
 * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 * [audiolazy](https://github.com/danilobellini/audiolazy) - Expressive Digital Signal Processing (DSP) package for Python.
+* [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
 
 ## Video
 
