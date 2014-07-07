@@ -617,6 +617,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
 * Fake Data
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
+    * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
@@ -633,6 +634,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
 * [Pylint](http://www.pylint.org/) - A source code analyzer.
 * [pycallgraph](https://github.com/gak/pycallgraph) - Creates call graph visualizations for Python applications.
+* [pylama](https://pylama.readthedocs.org/) - The modular source code checker: pep8, pyflakes, pylint and co.
 
 ## Debugging Tools
 
