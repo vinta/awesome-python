@@ -265,6 +265,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
 * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+* [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
 
 ## Database
 
