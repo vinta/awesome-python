@@ -418,6 +418,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [marrow.mailer](https://github.com/marrow/marrow.mailer) - High-performance extensible mail delivery framework.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
 * [modoboa](https://github.com/tonioo/modoboa) - A mail hosting and management platform including a modern and simplified Web User Interface.
+* [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
 
 ## Internationalization
 
