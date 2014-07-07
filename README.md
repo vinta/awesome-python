@@ -444,6 +444,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [bleach](http://bleach.readthedocs.org/) - A whitelist-based HTML sanitization and text linkification library.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 * [xhtml2pdf](https://github.com/chrisglass/xhtml2pdf) - HTML/CSS to PDF converter.
+* [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access
 
 ## Web Crawling
 
