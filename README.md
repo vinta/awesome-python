@@ -740,6 +740,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
 * [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
+* [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
 * [doit](http://pydoit.org/) - A task runner/build tool.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
