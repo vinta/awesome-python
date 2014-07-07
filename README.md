@@ -726,6 +726,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [doit](http://pydoit.org/) - A task runner/build tool.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
+* [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in python.
 
 ## Foreign Function Interface
 
