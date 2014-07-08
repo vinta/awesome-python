@@ -421,8 +421,9 @@ long, literate-programming-style documentation generator.
 *Libraries for sending and parsing email.*
 
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
-* [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
+* [inbox](https://github.com/inboxapp/inbox) - The open source email toolkit.
+* [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
 * [marrow.mailer](https://github.com/marrow/marrow.mailer) - High-performance extensible mail delivery framework.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
