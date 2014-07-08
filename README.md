@@ -71,7 +71,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Hardware](#hardware)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
-- [Resources](#resources)
+    - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
