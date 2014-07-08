@@ -63,7 +63,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
-    - [Application Monitoring Tools](#application-monitoring)
+    - [Application Monitoring Tools](#application-monitoring-tools)
     - [Workflow Execution](#workflow-execution)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
