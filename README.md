@@ -63,10 +63,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
+    - [Workflow Execution](#workflow-execution)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-    - [Workflow Execution](#workflow-execution)
     - [Hardware](#hardware)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
@@ -713,11 +713,6 @@ long, literate-programming-style documentation generator.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
 
-## Functional Programming
-
-* [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
-* [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
-
 ## MapReduce
 
 *Framworks and libraries for MapReduce.*
@@ -728,6 +723,11 @@ long, literate-programming-style documentation generator.
 * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
 * [dumbo](https://github.com/klbostee/dumbo) - Python module that allows one to easily write and run Hadoop programs.
 * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data. Integrates with [Apache Storm](https://storm.incubator.apache.org/).
+
+## Functional Programming
+
+* [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
+* [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 
 ## Third-party APIs
 
@@ -762,6 +762,15 @@ long, literate-programming-style documentation generator.
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
 
+## Workflow Execution
+
+*Libraries that enable workflows to be executed (remotely or locally).*
+
+* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [Luigi](https://github.com/spotify/luigi) - A Python module that helps you build complex pipelines of batch jobs.
+* [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
+
 ## Foreign Function Interface
 
 *Libraries for providing foreign function interface.*
@@ -786,15 +795,6 @@ long, literate-programming-style documentation generator.
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
 
-## Workflow Execution
-
-*Libraries that enable workflows to be executed (remotely or locally).*
-
-* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
-* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
-* [Luigi](https://github.com/spotify/luigi) - A Python module that helps you build complex pipelines of batch jobs.
-* [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
-
 ## Hardware
 
 *Libraries for programming with hardware.*
@@ -807,6 +807,9 @@ long, literate-programming-style documentation generator.
 
 * [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
 * [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
+* [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
+* [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
+* [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 
 ## Editor Plugins
 
