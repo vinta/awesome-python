@@ -765,7 +765,7 @@ long, literate-programming-style documentation generator.
 
 ## Application Monitoring Tools
 
-*Apps and API providers for Application Monitoring and Performance Management
+*Apps and API providers for Application Monitoring and Performance Management*
 
 * [New Relic](https://docs.newrelic.com/docs/python/python-agent-quick-start) - New Relic for Python Agent, it supports various WSGI frameworks and provides quick guide to get started.
 * [DataDog](http://dogapi.readthedocs.org/en/latest/) - Cloud monitoring as a service.
