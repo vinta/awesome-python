@@ -210,6 +210,7 @@ long, literate-programming-style documentation generator.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 * Productivity Tools
+    * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
 
 ## Imagery
@@ -267,8 +268,8 @@ long, literate-programming-style documentation generator.
 *Libraries for working with HTTP.*
 
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
-* [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
 * [urllib3](https://github.com/shazow/urllib3) - HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more.
+* [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
 
 ## Database
 
