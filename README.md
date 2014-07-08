@@ -63,6 +63,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
+    - [Application Monitoring Tools](#application-monitoring)
     - [Workflow Execution](#workflow-execution)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
@@ -761,6 +762,14 @@ long, literate-programming-style documentation generator.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
+
+## Application Monitoring Tools
+
+*Apps and API providers for Application Monitoring and Performance Management
+
+* [New Relic](https://docs.newrelic.com/docs/python/python-agent-quick-start) - New Relic for Python Agent, it supports various WSGI frameworks and provides quick guide to get started.
+* [DataDog](http://dogapi.readthedocs.org/en/latest/) - Cloud monitoring as a service.
+
 
 ## Workflow Execution
 
