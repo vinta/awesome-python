@@ -23,6 +23,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
     - [Web Frameworks](#web-frameworks)
+    - [Permissions](#permissions)
     - [CMS](#cms)
     - [RESTful API](#restful-api)
     - [Authentication and OAuth](#authentication-and-oauth)
@@ -321,6 +322,13 @@ long, literate-programming-style documentation generator.
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries, offers a lot of building blocks for web development.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, created by the Zope community and formerly known as Zope 3.
 * [guava](https://github.com/flatpeach/guava) - A lightweight and high performance web framework for Python written in C.
+
+## Permissions
+
+*Libraries that allow or deny users access to data or functionality.*
+
+* [Django Guardian](https://github.com/lukaszb/django-guardian) - Implementation of per object permissions for Django 1.2+
+* [Carteblanche](http://www.github.com/neuman/python-carteblanche/) - Module to align code with thoughts of users and designers. Also magically handles navigation and permissions.
 
 ## CMS
 
