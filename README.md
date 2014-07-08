@@ -242,6 +242,7 @@ long, literate-programming-style documentation generator.
 * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 * [audiolazy](https://github.com/danilobellini/audiolazy) - Expressive Digital Signal Processing (DSP) package for Python.
 * [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
+* [TimeSide](https://github.com/yomguy/TimeSide) - Open web audio processing framework.
 
 ## Video
 
