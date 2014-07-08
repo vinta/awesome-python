@@ -268,6 +268,7 @@ long, literate-programming-style documentation generator.
 
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
 * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+* [urllib3](https://github.com/shazow/urllib3) - HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more.
 
 ## Database
 
