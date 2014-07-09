@@ -83,6 +83,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
 * [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
+* [PEW](https://pypi.python.org/pypi/pew/) - Python Env Wrapper (also called Invewrapper) is a set of tools to manage multiple virtual environments.
 
 ## Package Management
 
