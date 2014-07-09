@@ -214,6 +214,7 @@ long, literate-programming-style documentation generator.
 * Productivity Tools
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
+    * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
 
 ## Imagery
 
