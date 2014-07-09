@@ -467,7 +467,7 @@ A curated list of awesome Python frameworks, libraries and resources. Inspired b
 
 ## Debugging Tools
 
-*Libraries for dubugging and developing*
+*Libraries for debugging code*
 
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
