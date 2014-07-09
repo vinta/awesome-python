@@ -350,6 +350,7 @@ long, literate-programming-style documentation generator.
 * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
 * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit that makes it easy to build Web APIs.
 * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
+* [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON API:s with HMAC authentication and Django form-validation.
 * [flask-api](http://www.flaskapi.org/) - An implementation of the same web browsable APIs that django-rest-framework provides.
 * [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
 * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
