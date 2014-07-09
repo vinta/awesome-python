@@ -637,6 +637,7 @@ long, literate-programming-style documentation generator.
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
     * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
+    * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
 * Fake Data
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
