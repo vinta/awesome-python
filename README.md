@@ -730,6 +730,8 @@ long, literate-programming-style documentation generator.
 
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
+* [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+* [CyToolz](https://github.com/pytoolz/cytoolz/) - Cython implementation of Toolz: High performance functional utilities.
 
 ## Third-party APIs
 
