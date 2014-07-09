@@ -425,6 +425,7 @@ long, literate-programming-style documentation generator.
 * [Beaker Caching & Sessions](http://beaker.readthedocs.org/en/latest/) - Beaker is a library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
 * [Dogpile Cache](http://dogpilecache.readthedocs.org/en/latest/) - Dogpile Cache is next generation replacement for Beaker made by same authors.
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
+* [django-viewlet](https://github.com/5monkeys/django-viewlet) - Render template parts with extended cache control.
 
 ## Email
 
