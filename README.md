@@ -705,6 +705,7 @@ long, literate-programming-style documentation generator.
 * [d3py](https://github.com/mikedewar/d3py) - A plottling library for Python, based on [D3.js](http://d3js.org/).
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 * [Kartograph.py](https://github.com/kartograph/kartograph.py) - Rendering beautiful SVG maps in Python.
+* [pygal](http://pygal.org/) - A python SVG Charts Creator
 
 ## Machine Learning
 
