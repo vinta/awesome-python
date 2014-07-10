@@ -144,8 +144,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
     * [esmre](https://code.google.com/p/esmre/) - Regular expression accelerator.
     * [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
-    * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that handles unicode.
-    * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs. Developed by Mozilla.
+    * [awesome-slugify](https://github.com/dimka665/awesome-slugify) - A Python slugify library that can preserve unicode.
+    * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
+    * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs with Django as a dependency. Developed by Mozilla.
     * [unidecode](https://pypi.python.org/pypi/Unidecode) - ASCII transliterations of Unicode text.
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate Chinese hanzi (漢字) to pinyin (拼音).
