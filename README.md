@@ -434,6 +434,7 @@ long, literate-programming-style documentation generator.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [django-viewlet](https://github.com/5monkeys/django-viewlet) - Render template parts with extended cache control.
+* [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
 
 ## Email
 
