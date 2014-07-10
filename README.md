@@ -291,11 +291,15 @@ long, literate-programming-style documentation generator.
     * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle (in case you don't want or can't install system MySQL library)
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
+    * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra by Datastax.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+    * [py2neo](http://book.py2neo.org/) - Python wrapper client for Neo4j's restful interface.
+    * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
+    * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
 ## ORM
 
