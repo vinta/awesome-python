@@ -284,13 +284,13 @@ long, literate-programming-style documentation generator.
 
 ## Database Drivers
 
-*Libraties for connecting and operating databases.*
+*Libraries for connecting and operating databases.*
 
 * Relational Databases
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle (in case you don't want or can't install system MySQL library)
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs.
-    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
+    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra by Datastax.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
@@ -340,7 +340,7 @@ long, literate-programming-style documentation generator.
 
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
 * [Wagtail](http://wagtail.io/) - A Django content management system.
-* [django-oscar](http://oscarcommerce.com/) - An open-source ecommerce framework for Django.
+* [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
 * [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
