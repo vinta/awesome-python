@@ -360,6 +360,7 @@ long, literate-programming-style documentation generator.
 * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
 * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
 * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
+* [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
 
 ## Authentication and OAuth
 
@@ -852,6 +853,7 @@ Where to discover new Python libraries.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
 * [List of Python API Wrappers](https://github.com/realpython/list-of-python-api-wrappers) - A list of web services along with links to their docs and Python wrappers/libraries.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
+* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack as well as links to the best resources on those topics from around the web.
 
 ## Weekly
 
