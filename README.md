@@ -273,8 +273,8 @@ long, literate-programming-style documentation generator.
 
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
 * [urllib3](https://github.com/shazow/urllib3) - HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more.
+* [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library.
 * [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
-* [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library
 
 ## Database
 
@@ -353,7 +353,7 @@ long, literate-programming-style documentation generator.
 * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
 * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit that makes it easy to build Web APIs.
 * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
-* [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON API:s with HMAC authentication and Django form-validation.
+* [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON APIs with HMAC authentication and Django form-validation.
 * [flask-api](http://www.flaskapi.org/) - An implementation of the same web browsable APIs that django-rest-framework provides.
 * [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
 * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
@@ -427,9 +427,12 @@ long, literate-programming-style documentation generator.
 
 *Libraries for caching data.*
 
-* [Beaker Caching & Sessions](http://beaker.readthedocs.org/en/latest/) - Beaker is a library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
-* [Dogpile Cache](http://dogpilecache.readthedocs.org/en/latest/) - Dogpile Cache is next generation replacement for Beaker made by same authors.
+* [Beaker](http://beaker.readthedocs.org/) - A library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
+* [dogpile.cache](http://dogpilecache.readthedocs.org/) - dogpile.cache is next generation replacement for Beaker made by same authors.
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
+* [django-cache-machine](https://github.com/jbalogh/django-cache-machine) - Automatic caching and invalidation for Django models through the ORM.
+* [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
+* [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [django-viewlet](https://github.com/5monkeys/django-viewlet) - Render template parts with extended cache control.
 
 ## Email
@@ -743,7 +746,7 @@ long, literate-programming-style documentation generator.
 
 ## Third-party APIs
 
-*Libraries for accessing third party APIs.*
+*Libraries for accessing third party APIs. See: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers)*
 
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
@@ -846,8 +849,8 @@ Where to discover new Python libraries.
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
+* [List of Python API Wrappers](https://github.com/realpython/list-of-python-api-wrappers) - A list of web services along with links to their docs and Python wrappers/libraries.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
-* [List of Python API Wrappers](https://github.com/realpython/list-of-python-api-wrappers) - A list of web services along with links to their docs and Python wrappers/libraries
 
 ## Weekly
 
