@@ -417,6 +417,7 @@ long, literate-programming-style documentation generator.
 * [fileconveyor](http://fileconveyor.org/) - Monitors changes, processes, and transports assets to CDNs and file storage systems.
 * [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 * [glue](http://gluecss.com) - Glue is a simple command line tool to generate CSS sprites.
+* [libsass-python](http://hongminhee.org/libsass-python/) - A Python binding of [libsass](https://github.com/hcatlin/libsass), the reference implementation of SASS/SCSS.
 
 ## Caching
 
