@@ -880,6 +880,10 @@ Where to discover new Python libraries.
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
 * [@pythontrending](https://twitter.com/pythontrending)
 
+## Related
+
+[Other lists](https://github.com/sindresorhus/awesome).
+
 # Contributing
 
 Your contributions are always welcome!
