@@ -85,7 +85,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pew](https://pypi.python.org/pypi/pew/) - Python Env Wrapper (also called Invewrapper) is a set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
-* [conda](http://conda.pydata.org) - System-level, full-stack environments.
 
 ## Package Management
 
@@ -93,8 +92,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-* [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
+* [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
 
 ## Distribution
 
