@@ -450,6 +450,7 @@ long, literate-programming-style documentation generator.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
 * [modoboa](https://github.com/tonioo/modoboa) - A mail hosting and management platform including a modern and simplified Web User Interface.
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
+* [mailjet](https://github.com/WoLpH/mailjet) - Mailjet API implementation for batch mailing, statistics and more
 
 ## Internationalization
 
