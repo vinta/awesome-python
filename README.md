@@ -146,7 +146,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
     * [awesome-slugify](https://github.com/dimka665/awesome-slugify) - A Python slugify library that can preserve unicode.
     * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
-    * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs with Django as a dependency. Developed by Mozilla.
+    * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs with Django as a dependency.
     * [unidecode](https://pypi.python.org/pypi/Unidecode) - ASCII transliterations of Unicode text.
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate Chinese hanzi (漢字) to pinyin (拼音).
@@ -290,14 +290,18 @@ long, literate-programming-style documentation generator.
 
 * Relational Databases
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
-    * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle (in case you don't want or can't install system MySQL library)
+    * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle.
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
+    * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra by Datastax.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+    * [py2neo](http://book.py2neo.org/) - Python wrapper client for Neo4j's restful interface.
+    * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
+    * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
 ## ORM
 
@@ -453,7 +457,7 @@ long, literate-programming-style documentation generator.
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email backend with AWS SES and Celery.
 * [modoboa](https://github.com/tonioo/modoboa) - A mail hosting and management platform including a modern and simplified Web User Interface.
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
-* [mailjet](https://github.com/WoLpH/mailjet) - Mailjet API implementation for batch mailing, statistics and more
+* [mailjet](https://github.com/WoLpH/mailjet) - Mailjet API implementation for batch mailing, statistics and more.
 
 ## Internationalization
 
