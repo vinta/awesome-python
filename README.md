@@ -85,6 +85,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pew](https://pypi.python.org/pypi/pew/) - Python Env Wrapper (also called Invewrapper) is a set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
+* [conda](http://conda.pydata.org) - System-level, full-stack environments.
 
 ## Package Management
 
@@ -623,6 +624,7 @@ long, literate-programming-style documentation generator.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [pyglet](http://www.pyglet.org/) - A cross-platform windowing and multimedia library for Python.
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
+* [enaml](https://github.com/nucleic/enaml) - Create beautiful user-interfaces with Declaratic Syntax like QML
 
 ## Game Development
 
