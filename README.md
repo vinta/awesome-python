@@ -75,6 +75,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Weekly](#weekly)
     - [Twitter](#twitter)
 - [Other Awesome Lists](#other-awesome-lists)
+- [Contributing](#contributing)
 
 ## Environment Management
 
@@ -882,7 +883,9 @@ Where to discover new Python libraries.
 * [@pythontrending](https://twitter.com/pythontrending)
 
 # Other Awesome Lists
-Other amazingly awesome lists can be found in the [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness) list.
+
+* [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
+* [lists](https://github.com/jnv/lists)
 
 # Contributing
 
