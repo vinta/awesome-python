@@ -87,6 +87,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pew](https://pypi.python.org/pypi/pew/) - Python Env Wrapper (also called Invewrapper) is a set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
+* [dh-virtualenv](http://dh-virtualenv.readthedocs.org/en/latest/) - Build and distribute a virtualenv as a Debian package.
 
 ## Package Management
 
