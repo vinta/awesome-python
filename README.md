@@ -592,6 +592,7 @@ long, literate-programming-style documentation generator.
 * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
 * [rocket](http://pypi.python.org/pypi/rocket) - Multi-threaded.
 * [waitress](https://waitress.readthedocs.org/en/latest/) - Multi-threaded, poweres Pyramid.
+* [netius](https://github.com/hivesolutions/netius) - Asynchronous, very fast.
 * [gunicorn](http://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
 * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
 * [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
