@@ -70,6 +70,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Hardware](#hardware)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
+    - [Security](#security)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -854,6 +855,13 @@ long, literate-programming-style documentation generator.
     * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
     * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
+
+## Security
+
+*Security frameworks.*
+
+* [Capstone disassembly framework](http://www.capstone-engine.org) - Binary disassembly framework (for *X86*, *X86_64*, *Arm*, *Arm64*, *Mips*, *PowerPC*, *Sparc*, *SystemZ* & *XCore*) with **Python** binding. Capstone's github is at [https://github.com/aquynh/capstone](https://github.com/aquynh/capstone)
+
 
 # Resources
 
