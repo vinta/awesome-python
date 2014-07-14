@@ -294,6 +294,8 @@ long, literate-programming-style documentation generator.
 
 * Relational Databases
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
+    * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - mysql-python fork supporting Python 3.
+    * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - Pure Python MySQL driver compatible to mysql-python.
     * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle.
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
