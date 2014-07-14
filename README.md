@@ -563,6 +563,7 @@ long, literate-programming-style documentation generator.
 
 *Libraries for administrative interfaces.*
 
+* [Admin-Plus](https://github.com/pyner/admin_plus) - is a web2py engine that provides an easy-to-use interface for managing your data..
 * [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
 * [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
 * [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
