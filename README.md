@@ -437,6 +437,7 @@ long, literate-programming-style documentation generator.
 * [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 * [glue](http://gluecss.com) - Glue is a simple command line tool to generate CSS sprites.
 * [libsass-python](http://hongminhee.org/libsass-python/) - A Python binding of [libsass](https://github.com/hcatlin/libsass), the reference implementation of SASS/SCSS.
+* [Flask-Assets](http://flask-assets.readthedocs.org/en/latest/) - Helps you integrate webassets into your Flask app.
 
 ## Caching
 
