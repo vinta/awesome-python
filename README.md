@@ -358,6 +358,7 @@ long, literate-programming-style documentation generator.
 * [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
 * [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
 * [django-cms](https://www.django-cms.org/en/) - An Open source enterprise content management system based on the django framework.
+* [djedi-cms](http://djedi-cms.org/) - A lightweight but yet powerful Django content management system with plugins, inline editing and performance in mind.
 
 ## RESTful API
 
