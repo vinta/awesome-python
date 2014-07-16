@@ -592,6 +592,7 @@ long, literate-programming-style documentation generator.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
+* [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the 0MQ message library.
 
 ## WebSocket
 
