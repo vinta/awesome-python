@@ -422,6 +422,7 @@ long, literate-programming-style documentation generator.
 * [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 * [mrq](https://github.com/pricingassistant/mrq) - Mr. Queue - A distributed worker task queue in Python using Redis & gevent.
 * [rq](http://python-rq.org/) - Simple job queues for Python.
+* [simpleq](https://github.com/rdegges/simpleq) - A simple, infinitely scalable, Amazon SQS based queue.
 
 ## Search
 
