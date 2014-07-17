@@ -69,6 +69,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Hardware](#hardware)
+    - [Static Site Generator](#static-site-generator)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
@@ -844,6 +845,17 @@ long, literate-programming-style documentation generator.
 *Libraries for programming with hardware.*
 
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
+
+## Static Site Generator
+
+*Static site generator is a software that takes some text + templates as input and produces html files on the output.*
+
+* [Pelican](http://blog.getpelican.com/) - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.
+* [Cactus](http://github.com/koenbok/Cactus/) – Static site generator for designers.
+* [Hyde](https://hyde.github.com/) - Jinja2-based static web site generator.
+* [Nikola](http://www.getnikola.com/) - A static website and blog generator.
+* [Tags](http://tags.brace.io/) - The simplest static site generator.
+* [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
 
 ## Miscellaneous
 
