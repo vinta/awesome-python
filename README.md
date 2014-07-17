@@ -14,7 +14,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Documentation](#documentation)
     - [Configuration](#configuration)
     - [Command-line Tools](#command-line-tools)
-    - [Imagery](#imagery)
+    - [Image processing](#image-processing)
     - [Audio](#audio)
     - [Video](#video)
     - [Geolocation](#geolocation)
@@ -224,7 +224,7 @@ long, literate-programming-style documentation generator.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
 
-## Imagery
+## Image processing
 
 *Libraries for manipulating images.*
 
