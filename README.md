@@ -536,6 +536,7 @@ long, literate-programming-style documentation generator.
 *Libraries for working with forms.*
 
 * [WTForms](http://wtforms.readthedocs.org/) - A flexible forms validation and rendering library.
+* [WTForms-JSON](http://wtforms-json.readthedocs.org/en/latest/) - A WTForms extension for JSON data handling.
 * [Deform](http://deform.readthedocs.org/) - Python HTML form generation library influenced by the formish form generation library.
 * [django-crispy-forms](http://django-crispy-forms.readthedocs.org/) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
 * [django-remote-forms](https://github.com/WiserTogether/django-remote-forms) - A platform independent Django form serializer.
