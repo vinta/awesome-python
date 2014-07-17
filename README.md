@@ -14,6 +14,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Documentation](#documentation)
     - [Configuration](#configuration)
     - [Command-line Tools](#command-line-tools)
+    - [Downloader](#downloader)
     - [Imagery](#imagery)
     - [Audio](#audio)
     - [Video](#video)
@@ -39,17 +40,17 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [HTML Manipulation](#html-manipulation)
     - [Web Crawling](#web-crawling)
     - [Web Content Extracting](#web-content-extracting)
-    - [Downloader](#downloader)
     - [Forms](#forms)
     - [Data Validation](#data-validation)
     - [Anti-spam](#anti-spam)
     - [Tagging](#tagging)
     - [Admin Panels](#admin-panels)
+    - [Static Site Generator](#static-site-generator)
     - [Processes and Threads](#processes-and-threads)
     - [Networking](#networking)
     - [WebSocket](#websocket)
-    - [RPC Servers](#rpc-servers)
     - [WSGI Servers](#wsgi-servers)
+    - [RPC Servers](#rpc-servers)
     - [Cryptography](#cryptography)
     - [GUI](#gui)
     - [Game Development](#game-development)
@@ -69,7 +70,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Hardware](#hardware)
-    - [Static Site Generator](#static-site-generator)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
@@ -225,6 +225,16 @@ long, literate-programming-style documentation generator.
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
+
+## Downloader
+
+*Libraries for downloading.*
+
+* [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
+* [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
+* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
+* [WikiTeam](https://github.com/WikiTeam/wikiteam) - Tools for downloading and preserving wikis.
 
 ## Imagery
 
@@ -523,16 +533,6 @@ long, literate-programming-style documentation generator.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 * [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
 
-## Downloader
-
-*Libraries for downloading.*
-
-* [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
-* [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
-* [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
-* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
-* [WikiTeam](https://github.com/WikiTeam/wikiteam) - Tools for downloading and preserving wikis.
-
 ## Forms
 
 *Libraries for working with forms.*
@@ -576,6 +576,17 @@ long, literate-programming-style documentation generator.
 * [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 
+## Static Site Generator
+
+*Static site generator is a software that takes some text + templates as input and produces html files on the output.*
+
+* [Pelican](http://blog.getpelican.com/) - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.
+* [Cactus](http://github.com/koenbok/Cactus/) – Static site generator for designers.
+* [Hyde](https://hyde.github.com/) - Jinja2-based static web site generator.
+* [Nikola](http://www.getnikola.com/) - A static website and blog generator.
+* [Tags](http://tags.brace.io/) - The simplest static site generator.
+* [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
+
 ## Processes and Threads
 
 *Libraries for woking with processes or threads*
@@ -606,14 +617,6 @@ long, literate-programming-style documentation generator.
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 * [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 
-## RPC Servers
-
-*RPC-compatible servers*
-
-* [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
-* [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
-* [zeroRPC](https://github.com/dotcloud/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
-
 ## WSGI Servers
 
 *WSGI-compatible web servers.*
@@ -628,6 +631,14 @@ long, literate-programming-style documentation generator.
 * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
 * [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
 * [bjoern](http://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
+
+## RPC Servers
+
+*RPC-compatible servers.*
+
+* [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
+* [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
+* [zeroRPC](https://github.com/dotcloud/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
 
 ## Cryptography
 
@@ -850,17 +861,6 @@ long, literate-programming-style documentation generator.
 *Libraries for programming with hardware.*
 
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
-
-## Static Site Generator
-
-*Static site generator is a software that takes some text + templates as input and produces html files on the output.*
-
-* [Pelican](http://blog.getpelican.com/) - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.
-* [Cactus](http://github.com/koenbok/Cactus/) – Static site generator for designers.
-* [Hyde](https://hyde.github.com/) - Jinja2-based static web site generator.
-* [Nikola](http://www.getnikola.com/) - A static website and blog generator.
-* [Tags](http://tags.brace.io/) - The simplest static site generator.
-* [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
 
 ## Miscellaneous
 
