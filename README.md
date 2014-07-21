@@ -67,6 +67,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
     - [Workflow Execution](#workflow-execution)
+    - [Job Scheduler](#job-scheduler)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
@@ -842,6 +843,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
 * [Luigi](https://github.com/spotify/luigi) - A Python module that helps you build complex pipelines of batch jobs.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
+
+## Job Scheduler
+
+*Libraries for scheduling jobs.*
+
+* [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
+* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django. It is now stable, Please feel free to use it now. Active development has been taken over by bartekgorny.
 
 ## Foreign Function Interface
 
