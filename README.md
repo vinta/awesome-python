@@ -838,7 +838,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Job Scheduler
 
-*Libraries for scheduling jobs
+*Libraries for scheduling jobs.*
 
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 
