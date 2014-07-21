@@ -60,6 +60,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Debugging Tools](#debugging-tools)
     - [Science and Data Analysis](#science-and-data-analysis)
     - [Data Visualization](#data-visualization)
+    - [Computer Vision](#computer-vision)
     - [Machine Learning](#machine-learning)
     - [Functional Programming](#functional-programming)
     - [MapReduce](#mapreduce)
@@ -760,6 +761,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 * [Kartograph.py](https://github.com/kartograph/kartograph.py) - Rendering beautiful SVG maps in Python.
 * [pygal](http://pygal.org/) - A Python SVG Charts Creator.
+
+## Computer Vision
+
+*Libraries for computer vision.*
+
+* [OpenCV](http://docs.opencv.org/trunk/index.html)
+* [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
 
 ## Machine Learning
 
