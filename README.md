@@ -766,7 +766,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for computer vision.*
 
-* [OpenCV](http://docs.opencv.org/trunk/index.html)
+* [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
 
 ## Machine Learning
