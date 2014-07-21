@@ -907,9 +907,8 @@ Where to discover new Python libraries.
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
-* [List of Python API Wrappers](https://github.com/realpython/list-of-python-api-wrappers) - A list of web services along with links to their docs and Python wrappers/libraries.
+* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
-* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack as well as links to the best resources on those topics from around the web.
 
 ## Weekly
 
