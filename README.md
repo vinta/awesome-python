@@ -66,7 +66,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
-    - [Workflow Execution](#workflow-execution)
     - [Job Scheduler](#job-scheduler)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
@@ -835,21 +834,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
 
-## Workflow Execution
-
-*Libraries that enable workflows to be executed (remotely or locally).*
-
-* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
-* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
-* [Luigi](https://github.com/spotify/luigi) - A Python module that helps you build complex pipelines of batch jobs.
-* [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
-
 ## Job Scheduler
 
 *Libraries for scheduling jobs.*
 
+* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
-* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django. It is now stable, Please feel free to use it now. Active development has been taken over by bartekgorny.
+* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 
 ## Foreign Function Interface
 
