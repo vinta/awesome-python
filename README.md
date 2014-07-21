@@ -841,7 +841,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for scheduling jobs.*
 
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
-
+* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django. It is now stable, Please feel free to use it now. Active development has been taken over by bartekgorny.
 
 ## Foreign Function Interface
 
