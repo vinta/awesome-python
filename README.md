@@ -69,10 +69,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Job Scheduler](#job-scheduler)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
+    - [High Performance computing] (#hpc)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Hardware](#hardware)
     - [Miscellaneous](#miscellaneous)
     - [Editor Plugins](#editor-plugins)
+    - [Packet Manipulation] (#packet-manipulation)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -861,6 +863,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 
+##High performance computing
+*[PyCUDA] (mathema.tician.de/software/pycuda)- A python wrapper for Nvidia's CUDA API
 ## Algorithms and Design Patterns
 
 *Collections of algorithms and design patterns.*
@@ -898,6 +902,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
     * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
 
+# Packet Manipulation
+* [Packet Manipulation] (www.secdev.org/projects/scapy/) - A brilliant packet manipulation library
 # Resources
 
 Where to discover new Python libraries.
