@@ -812,6 +812,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 * [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
+* [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API .
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
 * [Wikipedia](https://wikipedia.readthedocs.org/en/latest/) - A Pythonic wrapper for the Wikipedia API.
@@ -885,7 +886,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
-* [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API 
 
 ## Editor Plugins
 
