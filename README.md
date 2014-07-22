@@ -612,6 +612,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the 0MQ message library.
+* [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 
 ## WebSocket
 
@@ -619,7 +620,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
-* [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 
 ## WSGI Servers
 
