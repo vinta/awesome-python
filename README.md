@@ -843,6 +843,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
+* [APScheduler](http://apscheduler.readthedocs.org/) - A light but powerful in-process task scheduler that lets you schedule functions.
 
 ## Foreign Function Interface
 
