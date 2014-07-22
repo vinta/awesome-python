@@ -223,6 +223,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 * Productivity Tools
+    * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates). E.g. Python package projects, jQuery plugin projects.
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
