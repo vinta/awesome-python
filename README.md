@@ -694,6 +694,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of Behavior Driven Development (BDD).
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible _Behaviour-Driven-Development_ framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
+    * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on pyhamcrest
+
 * Mock
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
