@@ -241,6 +241,7 @@ long, literate-programming-style documentation generator.
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [audioread](https://github.com/sampsyo/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
 * [mutagen](https://code.google.com/p/mutagen/) - A Python module to handle audio metadata.
+* [id3reader](http://nedbatchelder.com/code/modules/id3reader.py) - A Python module for reading MP3 meta data.
 * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 * [audiolazy](https://github.com/danilobellini/audiolazy) - Expressive Digital Signal Processing (DSP) package for Python.
 * [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
