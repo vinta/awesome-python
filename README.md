@@ -750,6 +750,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+* [spyder](https://code.google.com/p/spyderlib/https://code.google.com/p/spyderlib/) - Spyder IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda)
 
 ## Data Visualization
 
