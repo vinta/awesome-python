@@ -816,7 +816,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Third-party APIs
 
-*Libraries for accessing third party APIs. See: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers)*
+*Libraries for accessing third party services APIs. See: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
 
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
@@ -841,9 +841,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
 * [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
-* [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [doit](http://pydoit.org/) - A task runner/build tool.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
@@ -852,11 +850,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for scheduling jobs.*
 
-* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
+* [doit](http://pydoit.org/) - A task runner/build tool.
 * [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
-* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
+* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
 
 ## Foreign Function Interface
 
@@ -865,6 +865,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [ctypes](https://docs.python.org/2/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
 * [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
 * [SWIG](http://www.swig.org/Doc1.3/Python.html) - Simplified Wrapper and Interface Generator.
+* [PyCUDA](http://mathema.tician.de/software/pycuda/) - A Python wrapper for Nvidia's CUDA API.
 
 ## High Performance
 
@@ -888,6 +889,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for programming with hardware.*
 
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
+* [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 
 ## Miscellaneous
 
