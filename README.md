@@ -7,6 +7,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Package Management](#package-management)
     - [Distribution](#distribution)
     - [Build Tools](#build-tools)
+    - [Interactive Interpreter](#interactive-interpreter)
     - [Files](#files)
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
@@ -60,12 +61,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Debugging Tools](#debugging-tools)
     - [Science and Data Analysis](#science-and-data-analysis)
     - [Data Visualization](#data-visualization)
+    - [Computer Vision](#computer-vision)
     - [Machine Learning](#machine-learning)
     - [Functional Programming](#functional-programming)
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
-    - [Workflow Execution](#workflow-execution)
+    - [Job Scheduler](#job-scheduler)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
@@ -117,6 +119,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SCons](http://www.scons.org/) - A software construction tool.
 * [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool with the special focus of distributions and packages for embedded Linux.
+
+## Interactive Interpreter
+
+*Interactive Python interpreters.*
+
+* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+* [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
 
 ## Files
 
@@ -222,6 +231,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 * Productivity Tools
+    * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates). E.g. Python package projects, jQuery plugin projects.
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
@@ -552,6 +562,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
 * [dictshield](https://github.com/exfm/dictshield) - A fast way to validate and trim the values in a dictionary.
 * [colander](http://docs.pylonsproject.org/projects/colander/en/latest/index.html) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
+* [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 
 ## Anti-spam
 
@@ -597,6 +608,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
 * [envoy](https://github.com/kennethreitz/envoy) - Python Subprocesses for Humans™.
 * [sh](https://github.com/amoffat/sh) - A full-fledged [subprocess](https://docs.python.org/2/library/subprocess.html) replacement for Python.
+* [sarge](http://sarge.readthedocs.org/) - A wrapper for subprocess.
 
 ## Networking
 
@@ -610,6 +622,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the 0MQ message library.
+* [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 
 ## WebSocket
 
@@ -617,7 +630,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
-* [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 
 ## WSGI Servers
 
@@ -671,6 +683,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySFML](http://www.python-sfml.org/) - Python bindings for [SFML](http://www.sfml-dev.org/)
+* [RenPy](http://www.renpy.org/) - A Visual Novel engine.
 
 ## Logging
 
@@ -689,8 +702,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
     * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
-    * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of Behavior Driven Development (BDD).
-    * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible _Behaviour-Driven-Development_ framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
+    * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
+    * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible BDD framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
+    * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
 * Mock
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
@@ -761,9 +775,16 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Kartograph.py](https://github.com/kartograph/kartograph.py) - Rendering beautiful SVG maps in Python.
 * [pygal](http://pygal.org/) - A Python SVG Charts Creator.
 
+## Computer Vision
+
+*Libraries for computer vision.*
+
+* [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
+* [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
+
 ## Machine Learning
 
-*Libraries for Machine Learning.*
+*Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python)*
 
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
@@ -795,13 +816,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Third-party APIs
 
-*Libraries for accessing third party APIs. See: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers)*
+*Libraries for accessing third party services APIs. See: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
 
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 * [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
+* [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API .
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
 * [Wikipedia](https://wikipedia.readthedocs.org/en/latest/) - A Pythonic wrapper for the Wikipedia API.
@@ -819,21 +841,23 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
 * [Fabric](http://www.fabfile.org/) - Tool for streamlining the use of SSH for application deployment or systems administration tasks.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
-* [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [doit](http://pydoit.org/) - A task runner/build tool.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
 
-## Workflow Execution
+## Job Scheduler
 
-*Libraries that enable workflows to be executed (remotely or locally).*
+*Libraries for scheduling jobs.*
 
-* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [APScheduler](http://apscheduler.readthedocs.org/) - A light but powerful in-process task scheduler that lets you schedule functions.
+* [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
+* [doit](http://pydoit.org/) - A task runner/build tool.
 * [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
-* [Luigi](https://github.com/spotify/luigi) - A Python module that helps you build complex pipelines of batch jobs.
+* [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
+* [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
+* [TaskFlow](http://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
 
 ## Foreign Function Interface
 
@@ -842,6 +866,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [ctypes](https://docs.python.org/2/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
 * [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
 * [SWIG](http://www.swig.org/Doc1.3/Python.html) - Simplified Wrapper and Interface Generator.
+* [PyCUDA](http://mathema.tician.de/software/pycuda/) - A Python wrapper for Nvidia's CUDA API.
 
 ## High Performance
 
@@ -852,28 +877,35 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 
-## Algorithms and Design Patterns
+## Microsoft Windows
 
-*Collections of algorithms and design patterns.*
+*Python programming on Microsoft Windows.*
 
-* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
-* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
+* [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows(32/64-bit) binaries for Python extension packages
+* [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
+* [spyder](https://code.google.com/p/spyderlib/) - IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda).
 
 ## Hardware
 
 *Libraries for programming with hardware.*
 
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
+* [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 
 ## Miscellaneous
 
 *Useful libraries or tools that don't fit in the categories above.*
 
-* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
-* [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
+
+## Algorithms and Design Patterns
+
+*Collections of algorithms and design patterns.*
+
+* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
+* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
 
 ## Editor Plugins
 
@@ -898,9 +930,8 @@ Where to discover new Python libraries.
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
-* [List of Python API Wrappers](https://github.com/realpython/list-of-python-api-wrappers) - A list of web services along with links to their docs and Python wrappers/libraries.
+* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
-* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack as well as links to the best resources on those topics from around the web.
 
 ## Weekly
 
