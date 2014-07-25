@@ -760,7 +760,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
-* [spyder](https://code.google.com/p/spyderlib/https://code.google.com/p/spyderlib/) - Spyder IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda)
 
 ## Data Visualization
 
@@ -879,8 +878,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Python programming on Microsoft Windows.*
 
-* [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows(32/64-bit) binaries for Python extension packages
+* [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
+* [spyder](https://code.google.com/p/spyderlib/) - IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda).
 
 ## Hardware
 
