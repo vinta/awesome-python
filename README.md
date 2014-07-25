@@ -7,6 +7,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Package Management](#package-management)
     - [Distribution](#distribution)
     - [Build Tools](#build-tools)
+    - [Interactive Interpreter](#interactive-interpreter)
     - [Files](#files)
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
@@ -118,6 +119,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SCons](http://www.scons.org/) - A software construction tool.
 * [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool with the special focus of distributions and packages for embedded Linux.
+
+## Interactive Interpreter
+
+*Interactive Python interpreters.*
+
+* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
+* [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
 
 ## Files
 
@@ -883,13 +891,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Useful libraries or tools that don't fit in the categories above.*
 
-* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
-* [Python(x,y)](https://code.google.com/p/pythonxy/) -  Scientific-applications-oriented Python Distribution based on Qt and Spyder.
-* [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
-* [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows(32/64-bit) binaries for Python extension packages
 
 ## Editor Plugins
 
