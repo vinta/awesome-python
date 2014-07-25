@@ -608,6 +608,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
 * [envoy](https://github.com/kennethreitz/envoy) - Python Subprocesses for Humans™.
 * [sh](https://github.com/amoffat/sh) - A full-fledged [subprocess](https://docs.python.org/2/library/subprocess.html) replacement for Python.
+* [sarge](http://sarge.readthedocs.org/) - A wrapper for subprocess.
 
 ## Networking
 
