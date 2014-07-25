@@ -874,12 +874,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 
-## Algorithms and Design Patterns
+## Microsoft Windows
 
-*Collections of algorithms and design patterns.*
+*Python programming on Microsoft Windows.*
 
-* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
-* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
+* [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
+* [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows(32/64-bit) binaries for Python extension packages
 
 ## Hardware
 
@@ -894,6 +894,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
+
+## Algorithms and Design Patterns
+
+*Collections of algorithms and design patterns.*
+
+* [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
+* [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
 
 ## Editor Plugins
 
