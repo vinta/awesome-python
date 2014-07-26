@@ -952,6 +952,7 @@ Where to discover new Python libraries.
 
 # Other Awesome Lists
 
+* [awesome-awesome](https://github.com/emijrp/awesome-awesome)
 * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
 * [lists](https://github.com/jnv/lists)
 
