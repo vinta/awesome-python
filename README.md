@@ -376,6 +376,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
 * [Wagtail](http://wagtail.io/) - A Django content management system.
+* [Widgy](http://wid.gy/) - Last CMS framework, based on Django
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
