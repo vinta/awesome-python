@@ -623,6 +623,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the 0MQ message library.
 * [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
+* [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 
 ## WebSocket
 
