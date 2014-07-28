@@ -27,6 +27,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Web Frameworks](#web-frameworks)
     - [Permissions](#permissions)
     - [CMS](#cms)
+    - [E-commerce](#e-commerce)
     - [RESTful API](#restful-api)
     - [Authentication and OAuth](#authentication-and-oauth)
     - [Template Engine](#template-engine)
@@ -372,18 +373,25 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## CMS
 
-*Content management systems*
+*Content Management Systems.*
 
-* [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
-* [FeinCMS](http://www.feincms.org/) - One of the most advanced Content Management Systems built on Django
-* [Wagtail](http://wagtail.io/) - A Django content management system.
-* [Widgy](http://wid.gy/) - Last CMS framework, based on Django
-* [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
-* [Quokka CMS](http://quokkaproject.org) - Flexible, extensible, small CMS powered by Flask and MongoDB.
-* [Opps CMS](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
-* [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
-* [django-cms](https://www.django-cms.org/en/) - An Open source enterprise content management system based on the django framework.
+* [django-cms](https://www.django-cms.org/en/) - An Open source enterprise content management system based on the Django framework.
 * [djedi-cms](http://djedi-cms.org/) - A lightweight but yet powerful Django content management system with plugins, inline editing and performance in mind.
+* [FeinCMS](http://www.feincms.org/) - One of the most advanced Content Management Systems built on Django.
+* [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
+* [Opps](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
+* [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
+* [Quokka](http://quokkaproject.org/) - Flexible, extensible, small CMS powered by Flask and MongoDB.
+* [Wagtail](http://wagtail.io/) - A Django content management system.
+* [Widgy](http://wid.gy/) - Last CMS framework, based on Django.
+
+## E-commerce
+
+*Frameworks and libraries for e-commerce.*
+
+* [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
+* [django-shop](https://www.django-cms.org/) - A Django based shop system.
+* [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors via Pluggable backends.
 
 ## RESTful API
 
