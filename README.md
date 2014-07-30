@@ -378,6 +378,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-cms](https://www.django-cms.org/en/) - An Open source enterprise content management system based on the Django framework.
 * [djedi-cms](http://djedi-cms.org/) - A lightweight but yet powerful Django content management system with plugins, inline editing and performance in mind.
 * [FeinCMS](http://www.feincms.org/) - One of the most advanced Content Management Systems built on Django.
+* [Kotte](http://kotti.pylonsproject.org/) - A high-level, Pythonic web application framework built on Pyramid.
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
 * [Opps](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
 * [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
