@@ -353,7 +353,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Full stack web frameworks.*
 
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
+    * [Awesome-Django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
+    * [Awesome-Flask](https://github.com/humiaozuzu/awesome-flask)
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
@@ -963,6 +965,10 @@ Where to discover new Python libraries.
 
 # Other Awesome Lists
 
+* [Easy-Python](http://easy-python.readthedocs.org/)
+* [py-must-watch](https://github.com/s16h/py-must-watch)
+* [python-github-projects] (https://github.com/checkcheckzz/python-github-projects)
+* [python_reference](https://github.com/rasbt/python_reference)
 * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
 * [lists](https://github.com/jnv/lists)
 
