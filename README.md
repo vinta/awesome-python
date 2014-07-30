@@ -256,6 +256,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, resizing and flipping of images.
 * [imgSeek](http://www.imgseek.net/) - A project for searching a collection of images using visual similarity.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
+* [pyqrnative](https://github.com/unapiedra/pyqrnative) - Native Python QR code generation library, ported from a JavaScript library.
 * [pyBarcode](https://pythonhosted.org/pyBarcode/) - Create barcodes in Python without needing PIL.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
