@@ -356,9 +356,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Full stack web frameworks.*
 
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
-    * [Awesome-Django](https://github.com/rosarior/awesome-django)
+    * [awesome-django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
-    * [Awesome-Flask](https://github.com/humiaozuzu/awesome-flask)
+    * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
@@ -373,7 +373,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries that allow or deny users access to data or functionality.*
 
-* [Django Guardian](https://github.com/lukaszb/django-guardian) - Implementation of per object permissions for Django 1.2+
+* [django-guardian](https://github.com/lukaszb/django-guardian) - Implementation of per object permissions for Django 1.2+
 * [Carteblanche](http://www.github.com/neuman/python-carteblanche/) - Module to align code with thoughts of users and designers. Also magically handles navigation and permissions.
 
 ## CMS
@@ -928,7 +928,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Editor Plugins
 
-*Plugins for various editors.*
+*Plugins for editors and IDEs.*
 
 * Vim
     * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
@@ -949,6 +949,7 @@ Where to discover new Python libraries.
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
+* [CoolGithubProjects](http://coolgithubprojects.com/) - Sharing cool github projects just got easier!
 * [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
 
