@@ -97,7 +97,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for package and dependency management.*
 
-* [pip](https://pip.pypa.io/en/latest/) / [Python Package Index](https://pypi.python.org/pypi) - The package and dependency manager.
+* [pip](https://pip.pypa.io/) - The Python package and dependency manager.
+    * [Python Package Index](https://pypi.python.org/pypi)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
@@ -108,9 +109,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform)
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
-* [py2app](http://svn.pythonmac.org/py2app/py2app/trunk/doc/index.html) - Freezes Python scripts (Mac OS X)
+* [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X)
 * [PyInstaller](http://www.pyinstaller.org/) - A program that converts Python programs into stand-alone executables (Windows, Linux, Mac OS X, Solaris and AIX)
-* [dh-virtualenv](http://dh-virtualenv.readthedocs.org/en/latest/) - Build and distribute a virtualenv as a Debian package.
+* [dh-virtualenv](http://dh-virtualenv.readthedocs.org/) - Build and distribute a virtualenv as a Debian package.
 
 ## Build Tools
 
@@ -269,7 +270,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for manipulating audio.*
 
-* [django-elastic-transcoder](https://github.com/StreetVoice/django-elastic-transcoder) - Django + AWS Elastic Transcoder.
+* [django-elastic-transcoder](https://github.com/StreetVoice/django-elastic-transcoder) - Django + [Amazon Elastic Transcoder](http://aws.amazon.com/elastictranscoder/).
 * [beets](http://beets.radbox.org/) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
 * [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://developer.echonest.com/docs/) API.
 * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
@@ -472,13 +473,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline javascript or CSS into a single cached file.
 * [jinja-assets-compressor](https://github.com/jaysonsantos/jinja-assets-compressor) - A Jinja extension (compatible with Flask and other frameworks) to compile and/or compress your assets.
-* [webassets](http://webassets.readthedocs.org/en/latest/) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
-* [fanstatic](http://www.fanstatic.org/en/latest/) - Packages, optimizes, and serves static file dependencies as Python packages.
+* [webassets](http://webassets.readthedocs.org/) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
+* [fanstatic](http://www.fanstatic.org/) - Packages, optimizes, and serves static file dependencies as Python packages.
 * [fileconveyor](http://fileconveyor.org/) - Monitors changes, processes, and transports assets to CDNs and file storage systems.
 * [django-storages](http://code.larlet.fr/django-storages/) - A collection of custom storage backends for Django.
 * [glue](http://gluecss.com) - Glue is a simple command line tool to generate CSS sprites.
 * [libsass-python](http://hongminhee.org/libsass-python/) - A Python binding of [libsass](https://github.com/hcatlin/libsass), the reference implementation of SASS/SCSS.
-* [Flask-Assets](http://flask-assets.readthedocs.org/en/latest/) - Helps you integrate webassets into your Flask app.
+* [Flask-Assets](http://flask-assets.readthedocs.org/) - Helps you integrate webassets into your Flask app.
 
 ## Caching
 
@@ -566,7 +567,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for working with forms.*
 
 * [WTForms](http://wtforms.readthedocs.org/) - A flexible forms validation and rendering library.
-* [WTForms-JSON](http://wtforms-json.readthedocs.org/en/latest/) - A WTForms extension for JSON data handling.
+* [WTForms-JSON](http://wtforms-json.readthedocs.org/) - A WTForms extension for JSON data handling.
 * [Deform](http://deform.readthedocs.org/) - Python HTML form generation library influenced by the formish form generation library.
 * [django-crispy-forms](http://django-crispy-forms.readthedocs.org/) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
 * [django-remote-forms](https://github.com/WiserTogether/django-remote-forms) - A platform independent Django form serializer.
@@ -577,7 +578,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
 * [dictshield](https://github.com/exfm/dictshield) - A fast way to validate and trim the values in a dictionary.
-* [colander](http://docs.pylonsproject.org/projects/colander/en/latest/index.html) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
+* [colander](http://docs.pylonsproject.org/projects/colander/) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 
 ## Anti-spam
@@ -655,7 +656,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
 * [rocket](http://pypi.python.org/pypi/rocket) - Multi-threaded.
-* [waitress](https://waitress.readthedocs.org/en/latest/) - Multi-threaded, poweres Pyramid.
+* [waitress](https://waitress.readthedocs.org/) - Multi-threaded, poweres Pyramid.
 * [netius](https://github.com/hivesolutions/netius) - Asynchronous, very fast.
 * [gunicorn](http://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
 * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
@@ -696,7 +697,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
 * [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications. It is based on pyglet.
-* [PySDL2](http://pysdl2.readthedocs.org/en/latest/) - A ctypes based wrapper for the SDL2 library.
+* [PySDL2](http://pysdl2.readthedocs.org/) - A ctypes based wrapper for the SDL2 library.
 * [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney and maintained by Carnegie Mellon's Entertainment Technology Center. Written in C++, completely wrapped in Python.
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
@@ -844,7 +845,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API .
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
-* [Wikipedia](https://wikipedia.readthedocs.org/en/latest/) - A Pythonic wrapper for the Wikipedia API.
+* [Wikipedia](https://wikipedia.readthedocs.org/) - A Pythonic wrapper for the Wikipedia API.
 * [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [praw](https://github.com/praw-dev/praw) - A Python wrapper for the Reddit API.
@@ -969,7 +970,7 @@ Where to discover new Python libraries.
 
 * [Easy-Python](http://easy-python.readthedocs.org/)
 * [py-must-watch](https://github.com/s16h/py-must-watch)
-* [python-github-projects] (https://github.com/checkcheckzz/python-github-projects)
+* [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
 * [python_reference](https://github.com/rasbt/python_reference)
 * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
 * [lists](https://github.com/jnv/lists)
