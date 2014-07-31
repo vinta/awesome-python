@@ -971,12 +971,17 @@ Where to discover new Python libraries.
 
 # Other Awesome Lists
 
-* [Easy-Python](http://easy-python.readthedocs.org/)
-* [py-must-watch](https://github.com/s16h/py-must-watch)
-* [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
-* [python_reference](https://github.com/rasbt/python_reference)
-* [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
-* [lists](https://github.com/jnv/lists)
+List of lists.
+
+* Python
+    * [pycrumbs](https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md)
+    * [pythonidae](https://github.com/svaksha/pythonidae)
+    * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
+    * [python_reference](https://github.com/rasbt/python_reference)
+    * [easy-python](http://easy-python.readthedocs.org/)
+* Monty
+    * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
+    * [lists](https://github.com/jnv/lists)
 
 # Contributing
 
