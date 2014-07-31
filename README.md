@@ -747,11 +747,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries and tools for analysing, parsing and manipulation codebases.*
 
-* [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
-* [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
-* [Pylint](http://www.pylint.org/) - A source code analyzer.
-* [pycallgraph](https://github.com/gak/pycallgraph) - Creates call graph visualizations for Python applications.
-* [pylama](https://pylama.readthedocs.org/) - The modular source code checker: pep8, pyflakes, pylint and co.
+* Code Analysis
+    * [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
+    * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the call flow of your Python application.
+    * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+* Linter
+    * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
+    * [pylama](https://pylama.readthedocs.org/) - Code audit tool for Python and JavaScript.
+    * [Pylint](http://www.pylint.org/) - A source code analyzer.
 
 ## Debugging Tools
 
