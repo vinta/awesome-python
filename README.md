@@ -354,7 +354,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Full stack web frameworks.*
 
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
+    * [Awesome-Django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
+    * [Awesome-Flask](https://github.com/humiaozuzu/awesome-flask)
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
@@ -379,6 +381,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-cms](https://www.django-cms.org/en/) - An Open source enterprise content management system based on the Django framework.
 * [djedi-cms](http://djedi-cms.org/) - A lightweight but yet powerful Django content management system with plugins, inline editing and performance in mind.
 * [FeinCMS](http://www.feincms.org/) - One of the most advanced Content Management Systems built on Django.
+* [Kotte](http://kotti.pylonsproject.org/) - A high-level, Pythonic web application framework built on Pyramid.
 * [Mezzanine](http://mezzanine.jupo.org/) - A powerful, consistent, and flexible content management platform.
 * [Opps](http://oppsproject.org/) - A Django-based CMS for magazines, newspapers websites and portals with high-traffic.
 * [Plone](http://plone.org/) - Content Management System built on top of the open source application server Zope and the accompanying Content Management Framework.
@@ -963,6 +966,10 @@ Where to discover new Python libraries.
 
 # Other Awesome Lists
 
+* [Easy-Python](http://easy-python.readthedocs.org/)
+* [py-must-watch](https://github.com/s16h/py-must-watch)
+* [python-github-projects] (https://github.com/checkcheckzz/python-github-projects)
+* [python_reference](https://github.com/rasbt/python_reference)
 * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
 * [lists](https://github.com/jnv/lists)
 
