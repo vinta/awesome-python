@@ -679,6 +679,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyCrypto](https://www.dlitz.net/software/pycrypto/) - The Python Cryptography Toolkit.
 * [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 * [cryptography](https://cryptography.io/) - A package designed to expose cryptographic primitives and recipes to Python developers.
+* [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
 
 ## GUI
 
