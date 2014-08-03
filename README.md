@@ -793,7 +793,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Data Visualization
 
-*Libraries for visualizing data.*
+*Libraries for visualizing data. See: [awesome-javascript's Data Visualization section](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
@@ -813,7 +813,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Machine Learning
 
-*Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python)*
+*Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
