@@ -71,9 +71,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Job Scheduler](#job-scheduler)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
-    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+    - [Network Virtualization and SDN](#network-virtualization-and-sdn)
     - [Hardware](#hardware)
     - [Miscellaneous](#miscellaneous)
+    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
 - [Resources](#resources)
     - [Websites](#websites)
@@ -912,18 +913,21 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
 * [spyder](https://code.google.com/p/spyderlib/) - IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda).
 
+## Network Virtualization and SDN
+
+*Tools and libraries for Virtual Networking and SDN (Software Defined Networking).*
+
+* [Mininet](http://mininet.org/) - A popular network emulator and API written in Python.
+* [POX](http://www.noxrepo.org/pox/about-pox/) - An open source development platform for Python-based Software Defined Networking (SDN) control applications, such as OpenFlow SDN controllers.
+* [Pyretic](http://frenetic-lang.org/pyretic/) - A member of the Frenetic family of SDN programming languages that provides powerful abstractions over network switches or emulators.
+* [SDX Platform](https://github.com/sdn-ixp/internet2award) - SDN based IXP implementation that leverages Mininet, POX and Pyretic.
+
 ## Hardware
 
 *Libraries for programming with hardware.*
 
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
-
-## Network Virtualization and SDN
-* [Mininet](http://mininet.org/) - A popular network emulator and API written in Python.
-* [POX](http://www.noxrepo.org/pox/about-pox/) - An open source development platform for Python-based Software Defined Networking (SDN) control applications, such as OpenFlow SDN controllers.
-* [Pyretic](http://frenetic-lang.org/pyretic/) - A member of the Frenetic family of SDN programming languages that provides powerful abstractions over network switches or emulators.
-* [SDX Platform](https://github.com/sdn-ixp/internet2award) - SDN based IXP implementation that leverages Mininet, POX and Pyretic.
 
 ## Miscellaneous
 
@@ -995,14 +999,6 @@ List of lists.
     * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
     * [lists](https://github.com/jnv/lists)
 
-# Contributing
+# [Contributing](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md)
 
 Your contributions are always welcome!
-
-## Guidelines
-
-* Add section if needed
-    * Add section description
-    * Add section title to Table of contents
-* Add your links: `* [project-name](http://example.com/) - A short descripttion ends with a dot.`
-* Send a Pull Request
