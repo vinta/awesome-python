@@ -919,6 +919,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 
+## Network Virtualization and SDN
+* [Mininet](http://mininet.org/) - A popular network emulator and API written in Python.
+* [POX](http://www.noxrepo.org/pox/about-pox/) - An open source development platform for Python-based Software Defined Networking (SDN) control applications, such as OpenFlow SDN controllers.
+* [Pyretic](http://frenetic-lang.org/pyretic/) - A member of the Frenetic family of SDN programming languages that provides powerful abstractions over network switches or emulators.
+* [SDX Platform](https://github.com/sdn-ixp/internet2award) - SDN based IXP implementation that leverages Mininet, POX and Pyretic.
+
 ## Miscellaneous
 
 *Useful libraries or tools that don't fit in the categories above.*
