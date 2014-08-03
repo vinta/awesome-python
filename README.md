@@ -49,7 +49,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Admin Panels](#admin-panels)
     - [Static Site Generator](#static-site-generator)
     - [Processes and Threads](#processes-and-threads)
-    - [Networking](#networking)
+    - [Concurrency and Networking](#concurrency-and-networking)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
     - [RPC Servers](#rpc-servers)
@@ -626,16 +626,17 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for woking with processes or threads*
 
-* [multiprocessing](https://docs.python.org/2/library/multiprocessing.html) - (Python standard library) - Process-based "threading" interface.
+* [multiprocessing](https://docs.python.org/2/library/multiprocessing.html) - (Python standard library) Process-based "threading" interface.
 * [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
 * [envoy](https://github.com/kennethreitz/envoy) - Python Subprocesses for Humans™.
 * [sh](https://github.com/amoffat/sh) - A full-fledged [subprocess](https://docs.python.org/2/library/subprocess.html) replacement for Python.
 * [sarge](http://sarge.readthedocs.org/) - A wrapper for subprocess.
 
-## Networking
+## Concurrency and Networking
 
-*Libraries for network programming.*
+*Libraries for concurrency and network programming.*
 
+* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library in Python 3.4+) Asynchronous I/O, event loop, coroutines and tasks.
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
