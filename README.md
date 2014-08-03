@@ -191,7 +191,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser.
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
-    * [schema](https://github.com/halst/schema) - A library for validating Python data structures.
     * [pyparsing](http://pyparsing.wikispaces.com/) - A general purpose framework for generating parsers.
 
 ## Natural Language Processing
@@ -584,6 +583,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
 * [colander](http://docs.pylonsproject.org/projects/colander/) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
+* [schema](https://github.com/halst/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [kmatch](https://github.com/ambitioninc/kmatch) - A language for matching/validating/filtering Python dictionaries.
 
