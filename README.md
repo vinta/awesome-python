@@ -565,6 +565,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Haul](https://github.com/vinta/Haul) - An Extensible Image Crawler.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 * [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
+* [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word documents, PowerPoint presentations, PDFs, etc.
 
 ## Forms
 
