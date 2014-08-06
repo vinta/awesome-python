@@ -512,6 +512,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [modoboa](https://github.com/tonioo/modoboa) - A mail hosting and management platform including a modern and simplified Web User Interface.
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
 * [mailjet](https://github.com/WoLpH/mailjet) - Mailjet API implementation for batch mailing, statistics and more.
+* [Talon](https://github.com/mailgun/talon) - Mailgun library to extract message quotations and signatures.
 
 ## Internationalization
 
