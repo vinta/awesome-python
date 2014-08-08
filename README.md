@@ -464,7 +464,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-haystack](https://github.com/toastdriven/django-haystack) - Modular search for Django.
 * [elasticsearch-py](http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/) - The official low-level Python client for [Elasticsearch](http://www.elasticsearch.org/).
 * [solrpy](https://code.google.com/p/solrpy/) - A Python client for [solr](http://lucene.apache.org/solr/).
-* [Whoosh](http://whoosh.readthedocs.org/) - A fast, pure Python search engine library.
 
 ## News Feed
 
@@ -881,6 +880,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [pexpect](https://github.com/pexpect/pexpect) - A Python module for controlling interactive programs in a pseudo-terminal like GNU expect.
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
+* [Whoosh](http://whoosh.readthedocs.org/) - A fast, pure Python search engine library.
 
 ## Job Scheduler
 
@@ -944,6 +944,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
+* [honcho](https://github.com/nickstenning/honcho) - Honcho is a Python port of Foreman, a tool for managing Procfile-based applications.
 
 ## Algorithms and Design Patterns
 
