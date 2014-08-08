@@ -554,6 +554,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [feedparser](http://pythonhosted.org/feedparser/) - Universal feed parser.
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
+* [mechanize](http://wwwsearch.sourceforge.net/mechanize/) - Stateful programmatic web browsing.
 
 ## Web Content Extracting
 
