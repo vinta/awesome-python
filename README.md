@@ -398,11 +398,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## E-commerce
 
-*Frameworks and libraries for e-commerce.*
+*Frameworks and libraries for e-commerce and payments.*
 
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [django-shop](https://www.django-cms.org/) - A Django based shop system.
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors via Pluggable backends.
+* [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 
 ## RESTful API
 
