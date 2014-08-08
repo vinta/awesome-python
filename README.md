@@ -944,6 +944,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
+* [honcho](https://github.com/nickstenning/honcho) - Honcho is a Python port of Foreman, a tool for managing Procfile-based applications.
 
 ## Algorithms and Design Patterns
 
