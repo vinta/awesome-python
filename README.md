@@ -704,6 +704,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pyglet](http://www.pyglet.org/) - A cross-platform windowing and multimedia library for Python.
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
 * [enaml](https://github.com/nucleic/enaml) - Create beautiful user-interfaces with Declaratic Syntax like QML
+* [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 
 ## Game Development
 
