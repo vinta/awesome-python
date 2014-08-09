@@ -315,6 +315,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [urllib3](https://github.com/shazow/urllib3) - HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more.
 * [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library.
 * [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
+* [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests
 
 ## Database
 
