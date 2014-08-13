@@ -335,6 +335,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector for Python with support for native prepared statements and BLOBs.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
+    * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra by Datastax.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
