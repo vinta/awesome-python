@@ -812,6 +812,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+* [python-statsd](https://github.com/WoLpH/python-statsd) Library to send data to Statsd allowing for data and performance analysis
+* [django-statsd](https://github.com/WoLpH/django-statsd) Library to send data to Statsd from Django to analyse web application view performance
 
 ## Data Visualization
 
