@@ -711,7 +711,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [pyglet](http://www.pyglet.org/) - A cross-platform windowing and multimedia library for Python.
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
-* [enaml](https://github.com/nucleic/enaml) - Create beautiful user-interfaces with Declaratic Syntax like QML
+* [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declaratic Syntax like QML.
 * [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 
 ## Game Development
@@ -792,6 +792,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
+* [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
 * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
@@ -812,8 +813,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
-* [python-statsd](https://github.com/WoLpH/python-statsd) Library to send data to Statsd allowing for data and performance analysis
-* [django-statsd](https://github.com/WoLpH/django-statsd) Library to send data to Statsd from Django to analyse web application view performance
 
 ## Data Visualization
 
@@ -877,7 +876,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 * [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
-* [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API .
+* [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
 * [Wikipedia](https://wikipedia.readthedocs.org/) - A Pythonic wrapper for the Wikipedia API.
