@@ -351,7 +351,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra by Datastax.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
+    * [HappyBase](http://happybase.readthedocs.org/) - developer-friendly library for Apache HBase
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
+    * [Plyvel](https://plyvel.readthedocs.org/) - a fast and feature-rich Python interface to LevelDB
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
     * [py2neo](http://book.py2neo.org/) - Python wrapper client for Neo4j's restful interface.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
