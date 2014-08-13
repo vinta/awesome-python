@@ -778,8 +778,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
     * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy/0.1) - An easy to use forged data generator for Python. It's a port of [forgery](http://rubygems.org/gems/forgery).
-* Code Coverage
-    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
