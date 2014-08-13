@@ -520,6 +520,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
 * [mailjet](https://github.com/WoLpH/mailjet) - Mailjet API implementation for batch mailing, statistics and more.
 * [Talon](https://github.com/mailgun/talon) - Mailgun library to extract message quotations and signatures.
+* [pyzmail](http://www.magiksys.net/pyzmail/) - Compose, send and parse emails.
 
 ## Internationalization
 
