@@ -312,10 +312,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for working with HTTP.*
 
 * [requests](http://docs.python-requests.org/) - HTTP Requests for Humans™.
+* [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests.
 * [urllib3](https://github.com/shazow/urllib3) - HTTP library with thread-safe connection pooling, file post support, sanity friendly, and more.
 * [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library.
 * [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
-* [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests
 
 ## Database
 
@@ -562,7 +562,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
 * [mechanize](http://wwwsearch.sourceforge.net/mechanize/) - Stateful programmatic web browsing.
-* [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
 
 ## Web Content Extracting
 
@@ -747,6 +746,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible BDD framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
+* Web Testing
+    * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
+    * [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
+    * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
 * Mock
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
@@ -754,14 +757,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
     * [httpretty](http://falcao.it/HTTPretty/) - HTTP request mock tool for Python.
     * [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+.
+* Code Coverage
+    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
-* Code Coverage
-    * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
-* Load Testing
-    * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
