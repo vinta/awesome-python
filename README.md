@@ -824,6 +824,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+* [Sage](http://www.sagemath.org) - A mathematics software with a mission to be an open-source alternative to Magma, Maple, Mathematica, and Matlab.
 
 ## Data Visualization
 
