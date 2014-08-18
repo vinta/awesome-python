@@ -711,6 +711,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyCrypto](https://www.dlitz.net/software/pycrypto/) - The Python Cryptography Toolkit.
 * [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 * [cryptography](https://cryptography.io/) - A package designed to expose cryptographic primitives and recipes to Python developers.
+* [PyNacl](https://github.com/dstufft/pynacl/) - Cryptography for humans. Makes it hard to create security bugs. 
 * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
 
 ## GUI
@@ -852,6 +853,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
+* [BigMl](https://bigml.com/) - An extremely easy machine learning cloud service with good python support
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
