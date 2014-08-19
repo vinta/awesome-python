@@ -761,6 +761,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible BDD framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
+    * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/)
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
