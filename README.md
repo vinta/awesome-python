@@ -794,6 +794,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
     * [pylama](https://pylama.readthedocs.org/) - Code audit tool for Python and JavaScript.
     * [Pylint](http://www.pylint.org/) - A source code analyzer.
+    * [Radon](https://github.com/rubik/radon/) - Cyclomatic Complexity and various other metrics for Python code.
+    * [Xenon](https://github.com/rubik/xenon/) - Cyclomatic Complexity monitoring tool (as a git-hook or on a CI server)
 
 ## Debugging Tools
 
