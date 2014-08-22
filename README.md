@@ -633,6 +633,8 @@ long, literate-programming-style documentation generator.
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of Behavior Driven Development (BDD).
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible _Behaviour-Driven-Development_ framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
+    * [sixpack](https://github.com/seatgeek/sixpack) - is a language-agnostic a/b-testing framework 
+http://sixpack.seatgeek.com
 * Mock
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
