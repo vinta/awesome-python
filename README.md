@@ -110,7 +110,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Package Repositories
 
-*Local PyPI repositories and proxies.*
+*Local PyPI repository server and proxies.*
 
 * [warehouse](https://github.com/pypa/warehouse) - Next generation Python Package Repository, designated replacemnet for the current official PyPI service.
 * [devpi](http://doc.devpi.net/) - PyPI server and packaging/testing/release tool.
@@ -358,7 +358,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
-    * [dataset] (https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
@@ -721,6 +721,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyCrypto](https://www.dlitz.net/software/pycrypto/) - The Python Cryptography Toolkit.
 * [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 * [cryptography](https://cryptography.io/) - A package designed to expose cryptographic primitives and recipes to Python developers.
+* [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
 
 ## GUI
