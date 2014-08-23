@@ -112,7 +112,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Local PyPI repository server and proxies.*
 
-* [warehouse](https://github.com/pypa/warehouse) - Next generation Python Package Repository, designated replacemnet for the current official PyPI service.
+* [warehouse](https://github.com/pypa/warehouse) - Next generation Python Package Repository (PyPI).
+    * [Warehouse](https://warehouse.python.org/)
 * [devpi](http://doc.devpi.net/) - PyPI server and packaging/testing/release tool.
 * [localshop](https://github.com/mvantellingen/localshop) - PyPI server which mirrors official packages on-demand, and also supports local (private) package uploads.
 
@@ -120,10 +121,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries to create packaged executables for release distribution.*
 
-* [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform)
-* [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows)
-* [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X)
-* [PyInstaller](http://www.pyinstaller.org/) - A program that converts Python programs into stand-alone executables (Windows, Linux, Mac OS X, Solaris and AIX)
+* [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform).
+* [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
+* [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
+* [PyInstaller](http://www.pyinstaller.org/) - Converts Python programs into stand-alone executables (cross-platform).
 * [dh-virtualenv](http://dh-virtualenv.readthedocs.org/) - Build and distribute a virtualenv as a Debian package.
 
 ## Build Tools
@@ -140,8 +141,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Interactive Python interpreters.*
 
-* [IPython](https://github.com/ipython/ipython) - IPython provides a rich toolkit to help you make the most out of using Python interactively.
-* [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter for Linux, BSD, OS X and Windows (with some work).
+* [IPython](https://github.com/ipython/ipython) - A rich toolkit to help you make the most out of using Python interactively.
+* [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter.
 
 ## Files
 
@@ -153,7 +154,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/2/library/os.path.html).
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
-* [pathlib](https://pathlib.readthedocs.org/en/pep428/) - An cross-platform, object-oriented path library (included in Python 3.4)
+* [pathlib](https://pathlib.readthedocs.org/en/pep428/) - (Python standard library in Python 3.4+) An cross-platform, object-oriented path library.
 
 ## Date and Time
 
@@ -161,10 +162,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [arrow](https://github.com/crsmithdev/arrow) - Better dates & times for Python.
 * [dateutil](https://pypi.python.org/pypi/python-dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/2/library/datetime.html) module.
-* [delorean](https://github.com/myusuf3/delorean/) - A library for clearing up the inconvenient truths that arise dealing with datetimes in Python.
+* [delorean](https://github.com/myusuf3/delorean/) - A library for clearing up the inconvenient truths that arise dealing with datetimes.
 * [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
 * [moment](https://github.com/zachwill/moment) - A Python library for dealing with dates/times. Inspired by [Moment.js](http://momentjs.com/).
-* [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [Olson tz database](http://en.wikipedia.org/wiki/Tz_database) into Python.
+* [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [tz database](http://en.wikipedia.org/wiki/Tz_database) into Python.
 
 ## Text Processing
 
@@ -187,11 +188,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
     * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs with Django as a dependency.
 * Parser
-    * [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Library for parsing, formatting, storing and validating international phone numbers.
+    * [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
     * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
     * [sqlparse](https://sqlparse.readthedocs.org/) - A non-validating SQL parser.
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
-    * [python-nameparser](https://github.com/derek73/python-nameparser) - A simple Python module for parsing human names into their individual components.
+    * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
     * [pyparsing](http://pyparsing.wikispaces.com/) - A general purpose framework for generating parsers.
 
 ## Specific Formats Processing
@@ -220,7 +221,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python. It has tools for natural language processing, machine learning, among others.
-* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common natural language processing (NLP) tasks. Stands on the giant shoulders of NLTK and Pattern, and plays nicely with both.
+* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks. Stands on the giant shoulders of NLTK and Pattern.
 * [jieba](https://github.com/fxsjy/jieba#jieba-1) - Chinese Words Segementation Utilities.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
