@@ -5,6 +5,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
+    - [Package Repositories](#package-repositories)
     - [Distribution](#distribution)
     - [Build Tools](#build-tools)
     - [Interactive Interpreter](#interactive-interpreter)
@@ -106,6 +107,16 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
+
+## Package Repositories
+
+*Local PyPI repositories and proxies.*
+
+* [Python Wiki PyPiImplementations](https://wiki.python.org/moin/PyPiImplementations) - A (somewhat dated) wiki list of PyPI compatible implementations.
+* [warehouse](https://github.com/pypa/warehouse#warehouse) - Next generation Python Package Repository, designated replacemnet for the current official PyPI service.
+* [devpi](http://doc.devpi.net/latest/) - PyPI server and packaging/testing/release tool.
+* [localshop](https://github.com/mvantellingen/localshop) - PyPI server which mirrors official packages on-demand, and also supports local (private) package uploads.
+* [Defend Against Fruit](http://teamfruit.github.io/defend_against_fruit/) - Pragmatic, continuous deployment-style build system for Python, with very detailed conceptual documentation.
 
 ## Distribution
 
