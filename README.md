@@ -594,7 +594,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for extracting web contents.*
 
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
-* [html2text](https://github.com/aaronsw/html2text) - Convert HTML to Markdown-formatted text.
+* [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
 * [python-goose](https://github.com/grangier/python-goose) - HTML Content/Article Extractor.
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
