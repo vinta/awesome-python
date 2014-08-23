@@ -759,13 +759,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
-    * [contexts](https://github.com/benjamin-hodgson/Contexts) - A modern and flexible BDD framework for Python 3.3 and above, inspired by C#'s `Machine.Specifications`.
+    * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
-    * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/)
+    * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+    * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
 * Mock
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
