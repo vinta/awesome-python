@@ -1012,6 +1012,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
     * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
+* Atom
+    * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
+    * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
 
 # Resources
 
