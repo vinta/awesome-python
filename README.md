@@ -844,6 +844,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
+* [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
+* [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
+
 
 
 ## Data Visualization
