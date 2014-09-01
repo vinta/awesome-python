@@ -727,6 +727,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [cryptography](https://cryptography.io/) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
+* [Passlib](https://pythonhosted.org/passlib/index.html) - Secure password storage/hashing library, very high level
 
 ## GUI
 
