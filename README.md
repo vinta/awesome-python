@@ -97,6 +97,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
+* [virtualenv-api](https://github.com/sjkingo/virtualenv-api) - An API for virtualenv/pip.
 
 ## Package Management
 
@@ -1025,6 +1026,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Atom
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
+    * [virtual](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
 
 # Resources
 
