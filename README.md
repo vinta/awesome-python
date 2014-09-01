@@ -94,10 +94,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pyenv](https://github.com/yyuu/pyenv) - Simple Python version management.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
 * [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv
+* [virtualenv-api](https://github.com/sjkingo/virtualenv-api) - An API for virtualenv and pip.
 * [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
-* [virtualenv-api](https://github.com/sjkingo/virtualenv-api) - An API for virtualenv/pip.
 
 ## Package Management
 
@@ -124,6 +124,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [cx-Freeze](http://cx-freeze.readthedocs.org/) - Freezes Python scripts (cross-platform).
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
+* [pynsist](http://pynsist.readthedocs.org/) - A tool to build Windows installers, installers bundle Python itself.
 * [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
 * [PyInstaller](http://www.pyinstaller.org/) - Converts Python programs into stand-alone executables (cross-platform).
 * [dh-virtualenv](http://dh-virtualenv.readthedocs.org/) - Build and distribute a virtualenv as a Debian package.
@@ -215,6 +216,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+* Archive
+    * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
 ## Natural Language Processing
 
@@ -726,6 +729,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [cryptography](https://cryptography.io/) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
+* [Passlib](https://pythonhosted.org/passlib/) - Secure password storage/hashing library, very high level.
 
 ## GUI
 
@@ -841,6 +845,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+* [orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or Python scripting.
+* [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
+* [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
+* [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
+* [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
+* [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
+* [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
+
+
 
 ## Data Visualization
 
