@@ -253,6 +253,7 @@ long, literate-programming-style documentation generator.
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [shorten.tv](http://www.shorten.tv/) - Video summarization.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
+* [SimpleCV](http://simplecv.org/) - is an open source framework for building computer vision applications
 
 ## Geolocation
 
