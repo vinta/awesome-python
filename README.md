@@ -82,6 +82,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
+    - [Learning Tools](#learning-tools)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -1059,6 +1060,9 @@ Where to discover new Python libraries.
 * [@pycoders](https://twitter.com/pycoders)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
 * [@pythontrending](https://twitter.com/pythontrending)
+
+##Learning-Tools
+*[Python Koans](https://github.com/gregmalcolm/python_koans)
 
 # Other Awesome Lists
 
