@@ -1062,7 +1062,7 @@ Where to discover new Python libraries.
 * [@pythontrending](https://twitter.com/pythontrending)
 
 ##Learning-Tools
-*[Python Koans](https://github.com/gregmalcolm/python_koans)
+* [Python Koans](https://github.com/gregmalcolm/python_koans)
 
 # Other Awesome Lists
 
