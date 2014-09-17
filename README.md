@@ -350,6 +350,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Databases implemented in Python.*
 
 * [ZODB](http://www.zodb.org/) - A native object database for Python. A key-value and object graph database.
+* [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python. 
 
 ## Database Drivers
 
