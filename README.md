@@ -802,8 +802,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
-    * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy/0.1) - An easy to use forged data generator for Python. It's a port of [forgery](http://rubygems.org/gems/forgery).
-    * [radar](https://github.com/barseghyanartur/radar) - Generate random datetime / time.
+    * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy) - An easy to use forged data generator for Python. It's a port of [forgery](http://rubygems.org/gems/forgery).
+    * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
@@ -857,7 +857,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
-
+* [blaze](http://blaze.pydata.org/docs/latest/index.html) - NumPy and Pandas interface to Big Data.
 
 
 ## Data Visualization
