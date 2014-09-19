@@ -216,6 +216,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+* CSV
+    * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
@@ -350,7 +352,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Databases implemented in Python.*
 
 * [ZODB](http://www.zodb.org/) - A native object database for Python. A key-value and object graph database.
-* [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python. 
+* [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python.
 
 ## Database Drivers
 
