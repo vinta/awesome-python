@@ -768,7 +768,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for generating and working with log files.*
 
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
-* [logbook](http://pythonhosted.org/Logbook/) -  Logging replacement for Python.
+* [logbook](http://pythonhosted.org/Logbook/) - Logging replacement for Python.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
 * [Raven](http://raven.readthedocs.org/) - The Python client for Sentry.
 
@@ -803,6 +803,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
     * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy/0.1) - An easy to use forged data generator for Python. It's a port of [forgery](http://rubygems.org/gems/forgery).
+    * [radar](https://github.com/barseghyanartur/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
