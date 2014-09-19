@@ -931,6 +931,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [praw](https://github.com/praw-dev/praw) - A Python wrapper for the Reddit API.
 * [linkedin](https://github.com/ozgur/python-linkedin) - A Python interface for LinkedIn.
+* [django-wordpress](https://github.com/sunlightlabs/django-wordpress/) - WordPress models and views for Django.
 
 ## DevOps Tools
 
