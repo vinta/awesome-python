@@ -108,6 +108,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
+* [pex](https://pex.readthedocs.org/en/latest/) - One pex file ships all dependecies except the Python interpreter itself
 
 ## Package Repositories
 
