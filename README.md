@@ -209,6 +209,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [python-docx](https://github.com/python-openxml/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
     * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
+    * [xlwings](http://xlwings.org/) - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
 * PDF
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
