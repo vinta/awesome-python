@@ -619,6 +619,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 * [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
+* [sanitize](https://github.com/Alir3z4/sanitize) - Bringing sanity to world of messed-up data.
 
 ## Forms
 
