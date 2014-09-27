@@ -198,6 +198,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
     * [pyparsing](http://pyparsing.wikispaces.com/) - A general purpose framework for generating parsers.
+    * [python-stop-words](https://github.com/Alir3z4/python-stop-words) - Get list of common stop words in various languages in Python.
 
 ## Specific Formats Processing
 
