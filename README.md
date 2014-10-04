@@ -916,6 +916,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Functional Programming
 
+*Functional Programming with Python.*
+
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
@@ -940,8 +942,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Software and libraries for DevOps.*
 
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
-* [Ansible](http://www.ansible.com/) - An IT automation tool.
-* [SaltStack](http://www.saltstack.com/community/) - Infrastructure automation and management system.
+* [Ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
+* [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
@@ -1020,7 +1022,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Algorithms and Design Patterns
 
-*Collections of algorithms and design patterns.*
+*Python implementation of algorithms and design patterns.*
 
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
