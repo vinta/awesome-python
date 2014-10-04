@@ -186,6 +186,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate Chinese hanzi (漢字) to pinyin (拼音).
     * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts for CJK and alphanumerics.
     * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
+    * [uniout](https://github.com/moskytw/uniout) - Print readable chars instead of the escaped string.
 * Slugify
     * [awesome-slugify](https://github.com/dimka665/awesome-slugify) - A Python slugify library that can preserve unicode.
     * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
