@@ -198,7 +198,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
     * [pyparsing](http://pyparsing.wikispaces.com/) - A general purpose framework for generating parsers.
-    * [python-stop-words](https://github.com/Alir3z4/python-stop-words) - Get list of common stop words in various languages in Python.
 
 ## Specific Formats Processing
 
@@ -206,7 +205,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * General
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
-    * [django-markwhat](https://github.com/Alir3z4/django-markwhat) - A collection of template filters that implement common markup languages.
 * Office
     * [python-docx](https://github.com/python-openxml/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
@@ -450,7 +448,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-shop](https://www.django-cms.org/) - A Django based shop system.
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
-* [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies, for all money lovers out there.
+* [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
 
 ## RESTful API
 
@@ -578,7 +576,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [furl](https://github.com/gruns/furl) - A small Python library that makes manipulating URLs simple.
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
-* [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL- and bit.ly-like URLs.
+* [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL and bit.ly-like URLs.
 
 ## HTML Manipulation
 
@@ -869,10 +867,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [blaze](http://blaze.pydata.org/docs/latest/index.html) - NumPy and Pandas interface to Big Data.
 
-
 ## Data Visualization
 
-*Libraries for visualizing data. See: [awesome-javascript's Data Visualization section](https://github.com/sorrycc/awesome-javascript#data-visualization).*
+*Libraries for visualizing data. See: [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
@@ -930,16 +927,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
-* [soundcloud-python](https://github.com/soundcloud/soundcloud-python) - A Python wrapper around the Soundcloud API.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
-* [Wikipedia](https://wikipedia.readthedocs.org/) - A Pythonic wrapper for the Wikipedia API.
-* [python-instagram](https://github.com/Instagram/python-instagram) - A Python Client for Instagram API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
-* [praw](https://github.com/praw-dev/praw) - A Python wrapper for the Reddit API.
-* [linkedin](https://github.com/ozgur/python-linkedin) - A Python interface for LinkedIn.
 * [django-wordpress](https://github.com/sunlightlabs/django-wordpress/) - WordPress models and views for Django.
 
 ## DevOps Tools
