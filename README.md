@@ -949,6 +949,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
 * [honcho](https://github.com/nickstenning/honcho) - A Python port of [Foreman](https://github.com/ddollar/foreman), a tool for managing Procfile-based applications.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
+* [fig](http://www.fig.sh/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 
 ## Job Scheduler
 
