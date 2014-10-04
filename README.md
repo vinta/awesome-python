@@ -198,6 +198,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
     * [pyparsing](http://pyparsing.wikispaces.com/) - A general purpose framework for generating parsers.
+    * [python-stop-words](https://github.com/Alir3z4/python-stop-words) - Get list of common stop words in various languages in Python.
 
 ## Specific Formats Processing
 
@@ -205,6 +206,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * General
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+    * [django-markwhat](https://github.com/Alir3z4/django-markwhat) - A collection of template filters that implement common markup languages.
 * Office
     * [python-docx](https://github.com/python-openxml/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
@@ -448,6 +450,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-shop](https://www.django-cms.org/) - A Django based shop system.
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
+* [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies, for all money lovers out there.
 
 ## RESTful API
 
@@ -575,6 +578,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [furl](https://github.com/gruns/furl) - A small Python library that makes manipulating URLs simple.
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
+* [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL- and bit.ly-like URLs.
 
 ## HTML Manipulation
 
@@ -617,6 +621,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 * [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
+* [sanitize](https://github.com/Alir3z4/sanitize) - Bringing sanity to world of messed-up data.
 
 ## Forms
 
