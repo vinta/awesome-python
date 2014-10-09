@@ -487,6 +487,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Flask-OAuthlib](https://github.com/lepture/flask-oauthlib) - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.
 * [sanction](https://github.com/demianbrecht/sanction) - A dead simple OAuth2 client implementation.
 * [jose](https://github.com/demonware/jose) - JavaScript Object Signing and Encryption (JOSE) draft implementation, useful for stateful tokens.
+* [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generting and verifying JSON Web Tokens.
+* [pyjwt](https://github.com/progrium/pyjwt) - Implmentation of the JSON Web Token draft 01.
+* [python-jws](https://github.com/brianloveswords/python-jws) - Implementation of JSON Web Signatures draft 02.
 
 ## Template Engine
 
