@@ -847,6 +847,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
+* [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django debug toolbar to flask.
 
 ## Science and Data Analysis
 
