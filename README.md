@@ -145,6 +145,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [IPython](https://github.com/ipython/ipython) - A rich toolkit to help you make the most out of using Python interactively.
 * [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter.
+* [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 
 ## Files
 
@@ -270,14 +271,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
     * [pyCLI](https://pythonhosted.org/pyCLI/) - Command-line applications supporting standard command line parsing, logging, unit and functional testing.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
-    * * [prompt_toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines in Python. It ships with a nice interactive Python shell (called ptpython) built on top of the library.
-
 * Productivity Tools
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates). E.g. Python package projects, jQuery plugin projects.
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
-    
 
 ## Downloader
 
@@ -847,7 +845,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
-* [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django debug toolbar to flask.
+* [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
 
 ## Science and Data Analysis
 
@@ -908,7 +906,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
-* [vowpal_porpoise](https://github.com/salilnavgire/awesome-python) - A lightweight Python wrapper for Vowpal Wabbit
+* [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 
 ## MapReduce
 
