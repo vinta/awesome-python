@@ -908,6 +908,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
+* [vowpal_porpoise](https://github.com/salilnavgire/awesome-python) - A lightweight Python wrapper for Vowpal Wabbit
 
 ## MapReduce
 
