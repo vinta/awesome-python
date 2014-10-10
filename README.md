@@ -496,7 +496,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Jinja2](https://github.com/mitsuhiko/jinja2) - A modern and designer friendly templating language.
 * [Genshi](http://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
-* [Chameleon](https://chameleon.readthedocs.org/) - An HTML/XML template engine for Python. Modeled after ZPT, optimized for speed.
+* [Chameleon](https://chameleon.readthedocs.org/) - An HTML/XML template engine. Modeled after ZPT, optimized for speed.
 * [Spitfire](https://code.google.com/p/spitfire/) - A very fast Python template compiler.
 
 ## Queue
@@ -522,7 +522,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for building user's activities.*
 
-* [Feedly](https://github.com/tschellenbach/Feedly) - A library which allows you to build newsfeed and notification systems using Cassandra and Redis.
+* [Feedly](https://github.com/tschellenbach/Feedly) - A library to build newsfeed and notification systems using Cassandra and Redis.
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generate generic activity streams from the actions on your site.
 
 ## Asset Management
