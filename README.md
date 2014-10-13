@@ -243,6 +243,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for generating project documentation.*
 
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
+    * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc) 
 * [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
 * [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 * [Pycco](http://fitzgen.github.io/pycco/) - The original quick-and-dirty, hundred-line-long, literate-programming-style documentation generator.
