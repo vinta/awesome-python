@@ -574,6 +574,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for woking with i18n.*
 
 * [Babel](http://babel.pocoo.org/) - An internationalization library for Python.
+* [Korean](https://korean.readthedocs.org/) - A library for [Korean](http://en.wikipedia.org/wiki/Korean_language) morphology.
 
 ## URL Manipulation
 
