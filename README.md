@@ -243,7 +243,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for generating project documentation.*
 
 * [Sphinx](http://sphinx-doc.org/) - Python Documentation generator.
-    * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc) 
+    * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc)
 * [reStructuredText](http://docutils.sourceforge.net/rst.html) - Markup Syntax and Parser Component of Docutils.
 * [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 * [Pycco](http://fitzgen.github.io/pycco/) - The original quick-and-dirty, hundred-line-long, literate-programming-style documentation generator.
@@ -1051,7 +1051,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Sublime Text
     * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome autocomplete library [Jedi](https://github.com/davidhalter/jedi).
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
-    * [Djaneiro](https://github.com/squ1b3r/Djaneiro) - Django support for Sublime Text.
 * Atom
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
