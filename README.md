@@ -822,6 +822,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+    * [flaky](https://github.com/box/flaky) - Nose and py.test plugin to automatically retry flaky tests.
 
 ## Code Analysis and Linter
 
