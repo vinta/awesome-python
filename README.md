@@ -264,6 +264,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * Command-line Application Development
     * [cement](http://builtoncement.org/) - Cement provides a light-weight and fully featured foundation to build anything from single file scripts to complex and intricately designed applications.
+    *  [clapp](http://github.com/kbknapp/clapp-py) - A small package for quickly and easily creating command line applications.
     * [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
     * [cliff](https://cliff.readthedocs.org/) - A framework for creating command-line programs with multi-level commands.
