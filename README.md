@@ -31,7 +31,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [CMS](#cms)
     - [E-commerce](#e-commerce)
     - [RESTful API](#restful-api)
-    - [Authentication and OAuth](#authentication-and-oauth)
+    - [Authentication](#authentication)
     - [Template Engine](#template-engine)
     - [Queue](#queue)
     - [Search](#search)
@@ -472,24 +472,26 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
 * [savory-pie](https://github.com/RueLaLa/savory-pie/) - REST API building library (django, and others)
 
-## Authentication and OAuth
+## Authentication
 
 *Libraries for implementing authentications schemes.*
 
-* [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client package.
-* [OAuthLib](https://github.com/idan/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
-* [rauth](https://github.com/litl/rauth) - A Python library for OAuth 1.0/a, 2.0, and Ofly.
-* [python-oauth2](https://github.com/simplegeo/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
-* [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
-* [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
-* [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
-* [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
-* [Flask-OAuthlib](https://github.com/lepture/flask-oauthlib) - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.
-* [sanction](https://github.com/demianbrecht/sanction) - A dead simple OAuth2 client implementation.
-* [jose](https://github.com/demonware/jose) - JavaScript Object Signing and Encryption (JOSE) draft implementation, useful for stateful tokens.
-* [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
-* [pyjwt](https://github.com/progrium/pyjwt) - Implementation of the JSON Web Token draft 01.
-* [python-jws](https://github.com/brianloveswords/python-jws) - Implementation of JSON Web Signatures draft 02.
+* OAuth
+    * [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client package.
+    * [OAuthLib](https://github.com/idan/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
+    * [rauth](https://github.com/litl/rauth) - A Python library for OAuth 1.0/a, 2.0, and Ofly.
+    * [python-oauth2](https://github.com/simplegeo/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
+    * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
+    * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
+    * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
+    * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
+    * [Flask-OAuthlib](https://github.com/lepture/flask-oauthlib) - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.
+    * [sanction](https://github.com/demianbrecht/sanction) - A dead simple OAuth2 client implementation.
+* Others
+    * [PyJWT](https://github.com/progrium/pyjwt) - Implementation of the JSON Web Token draft 01.
+    * [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
+    * [python-jws](https://github.com/brianloveswords/python-jws) - Implementation of JSON Web Signatures draft 02.
+    * [jose](https://github.com/demonware/jose) - JavaScript Object Signing and Encryption draft implementation.
 
 ## Template Engine
 
@@ -852,7 +854,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
 * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
-* [pyelftools](https://github.com/eliben/pyelftools) - is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information
+* [pyelftools](https://github.com/eliben/pyelftools) - A pure-Python library for parsing and analyzing ELF files and DWARF debugging information.
 
 ## Science and Data Analysis
 
