@@ -852,6 +852,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
 * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
 * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
+* [pyelftools](https://github.com/eliben/pyelftools) - is a pure-Python library for parsing and analyzing ELF files and DWARF debugging information
 
 ## Science and Data Analysis
 
