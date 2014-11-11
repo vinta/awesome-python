@@ -1021,6 +1021,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for programming with hardware.*
 
+* [PyUserInput](https://github.com/SavinaRoja/PyUserInput) - A module for cross-platform control of the mouse and keyboard.
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](http://www.arduino.cc/).
