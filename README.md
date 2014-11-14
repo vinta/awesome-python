@@ -93,7 +93,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [pyenv](https://github.com/yyuu/pyenv) - Simple Python version management.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
-* [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv
+* [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv.
 * [virtualenv-api](https://github.com/sjkingo/virtualenv-api) - An API for virtualenv and pip.
 * [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
