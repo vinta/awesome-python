@@ -653,6 +653,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [kmatch](https://github.com/ambitioninc/kmatch) - A language for matching/validating/filtering Python dictionaries.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
+* [cerberus](https://github.com/nicolaiarocci/cerberus) - Extensible validation for Python dictionaries.
 
 ## Anti-spam
 
