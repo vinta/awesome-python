@@ -1068,7 +1068,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Six](https://pypi.python.org/pypi/six)
 * [Python-Future](http://python-future.org/index.html)
-* [2to3](https://docs.python.org/2/library/2to3.html)
 * [Python-Modernize](https://github.com/mitsuhiko/python-modernize)
 
 # Resources
