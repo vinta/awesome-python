@@ -615,6 +615,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
 * [mechanize](http://wwwsearch.sourceforge.net/mechanize/) - Stateful programmatic web browsing.
 * [Demiurge](https://github.com/matiasb/demiurge) - PyQuery-based scraping micro-framework.
+* [pyspider](https://github.com/binux/pyspider) - A Powerful Spider System in Python.
 
 ## Web Content Extracting
 
