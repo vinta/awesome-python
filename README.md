@@ -213,9 +213,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
     * [xlwings](http://xlwings.org/) - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
+    * [openpyxl](https://openpyxl.readthedocs.org/en/latest/) - Read/write Excel 2007+ files.
 * PDF
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
+    * [ReportLab](https://bitbucket.org/rptlab/reportlab) - A PDF Toolkit, create rich PDF documents, charts and lot.
 * Markdown
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
@@ -316,7 +318,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-elastic-transcoder](https://github.com/StreetVoice/django-elastic-transcoder) - Django + [Amazon Elastic Transcoder](http://aws.amazon.com/elastictranscoder/).
 * [eyeD3](http://eyed3.nicfit.net/) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
 * [id3reader](http://nedbatchelder.com/code/modules/id3reader.py) - A Python module for reading MP3 meta data.
-* [mutagen](https://code.google.com/p/mutagen/) - A Python module to handle audio metadata.
+* [mutagen](https://bitbucket.org/lazka/mutagen) - A Python module to handle audio metadata.
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://developer.echonest.com/docs/) API.
 * [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
@@ -615,6 +617,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
 * [mechanize](http://wwwsearch.sourceforge.net/mechanize/) - Stateful programmatic web browsing.
 * [Demiurge](https://github.com/matiasb/demiurge) - PyQuery-based scraping micro-framework.
+* [pyspider](https://github.com/binux/pyspider) - A Powerful Spider System in Python.
 
 ## Web Content Extracting
 
@@ -844,8 +847,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for debugging code.*
 
-* [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
-* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
+* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
+* [debug](https://pypi.python.org/pypi/debug) - `import debug` to fall into `ipdb` with `see`.
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
