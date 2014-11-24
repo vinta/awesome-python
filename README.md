@@ -528,7 +528,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for building user's activities.*
 
-* [Feedly](https://github.com/tschellenbach/Feedly) - A library to build newsfeed and notification systems using Cassandra and Redis.
+* [Stream Framework (previously Feedly)](https://github.com/tschellenbach/Stream-Framework) - A library to build newsfeed and notification systems using Cassandra and Redis.
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generate generic activity streams from the actions on your site.
 
 ## Asset Management
@@ -656,6 +656,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [kmatch](https://github.com/ambitioninc/kmatch) - A language for matching/validating/filtering Python dictionaries.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
+* [cerberus](https://github.com/nicolaiarocci/cerberus) - Extensible validation for Python dictionaries.
 
 ## Anti-spam
 
