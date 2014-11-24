@@ -528,7 +528,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for building user's activities.*
 
-* [Feedly](https://github.com/tschellenbach/Feedly) - A library to build newsfeed and notification systems using Cassandra and Redis.
+* [Stream Framework (previously Feedly)](https://github.com/tschellenbach/Stream-Framework) - A library to build newsfeed and notification systems using Cassandra and Redis.
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generate generic activity streams from the actions on your site.
 
 ## Asset Management
