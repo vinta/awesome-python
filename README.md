@@ -308,10 +308,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 
 *Tools for Optical Character Recognition (OCR).*
-    * [python-tesseract] (https://code.google.com/p/python-tesseract) - Wrapper class for Tesseract OCR.
-    * [pyocr](https://github.com/jflesch/pyocr) - Wrapper for Tesseract and Cuneiform.
-    * [pytesser](https://code.google.com/p/pytesser) - OCR module for Python.
-    * [pytesseract](https://github.com/madmaze/pytesseract) - Wrapper for Google TesseractOCR. 
+
+* [python-tesseract] (https://code.google.com/p/python-tesseract) - Wrapper class for Tesseract OCR.
+* [pyocr](https://github.com/jflesch/pyocr) - Wrapper for Tesseract and Cuneiform.
+* [pytesser](https://code.google.com/p/pytesser) - OCR module for Python.
+* [pytesseract](https://github.com/madmaze/pytesseract) - Wrapper for Google TesseractOCR. 
 
 ## Audio
 
