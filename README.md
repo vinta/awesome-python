@@ -186,6 +186,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [xpinyin](https://github.com/lxneng/xpinyin) - A library to translate Chinese hanzi (漢字) to pinyin (拼音).
     * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts for CJK and alphanumerics.
+    * [pyaddress](https://github.com/SwoopSearch/pyaddress) - Taking the guesswork out of using addresses in your applications
     * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
     * [uniout](https://github.com/moskytw/uniout) - Print readable chars instead of the escaped string.
 * Slugify
