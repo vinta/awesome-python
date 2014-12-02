@@ -403,6 +403,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
     * [flywheel](https://github.com/mathcamp/flywheel) - Object mapper for Amazon DynamoDB.
+    * [neomodel](https://github.com/robinedwards/neomodel) - Object-Graph-Mapper for working with neo4j graph database. 
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
 
