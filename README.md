@@ -384,7 +384,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [Plyvel](https://plyvel.readthedocs.org/) - A fast and feature-rich Python interface to LevelDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
-    * [py2neo](http://book.py2neo.org/) - Python wrapper client for Neo4j's restful interface.
+    * [py2neo](http://book.py2neo.org/) - Python wrapper client for [Neo4j](http://neo4j.com/)'s restful interface.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
@@ -522,7 +522,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-haystack](https://github.com/toastdriven/django-haystack) - Modular search for Django.
 * [elasticsearch-py](http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/) - The official low-level Python client for [Elasticsearch](http://www.elasticsearch.org/).
-* [pyes](https://github.com/aparo/pyes/) - Python connector for ElasticSearch - the pythonic way to use ElasticSearch
+* [pyes](https://github.com/aparo/pyes/) - The pythonic way to use ElasticSearch.
 * [solrpy](https://code.google.com/p/solrpy/) - A Python client for [solr](http://lucene.apache.org/solr/).
 * [Whoosh](http://whoosh.readthedocs.org/) - A fast, pure Python search engine library.
 
