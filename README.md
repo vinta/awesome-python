@@ -483,6 +483,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client package.
     * [OAuthLib](https://github.com/idan/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
     * [rauth](https://github.com/litl/rauth) - A Python library for OAuth 1.0/a, 2.0, and Ofly.
+    * [requests-oauthlib](https://github.com/requests/requests-oauthlib) - OAuthlib support for [Requests](http://docs.python-requests.org/en/latest/).
     * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
     * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
     * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
