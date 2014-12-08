@@ -78,6 +78,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Miscellaneous](#miscellaneous)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
+    - [Migration Utilities](#migration-utilities)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -1066,6 +1067,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
     * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
+
+## Migration Utilities
+
+*Libraries for migrating from Python 2 to 3.*
+
+* [Six](https://pypi.python.org/pypi/six)
+* [Python-Future](http://python-future.org/index.html)
+* [Python-Modernize](https://github.com/mitsuhiko/python-modernize)
 
 # Resources
 
