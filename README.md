@@ -764,6 +764,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for working with graphical user interface applications.*
 
+* [PyGTK](http://www.pygtk.org/) - GTK+ for Python.
 * [PyQt](http://www.riverbankcomputing.co.uk/software/pyqt/intro) - Python bindings for the [Qt](http://qt-project.org/) cross-platform application and UI framework, with support for both Qt v4 and Qt v5 frameworks.
 * [PySide](http://qt-project.org/wiki/pyside) - Python bindings for the [Qt](http://qt-project.org/) cross-platform application and UI framework, supporting the Qt v4 framework.
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
