@@ -75,10 +75,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [High Performance](#high-performance)
     - [Network Virtualization and SDN](#network-virtualization-and-sdn)
     - [Hardware](#hardware)
+    - [Compatibility](#compatibility)
     - [Miscellaneous](#miscellaneous)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
-    - [Migration Utilities](#migration-utilities)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -214,11 +214,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
     * [xlwings](http://xlwings.org/) - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
-    * [openpyxl](https://openpyxl.readthedocs.org/en/latest/) - Read/write Excel 2007+ files.
 * PDF
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
-    * [ReportLab](https://bitbucket.org/rptlab/reportlab) - A PDF Toolkit, create rich PDF documents, charts and lot.
 * Markdown
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
@@ -319,7 +317,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-elastic-transcoder](https://github.com/StreetVoice/django-elastic-transcoder) - Django + [Amazon Elastic Transcoder](http://aws.amazon.com/elastictranscoder/).
 * [eyeD3](http://eyed3.nicfit.net/) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
 * [id3reader](http://nedbatchelder.com/code/modules/id3reader.py) - A Python module for reading MP3 meta data.
-* [mutagen](https://bitbucket.org/lazka/mutagen) - A Python module to handle audio metadata.
+* [mutagen](https://code.google.com/p/mutagen/) - A Python module to handle audio metadata.
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://developer.echonest.com/docs/) API.
 * [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
@@ -385,7 +383,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [Plyvel](https://plyvel.readthedocs.org/) - A fast and feature-rich Python interface to LevelDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
-    * [py2neo](http://book.py2neo.org/) - Python wrapper client for [Neo4j](http://neo4j.com/)'s restful interface.
+    * [py2neo](http://book.py2neo.org/) - Python wrapper client for Neo4j's restful interface.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
@@ -404,7 +402,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
     * [flywheel](https://github.com/mathcamp/flywheel) - Object mapper for Amazon DynamoDB.
-    * [neomodel](https://github.com/robinedwards/neomodel) - Object-Graph-Mapper for working with neo4j graph database. 
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
 
@@ -484,7 +481,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client package.
     * [OAuthLib](https://github.com/idan/oauthlib) - A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
     * [rauth](https://github.com/litl/rauth) - A Python library for OAuth 1.0/a, 2.0, and Ofly.
-    * [requests-oauthlib](https://github.com/requests/requests-oauthlib) - OAuthlib support for [Requests](http://docs.python-requests.org/en/latest/).
+    * [python-oauth2](https://github.com/simplegeo/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
     * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
     * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
     * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
@@ -523,7 +520,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-haystack](https://github.com/toastdriven/django-haystack) - Modular search for Django.
 * [elasticsearch-py](http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/) - The official low-level Python client for [Elasticsearch](http://www.elasticsearch.org/).
-* [pyes](https://github.com/aparo/pyes/) - The pythonic way to use ElasticSearch.
 * [solrpy](https://code.google.com/p/solrpy/) - A Python client for [solr](http://lucene.apache.org/solr/).
 * [Whoosh](http://whoosh.readthedocs.org/) - A fast, pure Python search engine library.
 
@@ -531,7 +527,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for building user's activities.*
 
-* [Stream Framework (previously Feedly)](https://github.com/tschellenbach/Stream-Framework) - A library to build newsfeed and notification systems using Cassandra and Redis.
+* [Feedly](https://github.com/tschellenbach/Feedly) - A library to build newsfeed and notification systems using Cassandra and Redis.
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generate generic activity streams from the actions on your site.
 
 ## Asset Management
@@ -620,7 +616,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
 * [mechanize](http://wwwsearch.sourceforge.net/mechanize/) - Stateful programmatic web browsing.
 * [Demiurge](https://github.com/matiasb/demiurge) - PyQuery-based scraping micro-framework.
-* [pyspider](https://github.com/binux/pyspider) - A Powerful Spider System in Python.
 
 ## Web Content Extracting
 
@@ -659,7 +654,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [kmatch](https://github.com/ambitioninc/kmatch) - A language for matching/validating/filtering Python dictionaries.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
-* [cerberus](https://github.com/nicolaiarocci/cerberus) - Extensible validation for Python dictionaries.
 
 ## Anti-spam
 
@@ -850,8 +844,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for debugging code.*
 
-* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
-* [debug](https://pypi.python.org/pypi/debug) - `import debug` to fall into `ipdb` with `see`.
+* [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
+* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
@@ -1034,6 +1028,14 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](http://www.arduino.cc/).
 * [Pyro](http://pyrorobotics.com/) - Python Robotics.
 
+## Compatibility
+
+*Libraries for migrating from Python 2 to 3.*
+
+* [Six](https://pypi.python.org/pypi/six) - Python 2 and 3 compatibility utilities.
+* [Python-Future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
+* [Python-Modernize](https://github.com/mitsuhiko/python-modernize) - Modernizes Python code for eventual Python 3 migration.
+
 ## Miscellaneous
 
 *Useful libraries or tools that don't fit in the categories above.*
@@ -1067,14 +1069,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
     * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
-
-## Migration Utilities
-
-*Libraries for migrating from Python 2 to 3.*
-
-* [Six](https://pypi.python.org/pypi/six)
-* [Python-Future](http://python-future.org/index.html)
-* [Python-Modernize](https://github.com/mitsuhiko/python-modernize)
 
 # Resources
 
