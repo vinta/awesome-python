@@ -298,7 +298,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pillow](http://pillow.readthedocs.org/) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
 * [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, resizing and flipping of images.
-* [imgSeek](http://www.imgseek.net/) - A project for searching a collection of images using visual similarity.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 * [pyBarcode](https://pythonhosted.org/pyBarcode/) - Create barcodes in Python without needing PIL.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
@@ -1041,6 +1040,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
+* [UnofficialWindowsBinaries](http://www.kaij.org/blog/?p=123) Unofficial Windows Binaries for Python Extension Packages
 
 ## Algorithms and Design Patterns
 
