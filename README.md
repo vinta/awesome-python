@@ -304,7 +304,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
-* [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
+* [hmap](https://github.com/rossgoodwin/hmSeaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.ap) - Image histogram remapping.
+* [matplotlib](http://matplotlib.org/) - matplotlib is a python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms
+* [seaborn](http://stanford.edu/~mwaskom/software/seaborn/) - Seaborn is a Python visualization library based on matplotlib. It provides a high-level interface for drawing attractive statistical graphics.
 
 ## Audio
 
@@ -1040,7 +1042,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
-* [UnofficialWindowsBinaries](http://www.kaij.org/blog/?p=123) Unofficial Windows Binaries for Python Extension Packages
+
 
 ## Algorithms and Design Patterns
 
@@ -1066,7 +1068,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
     * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
-
+    * [Anaconda_IDE](http://continuum.io/) - Python distribution for large-scale data processing, predictive analytics, and scientific computing (Linux, WIN)
+    * [Pyro_IDE](http://www.pyzo.org/index.html) - Pyzo is a free and open-source computing environment based on Python. Our mission is to make tools for data-centric programming that are easy to obtain and easy to use.
+    * [Enthought Canopy](https://www.enthought.com/products/canopy/) Scientific and Analytic Python Deployment with Integrated Analysis Environment
+    
 # Resources
 
 Where to discover new Python libraries.
