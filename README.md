@@ -1000,6 +1000,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyPy](http://pypy.org/) - An implementation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
+* [Jython](http://www.jython.org/) - An implementation of the Python programming language is designed to run on the Java Platform.
 
 ## Microsoft Windows
 
