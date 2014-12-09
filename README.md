@@ -1085,8 +1085,9 @@ Where to discover new Python libraries.
 
 ## Weekly
 
-* [Pycoder's Weekly](http://pycoders.com/) - A free weekly newsletter, on Fridays, for those interested in Python development and various topics around Python.
-* [Python Weekly](http://www.pythonweekly.com/) - A free weekly newsletter featuring curated news, articles, new releases, jobs etc related to Python.
+* [Pycoder's Weekly](http://pycoders.com/)
+* [Python Weekly](http://www.pythonweekly.com/)
+* [Import Python Newsletter](http://importpython.com/newsletter/)
 
 ## Twitter
 
