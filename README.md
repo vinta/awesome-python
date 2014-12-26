@@ -129,6 +129,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
 * [PyInstaller](http://www.pyinstaller.org/) - Converts Python programs into stand-alone executables (cross-platform).
 * [dh-virtualenv](http://dh-virtualenv.readthedocs.org/) - Build and distribute a virtualenv as a Debian package.
+* [Nuitka](http://nuitka.net/) - Compile scripts, modules, packages to an executable or extension module.
 
 ## Build Tools
 
