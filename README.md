@@ -589,6 +589,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
 * [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL and bit.ly-like URLs.
+* [webargs](https://github.com/sloria/webargs) - A friendly library for parsing HTTP request arguments, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, and Pyramid.
 
 ## HTML Manipulation
 
