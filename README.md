@@ -1124,7 +1124,7 @@ Your contributions are always welcome!
 
 ## PyCon APAC 2015
 
-![PyCon APAC 2015](https://tw.pycon.org/2015apac/images/Logo_red_1280.svg)
+[![PyCon APAC 2015](https://tw.pycon.org/2015apac/images/Logo_red_1280.svg)](https://tw.pycon.org/2015apac/)
 
 #### Tutorials May 30-31, Conference June 5-7, Sprints June 8, Taipei, Taiwan
 
