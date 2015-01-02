@@ -1082,10 +1082,10 @@ Where to discover new Python libraries.
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
+* [Python Hackers](http://pythonhackers.com/open-source/) - List of top 400 projects in GitHub.
 * [CoolGithubProjects](http://coolgithubprojects.com/) - Sharing cool github projects just got easier!
 * [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
-* [Python Hackers](http://pythonhackers.com/open-source/) - List of top 400 projects in github
 
 ## Weekly
 
@@ -1119,3 +1119,13 @@ List of lists.
 # [Contributing](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md)
 
 Your contributions are always welcome!
+
+# Upcoming Event
+
+## PyCon APAC 2015
+
+![PyCon APAC 2015](https://tw.pycon.org/2015apac/images/Logo_red_1280.svg)
+
+#### Tutorials May 30-31, Conference June 5-7, Sprints June 8, Taipei, Taiwan
+
+Mark your calendar now and stay up to date on the must-attend event in 2015. Join the biggest Python conference in Asia. To find more on [https://tw.pycon.org/2015apac/](https://tw.pycon.org/2015apac/).
