@@ -290,6 +290,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
 * [WikiTeam](https://github.com/WikiTeam/wikiteam) - Tools for downloading and preserving wikis.
 * [subliminal](https://github.com/Diaoul/subliminal) - Library and command line tool to search and download subtitles.
+* [SubDownloader](https://launchpad.net/subdownloader) - GUI and command line tool to search and download subtitles.
 
 ## Imagery
 
