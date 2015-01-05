@@ -972,7 +972,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [honcho](https://github.com/nickstenning/honcho) - A Python port of [Foreman](https://github.com/ddollar/foreman), a tool for managing Procfile-based applications.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
 * [fig](http://www.fig.sh/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
-
+* [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
+* [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
+ 
 ## Job Scheduler
 
 *Libraries for scheduling jobs.*
