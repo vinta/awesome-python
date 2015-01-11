@@ -983,6 +983,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner/build tool.
 * [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [party](https://github.com/torwart/party) - The python task runner
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
