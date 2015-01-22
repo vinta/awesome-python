@@ -19,6 +19,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Command-line Tools](#command-line-tools)
     - [Downloader](#downloader)
     - [Imagery](#imagery)
+    - [OCR](#ocr)
     - [Audio](#audio)
     - [Video](#video)
     - [Geolocation](#geolocation)
@@ -308,12 +309,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 
-*Tools for Optical Character Recognition (OCR).*
+## OCR
 
-* [python-tesseract] (https://code.google.com/p/python-tesseract) - Wrapper class for Tesseract OCR.
-* [pyocr](https://github.com/jflesch/pyocr) - Wrapper for Tesseract and Cuneiform.
-* [pytesser](https://code.google.com/p/pytesser) - OCR module for Python.
-* [pytesseract](https://github.com/madmaze/pytesseract) - Wrapper for Google TesseractOCR. 
+*Libraries for Optical Character Recognition.*
+
+* [python-tesseract] (https://code.google.com/p/python-tesseract) - A wrapper class for [Google Tesseract OCR](https://code.google.com/p/tesseract-ocr/).
+* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for Google Tesseract OCR. 
+* [pyocr](https://github.com/jflesch/pyocr) - A wrapper for Tesseract and Cuneiform.
 
 ## Audio
 
