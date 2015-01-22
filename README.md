@@ -1082,6 +1082,7 @@ Where to discover new Python libraries.
 
 ## Websites
 
+* [Awesome Remote Job](https://github.com/lukasz-madon/awesome-remote-job) - A curated list of awesome remote jobs. A lot of them is looking for Python hackers.
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
