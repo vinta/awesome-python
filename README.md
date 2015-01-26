@@ -704,6 +704,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Nikola](http://www.getnikola.com/) - A static website and blog generator.
 * [Tags](http://tags.brace.io/) - The simplest static site generator.
 * [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
+* [MkDocs](http://www.mkdocs.org/) - MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. 
 
 ## Processes and Threads
 
