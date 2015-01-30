@@ -514,6 +514,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
 * [Chameleon](https://chameleon.readthedocs.org/) - An HTML/XML template engine. Modeled after ZPT, optimized for speed.
 * [Spitfire](https://code.google.com/p/spitfire/) - A very fast Python template compiler.
+* [Secretary](https://github.com/christopher-ramirez/secretary) - Want to use Jinja2 to create LibreOffice documents? Secretary allows you to do it.
 
 ## Queue
 
