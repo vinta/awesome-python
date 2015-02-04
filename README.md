@@ -759,6 +759,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
 * [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
 * [zeroRPC](https://github.com/dotcloud/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+* [Pyro4](https://pypi.python.org/pypi/Pyro4/) - Distributed object middleware for Python (RPC).
 
 ## Cryptography
 
