@@ -314,7 +314,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for Optical Character Recognition.*
 
 * [python-tesseract] (https://code.google.com/p/python-tesseract) - A wrapper class for [Google Tesseract OCR](https://code.google.com/p/tesseract-ocr/).
-* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for Google Tesseract OCR. 
+* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for Google Tesseract OCR.
 * [pyocr](https://github.com/jflesch/pyocr) - A wrapper for Tesseract and Cuneiform.
 
 ## Audio
@@ -818,6 +818,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
+	* [lettuce](http://lettuce.it/index.html) - BDD style testing. Inspired by [Cucumber](https://cukes.info/).
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
@@ -986,7 +987,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [fig](http://www.fig.sh/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 * [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
 * [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
- 
+
 ## Job Scheduler
 
 *Libraries for scheduling jobs.*
