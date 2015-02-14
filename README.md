@@ -314,7 +314,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for Optical Character Recognition.*
 
 * [python-tesseract] (https://code.google.com/p/python-tesseract) - A wrapper class for [Google Tesseract OCR](https://code.google.com/p/tesseract-ocr/).
-* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for Google Tesseract OCR. 
+* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for Google Tesseract OCR.
 * [pyocr](https://github.com/jflesch/pyocr) - A wrapper for Tesseract and Cuneiform.
 
 ## Audio
@@ -862,6 +862,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
+* [trepan](https://github.com/rocky/python2-trepan/wiki/Overview-and-Features) - A GDB-like Python Debugger
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
@@ -986,7 +987,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [fig](http://www.fig.sh/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 * [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
 * [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
- 
+
 ## Job Scheduler
 
 *Libraries for scheduling jobs.*
