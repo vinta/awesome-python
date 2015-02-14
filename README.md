@@ -669,6 +669,7 @@ http://sixpack.seatgeek.com
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
+* [trepan](https://github.com/rocky/python2-trepan/wiki/Overview-and-Features) - A GDB-like Python Debugger
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
