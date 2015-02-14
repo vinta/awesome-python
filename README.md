@@ -343,7 +343,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [shorten.tv](http://www.shorten.tv/) - Video summarization.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
-* [SimpleCV](http://simplecv.org/) - is an open source framework for building computer vision applications
 
 ## Geolocation
 
