@@ -149,6 +149,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [IPython](https://github.com/ipython/ipython) - A rich toolkit to help you make the most out of using Python interactively.
 * [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter.
 * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
+* [ptpython](https://github.com/jonathanslenders/ptpython) - advanced Python REPL built on top of the prompt_toolkit library
 
 ## Files
 
