@@ -987,6 +987,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [fig](http://www.fig.sh/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 * [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
 * [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
+* [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
  
 ## Job Scheduler
 
