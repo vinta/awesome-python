@@ -427,6 +427,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
+    * [awesome-pyramid](https://github.com/ITCase/awesome-pyramid)
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that starts as a microframework and scales up to a fullstack solution.
