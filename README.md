@@ -1026,6 +1026,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Python programming on Microsoft Windows.*
 
+* [PyWin32] (http://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows(32/64-bit) binaries for Python extension packages
 * [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
 * [spyder](https://code.google.com/p/spyderlib/) - IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda).
