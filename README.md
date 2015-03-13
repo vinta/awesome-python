@@ -287,6 +287,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for downloading.*
 
+* [wget](https://pypi.python.org/pypi/wget) - Pure Python Download Utility based on the wget command line tool
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
 * [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
