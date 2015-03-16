@@ -148,8 +148,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [IPython](https://github.com/ipython/ipython) - A rich toolkit to help you make the most out of using Python interactively.
 * [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter.
-* [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
-* [ptpython](https://github.com/jonathanslenders/ptpython) - advanced Python REPL built on top of the prompt_toolkit library
+* [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
 
 ## Files
 
@@ -278,6 +277,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
     * [pyCLI](https://pythonhosted.org/pyCLI/) - Command-line applications supporting standard command line parsing, logging, unit and functional testing.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
+    * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 * Productivity Tools
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates). E.g. Python package projects, jQuery plugin projects.
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
@@ -1028,9 +1028,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Python programming on Microsoft Windows.*
 
-* [PyWin32] (http://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
-* [PythonNet] (https://github.com/pythonnet/pythonnet) - Python Intergration with the .NET Common Language Runtime (CLR) 
-* [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows(32/64-bit) binaries for Python extension packages
+* [PyWin32](http://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
+* [PythonNet](https://github.com/pythonnet/pythonnet) - Python Intergration with the .NET Common Language Runtime (CLR).
+* [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows binaries for Python extension packages.
 * [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
 * [spyder](https://code.google.com/p/spyderlib/) - IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda).
 
