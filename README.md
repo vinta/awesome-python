@@ -144,7 +144,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Interactive Interpreter
 
-*Interactive Python interpreters.*
+*Interactive Python interpreters (REPL).*
 
 * [IPython](https://github.com/ipython/ipython) - A rich toolkit to help you make the most out of using Python interactively.
 * [bpython](http://bpython-interpreter.org) – A fancy interface to the Python interpreter.
