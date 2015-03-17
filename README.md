@@ -591,7 +591,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Internationalization
 
-*Libraries for woking with i18n.*
+*Libraries for working with i18n.*
 
 * [Babel](http://babel.pocoo.org/) - An internationalization library for Python.
 * [Korean](https://korean.readthedocs.org/) - A library for [Korean](http://en.wikipedia.org/wiki/Korean_language) morphology.
@@ -712,7 +712,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Processes and Threads
 
-*Libraries for woking with processes or threads*
+*Libraries for working with processes or threads*
 
 * [multiprocessing](https://docs.python.org/2/library/multiprocessing.html) - (Python standard library) Process-based "threading" interface.
 * [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
@@ -737,7 +737,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## WebSocket
 
-*Libraries for woking with WebSocket.*
+*Libraries for working with WebSocket.*
 
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
