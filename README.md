@@ -571,6 +571,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [django-viewlet](https://github.com/5monkeys/django-viewlet) - Render template parts with extended cache control.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
+* [django-memoize](https://github.com/tvavrys/django-memoize) - An implementation
+of [memoization](http://en.wikipedia.org/wiki/Memoization) technique
+for Django.
 
 ## Email
 
