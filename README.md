@@ -119,6 +119,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Warehouse](https://warehouse.python.org/)
 * [devpi](http://doc.devpi.net/) - PyPI server and packaging/testing/release tool.
 * [localshop](https://github.com/mvantellingen/localshop) - PyPI server which mirrors official packages on-demand, and also supports local (private) package uploads.
+* [pypiserver](https://github.com/pypiserver/pypiserver) - A minimal PyPI server with HTTP Basic authentication.
 
 ## Distribution
 
