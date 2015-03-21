@@ -846,6 +846,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+* Property Based Testing
+    * [Hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is a library for property based testing in Python.
+    * [Props](https://github.com/zeckalpha/props) - Property-based testing for Python à la QuickCheck.
+    * [pytest-quickcheck](https://pypi.python.org/pypi/pytest-quickcheck) - Pytest plugin to generate random data inspired by QuickCheck.
 
 ## Code Analysis and Linter
 
