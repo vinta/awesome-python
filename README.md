@@ -908,6 +908,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
+* [HoloViews](https://ioam.github.io/holoviews/) - General data structures for easy visualization and analysis.
 * [plotly](https://plot.ly/python) - Collaborative web plotting for Python and matplotlib.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [d3py](https://github.com/mikedewar/d3py) - A plottling library for Python, based on [D3.js](http://d3js.org/).
