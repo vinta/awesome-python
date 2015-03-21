@@ -284,6 +284,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
     * [caniusepython3](https://github.com/brettcannon/caniusepython3) - Determine what projects are blocking you from porting to Python 3.
+    * [initpy](http://initpy.readthedocs.org/en/latest/) - A CLI utility that creates Python projects with easy way.
 
 ## Downloader
 
