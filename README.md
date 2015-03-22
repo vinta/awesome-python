@@ -390,6 +390,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [django-mssql](http://django-mssql.readthedocs.org/en/latest/) - Django database backend for Microsoft SQL Server.
+    * [django-pymssql](https://github.com/aaugustin/django-pymssql) - Small wrapper around django-mssql for work on non-Windows systems.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
