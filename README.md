@@ -1033,7 +1033,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows binaries for Python extension packages.
 * [spyder](https://code.google.com/p/spyderlib/) - IDE for the Python language with advanced editing, interactive testing, debugging and introspection features (also comes with Anaconda, WinPython).
 * [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
-* [WinPython](https://winpython.github.io/) - Portable python development environment
+* [WinPython](https://winpython.github.io/) - Portable development environment for Windows 7/8
 
 ## Network Virtualization and SDN
 
