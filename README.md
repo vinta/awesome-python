@@ -678,7 +678,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for fighting spam.*
 
-* [Stopspam](https://github.com/phalt/stopspam) - Intelligent spam detection for Python.
 * [django-simple-spam-blocker](https://github.com/moqada/django-simple-spam-blocker) - Simple spam blocker for Django.
 * [django-simple-captcha](https://github.com/mbi/django-simple-captcha) - A simple and highly customizable Django app to add captcha images to any Django form.
 
