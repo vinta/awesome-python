@@ -1059,6 +1059,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Six](https://pypi.python.org/pypi/six) - Python 2 and 3 compatibility utilities.
 * [Python-Future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
 * [Python-Modernize](https://github.com/mitsuhiko/python-modernize) - Modernizes Python code for eventual Python 3 migration.
+* [pies](https://github.com/timothycrosley/pies) - Python2 & 3 Compatibility layer with the philosophy that all code should be Python3 code.
 
 ## Miscellaneous
 
