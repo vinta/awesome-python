@@ -706,7 +706,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Cactus](http://github.com/koenbok/Cactus/) – Static site generator for designers.
 * [Hyde](https://hyde.github.com/) - Jinja2-based static web site generator.
 * [Nikola](http://www.getnikola.com/) - A static website and blog generator.
-* [Tags](http://tags.brace.io/) - The simplest static site generator.
 * [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
 
 ## Processes and Threads
