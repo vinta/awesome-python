@@ -13,6 +13,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
     - [Specific Formats Processing](#specific-formats-processing)
+    - [Data Manipulation](#data-manipulation)
     - [Natural Language Processing](#natural-language-processing)
     - [Documentation](#documentation)
     - [Configuration](#configuration)
@@ -230,6 +231,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
+
+##Data Manipulation
+*Libraries for Data Manipulation.*
+
+* [Butler](https://github.com/atmb4u/butler) - Manipulate(get/set) JSON, lists, dictionaries easily without exception salad.
 
 ## Natural Language Processing
 
@@ -666,7 +672,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 ## Data Validation
 
 *Libraries for validating data. Used for forms in many cases.*
-
+ 
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
 * [colander](http://docs.pylonsproject.org/projects/colander/) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
 * [schema](https://github.com/halst/schema) - A library for validating Python data structures.
