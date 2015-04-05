@@ -672,7 +672,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 ## Data Validation
 
 *Libraries for validating data. Used for forms in many cases.*
- 
+
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
 * [colander](http://docs.pylonsproject.org/projects/colander/) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
 * [schema](https://github.com/halst/schema) - A library for validating Python data structures.
