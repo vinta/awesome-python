@@ -697,6 +697,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
+* [redispapa](https://github.com/no13bus/redispapa) - A redis monitor developed with flask, angular, socket.io
 
 ## Static Site Generator
 
