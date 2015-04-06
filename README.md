@@ -898,7 +898,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
-* [blaze](http://blaze.pydata.org/docs/latest/index.html) - NumPy and Pandas interface to Big Data.
+* [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
 
 ## Data Visualization
 
