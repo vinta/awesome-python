@@ -990,6 +990,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
 * [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+* [FuckingAwesomeDeploy](https://github.com/nampnq/fuckingawesomedeploy) - Web interface for deployments.
 
 ## Job Scheduler
 
