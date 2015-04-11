@@ -100,6 +100,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
 * [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
+* [paver](https://github.com/paver/paver) - A Python-based software project scripting tool along the lines of Make or Rake.
 
 ## Package Management
 
@@ -819,6 +820,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
+    * [Lettuce](https://github.com/gabrielfalcao/lettuce) - Lettuce is a BDD tool for python, 100% inspired on cucumber.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
 * Web Testing
