@@ -857,21 +857,21 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [UISoup](https://pypi.python.org/pypi/UISoup/) - This library supports UI-related testing using Python on Windows and Mac OS. (Only Python x86 is supported)
     * [Winium.Desktop](https://github.com/2gis/Winium.Desktop/) - is Selenium Remote WebDriver implementation for automated testing of Windows application based on WinFroms and WPF platforms.
 * Mobile test automation
-* [appium](http://appium.io/) - is an open source test automation framework for use with native, hybrid and mobile web apps.
-It drives iOS and Android apps using the WebDriver protocol.
-* [robotframework-androidlibrary](https://github.com/lovelysystems/robotframework-androidlibrary) - Robot Framework Automation Library for Android
-* [robotframework-appiumlibrary](https://github.com/jollychang/robotframework-appiumlibrary) - is an appium testing library for RobotFramework
-* [robotframework-ioslibrary](https://github.com/lovelysystems/robotframework-ioslibrary) - Robot Framework Automation Library for iOS.
-* [uiautomator](https://github.com/xiaocong/uiautomator) - Python wrapper of Android uiautomator test tool.
-* [Winium.StoreApps](https://github.com/2gis/Winium.StoreApps/) - is Selenium Remote WebDriver implementation for automated testing of Windows Store apps, tested on emulators (currently only Windows Phone apps are supported).
-* Performance & stress & load
-* [Airspeed Velocity](https://github.com/spacetelescope/asv) - A simple Python benchmarking tool with web-based reporting
-* [funkload](https://pypi.python.org/pypi/funkload) - is a functional and load web tester, written in Python.
-* [Grinder](http://grinder.sourceforge.net/) - is a load testing framework that makes it easy to run a distributed test using many load injector machines.
-* [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
-* [Multi-Mechanize](http://testutils.org/multi-mechanize/) - is an open source framework for performance and load testing. It runs concurrent Python scripts to generate load (synthetic transactions) against a remote site or service
-* [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - A py.test fixture for benchmarking code.
-* [Yandex.Tank](https://github.com/yandex/yandex-tank) - Load and performance benchmark tool.
+    * [appium](http://appium.io/) - is an open source test automation framework for use with native, hybrid and mobile web apps.
+    It drives iOS and Android apps using the WebDriver protocol.
+    * [robotframework-androidlibrary](https://github.com/lovelysystems/robotframework-androidlibrary) - Robot Framework Automation Library for Android
+    * [robotframework-appiumlibrary](https://github.com/jollychang/robotframework-appiumlibrary) - is an appium testing library for RobotFramework
+    * [robotframework-ioslibrary](https://github.com/lovelysystems/robotframework-ioslibrary) - Robot Framework Automation Library for iOS.
+    * [uiautomator](https://github.com/xiaocong/uiautomator) - Python wrapper of Android uiautomator test tool.
+    * [Winium.StoreApps](https://github.com/2gis/Winium.StoreApps/) - is Selenium Remote WebDriver implementation for automated testing of Windows Store apps, tested on emulators (currently only Windows Phone apps are supported).
+    * Performance & stress & load
+    * [Airspeed Velocity](https://github.com/spacetelescope/asv) - A simple Python benchmarking tool with web-based reporting
+    * [funkload](https://pypi.python.org/pypi/funkload) - is a functional and load web tester, written in Python.
+    * [Grinder](http://grinder.sourceforge.net/) - is a load testing framework that makes it easy to run a distributed test using many load injector machines.
+    * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+    * [Multi-Mechanize](http://testutils.org/multi-mechanize/) - is an open source framework for performance and load testing. It runs concurrent Python scripts to generate load (synthetic transactions) against a remote site or service
+    * [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - A py.test fixture for benchmarking code.
+    * [Yandex.Tank](https://github.com/yandex/yandex-tank) - Load and performance benchmark tool.
 * Mock
     * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
