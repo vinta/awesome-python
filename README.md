@@ -595,6 +595,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Babel](http://babel.pocoo.org/) - An internationalization library for Python.
 * [Korean](https://korean.readthedocs.org/) - A library for [Korean](http://en.wikipedia.org/wiki/Korean_language) morphology.
+* [PyICU](http://pyicu.osafoundation.org/) - An extension wrapping IBM's [ICU](http://site.icu-project.org/) C++ API, a mature and widely used set of libraries providing Unicode and Globalization support for software applications.
 
 ## URL Manipulation
 
