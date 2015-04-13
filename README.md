@@ -1054,6 +1054,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](http://www.arduino.cc/).
 * [Pyro](http://pyrorobotics.com/) - Python Robotics.
+* [pywakeonlan](https://github.com/remcohaszing/pywakeonlan) - A small python module for wake on lan
 
 ## Compatibility
 
