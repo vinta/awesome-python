@@ -1108,6 +1108,7 @@ Where to discover new Python libraries.
 * [CoolGithubProjects](http://coolgithubprojects.com/) - Sharing cool github projects just got easier!
 * [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
+* [PyFormat](http://pyformat.info/) - Simple usage examples for Python string formatting
 
 ## Weekly
 
