@@ -1052,6 +1052,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](http://www.arduino.cc/).
 * [Pyro](http://pyrorobotics.com/) - Python Robotics.
+* [Pingo](https://github.com/garoa/pingo) - Generic API for controlling boards with programmable IO pins - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo etc. just like the Python DBAPI provides an uniform API for database programming in Python. http://pingo.io
 
 ## Compatibility
 
