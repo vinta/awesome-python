@@ -366,6 +366,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 * [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library.
+* [aiohttp](https://github.com/KeepSafe/aiohttp) - HTTP client/server for asyncio (Python 3.3+)
 * [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
 
 ## Database
