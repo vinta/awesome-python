@@ -243,6 +243,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
 * [genius](https://github.com/duanhongyi/genius) - A Chinese segment base on Conditional Random Field.
+* [PyDictionary](https://github.com/geekpradd/PyDictionary) - A Dictionary Module for Python to get Meanings, Translations, Synonyms and Antonyms of Words
 
 ## Documentation
 
@@ -290,6 +291,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for downloading.*
 
+* [wget](https://pypi.python.org/pypi/wget) - Pure Python Download Utility based on the wget command line tool
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
 * [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
