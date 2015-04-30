@@ -243,6 +243,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [loso](https://github.com/victorlin/loso) - Another Chinese segmentation library.
 * [genius](https://github.com/duanhongyi/genius) - A Chinese segment base on Conditional Random Field.
+* [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 
 ## Documentation
 
