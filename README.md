@@ -425,7 +425,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Database Management
 
-*Libraries for migrating schemas or otherwise managing databases*
+*Tools or libraries for migrating schemas or otherwise managing databases.*
 
 * [yoyo-migrations](https://pypi.python.org/pypi/yoyo-migrations) - SQL database schema migration tool.
 
