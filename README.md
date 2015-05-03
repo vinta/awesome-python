@@ -24,9 +24,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Video](#video)
     - [Geolocation](#geolocation)
     - [HTTP](#http)
-    - [Database](#database)
+    - [Databases](#databases)
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
+    - [Database Management](#database-management)
     - [Web Frameworks](#web-frameworks)
     - [Permissions](#permissions)
     - [CMS](#cms)
@@ -371,7 +372,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library.
 * [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
 
-## Database
+## Databases
 
 *Databases implemented in Python.*
 
@@ -421,6 +422,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [flywheel](https://github.com/mathcamp/flywheel) - Object mapper for Amazon DynamoDB.
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
+
+## Database Management
+
+*Libraries for migrating schemas or otherwise managing databases*
+
+* [yoyo-migrations](https://pypi.python.org/pypi/yoyo-migrations) - SQL database schema migration tool.
 
 ## Web Frameworks
 
