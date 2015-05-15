@@ -87,7 +87,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
----
+- - -
 
 ## Environment Management
 
