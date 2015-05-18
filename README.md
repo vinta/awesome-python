@@ -680,6 +680,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [schema](https://github.com/halst/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [kmatch](https://github.com/ambitioninc/kmatch) - A language for matching/validating/filtering Python dictionaries.
+* [Validata](https://github.com/17zuoye/validata) - A data validator library used to detect invalid data with error informations, based on MongoEngine.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
 
 ## Anti-spam
