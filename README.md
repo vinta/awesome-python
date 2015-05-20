@@ -1077,6 +1077,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [itsdangerous](https://github.com/mitsuhiko/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
+* [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
 
 ## Algorithms and Design Patterns
 
