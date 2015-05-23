@@ -1137,6 +1137,7 @@ Where to discover new Python libraries.
 List of lists.
 
 * Python
+    * [list-of-python-api-wrappers](https://github.com/realpython/list-of-python-api-wrappers)
     * [pycrumbs](https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md)
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
