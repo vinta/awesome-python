@@ -289,6 +289,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
     * [caniusepython3](https://github.com/brettcannon/caniusepython3) - Determine what projects are blocking you from porting to Python 3.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
+    * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
 
 ## Downloader
 
