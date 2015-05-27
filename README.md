@@ -80,6 +80,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Miscellaneous](#miscellaneous)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
+    - [Security](#security)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -1104,6 +1105,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
     * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
+
+## Security
+
+*Security frameworks.*
+
+* [Capstone disassembly framework](http://www.capstone-engine.org) - Binary disassembly framework (for *X86*, *X86_64*, *Arm*, *Arm64*, *Mips*, *PowerPC*, *Sparc*, *SystemZ* & *XCore*) with **Python** binding. Capstone's github is at [https://github.com/aquynh/capstone](https://github.com/aquynh/capstone)
+
 
 # Resources
 
