@@ -95,12 +95,16 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [p](https://github.com/qw3rtman/p) - Dead Simple Interactive Python Version Management.
 * [pyenv](https://github.com/yyuu/pyenv) - Simple Python version management.
+* [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
+* [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python
+* [PyVirtualDisplay](https://github.com/ponty/PyVirtualDisplay) - is a Python wrapper for Xvfb, Xephyr and Xvnc
+* [Tapper](https://github.com/tapper/Tapper) - All-embracing test infrastructure (TAP, automation, virtualization, scheduler)
+* [tox](https://testrun.org/tox/latest/) - is a generic virtualenv management and test command line tool
+* [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
 * [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv.
 * [virtualenv-api](https://github.com/sjkingo/virtualenv-api) - An API for virtualenv and pip.
-* [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
-* [Vex](https://github.com/sashahart/vex) - Run a command in the named virtualenv.
-* [PyRun](https://www.egenix.com/products/python/PyRun/) - A one-file, no-installation-needed version of Python.
+
 
 ## Package Management
 
@@ -142,6 +146,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool with the special focus of distributions and packages for embedded Linux.
 * [fabricate](https://code.google.com/p/fabricate/) - A build tool that finds dependencies automatically for any language.
+
+## Continuous Integration
+
+* [buildbot](https://pypi.python.org/pypi/buildbot/) - is a system to automate the compile/test cycle required by most software projects to validate code changes.
 
 ## Interactive Interpreter
 
@@ -375,6 +383,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 * [httplib2](https://github.com/jcgregorio/httplib2) - Comprehensive HTTP client library.
 * [treq](https://github.com/dreid/treq) - Python requests like API built on top of Twisted's HTTP client.
+* 
 
 ## Database
 
@@ -825,35 +834,84 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * Testing Frameworks
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
+    * [unittest2](https://pypi.python.org/pypi/unittest2) - is a backport of the new features added to the unittest testing framework in Python 2.7 and onwards.
     * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
+    * [slash](http://slash.readthedocs.org/en/master/) - is a testing framework written in Python, focuses on building in-house testing solutions for large projects.
 * Web Testing
+    * [browsermob-proxy-py](https://github.com/AutomatedTester/browsermob-proxy-py) - Python client for the BrowserMob Proxy 2.0 REST API.
+    * [elementium](https://github.com/actmd/elementium) - jQuery-style syntactic sugar for highly reliable automated browser testing in Python
+    * [holmium.core](https://github.com/alisaifee/holmium.core) - Page objects & Utilities for writing selenium test cases.
+    * [mechanize](https://pypi.python.org/pypi/mechanize/) - Stateful programmatic web browsing in Python.
+    * [robotframework-selenium2library](https://github.com/rtomac/robotframework-selenium2library) - Web testing library for Robot Framework.
+    * [robotframework-anywherelibrary](https://github.com/luisxiaomai/robotframework-anywherelibrary) - is a cross platform(desktop browser,android,ios) testing library for Robot Framework that leverages the [Selenium 2(WebDriver)] libraries internally to control a web browser and [appium] as mobile test automation framework for use with native and hybrid app.
+    * [robotframework-pageobjects](https://github.com/ncbi/robotframework-pageobjects) - Implementation of the Page Object pattern with Robot Framework and selenium.
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
-    * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
+    * [SST - Web Test Framework](http://testutils.org/sst) - is a web test framework that uses Python to generate functional browser-based tests.
+    * [wtframework](https://github.com/wiredrive/wtframework) - Framework for configurable Web Tests in Python.
+    * [webium](https://github.com/wgnet/webium) - A Page Object pattern implementation library for Python
+* Windows UI test automation
+    * [automa](http://www.getautoma.com/) - is a tool for Windows that lets you automate repetitive tasks in the graphical user interface (GUI) of your computer.
+    * [autopy](https://github.com/msanders/autopy) - A simple, cross-platform GUI automation toolkit for Python.
+    * [PyAutoGUI](https://pypi.python.org/pypi/PyAutoGUI) - A cross-platform module for GUI automation for human beings. Control the keyboard and mouse from a Python script.
+    * [pyatom](https://github.com/pyatom/pyatom) - is a library to fully enable GUI testing of Mac applications via the Apple Accessibility API. 
+    * [robotframework-autoitlibrary](https://code.google.com/p/robotframework-autoitlibrary/) - A Windows GUI testing library for Robot Framework
+    * [sikuli](http://www.sikuli.org/) - Sikuli automates anything you see on the screen. It uses image recognition to identify and control GUI components. It is useful when there is no easy access to a GUI's internal or source code.
+    * [swapy](https://code.google.com/p/swapy/) - is a tool for GUI Automation for Windows. Finally you will get native python code for pywinauto module.
+    * [UISoup](https://pypi.python.org/pypi/UISoup/) - This library supports UI-related testing using Python on Windows and Mac OS. (Only Python x86 is supported)
+    * [Winium.Desktop](https://github.com/2gis/Winium.Desktop/) - is Selenium Remote WebDriver implementation for automated testing of Windows application based on WinFroms and WPF platforms.
+* Mobile test automation
+    * [appium](http://appium.io/) - is an open source test automation framework for use with native, hybrid and mobile web apps.
+    It drives iOS and Android apps using the WebDriver protocol.
+    * [robotframework-androidlibrary](https://github.com/lovelysystems/robotframework-androidlibrary) - Robot Framework Automation Library for Android
+    * [robotframework-appiumlibrary](https://github.com/jollychang/robotframework-appiumlibrary) - is an appium testing library for RobotFramework
+    * [robotframework-ioslibrary](https://github.com/lovelysystems/robotframework-ioslibrary) - Robot Framework Automation Library for iOS.
+    * [uiautomator](https://github.com/xiaocong/uiautomator) - Python wrapper of Android uiautomator test tool.
+    * [Winium.StoreApps](https://github.com/2gis/Winium.StoreApps/) - is Selenium Remote WebDriver implementation for automated testing of Windows Store apps, tested on emulators (currently only Windows Phone apps are supported).
+    * Performance & stress & load
+    * [Airspeed Velocity](https://github.com/spacetelescope/asv) - A simple Python benchmarking tool with web-based reporting
+    * [funkload](https://pypi.python.org/pypi/funkload) - is a functional and load web tester, written in Python.
+    * [Grinder](http://grinder.sourceforge.net/) - is a load testing framework that makes it easy to run a distributed test using many load injector machines.
+    * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+    * [Multi-Mechanize](http://testutils.org/multi-mechanize/) - is an open source framework for performance and load testing. It runs concurrent Python scripts to generate load (synthetic transactions) against a remote site or service
+    * [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - A py.test fixture for benchmarking code.
+    * [Yandex.Tank](https://github.com/yandex/yandex-tank) - Load and performance benchmark tool.
 * Mock
-    * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
-    * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
     * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
     * [httpretty](http://falcao.it/HTTPretty/) - HTTP request mock tool for Python.
     * [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+.
+    * [Ludibrio](http://github.com/nsigustavo/ludibrio/) - Platform for test doubles in Python (mocks, stubs, Spy, and dummies)
+    * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
+    * [pretenders](https://github.com/pretenders/pretenders) - fake servers for testing.
+    * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
+* Assertions
+    * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on pyhamcrest.
+    * [pyhamcrest](https://github.com/hamcrest/PyHamcrest) - Hamcrest matchers for Python.
+    * [sure](https://github.com/gabrielfalcao/sure) - is a testing library for python with powerful and flexible assertions.
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
+    * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy) - An easy to use forged data generator for Python
+    * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+    * [hypothesis](https://github.com/DRMacIver/hypothesis) - Library for property based testing in Python, based on the Haskell library Quickcheck. 
     * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
     * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
-    * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy) - An easy to use forged data generator for Python. It's a port of [forgery](http://rubygems.org/gems/forgery).
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
-    * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+    * [robotframework-faker](https://github.com/guykisel/robotframework-faker) - Robot Framework wrapper for faker.
+* Test Reports
+    * [allure pytest](https://github.com/allure-framework/allure-python) - Allure adapter for PyTest framework.
+    * [HTMLTestRunner](http://tungwaiyip.info/software/HTMLTestRunner.html) - is an extension to the Python standard library's unittest module, it generates easy to use HTML test reports.
+    * [unittest-xml-reporting](https://github.com/xmlrunner/unittest-xml-reporting) - unittest-based test runner with Ant/JUnit like XML reporting.
 
 ## Code Analysis and Linter
 
