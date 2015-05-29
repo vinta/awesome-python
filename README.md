@@ -398,6 +398,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [apsw](http://rogerbinns.github.io/apsw/) - APSW provides an SQLite 3 wrapper that provides the thinnest layer over the SQLite database library possible. Everything you can do from the SQLite C API, you can do from Python.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
@@ -764,6 +765,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
 * [meinheld](http://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
 * [bjoern](http://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
+* [uwsgi](https://uwsgi-docs.readthedocs.org/en/latest/) - fast and very configurable WSGI web server, written in C.
 
 ## RPC Servers
 
