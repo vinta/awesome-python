@@ -849,9 +849,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Fake Data
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
-    * [mixer](https://mixer.readthedocs.org) - Generating fake data and creating random fixtures for testing in Django ORM, SQLAlchemy, Peewee, MongoEngine, Pony ORM and etc.
-    * [model_mommy](https://model-mommy.readthedocs.org/) - Creating random fixtures for testing in Django.
-    * [ForgeryPy](https://pypi.python.org/pypi/ForgeryPy) - An easy to use forged data generator for Python. It's a port of [forgery](http://rubygems.org/gems/forgery).
+    * [factory_boy](https://github.com/rbarrois/factory_boy) - A test fixtures replacement for Python.
+    * [mixer](https://mixer.readthedocs.org) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
+    * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
