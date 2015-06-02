@@ -1,3 +1,6 @@
+
+
+----------
 # Awesome Python
 
 A curated list of awesome Python frameworks, libraries and software. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
@@ -917,16 +920,17 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for visualizing data. See: [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
-* [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [bokeh](https://github.com/ContinuumIO/bokeh) - Interactive Web Plotting for Python.
-* [plotly](https://plot.ly/python) - Collaborative web plotting for Python and matplotlib.
-* [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [d3py](https://github.com/mikedewar/d3py) - A plottling library for Python, based on [D3.js](http://d3js.org/).
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
 * [Kartograph.py](https://github.com/kartograph/kartograph.py) - Rendering beautiful SVG maps in Python.
+* [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [plotly](https://plot.ly/python) - Collaborative web plotting for Python and matplotlib.
 * [pygal](http://pygal.org/) - A Python SVG Charts Creator.
 * [pygraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+* [Seaborn](http://stanford.edu/~mwaskom/software/seaborn/) - Statistical data visualization based on matplotlib.
+* [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
 
 ## Computer Vision
