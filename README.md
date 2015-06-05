@@ -1090,6 +1090,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [algorithms](https://github.com/nryoung/algorithms) - module of algorithms for Python.
 
+## IDEs
+
+*List of popular IDEs.*
+
+* [PyCharm](https://www.jetbrains.com/pycharm/) - The most popular IDE for Python. Works on Windows, Mac OS X and Linux.
+
 ## Editor Plugins
 
 *Plugins for editors and IDEs.*
