@@ -4,5 +4,6 @@ site_description: A curated list of awesome Python frameworks, libraries and sof
 site_author: Vinta Chen
 repo_url: https://github.com/vinta/awesome-python
 theme: flatly
+google_analytics: ['UA-510626-7', 'auto']
 pages:
   - "Life is short, you need Python.": "index.md"
