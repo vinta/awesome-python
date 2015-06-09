@@ -80,6 +80,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Miscellaneous](#miscellaneous)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
+    - [IDEs](#ides)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -1107,6 +1108,16 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
     * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
+
+## IDEs
+
+*Popular Python IDEs*
+
+* [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE based on the IntelliJ platform by JetBrains. Has free community edition available.
+* [Komodo](http://komodoide.com/) - Commercial polyglot IDE with support for Python. 
+* [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support. 
+* [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+* [Wingware](http://wingide.com/) - Commercial IDE for Python.
 
 # Resources
 
