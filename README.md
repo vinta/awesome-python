@@ -822,6 +822,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [logbook](http://pythonhosted.org/Logbook/) - Logging replacement for Python.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
 * [Raven](http://raven.readthedocs.org/) - The Python client for Sentry.
+* [Eliot](https://eliot.readthedocs.org/) - Logging for complex & distributed systems.
 
 ## Testing
 
