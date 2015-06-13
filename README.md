@@ -1120,6 +1120,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support. 
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
 * [Wingware](http://wingide.com/) - Commercial IDE for Python.
+* [Visual Studio Community 2013](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx) - Free for individual developer or open source projects.
 
 # Resources
 
