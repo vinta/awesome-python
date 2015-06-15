@@ -625,6 +625,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for working with HTML and XML.*
 
 * [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
+* [Soupy](http://soupy.readthedocs.org/en/latest/) - is a wrapper around BeautifulSoup that makes it easier to search through HTML and XML documents.
 * [lxml](http://lxml.de/) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 * [html5lib](https://github.com/html5lib/html5lib-python) - A standards-compliant library for parsing and serializing HTML documents and fragments.
 * [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
