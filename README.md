@@ -719,7 +719,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pelican](http://blog.getpelican.com/) - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.
 * [Cactus](http://github.com/koenbok/Cactus/) – Static site generator for designers.
 * [Hyde](https://hyde.github.com/) - Jinja2-based static web site generator.
-* [Nikola](http://www.getnikola.com/) - A static website and blog generator.
+* [Nikola](https://getnikola.com/) - Uses reStructuredText, Markdown or IPython (Jupyter) Notebooks for content and Mako or Jinja2 for themes. Does incremental rebuilds, has DISQUS support and batteries included. MIT licensed.
 * [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
 
 ## Processes and Threads
