@@ -880,7 +880,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
 * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
 * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
-* [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI.
+* [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI, capable of remote debugging based on rpdb2.
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
 * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 * [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
