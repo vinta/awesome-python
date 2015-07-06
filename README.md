@@ -500,6 +500,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
 * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
 * [savory-pie](https://github.com/RueLaLa/savory-pie/) - REST API building library (django, and others)
+* [ripozo](https://github.com/vertical-knowledge/ripozo) - A tool for quickly creating REST/HATEOAS/Hypermedia APIs with extensions for Flask and Django.
 
 ## Authentication
 
