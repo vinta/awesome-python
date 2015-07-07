@@ -293,7 +293,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
-	* [bashplotlib](https://github.com/glamp/bashplotlib)- Making basic plots in the terminal. It's a quick way to visualize data without GUI
+    * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal. It's a quick way to visualize data without GUI.
 
 ## Downloader
 
@@ -1116,13 +1116,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## IDEs
 
-*Popular Python IDEs*
+*Popular Python IDEs.*
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE based on the IntelliJ platform by JetBrains. Has free community edition available.
-* [Komodo](http://komodoide.com/) - Commercial polyglot IDE with support for Python. 
-* [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support. 
+* [Komodo](http://komodoide.com/) - Commercial polyglot IDE with support for Python.
+* [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
-* [Wingware](http://wingide.com/) - Commercial IDE for Python.
+* [WingIDE](http://wingide.com/) - Commercial IDE for Python.
 
 # Resources
 
