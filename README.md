@@ -293,6 +293,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
+	* [bashplotlib](https://github.com/glamp/bashplotlib)- Making basic plots in the terminal. It's a quick way to visualize data without GUI
 
 ## Downloader
 
