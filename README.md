@@ -451,7 +451,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, formerly known as Zope 3.
 * [guava](https://github.com/flatpeach/guava) - A lightweight and high performance web framework for Python written in C.
-* [Muffin](https://github.com/klen/muffin) - A web framework built on top of the asyncio module in the Python 3.4+ standard libra$
+* [Muffin](https://github.com/klen/muffin) - A web framework built on top of the asyncio module in the Python 3.4+ standard library.
 * [Falcon](http://falconframework.org/) - A minimalist web framework designed with web application speed as a top priority.
 
 ## Permissions
