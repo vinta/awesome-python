@@ -423,6 +423,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
+    * [SQLObject](http://sqlobject.org/) - ORM which is similar to Ruby-on-Rails' ActiveRecord pattern.
+    * [Storm](https://storm.canonical.com/) - ORM designed by the company behind Ubuntu.   
 * NoSQL Databases
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
@@ -449,6 +451,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, formerly known as Zope 3.
 * [guava](https://github.com/flatpeach/guava) - A lightweight and high performance web framework for Python written in C.
+* [Muffin](https://github.com/klen/muffin) - A web framework built on top of the asyncio module in the Python 3.4+ standard libra$
+* [Falcon](http://falconframework.org/) - A minimalist web framework designed with web application speed as a top priority.
 
 ## Permissions
 
