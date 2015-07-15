@@ -1132,27 +1132,28 @@ Where to discover new Python libraries.
 ## Websites
 
 * [r/Python](http://www.reddit.com/r/python) - News about Python.
-* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
-* [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
-* [Python Hackers](http://pythonhackers.com/open-source/) - List of top 400 projects in GitHub.
 * [CoolGithubProjects](http://coolgithubprojects.com/) - Sharing cool github projects just got easier!
-* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
 * [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
+* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
+* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
+* [Python Hackers](http://pythonhackers.com/open-source/) - List of top 400 projects in GitHub.
+* [Python ZEEF](https://python.zeef.com/alan.richmond)
+* [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
 
 ## Weekly
 
+* [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
-* [Import Python Newsletter](http://importpython.com/newsletter/)
 
 ## Twitter
 
-* [@pypi](https://twitter.com/pypi)
-* [@planetpython](https://twitter.com/planetpython)
 * [@getpy](https://twitter.com/getpy)
+* [@planetpython](https://twitter.com/planetpython)
 * [@pycoders](https://twitter.com/pycoders)
-* [@PythonWeekly](https://twitter.com/PythonWeekly)
+* [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
+* [@PythonWeekly](https://twitter.com/PythonWeekly)
 
 # Other Awesome Lists
 
@@ -1160,10 +1161,9 @@ List of lists.
 
 * Python
     * [pycrumbs](https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md)
-    * [pythonidae](https://github.com/svaksha/pythonidae)
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
-    * [Python ZEEF](https://python.zeef.com/alan.richmond)
+    * [pythonidae](https://github.com/svaksha/pythonidae)
 * Monty
     * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
     * [lists](https://github.com/jnv/lists)
