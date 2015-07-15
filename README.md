@@ -1163,7 +1163,7 @@ List of lists.
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
-    * [easy-python](http://easy-python.readthedocs.org/)
+    * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * Monty
     * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
     * [lists](https://github.com/jnv/lists)
