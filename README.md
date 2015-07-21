@@ -652,11 +652,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [Grab](http://grablib.org/) - Site scraping framework.
+* [wikipedia-crawler](https://github.com/hardikvasa/wikipedia-crawler) - Crawl all the wikipedia articles and download the pages in a systematic way
 
 ## Web Content Extracting
 
 *Libraries for extracting web contents.*
 
+* [webb](https://github.com/hardikvasa/webb) - Python: An all-in-one Web Crawler and Web Parser library
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
 * [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
 * [python-goose](https://github.com/grangier/python-goose) - HTML Content/Article Extractor.
@@ -668,6 +670,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [sanitize](https://github.com/Alir3z4/sanitize) - Bringing sanity to world of messed-up data.
+* [google-images-download](https://github.com/hardikvasa/google-images-download) - Downloading hundreds of images from google by giving the keywords.
 
 ## Forms
 
