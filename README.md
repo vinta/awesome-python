@@ -230,6 +230,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Markdown
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
+* JSON
+    * [ObjectPath](http://adriank.github.io/ObjectPath) -  The agile query language for JSON documents with an interactive shell.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * CSV
