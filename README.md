@@ -387,6 +387,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [ZODB](http://www.zodb.org/) - A native object database for Python. A key-value and object graph database.
 * [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python.
 * [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
+* [Buzhug](http://buzhug.sourceforge.net/) - Buzhug is a fast, pure-Python database engine.
 
 ## Database Drivers
 
