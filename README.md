@@ -1097,6 +1097,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [algorithms](https://github.com/nryoung/algorithms) - A module of algorithms for Python.
 
+## IDEs
+
+*List of popular IDEs.*
+
+* [PyCharm](https://www.jetbrains.com/pycharm/) - The most popular IDE for Python. Works on Windows, Mac OS X and Linux.
+
 ## Editor Plugins
 
 *Plugins for editors and IDEs.*
@@ -1114,6 +1120,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
     * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
     * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
+* Eclipse
+    * [PyDev](http://pydev.org/) - Third party plugin for Eclipse, which may be used in Python, Jython and IronPython development.
 
 ## IDEs
 
