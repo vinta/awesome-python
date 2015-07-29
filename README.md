@@ -991,6 +991,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [django-wordpress](https://github.com/sunlightlabs/django-wordpress/) - WordPress models and views for Django.
+* [slacker](https://github.com/os/slacker) - Full-featured interface for the Slack API.
 
 ## DevOps Tools
 
