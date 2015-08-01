@@ -836,6 +836,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
     * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
+    * [hitch](http://hitchtest.com/) - A high level integration testing framework for service based applications.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
