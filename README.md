@@ -481,6 +481,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [django-shop](https://www.django-cms.org/) - A Django based shop system.
+* [quokka-cart](https://github.com/quokkaproject/quokka-cart) - A shopping cart module for Flask Quokka CMS
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 * [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
