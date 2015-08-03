@@ -1017,6 +1017,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 
+## PaaS and SaaS utilities
+
+*Libraries and tools to help the use of Platform as a Service*
+
+* [ShiftPy](https://github.com/rochacbruno/shiftpy) - Helpers for deployment in RedHat Openshift Cloud
+
 ## Job Scheduler
 
 *Libraries for scheduling jobs.*
