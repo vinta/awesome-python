@@ -648,6 +648,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Scrapy](http://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
+* [ScrapyZ](https://github.com/ssteuteville/scrapyz) - "Scrape Easy" - an extension of the Scrapy framework.
 * [feedparser](http://pythonhosted.org/feedparser/) - Universal feed parser.
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
