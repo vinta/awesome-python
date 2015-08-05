@@ -922,6 +922,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
+* [igraph](http://igraph.org/python/) - A collection of network analysis tools.
 
 ## Data Visualization
 
