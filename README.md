@@ -1133,14 +1133,14 @@ Where to discover new Python libraries.
 
 ## Websites
 
-* [r/Python](http://www.reddit.com/r/python) - News about Python.
-* [CoolGithubProjects](http://coolgithubprojects.com/) - Sharing cool github projects just got easier!
-* [Django Packages](https://www.djangopackages.com/) - A directory of reusable apps, sites, tools, and more for Django projects.
-* [Full Stack Python](http://www.fullstackpython.com/) - Plain English explanations for every layer of the Python web application stack.
-* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/) - Too many popular Python packages don't support Python 3.
-* [Python Hackers](http://pythonhackers.com/open-source/) - List of top 400 projects in GitHub.
+* [r/Python](http://www.reddit.com/r/python)
+* [CoolGithubProjects](http://coolgithubprojects.com/)
+* [Django Packages](https://www.djangopackages.com/)
+* [Full Stack Python](http://www.fullstackpython.com/)
+* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
+* [Python Hackers](http://pythonhackers.com/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
-* [Trending Python repositories on GitHub today](https://github.com/trending?l=python) - Good place to find new Python libraries.
+* [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 
 ## Weekly
 
@@ -1150,6 +1150,7 @@ Where to discover new Python libraries.
 
 ## Twitter
 
+* [@codetengu](https://twitter.com/codetengu)
 * [@getpy](https://twitter.com/getpy)
 * [@planetpython](https://twitter.com/planetpython)
 * [@pycoders](https://twitter.com/pycoders)
@@ -1167,7 +1168,7 @@ List of lists.
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
 * Monty
-    * [awesome-awesomeness](https://github.com/bayandin/awesome-awesomeness)
+    * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
 
 # [Contributing](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md)
