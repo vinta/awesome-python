@@ -51,8 +51,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Tagging](#tagging)
     - [Admin Panels](#admin-panels)
     - [Static Site Generator](#static-site-generator)
-    - [Processes and Threads](#processes-and-threads)
-    - [Concurrency and Networking](#concurrency-and-networking)
+    - [Processes](#processes)
+    - [Concurrency and Parallelism](#concurrency-and-parallelism)
+    - [Networking](#networking)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
     - [RPC Servers](#rpc-servers)
@@ -726,36 +727,41 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Nikola](http://www.getnikola.com/) - A static website and blog generator.
 * [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
 
-## Processes and Threads
+## Processes
 
-*Libraries for working with processes or threads*
+*Libraries for starting and communicating with OS processes.*
+
+* [envoy](https://github.com/kennethreitz/envoy) - Python [subprocess](https://docs.python.org/2/library/subprocess.html) for Humans™.
+* [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+* [sarge](http://sarge.readthedocs.org/) - Yet another wrapper for subprocess.
+
+## Concurrency and Parallelism
+
+*Libraries for concurrent and parallel execution.*
 
 * [multiprocessing](https://docs.python.org/2/library/multiprocessing.html) - (Python standard library) Process-based "threading" interface.
 * [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
-* [envoy](https://github.com/kennethreitz/envoy) - Python Subprocesses for Humans™.
-* [sh](https://github.com/amoffat/sh) - A full-fledged [subprocess](https://docs.python.org/2/library/subprocess.html) replacement for Python.
-* [sarge](http://sarge.readthedocs.org/) - A wrapper for subprocess.
+* [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
+* [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
+* [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
 
-## Concurrency and Networking
+## Networking
 
-*Libraries for concurrency and network programming.*
+*Libraries for networking programming.*
 
 * [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library in Python 3.4+) Asynchronous I/O, event loop, coroutines and tasks.
-* [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
-* [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
-* [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
-* [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the 0MQ message library.
-* [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
-* [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
+* [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
+* [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
 
 ## WebSocket
 
 *Libraries for working with WebSocket.*
 
+* [Crossbar](https://github.com/crossbario/crossbar/) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 
@@ -821,7 +827,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Logging
 
-*Libraries for generating and working with log files.*
+*Libraries for generating and working with logs.*
 
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
 * [logbook](http://pythonhosted.org/Logbook/) - Logging replacement for Python.
@@ -884,8 +890,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for debugging code.*
 
-* [pdb](https://docs.python.org/2/library/pdb.html) - (Python standard library) The Python Debugger.
-* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled pdb.
+* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
 * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
 * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI, capable of remote debugging based on rpdb2.
 * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
@@ -1112,10 +1117,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Sublime Text
     * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome auto-complete library [Jedi](https://github.com/davidhalter/jedi).
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
-* Atom
-    * [Linter](https://github.com/AtomLinter/Linter) - A static code analysis tool for Atom.
-    * [Linter-flake8](https://github.com/AtomLinter/linter-flake8) - An addon to `linter`, that acts as an interface for `flake8`.
-    * [virtualenv](https://github.com/jhutchins/virtualenv) - Atom package for virtualenv management.
 
 ## IDEs
 
