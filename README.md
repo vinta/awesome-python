@@ -445,6 +445,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
     * [awesome-pyramid](https://github.com/ITCase/awesome-pyramid)
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
+* [weppy](http://weppy.org/) - A full stack web framework based in web2py
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that starts as a microframework and scales up to a full stack solution.
 * [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
@@ -481,6 +482,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [django-shop](https://www.django-cms.org/) - A Django based shop system.
+* [quokka-cart](https://github.com/quokkaproject/quokka-cart) - A shopping cart module for Flask Quokka CMS
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 * [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
@@ -498,6 +500,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
 * [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - A Flask extension for generating ReSTful APIs for database models defined with SQLAlchemy (or Flask-SQLAlchemy).
 * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
+* [flasgger](https://github.com/rochacbruno/flasgger) - A Swagger 2.0 spec extractor for Flask
 * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
 * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
 * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
@@ -586,6 +589,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [django-cache-machine](https://github.com/jbalogh/django-cache-machine) - Automatic caching and invalidation for Django models through the ORM.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
+* [Flask-Cache](https://pythonhosted.org/Flask-Cache/) - Caching for Flask views
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [django-viewlet](https://github.com/5monkeys/django-viewlet) - Render template parts with extended cache control.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
@@ -645,6 +649,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Scrapy](http://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
+* [ScrapyZ](https://github.com/ssteuteville/scrapyz) - "Scrape Easy" - an extension of the Scrapy framework.
 * [feedparser](http://pythonhosted.org/feedparser/) - Universal feed parser.
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
@@ -714,7 +719,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
 * [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
 * [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
-* [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
+* [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 
 ## Static Site Generator
@@ -1018,6 +1023,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
 * [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+
+## PaaS and SaaS utilities
+
+*Libraries and tools to help the use of Platform as a Service*
+
+* [ShiftPy](https://github.com/rochacbruno/shiftpy) - Helpers for deployment in RedHat Openshift Cloud
 
 ## Job Scheduler
 
