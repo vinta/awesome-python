@@ -451,6 +451,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries.
 * [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, formerly known as Zope 3.
 * [guava](https://github.com/flatpeach/guava) - A lightweight and high performance web framework for Python written in C.
+* [Morepath] (http://morepath.readthedocs.org/en/latest/) - Python web microframework, with super powers.
 
 ## Permissions
 
