@@ -401,6 +401,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
+    * [aiopg](https://github.com/aio-libs/aiopg) - Library for accessing a PostgreSQL database from the asyncio.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
     * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
@@ -409,6 +410,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [HappyBase](http://happybase.readthedocs.org/) - A developer-friendly library for Apache HBase.
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
+    * [Asyncio Mongo](https://bitbucket.org/mrdon/asyncio-mongo) - An asynchronous Python driver for the Mongo database, based on Python's asyncio. 
     * [Plyvel](https://plyvel.readthedocs.org/) - A fast and feature-rich Python interface to LevelDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
     * [py2neo](http://book.py2neo.org/) - Python wrapper client for Neo4j's restful interface.
