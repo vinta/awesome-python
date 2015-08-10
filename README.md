@@ -1078,6 +1078,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](http://www.arduino.cc/).
 * [Pyro](http://pyrorobotics.com/) - Python Robotics.
+* [MyHDL](http://myhdl.org) - A python library for designing and verifying digital hardware.
 
 ## Compatibility
 
