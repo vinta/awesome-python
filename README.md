@@ -394,6 +394,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for connecting and operating databases.*
 
 * Relational Databases
+    * [cx_Oracle](http://cx-oracle.sourceforge.net/) - Connect to 10G, 11G, and 12C Oracle databases.  
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - mysql-python fork supporting Python 3.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - Pure Python MySQL driver compatible to mysql-python.
