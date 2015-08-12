@@ -166,6 +166,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [pathlib](https://pathlib.readthedocs.org/en/pep428/) - (Python standard library in Python 3.4+) An cross-platform, object-oriented path library.
+* [pefile](https://code.google.com/p/pefile/) - Module to read and work with PE (Portable Executable) files.
 
 ## Date and Time
 
