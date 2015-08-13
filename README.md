@@ -984,6 +984,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
 * [CyToolz](https://github.com/pytoolz/cytoolz/) - Cython implementation of Toolz: High performance functional utilities.
+* [RxPY](https://github.com/ReactiveX/RxPY) - Reactive Extensions for Python
 
 ## Third-party APIs
 
