@@ -344,7 +344,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-elastic-transcoder](https://github.com/StreetVoice/django-elastic-transcoder) - Django + [Amazon Elastic Transcoder](http://aws.amazon.com/elastictranscoder/).
 * [eyeD3](http://eyed3.nicfit.net/) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
 * [id3reader](http://nedbatchelder.com/code/modules/id3reader.py) - A Python module for reading MP3 meta data.
-* [mutagen](https://code.google.com/p/mutagen/) - A Python module to handle audio metadata.
+* [mutagen](https://bitbucket.org/lazka/mutagen) - A Python module to handle audio metadata.
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://developer.echonest.com/docs/) API.
 * [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
@@ -368,7 +368,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 * [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
-* [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utlities for GeoJSON.
+* [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
 * [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides country choices for use with forms, flag icons static files, and a country field for models.
 
 ## HTTP
@@ -851,7 +851,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
-    * [splinter](http://splinter.cobrateam.info/) - Open source tool for testing web applications.
+    * [splinter](https://splinter.readthedocs.org/en/latest/) - Open source tool for testing web applications.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
 * Mock
