@@ -485,6 +485,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 * [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
 * [alipay](https://github.com/lxneng/alipay) - Unofficial Alipay API for Python.
+* [iso4217](https://github.com/spoqa/iso4217) - ISO 4217 currency data package for Python.
 
 ## RESTful API
 
