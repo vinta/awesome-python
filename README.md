@@ -255,6 +255,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 * [pdoc](https://github.com/BurntSushi/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 * [Pycco](http://fitzgen.github.io/pycco/) - The original quick-and-dirty, hundred-line-long, literate-programming-style documentation generator.
+* [Docbuilder](http://github.com/shakna-israel/docbuilder) - A drop-in or installable generator for literate programming.
 
 ## Configuration
 
