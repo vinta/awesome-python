@@ -743,7 +743,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for networking programming.*
 
-* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library in Python 3.4+) Asynchronous I/O, event loop, coroutines and tasks.
+* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
 * [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
