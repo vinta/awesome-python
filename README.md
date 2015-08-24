@@ -855,6 +855,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [httpretty](http://falcao.it/HTTPretty/) - HTTP request mock tool for Python.
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
+    * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
