@@ -867,6 +867,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+* Cloud Continuous Integration
+    * [Travis CI.com](https://travis-ci.com) - Take care of running your tests and deploying your private apps.
+    * [Travis CI.org](https://travis-ci.org) - A distributed build system for the open source community.
+    * [Vexor CI](https://vexor.io) - A distributed cloud web-service for building and testing software, a continuous integration tool for private apps with pay-per-minute billing model.
+
 
 ## Code Analysis and Linter
 
