@@ -856,14 +856,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
+* Object Factories
+    * [factory_boy](https://github.com/rbarrois/factory_boy) - A test fixtures replacement for Python.
+    * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
+    * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
-    * [factory_boy](https://github.com/rbarrois/factory_boy) - A test fixtures replacement for Python.
-    * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [faker](http://www.joke2k.net/faker/) - A Python package that generates fake data.
-    * [mixer](https://mixer.readthedocs.org) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
-    * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
+    * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
@@ -878,8 +879,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
 * Linter
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
-    * [pylama](https://pylama.readthedocs.org/) - Code audit tool for Python and JavaScript.
     * [Pylint](http://www.pylint.org/) - A source code analyzer.
+    * [pylama](https://pylama.readthedocs.org/) - Code audit tool for Python and JavaScript.
 
 ## Debugging Tools
 
