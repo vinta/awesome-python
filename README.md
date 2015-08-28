@@ -849,11 +849,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://splinter.readthedocs.org/en/latest/) - Open source tool for testing web applications.
 * Mock
+    * [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
     * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
     * [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+.
     * [httpretty](http://falcao.it/HTTPretty/) - HTTP request mock tool for Python.
-    * [mock](https://pypi.python.org/pypi/mock) - A Python Mocking and Patching Library for Testing.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 * Object Factories
