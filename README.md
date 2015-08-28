@@ -886,19 +886,22 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for debugging code.*
 
-* [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
-* [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
-* [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
-* [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
-* [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
-* [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
-* [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
-* [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
-* [pyelftools](https://github.com/eliben/pyelftools) - A pure-Python library for parsing and analyzing ELF files and DWARF debugging information.
-* [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
-* [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
-* [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
-* [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI, capable of remote debugging based on rpdb2.
+* Debugger
+    * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
+    * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
+    * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
+    * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
+    * [winpdb](http://winpdb.org/) - A Platform Independent Python Debugger with GUI, capable of remote debugging based on rpdb2.
+    * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information about the current request/response.
+    * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
+    * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
+* Profiler
+    * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
+    * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
+    * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
+* Others
+    * [pyelftools](https://github.com/eliben/pyelftools) - A pure-Python library for parsing and analyzing ELF files and DWARF debugging information.
+    * [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
 
 ## Science and Data Analysis
 
