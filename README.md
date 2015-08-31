@@ -139,10 +139,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Compile software from source code.*
 
 * [buildout](http://www.buildout.org/) - A build system for creating, assembling and deploying applications from multiple parts.
-* [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool with the special focus of distributions and packages for embedded Linux.
+* [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool for embedded Linux.
 * [fabricate](https://code.google.com/p/fabricate/) - A build tool that finds dependencies automatically for any language.
 * [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
-* [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python which mainly targets Python applications.
+* [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
 
 ## Interactive Interpreter
@@ -243,9 +243,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
 * [jieba](https://github.com/fxsjy/jieba) - Chinese Words Segmentation Utilities.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
-* [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python. It has tools for natural language processing, machine learning, among others.
+* [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
-* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks. Stands on the giant shoulders of NLTK and Pattern.
+* [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks.
 
 ## Documentation
 
@@ -255,7 +255,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc)
 * [MkDocs](http://www.mkdocs.org/) - Markdown friendly documentation generator.
 * [pdoc](https://github.com/BurntSushi/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
-* [Pycco](http://fitzgen.github.io/pycco/) - The original quick-and-dirty, hundred-line-long, literate-programming-style documentation generator.
+* [Pycco](http://fitzgen.github.io/pycco/) - The literate-programming-style documentation generator.
 
 ## Configuration
 
@@ -271,7 +271,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for building command-line application.*
 
 * Command-line Application Development
-    * [cement](http://builtoncement.com/) - Cement provides a light-weight and fully featured foundation to build anything from single file scripts to complex and intricately designed applications.
+    * [cement](http://builtoncement.com/) - Providing a light-weight and fully featured foundation to build anything from single file scripts to complex and intricately designed applications.
     * [click](http://click.pocoo.org/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](http://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [Clime](http://clime.mosky.tw) – Clime lets you convert any module into a multi-command CLI program without any configuration.
