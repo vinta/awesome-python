@@ -847,6 +847,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
+    * [PyAutoGUI](https://github.com/asweigart/pyautogui) - A cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard. Eventually it would be great to offer the same type of features that [Sikuli](http://www.sikuli.org) offers.
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
