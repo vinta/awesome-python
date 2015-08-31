@@ -1,4 +1,4 @@
-# Awesome Python[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 A curated list of awesome Python frameworks, libraries and software. Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
@@ -119,9 +119,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [warehouse](https://github.com/pypa/warehouse) - Next generation Python Package Repository (PyPI).
     * [Warehouse](https://warehouse.python.org/)
-* [bandersnatch](https://bitbucket.org/pypa/bandersnatch) - PyPI mirroring tool provided by Python Packaging Authority (PyPA)
+* [bandersnatch](https://bitbucket.org/pypa/bandersnatch) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 * [devpi](http://doc.devpi.net/) - PyPI server and packaging/testing/release tool.
-* [localshop](https://github.com/mvantellingen/localshop) - PyPI server which mirrors official packages on-demand, and also supports local (private) package uploads.
+* [localshop](https://github.com/mvantellingen/localshop) - Local PyPI server (custom packages and auto-mirroring of pypi).
 
 ## Distribution
 
@@ -138,7 +138,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Compile software from source code.*
 
-* [buildout](http://www.buildout.org/) - A build system for creating, assembling and deploying applications from multiple parts, some of which may be non-Python-based.
+* [buildout](http://www.buildout.org/) - A build system for creating, assembling and deploying applications from multiple parts.
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool with the special focus of distributions and packages for embedded Linux.
 * [fabricate](https://code.google.com/p/fabricate/) - A build tool that finds dependencies automatically for any language.
 * [PlatformIO](https://github.com/ivankravets/platformio) - A console tool to build code with different development platforms.
@@ -360,11 +360,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for geocoding addresses and working with latitudes and longitudes.*
 
 * [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
-* [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides country choices for use with forms, flag icons static files, and a country field for models.
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 * [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
+* [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides country choices for use with forms, flag icons static files, and a country field for models.
 
 ## HTTP
 
@@ -425,8 +425,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [flywheel](https://github.com/mathcamp/flywheel) - Object mapper for Amazon DynamoDB.
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
-    * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
+    * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
 
@@ -478,12 +478,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [django-shop](https://www.django-cms.org/) - A Django based shop system.
+* [Cartridge](https://github.com/stephenmcd/cartridge) - A shopping cart app built using the Mezzanine.
 * [shoop](https://www.shoop.io/) - An open source E-Commerce platform based on Django.
 * [alipay](https://github.com/lxneng/alipay) - Unofficial Alipay API for Python.
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 * [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
-* [Cartridge](https://github.com/stephenmcd/cartridge) - Ecommerce for Django/Mezzanine.
 
 ## RESTful API
 
@@ -760,8 +760,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [Crossbar](https://github.com/crossbario/crossbar/) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
-* [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 * [django-socketio](https://github.com/stephenmcd/django-socketio) - WebSockets for Django.
+* [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 
 ## WSGI Servers
 
@@ -839,15 +839,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * Testing Frameworks
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
+    * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
     * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [mamba](https://nestorsalceda.github.io/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
-    * [nose](https://nose.readthedocs.org/) - nose extends unittest.
+    * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pytest](http://pytest.org/) - A mature full-featured Python testing tool.
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
-    * [PyAutoGUI](https://github.com/asweigart/pyautogui) - A cross-platform GUI automation Python module for human beings. Used to programmatically control the mouse & keyboard. Eventually it would be great to offer the same type of features that [Sikuli](http://www.sikuli.org) offers.
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
@@ -1111,15 +1111,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Plugins for editors and IDEs.*
 
-* Vim
-    * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
-    * [Jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the [Jedi](https://github.com/davidhalter/jedi) auto-completion library for Python.
-    * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
 * Emacs
     * [Elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
 * Sublime Text
-    * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome auto-complete library [Jedi](https://github.com/davidhalter/jedi).
+    * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome auto-complete library Jedi.
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
+* Vim
+    * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
+    * [Jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
+    * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
 * Visual Studio
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
 
@@ -1132,13 +1132,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
 * [WingIDE](http://wingide.com/) - Commercial IDE for Python.
-
-## Chat
-
-*Chat applications.*
-
-* [Gnotty](https://github.com/stephenmcd/gnotty) - IRC web client and bot framework.
-* [Grillo](https://github.com/stephenmcd/grillo) - A terminal based chat server and client.
 
 # Resources
 
