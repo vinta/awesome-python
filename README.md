@@ -82,6 +82,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
     - [IDEs](#ides)
+    - [Chat](#chat)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -425,6 +426,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [flywheel](https://github.com/mathcamp/flywheel) - Object mapper for Amazon DynamoDB.
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
+    * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
 
@@ -481,6 +483,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 * [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
+* [Cartridge](https://github.com/stephenmcd/cartridge) - Ecommerce for Django/Mezzanine.
 
 ## RESTful API
 
@@ -758,6 +761,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [AutobahnPython](https://github.com/tavendo/AutobahnPython) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [Crossbar](https://github.com/crossbario/crossbar/) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
+* [django-socketio](https://github.com/stephenmcd/django-socketio) - WebSockets for Django.
 
 ## WSGI Servers
 
@@ -1127,6 +1131,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
 * [WingIDE](http://wingide.com/) - Commercial IDE for Python.
+
+## Chat
+
+*Chat applications.*
+
+* [Gnotty](https://github.com/stephenmcd/gnotty) - IRC web client and bot framework.
+* [Grillo](https://github.com/stephenmcd/grillo) - A terminal based chat server and client.
 
 # Resources
 
