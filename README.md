@@ -832,6 +832,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Eliot](https://eliot.readthedocs.org/) - Logging for complex & distributed systems.
 * [Raven](http://raven.readthedocs.org/) - The Python client for Sentry.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
+* [PyLogging](https://github.com/clivern/pylogging) - A custom lightweight logging library.
 
 ## Testing
 
