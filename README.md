@@ -82,6 +82,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
     - [IDEs](#ides)
+- [Services](#services)
+    - [Cloud continuous integration](#cloud-continuous-integration)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
