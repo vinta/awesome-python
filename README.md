@@ -84,6 +84,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [IDEs](#ides)
 - [Services](#services)
     - [Continuous Integration](#continuous-integration)
+    - [Code Quality](#code-quality)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
