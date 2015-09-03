@@ -82,7 +82,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
     - [IDEs](#ides)
-    - [Chat](#chat)
+- [Services](#services)
+    - [Cloud continuous integration](#cloud-continuous-integration)
 - [Resources](#resources)
     - [Websites](#websites)
     - [Weekly](#weekly)
@@ -874,6 +875,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
 
+
 ## Code Analysis and Linter
 
 *Libraries and tools for analysing, parsing and manipulation codebases.*
@@ -1132,6 +1134,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
 * [WingIDE](http://wingide.com/) - Commercial IDE for Python.
+
+# Services
+
+Online tools and APIs to simplify development.
+
+## Cloud Continuous Integration
+* [Travis CI.com](https://travis-ci.com) - Take care of running your tests and deploying your private apps.
+* [Travis CI.org](https://travis-ci.org) - A distributed build system for the open source community.
+* [Vexor CI](https://vexor.io) - A distributed cloud web-service for building and testing software, a continuous integration tool for private apps with pay-per-minute billing model.
 
 # Resources
 
