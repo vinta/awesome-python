@@ -1127,7 +1127,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 # Services
 
-Online tools to simplify development.
+Online tools and APIs to simplify development.
 
 ## Cloud Continuous Integration
 * [Travis CI.com](https://travis-ci.com) - Take care of running your tests and deploying your private apps.
