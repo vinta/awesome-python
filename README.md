@@ -1145,6 +1145,11 @@ Online tools and APIs to simplify development.
 * [Travis CI Pro](https://travis-ci.com) - Take care of running your tests and deploying your private apps.
 * [Vexor CI](https://vexor.io) - A continuous integration tool for private apps with pay-per-minute billing model.
 
+## Code Quality
+
+* [Landscape](https://landscape.io/) - An early warning system for your Python codebase.
+* [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
+
 # Resources
 
 Where to discover new Python libraries.
