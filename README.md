@@ -1130,7 +1130,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Popular Python IDEs.*
 
-* [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE based on the IntelliJ platform by JetBrains. Has free community edition available.
+* [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
 * [Komodo](http://komodoide.com/) - Commercial polyglot IDE with support for Python.
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
