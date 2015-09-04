@@ -1142,9 +1142,12 @@ Online tools and APIs to simplify development.
 
 ## Continuous Integration
 
-* [Travis CI](https://travis-ci.org) - A distributed build system for the open source community.
-* [Travis CI Pro](https://travis-ci.com) - Take care of running your tests and deploying your private apps.
+*See: [awesome-CIandCD](https://github.com/ciandcd/awesome-ciandcd#online-build-system).*
+
+* [Travis CI](https://travis-ci.org) - A popular CI service for your open source and [private](https://travis-ci.com) projects. (GitHub only)
+* [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing. (GitHub only)
 * [Vexor CI](https://vexor.io) - A continuous integration tool for private apps with pay-per-minute billing model.
+* [Wercker](http://wercker.com/) - A Docker-based platform for building and deploying applications and microservices.
 
 ## Code Quality
 
