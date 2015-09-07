@@ -305,6 +305,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [WikiTeam](https://github.com/WikiTeam/wikiteam) - Tools for downloading and preserving wikis.
 * [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [pafy](https://github.com/mps-youtube/pafy) - A library for downloading videos from YouTube.
 
 ## Imagery
 
