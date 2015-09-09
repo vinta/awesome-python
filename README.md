@@ -234,7 +234,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * CSV
+    * [unicodecsv](https://pypi.python.org/pypi/unicodecsv) - A drop-in replacement for Python 2’s csv module which supports unicode strings without a hassle.
     * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
+    * [csvstudio](https://github.com/mdipierro/csvstudio) - A (CLI) tool for processing CSV files
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
