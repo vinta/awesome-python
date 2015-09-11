@@ -224,7 +224,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [XlsxWriter](https://xlsxwriter.readthedocs.org/) - A Python module for creating Excel .xlsx files.
     * [xlwings](http://xlwings.org/) - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
-    * [relatorio](http://relatorio.tryton.org/) - Templating OpenDocument Files
+    * [relatorio](http://relatorio.tryton.org/) - Templating OpenDocument Files.
 * PDF
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
