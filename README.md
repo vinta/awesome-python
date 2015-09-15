@@ -921,6 +921,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
+* [deap](https://github.com/deap/deap) - A library for genetic algorithms and evolutionary computation.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
@@ -947,6 +948,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pygal](http://pygal.org/) - A Python SVG Charts Creator.
 * [pygraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+* [seaborn](https://github.com/mwaskom/seaborn) - A high-level interface for high-quality statistical graphics.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
 
@@ -1061,7 +1063,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Python programming on Microsoft Windows.*
 
-* [Python(x,y)](https://code.google.com/p/pythonxy/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
+* [Python(x,y)](https://python-xy.github.io) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows binaries for Python extension packages.
 * [PythonNet](https://github.com/pythonnet/pythonnet) - Python Integration with the .NET Common Language Runtime (CLR).
 * [PyWin32](http://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
