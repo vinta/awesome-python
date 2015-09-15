@@ -921,6 +921,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
+* [deap](https://github.com/deap/deap) - A library for genetic algorithms and evolutionary computation.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
