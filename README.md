@@ -716,6 +716,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [flask-admin](https://github.com/mrjoes/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 * [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
+* [Wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Static Site Generator
 
