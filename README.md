@@ -425,6 +425,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
+    * [PynamoDB](https://github.com/jlafon/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
     * [flywheel](https://github.com/mathcamp/flywheel) - Object mapper for Amazon DynamoDB.
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
