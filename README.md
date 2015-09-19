@@ -261,12 +261,13 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Configuration
 
-*Libraries for storing configuration options.*
+*Libraries for storing and parsing configuration options.*
 
 * [config](http://www.red-dove.com/config-doc/) - Hierarchical config from the author of [logging](https://docs.python.org/2/library/logging.html).
 * [ConfigObj](http://www.voidspace.org.uk/python/configobj.html) - INI file parser with validation.
 * [ConfigParser](https://docs.python.org/2/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](http://profig.readthedocs.org/) - Config from multiple formats with value conversion.
+* [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
 ## Command-line Tools
 
