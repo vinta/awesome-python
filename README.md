@@ -216,6 +216,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * General
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+    * [PrettyTable](https://pypi.python.org/pypi/PrettyTable) - A simple Python library for easily displaying tabular data in a visually appealing ASCII table format.
 * Office
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
     * [openpyxl](https://openpyxl.readthedocs.org/en/latest/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
