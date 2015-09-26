@@ -759,6 +759,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
+* [Pika](https://pika.readthedocs.org/) - AMQP Client Library.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
 
