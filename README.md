@@ -1019,17 +1019,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
+* [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
+* [Docker Compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 * [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [Docker Compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
-* [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for git.
-* [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
+* [gitapi](http://bitbucket.org/haard/gitapi) - Pure-Python API for Git.
 * [hgapi](http://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
-* [honcho](https://github.com/nickstenning/honcho) - A Python port of [Foreman](https://github.com/ddollar/foreman), a tool for managing Procfile-based applications.
-* [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
+* [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
-* [provy](https://github.com/python-provy/provy) - An easy-to-use provisioning system in Python.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 
@@ -1039,7 +1037,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [APScheduler](http://apscheduler.readthedocs.org/) - A light but powerful in-process task scheduler that lets you schedule functions.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
-* [doit](http://pydoit.org/) - A task runner/build tool.
+* [doit](http://pydoit.org/) - A task runner and build tool.
+* [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
 * [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
