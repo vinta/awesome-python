@@ -968,6 +968,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [brew](https://github.com/viisar/brew) - Multiple Classifier Systems in Python.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
 * [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
