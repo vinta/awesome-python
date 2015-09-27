@@ -294,7 +294,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
-    * [RainbowStream](http://www.rainbowstream.org/) - Smart and nice Twitter client on terminal.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
 
 ## Downloader
