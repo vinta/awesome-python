@@ -504,6 +504,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - Generating RESTful APIs for database models defined with SQLAlchemy.
 * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
 * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
+* [graceful](https://github.com/swistakm/graceful) - A toolkit for building self-describing REST APIs using falcon.
 * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
 * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
 * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
