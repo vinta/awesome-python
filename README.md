@@ -203,7 +203,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs with Django as a dependency.
 * Parser
     * [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
-    * [PLY](http://www.dabeaz.com/ply/) - Implementation of lex and yacc parsing tools for Python
+    * [PLY](http://www.dabeaz.com/ply/) - Implementation of lex and yacc parsing tools for Python.
     * [Pygments](http://pygments.org/) - A generic syntax highlighter.
     * [pyparsing](http://pyparsing.wikispaces.com/) - A general purpose framework for generating parsers.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
@@ -216,6 +216,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * General
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+    * [messytables](https://github.com/okfn/messytables) - Tools for parsing messy tabular data.
+    * [rows](https://github.com/turicas/rows) - A common, beautiful interface to tabular data, no matter the format (currently CSV, HTML, XLS, TXT -- more coming!).
+
 * Office
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
     * [openpyxl](https://openpyxl.readthedocs.org/en/latest/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
@@ -229,13 +232,16 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
     * [ReportLab](http://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+    * [pdftables](https://pypi.python.org/pypi/pdftables) - Parses PDFs and extracts what it believes to be tables.
 * Markdown
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * CSV
+    * [unicodecsv](https://pypi.python.org/pypi/unicodecsv) - A drop-in replacement for Python 2’s csv module which supports unicode strings without a hassle.
     * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
+    * [csvstudio](https://github.com/mdipierro/csvstudio) - A (CLI) tool for processing CSV files.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
@@ -249,6 +255,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks.
+* [pypln](http://www.pypln.org/) - Distributed Natural Language Processing.
 
 ## Documentation
 
@@ -282,7 +289,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
-    * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
+    * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
     * [pyCLI](https://pythonhosted.org/pyCLI/) - Command-line applications supporting standard command line parsing, logging, unit and functional testing.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 * Productivity Tools
@@ -461,7 +468,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries that allow or deny users access to data or functionality.*
 
 * [Carteblanche](http://www.github.com/neuman/python-carteblanche/) - Module to align code with thoughts of users and designers. Also magically handles navigation and permissions.
-* [django-guardian](https://github.com/lukaszb/django-guardian) - Implementation of per object permissions for Django 1.2+
+* [django-guardian](https://github.com/lukaszb/django-guardian) - Implementation of per object permissions for Django 1.2+.
 * [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
 
 ## CMS
@@ -507,7 +514,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
 * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
 * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
-* [savory-pie](https://github.com/RueLaLa/savory-pie/) - REST API building library (Django, and others)
+* [savory-pie](https://github.com/RueLaLa/savory-pie/) - REST API building library (Django, and others).
 * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs with extensions for Flask and Django.
 * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
 
@@ -517,7 +524,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * OAuth
     * [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client.
-    * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
+    * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works".
     * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
     * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
     * [Flask-OAuthlib](https://github.com/lepture/flask-oauthlib) - OAuth 1.0/a, 2.0 implementation of client and provider for Flask.
@@ -667,7 +674,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
-* [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
+* [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol.
 * [python-goose](https://github.com/grangier/python-goose) - HTML Content/Article Extractor.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 * [sanitize](https://github.com/Alir3z4/sanitize) - Bringing sanity to world of messed-up data.
@@ -828,7 +835,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](http://pysdl2.readthedocs.org/) - A ctypes based wrapper for the SDL2 library.
-* [PySFML](http://www.python-sfml.org/) - Python bindings for [SFML](http://www.sfml-dev.org/)
+* [PySFML](http://www.python-sfml.org/) - Python bindings for [SFML](http://www.sfml-dev.org/).
 * [RenPy](http://www.renpy.org/) - A Visual Novel engine.
 
 ## Logging
@@ -931,7 +938,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
-* [Open Mining](https://github.com/avelino/mining) - Business Intelligence (BI) in Python (Pandas web interface)
+* [Open Mining](https://github.com/avelino/mining) - Business Intelligence (BI) in Python (Pandas web interface).
 * [orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or Python scripting.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
@@ -1007,7 +1014,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
 * [django-wordpress](https://github.com/sunlightlabs/django-wordpress/) - WordPress models and views for Django.
 * [facebook-sdk](https://github.com/pythonforfacebook/facebook-sdk) - Facebook Platform Python SDK.
-* [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
+* [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API.
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
@@ -1152,8 +1159,8 @@ Online tools and APIs to simplify development.
 
 *See: [awesome-CIandCD](https://github.com/ciandcd/awesome-ciandcd#online-build-system).*
 
-* [Travis CI](https://travis-ci.org) - A popular CI service for your open source and [private](https://travis-ci.com) projects. (GitHub only)
-* [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing. (GitHub only)
+* [Travis CI](https://travis-ci.org) - A popular CI service for your open source and [private](https://travis-ci.com) projects (GitHub only).
+* [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing (GitHub only).
 * [Vexor CI](https://vexor.io) - A continuous integration tool for private apps with pay-per-minute billing model.
 * [Wercker](http://wercker.com/) - A Docker-based platform for building and deploying applications and microservices.
 
