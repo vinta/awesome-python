@@ -373,8 +373,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
-* [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
-* [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
+* [geopy](https://github.com/geopy/geopy) - Python 2 and 3 client for several popular geocoding web services.
+* [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API for  Maxmind's binary GeoIP databases .
 * [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides country choices for use with forms, flag icons static files, and a country field for models.
 
 ## HTTP
