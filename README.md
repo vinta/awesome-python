@@ -509,7 +509,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Pyramid
     * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
 * Framework agnostic
-    * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
+    * [falcon](http://falconframework.org/) - A high-performance framework for building cloud APIs and web app backends.
     * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
     * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from Tastypie.
     * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs.
