@@ -393,7 +393,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python.
 * [PipelineDB](https://www.pipelinedb.com/) - The Streaming SQL Database.
-* [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
+* [TinyDB](https://github.com/msiemens/tinydb) - A tiny, pure Python document-oriented database.
 * [ZODB](http://www.zodb.org/en/latest/) - A native object database for Python. A key-value and object graph database.
 
 ## Database Drivers
