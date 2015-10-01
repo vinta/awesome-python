@@ -496,20 +496,23 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for developing RESTful APIs.*
 
-* [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit that makes it easy to build Web APIs.
-* [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
-* [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON APIs with HMAC authentication and Django form-validation.
-* [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
-* [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
-* [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - Generating RESTful APIs for database models defined with SQLAlchemy.
-* [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
-* [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
-* [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
-* [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
-* [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
-* [savory-pie](https://github.com/RueLaLa/savory-pie/) - REST API building library (Django, and others)
-* [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs with extensions for Flask and Django.
-* [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
+* Django
+    * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit to build web APIs.
+    * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
+    * [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON APIs with Django's form validation.
+* Flask
+    * [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
+    * [flask-restful](http://flask-restful.readthedocs.org/) - Quickly building REST APIs for Flask.
+    * [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - Generating RESTful APIs for database models defined with SQLAlchemy.
+    * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Taking care of API representation and authentication for Flask.
+    * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
+* Pyramid
+    * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
+* Framework agnostic
+    * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
+    * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
+    * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from Tastypie.
+    * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs.
 
 ## Authentication
 
