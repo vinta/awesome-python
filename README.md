@@ -613,7 +613,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [django-viewlet](https://github.com/5monkeys/django-viewlet) - Render template parts with extended cache control.
-* [dogpile.cache](http://dogpilecache.readthedocs.io/) - dogpile.cache is next generation replacement for Beaker made by same authors.
+* [dogpile.cache](http://dogpilecache.readthedocs.org/) - dogpile.cache is next generation replacement for Beaker made by same authors. Unlike Beaker, dogpile.cache has no http sessions.
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
