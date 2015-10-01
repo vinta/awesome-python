@@ -623,7 +623,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for sending and parsing email.*
 
-* [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
+* [envelopes](http://tomekwojcik.github.io/envelopes/) - Outgoing mailing for human beings.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
