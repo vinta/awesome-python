@@ -1213,6 +1213,6 @@ List of lists.
     * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
 
-# [Contributing](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md)
+# Contributing
 
-Your contributions are always welcome!
+Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
