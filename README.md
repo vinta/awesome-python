@@ -286,6 +286,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
     * [pyCLI](https://pythonhosted.org/pyCLI/) - Command-line applications supporting standard command line parsing, logging, unit and functional testing.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
+    * [cmd](https://pymotw.com/2/cmd/) - Module from [Standard Library](https://docs.python.org/2/library/cmd.html) for building line-oriented command interpreters
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
