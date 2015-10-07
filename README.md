@@ -455,6 +455,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that starts as a microframework and scales up to a full stack solution.
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
+* [circuits.web](http://circuitsweb.com) - An Asynchornous Web Framework buitl on top of [circuits](http://circuitsframework.com)
 
 ## Permissions
 
@@ -764,6 +765,11 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
+* [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
+* [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the 0MQ message library.
+* [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the 0MQ message library.
+* [Crossbar](http://crossbar.io) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
+* [circuits](https://circuitsframework.com) - Asynchornous Event-driven Application Framework supporting Async I/O, Coroutines, IPC and Distributed Processing. (*encourages a loosely coupled Component architecture*).
 
 ## WebSocket
 
