@@ -455,6 +455,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [TurboGears](http://www.turbogears.org/) - The Web Framework that starts as a microframework and scales up to a full stack solution.
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
+* [Falcon](http://falconframework.org/) - The minimalist Python WSGI framework.
 
 ## Permissions
 
