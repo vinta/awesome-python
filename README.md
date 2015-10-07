@@ -1149,7 +1149,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Komodo](http://komodoide.com/) - Commercial polyglot IDE with support for Python.
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
-* [WingIDE](http://wingide.com/) - Commercial IDE for Python.
 
 # Services
 
