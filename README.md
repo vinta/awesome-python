@@ -1217,7 +1217,7 @@ Queries
 
 *Best Questions and Answers on Quora.*
 
-* [Best python scripts](https://www.quora.com/What-are-the-best-Python-scripts-youve-ever-written)
+* [Best scripts](https://www.quora.com/What-are-the-best-Python-scripts-youve-ever-written)
 * [when was python created](https://www.quora.com/When-was-Python-created)
 * [why was python created](https://www.quora.com/Why-was-the-Python-programming-language-originally-created)
 * [creator of python](https://www.quora.com/Who-is-the-creator-of-Python)
