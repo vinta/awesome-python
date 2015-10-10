@@ -863,6 +863,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
+    * [SST](http://testutils.org/sst) - selenium-simple-test is a web test framework that uses Python to generate functional browser-based tests.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://splinter.readthedocs.org/en/latest/) - Open source tool for testing web applications.
