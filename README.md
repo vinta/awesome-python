@@ -269,6 +269,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * Relational Databases
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for the Python.
+    * [pymssql](http://www.pymssql.org/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Apache Cassandra.
     * [PyMongo](http://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
