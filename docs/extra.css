@@ -1,0 +1,37 @@
+.bs-sidebar.well {
+    /* margin-bottom: 0; */
+}
+
+.bs-sidebar .nav > li > a:hover,
+.bs-sidebar .nav > li > a:focus {
+    border: none;
+    border-left: 2px solid;
+}
+
+.bs-sidebar .nav > .active > a,
+.bs-sidebar .nav > .active:hover > a,
+.bs-sidebar .nav > .active:focus > a {
+    border: none;
+    border-left: 2px solid;
+}
+
+@media (min-width: 992px) {
+    .bs-sidebar.affix {
+        /* top: 60px; */
+        /* bottom: 0px; */
+        top: 80px;
+        bottom: 23px;
+        overflow: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .bs-sidebar.affix-bottom,
+    .bs-sidebar.affix {
+        width: 280px;
+    }
+
+    .container > .col-md-9 {
+        padding-left: 40px;
+    }
+}
