@@ -550,7 +550,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 ## Queue
 
 *Libraries for working with event and task queues.*
-
+* [gearman](https://pypi.python.org/pypi/gearman) - A distributed Job server.
 * [celery](http://www.celeryproject.org/) - An asynchronous task queue/job queue based on distributed message passing.
 * [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 * [mrq](https://github.com/pricingassistant/mrq) - Mr. Queue - A distributed worker task queue in Python using Redis & gevent.
