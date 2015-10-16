@@ -406,6 +406,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+    * [pymssql](http://www.pymssql.org/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [HappyBase](http://happybase.readthedocs.org/) - A developer-friendly library for Apache HBase.
