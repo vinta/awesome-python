@@ -394,18 +394,18 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for connecting and operating databases.*
 
-* Relational Databases
-    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
-    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
-    * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle.
+* MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - mysql-python fork supporting Python 3.
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
-    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - Pure Python MySQL driver compatible to mysql-python.
+* PostgreSQL
+    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
-    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+* Other Relational Databases
+    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
+    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
     * [pymssql](http://www.pymssql.org/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
@@ -426,8 +426,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
-    * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
+    * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
+    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [PynamoDB](https://github.com/jlafon/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
@@ -934,7 +935,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
-* [Neupy](http://neupy.com/pages/home.html) - library running and testing different Artificial Neural Networks algorithms.
+* [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
