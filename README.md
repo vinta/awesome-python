@@ -429,6 +429,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+    * [Storm](https://storm.canonical.com/) - Designed by the company behind Ubuntu.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [PynamoDB](https://github.com/jlafon/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
