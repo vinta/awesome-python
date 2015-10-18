@@ -1125,6 +1125,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Python implementation of algorithms and design patterns.*
 
 * [algorithms](https://github.com/nryoung/algorithms) - A module of algorithms for Python.
+* [interactive-coding-challenges](https://github.com/donnemartin/interactive-coding-challenges) - Interactive, test-driven Python coding challenges typically found in coding interviews.
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) - Fast, pure-Python implementation of SortedList, SortedDict, and SortedSet types.
 
