@@ -877,6 +877,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [httpretty](http://falcao.it/HTTPretty/) - HTTP request mock tool for Python.
     * [responses](https://github.com/dropbox/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
+    * [doubles](https://github.com/uber/doubles) - An expressive test doubles library for test driven development.
 * Object Factories
     * [factory_boy](https://github.com/rbarrois/factory_boy) - A test fixtures replacement for Python.
     * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
