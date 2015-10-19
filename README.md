@@ -111,6 +111,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [pip](https://pip.pypa.io/) - The Python package and dependency manager.
     * [Python Package Index](https://pypi.python.org/pypi)
+* [pip-tools](https://github.com/nvie/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
@@ -294,6 +295,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
+    * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
 
 ## Downloader
@@ -358,7 +360,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
-* [shorten.tv](http://www.shorten.tv/) - Video summarization.
 
 ## Geolocation
 
@@ -394,18 +395,19 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for connecting and operating databases.*
 
-* Relational Databases
-    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
-    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
-    * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle.
+* MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - mysql-python fork supporting Python 3.
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
-    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - Pure Python MySQL driver compatible to mysql-python.
+* PostgreSQL
+    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
-    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+* Other Relational Databases
+    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
+    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [pymssql](http://www.pymssql.org/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [HappyBase](http://happybase.readthedocs.org/) - A developer-friendly library for Apache HBase.
@@ -425,8 +427,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
-    * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
+    * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
+    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [PynamoDB](https://github.com/jlafon/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
@@ -496,20 +499,23 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for developing RESTful APIs.*
 
-* [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit that makes it easy to build Web APIs.
-* [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
-* [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON APIs with HMAC authentication and Django form-validation.
-* [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
-* [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
-* [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - Generating RESTful APIs for database models defined with SQLAlchemy.
-* [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
-* [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
-* [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
-* [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
-* [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from TastyPie.
-* [savory-pie](https://github.com/RueLaLa/savory-pie/) - REST API building library (Django, and others)
-* [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs with extensions for Flask and Django.
-* [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
+* Django
+    * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit to build web APIs.
+    * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
+    * [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON APIs with Django's form validation.
+* Flask
+    * [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
+    * [flask-restful](http://flask-restful.readthedocs.org/) - Quickly building REST APIs for Flask.
+    * [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - Generating RESTful APIs for database models defined with SQLAlchemy.
+    * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Taking care of API representation and authentication for Flask.
+    * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
+* Pyramid
+    * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
+* Framework agnostic
+    * [falcon](http://falconframework.org/) - A high-performance framework for building cloud APIs and web app backends.
+    * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
+    * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from Tastypie.
+    * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs.
 
 ## Authentication
 
@@ -566,8 +572,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for building user's activities.*
 
-* [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generate generic activity streams from the actions on your site.
-* [Feedly](https://github.com/tschellenbach/Feedly) - A library to build newsfeed and notification systems using Cassandra and Redis.
+* [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
+* [Stream-Framework](https://github.com/tschellenbach/Stream-Framework) - Building newsfeed and notification systems using Cassandra and Redis.
 
 ## Asset Management
 
@@ -682,8 +688,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-bootstrap3](https://github.com/dyve/django-bootstrap3) - Bootstrap 3 integration with Django.
 * [django-crispy-forms](http://django-crispy-forms.readthedocs.org/) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
 * [django-remote-forms](https://github.com/WiserTogether/django-remote-forms) - A platform independent Django form serializer.
-* [WTForms-JSON](http://wtforms-json.readthedocs.org/) - A WTForms extension for JSON data handling.
 * [WTForms](http://wtforms.readthedocs.org/) - A flexible forms validation and rendering library.
+* [WTForms-JSON](http://wtforms-json.readthedocs.org/) - A WTForms extension for JSON data handling.
 
 ## Data Validation
 
@@ -817,6 +823,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
+* [PyGObject](https://wiki.gnome.org/Projects/PyGObject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3)
+* [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
 
 ## Game Development
 
@@ -928,6 +936,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
+* [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
@@ -1060,6 +1069,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for making Python faster.*
 
 * [Cython](http://cython.org/) - Optimizing Static Compiler for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
+* [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python. Can be used as inline assembler for Python or as a stand-alone assembler for Windows, Linux, OS X, Native Client and Go.
 * [PyPy](http://pypy.org/) - An implementation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 * [Stackless Python](http://www.stackless.com/) - An enhanced version of the Python.
@@ -1092,6 +1102,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyUserInput](https://github.com/SavinaRoja/PyUserInput) - A module for cross-platform control of the mouse and keyboard.
 * [scapy](http://www.secdev.org/projects/scapy/) - A brilliant packet manipulation library.
 * [wifi](https://wifi.readthedocs.org/) - A Python library and command line tool for working with WiFi on Linux.
+* [Pingo](http://pingo.io) - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo, etc.
 
 ## Compatibility
 
@@ -1140,10 +1151,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Popular Python IDEs.*
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
-* [Komodo](http://komodoide.com/) - Commercial polyglot IDE with support for Python.
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
-* [WingIDE](http://wingide.com/) - Commercial IDE for Python.
 
 # Services
 
@@ -1207,6 +1216,8 @@ List of lists.
     * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
 
-# [Contributing](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md)
+# Contributing
 
-Your contributions are always welcome!
+Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
+
+I would keep some pull requests open if I'm not sure whether the libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by leaving a comment that contains `+1`.
