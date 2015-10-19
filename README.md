@@ -249,6 +249,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
+* [spaCy](http://spacy.io) - A library for industrial-strength natural language processing in Python and Cython.
 * [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks.
 
 ## Documentation
@@ -977,6 +978,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [brew](https://github.com/viisar/brew) - A Multiple Classifier Systems Python API.
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
 * [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
