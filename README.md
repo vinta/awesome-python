@@ -239,6 +239,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
+* Other
+    * [FoLiA-tools](https://proycon.github.io/folia) - Tools and libraries for FoLiA: Format for Linguistic Annotation.
 
 ## Natural Language Processing
 
