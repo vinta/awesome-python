@@ -510,6 +510,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
     * [restless](http://restless.readthedocs.org/en/latest/) - Framework agnostic REST framework based on lessons learned from Tastypie.
     * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs.
+ * Miscellaneous
+    * [CLAM](https://proycon.github.io/clam) - A high-level tool to quickly build RESTful webservices and web applications for command-line tools.
 
 ## Authentication
 
