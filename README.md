@@ -1114,6 +1114,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [pwntools](https://github.com/Gallopsled/pwntools) - A CTF framework and exploit development library.
 
 ## Algorithms and Design Patterns
 
