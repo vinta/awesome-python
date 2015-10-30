@@ -295,17 +295,15 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
+    * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
 
 ## Downloader
 
 *Libraries for downloading.*
 
-* [coursera](https://github.com/coursera-dl/coursera) - Script for downloading Coursera.org videos and naming them.
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [s4cmd](https://github.com/bloomreach/s4cmd) - Super S3 command line tool, good for higher performance.
-* [subliminal](https://github.com/Diaoul/subliminal) - Library and command line tool to search and download subtitles.
-* [WikiTeam](https://github.com/WikiTeam/wikiteam) - Tools for downloading and preserving wikis.
 * [you-get](http://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
 
@@ -394,18 +392,19 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for connecting and operating databases.*
 
-* Relational Databases
-    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
-    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
-    * [mysql-connector-python](https://pypi.python.org/pypi/mysql-connector-python) - A pure Python MySQL driver from Oracle.
+* MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
     * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - mysql-python fork supporting Python 3.
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
-    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - Pure Python MySQL driver compatible to mysql-python.
+* PostgreSQL
+    * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](http://txpostgres.readthedocs.org/) - Twisted based asynchronous driver for PostgreSQL.
-    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+* Other Relational Databases
+    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
+    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [pymssql](http://www.pymssql.org/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [HappyBase](http://happybase.readthedocs.org/) - A developer-friendly library for Apache HBase.
@@ -425,8 +424,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
-    * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
+    * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](http://ponyorm.com) - ORM that provides a generator-oriented interface to SQL.
+    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [PynamoDB](https://github.com/jlafon/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
@@ -447,14 +447,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
     * [awesome-pyramid](https://github.com/ITCase/awesome-pyramid)
-* [Bluebream](http://bluebream.zope.org/) - An open-source web application server, framework and library, formerly known as Zope 3.
 * [Bottle](http://bottlepy.org/) - A fast, simple and lightweight WSGI micro web-framework.
-* [CherryPy](http://www.cherrypy.org/) - A Minimalist Python Web Framework, HTTP/1.1-compliant and WSGI thread-pooled.
-* [Grok](http://grok.zope.org/) - A framework built on the existing Zope 3 libraries.
-* [guava](https://github.com/flatpeach/guava) - A lightweight and high performance web framework for Python written in C.
-* [TurboGears](http://www.turbogears.org/) - The Web Framework that starts as a microframework and scales up to a full stack solution.
+* [CherryPy](http://www.cherrypy.org/) - A minimalist Python web framework, HTTP/1.1-compliant and WSGI thread-pooled.
+* [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
+* [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 
 ## Permissions
 
@@ -758,7 +756,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for networking programming.*
 
 * [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
-* [Tornado](http://www.tornadoweb.org/) - A Web framework and asynchronous networking library.
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
@@ -899,7 +896,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
 * Linter
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
-    * [Pylint](http://www.pylint.org/) - A source code analyzer.
+    * [Pylint](http://www.pylint.org/) - A Fully customizable source code analyzer.
     * [pylama](https://pylama.readthedocs.org/) - Code audit tool for Python and JavaScript.
 
 ## Debugging Tools
@@ -931,9 +928,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
-* [blaze](http://blaze.pydata.org/en/latest/) - NumPy and Pandas interface to Big Data.
+* [blaze](http://blaze.readthedocs.org/en/latest/index.html) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
+* [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
 * [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
