@@ -217,6 +217,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * General
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+    * [PrettyTable](https://pypi.python.org/pypi/PrettyTable) - A simple Python library for easily displaying tabular data in a visually appealing ASCII table format.
 * Office
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
     * [openpyxl](https://openpyxl.readthedocs.org/en/latest/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
@@ -235,6 +236,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+    * [ruamel.yaml](https://bitbucket.org/ruamel/yaml) - YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order.
+    * [pyaml](https://github.com/mk-fg/pretty-yaml) - Module to produce pretty and readable YAML-serialized data.
+    * [shyaml](https://github.com/0k/shyaml) - YAML for command line.
 * CSV
     * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
 * Archive
@@ -759,6 +763,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [diesel](https://github.com/jamwt/diesel) - Greenlet-based event I/O Framework for Python.
+* [Pika](https://pika.readthedocs.org/) - AMQP Client Library.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
 
@@ -849,6 +854,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * Testing Frameworks
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
+    * [unittest2](http://pypi.python.org/pypi/unittest2) - The new features in unittest backported to Python 2.4+.
     * [nose](https://nose.readthedocs.org/) - nose extends unittest.
     * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
     * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
