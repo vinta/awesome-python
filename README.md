@@ -985,7 +985,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## MapReduce
 
-*Framworks and libraries for MapReduce.*
+*Frameworks and libraries for MapReduce.*
 
 * [dpark](https://github.com/douban/dpark) - Python clone of Spark, a MapReduce alike framework in Python.
 * [dumbo](https://github.com/klbostee/dumbo) - Python module that allows one to easily write and run Hadoop programs.
