@@ -982,6 +982,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
+* [skflow](https://github.com/google/skflow) - A simplified interface for TensorFlow mimicking scikit-learn
 
 ## MapReduce
 
