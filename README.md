@@ -603,6 +603,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-celery-ses](https://github.com/StreetVoice/django-celery-ses) - Django email back end with AWS SES and Celery.
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
+* [imapy](https://github.com/vladimarius/imapy) - Imapy.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
 * [inbox](https://github.com/nylas/sync-engine) - The open source email toolkit.
