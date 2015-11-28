@@ -1040,6 +1040,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for scheduling jobs.*
 
 * [APScheduler](http://apscheduler.readthedocs.org/) - A light but powerful in-process task scheduler that lets you schedule functions.
+* [Briefly](https://github.com/bloomreach/briefly) - Meta-programming library for complex, robust workflows of tasks, including Hadoop.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
