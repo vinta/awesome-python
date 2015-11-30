@@ -1181,6 +1181,7 @@ Where to discover new Python libraries.
 * [Python Hackers](http://pythonhackers.com/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
+* [PyPI Ranking](http://pypi-ranking.info/)
 
 ## Weekly
 
