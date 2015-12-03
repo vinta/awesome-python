@@ -89,6 +89,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
+    - [Podcasts](#podcasts)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -1198,6 +1199,10 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
+
+## Podcasts
+
+* [Talk Python To Me](http://talkpython.fm/)
 
 # Other Awesome Lists
 
