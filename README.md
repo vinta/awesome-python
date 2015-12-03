@@ -569,6 +569,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
 * [Stream-Framework](https://github.com/tschellenbach/Stream-Framework) - Building newsfeed and notification systems using Cassandra and Redis.
+* [TriggerHappy](https://github.com/foxmask/django-th) - A bridge between your internet services
 
 ## Asset Management
 
