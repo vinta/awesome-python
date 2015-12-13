@@ -897,6 +897,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
     * [Pylint](http://www.pylint.org/) - A Fully customizable source code analyzer.
     * [pylama](https://pylama.readthedocs.org/) - Code audit tool for Python and JavaScript.
+    * [Quantified Code](https://www.quantifiedcode.com) - Hosted source code analyzer (One free private repository).
 
 ## Debugging Tools
 
