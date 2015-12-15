@@ -245,11 +245,20 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for working with human languages.*
 
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
+* [Quepy](http://quepy.machinalis.com/)-A python framework to transform natural language questions to queries in a database query language.
+* [KoNLPy](http://konlpy.org/en/v0.4.4/)-A Python package for Korean natural language processing.
+* [Rosetta](https://github.com/columbia-applied-data-science/rosetta)-Tools for data science with a focus on text processing.
+* [spaCY](https://github.com/honnibal/spaCy/)-Industrial strength NLP with Python and Cython.
+* [YAlign](https://github.com/machinalis/yalign)-A sentence aligner, a friendly tool for extracting parallel sentences from comparable corpora.
+* [python-frog](https://github.com/proycon/python-frog)-Python binding to Frog, an NLP suite for Dutch.
+* [python-ucto](https://github.com/proycon/python-ucto)-Python binding to ucto
+* [python-zpar](https://github.com/EducationalTestingService/python-zpar)-Python bindings for ZPar, a statistical part-of-speech-tagger, constiuency parser, and dependency parser for English.
 * [jieba](https://github.com/fxsjy/jieba) - Chinese Words Segmentation Utilities.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks.
+* [PyStanfordDependencies](https://github.com/dmcc/PyStanfordDependencies)-Python interface for converting Penn Treebank trees to Stanford Dependencies.
 
 ## Documentation
 
@@ -318,7 +327,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
-* [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
+* [scikit-simple](http://scikit-simple.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 * [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
 
@@ -966,6 +975,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
+* [Vigranumpy](https://github.com/ukoethe/vigra)-Python bindings for the VIGRA C++ computer vision library.
 
 ## Machine Learning
 
@@ -980,8 +990,12 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
+* [metric-learn](https://github.com/all-umass/metric-learn)-A Python module for metric learning.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [skflow](https://github.com/google/skflow) - A simplified interface for [TensorFlow](https://github.com/tensorflow/tensorflow) mimicking scikit-learn
+* [pydeep](https://github.com/andersbll/deeppy)-Deep learning in python
+* [deap](https://github.com/deap/deap)-Evolutionary algorithm framework
+* [yahmm](https://github.com/jmschrei/yahmm/)-Hidden Markov Models for Python
 
 ## MapReduce
 
