@@ -250,6 +250,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [TextBlob](http://textblob.readthedocs.org/) - Providing a consistent API for diving into common NLP tasks.
+* [SpaCy](https://github.com/honnibal/spaCy) - Industrial-strength Natural Language Processing with Python and Cython
 
 ## Documentation
 
