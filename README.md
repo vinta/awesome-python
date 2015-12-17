@@ -980,6 +980,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
 * [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
 * [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
+* [pydeep](https://github.com/andersbll/deeppy)-Deep learning in python
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [skflow](https://github.com/google/skflow) - A simplified interface for [TensorFlow](https://github.com/tensorflow/tensorflow) mimicking scikit-learn
 
