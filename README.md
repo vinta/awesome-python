@@ -657,6 +657,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
+* [Weboob](http://weboob.org/) - A framework for scraping sites with already existing site modules and ready-made client apps.
 
 ## Web Content Extracting
 
