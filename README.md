@@ -937,6 +937,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Open Mining](https://github.com/avelino/mining) - Business Intelligence (BI) in Python (Pandas web interface)
 * [orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or Python scripting.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [pgmpy](http://pgmpy.org/) - A library for probabilistic graphical models.
 * [PyDy](https://pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
