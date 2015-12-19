@@ -1017,6 +1017,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
+* [yowsup 2](https://github.com/tgalal/yowsup) - Unofficial WhatsApp API.
 
 ## DevOps Tools
 
