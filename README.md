@@ -505,6 +505,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
 * Pyramid
     * [cornice](https://cornice.readthedocs.org/) - A REST framework for Pyramid.
+    * [ramses](https://ramses.readthedocs.org/en/stable/) - Generate a RESTful API for Pyramid using RAML.
 * Framework agnostic
     * [falcon](http://falconframework.org/) - A high-performance framework for building cloud APIs and web app backends.
     * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
