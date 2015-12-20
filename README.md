@@ -541,6 +541,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Genshi](http://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
 * [Spitfire](https://code.google.com/p/spitfire/) - A very fast Python template compiler.
+* [Secretary](https://github.com/christopher-ramirez/secretary) - Want to use Jinja2 to create LibreOffice documents? Secretary allows you to do it.
 
 ## Queue
 
