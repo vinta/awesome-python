@@ -730,6 +730,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Hyde](http://hyde.github.io/) - Jinja2-based static web site generator.
 * [Nikola](https://www.getnikola.com/) - A static website and blog generator.
 * [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
+* [MkDocs](http://www.mkdocs.org/) - MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. 
 
 ## Processes
 
