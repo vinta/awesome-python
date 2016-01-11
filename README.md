@@ -593,6 +593,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
+* [wrapcache](https://github.com/hustcc/wrapcache) - A simple cache system based on python function decorator, supports memory LRU algorithm, Redis and Memcached.
 
 ## Email
 
