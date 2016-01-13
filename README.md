@@ -642,6 +642,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access.
 * [xhtml2pdf](https://github.com/xhtml2pdf/xhtml2pdf) - HTML/CSS to PDF converter.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
+* [loxun](https://github.com/roskakori/loxun) - Write large output in XML using unicode and namespaces.
 
 ## Web Crawling
 
