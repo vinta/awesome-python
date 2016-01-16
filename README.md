@@ -404,6 +404,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
     * [pymssql](http://www.pymssql.org/en/latest/) - A simple database interface to Microsoft SQL Server.
+    * [sqlite3](https://docs.python.org/3.5/library/sqlite3.html) - A lightweight fast database which is worth using in development phases of your projects.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [HappyBase](http://happybase.readthedocs.org/en/latest/) - A developer-friendly library for Apache HBase.
