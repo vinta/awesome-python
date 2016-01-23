@@ -482,7 +482,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Frameworks and libraries for e-commerce and payments.*
 
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
-* [django-shop](https://github.com/divio/django-shop) - A Django based shop system.
+* [django-shop](https://github.com/awesto/django-shop) - A Django based shop system.
 * [Cartridge](https://github.com/stephenmcd/cartridge) - A shopping cart app built using the Mezzanine.
 * [shoop](https://www.shoop.io/en/) - An open source E-Commerce platform based on Django.
 * [alipay](https://github.com/lxneng/alipay) - Unofficial Alipay API for Python.
