@@ -855,6 +855,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
+    * [radish-bdd](https://github.com/radish-bdd/radish) - BDD testing tool with supplements
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 * Web Testing
