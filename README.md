@@ -142,7 +142,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [buildout](http://www.buildout.org/en/latest/) - A build system for creating, assembling and deploying applications from multiple parts.
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool for embedded Linux.
-* [fabricate](https://code.google.com/p/fabricate/) - A build tool that finds dependencies automatically for any language.
 * [PlatformIO](https://github.com/platformio/platformio) - A console tool to build code with different development platforms.
 * [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
@@ -187,7 +186,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * General
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [difflib](https://docs.python.org/2/library/difflib.html) - (Python standard library) Helpers for computing deltas.
-    * [esmre](https://code.google.com/p/esmre/) - Regular expression accelerator.
     * [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
     * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
     * [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
@@ -328,8 +326,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for Optical Character Recognition.*
 
 * [pyocr](https://github.com/jflesch/pyocr) - A wrapper for Tesseract and Cuneiform.
-* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for Google Tesseract OCR.
-* [python-tesseract](https://code.google.com/p/python-tesseract/) - A wrapper class for [Google Tesseract OCR](https://code.google.com/p/tesseract-ocr/).
+* [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 
 ## Audio
 
@@ -541,7 +538,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Chameleon](https://chameleon.readthedocs.org/en/latest/) - An HTML/XML template engine. Modeled after ZPT, optimized for speed.
 * [Genshi](http://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
-* [Spitfire](https://code.google.com/p/spitfire/) - A very fast Python template compiler.
 
 ## Queue
 
@@ -855,7 +851,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
-    * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](http://vowsjs.org/).
+    * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](https://github.com/vowsjs/vows).
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
@@ -1055,7 +1051,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [cffi](https://pypi.python.org/pypi/cffi) - Foreign Function Interface for Python calling C code.
 * [ctypes](https://docs.python.org/2/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
-* [PyCUDA](http://mathema.tician.de/software/pycuda/) - A Python wrapper for Nvidia's CUDA API.
+* [PyCUDA](https://mathema.tician.de/software/pycuda/) - A Python wrapper for Nvidia's CUDA API.
 * [SWIG](http://www.swig.org/Doc1.3/Python.html) - Simplified Wrapper and Interface Generator.
 
 ## High Performance
