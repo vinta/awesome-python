@@ -1163,6 +1163,7 @@ Online tools and APIs to simplify development.
 
 ## Code Quality
 
+* [Codacy](https://www.codacy.com/) - Automated Code Review to ship better code, faster. Free for Open Source.
 * [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
 
 # Resources
