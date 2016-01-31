@@ -620,6 +620,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 *Libraries for parsing URLs.*
 
+* [urlobject](https://github.com/zacharyvoase/urlobject) - Python library for manipulating URLs (and some URIs) in a more natural way.
 * [furl](https://github.com/gruns/furl) - A small Python library that makes manipulating URLs simple.
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
