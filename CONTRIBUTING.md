@@ -4,7 +4,7 @@ Your contributions are always welcome!
 
 ## Guidelines
 
-* Don't add your own stuff - wait for it to become so awesome that somebody else adds it
+* Don't add your own stuff - wait for it to become so awesome that somebody else adds it.
 * Add one link per Pull Request.
 * Add the link: `* [project-name](http://example.com/) - A short description ends with a period.`
     * Keep descriptions concise.
