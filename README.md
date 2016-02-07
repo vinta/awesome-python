@@ -135,6 +135,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
 * [pynsist](http://pynsist.readthedocs.org/en/latest/) - A tool to build Windows installers, installers bundle Python itself.
+* [Flit](https://github.com/takluyver/flit) - Tool for simple creation of Python wheels and uploading to PyPi
 
 ## Build Tools
 
