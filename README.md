@@ -1185,6 +1185,7 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
+* [PythonDigest](http://pythondigest.ru/) - *Russain* digest
 
 ## Twitter
 
