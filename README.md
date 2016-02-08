@@ -296,6 +296,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [mycli](https://github.com/dbcli/mycli) - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
+    * [Watson](https://github.com/TailorDev/Watson) - A wonderful CLI to track your time!
 
 ## Downloader
 
