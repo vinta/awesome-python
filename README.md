@@ -236,6 +236,8 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
+* Other
+    * [FoLiA-tools](https://proycon.github.io/folia) - Tools and libraries for FoLiA: Format for Linguistic Annotation.
 
 ## Natural Language Processing
 
@@ -245,6 +247,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Jieba](https://github.com/fxsjy/jieba) - Chinese text segmentation.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
+* [PyNLPl](https://github.com/proycon/pynlpl) - A specialized Python Natural Language Processing library.
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [TextBlob](http://textblob.readthedocs.org/en/latest/) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
