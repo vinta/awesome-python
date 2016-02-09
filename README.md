@@ -245,6 +245,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Jieba](https://github.com/fxsjy/jieba) - Chinese text segmentation.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
+* [python-frog](https://github.com/proycon/python-frog) - Python binding for an extensive Dutch NLP suite. 
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [TextBlob](http://textblob.readthedocs.org/en/latest/) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
