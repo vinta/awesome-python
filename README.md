@@ -114,6 +114,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
+* [Olaf](https://github.com/hactar-is/olaf) - Olaf helps you manage dependencies in multiple requirements files.
 
 ## Package Repositories
 
