@@ -312,7 +312,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [pillow](http://pillow.readthedocs.org/en/latest/) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
-* [imgSeek](http://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
+* [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [pyBarcode](https://pythonhosted.org/pyBarcode/) - Create barcodes in Python without needing PIL.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
@@ -391,7 +391,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for connecting and operating databases.*
 
 * MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
-    * [mysql-python](http://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
+    * [mysql-python](https://sourceforge.net/projects/mysql-python/) - The MySQL database connector for Python.
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - mysql-python fork supporting Python 3.
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - Pure Python MySQL driver compatible to mysql-python.
@@ -892,7 +892,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
 * Linter
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
-    * [Pylint](http://www.pylint.org/) - A Fully customizable source code analyzer.
+    * [Pylint](https://www.pylint.org/) - A Fully customizable source code analyzer.
     * [pylama](https://pylama.readthedocs.org/en/latest/) - Code audit tool for Python and JavaScript.
 
 ## Debugging Tools
@@ -1073,7 +1073,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Python(x,y)](http://python-xy.github.io/) - Scientific-applications-oriented Python Distribution based on Qt and Spyder.
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows binaries for Python extension packages.
 * [PythonNet](https://github.com/pythonnet/pythonnet) - Python Integration with the .NET Common Language Runtime (CLR).
-* [PyWin32](http://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
+* [PyWin32](https://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
 * [WinPython](https://winpython.github.io/) - Portable development environment for Windows 7/8.
 
 ## Network Virtualization and SDN
