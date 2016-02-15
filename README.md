@@ -1190,6 +1190,7 @@ Where to discover new Python libraries.
 
 * [@codetengu](https://twitter.com/codetengu)
 * [@getpy](https://twitter.com/getpy)
+* [@importpython](https://twitter.com/importpython)
 * [@planetpython](https://twitter.com/planetpython)
 * [@pycoders](https://twitter.com/pycoders)
 * [@pypi](https://twitter.com/pypi)
