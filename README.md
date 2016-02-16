@@ -233,7 +233,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * CSV
-    * [csvkit](https://github.com/onyxfish/csvkit) - Utilities for converting to and working with CSV.
+    * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
