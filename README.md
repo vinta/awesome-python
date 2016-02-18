@@ -399,6 +399,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](http://txpostgres.readthedocs.org/en/latest/) - Twisted based asynchronous driver for PostgreSQL.
+    * [little_pger](https://github.com/cjauvin/little_pger) - PostgreSQL query building with plain data strutures.
 * Other Relational Databases
     * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
