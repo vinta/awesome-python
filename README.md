@@ -790,6 +790,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
 * [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+* [Thrift](https://github.com/apache/thrift) - Interface definition language and binary communication protocol that is used to define and create services for numerous languages.
 
 ## Cryptography
 
