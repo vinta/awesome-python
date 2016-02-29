@@ -99,6 +99,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 *Libraries for Python version and environment management.*
 
 * [p](https://github.com/qw3rtman/p) - Dead simple interactive Python version management.
+* [pew](https://pypi.python.org/pypi/pew/) - A set of tools to manage multiple virtual environments.
 * [pyenv](https://github.com/yyuu/pyenv) - Simple Python version management.
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
