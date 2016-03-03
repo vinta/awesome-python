@@ -537,7 +537,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 * [Jinja2](https://github.com/mitsuhiko/jinja2) - A modern and designer friendly templating language.
 * [Chameleon](https://chameleon.readthedocs.org/en/latest/) - An HTML/XML template engine. Modeled after ZPT, optimized for speed.
-* [Genshi](http://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
+* [Genshi](https://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
 
 ## Queue
