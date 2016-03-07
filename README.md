@@ -1000,6 +1000,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+* [pyrsistent](https://github.com/tobgu/pyrsistent) - Persistent/Immutable/Functional data structures for Python.
 
 ## Third-party APIs
 
