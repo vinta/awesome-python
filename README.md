@@ -834,7 +834,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](http://pysdl2.readthedocs.org/en/latest/) - A ctypes based wrapper for the SDL2 library.
-* [RenPy](http://www.renpy.org/) - A Visual Novel engine.
+* [RenPy](https://www.renpy.org/) - A Visual Novel engine.
 
 ## Logging
 
