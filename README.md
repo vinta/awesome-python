@@ -459,6 +459,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [Carteblanche](https://github.com/neuman/python-carteblanche/) - Module to align code with thoughts of users and designers. Also magically handles navigation and permissions.
 * [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
 * [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
+* [permission](https://github.com/hustlzp/permission) - Simple (zero dependency) and flexible permission control module (sutable for any framework).
 
 ## CMS
 
