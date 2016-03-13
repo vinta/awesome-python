@@ -83,6 +83,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
     - [IDEs](#ides)
+    - [Challenge Sites](#challenge-sites)
 - [Services](#services)
     - [Continuous Integration](#continuous-integration)
     - [Code Quality](#code-quality)
@@ -90,7 +91,6 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
-- [Challenge Sites](#challenge-sites)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -1155,6 +1155,10 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
 
+## Challenge Sites
+
+* [Kaggle](https://www.kaggle.com/scripts)
+
 # Services
 
 Online tools and APIs to simplify development.
@@ -1205,12 +1209,6 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
-
-# Challenge Sites
-
-Scripts for challenges.
-
-* [Kaggle](https://www.kaggle.com/scripts)
 
 # Other Awesome Lists
 
