@@ -564,6 +564,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
 * [elasticsearch-py](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 * [elasticsearch-dsl-py](https://github.com/elastic/elasticsearch-dsl-py) - The official high-level Python client for Elasticsearch.
+* [esengine](https://github.com/catholabs/esengine) - ElasticSearch ODM (Object Document Mapper) for Python.
 * [solrpy](https://github.com/edsu/solrpy) - A Python client for [solr](http://lucene.apache.org/solr/).
 * [Whoosh](http://whoosh.readthedocs.org/en/latest/) - A fast, pure Python search engine library.
 
