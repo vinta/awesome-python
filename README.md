@@ -1157,7 +1157,9 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 
 ## Challenge Sites
 
-* [Kaggle](https://www.kaggle.com/scripts)
+*Popular challenge sites.*
+
+* [Kaggle](https://www.kaggle.com/scripts?language=Python) - Create and share data science work on Kaggle.
 
 # Services
 
