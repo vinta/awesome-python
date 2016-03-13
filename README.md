@@ -90,6 +90,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
+- [Challenge Sites](#challenge-sites)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -1204,6 +1205,12 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
+
+# Challenge Sites
+
+Scripts for challenges.
+
+* [Kaggle](https://www.kaggle.com/scripts)
 
 # Other Awesome Lists
 
