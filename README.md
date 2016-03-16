@@ -766,6 +766,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [diesel](https://github.com/dieseldev/diesel) - Greenlet-based event I/O Framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
+* [dpkt](https://github.com/kbandla/dpkt) - Fast, simple packet creation / parsing, with definitions for the basic TCP/IP protocols.
 
 ## WebSocket
 
