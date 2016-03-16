@@ -858,6 +858,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
+    * [sure](https://github.com/gabrielfalcao/sure) - A testing library with powerful and flexible assertions
     * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
     * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
