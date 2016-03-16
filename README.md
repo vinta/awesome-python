@@ -1181,7 +1181,7 @@ Where to discover new Python libraries.
 * [r/Python](https://www.reddit.com/r/python)
 * [CoolGithubProjects](https://www.coolgithubprojects.com/)
 * [Django Packages](https://www.djangopackages.com/)
-* [Full Stack Python](http://www.fullstackpython.com/)
+* [Full Stack Python](https://www.fullstackpython.com/)
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
 * [Python Hackers](http://pythonhackers.com/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
