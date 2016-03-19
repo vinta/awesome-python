@@ -224,6 +224,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [xlwings](http://xlwings.org/) - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
     * [relatorio](http://relatorio.tryton.org/) - Templating OpenDocument files.
+    * [pyexcel](http://pyexcel.readthedocs.org/en/latest/) - Python Wrapper that provides one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files
 * PDF
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
@@ -249,6 +250,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [TextBlob](http://textblob.readthedocs.org/en/latest/) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
+* [Spacy.io](https://spacy.io/) - spaCy is a library for industrial-strength natural language processing in Python and Cython.
 
 ## Documentation
 
