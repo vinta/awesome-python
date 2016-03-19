@@ -1222,4 +1222,4 @@ List of lists.
 
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
 
-I would keep some pull requests open if I'm not sure whether the libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by leaving a comment that contains `+1`.
+I would keep some pull requests open if I'm not sure whether the libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by adding :+1: or :-1: to them.
