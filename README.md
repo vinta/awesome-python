@@ -1036,11 +1036,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [Docker Compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
-* [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
+* [Cloud-Init](http://cloudinit.readthedocs.org/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
+* [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
-* [gitapi](https://bitbucket.org/haard/gitapi) - Pure-Python API for Git.
-* [hgapi](https://bitbucket.org/haard/hgapi) - Pure-Python API for Mercurial.
 * [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
