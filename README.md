@@ -856,13 +856,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Testing Frameworks
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
     * [nose](https://nose.readthedocs.org/en/latest/) - nose extends unittest.
-    * [contexts](https://github.com/benjamin-hodgson/Contexts) - A BDD framework for Python 3.3+. Inspired by C#'s `Machine.Specifications`.
+    * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
     * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
-    * [pyshould](https://github.com/drslump/pyshould) - Should style asserts based on [PyHamcrest](https://github.com/hamcrest/PyHamcrest).
-    * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
-    * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
-    * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](https://github.com/vowsjs/vows).
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
     * [tox](https://tox.readthedocs.org/en/latest/) - Auto builds and tests [distributions](#distribution) in multiple Python versions using isolated and configurable virtualenvs.
 * GUI / Web Testing
