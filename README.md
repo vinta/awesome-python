@@ -860,7 +860,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
-    * [tox](https://tox.readthedocs.org/en/latest/) - Auto builds and tests [distributions](#distribution) in multiple Python versions using isolated and configurable virtualenvs.
+* Test Runners
+    * [tox](https://tox.readthedocs.org/en/latest/) - Auto builds and tests distributions in multiple Python versions
+    * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
 * GUI / Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
