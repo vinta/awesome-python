@@ -863,7 +863,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
     * [pyvows](http://heynemann.github.io/pyvows/) - BDD style testing for Python. Inspired by [Vows.js](https://github.com/vowsjs/vows).
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
-    * [tox](https://tox.readthedocs.org/) - Auto builds and tests [distributions](#distribution) in multiple Python versions using isolated and configurable [environments](#environment-management).
+    * [tox](https://tox.readthedocs.org/en/latest/) - Auto builds and tests [distributions](#distribution) in multiple Python versions using isolated and configurable [environments](#environment-management).
 * Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
