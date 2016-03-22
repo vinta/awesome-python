@@ -604,6 +604,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
+* [rc](https://github.com/fengsp/rc) - Redis cache system that can build cluster and batch fetch cache results in parallel.
 
 ## Email
 
