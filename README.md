@@ -604,6 +604,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for django applications.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
+* [django-memoize](https://github.com/tvavrys/django-memoize) - An implementation
+of [memoization](http://en.wikipedia.org/wiki/Memoization) technique
+for Django.
 
 ## Email
 
