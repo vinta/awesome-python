@@ -750,6 +750,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [envoy](https://github.com/kennethreitz/envoy) - Python [subprocess](https://docs.python.org/2/library/subprocess.html) for Humans™.
 * [sarge](http://sarge.readthedocs.org/en/latest/) - Yet another wrapper for subprocess.
 * [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+* [nanomsg](https://github.com/tonysimpson/nanomsg-python) - A socket library that provides several common communication patterns(scalability protocols).
 
 ## Concurrency and Parallelism
 
