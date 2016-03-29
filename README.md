@@ -1198,6 +1198,8 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
+* [Podcast.\_\_init\_\_](http://podcastinit.com/) - Podcast
+* [Talk Python To Me](https://talkpython.fm/) - Podcast
 
 ## Twitter
 
