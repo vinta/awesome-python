@@ -702,6 +702,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
+* [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 * [Cerberus](https://github.com/nicolaiarocci/cerberus/) - A lightweight and extensible data validation library.
 * [colander](http://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
