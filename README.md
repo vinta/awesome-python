@@ -156,6 +156,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Jupyter Notebook (IPython)](https://jupyter.org) -  A rich toolkit to help you make the most out of using Python interactively.
 * [bpython](https://github.com/bpython/bpython) – A fancy interface to the Python interpreter.
 * [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
+* [DreamPie](https://github.com/noamraph/dreampie) – A GUI based REPL for all major platforms.
 
 ## Files
 
