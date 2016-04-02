@@ -700,13 +700,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for validating data. Used for forms in many cases.*
 
-* [Cerberus](http://docs.python-cerberus.org/en/stable/) - A mappings-validator with a variety of rules, normalization-features and simple customization that uses a pythonic schema-definition.
-* [colander](http://docs.pylonsproject.org/projects/colander/en/latest/) - A system for validating and deserializing data obtained via XML, JSON, an HTML form post or any other equally simple data serialization.
-* [kmatch](https://github.com/ambitioninc/kmatch) - A language for matching/validating/filtering Python dictionaries.
-* [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
+* [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
+* [Cerberus](https://github.com/nicolaiarocci/cerberus/) - A lightweight and extensible data validation library.
+* [colander](http://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
+* [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
-* [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library. It is primarily intended for validating data coming into Python as JSON, YAML, etc.
 
 ## Anti-spam
 
