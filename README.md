@@ -881,6 +881,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [httpretty](http://falcao.it/HTTPretty/) - HTTP request mock tool for Python.
     * [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
+    * [django-mock-queries](https://github.com/stphivos/django-mock-queries) - A library for mocking django queryset functions.
 * Object Factories
     * [factory_boy](https://github.com/rbarrois/factory_boy) - A test fixtures replacement for Python.
     * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
