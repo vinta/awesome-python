@@ -940,6 +940,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [blaze](http://blaze.readthedocs.org/en/latest/index.html) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
+* [MNE](http://martinos.org/mne/stable/index.html) - Data analysis and visualization for electrophysiology in neuroscience.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
 * [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
