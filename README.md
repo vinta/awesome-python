@@ -288,6 +288,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
+    * [hug](https://github.com/timothycrosley/hug) - A Python3 Library for cleanly exposing APIs over HTTP and the Command Line
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
@@ -454,6 +455,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Bottle](http://bottlepy.org/docs/dev/index.html) - A fast, simple and lightweight WSGI micro web-framework.
 * [CherryPy](http://www.cherrypy.org/) - A minimalist Python web framework, HTTP/1.1-compliant and WSGI thread-pooled.
+* [hug](https://github.com/timothycrosley/hug) - A Python3 Library for cleanly exposing APIs over HTTP and the Command Line
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
