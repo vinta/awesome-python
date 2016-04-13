@@ -1127,6 +1127,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [wad](https://github.com/CERN-CERT/WAD) - Detect web site software and libraries.
 
 ## Algorithms and Design Patterns
 
