@@ -253,6 +253,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [TextBlob](http://textblob.readthedocs.org/en/latest/) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
+* [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages
 
 ## Documentation
 
