@@ -449,6 +449,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
     * [awesome-django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
+    * [Flask-AppBuilder](https://github.com/dpgaspar/Flask-AppBuilder) - Simple and rapid application development framework, built on top of Flask.
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
