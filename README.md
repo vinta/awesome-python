@@ -995,6 +995,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pydeep](https://github.com/andersbll/deeppy)-Deep learning in python
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [skflow](https://github.com/tensorflow/skflow) - A simplified interface for [TensorFlow](https://github.com/tensorflow/tensorflow) (mimicking scikit-learn).
+* [keras](https://github.com/fchollet/keras) - Deep Learning library for Python. ConvNets, recurrent neural networks, and more. Runs on Theano and TensorFlow.
 
 ## MapReduce
 
