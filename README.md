@@ -1160,6 +1160,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+* [Ninja IDE](http://ninja-ide.org/) - Open Source Python IDE that is available for any of the operating systems.
 
 # Services
 
