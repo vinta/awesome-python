@@ -864,7 +864,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
     * [nose](https://nose.readthedocs.org/en/latest/) - nose extends unittest.
     * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
-    * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
+    * [hypothesis](https://github.com/HypothesisWorks/hypothesis-python) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 * Test Runners
