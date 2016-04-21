@@ -73,6 +73,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Machine Learning](#machine-learning)
     - [Functional Programming](#functional-programming)
     - [MapReduce](#mapreduce)
+    - [Reactive Programming](#reactive-programming)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
     - [Job Scheduler](#job-scheduler)
@@ -1017,6 +1018,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+
+## Reactive Programming
+
+*Reactive Programming Libraries.*
+
+* [RxPY](https://github.com/ReactiveX/RxPY) - Reactive extensions library for composing asynchronous, event-based programs.
 
 ## Third-party APIs
 
