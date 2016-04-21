@@ -729,7 +729,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
 * [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
-* [django-xadmin](https://github.com/sshwsfc/django-xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
+* [django-xadmin](https://github.com/sshwsfc/xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 * [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
@@ -863,7 +863,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
     * [nose](https://nose.readthedocs.org/en/latest/) - nose extends unittest.
     * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
-    * [hypothesis](https://github.com/DRMacIver/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
+    * [hypothesis](https://github.com/HypothesisWorks/hypothesis-python) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 * Test Runners
