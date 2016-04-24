@@ -958,6 +958,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
+* [CoolProp] (http://www.coolprop.org/) - Open-source thermodynamic and transport properties database
 
 ## Data Visualization
 
