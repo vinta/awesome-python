@@ -420,6 +420,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
+* Oracle
+    * [cx_Oracle](http://cx-oracle.sourceforge.net/) - Python driver for Oracle.
 
 ## ORM
 
