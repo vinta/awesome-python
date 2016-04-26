@@ -875,6 +875,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://splinter.readthedocs.org/en/latest/) - Open source tool for testing web applications.
     * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
+    * [pywinauto](https://github.com/pywinauto/pywinauto) - Pythonic desktop GUI automation on Windows.
+    * [pyatom](https://github.com/pyatom/pyatom) - Desktop GUI automation on Mac OS X.
 * Mock
     * [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
     * [doublex](https://pypi.python.org/pypi/doublex) - Powerful test doubles framework for Python.
@@ -1171,6 +1173,7 @@ Online tools and APIs to simplify development.
 *See: [awesome-CIandCD](https://github.com/ciandcd/awesome-ciandcd#online-build-system).*
 
 * [Travis CI](https://travis-ci.org) - A popular CI service for your open source and [private](https://travis-ci.com) projects. (GitHub only)
+* [AppVeyor CI](https://ci.appveyor.com) - A Windows-based CI service. Free for Open Source.
 * [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing. (GitHub only)
 * [Vexor CI](https://vexor.io) - A continuous integration tool for private apps with pay-per-minute billing model.
 * [Wercker](http://wercker.com/) - A Docker-based platform for building and deploying applications and microservices.
@@ -1179,6 +1182,7 @@ Online tools and APIs to simplify development.
 
 * [Codacy](https://www.codacy.com/) - Automated Code Review to ship better code, faster. Free for Open Source.
 * [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
+* [Landscape](https://landscape.io) - A popupar Code Quality service. Free for Open Source. Integrated with GitHub (Webhooks->Services).
 
 # Resources
 
