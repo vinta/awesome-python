@@ -523,6 +523,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for serializing complex data types*
 
 * [marshmallow](http://marshmallow.readthedocs.org/en/latest/) - marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
+* [feather](https://github.com/wesm/feather) - fast, interoperable binary data frame storage for Python, R, and more powered by Apache Arrow. Serialization speed is more than 600MB/s on average laptop.
 
 ## Authentication
 
