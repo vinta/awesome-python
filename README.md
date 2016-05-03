@@ -22,7 +22,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Downloader](#downloader)
     - [Imagery](#imagery)
     - [OCR](#ocr)
-    - [Audio](#audio)
+    - [Audio](#audio) 
     - [Video](#video)
     - [Geolocation](#geolocation)
     - [HTTP](#http)
