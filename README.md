@@ -1108,6 +1108,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 * [wifi](https://wifi.readthedocs.org/en/latest/) - A Python library and command line tool for working with WiFi on Linux.
 * [Pingo](http://www.pingo.io/) - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo, etc.
+* [Bluetooth](http://karulis.github.io/pybluez/) - pybluez is a Python extension module allowing access to system Bluetooth resources
 
 ## Compatibility
 
