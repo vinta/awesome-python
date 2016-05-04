@@ -30,6 +30,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
     - [Web Frameworks](#web-frameworks)
+    - [Serverless Frameworks](#serverless-frameworks)
     - [Permissions](#permissions)
     - [CMS](#cms)
     - [E-commerce](#e-commerce)
@@ -458,6 +459,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
+
+## Serverless Frameworks
+
+*Frameworks for developing serverless Python code.*
+
+* [apex](https://github.com/apex/apex) - Build, deploy, and manage [AWS Lambda](https://aws.amazon.com/lambda/) functions with ease.
+* [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
+* [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
 
 ## Permissions
 
