@@ -139,6 +139,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
 * [pynsist](http://pynsist.readthedocs.org/en/latest/) - A tool to build Windows installers, installers bundle Python itself.
+* [cx_Freeze](http://cx-freeze.sourceforge.net/) - Freezes Python scripts into executables, cross platform.
 
 ## Build Tools
 
