@@ -1182,7 +1182,9 @@ Online tools and APIs to simplify development.
 
 ## Code Quality
 
+* [Codecov](https://codecov.io/) - Code coverage dashboard.
 * [Codacy](https://www.codacy.com/) - Automated Code Review to ship better code, faster. Free for Open Source.
+* [Landscape](https://landscape.io/) - Hosted continuous Python code metrics.
 * [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
 
 # Resources
