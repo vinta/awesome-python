@@ -1203,6 +1203,7 @@ Where to discover new Python libraries.
 
 ## Weekly
 
+* [CodeTengu Weekly](http://weekly.codetengu.com/)
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
