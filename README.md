@@ -692,6 +692,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [sanitize](https://github.com/Alir3z4/python-sanitize) - Bringing sanity to world of messed-up data.
 * [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
+* [aeries](https://github.com/shreydesai/aeries) - Parses grade book data from the Aeries Student Information System.
 
 ## Forms
 
