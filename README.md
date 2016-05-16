@@ -2,7 +2,7 @@
 
 A curated list of awesome Python frameworks, libraries, software and resources.
 
-Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
+Inspired by [Awesome-PHP](https://github.com/ziadoz/awesome-php).
 
 - [Awesome Python](#awesome-python)
     - [Environment Management](#environment-management)
