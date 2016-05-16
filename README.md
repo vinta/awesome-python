@@ -1045,6 +1045,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [Docker Compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
+* [Errbot](http://errbot.io/) - The easiest and most popular chatbot to implement ChatOps.
 * [Cloud-Init](http://cloudinit.readthedocs.io/) - A multi-distribution package that handles early initialization of a cloud instance.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
 * [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
