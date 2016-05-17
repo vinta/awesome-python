@@ -76,6 +76,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
+    - [ChatOps Tools](#chatops-tools)
     - [Job Scheduler](#job-scheduler)
     - [Foreign Function Interface](#foreign-function-interface)
     - [High Performance](#high-performance)
@@ -1045,7 +1046,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [Docker Compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
-* [Errbot](http://errbot.io/) - The easiest and most popular chatbot to implement ChatOps.
 * [Cloud-Init](http://cloudinit.readthedocs.io/) - A multi-distribution package that handles early initialization of a cloud instance.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
 * [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
@@ -1054,6 +1054,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+
+## ChatOps Tools
+
+*Libraries for chatbot development.*
+
+* [Errbot](http://errbot.io/) - The easiest and most popular chatbot to implement ChatOps.
 
 ## Job Scheduler
 
