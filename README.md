@@ -1237,6 +1237,7 @@ List of lists.
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
+    * [python_tensorFlow_Examples](https://github.com/aymericdamien/TensorFlow-Examples)
 * Monty
     * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
