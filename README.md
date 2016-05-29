@@ -1238,6 +1238,7 @@ List of lists.
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [python_tensorFlow_Examples](https://github.com/aymericdamien/TensorFlow-Examples)
+    * [python_open_source_financial_library](https://github.com/thalesians/pythalesians)
 * Monty
     * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
