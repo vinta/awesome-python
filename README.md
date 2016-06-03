@@ -255,6 +255,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [TextBlob](https://github.com/sloria/TextBlob) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
+* [gensim](http://radimrehurek.com/gensim/) - A vector space modelling and topic modelling toolkit.
 
 ## Documentation
 
