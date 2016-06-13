@@ -1209,6 +1209,7 @@ Where to discover new Python libraries.
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
+* [Awesome Python @LibHunt](http://python.libhunt.com)
 
 ## Weekly
 
