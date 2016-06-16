@@ -1194,6 +1194,9 @@ Online tools and APIs to simplify development.
 * [Landscape](https://landscape.io/) - Hosted continuous Python code metrics.
 * [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
 
+## Agent-based Modeling
+* [Mesa](http://mesa.readthedocs.io/en/latest/) -  an Apache2 licensed agent-based modeling (or ABM) framework in Python..
+
 # Resources
 
 Where to discover new Python libraries.
