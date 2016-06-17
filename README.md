@@ -290,6 +290,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
+    * [tqdm] (https://github.com/tqdm/tqdm) - Add a progress meter to your loops in a second.
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
