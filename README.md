@@ -780,6 +780,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [diesel](https://github.com/dieseldev/diesel) - Greenlet-based event I/O Framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
+* [pyuv](https://github.com/saghul/pyuv) - Python interface for libuv, a high performance asynchronous networking and platform abstraction library.
 
 ## WebSocket
 
