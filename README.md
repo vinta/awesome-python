@@ -1232,8 +1232,8 @@ Where to discover new Python libraries.
  
 ## Podcasts
 
-* [Podcast.\__init__](http://podcastinit.com/) - Podcast
-* [Talk Python To Me](https://talkpython.fm/) - Podcast
+* [Podcast.\__init__](http://podcastinit.com/)
+* [Talk Python To Me](https://talkpython.fm/)
 
 # Other Awesome Lists
 
