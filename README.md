@@ -94,6 +94,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
+    - [Podcasts](#podcasts)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -1217,8 +1218,6 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
-* [Podcast.\__init__](http://podcastinit.com/) - Podcast
-* [Talk Python To Me](https://talkpython.fm/) - Podcast
 
 ## Twitter
 
@@ -1230,6 +1229,11 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
+ 
+## Podcasts
+
+* [Podcast.\__init__](http://podcastinit.com/) - Podcast
+* [Talk Python To Me](https://talkpython.fm/) - Podcast
 
 # Other Awesome Lists
 
