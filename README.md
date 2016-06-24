@@ -1232,7 +1232,7 @@ Where to discover new Python libraries.
  
 ## Podcasts
 
-* [Podcast.\__init__](http://podcastinit.com/)
+* [Podcast.init](http://podcastinit.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 
 # Other Awesome Lists
