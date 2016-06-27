@@ -1234,6 +1234,7 @@ Where to discover new Python libraries.
 
 * [Podcast.init](http://podcastinit.com/)
 * [Talk Python To Me](https://talkpython.fm/)
+* [Test and Code Podcast](http://pythontesting.net/test-podcast/)
 
 # Other Awesome Lists
 
