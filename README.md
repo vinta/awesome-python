@@ -117,6 +117,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pip](https://pip.pypa.io/en/stable/) - The Python package and dependency manager.
     * [Python Package Index](https://pypi.python.org/pypi)
 * [pip-tools](https://github.com/nvie/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
+* [pbr](https://github.com/openstack-dev/pbr) - Python Build Reasonableness. OpenStack project that injects some useful and sensible default behaviors into your setuptools run.
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
