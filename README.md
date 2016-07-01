@@ -376,6 +376,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 * [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
 * [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides country choices for use with forms, flag icons static files, and a country field for models.
+* [uszipcode](https://github.com/MacHu-GWU/uszipcode-project) - Powerful USA programmable Zipcode database.
 
 ## HTTP
 
