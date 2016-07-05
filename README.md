@@ -917,7 +917,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [coala](http://coala-analyzer.org/) - Language independent and easily extendable code analysis application.
 * Linter
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
-    * [Pyflakes](https://github.com/PyCQA/pyflakes) - A simple program which checks Python source files for errors.
     * [Pylint](https://www.pylint.org/) - A Fully customizable source code analyzer.
     * [pylama](https://github.com/klen/pylama) - Code audit tool for Python and JavaScript.
 
