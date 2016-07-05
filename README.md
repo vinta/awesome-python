@@ -196,6 +196,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
     * [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
     * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts for CJK and alphanumerics.
+    * [pyaddress](https://github.com/SwoopSearch/pyaddress) - Taking the guesswork out of using addresses in your applications
     * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
     * [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
     * [unidecode](https://pypi.python.org/pypi/Unidecode) - ASCII transliterations of Unicode text.
