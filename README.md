@@ -925,6 +925,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Debugger
     * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
+    * [pdb++](https://pypi.python.org/pypi/pdbpp) - Extension of the [pdb](https://docs.python.org/2/library/pdb.html) introduces a number of new features.
     * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
     * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
