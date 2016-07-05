@@ -988,6 +988,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
+* [Mahotas](https://github.com/luispedro/mahotas) - An open source library of fast computer vision algorithms (all implemented in C++) operating over numpy arrays.
 
 ## Machine Learning
 
