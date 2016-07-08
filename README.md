@@ -256,7 +256,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [TextBlob](https://github.com/sloria/TextBlob) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
-
+* [pymorphy2](https://github.com/kmike/pymorphy2) - Morphological analyzer / inflection engine for Russian and Ukrainian languages.
 ## Documentation
 
 *Libraries for generating project documentation.*
