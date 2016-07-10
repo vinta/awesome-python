@@ -94,6 +94,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Websites](#websites)
     - [Weekly](#weekly)
     - [Twitter](#twitter)
+    - [Podcasts](#podcasts)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -662,6 +663,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
 * [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access.
 * [xhtml2pdf](https://github.com/xhtml2pdf/xhtml2pdf) - HTML/CSS to PDF converter.
+* [xmldataset](https://xmldataset.readthedocs.io) - Simple XML Parsing.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
 ## Web Crawling
@@ -1229,6 +1231,11 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
+ 
+## Podcasts
+
+* [Podcast.init](http://podcastinit.com/)
+* [Talk Python To Me](https://talkpython.fm/)
 
 # Other Awesome Lists
 
