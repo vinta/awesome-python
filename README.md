@@ -290,6 +290,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
+    * [progressbar2](http://progressbar-2.readthedocs.io/en/latest/) - Progressbar library providing visual (yet text based) progress for long running operations.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
@@ -1230,7 +1231,7 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
- 
+
 ## Podcasts
 
 * [Podcast.init](http://podcastinit.com/)
