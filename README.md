@@ -879,6 +879,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
 * GUI / Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
+    * [ExpAn](http://github.com/zalando/expan) - Free, open-source A/B testing library.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
