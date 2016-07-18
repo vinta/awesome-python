@@ -520,6 +520,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flask-restless](https://github.com/jfinkels/flask-restless) - Generating RESTful APIs for database models defined with SQLAlchemy.
     * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Taking care of API representation and authentication for Flask.
     * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
+    * [Connexion](https://github.com/zalando/connexion) - Swagger/OpenAPI First framework with automatic endpoint validation and OAuth2 support.
 * Pyramid
     * [cornice](https://github.com/mozilla-services/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
