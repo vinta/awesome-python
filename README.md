@@ -1241,7 +1241,7 @@ Where to discover new Python libraries.
 List of lists.
 
 * Python
-    * [pycrumbs](https://github.com/kirang89/pycrumbs/blob/master/pycrumbs.md)
+    * [pycrumbs](https://github.com/kirang89/pycrumbs)
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
