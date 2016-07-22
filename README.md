@@ -1167,6 +1167,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Python-mode](https://github.com/klen/python-mode) - An all in one plugin for turning Vim into a Python IDE.
 * Visual Studio
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
+* Visual Studio Code
+    * [PythonVSCode](http://donjayamanne.github.io/pythonVSCode) - Python support for Visual Studio Code
 
 ## IDEs
 
