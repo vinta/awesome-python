@@ -421,6 +421,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [PyMongo](https://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+    * [rethinkdb](https://www.rethinkdb.com/docs/install-drivers/python/) - The Official driver for RethinkDB.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
@@ -1230,7 +1231,7 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
- 
+
 ## Podcasts
 
 * [Podcast.init](http://podcastinit.com/)
