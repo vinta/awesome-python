@@ -1203,7 +1203,7 @@ Where to discover new Python libraries.
 ## Websites
 
 * [r/Python](https://www.reddit.com/r/python)
-* [CoolGithubProjects](https://www.coolgithubprojects.com/)
+* [/r/CoolGithubProjects](https://www.reddit.com/r/coolgithubprojects/)
 * [Django Packages](https://www.djangopackages.com/)
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
