@@ -632,6 +632,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [modoboa](https://github.com/tonioo/modoboa) - A mail hosting and management platform including a modern and simplified Web UI.
 * [Nylas Sync Engine](https://github.com/nylas/sync-engine) - Providing a RESTful API on top of a powerful email sync platform.
 * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* [django-db-mailer](https://github.com/LPgenerator/django-db-mailer) - Django module to easily send emails/sms/tts/push using django templates stored on database and managed through the Django Admin.
 
 ## Internationalization
 
