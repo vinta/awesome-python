@@ -1062,6 +1062,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [Errbot](http://errbot.io/) - The easiest and most popular chatbot to implement ChatOps.
+* [MattermostBot](https://github.com/LPgenerator/mattermost_bot) - A chat bot for MatterMost.
 
 ## Job Scheduler
 
