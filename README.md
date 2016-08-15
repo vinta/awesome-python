@@ -469,6 +469,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [apex](https://github.com/apex/apex) - Build, deploy, and manage [AWS Lambda](https://aws.amazon.com/lambda/) functions with ease.
 * [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
+* [chalice](https://github.com/awslabs/chalice) - Python Serverless Microframework for AWS.
 
 ## Permissions
 
