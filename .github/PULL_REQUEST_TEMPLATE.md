@@ -1,6 +1,10 @@
-## Why this framework/library/software/resource is awesome?
+## What is this Python project?
 
-A few sentences describing the reason.
+Describe features.
+
+## What's the difference between this Python project and similar ones?
+
+Enumerate comparisons.
 
 --
 
