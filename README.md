@@ -978,6 +978,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [pygraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+* [Seaborn](https://stanford.edu/~mwaskom/software/seaborn/) - Statistical data visualization from Stanford
 * [SnakeViz](http://jiffyclub.github.io/snakeviz/) - A browser based graphical viewer for the output of Python's cProfile module.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
@@ -993,6 +994,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [brew] (https://pypi.python.org/pypi/brew/0.1.3) - Ensemble learning methods
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
 * [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
