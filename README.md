@@ -528,6 +528,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
     * [restless](https://github.com/toastdriven/restless) - Framework agnostic REST framework based on lessons learned from Tastypie.
     * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs.
+ * Miscellaneous
+    * [CLAM](https://proycon.github.io/clam) - A high-level tool to quickly build RESTful webservices and web applications for command-line tools.
 
 ## Serialization
 
