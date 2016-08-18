@@ -1104,7 +1104,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows binaries for Python extension packages.
 * [PythonNet](https://github.com/pythonnet/pythonnet) - Python Integration with the .NET Common Language Runtime (CLR).
 * [PyWin32](https://sourceforge.net/projects/pywin32/) - Python Extensions for Windows.
-* [pywinauto] (https://pywinauto.github.io/) - Windows GUI Automation.
+  * [pywinauto] (https://pywinauto.github.io/) - Windows GUI Automation, based on PyWin32.
 * [WinPython](https://winpython.github.io/) - Portable development environment for Windows 7/8.
 
 ## Network Virtualization and SDN
