@@ -840,6 +840,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [PyGObject](https://wiki.gnome.org/Projects/PyGObject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3)
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
+* [Rapyd-Tk](http://www.bitflipper.ca/rapyd/) - Tk GUI builder tool
 
 ## Game Development
 
