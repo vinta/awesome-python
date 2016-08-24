@@ -1046,6 +1046,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Software and libraries for DevOps.*
 
 * [Ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
+* [RhodeCode](https://rhodecode.com/) - Powerful open source repository management (Git, SVN, Mercurial) written in Python.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [Docker Compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
