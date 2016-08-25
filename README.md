@@ -1144,6 +1144,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [Injector](https://github.com/alecthomas/injector) - A dependency injection framework, inspired by Guice.
 
 ## Algorithms and Design Patterns
 
