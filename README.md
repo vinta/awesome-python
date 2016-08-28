@@ -980,6 +980,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pygraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [SnakeViz](http://jiffyclub.github.io/snakeviz/) - A browser based graphical viewer for the output of Python's cProfile module.
+* [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using matplotlib.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
 
