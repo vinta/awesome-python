@@ -120,6 +120,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
+* [yolk3k](https://github.com/myint/yolk) - Command-line tool for querying PyPI and Python packages installed on your system (with Python 3 support).
 
 ## Package Repositories
 
