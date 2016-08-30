@@ -159,6 +159,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Jupyter Notebook (IPython)](https://jupyter.org) -  A rich toolkit to help you make the most out of using Python interactively.
 * [bpython](https://github.com/bpython/bpython) – A fancy interface to the Python interpreter.
 * [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
+* [Rodeo] (https://github.com/yhat/rodeo/) - A browser-based IDE for data science, alternative to IPython Notebook, inspired by Sublime Text and Eclipse.
 
 ## Files
 
