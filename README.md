@@ -151,6 +151,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PlatformIO](https://github.com/platformio/platformio) - A console tool to build code with different development platforms.
 * [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
+* [family](https://github.com/daixm/family) - A tool to create Falcon and Flask projects easily.
 
 ## Interactive Interpreter
 
