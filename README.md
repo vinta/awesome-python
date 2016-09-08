@@ -413,6 +413,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
     * [pymssql](http://www.pymssql.org/en/latest/) - A simple database interface to Microsoft SQL Server.
+    * [pyodbc](https://github.com/mkleehammer/pyodbc) - An open source Python module that simplifies database connections via ODBC.
 * NoSQL Databases
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [HappyBase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
@@ -783,6 +784,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [diesel](https://github.com/dieseldev/diesel) - Greenlet-based event I/O Framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
 * [txZMQ](https://github.com/smira/txZMQ) - Twisted based wrapper for the ZeroMQ message library.
+* [netaddr](https://github.com/drkjam/netaddr) - A network address manipulation library.
 
 ## WebSocket
 
