@@ -482,6 +482,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [flask-api](http://www.flaskapi.org/) - An implementation of the same web browsable APIs that django-rest-framework provides.
 * [flask-restful](http://flask-restful.readthedocs.org/) - An extension for Flask that adds support for quickly building REST APIs.
 * [flask-restless](https://flask-restless.readthedocs.org/en/latest/) - A Flask extension for generating ReSTful APIs for database models defined with SQLAlchemy (or Flask-SQLAlchemy).
+* [flask-restplus](http://flask-restplus.readthedocs.io/en/stable/) - A flask extension that helps with routes, response, and swagger based documentation.
 * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Flask extension that takes care of API representation and authentication.
 * [falcon](http://falconframework.org/) - A high-performance Python framework for building cloud APIs and web app backends.
 * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
