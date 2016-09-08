@@ -395,6 +395,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PipelineDB](https://www.pipelinedb.com/) - The Streaming SQL Database.
 * [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [ZODB](http://www.zodb.org/en/latest/) - A native object database for Python. A key-value and object graph database.
+* [dataset](https://github.com/pudo/dataset) - A JSON-based database.
 
 ## Database Drivers
 
