@@ -807,6 +807,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [rocket](https://pypi.python.org/pypi/rocket) - Multi-threaded.
 * [waitress](https://waitress.readthedocs.io/) - Multi-threaded, poweres Pyramid.
 * [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
+* [Clastic](https://github.com/mahmoud/clastic) - Simple, explicit, and without global state.
 
 ## RPC Servers
 
