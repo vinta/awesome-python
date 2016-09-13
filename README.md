@@ -899,6 +899,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
+    * [church](https://github.com/lk-geimfari/church) - is a Python library that help you generate fake data.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
