@@ -14,3 +14,5 @@ preview:
 deploy:
 	$(MAKE) link
 	mkdocs gh-deploy --clean
+	
+#just here in it class nothing to do with ur code tho lol k bi
