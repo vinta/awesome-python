@@ -299,6 +299,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [httpie](https://github.com/jkbrzt/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+    * [minio-py](https://github.com/minio/minio-py) - Minio Python Library for Amazon S3 Compatible Cloud Storage.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
