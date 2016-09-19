@@ -948,6 +948,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
+* [bcolz](https://github.com/Blosc/bcolz) - A columnar data container for big datasets that can be compressed
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
@@ -960,6 +961,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Python (Pandas web interface)
 * [orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or Python scripting.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [Paratext](https://github.com/wiseio/paratext) - a library for reading text files over multiple cores.
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
@@ -983,6 +985,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SnakeViz](http://jiffyclub.github.io/snakeviz/) - A browser based graphical viewer for the output of Python's cProfile module.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
+* [caravel](https://github.com/airbnb/caravel) - data exploration platform in Python
 
 ## Computer Vision
 
@@ -1009,6 +1012,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [skflow](https://github.com/tensorflow/skflow) - A simplified interface for [TensorFlow](https://github.com/tensorflow/tensorflow) (mimicking scikit-learn).
 * [Keras](https://github.com/tensorflow/skflow) - A deep learning library built on top of [Theano](https://github.com/Theano/Theano) and [TensorFlow](https://github.com/tensorflow/tensorflow) 
+* [FukuML](https://pypi.python.org/pypi/FukuML/0.3.0) A simple machine learning library
+* [Jubakit](http://jubat.us/en/jubakit/index.html) Python bindings for [Jubatus](http://jubat.us/en/index.html), a distributed online machine learning framework
+* [XGBoost](https://github.com/dmlc/xgboost), implementation of scalable, portable and distributed gradient boosting algorithm
+* [PyGMO](http://pagmo.sourceforge.net/pygmo/documentation/algorithms.html), evolutonary computing for Python
 
 ## MapReduce
 
