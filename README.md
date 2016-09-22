@@ -965,6 +965,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](http://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
+* [SimPy](https://pypi.python.org/pypi/simpy) - A discrete-event simulation framework for building models of dynamical processes.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 
