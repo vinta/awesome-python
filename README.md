@@ -492,6 +492,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
 * [Quokka](http://quokkaproject.org/) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [Wagtail](https://wagtail.io/) - A Django content management system.
+    * [awesome-wagtail](https://github.com/springload/awesome-wagtail)
 * [Widgy](https://wid.gy/) - Last CMS framework, based on Django.
 
 ## E-commerce
