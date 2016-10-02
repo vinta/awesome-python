@@ -718,6 +718,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [colander](http://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
+* [validr](https://github.com/guyskk/validr) - A simple,fast,extensible library for data validation.
 
 ## Anti-spam
 
