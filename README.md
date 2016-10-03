@@ -825,6 +825,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Passlib](https://pythonhosted.org/passlib/) - Secure password storage/hashing library, very high level.
 * [PyCrypto](https://www.dlitz.net/software/pycrypto/) - The Python Cryptography Toolkit.
 * [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [M2Crypto](https://gitlab.com/m2crypto/m2crypto) - M2Crypto is a crypto and SSL toolkit for Python.
 
 ## GUI
 
