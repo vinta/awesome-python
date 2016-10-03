@@ -320,6 +320,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for manipulating images.*
 
+* [pagan](https://github.com/daboth/pagan) - is avatar generator for absolute nerds.
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 * [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
@@ -899,6 +900,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
+    * [church](https://github.com/lk-geimfari/church) - is a Python library that help you generate fake data.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
