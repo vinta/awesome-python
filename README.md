@@ -274,6 +274,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [config](https://www.red-dove.com/config-doc/) - Hierarchical config from the author of [logging](https://docs.python.org/2/library/logging.html).
 * [ConfigObj](http://www.voidspace.org.uk/python/configobj.html) - INI file parser with validation.
 * [ConfigParser](https://docs.python.org/2/library/configparser.html) - (Python standard library) INI file parser.
+* [dynaconf](https://github.com/rochacbruno/dynaconf) - Easy dynamic settings for Python projects.
 * [profig](http://profig.readthedocs.org/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
@@ -290,6 +291,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
+    * [manage](https://github.com/rochacbruno/manage) - The "manage" command from Django plus interactive shell available for every Python Project, based on YAML + Click.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
@@ -520,6 +522,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
     * [flask-restless](https://github.com/jfinkels/flask-restless) - Generating RESTful APIs for database models defined with SQLAlchemy.
     * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Taking care of API representation and authentication for Flask.
+    * [flasgger](https://github.com/rochacbruno/flasgger) - Swagger API generator for Flask.
     * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
 * Pyramid
     * [cornice](https://github.com/mozilla-services/cornice) - A RESTful framework for Pyramid.
@@ -813,6 +816,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *RPC-compatible servers.*
 
+* [nameko](https://github.com/onefinestay/nameko/) - a framework for bulding microservices in Python.
 * [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
 * [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
@@ -903,6 +907,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [church](https://github.com/lk-geimfari/church) - is a Python library that help you generate fake data.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
+    * [fauxfactory](https://github.com/omaciel/fauxfactory) - Generate multiple types of fake data.
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
@@ -1143,6 +1148,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Useful libraries or tools that don't fit in the categories above.*
 
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
+* [blinker-herald](https://github.com/SatelliteQE/blinker_herald) - Makes blinker as simple as a decorator.
+* [importstring](https://github.com/rochacbruno/import_string) - Import modules and objects from string representation.
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
@@ -1179,6 +1186,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+* [Thonny](http://thonny.cs.ut.ee/) - Learning IDE for beginners 
 
 # Services
 
