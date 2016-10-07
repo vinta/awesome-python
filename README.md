@@ -15,6 +15,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Date and Time](#date-and-time)
     - [Text Processing](#text-processing)
     - [Specific Formats Processing](#specific-formats-processing)
+    - [Data Manipulation](#data-manipulation)
     - [Natural Language Processing](#natural-language-processing)
     - [Documentation](#documentation)
     - [Configuration](#configuration)
@@ -243,6 +244,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
+
+##Data Manipulation
+*Libraries for Data Manipulation.*
+
+* [Butler](https://github.com/atmb4u/butler) - Manipulate(get/set) JSON, lists, dictionaries easily without exception salad.
 
 ## Natural Language Processing
 
