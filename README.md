@@ -1000,6 +1000,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
 * [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
+* [Keras](https://keras.io/) - a minimalist, highly modular neural networks library, capable of running on top of either [TensorFlow](https://github.com/tensorflow/tensorflow) or [Theano](http://deeplearning.net/software/theano/).
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [pattern](https://github.com/clips/pattern) - Web mining module for Python.
 * [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
