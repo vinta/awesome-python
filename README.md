@@ -881,6 +881,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
 * GUI / Web Testing
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
+    * [SST](http://testutils.org/sst) - Powerful set of [high-level functions](http://testutils.org/sst/actions.html) with clean and simple API for Selenium WebDriver.
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
@@ -928,6 +929,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Debugger
     * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
+    * [pdb++](https://pypi.python.org/pypi/pdbpp) - Extension of the [pdb](https://docs.python.org/2/library/pdb.html) introduces a number of new features.
     * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
     * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
