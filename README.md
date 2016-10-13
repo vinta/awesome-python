@@ -736,6 +736,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for administrative interfaces.*
 
+* [Admin-Plus](https://github.com/pyner/admin_plus) - is a web2py engine that provides an easy-to-use interface for managing your data.
 * [Ajenti](https://github.com/Eugeny/ajenti) - The admin panel your servers deserve.
 * [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
 * [django-xadmin](https://github.com/sshwsfc/xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
