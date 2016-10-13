@@ -276,6 +276,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [ConfigParser](https://docs.python.org/2/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](http://profig.readthedocs.org/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [prettyconf](https://github.com/osantana/prettyconf) - Separation of settings and code as proposed in [The Twelve-Factor App](http://12factor.net) architeture. It is highly inspired on and API compatible with: [python-decouple](https://github.com/henriquebastos/python-decouple).
 
 ## Command-line Tools
 
