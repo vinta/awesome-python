@@ -985,6 +985,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using matplotlib.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
+* [Seaborn](http://stanford.edu/~mwaskom/software/seaborn/) - High level interface for drawing attractive statistical graphics
 
 ## Computer Vision
 
