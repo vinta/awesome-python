@@ -87,6 +87,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Editor Plugins](#editor-plugins)
     - [IDEs](#ides)
+    - [Challenge Sites](#challenge-sites)
 - [Services](#services)
     - [Continuous Integration](#continuous-integration)
     - [Code Quality](#code-quality)
@@ -1180,6 +1181,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
 * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
 * [Spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+
+## Challenge Sites
+
+*Popular challenge sites.*
+
+* [Kaggle](https://www.kaggle.com/scripts?language=Python) - Create and share data science work on Kaggle.
 
 # Services
 
