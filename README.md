@@ -459,6 +459,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Bottle](http://bottlepy.org/docs/dev/index.html) - A fast, simple and lightweight WSGI micro web-framework.
 * [CherryPy](http://www.cherrypy.org/) - A minimalist Python web framework, HTTP/1.1-compliant and WSGI thread-pooled.
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
+* [Sanic](https://github.com/channelcat/sanic) - Web server that's written to go fast.
 * [web.py](http://webpy.org/) - A web framework for Python that is as simple as it is powerful.
 * [web2py](http://www.web2py.com) - A full stack web framework and platform focused in the ease of use.
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
