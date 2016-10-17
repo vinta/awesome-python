@@ -806,7 +806,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [netius](https://github.com/hivesolutions/netius) - Asynchronous, very fast.
 * [paste](http://pythonpaste.org/) - Multi-threaded, stable, tried and tested.
 * [rocket](https://pypi.python.org/pypi/rocket) - Multi-threaded.
-* [waitress](https://waitress.readthedocs.io/) - Multi-threaded, poweres Pyramid.
+* [waitress](https://waitress.readthedocs.io/) - Multi-threaded, powers Pyramid.
 * [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
 ## RPC Servers
