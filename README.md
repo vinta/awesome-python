@@ -1061,6 +1061,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+* [Automatron](https://automatron.io) - Autonomous IT Systems Monitoring and Remediation
 
 ## ChatOps Tools
 
