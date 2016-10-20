@@ -424,6 +424,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
+    * [py-lmdb](https://github.com/dw/py-lmdb) - Lightning Memory-Mapped Database binding
 
 ## ORM
 
