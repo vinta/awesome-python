@@ -176,6 +176,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with dates and times.*
 
+* [Pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
 * [arrow](https://github.com/crsmithdev/arrow) - Better dates & times for Python.
 * [Chronyk](https://github.com/KoffeinFlummi/Chronyk) - A Python 3 library for parsing human-written times and dates.
 * [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/2/library/datetime.html) module.
@@ -184,7 +185,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyTime](https://github.com/shinux/PyTime) - A easy-use Python module which aims to operate date/time/datetime by string.
 * [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 * [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
-* [Pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
 
 ## Text Processing
 
