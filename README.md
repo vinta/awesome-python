@@ -5,6 +5,7 @@ A curated list of awesome Python frameworks, libraries, software and resources.
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 - [Awesome Python](#awesome-python)
+    - [Implementations](#implementations)
     - [Environment Management](#environment-management)
     - [Package Management](#package-management)
     - [Package Repositories](#package-repositories)
@@ -99,6 +100,19 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Contributing](#contributing)
 
 - - -
+
+## Implementations
+
+*Implementations of Python.*
+
+* [CLPython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
+* [CPython](https://hg.python.org/cpython) - **Default, most widely used implementation of the Python programming language written in C.**
+* [IronPython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C# targeting the .NET Framework and Mono.
+* [Jython](https://hg.python.org/jython) - Implementation of Python programming language written in Java for the Java virtual machine (JVM).
+* [MicroPython](https://github.com/micropython/micropython) - MicroPython - a lean and efficient Python programming language implementation for microcontrollers and constrained systems
+* [PyPy](https://bitbucket.org/pypy/pypy) - Implementation of the Python programming language written in RPython and translated into C. PyPy focuses on speed, efficiency and compatibility with the original CPython interpreter.
+* [PySec](https://github.com/ebranca/owasp-pysec) - Hardened version of python that makes it easier for security professionals and developers to write applications more resilient to attacks and manipulations.
+* [Stackless Python](https://bitbucket.org/stackless-dev/stackless/wiki/Home) - An enhanced version of the Python programming language which allows programmers to reap the benefits of thread-based programming without the performance and complexity problems associated with conventional threads.
 
 ## Environment Management
 
