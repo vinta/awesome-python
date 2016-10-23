@@ -1251,6 +1251,7 @@ List of lists.
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
+    * [How To Think Like a Computer Scientist](http://interactivepython.org/courselib/static/thinkcspy/toc.html)
 * Monty
     * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
