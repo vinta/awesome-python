@@ -507,6 +507,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
 * [money](https://github.com/carlospalol/money) - Money class with optional CLDR-backed locale-aware formatting and an extensible currency exchange solution.
 * [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
+* [Odoo](https://github.com/odoo/odoo) - A suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+.
 
 ## RESTful API
 
