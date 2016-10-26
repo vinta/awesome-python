@@ -125,6 +125,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [bandersnatch](https://bitbucket.org/pypa/bandersnatch) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 * [devpi](http://doc.devpi.net/) - PyPI server and packaging/testing/release tool.
 * [localshop](https://github.com/mvantellingen/localshop) - Local PyPI server (custom packages and auto-mirroring of pypi).
+*[Laboratory for Fluorescence Dynamics] (http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows Binaries for Python Extension Packages
 
 ## Distribution
 
