@@ -819,6 +819,7 @@ A curated list of awesome Python frameworks, libraries and software. Inspired by
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [PyGObject](https://wiki.gnome.org/Projects/PyGObject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3)
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
+* [Windows10ToastNotifications](https://github.com/jithurjacob/Windows-10-Toast-Notifications) - An easy to use library for showing Windows 10 Toast Notifications from Python
 
 ## Game Development
 
