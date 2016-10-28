@@ -922,6 +922,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
     * [Pylint](https://www.pylint.org/) - A Fully customizable source code analyzer.
     * [pylama](https://github.com/klen/pylama) - Code audit tool for Python and JavaScript.
+    * [pyflakes](https://github.com/PyCQA/pyflakes) - A simple and lightweight program which checks Python source files for errors.
 
 ## Debugging Tools
 
