@@ -156,8 +156,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Interactive Python interpreters (REPL).*
 
-* [Jupyter Notebook (IPython)](https://jupyter.org) -  A rich toolkit to help you make the most out of using Python interactively.
-* [bpython](https://github.com/bpython/bpython) – A fancy interface to the Python interpreter.
+* [Jupyter Notebook (IPython)](https://jupyter.org) - A rich toolkit to help you make the most out of using Python interactively.
+* [bpython](https://github.com/bpython/bpython) - A fancy interface to the Python interpreter.
 * [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
 
 ## Files
@@ -742,7 +742,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-xadmin](https://github.com/sshwsfc/xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
-* [Grappelli](http://grappelliproject.com) – A jazzy skin for the Django Admin-Interface.
+* [Grappelli](http://grappelliproject.com) - A jazzy skin for the Django Admin-Interface.
 * [Wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Static Site Generator
@@ -750,7 +750,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Static site generator is a software that takes some text + templates as input and produces HTML files on the output.*
 
 * [Pelican](http://blog.getpelican.com/) - Uses Markdown or ReST for content and Jinja 2 for themes. Supports DVCS, Disqus. AGPL.
-* [Cactus](https://github.com/koenbok/Cactus/) – Static site generator for designers.
+* [Cactus](https://github.com/koenbok/Cactus/) - Static site generator for designers.
 * [Hyde](http://hyde.github.io/) - Jinja2-based static web site generator.
 * [Nikola](https://www.getnikola.com/) - A static website and blog generator.
 * [Tinkerer](http://tinkerer.me/) - Tinkerer is a blogging engine/.static website generator powered by Sphinx.
@@ -929,7 +929,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Debugger
     * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
-    * [pudb](https://pypi.python.org/pypi/pudb) – A full-screen, console-based Python debugger.
+    * [pudb](https://pypi.python.org/pypi/pudb) - A full-screen, console-based Python debugger.
     * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
     * [winpdb](http://winpdb.org/) - A Python Debugger with GUI, capable of remote debugging based on `rpdb2`.
