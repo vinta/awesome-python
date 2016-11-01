@@ -307,6 +307,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - It's never been easier.
     * [mycli](https://github.com/dbcli/mycli) - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
+    * [http-prompt](https://github.com/eliangcs/http-prompt) - An interactive command-line HTTP client featuring autocomplete and syntax highlighting.
 
 ## Downloader
 
