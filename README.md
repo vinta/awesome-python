@@ -444,6 +444,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
+    * [neomodel](http://neomodel.readthedocs.org/) - An Object Graph Mapper (OGM) for the neo4j graph database, built on the awesome py2neo.
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
 
