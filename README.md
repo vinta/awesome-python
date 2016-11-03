@@ -988,6 +988,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using matplotlib.
 * [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
 * [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
+* [Caravel](https://github.com/airbnb/caravel/) - Data exploration & visualization platform designed to be intuitive and interactive.
 
 ## Computer Vision
 
