@@ -814,6 +814,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *RPC-compatible servers.*
 
+* [Hprose](https://github.com/hprose/hprose-python) - A very newbility RPC Library for Python 2 and 3, and it support 25+ languages now.
 * [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
 * [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
