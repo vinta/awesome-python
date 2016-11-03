@@ -395,7 +395,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PipelineDB](https://www.pipelinedb.com/) - The Streaming SQL Database.
 * [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [ZODB](http://www.zodb.org/en/latest/) - A native object database for Python. A key-value and object graph database.
-* [dataset](https://github.com/pudo/dataset) - A JSON-based database.
+
 
 ## Database Drivers
 
@@ -445,6 +445,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
+    * [dataset](https://github.com/pudo/dataset) - A JSON-based database.
 
 ## Web Frameworks
 
