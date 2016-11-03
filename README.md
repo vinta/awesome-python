@@ -26,9 +26,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Video](#video)
     - [Geolocation](#geolocation)
     - [HTTP](#http)
-    - [Database](#database)
+    - [Databases](#databases)
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
+    - [Database Management](#database-management)
     - [Web Frameworks](#web-frameworks)
     - [Serverless Frameworks](#serverless-frameworks)
     - [Permissions](#permissions)
@@ -389,7 +390,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 
-## Database
+## Databases
 
 *Databases implemented in Python.*
 
@@ -446,6 +447,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
+
+## Database Management
+
+*Tools or libraries for migrating schemas or otherwise managing databases.*
+
+* [yoyo-migrations](https://pypi.python.org/pypi/yoyo-migrations) - SQL database schema migration tool.
 
 ## Web Frameworks
 
