@@ -235,6 +235,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
     * [ReportLab](http://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+    * [PdfKit](https://github.com/JazzCore/python-pdfkit) - Pdfkit makes it simple to generate PDFs from html and is based on [wkhtmltopdf](http://wkhtmltopdf.org/).
 * Markdown
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
