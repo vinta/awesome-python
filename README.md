@@ -774,6 +774,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
 * [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of asyncio event loop on top of libuv.
+* [paco](https://github.com/h2non/paco) - Small utility library for coroutine-driven, asynchronous-based generic programming.
 
 ## Networking
 
