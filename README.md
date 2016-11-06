@@ -68,10 +68,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Testing](#testing)
     - [Code Analysis and Linter](#code-analysis-and-linter)
     - [Debugging Tools](#debugging-tools)
-    - [Science and Data Analysis](#science-and-data-analysis)
+    - [Science](#science)
+    - [Data Analysis](#data-analysis)
     - [Data Visualization](#data-visualization)
-    - [Computer Vision](#computer-vision)
     - [Machine Learning](#machine-learning)
+    - [Deep Learning](#deep-learning)
+    - [Computer Vision](#computer-vision)
     - [Functional Programming](#functional-programming)
     - [MapReduce](#mapreduce)
     - [Third-party APIs](#third-party-apis)
@@ -946,48 +948,71 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
     * [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
 
-## Science and Data Analysis
+## Science
 
-*Libraries for scientific computing and data analyzing.*
+*Libraries for scientific computing.*
 
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
-* [blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
-* [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
 * [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
-* [Numba](http://numba.pydata.org/) - Python JIT (just in time) complier to LLVM aimed at scientific Python by the developers of Cython and NumPy.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
-* [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Python (Pandas web interface)
-* [orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or Python scripting.
-* [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](http://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
-* [zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
+* [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
+
+## Data Analysis
+
+*Libraries for data analyzing.*
+
+* [blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
+* [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
+* [Orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
+* [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 
 ## Data Visualization
 
 *Libraries for visualizing data. See: [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
-* [matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
-* [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
+* [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
+* [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [ggplot](https://github.com/yhat/ggplot) - Same API as ggplot2 for R.
-* [plotly](https://plot.ly/python/) - Collaborative web plotting for Python and matplotlib.
-* [pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
-* [pygraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
+* [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
+* [PyGraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
-* [SnakeViz](http://jiffyclub.github.io/snakeviz/) - A browser based graphical viewer for the output of Python's cProfile module.
-* [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using matplotlib.
-* [vincent](https://github.com/wrobstory/vincent) - A Python to Vega translator.
-* [VisPy](http://vispy.org/) - High-performance scientific visualization based on OpenGL.
+* [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
+* [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+
+## Machine Learning
+
+*Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
+
+* [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
+* [MLlib](http://spark.apache.org/mllib/) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
+* [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
+* [pattern](https://github.com/clips/pattern) - Web mining module for Python.
+* [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
+* [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
+* [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
+
+## Deep Learning
+
+*Frameworks for Neural Networks and Deep Learning. See: [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
+
+* [Caffe](https://github.com/BVLC/caffe) - A fast open framework for deep learning..
+* [Keras](https://github.com/fchollet/keras) - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.
+* [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
+* [TensorFlow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
+* [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 
 ## Computer Vision
 
@@ -995,24 +1020,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
-
-## Machine Learning
-
-*Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
-
-* [Crab](https://github.com/muricoca/crab) - A ﬂexible, fast recommender engine.
-* [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
-* [hebel](https://github.com/hannes-brt/hebel) - GPU-Accelerated Deep Learning Library in Python.
-* [Keras](https://keras.io/) - a minimalist, highly modular neural networks library, capable of running on top of either [TensorFlow](https://github.com/tensorflow/tensorflow) or [Theano](http://deeplearning.net/software/theano/).
-* [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
-* [pattern](https://github.com/clips/pattern) - Web mining module for Python.
-* [PyBrain](https://github.com/pybrain/pybrain) - Another Python Machine Learning Library.
-* [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
-* [python-recsys](https://github.com/ocelma/python-recsys) - A Python library for implementing a Recommender System.
-* [scikit-learn](http://scikit-learn.org/) - A Python module for machine learning built on top of SciPy.
-* [pydeep](https://github.com/andersbll/deeppy) - Deep learning in python
-* [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
-* [skflow](https://github.com/tensorflow/skflow) - A simplified interface for [TensorFlow](https://github.com/tensorflow/tensorflow) (mimicking scikit-learn).
 
 ## MapReduce
 
@@ -1099,6 +1106,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for making Python faster.*
 
 * [Cython](http://cython.org/) - Optimizing Static Compiler for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
+* [Numba](http://numba.pydata.org/) - Python JIT complier to LLVM aimed at scientific Python.
 * [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python. Can be used as inline assembler for Python or as a stand-alone assembler for Windows, Linux, OS X, Native Client and Go.
 * [PyPy](http://pypy.org/) - An implementation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
