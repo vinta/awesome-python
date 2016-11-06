@@ -997,7 +997,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
 * [MLlib](http://spark.apache.org/mllib/) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
-* [pattern](https://github.com/clips/pattern) - Web mining module for Python.
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
