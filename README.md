@@ -109,6 +109,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
 * [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv.
+* [windowsenvironmentsetup](https://gist.github.com/jornfilho/1f2e44d18c3d8e57a9ae2d1a425b93ff) - Simple commands of how to use virtualenv and multi versions of python on Windows.
 
 ## Package Management
 
