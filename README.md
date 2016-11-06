@@ -74,8 +74,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Machine Learning](#machine-learning)
     - [Deep Learning](#deep-learning)
     - [Computer Vision](#computer-vision)
-    - [Functional Programming](#functional-programming)
     - [MapReduce](#mapreduce)
+    - [Functional Programming](#functional-programming)
     - [Third-party APIs](#third-party-apis)
     - [DevOps Tools](#devops-tools)
     - [ChatOps Tools](#chatops-tools)
@@ -953,7 +953,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for scientific computing.*
 
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
-* [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - A toolkit providing best-practice pipelines for fully automated high throughput sequencing analysis.
+* [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
@@ -961,7 +961,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
-* [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion based around NumPy, SciPy, IPython, and matplotlib.
+* [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](http://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
@@ -973,7 +973,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for data analyzing.*
 
-* [blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
+* [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Orange](http://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
