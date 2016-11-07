@@ -1174,6 +1174,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Sublime Text
     * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome auto-complete library Jedi.
     * [Anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
+    * [MagicPython](https://github.com/MagicStack/MagicPython) - Supercharged syntax highlighter for Atom and Sublime Text.
 * Vim
     * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
     * [Jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
