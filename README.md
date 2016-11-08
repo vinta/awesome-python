@@ -629,6 +629,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
+* [imapy](https://github.com/vladimarius/imapy) - Imapy.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
 * [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
