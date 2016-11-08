@@ -1225,6 +1225,7 @@ Where to discover new Python libraries.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
 * [Awesome Python @LibHunt](http://python.libhunt.com)
+* [Python 开发社区](http://python.ctolib.com)
 
 ## Weekly
 
