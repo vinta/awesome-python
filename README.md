@@ -29,6 +29,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Database](#database)
     - [Database Drivers](#database-drivers)
     - [ORM](#orm)
+    - [Database Migration](#database-migration)
     - [Web Frameworks](#web-frameworks)
     - [Serverless Frameworks](#serverless-frameworks)
     - [Permissions](#permissions)
@@ -450,6 +451,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Others
     * [butterdb](https://github.com/Widdershin/butterdb) - A Python ORM for Google Drive Spreadsheets.
     * [dataset](https://github.com/pudo/dataset) - A JSON-based database.
+
+## Database Migration
+
+*Libraries and tools to help with schema changes*
+
+* SQLAlchemy-based
+    * [alembic](http://alembic.zzzcomputing.com) - Lightweight database migration tool.
+    * [sqlalchemy-migrate](https://sqlalchemy-migrate.readthedocs.io) - Inspired by Ruby on Rails' migrations.
+* PostgreSQL
+    * [migra](https://github.com/djrobstep/migra) - Diff-style schema comparison and migration auto-generator.
 
 ## Web Frameworks
 
