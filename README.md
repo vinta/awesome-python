@@ -544,7 +544,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for implementing authentications schemes.*
 
 * OAuth
-    * [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client.
     * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
     * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth2 goodies for the Djangonauts.
     * [django-oauth2-provider](https://github.com/caffeinehit/django-oauth2-provider) - Providing OAuth2 access to Django app.
@@ -559,6 +558,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyJWT](https://github.com/jpadilla/pyjwt) - Implementation of the JSON Web Token draft 01.
     * [python-jws](https://github.com/brianloveswords/python-jws) - Implementation of JSON Web Signatures draft 02.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
+
+
+## Security Frameworks
+
+*Frameworks that offer combinations of application security, such as authentication, authorization, etc*
+    * [Authomatic](http://peterhudec.github.io/authomatic/) - Simple but powerful framework agnostic authentication/authorization client.
+    * [PrivacyIdea](https://github.com/privacyidea/privacyidea) - authentication system for two factor authentication (2FA, OTP)
+    * [Yosai](http://www.github.com/yosaiproject/yosai/) - Security for any application: Apache Shiro ported and extended
 
 ## Template Engine
 
