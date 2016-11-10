@@ -63,6 +63,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [RPC Servers](#rpc-servers)
     - [Cryptography](#cryptography)
     - [GUI](#gui)
+    - [VUI](#vui)
     - [Game Development](#game-development)
     - [Logging](#logging)
     - [Testing](#testing)
@@ -845,6 +846,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [wxPython](http://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [PyGObject](https://wiki.gnome.org/Projects/PyGObject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3)
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
+
+## VUI
+
+*Libraries for working with voice user interface applications.*
+
+* [Flask-Ask](https://github.com/johnwheeler/flask-ask) - Rapid Alexa Skills Kit development for Amazon Echo devices.
 
 ## Game Development
 
