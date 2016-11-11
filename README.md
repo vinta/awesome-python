@@ -1000,6 +1000,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
+* [hybrid-rs-trainer](https://github.com/SeniorSA/hybrid-rs-trainner) - A Hybrid recommender system based upon scikit-learn algorithms.
 
 ## Deep Learning
 
