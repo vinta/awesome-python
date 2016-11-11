@@ -395,6 +395,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PipelineDB](https://www.pipelinedb.com/) - The Streaming SQL Database.
 * [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [ZODB](http://www.zodb.org/en/latest/) - A native object database for Python. A key-value and object graph database.
+* [grapheekdb](https://bitbucket.org/nidusfr/grapheekdb) - A pure Python graph database.
+* [ajgu](https://pythonhosted.org/ajgu/) - A simple graph database power by BerkleyDB key-value store.
 
 
 ## Database Drivers
