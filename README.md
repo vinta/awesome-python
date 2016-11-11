@@ -867,6 +867,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Eliot](https://github.com/ClusterHQ/eliot) - Logging for complex & distributed systems.
 * [Raven](https://github.com/getsentry/raven-python) - The Python client for Sentry.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
+* [PyLogging](https://github.com/clivern/pylogging) - A custom lightweight logging library.
 
 ## Testing
 
