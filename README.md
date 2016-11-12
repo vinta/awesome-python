@@ -91,10 +91,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Code Quality](#code-quality)
     - [Continuous Integration](#continuous-integration)
 - [Resources](#resources)
-    - [Websites](#websites)
-    - [Weekly](#weekly)
     - [Podcasts](#podcasts)
     - [Twitter](#twitter)
+    - [Websites](#websites)
+    - [Weekly](#weekly)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
@@ -1200,6 +1200,22 @@ Online tools and APIs to simplify development.
 
 Where to discover new Python libraries.
 
+## Podcasts
+
+* [Podcast.init](http://podcastinit.com/)
+* [Talk Python To Me](https://talkpython.fm/)
+
+## Twitter
+
+* [@codetengu](https://twitter.com/codetengu)
+* [@getpy](https://twitter.com/getpy)
+* [@importpython](https://twitter.com/importpython)
+* [@planetpython](https://twitter.com/planetpython)
+* [@pycoders](https://twitter.com/pycoders)
+* [@pypi](https://twitter.com/pypi)
+* [@pythontrending](https://twitter.com/pythontrending)
+* [@PythonWeekly](https://twitter.com/PythonWeekly)
+
 ## Websites
 
 * [/r/CoolGithubProjects](https://www.reddit.com/r/coolgithubprojects/)
@@ -1220,22 +1236,6 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
-
-## Podcasts
-
-* [Podcast.init](http://podcastinit.com/)
-* [Talk Python To Me](https://talkpython.fm/)
-
-## Twitter
-
-* [@codetengu](https://twitter.com/codetengu)
-* [@getpy](https://twitter.com/getpy)
-* [@importpython](https://twitter.com/importpython)
-* [@planetpython](https://twitter.com/planetpython)
-* [@pycoders](https://twitter.com/pycoders)
-* [@pypi](https://twitter.com/pypi)
-* [@pythontrending](https://twitter.com/pythontrending)
-* [@PythonWeekly](https://twitter.com/PythonWeekly)
 
 # Other Awesome Lists
 
