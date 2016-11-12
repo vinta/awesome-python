@@ -509,7 +509,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Visual Studio
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
 * Visual Studio Code
-    * [Python](https://github.com/DonJayamanne/pythonVSCode) - An extension with rich support for the Python language, with features including linting, IntelliSense, formatting, and refactoring.
+    * [Python](https://github.com/DonJayamanne/pythonVSCode) - An extension with rich support for the Python language, with features including linting, IntelliSense, formatting, refactoring, debugging, unit tests, and jupyter support.
 * IDE
     * [LiClipse](http://www.liclipse.com/) - Free polyglot IDE based on Eclipse. Uses PyDev for Python support.
     * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
