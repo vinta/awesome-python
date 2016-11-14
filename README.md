@@ -1206,6 +1206,7 @@ Where to discover new Python libraries.
 
 * [Podcast.init](http://podcastinit.com/)
 * [Talk Python To Me](https://talkpython.fm/)
+* [Python Bytes](https://pythonbytes.fm)
 
 ## Twitter
 
@@ -1217,6 +1218,7 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
+* [@TalkPython](https://twitter.com/talkpython)
 
 ## Websites
 
@@ -1238,6 +1240,7 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
+* [Python Bytes](https://pythonbytes.fm)
 
 # Other Awesome Lists
 
