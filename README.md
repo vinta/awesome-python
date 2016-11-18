@@ -187,7 +187,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Automate actions and tasks*
 
-* [django-th](https://github.com/foxmask/django-th) - An IFTTT clone, to trigger actions bridging internet services.
+* [TriggerHappy](https://github.com/foxmask/django-th) - An IFTTT clone, to trigger actions bridging internet services, based on Django.
 
 ## Build Tools
 
