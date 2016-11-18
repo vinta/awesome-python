@@ -959,7 +959,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * General
     * [rows](https://github.com/turicas/rows) - Tabular data made VERY simple (formats: CSV, XLS, XLSX, HTML and XPath, Parquet, TXT, JSON, SQLite and growing)   
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
- * Office
+* Office
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
     * [openpyxl](https://openpyxl.readthedocs.io/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
     * [pyexcel](https://github.com/pyexcel/pyexcel) - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
