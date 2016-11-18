@@ -91,6 +91,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Code Quality](#code-quality)
     - [Continuous Integration](#continuous-integration)
 - [Resources](#resources)
+    - [MOOCs](#moocs)
     - [Podcasts](#podcasts)
     - [Twitter](#twitter)
     - [Websites](#websites)
@@ -1202,6 +1203,21 @@ Online tools and APIs to simplify development.
 # Resources
 
 Where to discover new Python libraries.
+
+## MOOCs
+
+### Data related MOOCs
+
+* [Introduction to Data Science in Python](https://www.coursera.org/learn/python-data-analysis) - [coursera]
+* [Using Databases with Python](https://www.coursera.org/learn/python-databases) - [coursera.org]
+* [Python Datra Structures](https://www.coursera.org/learn/python-data) - ... and conversions between data structures [coursera.org].
+* [Using Databases with Python](https://www.coursera.org/learn/python-databases) - [coursera.org].
+* [Data Management and Visualization](https://www.coursera.org/learn/data-visualization) - ... using SAS or Python [coursera.org].
+* [Data Structures](https://www.coursera.org/learn/data-structures) - ... in C++, Java and Python [coursera.org].
+* [Data Analysis Tools](https://www.coursera.org/learn/data-analysis-tools) - .. using SAS or Python [coursera.org].
+* [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/learn/python-capstone) - [coursera.org].
+* [Python for Genomic Data Science](https://www.coursera.org/learn/python-genomics) - ... using Python and iPython notebooks [coursera.org]
+* [Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data) - [coursera.org].
 
 ## Podcasts
 
