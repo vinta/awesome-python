@@ -793,6 +793,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for networking programming.*
 
 * [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
+* [curio](https://github.com/dabeaz/curio) - Asynchronous concurrent programming library for Python 3.5
 * [diesel](https://github.com/dieseldev/diesel) - Greenlet-based event I/O Framework for Python.
 * [pulsar](https://github.com/quantmind/pulsar) - Event-driven concurrent framework for Python.
 * [pyzmq](http://zeromq.github.io/pyzmq/) - A Python wrapper for the ZeroMQ message library.
