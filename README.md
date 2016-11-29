@@ -1218,6 +1218,7 @@ Where to discover new Python libraries.
 * [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/learn/python-capstone) - [coursera.org].
 * [Python for Genomic Data Science](https://www.coursera.org/learn/python-genomics) - ... using Python and iPython notebooks [coursera.org]
 * [Using Python to Access Web Data](https://www.coursera.org/learn/python-network-data) - [coursera.org].
+* [Global Warming II: Create Your Own Models in Python](https://www.coursera.org/learn/global-warming-model) - ... about modeling in Python [coursera.org].
 
 ## Podcasts
 
