@@ -93,6 +93,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Resources](#resources)
     - [Podcasts](#podcasts)
     - [Twitter](#twitter)
+    - [Videos](#videos)
     - [Websites](#websites)
     - [Weekly](#weekly)
 - [Other Awesome Lists](#other-awesome-lists)
@@ -1218,6 +1219,9 @@ Where to discover new Python libraries.
 * [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
+
+* [PyCon 2016 - Better Integration Testing with Cucumber (Jay Goel)](https://www.youtube.com/watch?v=ZEZBZFi_e88) - BDD-style testing using behave.
+* [PyCon 2016 - Better Testing With Less Code: Property Based Testing With Python (Matt Bachmann)](https://www.youtube.com/watch?v=jvwfDdgg93E)
 
 ## Websites
 
