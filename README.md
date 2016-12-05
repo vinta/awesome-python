@@ -1169,6 +1169,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
+* [Web2py](http://http://www.web2py.com/) - Full-stack enterprise framework for secure database-driven web-based applications.
+    * [GitHub Web2py](https://github.com/web2py)
 
 ## WebSocket
 
