@@ -816,6 +816,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
     * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](https://ponyorm.com/) - ORM that provides a generator-oriented interface to SQL.
+    * [pyDAL](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
