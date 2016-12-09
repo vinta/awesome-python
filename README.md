@@ -1032,6 +1032,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
     * [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+.
     * [httpretty](https://github.com/gabrielfalcao/HTTPretty) - HTTP request mock tool for Python.
+    * [requests-mock](https://pypi.python.org/pypi/requests-mock) - A mocking library that monkey-patches the requests module instead of socker.
     * [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
     * [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
