@@ -383,6 +383,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
     * [HappyBase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
     * [Plyvel](https://github.com/wbolster/plyvel) - A fast and feature-rich Python interface to LevelDB.
+    * [neo4j-driver](https://github.com/neo4j/neo4j-python-driver) - The Official Neo4j driver, uses the binary Bolt Protocol.
     * [py2neo](http://py2neo.org/2.0/) - Python wrapper client for Neo4j's restful interface.
     * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [PyMongo](https://docs.mongodb.org/ecosystem/drivers/python/) - The official Python client for MongoDB.
