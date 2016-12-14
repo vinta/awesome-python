@@ -607,6 +607,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](http://pysdl2.readthedocs.io/) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
+* [Blender](https://blender.org) - Blender is the free and open source 3D creation suite and comes with Python3
 
 ## Geolocation
 
