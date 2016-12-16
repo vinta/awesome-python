@@ -1084,7 +1084,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for accessing third party services APIs. See: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
 
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
-* [boto](https://github.com/boto/boto) - Python interface to Amazon Web Services.
+* [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
 * [django-wordpress](https://github.com/sunlightlabs/django-wordpress/) - WordPress models and views for Django.
 * [facebook-sdk](https://github.com/mobolic/facebook-sdk) - Facebook Platform Python SDK.
 * [facepy](https://github.com/jgorset/facepy) - Facepy makes it really easy to interact with Facebook's Graph API
