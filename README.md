@@ -58,7 +58,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [MapReduce](#mapreduce)
     - [Miscellaneous](#miscellaneous)
     - [Natural Language Processing](#natural-language-processing)
-    - [Network Virtualization](#network-virtualization-and-sdn)
+    - [Network Virtualization](#network-virtualization)
     - [Networking](#networking)
     - [News Feed](#news-feed)
     - [ORM](#orm)
