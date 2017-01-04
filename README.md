@@ -1156,6 +1156,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [Scrapy](http://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [dryscrape](https://github.com/niklasb/dryscrape) - A lightweight Python library that uses Webkit to enable easy scraping of dynamic, Javascript-heavy web pages.
 
 ## Web Frameworks
 
