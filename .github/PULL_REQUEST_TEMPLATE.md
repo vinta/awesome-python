@@ -1,7 +1,11 @@
-## Why this framework/library/software/resource is awesome?
+## What is this Python project?
 
-A few sentences describing the reason.
+Describe features.
 
-## Vote for this pull request
+## What's the difference between this Python project and similar ones?
 
-Who agrees that this change should be merged could add your reactions (e.g. :+1:) to this pull request.
+Enumerate comparisons.
+
+--
+
+Anyone who agrees with this pull request could vote for it by adding a :+1: to it, and usually, the maintainer will merge it when votes reach **20**.
