@@ -408,26 +408,25 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for debugging code.*
 
-* Debugger
-    * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information for Django.
-    * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
-    * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
-    * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/2/library/pdb.html).
-    * [lptrace](https://github.com/khamidou/lptrace) - [strace](http://man7.org/linux/man-pages/man1/strace.1.html) for Python programs.
+* pdb-like Debugger
+    * [ipdb](https://pypi.python.org/pypi/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
+    * [pdb++](https://pypi.python.org/pypi/pdbpp/) - Another drop-in replacement for pdb.
     * [pudb](https://pypi.python.org/pypi/pudb) - A full-screen, console-based Python debugger.
-    * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [remote-pdb](https://github.com/ionelmc/python-remote-pdb) - Remote vanilla PDB (over TCP sockets).
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
-    * [winpdb](http://winpdb.org/) - A Python Debugger with GUI, capable of remote debugging based on `rpdb2`.
 * Profiler
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
     * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
 * Others
+    * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information for Django.
+    * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
+    * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
     * [hunter](https://github.com/ionelmc/python-hunter) - Hunter is a flexible code tracing toolkit.
-    * [manhole](https://github.com/ionelmc/python-manhole) - Debug service that will accept unix domain socket connections and present the stacktraces for all threads and an interactive prompt. 
+    * [lptrace](https://github.com/khamidou/lptrace) - [strace](http://man7.org/linux/man-pages/man1/strace.1.html) for Python programs.
+    * [manhole](https://github.com/ionelmc/python-manhole) - Debug service that will accept unix domain socket connections and present the stacktraces for all threads and an interactive prompt.
     * [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
-    * [python-statsd](https://github.com/WoLpH/python-statsd) - Python Client for the [statsd](https://github.com/etsy/statsd/) server.
+    * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
 
 ## Deep Learning
 
@@ -670,7 +669,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python. Can be used as inline assembler for Python or as a stand-alone assembler for Windows, Linux, OS X, Native Client and Go.
 * [PyPy](http://pypy.org/) - An implementation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
-* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR 
+* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
 * [Stackless Python](https://bitbucket.org/stackless-dev/stackless/overview) - An enhanced version of the Python.
 
 ## Imagery
