@@ -235,6 +235,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
     * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
     * [pysonar2](https://github.com/yinwang0/pysonar2) - A type inferencer and indexer for Python.
+    * [uncompyle6](https://pypi.python.org/pypi/uncompyle6/) - A cross-version Python bytecode decompiler and code fragment deparser.
 * Linter
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
     * [pylama](https://github.com/klen/pylama) - Code audit tool for Python and JavaScript.
@@ -666,7 +667,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python. Can be used as inline assembler for Python or as a stand-alone assembler for Windows, Linux, OS X, Native Client and Go.
 * [PyPy](http://pypy.org/) - An implementation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
-* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR 
+* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR
 * [Stackless Python](https://bitbucket.org/stackless-dev/stackless/overview) - An enhanced version of the Python.
 
 ## Imagery
