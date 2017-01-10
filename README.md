@@ -5,11 +5,11 @@ A curated list of awesome Python frameworks, libraries, software and resources.
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 - [Awesome Python](#awesome-python)
-    - [Admin Panels](#admin-panels)		
-    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)		
-    - [Anti-spam](#anti-spam)		
-    - [Asset Management](#asset-management)		
-    - [Audio](#audio)		
+    - [Admin Panels](#admin-panels)
+    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+    - [Anti-spam](#anti-spam)
+    - [Asset Management](#asset-management)
+    - [Audio](#audio)
     - [Authentication](#authentication)
     - [Build Tools](#build-tools)
     - [Caching](#caching)
