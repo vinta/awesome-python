@@ -791,6 +791,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [POX](https://github.com/noxrepo/pox) - An open source development platform for Python-based Software Defined Networking (SDN) control applications, such as OpenFlow SDN controllers.
 * [Pyretic](http://frenetic-lang.org/pyretic/) - A member of the Frenetic family of SDN programming languages that provides powerful abstractions over network switches or emulators.
 * [SDX Platform](https://github.com/sdn-ixp/internet2award) - SDN based IXP implementation that leverages Mininet, POX and Pyretic.
+* [Ryu component](http://osrg.github.io/ryu/) - based software defined networking framework.
+* [Neutron](https://github.com/openstack/neutron) - neutron is a virtual network service for Openstack.
+* [Dragonflow](https://github.com/openstack/dragonflow) - SDN based Distributed Virtual Router for Openstack Neutron.
 
 ## Networking
 
@@ -1262,3 +1265,5 @@ List of lists.
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
 
 I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by adding :+1: to them. Pull requests will be merged when their votes reach **20**.
+
+
