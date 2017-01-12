@@ -46,10 +46,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Geolocation](#geolocation)
     - [GUI](#gui)
     - [Hardware](#hardware)
-    - [High Performance](#high-performance)
     - [HTML Manipulation](#html-manipulation)
     - [HTTP](#http)
     - [Imagery](#imagery)
+    - [Implementations](#implementations)
     - [Interactive Interpreter](#interactive-interpreter)
     - [Internationalization](#internationalization)
     - [Job Scheduler](#job-scheduler)
@@ -660,18 +660,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 * [wifi](https://github.com/rockymeza/wifi) - A Python library and command line tool for working with WiFi on Linux.
 
-## High Performance
-
-*Libraries for making Python faster.*
-
-* [Cython](http://cython.org/) - Optimizing Static Compiler for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
-* [Numba](http://numba.pydata.org/) - Python JIT complier to LLVM aimed at scientific Python.
-* [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python. Can be used as inline assembler for Python or as a stand-alone assembler for Windows, Linux, OS X, Native Client and Go.
-* [PyPy](http://pypy.org/) - An implementation of Python in Python. The interpreter uses black magic to make Python very fast without having to add in additional type information.
-* [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
-* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
-* [Stackless Python](https://bitbucket.org/stackless-dev/stackless/overview) - An enhanced version of the Python.
-
 ## Imagery
 
 *Libraries for manipulating images.*
@@ -688,6 +676,24 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 * [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
+
+## Implementations
+
+*Implementations of Python.*
+
+* [CLPython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
+* [CPython](https://hg.python.org/cpython) - **Default, most widely used implementation of the Python programming language written in C.** Optimizing Static Compiler for Python. Uses type mixins to compile Python into C or C++ modules resulting in large performance gains.
+* [Grumpy](http://grump.io) - More compiler than interpreter as more powerful CPython2.7 replacement (alpha).
+* [IronPython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C# targeting the .NET Framework and Mono.
+* [Jython](https://hg.python.org/jython) - Implementation of Python programming language written in Java for the Java virtual machine (JVM).
+* [MicroPython](https://github.com/micropython/micropython) - MicroPython - a lean and efficient Python programming language implementation for microcontrollers and constrained systems
+* [Numba](http://numba.pydata.org/) - Python JIT complier to LLVM aimed at scientific Python.
+* [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python. Can be used as inline assembler for Python or as a stand-alone assembler for Windows, Linux, OS X, Native Client and Go.
+* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
+* [PyPy](https://bitbucket.org/pypy/pypy) - Implementation of the Python programming language written in RPython and translated into C. PyPy focuses on speed, efficiency and compatibility with the original CPython interpreter. The interpreter uses black magic to make Python very fast without having to add in additional type information.
+* [PySec](https://github.com/ebranca/owasp-pysec) - Hardened version of python that makes it easier for security professionals and developers to write applications more resilient to attacks and manipulations.
+* [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
+* [Stackless Python](https://bitbucket.org/stackless-dev/stackless/wiki/Home) - An enhanced version of the Python programming language which allows programmers to reap the benefits of thread-based programming without the performance and complexity problems associated with conventional threads.
 
 ## Interactive Interpreter
 
