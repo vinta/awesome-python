@@ -1239,6 +1239,7 @@ Where to discover new Python libraries.
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
 * [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
 * [Python Hackers](http://pythonhackers.com/open-source/)
+* [Python Tips](http://pythontips.com/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](http://python.ctolib.com)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
@@ -1249,6 +1250,7 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
+* [Bite Python](http://newsletter.pythontips.com/) 
 
 # Other Awesome Lists
 
