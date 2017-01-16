@@ -729,7 +729,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for generating and working with logs.*
 
 * [Eliot](https://github.com/ClusterHQ/eliot) - Logging for complex & distributed systems.
-* [logbook](http://pythonhosted.org/Logbook/) - Logging replacement for Python.
+* [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
 * [Raven](https://github.com/getsentry/raven-python) - The Python client for Sentry.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
