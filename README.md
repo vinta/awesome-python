@@ -314,7 +314,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
 * [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 * [Passlib](https://pythonhosted.org/passlib/) - Secure password storage/hashing library, very high level.
-* [PyCrypto](https://www.dlitz.net/software/pycrypto/) - The Python Cryptography Toolkit.
 * [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 
 ## Data Analysis
