@@ -577,6 +577,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Functional Programming with Python.*
 
+* [Coconut](http://coconut-lang.org/) - Coconut is a variant of Python built for simple, elegant, Pythonic functional programming.
 * [CyToolz](https://github.com/pytoolz/cytoolz/) - Cython implementation of Toolz: High performance functional utilities.
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
