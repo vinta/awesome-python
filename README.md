@@ -1176,7 +1176,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
-* [Japronto](https://github.com/squeaky-pl/japronto) - Screaming-fast, scalable, asynchronous Python 3.5+ web micro-framework.
+* [Japronto](https://github.com/squeaky-pl/japronto) - A screaming-fast, scalable, asynchronous Python 3.5+ web micro-framework.
 * [Pyramid](http://www.pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
