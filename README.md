@@ -830,6 +830,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Orator](https://orator-orm.com) -  The Orator ORM provides a simple yet beautiful ActiveRecord implementation.
     * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](https://ponyorm.com/) - ORM that provides a generator-oriented interface to SQL.
+    * [pyDAL](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
@@ -1183,6 +1184,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
+* [Web2py](http://www.web2py.com/) - Full-stack enterprise framework for secure database-driven web-based applications.
+    * [GitHub Web2py](https://github.com/web2py)
 
 ## WebSocket
 
