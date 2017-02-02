@@ -745,6 +745,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
+* [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting Library
 
 ## MapReduce
 
