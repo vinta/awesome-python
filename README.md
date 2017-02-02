@@ -740,6 +740,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
+* [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 * [MLlib](http://spark.apache.org/mllib/) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
