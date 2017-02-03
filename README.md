@@ -437,6 +437,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Pytorch](http://pytorch.org/) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 * [TensorFlow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
+* [Chainer](http://chainer.org/) - A powerful, flexible, and intuitive framework for neural networks.
 
 ## DevOps Tools
 
