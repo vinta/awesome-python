@@ -422,6 +422,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information for Django.
     * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
     * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
+    * [flask-profiler](https://github.com/muatik/flask-profiler) - Endpoint profiler/monitoring tool for flask projects.
     * [hunter](https://github.com/ionelmc/python-hunter) - Hunter is a flexible code tracing toolkit.
     * [lptrace](https://github.com/khamidou/lptrace) - [strace](http://man7.org/linux/man-pages/man1/strace.1.html) for Python programs.
     * [manhole](https://github.com/ionelmc/python-manhole) - Debug service that will accept unix domain socket connections and present the stacktraces for all threads and an interactive prompt.
