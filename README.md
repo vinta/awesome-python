@@ -373,6 +373,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * PostgreSQL
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
+    * [pg_simple](https://github.com/masroore/pg_simple) - A simple wrapper over psycopg2 with support for common SQL operations, transactions management and connection pooling.
     * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
 * Other Relational Databases
     * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
