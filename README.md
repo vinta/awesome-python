@@ -186,6 +186,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Compile software from source code.*
 
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool for embedded Linux.
+* [buildbot](http://buildbot.net/) - Buildbot: The Continuous Integration Framework
 * [buildout](http://www.buildout.org/en/latest/) - A build system for creating, assembling and deploying applications from multiple parts.
 * [PlatformIO](https://github.com/platformio/platformio) - A console tool to build code with different development platforms.
 * [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
