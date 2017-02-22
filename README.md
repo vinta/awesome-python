@@ -417,6 +417,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
     * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
+    * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 * Others
     * [django-debug-toolbar](https://github.com/django-debug-toolbar/django-debug-toolbar) - Display various debug information for Django.
     * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
@@ -433,7 +434,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Caffe](https://github.com/BVLC/caffe) - A fast open framework for deep learning..
 * [Keras](https://github.com/fchollet/keras) - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.
+* [MXNet](https://github.com/dmlc/mxnet) - A deep learning framework designed for both efficiency and flexibility.
 * [Neupy](http://neupy.com/pages/home.html) - Running and testing different Artificial Neural Networks algorithms.
+* [Pytorch](http://pytorch.org/) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 * [TensorFlow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 
@@ -738,12 +741,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
+* [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 * [MLlib](http://spark.apache.org/mllib/) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [Pylearn2](https://github.com/lisa-lab/pylearn2) - A Machine Learning library based on [Theano](https://github.com/Theano/Theano).
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
+* [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 
 ## MapReduce
 
@@ -827,6 +832,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Orator](https://orator-orm.com) -  The Orator ORM provides a simple yet beautiful ActiveRecord implementation.
     * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [PonyORM](https://ponyorm.com/) - ORM that provides a generator-oriented interface to SQL.
+    * [pyDAL](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
@@ -1180,6 +1186,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
+* [Web2py](http://www.web2py.com/) - Full-stack enterprise framework for secure database-driven web-based applications.
+    * [GitHub Web2py](https://github.com/web2py)
 
 ## WebSocket
 
