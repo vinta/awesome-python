@@ -1079,6 +1079,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
     * [pangu.py](https://github.com/vinta/pangu.py) - Spacing texts for CJK and alphanumerics.
     * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
+    * [PyFormat.info](https://github.com/ulope/pyformat.info) - Using % and .format() for great good!
     * [shortuuid](https://github.com/stochastic-technologies/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
     * [unidecode](https://pypi.python.org/pypi/Unidecode) - ASCII transliterations of Unicode text.
     * [uniout](https://github.com/moskytw/uniout) - Print readable chars instead of the escaped string.
