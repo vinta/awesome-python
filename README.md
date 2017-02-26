@@ -711,6 +711,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
 * [PyICU](https://github.com/ovalhub/pyicu) - A wrapper of International Components for Unicode C++ library ([ICU](http://site.icu-project.org/)).
+* [ieighteen](https://github.com/emadehsan/ieighteen) - Automates translation of Natural Languages, using (free) Google Translate APIs.
 
 ## Job Scheduler
 
