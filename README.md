@@ -1055,6 +1055,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 * Object Factories
+    * [django_dynamic_fixture](https://github.com/paulocheque/django-dynamic-fixture) - A complete library to create dynamic model instances for testing purposes.
     * [factory_boy](https://github.com/rbarrois/factory_boy) - A test fixtures replacement for Python.
     * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
     * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
