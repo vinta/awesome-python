@@ -486,6 +486,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [s4cmd](https://github.com/bloomreach/s4cmd) - Super S3 command line tool, good for higher performance.
 * [you-get](https://www.soimort.org/you-get/) - A YouTube/Youku/Niconico video downloader written in Python 3.
 * [youtube-dl](http://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [coursera-dl](https://github.com/coursera-dl/coursera-dl) - Script for downloading Coursera.org videos and naming them. 
 
 ## E-commerce
 
@@ -1171,6 +1172,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [Scrapy](http://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [Splinter](https://github.com/cobrateam/splinter) - Python test framework for web applications
 
 ## Web Frameworks
 
