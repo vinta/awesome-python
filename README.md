@@ -922,6 +922,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SimpleJSONRPCServer](https://github.com/joshmarshall/jsonrpclib/) - This library is an implementation of the JSON-RPC specification.
 * [SimpleXMLRPCServer](https://docs.python.org/2/library/simplexmlrpcserver.html) - (Python standard library) Simple XML-RPC server implementation, single-threaded.
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+* [isc](https://github.com/and3rson/isc) - Inter-service communication layer for building distributed microservice systems with RPC, broadcasts and timers.
 
 ## Science
 
