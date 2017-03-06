@@ -786,6 +786,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with human languages.*
 
 * [Jieba](https://github.com/fxsjy/jieba) - Chinese text segmentation.
+* [LTP](https://github.com/HIT-SCIR/ltp) - A Chinese Language Technology Platform provided by [HIT-SCIR](http://ir.hit.edu.cn/).
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
 * [Pattern](http://www.clips.ua.ac.be/pattern) - A web mining module for the Python.
