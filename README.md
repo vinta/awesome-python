@@ -1030,6 +1030,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Testing Frameworks
     * [hypothesis](https://github.com/HypothesisWorks/hypothesis-python) - Hypothesis is an advanced Quickcheck style property based testing library.
+    * [Jasper](https://github.com/tylerlaberge/Jasper) - An asynchronous behavior-driven development framework.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [nose](https://github.com/nose-devs/nose) - A nicer unittest for Python.
     * [nose2](https://github.com/nose-devs/nose2) - The successor to nose, based on unittest2.
