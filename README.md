@@ -1218,6 +1218,7 @@ Online tools and APIs to simplify development.
 * [Codecov](https://codecov.io/) - Code coverage dashboard.
 * [Landscape](https://landscape.io/) - Hosted continuous Python code metrics.
 * [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
+* [SideCI](https://sideci.com) - An automated code reviewing tool to acquire more time developers write codes. Free for open source projects.
 
 # Resources
 
