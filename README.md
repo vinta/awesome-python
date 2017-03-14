@@ -1044,6 +1044,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
     * [Selenium](https://pypi.python.org/pypi/selenium) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
+    * [webdriver_manager](https://github.com/SergeyPirogov/webdriver_manager) - This library is aimed to automate the Selenium Webdriver binaries management.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
 * Mock
