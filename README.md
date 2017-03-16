@@ -542,7 +542,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Python version and environment management.*
 
-[Nanobox](https://github.com/nanobox-io/nanobox) - A tool for creating consistent, isolated Python environments across entire teams and application stages (dev, staging, production, etc.) https://nanobox.io.
+[Nanobox](https://github.com/nanobox-io/nanobox) - A tool for creating consistent, isolated Python environments across teams and application stages (dev, staging, production, etc.) https://nanobox.io.
 * [p](https://github.com/qw3rtman/p) - Dead simple interactive Python version management.
 * [pyenv](https://github.com/yyuu/pyenv) - Simple Python version management.
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
