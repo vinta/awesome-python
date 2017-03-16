@@ -452,6 +452,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
 * [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
+* [Nanobox](https://nanobox.io/) - A micro-PaaS (μPaaS) for creating consistent, isolated Python environments deployable anywhere.
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
@@ -541,6 +542,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Python version and environment management.*
 
+* [Nanobox](https://nanobox.io/) - A tool for creating consistent, isolated Python environments across entire teams or app stages (dev, staging, production, etc.).
 * [p](https://github.com/qw3rtman/p) - Dead simple interactive Python version management.
 * [pyenv](https://github.com/yyuu/pyenv) - Simple Python version management.
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
