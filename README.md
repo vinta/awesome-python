@@ -211,6 +211,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for caching data.*
 
 * [Beaker](https://github.com/bbangert/beaker) - A library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
+* [CacheControl](https://github.com/ionrock/cachecontrol) - A (client-side) caching layer for use with the requests library.
 * [DiskCache](http://www.grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
