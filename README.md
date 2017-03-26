@@ -190,6 +190,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PlatformIO](https://github.com/platformio/platformio) - A console tool to build code with different development platforms.
 * [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
+* [Snapcraft](https://snapcraft.io/) - Package any app for every Linux desktop, server, cloud or device, and deliver updates directly.
 
 ## CMS
 
