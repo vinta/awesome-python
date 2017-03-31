@@ -1115,7 +1115,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for parsing URLs.*
 
-* [furl](https://github.com/gruns/furl) - A small Python library that makes manipulating URLs simple.
+* [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
 * [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL and bit.ly-like URLs.
