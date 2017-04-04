@@ -452,6 +452,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Fabric](http://www.fabfile.org/) - A simple, Pythonic tool for remote execution and deployment.
 * [Fabtools](https://github.com/ronnix/fabtools) - Tools for writing awesome Fabric files.
 * [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
+* [Mist.io](https://github.com/mistio/mist.io) - An open platform for managing heterogeneous infrastructures
 * [OpenStack](http://www.openstack.org/) - Open source software for building private and public clouds.
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
