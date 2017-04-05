@@ -504,6 +504,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Editor Plugins and IDEs
 
+* GitHub
+    * [Module Linker](https://fiatjaf.github.io/module-linker/#/python) - Add directly links to packages `import`ed when browsing source files on GitHub.
 * Emacs
     * [Elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
 * Sublime Text
