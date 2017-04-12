@@ -389,6 +389,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
+* Oracle Databases
+    * [cx_Oracle](https://oracle.github.io/python-cx_Oracle/) - Extension module that enables access to Oracle Databases
 
 ## Date and Time
 
