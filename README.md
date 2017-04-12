@@ -938,6 +938,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
+* [ObsPy](http://obspy.org) - A Python toolbox for seismology.
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
