@@ -902,6 +902,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [django-formapi](https://github.com/5monkeys/django-formapi) - Create JSON APIs with Django's form validation.
     * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit to build web APIs.
     * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
+    * [djsw-wrapper](https://github.com/ErintLabs/django-openapi-gen) - Create DjangoRestFramework-backed REST APIs from Swagger schema.
 * Flask
     * [eve](https://github.com/nicolaiarocci/eve) - REST API framework powered by Flask, MongoDB and good intentions.
     * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Taking care of API representation and authentication for Flask.
