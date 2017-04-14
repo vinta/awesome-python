@@ -1178,7 +1178,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Full stack web frameworks.*
 
 * [Bottle](http://bottlepy.org/docs/dev/index.html) - A fast, simple and lightweight WSGI micro web-framework.
-* [Xweb](https://github.com/gaojiuli/xweb) - Web framework for the zen of python.
 * [CherryPy](http://www.cherrypy.org/) - A minimalist Python web framework, HTTP/1.1-compliant and WSGI thread-pooled.
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
     * [awesome-django](https://github.com/rosarior/awesome-django)
@@ -1190,6 +1189,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
 * [Web2py](http://www.web2py.com/) - Full-stack enterprise framework for secure database-driven web-based applications.
     * [GitHub Web2py](https://github.com/web2py)
+* [Xweb](https://github.com/gaojiuli/xweb) - Web framework for the zen of python.
 
 ## WebSocket
 
