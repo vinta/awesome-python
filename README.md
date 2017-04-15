@@ -462,6 +462,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to create packaged executables for release distribution.*
 
+* [AppImage](http://appimage.org/) - Bundles applications into stand-alone executables including the Python runtime, modules, libraries, and resources (Linux).
 * [dh-virtualenv](https://github.com/spotify/dh-virtualenv) - Build and distribute a virtualenv as a Debian package.
 * [Nuitka](http://nuitka.net/) - Compile scripts, modules, packages to an executable or extension module.
 * [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
