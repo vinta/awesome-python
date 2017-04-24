@@ -744,11 +744,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
-* [gensim](https://github.com/piskvorky/gensim) - Topic Modelling for Humans.
+* [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modelling for Humans.
 * [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
-* [MLlib](http://spark.apache.org/mllib/) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
+* [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
