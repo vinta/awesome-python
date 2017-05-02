@@ -1071,6 +1071,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+    * [factory_boy](https://github.com/rbarrois/factory_boy) - factory_boy is a fixtures replacement based on thoughtbot’s factory_girl.
 
 ## Text Processing
 
