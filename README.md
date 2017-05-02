@@ -1268,6 +1268,9 @@ Where to discover new Python libraries.
 * [Python Weekly](http://www.pythonweekly.com/)
 * [Python Bytes](https://pythonbytes.fm)
 
+## Graphing tools
+
+*[bashplotlib](https://github.com/glamp/bashplotlib)- It lets you plot histograms and scatterplots using stdin.It's a quick way to visualize data when you don't have a GUI. It's written in pure python and can quickly be installed anywhere using pip.
 # Other Awesome Lists
 
 List of lists.
