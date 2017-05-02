@@ -1071,6 +1071,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
 * Error Handler
     * [FuckIt.py](https://github.com/ajalt/fuckitpy) - FuckIt.py uses state-of-the-art technology to make sure your Python code runs whether it has any right to or not.
+* Generative Tests
+    * [genty](https://github.com/box/genty) - Genty, pronounced "gen-tee", stands for "generate tests". It promotes generative testing, where a single test can execute over a variety of input.
 
 ## Text Processing
 
