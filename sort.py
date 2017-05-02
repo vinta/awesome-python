@@ -42,8 +42,13 @@ def sort_blocks():
         sorted_file.write(final_README)
 
 def main():
+    import sys
+    if sys.version_info.major == 2:
+        global open
+        from codecs import open
+        
     # First, we load the current README into memory as an array of lines
-    with open('README.md', 'r') as read_me_file:
+    with open('README.md', 'r', encoding = 'utf-8') as read_me_file:
         read_me = read_me_file.readlines()
 
     # Then we cluster the lines together as blocks
@@ -66,7 +71,7 @@ def main():
             blocks.append([line])
             last_indent = None
 
-    with open('README.md', 'w+') as sorted_file:
+    with open('README.md', 'w+', encoding = 'utf-8') as sorted_file:
         # Then all of the blocks are sorted individually
         blocks = [''.join(sorted(block, key=lambda s: s.lower())) for block in blocks]
         # And the result is written back to README.md
