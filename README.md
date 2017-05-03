@@ -854,7 +854,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pip](https://pip.pypa.io/en/stable/) - The Python package and dependency manager.
     * [Python Package Index](https://pypi.python.org/pypi)
-* [pip-upgrader](https://github.com/simion/pip-upgrader) - Interactive requirements upgrader, which also update the requirements.txt version
+* [pip-upgrader](https://github.com/simion/pip-upgrader) - Interactive requirements upgrader, which also updates the requirements.txt version
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [pip-tools](https://github.com/nvie/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
