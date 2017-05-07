@@ -796,6 +796,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [spaCy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
 * [TextBlob](https://github.com/sloria/TextBlob) - Providing a consistent API for diving into common NLP tasks.
 * [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
+* [Sioux](https://github.com/CogComp/sioux) - Light-weight Python NLP annotators.
+
 
 ## Network Virtualization
 
