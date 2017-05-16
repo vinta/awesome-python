@@ -469,6 +469,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
 * [PyInstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
 * [pynsist](http://pynsist.readthedocs.io/) - A tool to build Windows installers, installers bundle Python itself.
+* [cx_Freeze](http://cx-freeze.readthedocs.io/en/latest/index.html) - Freezes Python scripts into executables. Python 2.7+ & Python 3.x (Cross-platform)
 
 ## Documentation
 
