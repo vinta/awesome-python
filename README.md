@@ -909,6 +909,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
     * [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
     * [flask-restless](https://github.com/jfinkels/flask-restless) - Generating RESTful APIs for database models defined with SQLAlchemy.
+    * [gREST](https://github.com/mostafa/grest) - Build REST APIs with Neo4j and Flask, as quickly as possible!
 * Pyramid
     * [cornice](https://github.com/mozilla-services/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
