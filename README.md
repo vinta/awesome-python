@@ -67,6 +67,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Permissions](#permissions)
     - [Processes](#processes)
     - [Queue](#queue)
+    - [Recommender Systems](#recommender-systems)
     - [RESTful API](#restful-api)
     - [RPC Servers](#rpc-servers)
     - [Science](#science)
@@ -744,11 +745,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modelling for Humans.
-* [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
+* [Metrics](https://github.com/dmlc/xgboost) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
-* [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 
@@ -893,6 +893,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mrq](https://github.com/pricingassistant/mrq) - Mr. Queue - A distributed worker task queue in Python using Redis & gevent.
 * [rq](http://python-rq.org/) - Simple job queues for Python.
 * [simpleq](https://github.com/rdegges/simpleq) - A simple, infinitely scalable, Amazon SQS based queue.
+
+## Recommender Systems
+
+*Libraries for building recommender systems*
+
+* [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
+* [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
+* [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
+* [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
+* [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
 
 ## RESTful API
 
