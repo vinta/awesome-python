@@ -207,7 +207,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Quokka](http://quokkaproject.org/) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [Wagtail](https://wagtail.io/) - A Django content management system.
 * [Widgy](https://wid.gy/) - Last CMS framework, based on Django.
-* [Storyblok](https://www.storyblok.com/tp/add-a-headless-cms-to-python-django-in-5-minutes) - A API-based CMS integrated with Django.
+* [Storyblok](https://www.storyblok.com/tp/add-a-headless-cms-to-python-django-in-5-minutes) - An API-based CMS integrated with Django.
 
 ## Caching
 
