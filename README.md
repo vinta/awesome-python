@@ -612,6 +612,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Awesome game development libraries.*
 
 * [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications. It is based on pyglet.
+* [ModernGL](https://github.com/cprogrammer1994/ModernGL) - Modern OpenGL binding for python. PyOpenGL replacement.
 * [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney and maintained by Carnegie Mellon's Entertainment Technology Center. Written in C++, completely wrapped in Python.
 * [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
