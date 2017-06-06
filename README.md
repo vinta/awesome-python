@@ -1139,7 +1139,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for manipulating video and GIFs.*
 
-* [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
+* [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs. In Ubuntu 16.04 LTS it requires ImageMagic to work but it won't detect it after installation. Specific information can be find here: http://askubuntu.com/questions/873112/imagemagick-cannot-be-detected-by-moviepy/873519#873519. Just in case anybody faced the same bug as I do.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 
 ## WSGI Servers
