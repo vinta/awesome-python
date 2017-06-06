@@ -459,6 +459,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+* [Piwik](https://piwik.org/) - Web analytics platform you can host yourself.
 
 ## Distribution
 
