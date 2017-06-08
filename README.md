@@ -745,6 +745,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [auto_ml](https://github.com/ClimbsRocks/auto_ml) - Automated machine learning for production and analytics.
 * [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modelling for Humans.
 * [Metrics](https://github.com/dmlc/xgboost) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
