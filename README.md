@@ -1050,6 +1050,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [nose2](https://github.com/nose-devs/nose2) - The successor to nose, based on unittest2.
     * [pytest](http://pytest.org/latest/) - A mature full-featured Python testing tool.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
+    * [Slash](https://slash.readthedocs.org) - A testing framework aimed at testing complex projects.
     * [unittest](https://docs.python.org/2/library/unittest.html) - (Python standard library) Unit testing framework.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
