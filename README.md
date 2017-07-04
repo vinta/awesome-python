@@ -904,6 +904,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
 * [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 * [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
+* [Rexy](https://github.com/kasramvd/Rexy) - An open-source recommendation system based on a general User-Product-Tag concept and a flexible structure that has been designed to be adaptable with variant data-schema.
 
 ## RESTful API
 
