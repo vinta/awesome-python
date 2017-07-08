@@ -619,6 +619,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](http://pysdl2.readthedocs.io/) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
+* [Turtle](https://docs.python.org/3/library/turtle.html) - Popular way for introducing programming to kids
 
 ## Geolocation
 
