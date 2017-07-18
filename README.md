@@ -159,7 +159,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Python Audio Analysis Library: Feature Extraction, Classification, Segmentation and Applications
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://developer.echonest.com/) API.
-* [talkbox](http://lightspeed1.nsnet.net/access/web?id=afe84b0f-6bd5-11e7-8b13-00e0ed148814) - A Python library for speech/signal processing.
+* [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
 * [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
 * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 
@@ -1008,7 +1008,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 * YAML
-    * [PyYAML](http://lightspeed1.nsnet.net/access/web?id=c63aa53f-6bd5-11e7-8b13-00e0ed148814) - YAML implementations for Python.
+    * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * CSV
     * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
@@ -1264,7 +1264,7 @@ Where to discover new Python libraries.
 * [Django Packages](https://djangopackages.org/)
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
-* [Python 3 Wall of Superpowers](http://lightspeed1.nsnet.net/access/web?id=cbe89cb8-6bd5-11e7-8b13-00e0ed148814)
+* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
 * [Python Hackers](http://www.oss.io/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](https://www.ctolib.com/python/)
