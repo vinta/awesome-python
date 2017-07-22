@@ -881,7 +881,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for starting and communicating with OS processes.*
 
-* [envoy](https://github.com/kennethreitz/envoy) - Python [subprocess](https://docs.python.org/2/library/subprocess.html) for Humans™.
+* [delegator.py](https://github.com/kennethreitz/delegator.py) - [Subprocesses](https://docs.python.org/3.6/library/subprocess.html) for Humans™ 2.0.
 * [sarge](http://sarge.readthedocs.io/en/latest/) - Yet another wrapper for subprocess.
 * [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 
