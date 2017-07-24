@@ -881,7 +881,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for starting and communicating with OS processes.*
 
-* [envoy](https://github.com/kennethreitz/envoy) - Python [subprocess](https://docs.python.org/2/library/subprocess.html) for Humans™.
+* [delegator.py](https://github.com/kennethreitz/delegator.py) - [Subprocesses](https://docs.python.org/3.6/library/subprocess.html) for Humans™ 2.0.
 * [sarge](http://sarge.readthedocs.io/en/latest/) - Yet another wrapper for subprocess.
 * [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 
@@ -1075,7 +1075,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
 * Fake Data
-    * [church](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
+    * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [radar](https://pypi.python.org/pypi/radar) - Generate random datetime / time.
