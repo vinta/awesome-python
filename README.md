@@ -646,6 +646,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [WeasyPrint](http://weasyprint.org) - A visual rendering engine for HTML and CSS that can export to PDF.
 * [xmldataset](https://xmldataset.readthedocs.io/en/latest/) - Simple XML Parsing.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
+* [loxun](https://github.com/roskakori/loxun) - Write large output in XML using unicode and namespaces.
 
 ## HTTP
 
