@@ -1124,6 +1124,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
+* [Tapioca Wrapper](https://github.com/vintasoftware/tapioca-wrapper) - Tapioca helps you generating Python clients for APIs.
 
 ## URL Manipulation
 
