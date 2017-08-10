@@ -847,6 +847,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Others
     * [butterdb](https://github.com/terrible-ideas/butterdb) - A Python ORM for Google Drive Spreadsheets.
     * [dataset](https://github.com/pudo/dataset) - A JSON-based database.
+    * [pyoko](http://pyoko.readthedocs.io/en/latest/) - A Django-esque NoSQL ORM for Riak KV >= 2.2
 
 ## Package Management
 
