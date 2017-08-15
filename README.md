@@ -837,6 +837,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PonyORM](https://ponyorm.com/) - ORM that provides a generator-oriented interface to SQL.
     * [pyDAL](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+    * [pypika](https://pypi.python.org/pypi/PyPika) - SQL query builder with a pythonic syntax that doesn't limit the expressiveness of SQL.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [flywheel](https://github.com/stevearc/flywheel) - Object mapper for Amazon DynamoDB.
