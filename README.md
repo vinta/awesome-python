@@ -289,6 +289,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyocr](https://github.com/openpaperwork/pyocr) - A wrapper for Tesseract and Cuneiform.
 * [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
+* [dockerface](https://github.com/natanielruiz/dockerface) - Easy to install and use deep learning Faster R-CNN face detection for images and video in a docker container.
 
 ## Concurrency and Parallelism
 
