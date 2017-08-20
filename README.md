@@ -745,7 +745,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
-* [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modelling for Humans.
 * [Metrics](https://github.com/dmlc/xgboost) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
@@ -757,11 +756,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Frameworks and libraries for MapReduce.*
 
-* [dpark](https://github.com/douban/dpark) - Python clone of Spark, a MapReduce alike framework in Python.
-* [dumbo](https://github.com/klbostee/dumbo) - Python module that allows one to easily write and run Hadoop programs.
+* [PySpark](https://pypi.python.org/pypi/pyspark/) - Apache Spark Python API.
 * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
 * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
-* [PySpark](http://spark.apache.org/docs/latest/programming-guide.html) - The Spark Python API.
 * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data. Integrates with [Apache Storm](http://storm.apache.org/).
 
 ## Microsoft Windows
@@ -788,6 +785,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with human languages.*
 
+* [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modelling for Humans.
 * [Jieba](https://github.com/fxsjy/jieba) - Chinese text segmentation.
 * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
 * [NLTK](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
@@ -795,7 +793,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [spaCy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
 * [TextBlob](https://github.com/sloria/TextBlob) - Providing a consistent API for diving into common NLP tasks.
-* [TextGrocery](https://github.com/2shou/TextGrocery) - A simple, efficient short-text classification tool based on LibLinear and Jieba.
 
 ## Network Virtualization
 
