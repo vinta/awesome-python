@@ -899,6 +899,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 * [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
 * [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
+* [libffm](https://github.com/guestwalk/libffm) - A library for Field-aware Factorization Machine (FFM).
 * [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 * [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
 
