@@ -269,6 +269,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
+    * [PyPInfo](https://github.com/ofek/pypinfo) - Easily view PyPI download statistics via Google's BigQuery.
     * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - It's never been easier.
