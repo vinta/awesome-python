@@ -1147,7 +1147,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [bjoern](https://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
 * [Cheroot](https://pypi.python.org/pypi/cheroot) - Multi-threaded, high-performance, pure-Python HTTP server used by [CherryPy](#web-frameworks).
-* [fapws3](http://www.fapws.org/) - Asynchronous (networkn side only), written in C.
+* [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
 * [gunicorn](https://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
 * [meinheld](https://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
 * [netius](https://github.com/hivesolutions/netius) - Asynchronous, very fast.
