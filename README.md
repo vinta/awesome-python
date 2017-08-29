@@ -248,6 +248,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Command-line Application Development
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - Cross-platform, full-screen terminal package (i.e.  mouse/keyboard input and coloured, positioned text output) complete with high-level API for complex animations and special effects.
+    * [asynccli](https://github.com/ahopkins/asynccli) - A CLI framework based on asyncio.
     * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
