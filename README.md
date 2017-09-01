@@ -1004,6 +1004,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [ReportLab](http://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
 * Markdown
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
+    * [mistletoe](https://github.com/miyuchina/mistletoe) - A fast, extensible Markdown parser in pure Python.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
