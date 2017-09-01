@@ -348,6 +348,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [ggplot](https://github.com/yhat/ggpy) - Same API as ggplot2 for R.
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [Mayavi](https://github.com/enthought/mayavi) - 2D/3D visualization of scientific data in Python
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [PyGraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
