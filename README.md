@@ -740,6 +740,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
+* [Bugsnag](https://www.bugsnag.com/platforms/python-error-reporting/) - Logs errors. Includes useful diagnostic info like stack-trace, session, release, etc. Has a free-tier.
 
 ## Machine Learning
 
