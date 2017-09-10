@@ -896,7 +896,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Recommender Systems
 
-*Libraries for building recommender systems*
+*Libraries for building recommender systems.*
 
 * [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 * [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
@@ -907,7 +907,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Reloading
 
-*Libraries for reloading code*
+*Libraries for reloading code.*
 
 * [pydevd_reload](https://github.com/fyrestone/pydevd_reload) - An enhanced hot reload module from PyDev.
 
