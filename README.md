@@ -68,6 +68,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Processes](#processes)
     - [Queue](#queue)
     - [Recommender Systems](#recommender-systems)
+    - [Reloading](#reloading)
     - [RESTful API](#restful-api)
     - [RPC Servers](#rpc-servers)
     - [Science](#science)
@@ -903,6 +904,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [libffm](https://github.com/guestwalk/libffm) - A library for Field-aware Factorization Machine (FFM).
 * [LightFM](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 * [surprise](http://surpriselib.com) - A scikit for building and analyzing recommender systems.
+
+## Reloading
+
+*Libraries for reloading code*
+
+* [pydevd_reload](https://github.com/fyrestone/pydevd_reload) - An enhanced hot reload module from PyDev.
 
 ## RESTful API
 
