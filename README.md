@@ -8,6 +8,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Admin Panels](#admin-panels)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
     - [Anti-spam](#anti-spam)
+    - [Art](#art)
     - [Asset Management](#asset-management)
     - [Audio](#audio)
     - [Authentication](#authentication)
@@ -128,6 +129,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [django-simple-captcha](https://github.com/mbi/django-simple-captcha) - A simple and highly customizable Django app to add captcha images to any Django form.
 * [django-simple-spam-blocker](https://github.com/moqada/django-simple-spam-blocker) - Simple spam blocker for Django.
+
+## Art
+
+*Libraries for computational art, generative design, parametric architecture and the like.*
+
+* [Flat](http://xxyxyz.org/flat/) - Library for creating and manipulating digital forms of fine arts.
 
 ## Asset Management
 
