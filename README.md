@@ -892,6 +892,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mrq](https://github.com/pricingassistant/mrq) - Mr. Queue - A distributed worker task queue in Python using Redis & gevent.
 * [rq](http://python-rq.org/) - Simple job queues for Python.
 * [simpleq](https://github.com/rdegges/simpleq) - A simple, infinitely scalable, Amazon SQS based queue.
+* [atq](https://github.com/nvdv/atq) - Distributed task queue for asyncio. 
 
 ## Recommender Systems
 
