@@ -895,7 +895,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Recommender Systems
 
-*Libraries for building recommender systems*
+*Libraries for building recommender systems.*
 
 * [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 * [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
