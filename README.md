@@ -760,6 +760,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
 * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
 * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data. Integrates with [Apache Storm](http://storm.apache.org/).
+* [dask](https://dask.pydata.org/en/latest/) - A flexible parallel computing library for analytic computing.
 
 ## Microsoft Windows
 
