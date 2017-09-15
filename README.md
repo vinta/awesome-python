@@ -111,6 +111,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 * [Grappelli](http://grappelliproject.com) - A jazzy skin for the Django Admin-Interface.
+* [Monique Dashboards](https://github.com/monique-dashboards/monique) - An innovative library for creating custom dashboards (comes with a full web app).
 * [Wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Algorithms and Design Patterns
