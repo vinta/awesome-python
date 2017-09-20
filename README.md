@@ -661,6 +661,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for programming with hardware.*
 
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](https://www.arduino.cc/).
+* [keyboard](https://github.com/boppreh/keyboard) - Hook and simulate global keyboard events on Windows and Linux.
+* [mouse](https://github.com/boppreh/mouse) - Hook and simulate global mouse events on Windows and Linux.
 * [Pingo](http://www.pingo.io/) - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo, etc.
 * [Pyro](http://pyrorobotics.com/) - Python Robotics.
 * [PyUserInput](https://github.com/SavinaRoja/PyUserInput) - A module for cross-platform control of the mouse and keyboard.
