@@ -896,6 +896,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mrq](https://github.com/pricingassistant/mrq) - Mr. Queue - A distributed worker task queue in Python using Redis & gevent.
 * [rq](http://python-rq.org/) - Simple job queues for Python.
 * [simpleq](https://github.com/rdegges/simpleq) - A simple, infinitely scalable, Amazon SQS based queue.
+* [selinon](http://selinon.readthedocs.io/) - An advanced task flow management on top of Celery distributed task queue.
 
 ## Recommender Systems
 
