@@ -624,6 +624,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for geocoding addresses and working with latitudes and longitudes.*
 
 * [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides country choices for use with forms, flag icons static files, and a country field for models.
+
+* [django-geojson](https://github.com/makinacorpus/django-geojson) - A collection of helpers to (de)serialize (Geo)Django objects into GeoJSON.
 * [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
