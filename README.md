@@ -240,6 +240,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
     * [pylama](https://github.com/klen/pylama) - Code audit tool for Python and JavaScript.
     * [Pylint](https://www.pylint.org/) - A Fully customizable source code analyzer.
+* Static Type Checker
+    * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
 
 ## Command-line Tools
 
