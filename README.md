@@ -995,6 +995,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for parsing and manipulating specific text formats.*
 
 * General
+    * [pypandoc](https://github.com/bebraw/pypandoc) - Providing a thin wrapper for pandoc, a universal document converter.
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 * Office
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
