@@ -1297,6 +1297,7 @@ List of lists.
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
+    * [awesome-python-in-education](https://github.com/quobit/awesome-python-in-education)
 
 # Contributing
 
