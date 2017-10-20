@@ -743,7 +743,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Eliot](https://github.com/ScatterHQ/eliot) - Logging for complex & distributed systems.
 * [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
+* [Logzero](https://github.com/metachris/logzero) - Robust and effective logging for Python 2 and 3. 
 * [Sentry](https://pypi.python.org/pypi/sentry) - A realtime logging and aggregation server.
+
 
 ## Machine Learning
 
