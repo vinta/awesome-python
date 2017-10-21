@@ -1148,6 +1148,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [moviepy](http://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
+* [butterflow](https://github.com/dthpham/butterflow) - Make motion interpolated and fluid slow motion videos from the command line
 
 ## WSGI Servers
 
