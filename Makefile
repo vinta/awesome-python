@@ -3,14 +3,13 @@ DOCDIR=$(BASEDIR)/docs
 
 install:
 	pip install mkdocs
+	pip install mkdocs-bootswatch
 
 link:
 	ln -sf $(BASEDIR)/README.md $(DOCDIR)/index.md
 
-preview:
-	$(MAKE) link
+preview: link
 	mkdocs serve
 
-deploy:
-	$(MAKE) link
+deploy: link
 	mkdocs gh-deploy --clean
