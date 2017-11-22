@@ -1254,6 +1254,9 @@ Where to discover new Python libraries.
 * [Podcast.init](https://podcastinit.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Python Bytes](https://pythonbytes.fm)
+* [Python Testing](http://pythontesting.net)
+* [Radio Free Python](http://radiofreepython.com/)
+* [From Python Import Podcast](http://frompythonimportpodcast.com/)
 
 ## Twitter
 
@@ -1301,6 +1304,7 @@ List of lists.
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
+    * [Python Podcasts](https://www.cybrhome.com/topic/python-podcasts)
 
 # Contributing
 
