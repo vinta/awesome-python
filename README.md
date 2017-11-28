@@ -1144,6 +1144,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
 * [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL and bit.ly-like URLs.
 * [webargs](https://github.com/sloria/webargs) - A friendly library for parsing HTTP request arguments, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, and Pyramid.
+* [pygmy](https://github.com/amitt001/pygmy) - An open-source, extensible & easy-to-use URL shortener. It's very easy to host and run. It uses Django for web UI rendering and Flask fro REST API.
 
 ## Video
 
