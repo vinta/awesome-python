@@ -300,7 +300,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
-    * [tmuxp](https://github.com/tony/tmuxp) - Manage tmux sessions via JSON/YAML configuration and interact with tmux servers, sessions, windows and panes via Python API.
+    * [libtmuxp](https://libtmux.git-pull.com) - Python API for controlling [tmux](https://tmux.github.io).
+    * [tmuxp](https://tmuxp.git-pull.com) - Manage tmux sessions via JSON/YAML configuration.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - It's never been easier.
     * [mycli](https://github.com/dbcli/mycli) - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
