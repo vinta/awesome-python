@@ -328,6 +328,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [Dopyter](https://github.com/davidgasquez/dopyter) - Opinionated mix of Docker + Python + Jupyter for data analysis. 
 
 ## Data Validation
 
