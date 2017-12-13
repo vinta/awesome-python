@@ -990,6 +990,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Frameworks for developing serverless Python code.*
 
+* [serverless](https://github.com/serverless/serverless) - Build applications with serverless architectures using AWS Lambda, Azure Functions, Google CloudFunctions and more.
 * [apex](https://github.com/apex/apex) - Build, deploy, and manage [AWS Lambda](https://aws.amazon.com/lambda/) functions with ease.
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
 * [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
