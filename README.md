@@ -301,6 +301,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [threading](https://docs.python.org/2/library/threading.html) - (Python standard library) Higher-level threading interface.
 * [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of asyncio event loop on top of libuv.
+* [deco](https://github.com/alex-sherman/deco) - A simplified parallel computing model using decorators.
 
 ## Configuration
 
