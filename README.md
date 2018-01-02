@@ -353,6 +353,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [PyGraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+* [quandl-metabase](https://hasura.io/hub/project/anirudhm/quandl-metabase-time-series) - Visualize Quandl's timeseries datasets with Metabase.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
 
