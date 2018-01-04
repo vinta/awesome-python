@@ -350,6 +350,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook
 * [ggplot](https://github.com/yhat/ggpy) - Same API as ggplot2 for R.
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [OpenMapTiles](https://openmaptiles.org/) - Set of tools for self-hosting OSM maps.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [PyGraphviz](https://pypi.python.org/pypi/pygraphviz) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
@@ -634,6 +635,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
+* [OSMNames](https://github.com/OSMNames/OSMNames) - Geocoding with rank based on related Wikipedia article popularity.
 * [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
 
 ## HTML Manipulation
