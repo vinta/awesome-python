@@ -1293,11 +1293,11 @@ List of lists.
     * [awesome](https://github.com/sindresorhus/awesome)
     * [lists](https://github.com/jnv/lists)
 * Python
+    * [awesome-python-in-education](https://github.com/quobit/awesome-python-in-education)
     * [pycrumbs](https://github.com/kirang89/pycrumbs)
     * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
-    * [awesome-python-in-education](https://github.com/quobit/awesome-python-in-education)
 
 # Contributing
 
