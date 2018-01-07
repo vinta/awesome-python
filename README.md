@@ -1217,6 +1217,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [TurboGears](http://www.turbogears.org/) - A microframework that can scale up to a full stack solution.
 * [Web2py](http://www.web2py.com/) - Full-stack enterprise framework for secure database-driven web-based applications.
     * [GitHub Web2py](https://github.com/web2py)
+* [API Star](https://github.com/encode/apistar) - A smart Web API framework, designed for Python 3.
 
 ## WebSocket
 
