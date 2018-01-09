@@ -674,6 +674,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyUserInput](https://github.com/SavinaRoja/PyUserInput) - A module for cross-platform control of the mouse and keyboard.
 * [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 * [wifi](https://github.com/rockymeza/wifi) - A Python library and command line tool for working with WiFi on Linux.
+* [robot-blocks](https://chris104957.github.io/robot-blocks/) - A library for rapidly creating Raspberry Pi robot software
 
 ## Imagery
 
