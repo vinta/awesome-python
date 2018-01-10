@@ -754,6 +754,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Machine Learning. See: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [Metrics](https://github.com/dmlc/xgboost) - Machine learning evaluation metrics.
+* [modAL](https://cosmic-cortex.github.io/modAL) - A modular active learning framework, built on top of scikit-learn.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
