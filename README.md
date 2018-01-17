@@ -1301,6 +1301,7 @@ List of lists.
 
 * Monty
     * [awesome](https://github.com/sindresorhus/awesome)
+    * [awesomo](https://github.com/lk-geimfari/awesomo)
     * [lists](https://github.com/jnv/lists)
 * Python
     * [pycrumbs](https://github.com/kirang89/pycrumbs)
