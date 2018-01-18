@@ -662,6 +662,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [requests](http://docs.python-requests.org/en/latest/) - HTTP Requests for Humans™.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
+* [Requestium](https://github.com/tryolabs/requestium) - Requestium is a python library that merges the power of Requests, Selenium, and Parsel into a single integrated tool for automatizing web actions.
 
 ## Hardware
 
