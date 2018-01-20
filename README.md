@@ -96,6 +96,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Twitter](#twitter)
     - [Websites](#websites)
     - [Weekly](#weekly)
+    - [Community Curated](https://hackr.io/tutorials/learn-python)
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
