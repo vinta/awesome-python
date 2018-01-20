@@ -237,9 +237,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
     * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
 * Linter
-    * [Flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and co.
-    * [pylama](https://github.com/klen/pylama) - Code audit tool for Python and JavaScript.
-    * [Pylint](https://www.pylint.org/) - A Fully customizable source code analyzer.
+    * [flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and McCabe.
+    * [prospector](https://github.com/landscapeio/prospector) - A tool to analyse Python code.
+    * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
+    * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
 * Static Type Checker
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
 * Static Type Annotations Generators
