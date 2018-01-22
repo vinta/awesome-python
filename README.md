@@ -1147,9 +1147,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for parsing URLs.*
 
 * [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
+ * [netaddr](https://github.com/drkjam/netaddr) - A Python library for representing and manipulating network addresses.
 * [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 * [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
 * [short_url](https://github.com/Alir3z4/python-short_url) - Python implementation for generating Tiny URL and bit.ly-like URLs.
+* [tldextract](https://github.com/john-kurkowski/tldextract) - Accurately separate the TLD from the registered domain and subdomains of a URL, using the Public Suffix List.
 * [webargs](https://github.com/sloria/webargs) - A friendly library for parsing HTTP request arguments, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, and Pyramid.
 
 ## Video
@@ -1180,6 +1182,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Haul](https://github.com/vinta/Haul) - An Extensible Image Crawler.
 * [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
+* [htmldate](https://github.com/adbar/htmldate) - Find creation date using common structural patterns or text-based heuristics.
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
