@@ -50,7 +50,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [HTTP](#http)
     - [Imagery](#imagery)
     - [Implementations](#implementations)
-    - [Interactive Interpreter](#interactive-interpreter)
+    - [Intelligent Algorithm](#intelligent-algorithm)
+    - [Interactive Interpreter](#interactive-interpreter)
     - [Internationalization](#internationalization)
     - [Job Scheduler](#job-scheduler)
     - [Logging](#logging)
@@ -712,6 +713,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PySec](https://github.com/ebranca/owasp-pysec) - Hardened version of python that makes it easier for security professionals and developers to write applications more resilient to attacks and manipulations.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation built using LLVM and modern JIT techniques with the goal of achieving good performance.
 * [Stackless Python](https://bitbucket.org/stackless-dev/stackless/wiki/Home) - An enhanced version of the Python programming language which allows programmers to reap the benefits of thread-based programming without the performance and complexity problems associated with conventional threads.
+
+## Intelligent Algorithm
+* [deap](http://deap.readthedocs.io/en/master/index.html) DEAP is a novel evolutionary computation framework for rapid prototyping and testing of ideas.
+* [SimulatedAnnealing](https://github.com/skylergrammer/SimulatedAnnealing) This module provides a hyperparameter optimization using simulated annealing.
+
 
 ## Interactive Interpreter
 
