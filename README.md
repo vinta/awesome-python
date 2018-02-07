@@ -128,6 +128,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [django-simple-captcha](https://github.com/mbi/django-simple-captcha) - A simple and highly customizable Django app to add captcha images to any Django form.
 * [django-simple-spam-blocker](https://github.com/moqada/django-simple-spam-blocker) - Simple spam blocker for Django.
+* [django-antispam](https://github.com/mixkorshun/django-antispam) - Anti-spam tools for django apps. Includes honey pot, reCAPTCHA and Akismet.
 
 ## Asset Management
 
