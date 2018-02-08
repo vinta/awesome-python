@@ -715,6 +715,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Stackless Python](https://bitbucket.org/stackless-dev/stackless/wiki/Home) - An enhanced version of the Python programming language which allows programmers to reap the benefits of thread-based programming without the performance and complexity problems associated with conventional threads.
 
 ## Intelligent Algorithm
+
+*Intelligent Algorithm and Nature Inspired Computation*
+
 * [deap](http://deap.readthedocs.io/en/master/index.html) DEAP is a novel evolutionary computation framework for rapid prototyping and testing of ideas.
 * [SimulatedAnnealing](https://github.com/skylergrammer/SimulatedAnnealing) This module provides a hyperparameter optimization using simulated annealing.
 
