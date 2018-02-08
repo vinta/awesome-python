@@ -50,7 +50,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [HTTP](#http)
     - [Imagery](#imagery)
     - [Implementations](#implementations)
+    
     - [Intelligent Algorithm](#intelligent-algorithm)
+    
     - [Interactive Interpreter](#interactive-interpreter)
     - [Internationalization](#internationalization)
     - [Job Scheduler](#job-scheduler)
