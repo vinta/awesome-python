@@ -182,6 +182,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyJWT](https://github.com/jpadilla/pyjwt) - Implementation of the JSON Web Token draft 01.
     * [python-jws](https://github.com/brianloveswords/python-jws) - Implementation of JSON Web Signatures draft 02.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
+    * [authenticatorpy](https://github.com/abdullahselek/authenticatorpy) - Generate 2FA tokens like Google Authenticator.
 
 ## Build Tools
 
