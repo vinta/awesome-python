@@ -343,6 +343,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
+* [trafaret](https://github.com/Deepwalker/trafaret) - Ultimate transformation library that supports validation, contexts and aiohttp.
 
 ## Data Visualization
 
