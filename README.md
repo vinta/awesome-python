@@ -1251,10 +1251,10 @@ Online tools and APIs to simplify development.
 
 ## Code Quality
 
-* [Codacy](https://www.codacy.com/) - Automated Code Review to ship better code, faster. Free for Open Source.
+* [Codacy](https://www.codacy.com/) - Automated Code Review to ship better code, faster.
 * [Codecov](https://codecov.io/) - Code coverage dashboard.
+* [CodeFactor](https://www.codefactor.io/) - Automated Code Review for Git.
 * [Landscape](https://landscape.io/) - Hosted continuous Python code metrics.
-* [QuantifiedCode](https://www.quantifiedcode.com/) - A data-driven, automated, continuous code review tool.
 
 # Resources
 
