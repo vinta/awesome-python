@@ -15,7 +15,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Caching](#caching)
     - [ChatOps Tools](#chatops-tools)
     - [CMS](#cms)
-    - [Code Analysis and Linter](#code-analysis-and-linter)
+    - [Code Analysis](#code-analysis)
     - [Command-line Tools](#command-line-tools)
     - [Compatibility](#compatibility)
     - [Computer Vision](#computer-vision)
@@ -228,21 +228,19 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Errbot](http://errbot.io/en/latest/) - The easiest and most popular chatbot to implement ChatOps.
 
-## Code Analysis and Linter
+## Code Analysis
 
-*Libraries and tools for analysing, parsing and manipulation codebases.*
 *Tools of static analysis, linters and code quality checkers. See: [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
 
 * Code Analysis
+    * [flake8](https://pypi.python.org/pypi/flake8) - A wrapper around pycodestyle, pyflakes and McCabe.
     * [coala](http://coala.io/) - Language independent and easily extendable code analysis application.
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
-    * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
-* Linter
-    * [flake8](https://pypi.python.org/pypi/flake8) - The modular source code checker: pep8, pyflakes and McCabe.
     * [prospector](https://github.com/landscapeio/prospector) - A tool to analyse Python code.
+    * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
-* Static Type Checker
+* Static Type Checkers
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
@@ -260,7 +258,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line
-    * [Python-Fire](https://github.com/google/python-fire) - A library for creating command line interfaces (CLIs) from absolutely any Python object.
+    * [Python-Fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
