@@ -1259,12 +1259,12 @@ Where to discover new Python libraries.
 
 ## Podcasts
 
+* [From Python Import Podcast](http://frompythonimportpodcast.com/)
 * [Podcast.init](https://podcastinit.com/)
-* [Talk Python To Me](https://talkpython.fm/)
 * [Python Bytes](https://pythonbytes.fm)
 * [Python Testing](http://pythontesting.net)
 * [Radio Free Python](http://radiofreepython.com/)
-* [From Python Import Podcast](http://frompythonimportpodcast.com/)
+* [Talk Python To Me](https://talkpython.fm/)
 
 ## Twitter
 
@@ -1294,11 +1294,10 @@ Where to discover new Python libraries.
 
 ## Weekly
 
-* [CodeTengu Weekly](https://weekly.codetengu.com/)
+* [CodeTengu Weekly 碼天狗週刊](https://weekly.codetengu.com/)
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
-* [Python Bytes](https://pythonbytes.fm)
 
 # Other Awesome Lists
 
@@ -1320,3 +1319,7 @@ List of lists.
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
 
 I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by adding :+1: to them. Pull requests will be merged when their votes reach **20**.
+
+- - -
+
+If you have any question about this opinionated list, you could open an issue on GitHub or contact me [@vinta](https://twitter.com/vinta) on Twitter.
