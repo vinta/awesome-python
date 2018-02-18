@@ -231,6 +231,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Code Analysis and Linter
 
 *Libraries and tools for analysing, parsing and manipulation codebases.*
+*Tools of static analysis, linters and code quality checkers. See: [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
 
 * Code Analysis
     * [coala](http://coala.io/) - Language independent and easily extendable code analysis application.
