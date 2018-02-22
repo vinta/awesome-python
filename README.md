@@ -1313,6 +1313,7 @@ List of lists.
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [Python Podcasts](https://www.cybrhome.com/topic/python-podcasts)
+    * [Python Curated Resources](https://hackr.io/tutorials/learn-python)
 
 # Contributing
 
