@@ -48,7 +48,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Hardware](#hardware)
     - [HTML Manipulation](#html-manipulation)
     - [HTTP](#http)
-    - [Imagery](#imagery)
+    - [Image Processing](#image-processing)
     - [Implementations](#implementations)
     - [Interactive Interpreter](#interactive-interpreter)
     - [Internationalization](#internationalization)
@@ -677,7 +677,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 * [wifi](https://github.com/rockymeza/wifi) - A Python library and command line tool for working with WiFi on Linux.
 
-## Imagery
+## Image Processing
 
 *Libraries for manipulating images.*
 
