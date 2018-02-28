@@ -12,6 +12,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Audio](#audio)
     - [Authentication](#authentication)
     - [Build Tools](#build-tools)
+    - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
     - [ChatOps Tools](#chatops-tools)
     - [CMS](#cms)
@@ -192,6 +193,15 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PlatformIO](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 * [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
+
+## Built-in Classes Enhancement
+
+*Libraries for enhancing Python built-in classes.*
+
+* [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
+* [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality..
+* [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
+* [dotted](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
 
 ## CMS
 
@@ -786,7 +796,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Useful libraries or tools that don't fit in the categories above.*
 
-* [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
