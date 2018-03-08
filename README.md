@@ -436,6 +436,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 * Others
+    * [IceCream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
     * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
     * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
     * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
