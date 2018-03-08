@@ -260,7 +260,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for building command-line application.*
 
 * Command-line Application Development
-    * [asciimatics](https://github.com/peterbrittain/asciimatics) - Cross-platform, full-screen terminal package (i.e.  mouse/keyboard input and coloured, positioned text output) complete with high-level API for complex animations and special effects.
+    * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
+    * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
     * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
@@ -272,8 +273,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A Library for building powerful interactive command lines.
 * Productivity Tools
     * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
-    * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
-    * [caniusepython3](https://github.com/brettcannon/caniusepython3) - Determine what projects are blocking you from porting to Python 3.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
@@ -1191,13 +1190,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
-* [opengraph](https://github.com/erikriver/opengraph) - A Python module to parse the Open Graph Protocol
 * [python-goose](https://github.com/grangier/python-goose) - HTML Content/Article Extractor.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
+* [requests-html](https://github.com/kennethreitz/requests-html) - Pythonic HTML Parsing for Humans.
 * [sanitize](https://github.com/Alir3z4/python-sanitize) - Bringing sanity to world of messed-up data.
 * [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
-* [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs
+* [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 
 ## Web Crawling
 
