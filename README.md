@@ -284,6 +284,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
     * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
+    * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - It's never been easier.
 
 ## Compatibility
