@@ -720,6 +720,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [deap](http://deap.readthedocs.io/en/master/index.html) DEAP is a novel evolutionary computation framework for rapid prototyping and testing of ideas.
 * [SimulatedAnnealing](https://github.com/skylergrammer/SimulatedAnnealing) This module provides a hyperparameter optimization using simulated annealing.
+* [Simple AI](http://simpleai.readthedocs.io/en/latest/)This lib implements many of the artificial intelligence algorithms described on the book “Artificial Intelligence, a Modern Approach”, from Stuart Russel and Peter Norvig.
 
 
 ## Interactive Interpreter
