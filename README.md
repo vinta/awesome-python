@@ -471,6 +471,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Fabtools](https://github.com/fabtools/fabtools) - Tools for writing awesome Fabric files.
 * [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
 * [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
+* [packerlicious](https://github.com/mayn/packerlicious) - A library for generating packer templates.
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
