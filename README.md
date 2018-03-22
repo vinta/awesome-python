@@ -333,6 +333,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 * [Passlib](https://pythonhosted.org/passlib/) - Secure password storage/hashing library, very high level.
 * [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [PyCryptodome](https://www.pycryptodome.org) - Replacement for PyCrypto.
+
 
 ## Data Analysis
 
