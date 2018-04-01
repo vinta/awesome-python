@@ -1151,6 +1151,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
+* [vkapi](https://github.com/ISosnovik/vkAPI) - an ultimate library for [vk.com](https://vk.com) API written in Python.
 
 ## URL Manipulation
 
