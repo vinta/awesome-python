@@ -725,7 +725,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Interactive Interpreter
 
-*Interactive Python interpreters (REPL).*
+*Interactive Python interpreters (REPL). See: [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter).*
 
 * [bpython](https://github.com/bpython/bpython) - A fancy interface to the Python interpreter.
 * [Jupyter Notebook (IPython)](https://jupyter.org) - A rich toolkit to help you make the most out of using Python interactively.
