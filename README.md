@@ -999,6 +999,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for serializing complex data types*
 
+* [lupin](https://github.com/holinnn/lupin) - A python library for converting (loading and dumping) objects to/from JSON friendly types, it handles polymorphic lists and associations.
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
 
 ## Serverless Frameworks
