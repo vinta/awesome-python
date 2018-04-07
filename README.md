@@ -878,6 +878,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
+* [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
 
 ## Package Repositories
