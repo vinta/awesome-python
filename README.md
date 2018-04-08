@@ -55,6 +55,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Internationalization](#internationalization)
     - [Job Scheduler](#job-scheduler)
     - [Logging](#logging)
+    - [Logic Programming](#logic-programming)
     - [Machine Learning](#machine-learning)
     - [MapReduce](#mapreduce)
     - [Miscellaneous](#miscellaneous)
@@ -760,6 +761,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [logging](https://docs.python.org/2/library/logging.html) - (Python standard library) Logging facility for Python.
 * [raven](https://github.com/getsentry/raven-python) - Python client for Sentry, a log/error tracking, crash reporting and aggregation platform for web applications.
+
+## Logic Programming
+
+*Libraries for logic programming.*
+
+* [OwlReady](http://owlready2.readthedocs.io/en/latest/) - A module for ontology-oriented programming in Python.
+* [PyKE](http://pyke.sourceforge.net) - Introduces a form of Logic Programming (inspired by Prolog) to the Python community by providing a knowledge-based inference engine (expert system) written in 100% Python.
+* [PyClips](http://pyclips.sourceforge.net/web/) - An extension module for the Python language that embeds full CLIPS functionality in Python applications.
 
 ## Machine Learning
 
