@@ -55,7 +55,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Internationalization](#internationalization)
     - [Job Scheduler](#job-scheduler)
     - [Logging](#logging)
-    - [Logic Programming](#logic-programming)
+    - [Logic Programming](#logic-programming)
     - [Machine Learning](#machine-learning)
     - [MapReduce](#mapreduce)
     - [Miscellaneous](#miscellaneous)
