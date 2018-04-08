@@ -766,9 +766,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for logic programming.*
 
+* [Kenren](https://github.com/logpy/logpy) - Logic Programming in Python
 * [OwlReady](http://owlready2.readthedocs.io/en/latest/) - A module for ontology-oriented programming in Python.
-* [PyKE](http://pyke.sourceforge.net) - Introduces a form of Logic Programming (inspired by Prolog) to the Python community by providing a knowledge-based inference engine (expert system) written in 100% Python.
 * [PyClips](http://pyclips.sourceforge.net/web/) - An extension module for the Python language that embeds full CLIPS functionality in Python applications.
+* [PyKE](http://pyke.sourceforge.net) - A form of Logic Programming (inspired by Prolog), providing a knowledge-based inference engine (expert system) written in 100% Python.
+* [PySWIP](https://code.google.com/archive/p/pyswip/) - A bridge between Python and SWI-Prolog.
 
 ## Machine Learning
 
