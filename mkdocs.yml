@@ -21,5 +21,7 @@ extra:
 google_analytics:
   - 'UA-510626-7'
   - 'auto'
+extra_css:
+    - css/extra.css
 pages:
   - "Life is short, you need Python.": "index.md"
