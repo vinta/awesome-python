@@ -881,6 +881,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
 * [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
+* [pipenv](https://github.com/pypa/pipenv) - Python Dev Workflow for Humans.
 
 ## Package Repositories
 
