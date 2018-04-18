@@ -567,6 +567,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
 * [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv.
+* [poetry](https://github.com/PyDever/poetry) - Python dependency management and packaging made easy.
 
 ## Files
 
