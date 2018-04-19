@@ -997,6 +997,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [solrpy](https://github.com/edsu/solrpy) - A Python client for [solr](http://lucene.apache.org/solr/).
 * [Whoosh](http://whoosh.readthedocs.io/en/latest/) - A fast, pure Python search engine library.
 
+## Security
+
+*Libraries for securing data*
+
+* [Virgil Security SDK](https://github.com/VirgilSecurity/virgil-sdk-python) - An SDK which allows developers to add full end-to-end security to their existing digital solutions to become HIPAA and GDPR compliant and more using Virgil API.
+* [Virgil Crypto Library](https://github.com/VirgilSecurity/virgil-crypto-python) - A high-level cryptographic library that allows to perform all necessary operations for securely storing and transferring data.
+
 ## Serialization
 
 *Libraries for serializing complex data types*
