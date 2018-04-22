@@ -85,7 +85,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [URL Manipulation](#url-manipulation)
     - [Video](#video)
     - [Web Content Extracting](#web-content-extracting)
-    - [Web Crawling](#web-crawling)
+    - [Web Crawling & Web Scraping](#web-crawling-&-web-scraping)
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
@@ -1203,9 +1203,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 
-## Web Crawling
+## Web Crawling & Web Scraping
 
-*Libraries for scraping websites.*
+*Libraries to automate data extraction from websites.*
 
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [Demiurge](https://github.com/matiasb/demiurge) - PyQuery-based scraping micro-framework.
