@@ -85,7 +85,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [URL Manipulation](#url-manipulation)
     - [Video](#video)
     - [Web Content Extracting](#web-content-extracting)
-    - [Web Crawling & Web Scraping](#web-crawling-&-web-scraping)
+    - [Web Crawling & Web Scraping](#web-crawling--web-scraping)
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
