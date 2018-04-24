@@ -85,7 +85,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [URL Manipulation](#url-manipulation)
     - [Video](#video)
     - [Web Content Extracting](#web-content-extracting)
-    - [Web Crawling](#web-crawling)
+    - [Web Crawling & Web Scraping](#web-crawling--web-scraping)
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
@@ -342,6 +342,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [Optimus](https://github.com/ironmussa/Optimus) - Cleansing, pre-processing, feature engineering, exploratory data analysis and easy Machine Learning with a PySpark backend. 
 
 ## Data Validation
 
@@ -729,6 +730,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [bpython](https://github.com/bpython/bpython) - A fancy interface to the Python interpreter.
 * [Jupyter Notebook (IPython)](https://jupyter.org) - A rich toolkit to help you make the most out of using Python interactively.
+    * [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
 * [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
 
 ## Internationalization
@@ -815,6 +817,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SnowNLP](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 * [spaCy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
 * [TextBlob](https://github.com/sloria/TextBlob) - Providing a consistent API for diving into common NLP tasks.
+* [PyTorch-NLP](https://github.com/PetrochukM/PyTorch-NLP) - A toolkit enabling rapid deep learning NLP prototyping for research.
 
 ## Network Virtualization
 
@@ -1200,9 +1203,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 
-## Web Crawling
+## Web Crawling & Web Scraping
 
-*Libraries for scraping websites.*
+*Libraries to automate data extraction from websites.*
 
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [Demiurge](https://github.com/matiasb/demiurge) - PyQuery-based scraping micro-framework.
