@@ -1325,6 +1325,7 @@ List of lists.
     * [python_reference](https://github.com/rasbt/python_reference)
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [Python Podcasts](https://www.cybrhome.com/topic/python-podcasts)
+    * [awesome-python-models](https://github.com/grundic/awesome-python-models)
 
 # Contributing
 
