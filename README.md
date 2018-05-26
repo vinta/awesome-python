@@ -253,6 +253,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
 * Static Type Checkers
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
+    * [Pyre](https://github.com/facebook/pyre-check) - Performant type checking.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
 
