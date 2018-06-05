@@ -1291,6 +1291,7 @@ Where to discover new Python libraries.
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
 * [@TalkPython](https://twitter.com/talkpython)
+* [@realpython](https://twitter.com/realpython)
 
 ## Websites
 
@@ -1304,6 +1305,7 @@ Where to discover new Python libraries.
 * [Python Hackers](http://www.oss.io/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](https://www.ctolib.com/python/)
+* [Real Python](https://realpython.com)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 
 ## Weekly
@@ -1312,6 +1314,7 @@ Where to discover new Python libraries.
 * [Import Python Newsletter](http://importpython.com/newsletter/)
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Weekly](http://www.pythonweekly.com/)
+* [Python Tricks](https://realpython.com/python-tricks/)
 
 # Other Awesome Lists
 
