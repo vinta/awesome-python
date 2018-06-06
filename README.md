@@ -118,7 +118,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Python implementation of algorithms and design patterns.*
 
-* [algorithms](https://github.com/nryoung/algorithms) - A module of algorithms for Python.
+* [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms in Python.
 * [PyPattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) - Fast, pure-Python implementation of SortedList, SortedDict, and SortedSet types.
