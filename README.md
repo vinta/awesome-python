@@ -440,6 +440,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 * Others
     * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
+    * [everbug](https://github.com/everhide/everbug) - Django debug tool with browser extensions.
     * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
     * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
     * [hunter](https://github.com/ionelmc/python-hunter) - Hunter is a flexible code tracing toolkit.
