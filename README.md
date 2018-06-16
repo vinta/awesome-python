@@ -804,6 +804,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [anishot](https://github.com/sourcerer-io/anishot) - A very simple script to animate your GitHub README screenshots.
 
 ## Natural Language Processing
 
