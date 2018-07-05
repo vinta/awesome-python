@@ -1309,6 +1309,7 @@ Where to discover new Python libraries.
 * [Python 开发社区](https://www.ctolib.com/python/)
 * [Real Python](https://realpython.com)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
+* [Using Python](http://usingpython.com)
 
 ## Weekly
 
