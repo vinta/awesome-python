@@ -880,6 +880,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pip](https://pip.pypa.io/en/stable/) - The Python package and dependency manager.
     * [Python Package Index](https://pypi.python.org/pypi)
+* [Portage](https://github.com/gentoo/portage) - Package manager of Gentoo Linux and derivative distributions (usable cross-platform, handles both Python and non-Python dependency graphs).
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
