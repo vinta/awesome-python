@@ -1071,6 +1071,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Genshi](https://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Jinja2](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
+* [TemPy](https://github.com/Hrabal/TemPy) - OOP templating to generate HTML without html.
 
 ## Testing
 
