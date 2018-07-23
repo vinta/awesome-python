@@ -28,6 +28,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Data Visualization](#data-visualization)
     - [Database Drivers](#database-drivers)
     - [Database](#database)
+    - [Database-tools](#database-tools)
     - [Date and Time](#date-and-time)
     - [Debugging Tools](#debugging-tools)
     - [Deep Learning](#deep-learning)
@@ -407,6 +408,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
+
+## Database Tools
+
+*Libraries and tools for database-based applications. *
+
+* [Acra](https://github.com/cossacklabs/acra) - SQL database protection suite: strong selective encryption, SQL injections prevention, intrusion detection system.
 
 ## Date and Time
 
