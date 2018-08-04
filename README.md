@@ -122,7 +122,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyPattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) - Fast, pure-Python implementation of SortedList, SortedDict, and SortedSet types.
-* [SCOOP](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python.
 
 ## Anti-spam
 
@@ -311,10 +310,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for concurrent and parallel execution.*
 
+* [concurrent.futures](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based "[threading](https://docs.python.org/3/library/threading.html)" interface.
+* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) A high-level interface for asynchronously executing callables.
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
-* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based "threading" interface.
-* [threading](https://docs.python.org/3/library/threading.html) - (Python standard library) Higher-level threading interface.
+* [SCOOP](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python.
 * [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of asyncio event loop on top of libuv.
 
