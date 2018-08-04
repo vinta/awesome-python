@@ -352,6 +352,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 * [colander](https://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
+* [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
+    * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
@@ -380,7 +382,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python.
 * [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [ZODB](http://www.zodb.org/en/latest/) - A native object database for Python. A key-value and object graph database.
-
 
 ## Database Drivers
 
@@ -1228,9 +1229,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Full stack web frameworks.*
 
-* [Bottle](http://bottlepy.org/docs/dev/index.html) - A fast, simple and lightweight WSGI micro web-framework.
-* [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
-    * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
     * [awesome-django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
@@ -1239,7 +1237,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Sanic](https://github.com/channelcat/sanic) - Web server that's written to go fast.
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
-* [Vibora](https://vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask
+* [Vibora](https://vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask.
 
 ## WebSocket
 
@@ -1247,7 +1245,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [AutobahnPython](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [Crossbar](https://github.com/crossbario/crossbar/) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
-* [django-channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django
+* [django-channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 * [django-socketio](https://github.com/stephenmcd/django-socketio) - WebSockets for Django.
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
 
