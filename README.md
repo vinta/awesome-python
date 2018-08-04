@@ -400,12 +400,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
     * [pymssql](http://www.pymssql.org/en/latest/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
-    * [cassandra-python-driver](https://github.com/datastax/python-driver) - Python driver for Cassandra.
+    * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     * [HappyBase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
+    * [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
     * [py2neo](http://py2neo.org/2.0/) - Python wrapper client for Neo4j's restful interface.
-    * [pycassa](https://github.com/pycassa/pycassa) - Python Thrift driver for Cassandra.
     * [PyMongo](https://docs.mongodb.com/ecosystem/drivers/python/) - The official Python client for MongoDB.
-    * [redis-py](https://github.com/andymccurdy/redis-py) - The Redis Python Client.
+    * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
     * [Motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
