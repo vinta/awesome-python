@@ -15,6 +15,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
     - [ChatOps Tools](#chatops-tools)
+    - [Cluster Computing](#cluster-computing)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
     - [Command-line Tools](#command-line-tools)
@@ -56,7 +57,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Job Scheduler](#job-scheduler)
     - [Logging](#logging)
     - [Machine Learning](#machine-learning)
-    - [MapReduce](#mapreduce)
     - [Miscellaneous](#miscellaneous)
     - [Natural Language Processing](#natural-language-processing)
     - [Network Virtualization](#network-virtualization)
@@ -237,6 +237,17 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [Errbot](http://errbot.io/en/latest/) - The easiest and most popular chatbot to implement ChatOps.
+
+## Cluster Computing
+
+*Frameworks and libraries for Cluster Computing.*
+
+* [PySpark](https://pypi.python.org/pypi/pyspark/) - [Apache Spark](https://spark.apache.org/) Python API.
+* [dask](https://dask.pydata.org/en/latest/) - A flexible parallel computing library for analytic computing.
+* [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
+* [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
+* [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
+* [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Code Analysis
 
@@ -779,16 +790,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
-
-## MapReduce
-
-*Frameworks and libraries for MapReduce.*
-
-* [PySpark](https://pypi.python.org/pypi/pyspark/) - Apache Spark Python API.
-* [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
-* [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
-* [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data. Integrates with [Apache Storm](http://storm.apache.org/).
-* [dask](https://dask.pydata.org/en/latest/) - A flexible parallel computing library for analytic computing.
 
 ## Microsoft Windows
 
