@@ -947,6 +947,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit to build web APIs.
     * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
 * Flask
+    * [appkernel](https://github.com/accelero-cloud/appkernel) - REST microservice framework powered by Flask, MongoDB and the belief that you love simplicity.
     * [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
     * [flask-api-utils](https://github.com/marselester/flask-api-utils) - Taking care of API representation and authentication for Flask.
     * [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
