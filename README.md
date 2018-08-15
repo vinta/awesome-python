@@ -548,6 +548,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Vim
     * [Jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
     * [Python-mode](https://github.com/python-mode/python-mode) - An all in one plugin for turning Vim into a Python IDE.
+    * [Python-rope](https://github.com/Python-rope/ropevim) - Python refactoring plugin for vim.
+    * [python-syntax](https://github.com/python-syntax) - Syntax highlighting for python.
     * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
 * Visual Studio
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
