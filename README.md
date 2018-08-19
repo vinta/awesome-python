@@ -256,7 +256,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Code Analysis
     * [flake8](https://pypi.python.org/pypi/flake8) - A wrapper around pycodestyle, pyflakes and McCabe.
     * [coala](http://coala.io/) - Language independent and easily extendable code analysis application.
+    * [code2flow](https://github.com/scottrogowski/code2flow) - (Unmaintained) Turn your Python and JavaScript code into DOT flowcharts.
     * [prospector](https://github.com/landscapeio/prospector) - A tool to analyse Python code.
+    * [pycallgraph](https://github.com/gak/pycallgraph) - (Unmaintained) A library that visualizes the flow (call graph) of your Python application.
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
 * Static Type Checkers
