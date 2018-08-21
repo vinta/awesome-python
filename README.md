@@ -491,6 +491,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
+* [spurplus](https://github.com/Parquery/spurplus) - Manages the remote machines via SSH including a rich set of file operations such as sync and mkdtemp. Built on top of paramiko and spur.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 
 ## Distribution
