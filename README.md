@@ -1218,7 +1218,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-django](https://github.com/rosarior/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
-* [Masonite](https://github.com/MasoniteFramework/masonite) - The rapid application Python development framework for web crafters.
+* [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * [Pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
     * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
 * [Sanic](https://github.com/channelcat/sanic) - Web server that's written to go fast.
