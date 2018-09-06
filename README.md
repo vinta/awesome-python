@@ -274,6 +274,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Command-line Application Development
     * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
+    * [python-nubia](https://github.com/facebookincubator/python-nubia) - A command-line and interactive shell framework.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
