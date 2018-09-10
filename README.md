@@ -449,8 +449,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Profiler
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
-    * [Pyflame](https://github.com/uber/pyflame) - Attach this Ptracing Profiler to any processes running Python. Perfect for profiling production webservers.
     * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
+    * [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
+    * [Pyflame](https://github.com/uber/pyflame) - A ptracing profiler For Python.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 * Others
     * [IceCream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
