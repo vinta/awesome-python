@@ -325,6 +325,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) A high-level interface for asynchronously executing callables.
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
+* [aiochan](https://github.com/zh217/aiochan) - CSP-style concurrency with channels, select and multiprocessing.
 * [SCOOP](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python.
 * [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of asyncio event loop on top of libuv.
