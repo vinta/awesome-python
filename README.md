@@ -692,6 +692,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
 * [requests](http://docs.python-requests.org/en/latest/) - HTTP Requests for Humans™.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
+* [uplink](https://github.com/prkumar/uplink) - Builds reusable objects for consuming HTTP APIs with decorators and function annotations.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 
 ## Hardware
