@@ -875,6 +875,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flywheel](https://github.com/stevearc/flywheel) - Object mapper for Amazon DynamoDB.
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
     * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
+    * [µMongo](https://github.com/Scille/umongo) - A synchronous/asynchronous MongoDB ODM
     * [PynamoDB](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
 * Others
