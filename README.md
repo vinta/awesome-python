@@ -446,6 +446,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pudb](https://pypi.python.org/pypi/pudb) - A full-screen, console-based Python debugger.
     * [remote-pdb](https://github.com/ionelmc/python-remote-pdb) - Remote vanilla PDB (over TCP sockets).
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
+    * [epdb](https://github.com/sassoftware/epdb) - Adds functionality to the python debugger, including support for remote debugging
 * Profiler
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
