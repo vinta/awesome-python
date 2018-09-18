@@ -248,6 +248,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
 * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
 * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
+* [Wallaroo](https://github.com/WallarooLabs/wallaroo) - Build and scale real-time streaming data applications as easily as writing a Python script.
 
 ## Code Analysis
 
