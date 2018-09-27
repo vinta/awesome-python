@@ -1049,6 +1049,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+    * [PyYAML-tags](https://github.com/meiblorn/pyyaml-tags) — Custom tags for the [PyYAML](http://pyyaml.org/) library
 * CSV
     * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
