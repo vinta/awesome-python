@@ -1153,6 +1153,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
     * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
     * [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
+    * [Lark](https://github.com/lark-parser/lark) - A modern parsing library, providing LALR(1) and Earley
 
 ## Third-party APIs
 
