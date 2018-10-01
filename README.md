@@ -1253,6 +1253,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 * [django-socketio](https://github.com/stephenmcd/django-socketio) - WebSockets for Django.
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
+* [AIOHTTP](https://aiohttp.readthedocs.io/en/stable/) Asynchronous HTTP Client/Server for asyncio and Python.
 
 # Services
 
