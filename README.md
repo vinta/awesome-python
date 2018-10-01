@@ -336,6 +336,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [config](https://www.red-dove.com/config-doc/) - Hierarchical config from the author of [logging](https://docs.python.org/3/library/logging.html).
 * [ConfigObj](http://www.voidspace.org.uk/python/configobj.html) - INI file parser with validation.
 * [ConfigParser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
+* [dynaconf](https://github.com/rochacbruno/dynaconf) - A layered configuration system for Python applications - with strong support for 12-factor applications and extensions for Flask and Django.
 * [profig](http://profig.readthedocs.org/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
