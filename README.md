@@ -115,7 +115,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Algorithms and Design Patterns
-
+# Algorithms are very important
 *Python implementation of algorithms and design patterns.*
 
 * [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms in Python.
