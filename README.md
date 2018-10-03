@@ -299,6 +299,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
+    * [black](https://github.com/ambv/black) - An uncompromising Python code formatter.
 
 ## Compatibility
 
