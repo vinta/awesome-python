@@ -614,6 +614,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-bootstrap3](https://github.com/dyve/django-bootstrap3) - Bootstrap 3 integration with Django.
 * [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
 * [django-remote-forms](https://github.com/WiserTogether/django-remote-forms) - A platform independent Django form serializer.
+* [pyfield](https://github.com/Ublimjo/pyfield) - Collection of field for your form.
 * [WTForms](https://github.com/wtforms/wtforms) - A flexible forms validation and rendering library.
 
 ## Functional Programming
