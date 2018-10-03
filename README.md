@@ -1115,6 +1115,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
 * Code Coverage
     * [coverage](https://pypi.python.org/pypi/coverage) - Code coverage measurement.
+    * [pytest-cov](https://github.com/pytest-dev/pytest-cov) - Code coverage measurement and reports.
 * Fake Data
     * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
