@@ -71,7 +71,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Recommender Systems](#recommender-systems)
     - [RESTful API](#restful-api)
     - [RPC Servers](#rpc-servers)
-    - [Science](#sciModules to convert numbers to words.ence)
+    - [Science](#science)
     - [Search](#search)
     - [Serialization](#serialization)
     - [Serverless Frameworks](#serverless-frameworks)
@@ -755,7 +755,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Internationalization
 
 *Libraries for working with i18n.*
-Modules to convert numbers to words.
+
 * [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
 * [PyICU](https://github.com/ovalhub/pyicu) - A wrapper of International Components for Unicode C++ library ([ICU](http://site.icu-project.org/)).
 
