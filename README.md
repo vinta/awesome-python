@@ -71,7 +71,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Recommender Systems](#recommender-systems)
     - [RESTful API](#restful-api)
     - [RPC Servers](#rpc-servers)
-    - [Science](#science)
+    - [Science](#sciModules to convert numbers to words.ence)
     - [Search](#search)
     - [Serialization](#serialization)
     - [Serverless Frameworks](#serverless-frameworks)
@@ -89,6 +89,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
+
 - [Services](#services)
     - [Code Quality](#code-quality)
     - [Continuous Integration](#continuous-integration)
@@ -754,7 +755,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Internationalization
 
 *Libraries for working with i18n.*
-
+Modules to convert numbers to words.
 * [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
 * [PyICU](https://github.com/ovalhub/pyicu) - A wrapper of International Components for Unicode C++ library ([ICU](http://site.icu-project.org/)).
 
@@ -812,6 +813,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [num2words](https://github.com/savoirfairelinux/num2words) - A Modules to convert numbers to words.
 
 ## Natural Language Processing
 
