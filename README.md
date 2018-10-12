@@ -629,8 +629,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## GUI
 
 *Libraries for working with graphical user interface applications.*
-
+* [BeeWare](https://github.com/pybee/) - Collection of tools for building NUI
 * [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
+* [Chaquopy](https://github.com/chaquo) - plugin for android studio's gradle based build system,to build android applications with ease.
 * [Eel](https://github.com/ChrisKnott/Eel) - Little library for making simple Electron-like offline HTML/JS GUI apps, with full access to Python capabilities and libraries.
 * [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declaratic Syntax like QML.
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
