@@ -406,6 +406,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
+    * [pg8000](https://github.com/mfenniak/pg8000) - A pure python PostgreQL driver that complies with DB-API 2.0.
 * Other Relational Databases
     * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
