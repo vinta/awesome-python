@@ -70,6 +70,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Queue](#queue)
     - [Recommender Systems](#recommender-systems)
     - [RESTful API](#restful-api)
+    - [Robotics](#robotics)
     - [RPC Servers](#rpc-servers)
     - [Science](#science)
     - [Search](#search)
@@ -963,6 +964,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [ripozo](https://github.com/vertical-knowledge/ripozo) - Quickly creating REST/HATEOAS/Hypermedia APIs.
     * [sandman](https://github.com/jeffknupp/sandman) - Automated REST APIs for existing database-driven systems.
     * [apistar](https://github.com/encode/apistar) - A smart Web API framework, designed for Python 3.
+
+## Robotics
+
+*Libraries for robotics.*
+
+* [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
+* [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
 
 ## RPC Servers
 
