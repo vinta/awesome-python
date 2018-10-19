@@ -161,7 +161,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Python Audio Analysis Library: Feature Extraction, Classification, Segmentation and Applications
 * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 * [pyechonest](https://github.com/echonest/pyechonest) - Python client for the [Echo Nest](http://static.echonest.com/enspex/) API.
-* [talkbox](http://scikits.appspot.com/talkbox) - A Python library for speech/signal processing.
+* [talkbox](https://pypi.org/project/scikits.talkbox/) - A Python library for speech/signal processing.
 * [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
 * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 
@@ -655,7 +655,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
-* [PySDL2](http://pysdl2.readthedocs.io/en/rel_0_9_5/) - A ctypes based wrapper for the SDL2 library.
+* [PySDL2](http://pysdl2.readthedocs.io/) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
 
 ## Geolocation
@@ -767,7 +767,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
-* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
@@ -1039,7 +1039,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 * Office
     * [Marmir](https://github.com/brianray/mm) - Takes Python data structures and turns them into spreadsheets.
-    * [openpyxl](https://openpyxl.readthedocs.io/en/default/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
+    * [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
     * [pyexcel](https://github.com/pyexcel/pyexcel) - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
     * [python-docx](https://github.com/python-openxml/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
     * [python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint (.pptx) files.
@@ -1316,7 +1316,7 @@ Where to discover new Python libraries.
 * [Django Packages](https://djangopackages.org/)
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
-* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
+* [Python 3 Wall of Superpowers](https://python3wos.appspot.com/)
 * [Python Hackers](http://www.oss.io/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](https://www.ctolib.com/python/)
