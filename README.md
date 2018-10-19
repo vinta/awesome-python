@@ -1004,6 +1004,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 * [SimPy](https://bitbucket.org/simpy/simpy) -  A process-based discrete-event simulation framework.
+* [OPEM](https://github.com/ECSIM/opem) - OPEM (Open Source PEM Fuel Cell Simulation Tool)
 
 ## Search
 
