@@ -574,6 +574,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern and simplified Web UI.
 * [Nylas Sync Engine](https://github.com/nylas/sync-engine) - Providing a RESTful API on top of a powerful email sync platform.
 * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* [boto3](https://github.com/boto/boto3) - Send email using AWS SES
 
 ## Environment Management
 
