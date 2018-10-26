@@ -1005,6 +1005,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 * [SimPy](https://bitbucket.org/simpy/simpy) -  A process-based discrete-event simulation framework.
+* [PyStan](https://github.com/stan-dev/pystan) -  A Python interface to Stan, a package for Bayesian inference.
 
 ## Search
 
