@@ -724,6 +724,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 * [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
+* [MedPy](https://github.com/loli/medpy) - A Python library to read and manipulate medical images (i.e .mha file). It provides a simple bridge between Medical Images and Numpy array.
 
 ## Implementations
 
