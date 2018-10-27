@@ -972,6 +972,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 * [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
+* [roslibpy](https://github.com/gramaziokohler/roslibpy/) - ROS Bridge client library allows to create and talk to ROS nodes from Python & IronPython.
 
 ## RPC Servers
 
