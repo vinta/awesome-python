@@ -404,6 +404,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
 * PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
+    * [asyncpg](https://github.com/MagicStack/asyncpg) A fast asyncio PostgreSQL client library.
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
     * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
