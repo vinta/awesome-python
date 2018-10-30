@@ -685,6 +685,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [WeasyPrint](http://weasyprint.org) - A visual rendering engine for HTML and CSS that can export to PDF.
 * [xmldataset](https://xmldataset.readthedocs.io/en/latest/) - Simple XML Parsing.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
+* [yattag](http://www.yattag.org/) - Framework for generating HTML or XML documents with Python in a very readable way
+
 
 ## HTTP
 
