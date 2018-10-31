@@ -40,6 +40,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
     - [Environment Management](#environment-management)
+    - [ERP](#erp)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
@@ -585,6 +586,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
 * [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv.
+
+## ERP
+
+*Awesome project for enterprise resource planning.*
+
+* [Odoo](https://github.com/odoo/odoo) - Odoo is a suite of web based open source business apps.
+* [erpnext](https://github.com/frappe/erpnext) - Out of box ERP built for the web.
 
 ## Files
 
