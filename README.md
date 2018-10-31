@@ -367,6 +367,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
     * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
+* [pydantic](https://github.com/samuelcolvin/pydantic) - Data validation using Python (3.6+) type hinting.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
