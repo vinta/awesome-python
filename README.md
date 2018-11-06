@@ -418,6 +418,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [py2neo](http://py2neo.org/2.0/) - Python wrapper client for Neo4j's restful interface.
     * [PyMongo](https://docs.mongodb.com/ecosystem/drivers/python/) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
+    * [python-firebase](https://github.com/ozgur/python-firebase) - Python interface to the Firebase's REST API
 * Asynchronous Clients
     * [Motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
     * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
