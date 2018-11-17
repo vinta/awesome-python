@@ -386,6 +386,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+* [Chartify](https://github.com/spotify/chartify?fbclid=IwAR085ORv3CbFshJ_lRqdQiiD43wZuTVUfmU9RipPkze0yXzXec-LfogA3wo) - A library that makes it easy for data scientists to create charts.
 
 ## Database
 
