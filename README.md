@@ -1313,6 +1313,7 @@ Where to discover new Python libraries.
 
 * [/r/CoolGithubProjects](https://www.reddit.com/r/coolgithubprojects/)
 * [/r/Python](https://www.reddit.com/r/python)
+* [Python tag on dev.to](https://dev.to/t/python)
 * [Awesome Python @LibHunt](https://python.libhunt.com/)
 * [Django Packages](https://djangopackages.org/)
 * [Full Stack Python](https://www.fullstackpython.com/)
