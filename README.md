@@ -1252,6 +1252,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Sanic](https://github.com/channelcat/sanic) - Web server that's written to go fast.
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
 * [Vibora](https://vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask.
+* [Bottle](https://bottlepy.org/docs/dev/) - Bottle is a fast, simple and lightweight WSGI micro web-framework for Python.
 
 ## WebSocket
 
