@@ -596,6 +596,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+* [filepy](https://github.com/KordianD/filepy) - Library that reads and converts different file formats (csv, arff)
 
 ## Foreign Function Interface
 
