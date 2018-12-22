@@ -1252,6 +1252,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Sanic](https://github.com/channelcat/sanic) - Web server that's written to go fast.
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
 * [Vibora](https://vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask.
+* [FastAPI](https://github.com/tiangolo/fastapi) - A very high performance Python 3.6+ API framework based on type hints. Powered by Starlette and Pydantic.
 
 ## WebSocket
 
