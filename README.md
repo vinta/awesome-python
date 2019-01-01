@@ -1099,6 +1099,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
     * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
+    * [cosmic-ray](https://github.com/sixty-north/cosmic-ray) - Mutation testing for Python.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
     * [tox](https://tox.readthedocs.io/en/latest/) - Auto builds and tests distributions in multiple Python versions
