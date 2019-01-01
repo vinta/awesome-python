@@ -638,7 +638,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyglet](https://bitbucket.org/pyglet/pyglet/wiki/Home) - A cross-platform windowing and multimedia library for Python.
 * [PyGObject](https://wiki.gnome.org/Projects/PyGObject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
 * [PyQt](https://riverbankcomputing.com/software/pyqt/intro) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework, with support for both Qt v4 and Qt v5 frameworks.
-* [PySide](https://wiki.qt.io/PySide) - Python bindings for the [Qt](http://www.qt.io/) cross-platform application and UI framework, supporting the Qt v4 framework.
+* [PySide](https://wiki.qt.io/PySide) - Python bindings for the [Qt](http://www.qt.io/) cross-platform application and UI framework, supporting the Qt v4 framework (See PySide2 for Qt v5).
+* [PySide2](https://wiki.qt.io/Qt_for_Python) - Python bindings for the [Qt](http://www.qt.io/) cross-platform application and UI framework, supporting the Qt v5 framework.
 * [PySimpleGUI](https://github.com/MikeTheWatchGuy/PySimpleGUI) - Wrapper for tkinter that creates a more Python-like interface for beginner and intermediate level custom GUIs.
 * [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component that allows to display HTML content in its own native dedicated window.
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
