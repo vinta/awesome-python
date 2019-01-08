@@ -720,7 +720,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 * [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
-* [pyvips](https://github.com/jcupitt/pyvips/) - A fast image processing library with low memory needs.
+* [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
 
 ## Implementations
 
