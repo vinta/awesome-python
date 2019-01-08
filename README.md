@@ -1357,3 +1357,12 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@vinta](https://twitter.com/vinta) on Twitter or open an issue on GitHub.
+
+### Code Visualization:
+
+Here is a cool visualization of the code evolution
+
+ [![Watch the video](https://img.youtube.com/vi/4v06qU5F7HI/0.jpg)](https://www.youtube.com/watch?v=4v06qU5F7HI)
+
+ [https://www.youtube.com/watch?v=4v06qU5F7HI](https://www.youtube.com/watch?v=4v06qU5F7HI)
+
