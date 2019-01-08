@@ -534,6 +534,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for serializing complex data types*
 
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
+* [cloudpickle](https://github.com/cloudpipe/cloudpickle) - Extended pickling support for Python objects
+* [tblib](https://pypi.org/project/tblib/) - Traceback serialization library
 
 ## Authentication
 
@@ -771,6 +773,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
 * [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
+* [locket](https://github.com/mwilliamson/locket.py) - File-based locks for Python for Linux and Windows 
 
 ## Networking
 
@@ -1162,6 +1165,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [algorithms](https://github.com/nryoung/algorithms) - A module of algorithms for Python.
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [sortedcontainers](http://www.grantjenks.com/docs/sortedcontainers/) - Fast, pure-Python implementation of SortedList, SortedDict, and SortedSet types.
+* [heapdict](https://pypi.org/project/HeapDict/) -  implements the MutableMapping ABC, meaning it works pretty much like a regular Python dict. It’s designed to be used as priority queue
+* [zict](https://github.com/dask/zict) - Mutable Mapping interfaces
 
 ## Editor Plugins
 
