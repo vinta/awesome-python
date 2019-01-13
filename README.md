@@ -657,6 +657,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](http://pysdl2.readthedocs.io/en/rel_0_9_5/) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
+* [Python-Chess](https://pypi.org/project/python-chess/) - Python-Chess helps you create chess games more easily.
 
 ## Geolocation
 
