@@ -813,6 +813,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [awe](https://github.com/dankilman/awe) - A framework for creating dynamic web based reports and dashboards.
 
 ## Natural Language Processing
 
