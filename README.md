@@ -1347,6 +1347,7 @@ List of lists.
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [Python Podcasts](https://www.cybrhome.com/topic/python-podcasts)
     * [Python for Social Good](https://github.com/metakermit/awesome-python-for-social-good)
+    * [Python for Scientists](https://github.com/TomNicholas/Python-for-Scientists)
 
 # Contributing
 
