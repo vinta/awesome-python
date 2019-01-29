@@ -1177,6 +1177,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [gmail](https://github.com/charlierguo/gmail) - A Pythonic interface for Gmail.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
+* [praw](https://github.com/praw-dev/praw) - "Python Reddit API Wrapper" for simple access to the Reddit API
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 
 ## URL Manipulation
