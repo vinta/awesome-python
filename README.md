@@ -346,6 +346,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
 * [Passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
 * [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [Crypto-Vinaigrette](https://github.com/aditisrinivas97/Crypto-Vinaigrette) - Quantum-resistent asymmetric key generation tool for digital signatures.
 
 ## Data Analysis
 
