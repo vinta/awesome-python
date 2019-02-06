@@ -23,6 +23,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Computer Vision](#computer-vision)
     - [Concurrency and Parallelism](#concurrency-and-parallelism)
     - [Configuration](#configuration)
+    - [CRM](#CRM)
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
     - [Data Validation](#data-validation)
@@ -339,6 +340,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [ConfigParser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](http://profig.readthedocs.org/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+
+## CRM
+
+* [Django-CRM](https://github.com/MicroPyramid/Django-CRM) - Open Source Python CRM based on Django
 
 ## Cryptography
 
