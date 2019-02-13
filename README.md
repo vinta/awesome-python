@@ -875,6 +875,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PonyORM](https://ponyorm.com/) - ORM that provides a generator-oriented interface to SQL.
     * [pyDAL](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
     * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+    * [Tortoise ORM](https://github.com/tortoise/tortoise-orm) - Tortoise ORM is an easy-to-use asyncio ORM inspired by Django.
 * NoSQL Databases
     * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
     * [flywheel](https://github.com/stevearc/flywheel) - Object mapper for Amazon DynamoDB.
