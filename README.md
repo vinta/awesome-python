@@ -867,6 +867,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries that implement Object-Relational Mapping or data mapping techniques.*
 
 * Relational Databases
+    * [Dj-Models](https://github.com/iMerica/dj-models) - Use Django' ORM in any Python web framework (e.g Flask + Django Models).
     * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
     * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
