@@ -491,6 +491,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
 * [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
+* [Ralph](https://github.com/allegro/ralph) - Free Asset Management / Inventory System for any hardware you have.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 
