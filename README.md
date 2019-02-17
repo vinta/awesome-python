@@ -1351,6 +1351,7 @@ List of lists.
     * [pythonidae](https://github.com/svaksha/pythonidae)
     * [Python Podcasts](https://www.cybrhome.com/topic/python-podcasts)
     * [Python for Social Good](https://github.com/metakermit/awesome-python-for-social-good)
+    * [Awesome Data Science with Python](https://github.com/r0f1/datascience)
 
 # Contributing
 
