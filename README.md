@@ -1027,6 +1027,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for serializing complex data types*
 
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
+* [cattrs](https://github.com/Tinche/cattrs) - Complex custom class converters for [attrs](https://github.com/hynek/attrs). It serializes-deserializes nested objects (not only attrs) to and from `dict` or `tuple`.
 
 ## Serverless Frameworks
 
