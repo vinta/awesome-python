@@ -203,6 +203,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality..
 * [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 * [dotted](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
+* [addict](https://github.com/mewwts/addict) - Python module that gives you dictionaries whose values are both gettable and settable using attributes, in addition to standard item-syntax.
 
 ## CMS
 
