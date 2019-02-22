@@ -960,6 +960,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flask-api](http://www.flaskapi.org/) - Browsable Web APIs for Flask.
     * [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
     * [flask-restless](https://github.com/jfinkels/flask-restless) - Generating RESTful APIs for database models defined with SQLAlchemy.
+    * [RESTPie3](https://github.com/tomimick/restpie3) - REST API server starter kit based on Flask, uWSGI, PostgreSQL - core features in a clean package
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
