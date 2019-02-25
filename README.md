@@ -477,6 +477,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Serpent.AI](https://github.com/SerpentAI/SerpentAI) - Game agent framework. Use any video game as a deep learning sandbox.
 * [TensorFlow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
+* [Ludwig](https://uber.github.io/ludwig/) - Toolbox that allows to train and test deep learning models without the need to write code.
 
 ## DevOps Tools
 
