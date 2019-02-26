@@ -98,7 +98,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Twitter](#twitter)
     - [Websites](#websites)
     - [Weekly](#weekly)
-- [Awesome Lists](#other-awesome-lists)
+- [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
 - - -
