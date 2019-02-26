@@ -1140,6 +1140,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for parsing and manipulating plain texts.*
 
+* Preprocessors
+    * [pycro](https://github.com/mak12776/pycro) - a python integrated macro preprocessor & code generator.
 * General
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
