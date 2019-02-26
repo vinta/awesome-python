@@ -98,7 +98,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Twitter](#twitter)
     - [Websites](#websites)
     - [Weekly](#weekly)
-- [Other Awesome Lists](#other-awesome-lists)
+- [Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
 - - -
@@ -817,6 +817,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [Pychievements](https://github.com/PacketPerception/pychievements) - A framework for creating and tracking achievements.
 * [Tryton](http://www.tryton.org/) - A general purpose business framework.
+* [area4](https://github.com/area4lib/area4) - A library for adding dividers to your Python console easily!
 
 ## Natural Language Processing
 
