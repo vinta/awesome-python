@@ -539,6 +539,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [forex-python](https://github.com/MicroPyramid/forex-python) - Foreign exchange rates, Bitcoin price index and currency conversion.
 * [saleor](http://getsaleor.com/) - An e-commerce storefront for Django.
 * [shoop](https://www.shuup.com/en/) - An open source E-Commerce platform based on Django.
+* [Square](https://github.com/square/connect-python-sdk) - The official SDK for Square payments and APIs.
 
 ## Editor Plugins and IDEs
 
