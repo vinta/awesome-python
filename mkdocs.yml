@@ -4,13 +4,12 @@ site_description: 'A curated list of awesome Python frameworks, libraries and so
 site_author: 'Vinta Chen'
 repo_name: 'vinta/awesome-python'
 repo_url: 'https://github.com/vinta/awesome-python'
-theme: 'material'
-extra:
-  feature:
-    tabs: false
+theme:
+  name: 'material'
   palette:
     primary: 'red'
     accent: 'pink'
+extra:
   social:
     - type: 'github'
       link: 'https://github.com/vinta'
@@ -23,5 +22,5 @@ google_analytics:
   - 'auto'
 extra_css:
     - css/extra.css
-pages:
+nav:
   - "Life is short, you need Python.": "index.md"
