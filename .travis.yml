@@ -3,18 +3,18 @@ language: python
 python:
   - "3.6"
 
-before_script:
-  - pip install mkdocs mkdocs-material
+install:
+  - pip install -r requirements.txt
 
 script:
   - cp README.md docs/index.md
   - mkdocs build
-  
+
 deploy:
   provider: pages
   local-dir: "site"
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
   keep-history: true
+  github-token: $GITHUB_TOKEN
   on:
     branch: master
