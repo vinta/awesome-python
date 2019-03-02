@@ -993,6 +993,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for serializing complex data types*
 
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
+* [jsons](https://github.com/ramonhagenaars/jsons) - jsons is a lightweight library for (de)serializing pure Python objects to and from JSON, with no magic or special requirements.
 
 ## Serverless Frameworks
 
