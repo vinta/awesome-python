@@ -13,7 +13,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
     - [ChatOps Tools](#chatops-tools)
-    - [Cluster Computing](#cluster-computing)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
     - [Command-line Tools](#command-line-tools)
@@ -31,6 +30,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Debugging Tools](#debugging-tools)
     - [Deep Learning](#deep-learning)
     - [DevOps Tools](#devops-tools)
+    - [Distributed Computing](#distributed-computing)
     - [Distribution](#distribution)
     - [Documentation](#documentation)
     - [Downloader](#downloader)
@@ -204,18 +204,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [Errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
-
-## Cluster Computing
-
-*Frameworks and libraries for Cluster Computing.*
-
-* [PySpark](https://pypi.python.org/pypi/pyspark/) - [Apache Spark](https://spark.apache.org/) Python API.
-* [dask](https://dask.pydata.org/en/latest/) - A flexible parallel computing library for analytic computing.
-* [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
-* [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
-* [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
-* [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
-* [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Code Analysis
 
@@ -460,6 +448,20 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * [SaltStack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+
+## Distributed Computing
+
+*Frameworks and libraries for Distributed Computing.*
+
+* Batch Processing
+    * [PySpark](https://pypi.python.org/pypi/pyspark/) - [Apache Spark](https://spark.apache.org/) Python API.
+    * [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
+    * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
+    * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
+    * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
+* Stream Processing
+    * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
+    * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Distribution
 
