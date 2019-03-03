@@ -3,16 +3,13 @@ language: python
 python:
   - "3.6"
 
-install:
-  - pip install -r requirements.txt
-
 script:
   - cp README.md docs/index.md
   - mkdocs build
 
 deploy:
   provider: pages
-  local-dir: "site"
+  local-dir: site
   skip-cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
