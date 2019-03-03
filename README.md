@@ -152,9 +152,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-oauth2](https://github.com/joestump/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
     * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
 * JWT
-    * [pyjwt](https://github.com/jpadilla/pyjwt) - Implementation of the JSON Web Token draft 01.
+    * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
-    * [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
+    * [python-jwt](https://github.com/davedoesdev/python-jwt) - A module for generating and verifying JSON Web Tokens.
 
 ## Build Tools
 
@@ -170,6 +170,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for enhancing Python built-in classes.*
 
+* [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
 * [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
 * [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality..
 * [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
