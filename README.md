@@ -100,19 +100,19 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Other Awesome Lists](#other-awesome-lists)
 - [Contributing](#contributing)
 
-- - -
+---
 
 ## Admin Panels
 
 *Libraries for administrative interfaces.*
 
-* [Ajenti](https://github.com/ajenti/ajenti) - The admin panel your servers deserve.
+* [ajenti](https://github.com/ajenti/ajenti) - The admin panel your servers deserve.
+* [django-grappelli](http://grappelliproject.com) - A jazzy skin for the Django Admin-Interface.
 * [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
 * [django-xadmin](https://github.com/sshwsfc/xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
-* [Grappelli](http://grappelliproject.com) - A jazzy skin for the Django Admin-Interface.
-* [Wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
+* [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Algorithms and Design Patterns
 
@@ -148,11 +148,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [authlib](https://github.com/lepture/authlib) - JavaScript Object Signing and Encryption draft implementation.
     * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
     * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth 2 goodies for Django.
-    * [OAuthLib](https://github.com/idan/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
+    * [oauthlib](https://github.com/idan/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
     * [python-oauth2](https://github.com/joestump/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
     * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
 * Others
-    * [PyJWT](https://github.com/jpadilla/pyjwt) - Implementation of the JSON Web Token draft 01.
+    * [pyjwt](https://github.com/jpadilla/pyjwt) - Implementation of the JSON Web Token draft 01.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
 
@@ -163,7 +163,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool for embedded Linux.
 * [buildout](http://www.buildout.org/en/latest/) - A build system for creating, assembling and deploying applications from multiple parts.
 * [PlatformIO](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
-* [PyBuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
+* [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
 
 ## Built-in Classes Enhancement
@@ -173,31 +173,31 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
 * [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality..
 * [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
-* [dotted](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
+* [DottedDict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
 
 ## CMS
 
 *Content Management Systems.*
 
-* [Wagtail](https://wagtail.io/) - A Django content management system.
+* [wagtail](https://wagtail.io/) - A Django content management system.
 * [django-cms](https://www.django-cms.org/en/) - An Open source enterprise CMS based on the Django.
-* [FeinCMS](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
+* [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
 * [Kotti](https://github.com/Kotti/Kotti) - A high-level, Pythonic web application framework built on Pyramid.
-* [Mezzanine](https://github.com/stephenmcd/mezzanine) - A powerful, consistent, and flexible content management platform.
-* [Plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
-* [Quokka](https://github.com/rochacbruno/quokka) - Flexible, extensible, small CMS powered by Flask and MongoDB.
+* [mezzanine](https://github.com/stephenmcd/mezzanine) - A powerful, consistent, and flexible content management platform.
+* [plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
+* [quokka](https://github.com/rochacbruno/quokka) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 
 ## Caching
 
 *Libraries for caching data.*
 
-* [Beaker](https://github.com/bbangert/beaker) - A library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
-* [DiskCache](http://www.grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
+* [beaker](https://github.com/bbangert/beaker) - A library for caching and sessions for use with web applications and stand-alone Python scripts and applications.
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [dogpile.cache](http://dogpilecache.readthedocs.io/en/latest/) - dogpile.cache is next generation replacement for Beaker made by same authors.
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
+* [python-diskcache](http://www.grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 
 ## ChatOps Tools
 
@@ -238,73 +238,70 @@ Code Formatters
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
-    * [Python Fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
+    * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A library for building powerful interactive command lines.
 * Terminal Rendering
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
     * [colorama](https://pypi.python.org/pypi/colorama) - Cross-platform colored terminal text.
 * Productivity Tools
-    * [aws-cli](https://github.com/aws/aws-cli) - A universal command-line interface for Amazon Web Services.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
-    * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
-    * [kube-shell](https://github.com/cloudnativelabs/kube-shell) - An integrated shell for working with the Kubernetes CLI.
-    * [mycli](https://github.com/dbcli/mycli) - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
-    * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
-    * [SAWS](https://github.com/donnemartin/saws) - A Supercharged AWS CLI.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
+* CLI Enhancements
+    * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
+    * [kube-shell](https://github.com/cloudnativelabs/kube-shell) - An integrated shell for working with the Kubernetes CLI.
+    * [mycli](https://github.com/dbcli/mycli) - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
+    * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
+    * [saws](https://github.com/donnemartin/saws) - A Supercharged [aws-cli](https://github.com/aws/aws-cli).
 
 ## Compatibility
 
 *Libraries for migrating from Python 2 to 3.*
 
-* [Python-Future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
-* [Python-Modernize](https://github.com/mitsuhiko/python-modernize) - Modernizes Python code for eventual Python 3 migration.
-* [Six](https://pypi.python.org/pypi/six) - Python 2 and 3 compatibility utilities.
+* [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
+* [python-modernize](https://github.com/mitsuhiko/python-modernize) - Modernizes Python code for eventual Python 3 migration.
+* [six](https://pypi.python.org/pypi/six) - Python 2 and 3 compatibility utilities.
 
 ## Computer Vision
 
 *Libraries for computer vision.*
 
-* [OpenCV](http://opencv.org/) - Open Source Computer Vision Library.
-* [pyocr](https://github.com/openpaperwork/pyocr) - A wrapper for Tesseract and Cuneiform.
+* [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
 
 ## Concurrency and Parallelism
 
-*Libraries for concurrent and parallel execution.*
+*Libraries for concurrent and parallel execution. See [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
 
-* [concurrent.futures](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based "[threading](https://docs.python.org/3/library/threading.html)" interface.
-* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) A high-level interface for asynchronously executing callables.
+* [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
+* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
-* [SCOOP](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python.
-* [Tomorrow](https://github.com/madisonmay/Tomorrow) - Magic decorator syntax for asynchronous code.
-* [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of asyncio event loop on top of libuv.
+* [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of `asyncio` event loop on top of `libuv`.
+* [scoop](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python.
 
 ## Configuration
 
 *Libraries for storing and parsing configuration options.*
 
-* [config](https://www.red-dove.com/config-doc/) - Hierarchical config from the author of [logging](https://docs.python.org/3/library/logging.html).
-* [ConfigObj](https://github.com/DiffSK/configobj) - INI file parser with validation.
-* [ConfigParser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
-* [profig](http://profig.readthedocs.org/en/default/) - Config from multiple formats with value conversion.
+* [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
+* [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
+* [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
 ## Cryptography
 
 * [cryptography](https://cryptography.io/en/latest/) - A package designed to expose cryptographic primitives and recipes to Python developers.
-* [Paramiko](http://www.paramiko.org/) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
-* [Passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
-* [PyNacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [paramiko](https://github.com/paramiko/paramiko) - A Python (2.6+, 3.3+) implementation of the SSHv2 protocol, providing both client and server functionality.
+* [passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
+* [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 
 ## Data Analysis
 
@@ -349,9 +346,9 @@ Code Formatters
 
 *Databases implemented in Python.*
 
-* [pickleDB](https://pythonhosted.org/pickleDB/) - A simple and lightweight key-value store for Python.
-* [TinyDB](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
-* [ZODB](http://www.zodb.org/en/latest/) - A native object database for Python. A key-value and object graph database.
+* [pickleDB](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
+* [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
+* [ZODB](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
 
 ## Database Drivers
 
@@ -359,26 +356,23 @@ Code Formatters
 
 * MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
-    * [oursql](https://pythonhosted.org/oursql/) - A better MySQL connector with support for native prepared statements and BLOBs.
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
 * PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
-    * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
 * Other Relational Databases
-    * [apsw](http://rogerbinns.github.io/apsw/) - Another Python SQLite wrapper.
-    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
     * [pymssql](http://www.pymssql.org/en/latest/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
-    * [HappyBase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
+    * [happybase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
     * [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
-    * [py2neo](http://py2neo.org/2.0/) - Python wrapper client for Neo4j's restful interface.
-    * [PyMongo](https://docs.mongodb.com/ecosystem/drivers/python/) - The official Python client for MongoDB.
+    * [py2neo](https://py2neo.org/) - Python wrapper client for Neo4j's restful interface.
+    * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
-    * [Motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
-    * [telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
+    * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
+    * [Telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
+    * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
 ## Date and Time
@@ -551,11 +545,11 @@ Code Formatters
 
 *Libraries for Python version and environment management.*
 
-* [Pipenv](https://github.com/kennethreitz/pipenv) - Sacred Marriage of Pipfile, Pip, & Virtualenv.
+* [pipenv](https://github.com/kennethreitz/pipenv) - Sacred Marriage of Pipfile, Pip, & Virtualenv.
+* [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
 * [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
-* [virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper) - A set of extensions to virtualenv.
 
 ## Files
 
@@ -747,7 +741,6 @@ Code Formatters
 * [TaskFlow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
 * [Airflow](https://airflow.apache.org/) - Airflow is a platform to programmatically author, schedule and monitor workflows.
 
-
 ## Logging
 
 *Libraries for generating and working with logs.*
@@ -840,23 +833,18 @@ Code Formatters
 
 * Relational Databases
     * [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - A part of Django.
-    * [SQLAlchemy](http://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
+    * [SQLAlchemy](https://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
-    * [Orator](https://orator-orm.com) -  The Orator ORM provides a simple yet beautiful ActiveRecord implementation.
-    * [Peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
-    * [PonyORM](https://ponyorm.com/) - ORM that provides a generator-oriented interface to SQL.
-    * [pyDAL](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
-    * [python-sql](https://pypi.python.org/pypi/python-sql) - Write SQL queries pythonically.
+    * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [orator](https://github.com/sdispater/orator) -  The Orator ORM provides a simple yet beautiful ActiveRecord implementation.
+    * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
+    * [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
+    * [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
 * NoSQL Databases
-    * [django-mongodb-engine](https://github.com/django-nonrel/mongodb-engine) - Django MongoDB Backend.
-    * [flywheel](https://github.com/stevearc/flywheel) - Object mapper for Amazon DynamoDB.
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
-    * [MongoEngine](http://mongoengine.org/) - A Python Object-Document-Mapper for working with MongoDB.
+    * [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
     * [PynamoDB](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
-* Others
-    * [butterdb](https://github.com/terrible-ideas/butterdb) - A Python ORM for Google Drive Spreadsheets.
-    * [dataset](https://github.com/pudo/dataset) - A JSON-based database.
 
 ## Package Management
 
@@ -864,10 +852,8 @@ Code Formatters
 
 * [pip](https://pip.pypa.io/en/stable/) - The Python package and dependency manager.
     * [Python Package Index](https://pypi.python.org/pypi)
-* [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-* [Curdling](http://clarete.li/curdling/) - Curdling is a command line tool for managing Python packages.
 * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
-* [wheel](http://pythonwheels.com/) - The new standard of Python distribution and are intended to replace eggs.
+* [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 
 ## Package Repositories
 
