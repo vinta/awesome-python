@@ -197,14 +197,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [dogpile.cache](http://dogpilecache.readthedocs.io/en/latest/) - dogpile.cache is next generation replacement for Beaker made by same authors.
 * [HermesCache](https://pypi.python.org/pypi/HermesCache) - Python caching library with tag-based invalidation and dogpile effect prevention.
-* [johnny-cache](https://github.com/jmoiron/johnny-cache) - A caching framework for Django applications.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](http://libmemcached.org/libMemcached.html) interface.
 
 ## ChatOps Tools
 
 *Libraries for chatbot development.*
 
-* [Errbot](http://errbot.io/en/latest/) - The easiest and most popular chatbot to implement ChatOps.
+* [Errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
 
 ## Cluster Computing
 
@@ -827,7 +826,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for building user's activities.*
 
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
-* [Stream-Framework](https://github.com/tschellenbach/Stream-Framework) - Building newsfeed and notification systems using Cassandra and Redis.
+* [Stream Framework](https://github.com/tschellenbach/Stream-Framework) - Building newsfeed and notification systems using Cassandra and Redis.
 
 ## ORM
 
@@ -992,7 +991,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for serializing complex data types*
 
-* [marshmallow](https://github.com/marshmallow-code/marshmallow) - marshmallow is an ORM/ODM/framework-agnostic library for converting complex datatypes, such as objects, to and from native Python datatypes.
+* [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 
 ## Serverless Frameworks
 
