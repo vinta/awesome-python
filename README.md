@@ -151,7 +151,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [oauthlib](https://github.com/idan/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
     * [python-oauth2](https://github.com/joestump/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
     * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
-* Others
+* JWT
     * [pyjwt](https://github.com/jpadilla/pyjwt) - Implementation of the JSON Web Token draft 01.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - Module for generating and verifying JSON Web Tokens.
