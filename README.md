@@ -1290,22 +1290,6 @@ Where to discover new Python libraries.
 * [Python Weekly](http://www.pythonweekly.com/)
 * [Python Tricks](https://realpython.com/python-tricks/)
 
-# Other Awesome Lists
-
-List of lists.
-
-* Monty
-    * [awesome](https://github.com/sindresorhus/awesome)
-    * [awesomo](https://github.com/lk-geimfari/awesomo)
-    * [lists](https://github.com/jnv/lists)
-* Python
-    * [pycrumbs](https://github.com/kirang89/pycrumbs)
-    * [python-github-projects](https://github.com/checkcheckzz/python-github-projects)
-    * [python_reference](https://github.com/rasbt/python_reference)
-    * [pythonidae](https://github.com/svaksha/pythonidae)
-    * [Python Podcasts](https://www.cybrhome.com/topic/python-podcasts)
-    * [Python for Social Good](https://github.com/metakermit/awesome-python-for-social-good)
-
 # Contributing
 
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
