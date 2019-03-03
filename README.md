@@ -210,16 +210,20 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Tools of static analysis, linters and code quality checkers. See: [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
 
 * Code Analysis
-    * [flake8](https://pypi.python.org/pypi/flake8) - A wrapper around pycodestyle, pyflakes and McCabe.
-    * [coala](http://coala.io/) - Language independent and easily extendable code analysis application.
+    * [coala](https://github.com/coala/coala/) - Language independent and easily extendable code analysis application.
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
-    * [prospector](https://github.com/landscapeio/prospector) - A tool to analyse Python code.
+    * [prospector](https://github.com/PyCQA/prospector) - A tool to analyse Python code.
     * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
-    * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
+* Code Linters
+    * [flake8](https://pypi.python.org/pypi/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
+    * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
+Code Formatters
+    * [black](https://github.com/ambv/black) - The uncompromising Python code formatter.
+    * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
-    * [Pyre](https://github.com/facebook/pyre-check) - Performant type checking.
+    * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
 
