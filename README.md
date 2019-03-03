@@ -1144,15 +1144,11 @@ Code Formatters
 
 *WSGI-compatible web servers.*
 
-* [bjoern](https://pypi.python.org/pypi/bjoern) - Asynchronous, very fast and written in C.
-* [fapws3](http://www.fapws.org/) - Asynchronous (network side only), written in C.
-* [gunicorn](https://pypi.python.org/pypi/gunicorn) - Pre-forked, partly written in C.
-* [meinheld](https://pypi.python.org/pypi/meinheld) - Asynchronous, partly written in C.
-* [netius](https://github.com/hivesolutions/netius) - Asynchronous, very fast.
-* [rocket](https://pypi.python.org/pypi/rocket) - Multi-threaded.
+* [bjoern](https://github.com/jonashaag/bjoern) - Asynchronous, very fast and written in C.
+* [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, partly written in C.
 * [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) - A project aims at developing a full stack for building hosting services, written in C.
-* [waitress](https://waitress.readthedocs.io/en/latest/) - Multi-threaded, powers Pyramid.
-* [Werkzeug](http://werkzeug.pocoo.org/) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
+* [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
+* [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
 ## Web Asset Management
 
@@ -1170,15 +1166,12 @@ Code Formatters
 
 *Libraries for extracting web contents.*
 
-* [Haul](https://github.com/vinta/Haul) - An Extensible Image Crawler.
 * [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
-* [python-goose](https://github.com/grangier/python-goose) - HTML Content/Article Extractor.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 * [requests-html](https://github.com/kennethreitz/requests-html) - Pythonic HTML Parsing for Humans.
-* [sanitize](https://github.com/Alir3z4/python-sanitize) - Bringing sanity to world of messed-up data.
 * [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
@@ -1188,14 +1181,13 @@ Code Formatters
 *Libraries to automate data extraction from websites.*
 
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
-* [Demiurge](https://github.com/matiasb/demiurge) - PyQuery-based scraping micro-framework.
-* [feedparser](http://pythonhosted.org/feedparser/) - Universal feed parser.
-* [Grab](http://grablib.org/) - Site scraping framework.
-* [MechanicalSoup](https://github.com/hickford/MechanicalSoup) - A Python library for automating interaction with websites.
+* [feedparser](https://pythonhosted.org/feedparser/) - Universal feed parser.
+* [grab](https://github.com/lorien/grab) - Site scraping framework.
+* [MechanicalSoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
-* [RoboBrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
-* [Scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
+* [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 
 ## Web Frameworks
 
@@ -1215,8 +1207,8 @@ Code Formatters
 
 *Libraries for working with WebSocket.*
 
-* [AutobahnPython](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
-* [Crossbar](https://github.com/crossbario/crossbar/) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
+* [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+* [crossbar](https://github.com/crossbario/crossbar/) - Open-source Unified Application Router (Websocket & WAMP for Python on Autobahn).
 * [django-channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 * [django-socketio](https://github.com/stephenmcd/django-socketio) - WebSockets for Django.
 * [WebSocket-for-Python](https://github.com/Lawouach/WebSocket-for-Python) - WebSocket client and server library for Python 2 and 3 as well as PyPy.
