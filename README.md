@@ -113,6 +113,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 * [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
+* [jet-admin](https://github.com/jet-admin/jet-bridge) - Admin panel framework for your application.
 
 ## Algorithms and Design Patterns
 
