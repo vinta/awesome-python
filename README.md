@@ -609,6 +609,14 @@ Code Formatters
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 
+## GraphQL
+
+*Libraries for working with GraphQL.*
+
+* [tartiflette](https://tartiflette.io) - GraphQL Implementation, SDL First, for python 3.6+ / asyncio.
+* [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - Wrapper of tartiflette to expose GraphQL API over HTTP based on aiohttp / 3.6+ / asyncio.
+* [tartiflette-asgi](https://github.com/tartiflette/tartiflette-asgi/) - a wrapper that provides ASGI support for the Tartiflette Python GraphQL engine.
+
 ## Game Development
 
 *Awesome game development libraries.*
