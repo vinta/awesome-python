@@ -1282,6 +1282,10 @@ Where to discover new Python libraries.
 * [Python Weekly](http://www.pythonweekly.com/)
 * [Python Tricks](https://realpython.com/python-tricks/)
 
+## Articles
+
+* [Guide to Django E-Commerce](https://snipcart.com/blog/django-ecommerce-tutorial-wagtail-cms) - Discusses E-Commerce for developers working with Django (and includes a Wagtail tutorial) 
+
 # Contributing
 
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
