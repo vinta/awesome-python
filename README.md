@@ -897,6 +897,7 @@ Code Formatters
 * [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 * [Surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 * [tensorrec](https://github.com/jfkirk/tensorrec) - A Recommendation Engine Framework in TensorFlow.
+* [recommender](https://github.com/tranlyvu/recommender) - A recommendation application using either item-based or user-based approaches.
 
 ## RESTful API
 
