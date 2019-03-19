@@ -527,6 +527,7 @@ Code Formatters
 
 *Libraries for sending and parsing email.*
 
+* [async_sender](https://github.com/bruziev/async_sender) - Simple interface to set up SMTP and send asynchronously email messages.
 * [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
 * [flanker](https://github.com/mailgun/flanker) - A email address and Mime parsing library.
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
