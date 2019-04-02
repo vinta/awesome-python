@@ -1194,7 +1194,7 @@ Code Formatters
 *Full stack web frameworks.*
 
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
-    * [awesome-django](https://github.com/wsvincent/awesome-django)
+    * [awesome-django](https://github.com/shahraizali/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
 * [Pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
