@@ -293,6 +293,7 @@ Code Formatters
 
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
+* [dynaconf](http://dynaconf.readthedocs.io) - Layered configuration (12-factor and extensions for Flask and Django)
 * [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
