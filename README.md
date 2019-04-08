@@ -593,6 +593,7 @@ Code Formatters
 
 *Libraries for working with graphical user interface applications.*
 
+* [*Atlas* toolkit](https://q37.info/s/c7hfkzvs) - Lightweight and easy to use library to add a sharable web interface to programs.
 * [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
 * [Eel](https://github.com/ChrisKnott/Eel) - Little library for making simple Electron-like offline HTML/JS GUI apps, with full access to Python capabilities and libraries.
 * [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declaratic Syntax like QML.
