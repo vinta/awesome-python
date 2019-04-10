@@ -311,6 +311,7 @@ Code Formatters
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [dfply](https://github.com/kieferk/dfply) - A library to do R's dplyr-style data manipulation with pipes in python on pandas DataFrames
 * [Optimus](https://github.com/ironmussa/Optimus) - Cleansing, pre-processing, feature engineering, exploratory data analysis and easy Machine Learning with a PySpark backend.
 
 ## Data Validation
