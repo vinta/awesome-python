@@ -459,6 +459,7 @@ Code Formatters
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
+ 
 
 ## Distribution
 
@@ -738,6 +739,7 @@ Code Formatters
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [TaskFlow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
 * [Airflow](https://airflow.apache.org/) - Airflow is a platform to programmatically author, schedule and monitor workflows.
+* [dask](https://github.com/dask/dask) - a flexible parallel computing library for analytics
 
 ## Logging
 
