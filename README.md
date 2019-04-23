@@ -541,6 +541,7 @@ Code Formatters
 
 *Libraries for Python version and environment management.*
 
+* [DepHell](https://github.com/dephell/dephell) - Format agnostic Python project management.
 * [pipenv](https://github.com/kennethreitz/pipenv) - Sacred Marriage of Pipfile, Pip, & Virtualenv.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
