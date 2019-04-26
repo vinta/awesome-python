@@ -291,6 +291,7 @@ Code Formatters
 
 *Libraries for storing and parsing configuration options.*
 
+* [parse_it](https://github.com/naorlivne/parse_it) - A python library for parsing multiple types of config files, envvars & command line argumants that takes the headache out of setting app configurations. 
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
