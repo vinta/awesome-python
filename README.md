@@ -536,6 +536,7 @@ Code Formatters
 * [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern and simplified Web UI.
 * [Nylas Sync Engine](https://github.com/nylas/sync-engine) - Providing a RESTful API on top of a powerful email sync platform.
 * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* [TemplateMail](https://github.com/kkinder/templatemail) - Uses Jinja2 to send transactional, template-based emails with SMTP or Mailgun
 
 ## Environment Management
 
