@@ -914,6 +914,7 @@ Code Formatters
     * [flask-restless](https://github.com/jfinkels/flask-restless) - Generating RESTful APIs for database models defined with SQLAlchemy.
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
+    * [pyramid_openapi3](https://github.com/Pylons/pyramid_openapi3) - OpenAPI 3.0 integration for Pyramid.
 * Framework agnostic
     * [apistar](https://github.com/encode/apistar) - A smart Web API framework, designed for Python 3.
     * [falcon](http://falconframework.org/) - A high-performance framework for building cloud APIs and web app backends.
