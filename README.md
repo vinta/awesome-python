@@ -666,6 +666,7 @@ Code Formatters
 
 * [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](https://www.arduino.cc/).
 * [keyboard](https://github.com/boppreh/keyboard) - Hook and simulate global keyboard events on Windows and Linux.
+* [micropython](https://github.com/micropython/micropython) - A lean and efficient implementation for microcontrollers and constrained systems.
 * [mouse](https://github.com/boppreh/mouse) - Hook and simulate global mouse events on Windows and Linux.
 * [Pingo](http://www.pingo.io/) - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo, etc.
 * [PyUserInput](https://github.com/SavinaRoja/PyUserInput) - A module for cross-platform control of the mouse and keyboard.
