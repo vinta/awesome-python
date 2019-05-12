@@ -1038,6 +1038,7 @@ Code Formatters
 * [Jinja2](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
 * [Genshi](https://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
+* [pycro](https://github.com/mak12776/pycro) - a python integrated macro preprocessor
 
 ## Testing
 
