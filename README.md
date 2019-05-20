@@ -240,6 +240,7 @@ Code Formatters
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A library for building powerful interactive command lines.
+    * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
 * Terminal Rendering
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
