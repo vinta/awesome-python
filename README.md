@@ -1014,7 +1014,9 @@ Code Formatters
 * CSV
     * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
-    * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
+    * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily. 
+* DXF
+    * [ezdxf](https://github.com/mozman/ezdxf) - A Python package to create and modify DXF drawings, independent from the DXF version.
 
 ## Static Site Generator
 
