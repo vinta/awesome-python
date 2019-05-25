@@ -12,7 +12,7 @@ Your contributions are always welcome!
 * Add a section if needed.
     * Add the section description.
     * Add the section title to Table of Contents.
-* Search previous Pull Request or Issues before making a new one, as yours may be a duplicate.
+* Search previous Pull Requests or Issues before making a new one, as yours may be a duplicate.
 * Don't mention `Python` in the description as it's implied.
 * Check your spelling and grammar.
 * Remove any trailing whitespace.
