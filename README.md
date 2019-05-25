@@ -1217,7 +1217,7 @@ Online tools and APIs to simplify development.
 
 *See: [awesome-CIandCD](https://github.com/ciandcd/awesome-ciandcd#online-build-system).*
 
-* [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing. (GitHub only)
+* [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing.
 * [Travis CI](https://travis-ci.org) - A popular CI service for your open source and [private](https://travis-ci.com) projects. (GitHub only)
 * [Vexor CI](https://vexor.io) - A continuous integration tool for private apps with pay-per-minute billing model.
 * [Wercker](http://www.wercker.com/) - A Docker-based platform for building and deploying applications and microservices.
