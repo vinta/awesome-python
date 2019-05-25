@@ -729,7 +729,7 @@ Code Formatters
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
-* [Joblib](http://pythonhosted.org/joblib/index.html) - A set of tools to provide lightweight pipelining in Python.
+* [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
@@ -1263,7 +1263,7 @@ Where to discover new Python libraries.
 * [Django Packages](https://djangopackages.org/)
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
-* [Python 3 Wall of Superpowers](http://python3wos.appspot.com/)
+* [Python 3 Wall of Superpowers](https://python3wos.appspot.com/)
 * [Python Hackers](http://www.oss.io/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](https://www.ctolib.com/python/)
