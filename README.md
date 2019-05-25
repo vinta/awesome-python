@@ -15,7 +15,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [ChatOps Tools](#chatops-tools)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
-    - [Command-line Interface Development](command-line-interface-development)
+    - [Command-line Interface Development](#command-line-interface-development)
     - [Command-line Tools](#command-line-tools)
     - [Compatibility](#compatibility)
     - [Computer Vision](#computer-vision)
