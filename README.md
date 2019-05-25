@@ -85,7 +85,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Video](#video)
     - [Web Asset Management](#web-asset-management)
     - [Web Content Extracting](#web-content-extracting)
-    - [Web Crawling & Web Scraping](#web-crawling--web-scraping)
+    - [Web Crawling](#web-crawling)
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
@@ -1172,18 +1172,18 @@ Code Formatters
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 
-## Web Crawling & Web Scraping
+## Web Crawling
 
-*Libraries to automate data extraction from websites.*
+*Libraries to automate web data extraction.*
 
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [feedparser](https://pythonhosted.org/feedparser/) - Universal feed parser.
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
 * [MechanicalSoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
-* [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 
 ## Web Frameworks
 
