@@ -208,7 +208,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Code Analysis
 
-*Tools of static analysis, linters and code quality checkers. Also see: [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
+*Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
 
 * Code Analysis
     * [coala](https://github.com/coala/coala/) - Language independent and easily extendable code analysis application.
@@ -278,7 +278,7 @@ Code Formatters
 
 ## Concurrency and Parallelism
 
-*Libraries for concurrent and parallel execution. See [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
+*Libraries for concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
 
 * [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
 * [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
@@ -329,7 +329,7 @@ Code Formatters
 
 ## Data Visualization
 
-*Libraries for visualizing data. Also see: [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
+*Libraries for visualizing data. Also see [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
 * [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
@@ -419,7 +419,7 @@ Code Formatters
 
 ## Deep Learning
 
-*Frameworks for Neural Networks and Deep Learning. Also see: [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
+*Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
 
 * [caffe](https://github.com/BVLC/caffe) - A fast open framework for deep learning..
 * [keras](https://github.com/keras-team/keras) - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.
@@ -747,7 +747,7 @@ Code Formatters
 
 ## Machine Learning
 
-*Libraries for Machine Learning. Also see: [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
+*Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
@@ -936,7 +936,7 @@ Code Formatters
 
 ## Science
 
-*Libraries for scientific computing. Also see: [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists)*
+*Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists)*
 
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
@@ -1110,7 +1110,7 @@ Code Formatters
 
 ## Third-party APIs
 
-*Libraries for accessing third party services APIs. Also see: [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
+*Libraries for accessing third party services APIs. Also see [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
 
 * [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
 * [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
@@ -1216,7 +1216,7 @@ Online tools and APIs to simplify development.
 
 ## Continuous Integration
 
-*Also see: [awesome-CIandCD](https://github.com/ciandcd/awesome-ciandcd#online-build-system).*
+*Also see [awesome-CIandCD](https://github.com/ciandcd/awesome-ciandcd#online-build-system).*
 
 * [CircleCI](https://circleci.com/) - A CI service that can run very fast parallel testing.
 * [Travis CI](https://travis-ci.org) - A popular CI service for your open source and [private](https://travis-ci.com) projects. (GitHub only)
