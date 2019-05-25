@@ -1076,8 +1076,6 @@ Code Formatters
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [radar](https://pypi.org/project/radar/) - Generate random datetime / time.
-* Error Handler
-    * [FuckIt.py](https://github.com/ajalt/fuckitpy) - The Python error steamroller.
 
 ## Text Processing
 
