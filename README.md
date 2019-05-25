@@ -44,7 +44,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Functional Programming](#functional-programming)
     - [Game Development](#game-development)
     - [Geolocation](#geolocation)
-    - [GUI](#gui)
+    - [GUI Development](#gui-development)
     - [Hardware](#hardware)
     - [HTML Manipulation](#html-manipulation)
     - [HTTP Clients](#http-clients)
@@ -588,7 +588,7 @@ Code Formatters
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
 
-## GUI
+## GUI Development
 
 *Libraries for working with graphical user interface applications.*
 
