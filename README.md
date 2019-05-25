@@ -539,13 +539,12 @@ Code Formatters
 
 ## Environment Management
 
-*Libraries for Python version and environment management.*
+*Libraries for Python version and virtual environment management.*
 
-* [pipenv](https://github.com/kennethreitz/pipenv) - Sacred Marriage of Pipfile, Pip, & Virtualenv.
-* [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
-* [venv](https://docs.python.org/3/library/venv.html) - (Python standard library in Python 3.3+) Creating lightweight virtual environments.
-* [virtualenv](https://pypi.python.org/pypi/virtualenv) - A tool to create isolated Python environments.
+* [pipenv](https://github.com/pypa/pipenv) - Python Development Workflow for Humans.
+* [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
 ## Files
 
