@@ -1265,6 +1265,7 @@ Where to discover new Python libraries.
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [PyPI Ranking](http://pypi-ranking.info/alltime)
 * [Python 3 Wall of Superpowers](https://python3wos.appspot.com/)
+* [Python Cheatsheet](https://www.pythoncheatsheet.org/)
 * [Python Hackers](http://www.oss.io/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](https://www.ctolib.com/python/)
