@@ -15,6 +15,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [ChatOps Tools](#chatops-tools)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
+    - [Command-line Interface Development](command-line-interface-development)
     - [Command-line Tools](#command-line-tools)
     - [Compatibility](#compatibility)
     - [Computer Vision](#computer-vision)
@@ -228,7 +229,7 @@ Code Formatters
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
 
-## Command-line Tools
+## Command-line Interface Development
 
 *Libraries for building command-line application.*
 
@@ -244,6 +245,11 @@ Code Formatters
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
     * [colorama](https://pypi.org/project/colorama/) - Cross-platform colored terminal text.
+
+## Command-line Tools
+
+*Useful CLI-based tools for productivity.*
+
 * Productivity Tools
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
