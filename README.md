@@ -47,7 +47,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [GUI](#gui)
     - [Hardware](#hardware)
     - [HTML Manipulation](#html-manipulation)
-    - [HTTP](#http)
+    - [HTTP Clients](#http-clients)
     - [Image Processing](#image-processing)
     - [Implementations](#implementations)
     - [Interactive Interpreter](#interactive-interpreter)
@@ -648,7 +648,7 @@ Code Formatters
 * [xmldataset](https://xmldataset.readthedocs.io/en/latest/) - Simple XML Parsing.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
-## HTTP
+## HTTP Clients
 
 *Libraries for working with HTTP.*
 
