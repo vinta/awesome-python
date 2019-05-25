@@ -539,6 +539,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
 * [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
 * [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
+* [maildown](https://github.com/chris104957/maildown) - Super simple email API with markdown support.
 * [Marrow Mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 * [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern and simplified Web UI.
 * [Nylas Sync Engine](https://github.com/nylas/sync-engine) - Providing a RESTful API on top of a powerful email sync platform.
