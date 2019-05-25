@@ -5,6 +5,7 @@ Your contributions are always welcome!
 ## Guidelines
 
 * Add one link per Pull Request.
+    * Make sure the PR has a specific title, don't write something like `Update README.md`.
 * Add the link: `* [project-name](http://example.com/) - A short description ends with a period.`
     * Keep descriptions concise.
 * Add a section if needed.
