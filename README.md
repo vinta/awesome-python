@@ -1228,6 +1228,7 @@ Online tools and APIs to simplify development.
 * [Codecov](https://codecov.io/) - Code coverage dashboard.
 * [CodeFactor](https://www.codefactor.io/) - Automated Code Review for Git.
 * [Landscape](https://landscape.io/) - Hosted continuous Python code metrics.
+* [PEP 8 Speaks](https://pep8speaks.com/) - GitHub integration to review code style.
 
 # Resources
 
