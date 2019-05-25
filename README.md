@@ -1174,7 +1174,7 @@ Code Formatters
 
 ## Web Crawling
 
-*Libraries to automate web data extraction.*
+*Libraries to automate web scraping.*
 
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [feedparser](https://pythonhosted.org/feedparser/) - Universal feed parser.
