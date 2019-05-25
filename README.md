@@ -110,7 +110,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-grappelli](http://grappelliproject.com) - A jazzy skin for the Django Admin-Interface.
 * [django-suit](http://djangosuit.com/) - Alternative Django Admin-Interface (free only for Non-commercial use).
 * [django-xadmin](https://github.com/sshwsfc/xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
-* [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
+* [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for 
+* [django-jet](https://github.com/geex-arts/django-jet) - Modern responsive template for the Django admin interface with improved functionality
+* [djadmin](https://github.com/sainipray/djadmin) - Djadmin is a django admin theme
+Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 * [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
