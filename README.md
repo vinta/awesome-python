@@ -408,6 +408,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [lptrace](https://github.com/khamidou/lptrace) - [strace](http://man7.org/linux/man-pages/man1/strace.1.html) for Python programs.
     * [manhole](https://github.com/ionelmc/python-manhole) - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
     * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
+    * [pysnooper](https://github.com/cool-RR/PySnooper) - Print replacement traces functions with decorator.
     * [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
 * Profiler
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
