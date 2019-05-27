@@ -231,7 +231,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Command-line Interface Development
 
-*Libraries for building command-line application.*
+*Libraries for building command-line applications.*
 
 * Command-line Application Development
     * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
