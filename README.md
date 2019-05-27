@@ -325,8 +325,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 * [colander](https://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
-* [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
-    * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
@@ -340,6 +338,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook
+* [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
+    * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [ggplot](https://github.com/yhat/ggpy) - Same API as ggplot2 for R.
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
