@@ -1246,6 +1246,10 @@ Where to discover new Python libraries.
 * [Radio Free Python](http://radiofreepython.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 
+## Articles
+
+* [E-commerce for Django Developers (with Wagtail Tutorial)](https://snipcart.com/blog/django-ecommerce-tutorial-wagtail-cms)
+
 ## Twitter
 
 * [@codetengu](https://twitter.com/codetengu)
