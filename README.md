@@ -1199,7 +1199,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
     * [awesome-django](https://github.com/shahraizali/awesome-django)
 * [Frappe](https://frappe.io/frappe) - A batteries included, full stack, metadata driven web framework with a rich admin UI for building fast and scalable apps.
-    * []
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
     * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
 * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
