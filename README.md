@@ -1279,6 +1279,7 @@ Where to discover new Python libraries.
 * [Real Python](https://realpython.com)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 * [Сообщество Python Программистов](https://python-scripts.com/)
+* [Bookmarks.dev](https://www.bookmarks.dev/search?q=python) - Python dev bookmarks. Use the tag [python](https://www.bookmarks.dev/tagged/python)
 
 ## Weekly
 
