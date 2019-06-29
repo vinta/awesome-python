@@ -238,6 +238,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
+    * [cmd2](https://github.com/python-cmd2/cmd2) - Quickly build feature-rich and user-friendly interactive command line applications.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A library for building powerful interactive command lines.
