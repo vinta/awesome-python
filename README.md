@@ -1059,6 +1059,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [tox](https://tox.readthedocs.io/en/latest/) - Auto builds and tests distributions in multiple Python versions
 * GUI / Web Testing
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+    * [aioload](https://github.com/sonic182/aioload) - Minimal and fast async load test with aiohttp + pandas for drawing charts.
     * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
     * [Selenium](https://pypi.org/project/selenium/) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
