@@ -1,4 +1,4 @@
-# Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# Awesome Python [![Financial Contributors on Open Collective](https://opencollective.com/awesome-python/all/badge.svg?label=financial+contributors)](https://opencollective.com/awesome-python) [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 A curated list of awesome Python frameworks, libraries, software and resources.
 
@@ -1297,3 +1297,33 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@vinta](https://twitter.com/vinta) on Twitter or open an issue on GitHub.
+
+## Contributors
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
+<a href="https://github.com/vinta/awesome-python/graphs/contributors"><img src="https://opencollective.com/awesome-python/contributors.svg?width=890&button=false" /></a>
+
+### Financial Contributors
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/awesome-python/contribute)]
+
+#### Individuals
+
+<a href="https://opencollective.com/awesome-python"><img src="https://opencollective.com/awesome-python/individuals.svg?width=890"></a>
+
+#### Organizations
+
+Support this project with your organization. Your logo will show up here with a link to your website. [[Contribute](https://opencollective.com/awesome-python/contribute)]
+
+<a href="https://opencollective.com/awesome-python/organization/0/website"><img src="https://opencollective.com/awesome-python/organization/0/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/1/website"><img src="https://opencollective.com/awesome-python/organization/1/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/2/website"><img src="https://opencollective.com/awesome-python/organization/2/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/3/website"><img src="https://opencollective.com/awesome-python/organization/3/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/4/website"><img src="https://opencollective.com/awesome-python/organization/4/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/5/website"><img src="https://opencollective.com/awesome-python/organization/5/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/6/website"><img src="https://opencollective.com/awesome-python/organization/6/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/7/website"><img src="https://opencollective.com/awesome-python/organization/7/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/8/website"><img src="https://opencollective.com/awesome-python/organization/8/avatar.svg"></a>
+<a href="https://opencollective.com/awesome-python/organization/9/website"><img src="https://opencollective.com/awesome-python/organization/9/avatar.svg"></a>
