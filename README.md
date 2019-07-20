@@ -486,6 +486,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc)
 * [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 * [pycco](https://github.com/pycco-docs/pycco) - The literate-programming-style documentation generator.
+* [pdoc3](https://github.com/pdoc3/pdoc) - Auto-generate API documentation for Python projects.
 
 ## Downloader
 
