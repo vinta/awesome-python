@@ -733,6 +733,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for scheduling jobs.*
 
 * [APScheduler](http://apscheduler.readthedocs.io/en/latest/) - A light but powerful in-process task scheduler that lets you schedule functions.
+* [django-maintenance-mode](https://github.com/fabiocaccamo/django-maintenance-mode) - django-maintenance-mode shows a 503 error page when maintenance mode is on.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
