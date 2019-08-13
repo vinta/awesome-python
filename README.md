@@ -1196,6 +1196,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Full stack web frameworks.*
 
+* [Bottle](https://bottlepy.org/docs/dev/) - Bottle is a fast, simple and lightweight WSGI micro web-framework for Python.
 * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
     * [awesome-django](https://github.com/shahraizali/awesome-django)
 * [Flask](http://flask.pocoo.org/) - A microframework for Python.
