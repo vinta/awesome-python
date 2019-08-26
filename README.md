@@ -218,6 +218,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
 * Code Linters
     * [flake8](https://pypi.org/project/flake8/) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
+        * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
 * Code Formatters
