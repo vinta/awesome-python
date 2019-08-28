@@ -441,6 +441,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Software and libraries for DevOps.*
 
 * [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
+* [auton](https://github.com/decryptus/auton) - Execute programs and command-lines on remote servers through HTTP.
 * [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
 * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
 * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
