@@ -423,6 +423,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
     * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
     * [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
+    * [pysnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again.
 
 ## Deep Learning
 
