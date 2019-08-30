@@ -1191,6 +1191,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
+* [Weboob](http://weboob.org/) - A framework for scraping sites with already existing site modules and ready-made client apps.
 
 ## Web Frameworks
 
