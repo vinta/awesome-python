@@ -902,6 +902,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 * [Surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 * [tensorrec](https://github.com/jfkirk/tensorrec) - A Recommendation Engine Framework in TensorFlow.
+* [Recommenders](https://github.com/Microsoft/Recommenders) - Examples, utilities and best practices for building recommendation systems.
 
 ## RESTful API
 
