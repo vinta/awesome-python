@@ -247,6 +247,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
     * [colorama](https://pypi.org/project/colorama/) - Cross-platform colored terminal text.
     * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
+    * [alive-progress](https://github.com/rsalmei/alive-progress) - An animated and smart Progress Bar for python REPL and command lines.
 
 ## Command-line Tools
 
