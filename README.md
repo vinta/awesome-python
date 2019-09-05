@@ -229,6 +229,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
+    
+## Dynamic Analysis
+
+*Libraries to analyse data/state at runtime*
+
+* Validation
+    * [parameters-validation](https://github.com/allrod5/parameters-validation) - Easy & clean function parameters validation
 
 ## Command-line Interface Development
 
