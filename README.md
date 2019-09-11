@@ -224,7 +224,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Code Formatters
     * [black](https://github.com/python/black) - The uncompromising Python code formatter.
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
-* Static Type Checkers
+* Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
 * Static Type Annotations Generators
