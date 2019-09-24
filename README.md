@@ -595,6 +595,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+* [python-benedict](https://github.com/fabiocaccamo/python-benedict) - A python dictionary subclass with keypath support, I/O methods (read/write json, toml, xml, yaml) and many utilities.
 
 ## GUI Development
 
