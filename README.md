@@ -890,6 +890,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 * [mrq](https://github.com/pricingassistant/mrq) - Mr. Queue - A distributed worker task queue in Python using Redis & gevent.
 * [rq](https://github.com/rq/rq) - Simple job queues for Python.
+* [dramatiq](https://dramatiq.io/) - Dramatiq is a distributed task processing library for Python with a focus on simplicity, reliability and performance.
 
 ## Recommender Systems
 
