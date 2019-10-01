@@ -303,6 +303,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [dynaconf](https://github.com/rochacbruno/dynaconf) - Dynamic configuration system support multiple files format (.toml, .json, .yaml, .ini and .py).
 
 ## Cryptography
 
