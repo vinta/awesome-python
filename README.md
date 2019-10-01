@@ -1248,7 +1248,6 @@ Where to discover new Python libraries.
 * [From Python Import Podcast](http://frompythonimportpodcast.com/)
 * [Podcast.init](https://podcastinit.com/)
 * [Python Bytes](https://pythonbytes.fm)
-* [Python Testing](http://pythontesting.net)
 * [Radio Free Python](http://radiofreepython.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Test and Code](https://testandcode.com/)
