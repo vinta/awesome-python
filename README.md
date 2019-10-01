@@ -303,6 +303,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [django-kaio](https://github.com/APSL/django-kaio) - Class based settings for Django projects that can be read from multiple sources.
 
 ## Cryptography
 
