@@ -188,6 +188,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mezzanine](https://github.com/stephenmcd/mezzanine) - A powerful, consistent, and flexible content management platform.
 * [plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
 * [quokka](https://github.com/rochacbruno/quokka) - Flexible, extensible, small CMS powered by Flask and MongoDB.
+* [puput](https://github.com/APSL/puput) - Puput is a powerful and simple Django app to manage a blog. It uses the awesome Wagtail CMS as content management system.
 
 ## Caching
 
