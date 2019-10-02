@@ -784,6 +784,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [dontpady](http://github.com/vgasparini/dontpady) - A CLI aplication to use [dontpad](http://dontpad.com).
 
 ## Natural Language Processing
 
