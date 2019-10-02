@@ -1107,6 +1107,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Unique identifiers
     * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
     * [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
+    * [inflect](https://pypi.org/project/inflect/) - A Pyton text library to process grammar; It can also convert numbers to words.
 * Parser
     * [ply](https://github.com/dabeaz/ply) - Implementation of lex and yacc parsing tools for Python.
     * [pygments](http://pygments.org/) - A generic syntax highlighter.
