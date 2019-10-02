@@ -320,6 +320,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
+* [Vaex](https://github.com/vaexio/vaex) - Vaex is a python library for lazy Out-of-Core DataFrames, to visualize and explore big tabular datasets.
 
 ## Data Validation
 
