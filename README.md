@@ -1180,6 +1180,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
+* [webbrowser](https://docs.python.org/2/library/webbrowser.html) - A module to open URLs in interactive browser applications.
 
 ## Web Crawling
 
