@@ -254,6 +254,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Useful CLI-based tools for productivity.*
 
 * Productivity Tools
+    * [bake](https://github.com/kennethreitz/bake) - Task automation similar to Make, but allowing for real Bash or python code to be used.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
