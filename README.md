@@ -397,6 +397,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 * [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
 * [maya](https://github.com/kennethreitz/maya) - Datetimes for Humans.
+* [arrow](https://github.com/crsmithdev/arrow) - Better dates & times for Python
 
 ## Debugging Tools
 
