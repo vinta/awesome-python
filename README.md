@@ -284,6 +284,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - Another wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [SimpleCV](http://simplecv.org/) - An open source framework for building computer vision applications.
+* [Scikit-Image](https://scikit-image.org/) - A collection of algorithms for Image processing
 
 ## Concurrency and Parallelism
 
