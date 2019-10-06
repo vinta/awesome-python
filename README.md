@@ -798,7 +798,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
     * [pytext](https://github.com/facebookresearch/pytext) - A natural language modeling framework based on PyTorch.
     * [PyTorch-NLP](https://github.com/PetrochukM/PyTorch-NLP) - A toolkit enabling rapid deep learning NLP prototyping for research.
-    * [spacy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
+    * [spaCy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
     * [stanfordnlp](https://github.com/stanfordnlp/stanfordnlp) - The Stanford NLP Group's official Python library, supporting 50+ languages.
 - Chinese
     * [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
