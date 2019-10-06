@@ -760,6 +760,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
+* [MLflow](https://github.com/mlflow/mlflow) - Open source platform to manage the ML lifecycle, including experimentation, reproducibility and deployment.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
