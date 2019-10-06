@@ -1209,6 +1209,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Sanic](https://github.com/channelcat/sanic) - Web server that's written to go fast.
 * [Vibora](https://vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask.
 * [Tornado](http://www.tornadoweb.org/en/latest/) - A Web framework and asynchronous networking library.
+* [Web2py](http://www.web2py.com/) - A Web framework for fullstack development.
+* [Cherrypy](https://cherrypy.org/) - A minimalist python webframework.
+
 
 ## WebSocket
 
