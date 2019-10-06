@@ -222,6 +222,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
     * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) - The strictest and most opinionated python linter ever.
+    * [InspectorTiger](https://github.com/thg-consulting/inspectortiger) - Modern python code review tool / framework.
 * Code Formatters
     * [black](https://github.com/python/black) - The uncompromising Python code formatter.
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
