@@ -206,6 +206,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
+* [ChatterBot](https://github.com/gunthercox/ChatterBot/) - A machine learning conversational dialog engine for creating chat bots.
+
 
 ## Code Analysis
 
