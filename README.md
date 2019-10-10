@@ -1275,7 +1275,6 @@ Where to discover new Python libraries.
 * [Django Packages](https://djangopackages.org/)
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
-* [Python Hackers](http://www.oss.io/open-source/)
 * [Python ZEEF](https://python.zeef.com/alan.richmond)
 * [Python 开发社区](https://www.ctolib.com/python/)
 * [Real Python](https://realpython.com)
