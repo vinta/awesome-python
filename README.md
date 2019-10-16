@@ -967,6 +967,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 * [SimPy](https://bitbucket.org/simpy/simpy) -  A process-based discrete-event simulation framework.
+* [Z3](https://github.com/Z3Prover/z3) - A theorem prover
 
 ## Search
 
@@ -977,6 +978,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
 * [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
 * [whoosh](http://whoosh.readthedocs.io/en/latest/) - A fast, pure Python search engine library.
+
+## Security
+
+*Libraries for developing exploit
+
+* [Pwntools](https://github.com/Gallopsled/pwntools) - Framework for writing exploits.
+* [StegCracker](https://github.com/Paradoxis/StegCracker) - Steganography brute-force utility to uncover hidden data inside files.
 
 ## Serialization
 
