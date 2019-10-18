@@ -269,6 +269,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mycli](https://github.com/dbcli/mycli) - A Terminal Client for MySQL with AutoCompletion and Syntax Highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - Postgres CLI with autocompletion and syntax highlighting.
     * [saws](https://github.com/donnemartin/saws) - A Supercharged [aws-cli](https://github.com/aws/aws-cli).
+    * [signale.py](https://github.com/ShardulNalegave/signale.py) - Elegant Console Logger For Python Command Line Apps
 
 ## Compatibility
 
