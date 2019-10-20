@@ -439,7 +439,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 * [Chainer](https://github.com/chainer/chainer) - A flexible framework of neural networks for deep learning 
-## DevOps Tools*Software and libraries for DevOps.*
+## DevOps Tools
+
+*Software and libraries for DevOps.*
 
 * [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
 * [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
