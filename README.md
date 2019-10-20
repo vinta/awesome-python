@@ -351,8 +351,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
-* [Whatsapp chat Analyzer](https://github.com/subahanii/Whatsapp-Chat-Analyzer) - This repo showing all activity happened in whatsapp group chat .
-
+* [Whatsapp chat Analyzer](https://github.com/subahanii/Whatsapp-Chat-Analyzer) - This script showing all activity happened in whatsapp group chat.
 
 ## Database
 
