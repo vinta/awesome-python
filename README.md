@@ -384,6 +384,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
+    * [py-couchdb](https://github.com/histrio/py-couchdb) - Modern pure python CouchDB Client.
 
 ## Date and Time
 
