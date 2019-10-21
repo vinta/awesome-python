@@ -420,6 +420,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
     * [pyflame](https://github.com/uber/pyflame) - A ptracing profiler For Python.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
+    * [Pympler](https://github.com/pympler/pympler) - Tool to monitor and analyze the memory behavior of objects in a running application.
 * Others
     * [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
     * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
