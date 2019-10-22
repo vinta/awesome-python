@@ -408,6 +408,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pdb++](https://github.com/antocuni/pdb) - Another drop-in replacement for pdb.
     * [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
+    * [PySnooper](https://github.com/cool-RR/PySnooper) - Never use print for debugging again
 * Tracing
     * [lptrace](https://github.com/khamidou/lptrace) - [strace](http://man7.org/linux/man-pages/man1/strace.1.html) for Python programs.
     * [manhole](https://github.com/ionelmc/python-manhole) - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
