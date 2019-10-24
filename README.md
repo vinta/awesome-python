@@ -831,6 +831,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
 * [Stream Framework](https://github.com/tschellenbach/Stream-Framework) - Building newsfeed and notification systems using Cassandra and Redis.
+* [pythonic news](https://news.python.sc/) - a HN clone / look alike dedicated to news about python.
 
 ## ORM
 
