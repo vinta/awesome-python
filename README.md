@@ -1194,6 +1194,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
+* [BeautifulSoup](https://pypi.org/project/beautifuls) - BeautifulSoup or bs4 is a python module that makes it easy to scrape information from web pages. 
 
 ## Web Frameworks
 
