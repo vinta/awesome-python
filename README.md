@@ -733,6 +733,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with HTTP.*
 
+* [aiosonic](https://github.com/sonic182/aiosonic) - A very fast async HTTP client
 * [grequests](https://github.com/spyoungtech/grequests) - requests + gevent for asynchronous HTTP requests.
 * [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
 * [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
