@@ -662,12 +662,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with HTTP.*
 
+* [aiosonic](https://github.com/sonic182/aiosonic) - A very fast async HTTP client
 * [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests.
 * [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
 * [requests](https://requests.kennethreitz.org/en/master/) - HTTP Requests for Humans™.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
-* [aiosonic](https://github.com/sonic182/aiosonic) - A very fast async HTTP client
 
 ## Hardware
 
