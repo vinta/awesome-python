@@ -662,7 +662,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with HTTP.*
 
-* [aiosonic](https://github.com/sonic182/aiosonic) - A very fast async HTTP client
+* [aiosonic](https://github.com/sonic182/aiosonic) - A very fast async HTTP client.
 * [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests.
 * [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
 * [requests](https://requests.kennethreitz.org/en/master/) - HTTP Requests for Humans™.
