@@ -485,6 +485,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for generating project documentation.*
 
+* [sanic-openapi](https://github.com/huge-success/sanic-openapi) - Give your Sanic API a UI and OpenAPI documentation.
 * [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
     * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc)
 * [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
