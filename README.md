@@ -7,6 +7,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Awesome Python](#awesome-python)
     - [Admin Panels](#admin-panels)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+    - [ASGI Servers](#asgi-servers)
     - [Audio](#audio)
     - [Authentication](#authentication)
     - [Build Tools](#build-tools)
@@ -124,6 +125,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyPattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
 * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 * [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast, pure-Python implementation of SortedList, SortedDict, and SortedSet types.
+
+## ASGI Servers
+
+*ASGI-compatible web servers.*
+
+* [starlette](https://github.com/encode/starlette) - Is a lightweight ASGI framework/toolkit, which is ideal for building high performance asyncio services.
 
 ## Audio
 
