@@ -39,7 +39,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
     - [Environment Management](#environment-management)
-		- [Exploit Development](#exploit-dev)
+    - [Exploit Development](#exploit-dev)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
