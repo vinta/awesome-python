@@ -39,6 +39,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
     - [Environment Management](#environment-management)
+		- [Exploit Development](#exploit-dev)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
@@ -555,6 +556,19 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pipenv](https://github.com/pypa/pipenv) - Python Development Workflow for Humans.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
+
+## Exploit Development
+
+*Libraries to assist in writing exploits.*
+
+* [GEF](https://github.com/hugsy/gef) - GDB Enhanced Features for exploit devs & reversers.
+* [PEDA](https://github.com/longld/peda) - Python Exploit Development Assistance for GDB.
+* [pwndbg](https://github.com/pwndbg/pwndbg) - Exploit Development and Reverse Engineering with GDB Made Easy.
+* [pwntools](https://github.com/Gallopsled/pwntools) - CTF framework and exploit development library.
+* [ROPgadget](https://github.com/JonathanSalwan/ROPgadget) - Search your gadgets on your binaries to facilitate your ROP exploitation.
+* [ROPGenerator](https://github.com/Boyan-MILANOV/ropgenerator) - Build ROP exploits by finding and chaining gadgets together.
+* [Ropper](https://github.com/sashs/Ropper) - Display information about files in different file formats and find gadgets to build rop chains for different architectures, via the Capstone framework.
+* https://medium.com/bugbountywriteup/pwndbg-gef-peda-one-for-all-and-all-for-one-714d71bf36b8
 
 ## Files
 
