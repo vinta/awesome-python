@@ -229,6 +229,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
+    * [pyright](https://github.com/microsoft/pyright) - A fast type checker meant for large Python source bases.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
 
