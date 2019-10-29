@@ -89,6 +89,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Crawling](#web-crawling)
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
+    - [Workflows](#workflows)
     - [WSGI Servers](#wsgi-servers)
 - [Services](#services)
     - [Code Quality](#code-quality)
@@ -1145,6 +1146,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
+
+## Workflows
+
+*Tools to create workflows.*
+
+* [prefect](https://github.com/PrefectHQ/prefect) - Prefect is a new workflow management system, designed for modern infrastructure.
 
 ## WSGI Servers
 
