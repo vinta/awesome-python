@@ -318,6 +318,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for data analyzing.*
 
 * [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
+* [mlxtend](https://github.com/rasbt/mlxtend) - A library of extension and helper modules for Python's data analysis and machine learning libraries.
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
