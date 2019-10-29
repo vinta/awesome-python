@@ -65,6 +65,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Package Management](#package-management)
     - [Package Repositories](#package-repositories)
     - [Permissions](#permissions)
+    - [Pipelines](#pipelines)
     - [Processes](#processes)
     - [Queue](#queue)
     - [Recommender Systems](#recommender-systems)
@@ -875,6 +876,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
 * [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
+
+## Pipelines
+
+*Libraries for creating pipelines.*
+
+* [pypette](https://github.com/csurfer/pypette) - Makes building pipelines ridiculously simple, allowing users to control the flow with minimal instructions.
 
 ## Processes
 
