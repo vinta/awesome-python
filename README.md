@@ -935,6 +935,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 * [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
+* [ev3dev](https://github.com/ev3dev/ev3dev-lang-python) - This is a great way to expand the use of a LEGO EV3 robot.
 
 ## RPC Servers
 
