@@ -1,15 +1,14 @@
-BASEDIR=$(CURDIR)
-DOCDIR=$(BASEDIR)/docs
+site_install:
+	pip install -r requirements.txt
 
-install:
-	pip install mkdocs
-	pip install mkdocs-bootswatch
+site_link:
+	ln -sf $(CURDIR)/README.md $(CURDIR)/docs/index.md
 
-link:
-	ln -sf $(BASEDIR)/README.md $(DOCDIR)/index.md
-
-preview: link
+site_preview: site_link
 	mkdocs serve
 
-deploy: link
+site_build: site_link
+	mkdocs build
+
+site_deploy: site_link
 	mkdocs gh-deploy --clean
