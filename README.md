@@ -622,6 +622,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Awesome game development libraries.*
 
+* [Arcade library](http://arcade.academy/) - Arcade is an easy-to-learn Python library for creating 2D video games.
 * [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications.
 * [Harfang3D](http://www.harfang3d.com) - Python framework for 3D, VR and game development.
 * [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney.
