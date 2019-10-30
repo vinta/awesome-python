@@ -845,7 +845,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
     * [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
-    * [pypika](https://pypi.python.org/pypi/PyPika) - SQL query builder with a pythonic syntax that doesn't limit the expressiveness of SQL.
+    * [pypika](https://github.com/kayak/pypika) - SQL query builder with a pythonic syntax that doesn't limit the expressiveness of SQL.
 * NoSQL Databases
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
     * [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
