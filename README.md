@@ -1186,6 +1186,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to automate web scraping.*
 
+* [beautifulsoup4](https://pypi.org/project/beautifulsoup4/) - A Python library for pulling data out of HTML and XML files
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [feedparser](https://pythonhosted.org/feedparser/) - Universal feed parser.
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
