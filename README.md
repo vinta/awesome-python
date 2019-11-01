@@ -257,6 +257,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Productivity Tools
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
+    * [git-me-the-url](https://github.com/amykyta3/git-me-the-url) - Generate the public GitHub URL to a file tracked in Git.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
