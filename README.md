@@ -532,6 +532,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * IDE
     * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
     * [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+    * Cross-Editor Plugins
+        * [Kite](https://kite.com/) - Free AI Autocomplete Plugin for Atom, VS Code, PyCharm, Sublime, Vim.
 
 ## Email
 
