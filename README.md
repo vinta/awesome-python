@@ -377,13 +377,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     * [happybase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
     * [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
-    * [py2neo](https://py2neo.org/) - Python wrapper client for Neo4j's restful interface.
+    * [py2neo](https://py2neo.org/) - A client library and toolkit for working with Neo4j.
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
-    * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
-    * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
 ## Date and Time
 
