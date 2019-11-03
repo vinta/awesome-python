@@ -381,7 +381,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
-    * [Telephus](https://github.com/driftx/Telephus) - Twisted based client for Cassandra.
     * [txpostgres](https://github.com/wulczer/txpostgres) - Twisted based asynchronous driver for PostgreSQL.
     * [txRedis](https://github.com/deldotdr/txRedis) - Twisted based client for Redis.
 
