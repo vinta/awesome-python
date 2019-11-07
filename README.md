@@ -614,7 +614,7 @@ Code Formatters
 *Libraries for working with GraphQL.*
 
 * [tartiflette](https://tartiflette.io) - SDL-first GraphQL engine implementation for Python 3.6+ and asyncio.
-* [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - Wrapper of tartiflette to expose GraphQL API over HTTP based on aiohttp / 3.6+ / asyncio.
+* [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - An `aiohttp`-based wrapper for Tartiflette to expose GraphQL APIs over HTTP.
 * [tartiflette-asgi](https://github.com/tartiflette/tartiflette-asgi/) - ASGI support for the Tartiflette GraphQL engine.
 
 ## Game Development
