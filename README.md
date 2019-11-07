@@ -1028,6 +1028,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 * [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
 * [rq](https://github.com/rq/rq) - Simple job queues for Python.
+* [selinon](http://selinon.readthedocs.io/) - An advanced task flow management on top of Celery distributed worker task queue.
+
 
 ## Template Engine
 
