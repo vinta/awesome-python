@@ -1043,6 +1043,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Testing Frameworks
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
+    * [Test Junkie](https://github.com/ArturSpirin/test_junkie) - Highly configurable modern testing framework.
     * [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
