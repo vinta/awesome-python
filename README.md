@@ -199,6 +199,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for caching data.*
 
 * [beaker](https://github.com/bbangert/beaker) - A WSGI middleware for sessions and caching.
+* [cachetools](https://pypi.org/project/cachetools/) - Various memoizing collections and decorators, including variants of the Python 3 Standard Library @lru_cache function decorator
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [dogpile.cache](http://dogpilecache.readthedocs.io/en/latest/) - dogpile.cache is next generation replacement for Beaker made by same authors.
@@ -232,7 +233,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
-    * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
+    * [pyre-check](https://github.com/facebook/pyre-check) - Facebook's type checker
+    * [pyright](https://github.com/microsoft/pyright) - Microsoft's type checker.
+    * [pytype](https://github.com/google/pytype) - Google's type checker.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
 
