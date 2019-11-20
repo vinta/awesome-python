@@ -67,6 +67,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Permissions](#permissions)
     - [Processes](#processes)
     - [Recommender Systems](#recommender-systems)
+    - [Refactoring](#refactoring)
     - [RESTful API](#restful-api)
     - [Robotics](#robotics)
     - [RPC Servers](#rpc-servers)
@@ -889,6 +890,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 * [Surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 * [tensorrec](https://github.com/jfkirk/tensorrec) - A Recommendation Engine Framework in TensorFlow.
+
+## Refactoring
+
+*Refactoring tools and libraries for Python*
+
+ * [Bicycle Repair Man](http://bicyclerepair.sourceforge.net/) - Bicycle Repair Man, a refactoring tool for Python.
+ * [Bowler](https://pybowler.io/) - Safe code refactoring for modern Python.
+ * [Rope](https://github.com/python-rope/rope) -  Rope is a python refactoring library.
 
 ## RESTful API
 
