@@ -307,6 +307,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
+* [pconf](https://github.com/andrasmaroy/pconf) - Hierarchical configuration handler supporting multiple sources.
 * [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
