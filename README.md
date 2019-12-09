@@ -1190,6 +1190,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+    * [Quart](https://gitlab.com/pgjones/quart) - Quart is a Python ASGI web microframework, supporting Flask API, HTTP/2 and websockets. 
 
 ## WebSocket
 
