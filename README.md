@@ -14,6 +14,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
     - [ChatOps Tools](#chatops-tools)
+    - [CI/CD](#continuous-integration-continuous-deployment)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
     - [Command-line Interface Development](#command-line-interface-development)
@@ -211,6 +212,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
+
+## Continuous Integration Continuous Deployment
+
+* CI/CD Servers
+    * [Buildbot](https://buildbot.net/) - The Continuous Integration framework written in Python
 
 ## Code Analysis
 
