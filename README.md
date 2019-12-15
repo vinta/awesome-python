@@ -554,7 +554,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Python version and virtual environment management.*
 
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
-* [pipenv](https://github.com/pypa/pipenv) - Python Development Workflow for Humans.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
