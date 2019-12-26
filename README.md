@@ -336,6 +336,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
+* [pylightxl](https://github.com/PydPiper/pylightxl) - A light weight excel reader/writer with zero-dependencies for python 2.7 - 3+
 
 ## Data Validation
 
