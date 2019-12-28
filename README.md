@@ -517,8 +517,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Downloader
 
-*Libraries for downloading.*
+*Libraries and applications for downloading.*
 
+* [PyIDM](https://github.com/pyIDM/pyIDM) - An alternative to IDM (Internet Download Manager) with multi-connections & high speed engine.
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [s4cmd](https://github.com/bloomreach/s4cmd) - Super S3 command line tool, good for higher performance.
 * [you-get](http://you-get.org/) - A YouTube/Youku/Niconico video downloader written in Python 3.
