@@ -370,6 +370,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Databases implemented in Python.*
 
+* [python-jsonstore](https://github.com/Code0x58/python-jsonstore) - Zero dependancy library to store values in JSON and provide transactions.
 * [pickleDB](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 * [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [ZODB](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
