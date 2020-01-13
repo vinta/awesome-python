@@ -549,14 +549,15 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for sending and parsing email.*
 
-* [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
-* [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
-* [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
-* [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
-* [Marrow Mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
-* [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern and simplified Web UI.
-* [Nylas Sync Engine](https://github.com/nylas/sync-engine) - Providing a RESTful API on top of a powerful email sync platform.
-* [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* Mail Servers
+    * [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
+    * [salmon](https://github.com/moggers87/salmon) - A Python Mail Server.
+* Clients
+    * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
+    * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* Others
+    * [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
+    * [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 
 ## Environment Management
 
