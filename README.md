@@ -241,6 +241,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
+    * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
