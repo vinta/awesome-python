@@ -914,6 +914,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
  * [Bicycle Repair Man](http://bicyclerepair.sourceforge.net/) - Bicycle Repair Man, a refactoring tool for Python.
  * [Bowler](https://pybowler.io/) - Safe code refactoring for modern Python.
  * [Rope](https://github.com/python-rope/rope) -  Rope is a python refactoring library.
+ * [Sourcery](https://sourcery.ai) - Tool which automatically suggests brilliant, safe refactorings.
 
 ## RESTful API
 
