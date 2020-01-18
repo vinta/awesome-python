@@ -682,6 +682,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [grequests](https://github.com/spyoungtech/grequests) - requests + gevent for asynchronous HTTP requests.
 * [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
+* [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 * [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
