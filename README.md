@@ -425,6 +425,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [manhole](https://github.com/ionelmc/python-manhole) - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
     * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
+    * [SEAPIE](https://github.com/hirsimaki-markus/SEAPIE) - Opens clone of default interpreter during execution with the ability to step code and other magic commands.
 * Profiler
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
