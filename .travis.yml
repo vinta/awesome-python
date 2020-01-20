@@ -1,17 +1,20 @@
+# Disable sudo to speed up the build
+sudo: false
+
+# Set the build language to Python
 language: python
 
-python:
-  - "3.6"
+# Set the python version to 2.7
+python: 2.7
 
+# Install the codecov pip dependency
+install:
+  - pip install codecov
+
+# Run the unit test
 script:
-  - cp README.md docs/index.md
-  - mkdocs build
+  - coverage run tests.py
 
-deploy:
-  provider: pages
-  local-dir: site
-  skip-cleanup: true
-  keep-history: true
-  github-token: $GITHUB_TOKEN
-  on:
-    branch: master
+# Push the results back to codecov
+after_success:
+  - codecov
