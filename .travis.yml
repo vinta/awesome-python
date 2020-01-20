@@ -13,7 +13,7 @@ install:
 
 # Run the unit test
 script:
-  - coverage run tests.py
+  - coverage run sort.py
 
 # Push the results back to codecov
 after_success:
