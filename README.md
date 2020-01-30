@@ -1160,6 +1160,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for manipulating video and GIFs.*
 
+* [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 * [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 
