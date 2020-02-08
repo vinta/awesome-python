@@ -1268,6 +1268,7 @@ Where to discover new Python libraries.
 * [/r/CoolGithubProjects](https://www.reddit.com/r/coolgithubprojects/)
 * [/r/Python](https://www.reddit.com/r/python)
 * [Awesome Python @LibHunt](https://python.libhunt.com/)
+* [Comprehensive Python Cheatsheet](https://gto76.github.io/python-cheatsheet/)
 * [Django Packages](https://djangopackages.org/)
 * [Full Stack Python](https://www.fullstackpython.com/)
 * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
