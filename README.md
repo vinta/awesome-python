@@ -865,6 +865,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for package and dependency management.*
 
+* [dephell](https://github.com/dephell/dephell#readme) - Tool that augments other standard tools (pip, poetry, …) with missing features and workflows.
 * [pip](https://pip.pypa.io/en/stable/) - The package installer for Python.
     * [PyPI](https://pypi.org/)
     * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
