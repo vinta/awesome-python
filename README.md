@@ -271,6 +271,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
+    * [Invoke](https://github.com/pyinvoke/invoke#readme) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
     * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
