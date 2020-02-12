@@ -253,6 +253,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Command-line Application Development
     * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
+        * [click-man](https://github.com/click-contrib/click-man#readme) - Automate generation of man pages for python click applications.
+        * [sphinx-click](https://github.com/click-contrib/sphinx-click#readme) - Create a full CLI reference from source code, with no extra work and always up-to-date.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
