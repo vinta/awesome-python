@@ -487,6 +487,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries to create packaged executables for release distribution.*
 
 * [dh-virtualenv](https://github.com/spotify/dh-virtualenv) - Build and distribute a virtualenv as a Debian package.
+* [ezpy/deadsnakes](https://github.com/jhermann/ezpy/tree/master/deadsnakes#readme) - A Dockerfile that builds Ubuntu's Deadsnakes PPA packages for Debian releases.
 * [Nuitka](http://nuitka.net/) - Compile scripts, modules, packages to an executable or extension module.
 * [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
