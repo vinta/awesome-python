@@ -492,6 +492,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
 * [PyInstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
 * [pynsist](http://pynsist.readthedocs.io/en/latest/) - A tool to build Windows installers, installers bundle Python itself.
+* [shiv](https://github.com/linkedin/shiv#readme) - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included. 
 
 ## Documentation
 
