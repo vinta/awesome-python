@@ -148,12 +148,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
     * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
     * [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+    * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
 * Metadata
     * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
     * [eyeD3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
     * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
     * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
-    * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
 
 ## Authentication
 
