@@ -153,6 +153,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [eyeD3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
     * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
     * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
+    * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
 
 ## Authentication
 
