@@ -730,7 +730,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Numba](http://numba.pydata.org/) - Python JIT compiler to LLVM aimed at scientific Python.
 * [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python.
 * [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
-* [PyPy](https://bitbucket.org/pypy/pypy) - A very fast and compliant implementation of the Python language.
+* [PyPy](https://foss.heptapod.net/pypy/pypy) - A very fast and compliant implementation of the Python language.
 * [Pyston](https://github.com/dropbox/pyston) - A Python implementation using JIT techniques.
 * [Stackless Python](https://github.com/stackless-dev/stackless) - An enhanced version of the Python programming language.
 
