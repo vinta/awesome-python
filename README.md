@@ -1082,6 +1082,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
     * [Selenium](https://pypi.org/project/selenium/) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
+    * [django-google-optimize](https://github.com/adinhodovic/django-google-optimize) - A/B testing in Django using Google Optimize.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
 * Mock
     * [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
