@@ -1,0 +1,23 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: 
+    - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout master
+      uses: actions/checkout@v2
+      
+    - name: Copy README.md to Docs
+      run: cp README.md docs/index.md
+    
+    - name: Deploy docs
+      uses: mhausenblas/mkdocs-deploy-gh-pages@1.11
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
