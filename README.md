@@ -510,6 +510,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [s4cmd](https://github.com/bloomreach/s4cmd) - Super S3 command line tool, good for higher performance.
 * [you-get](https://you-get.org/) - A YouTube/Youku/Niconico video downloader written in Python 3.
 * [youtube-dl](https://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [udemy-dl](https://github.com/r0oth3x49/udemy-dl) - A cross-platform python based utility to download courses from udemy for personal offline use.
 
 ## E-commerce
 
