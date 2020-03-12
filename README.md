@@ -865,6 +865,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for package and dependency management.*
 
+* [micropipenv](https://github.com/thoth-station/micropipenv) - A minimalistic tool for installing dependencies, primarily designed for containerized applications.
 * [pip](https://pip.pypa.io/en/stable/) - The package installer for Python.
     * [PyPI](https://pypi.org/)
     * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
