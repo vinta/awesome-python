@@ -319,6 +319,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](https://profig.readthedocs.io/en/default/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [dynamic-conf](github.com/jnoortheen/dynamic-conf) - Declarative way to manage configuration variables separated from source. 
 
 ## Cryptography
 
