@@ -916,7 +916,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
  * [Rope](https://github.com/python-rope/rope) -  Rope is a python refactoring library.
  * [Sourcery](https://sourcery.ai) - Automatically refactor your Python - for GitHub and your code editor.
 
-
 ## RESTful API
 
 *Libraries for building RESTful APIs.*
