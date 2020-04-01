@@ -241,6 +241,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
+    * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
@@ -253,7 +254,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
-    * [clint](https://github.com/kennethreitz/clint) - Python Command-line Application Tools.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A library for building powerful interactive command lines.
@@ -409,7 +409,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyTime](https://github.com/shinux/PyTime) - An easy-to-use Python module which aims to operate date/time/datetime by string.
 * [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 * [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
-* [maya](https://github.com/kennethreitz/maya) - Datetimes for Humans.
+* [maya](https://github.com/timofurrer/maya) - Datetimes for Humans.
 
 ## Debugging Tools
 
@@ -549,15 +549,15 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for sending and parsing email.*
 
-* [envelopes](http://tomekwojcik.github.io/envelopes/) - Mailing for human beings.
-* [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
-* [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
-* [inbox.py](https://github.com/kennethreitz/inbox.py) - Python SMTP Server for Humans.
-* [lamson](https://github.com/zedshaw/lamson) - Pythonic SMTP Application Server.
-* [Marrow Mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
-* [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern and simplified Web UI.
-* [Nylas Sync Engine](https://github.com/nylas/sync-engine) - Providing a RESTful API on top of a powerful email sync platform.
-* [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* Mail Servers
+    * [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
+    * [salmon](https://github.com/moggers87/salmon) - A Python Mail Server.
+* Clients
+    * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
+    * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+* Others
+    * [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
+    * [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 
 ## Environment Management
 
@@ -680,9 +680,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with HTTP.*
 
-* [grequests](https://github.com/kennethreitz/grequests) - requests + gevent for asynchronous HTTP requests.
+* [grequests](https://github.com/spyoungtech/grequests) - requests + gevent for asynchronous HTTP requests.
 * [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
-* [requests](https://requests.kennethreitz.org/en/master/) - HTTP Requests for Humans.
+* [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 
@@ -916,6 +916,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
  * [Rope](https://github.com/python-rope/rope) -  Rope is a python refactoring library.
  * [Sourcery](https://sourcery.ai) - Automatically refactor your Python - for GitHub and your code editor.
 
+
 ## RESTful API
 
 *Libraries for building RESTful APIs.*
@@ -1007,7 +1008,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for parsing and manipulating specific text formats.*
 
 * General
-    * [tablib](https://github.com/kennethreitz/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+    * [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 * Office
     * [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
     * [pyexcel](https://github.com/pyexcel/pyexcel) - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
@@ -1184,7 +1185,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
-* [requests-html](https://github.com/kennethreitz/requests-html) - Pythonic HTML Parsing for Humans.
+* [requests-html](https://github.com/psf/requests-html) - Pythonic HTML Parsing for Humans.
 * [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 * [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 * [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
