@@ -1280,6 +1280,7 @@ Where to discover new Python libraries.
 * [Real Python](https://realpython.com)
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 * [Сообщество Python Программистов](https://python-scripts.com/)
+* [Pythonic News](https://news.python.sc/)
 
 ## Weekly
 
