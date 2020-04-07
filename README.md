@@ -1250,6 +1250,7 @@ Where to discover new Python libraries.
 * [Radio Free Python](http://radiofreepython.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Test and Code](https://testandcode.com/)
+* [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
 
 ## Twitter
 
