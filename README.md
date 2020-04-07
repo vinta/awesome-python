@@ -284,8 +284,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [kube-shell](https://github.com/cloudnativelabs/kube-shell) - An integrated shell for working with the Kubernetes CLI.
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
-    * [litecli](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
-    * [iredis](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
+    * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
+    * [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
     * [saws](https://github.com/donnemartin/saws) - A Supercharged [aws-cli](https://github.com/aws/aws-cli).
 
 ## Compatibility
