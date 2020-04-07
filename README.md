@@ -41,6 +41,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
     - [Environment Management](#environment-management)
+    - [Event Management](#event-management)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
@@ -567,6 +568,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
+
+## Event Management
+
+*Tools and libraries for managing events.*
+
+* [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 
 ## Files
 
