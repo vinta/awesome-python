@@ -41,7 +41,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
     - [Environment Management](#environment-management)
-    - [Event Management](#event-management)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
@@ -200,6 +199,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [wagtail](https://wagtail.io/) - A Django content management system.
 * [django-cms](https://www.django-cms.org/en/) - An Open source enterprise CMS based on the Django.
 * [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
+* [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 * [Kotti](https://github.com/Kotti/Kotti) - A high-level, Pythonic web application framework built on Pyramid.
 * [mezzanine](https://github.com/stephenmcd/mezzanine) - A powerful, consistent, and flexible content management platform.
 * [plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
@@ -575,12 +575,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
-
-## Event Management
-
-*Tools and libraries for managing events.*
-
-* [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 
 ## Files
 
