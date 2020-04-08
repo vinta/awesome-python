@@ -964,6 +964,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *RPC-compatible servers.*
 
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+* [RPyC](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python 
 
 ## Science
 
