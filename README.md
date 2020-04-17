@@ -395,7 +395,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [psycopg2](http://initd.org/psycopg/) - The most popular PostgreSQL adapter for Python.
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
 * Other Relational Databases
-    * [pymssql](http://www.pymssql.org/en/latest/) - A simple database interface to Microsoft SQL Server.
+    * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
     * [SuperSQLite](https://github.com/plasticityai/supersqlite) - A supercharged SQLite library built on top of [apsw](https://github.com/rogerbinns/apsw).
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
