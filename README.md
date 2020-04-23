@@ -721,6 +721,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for manipulating images.*
 
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
+* [imgix-python](https://docs.imgix.com/libraries/imgix-python) - Easily update image urls to be fast and responsive.
 * [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [pagan](https://github.com/daboth/pagan) - Retro identicon (Avatar) generation based on input string and hash.
