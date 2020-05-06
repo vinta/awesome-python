@@ -576,7 +576,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Environment Management
 
-*Libraries for Python version and virtual environment management.*
+*Libraries for Python version and virtual environment management. Also see [awesome-python-environment](https://github.com/ryo-ma/awesome-python-environment)*
 
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
