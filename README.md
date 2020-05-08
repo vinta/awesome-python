@@ -1183,6 +1183,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 
+## Virtual Machine
+
+*Libraries for emulating ISAs.*
+
+* [pywasm](https://github.com/mohanson/pywasm) - A WebAssembly interpreter written in pure Python.
+
 ## Web Asset Management
 
 *Tools for managing, compressing and minifying website assets.*
