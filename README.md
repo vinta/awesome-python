@@ -576,7 +576,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [boost.python](https://www.boost.org/doc/libs/1_70_0/libs/python/doc/html/index.html) - use C++ template to simplify wrapping C++ library into Python module
 * [pybind11](https://github.com/pybind/pybind11) - inspired by boost.python but use C++11 feature to simplify the wrapping process
 * [cppyy](https://cppyy.readthedocs.io/en/latest/) - automaticallyand interactively interface C++ code in python
-* [python-wrap] - demonstrate and compare different python to C and C++ wrapping mothods
+* [python-wrap](https://github.com/qingfengxia/python_wrap) - demonstrate and compare different python to C and C++ wrapping mothods
 
 ## Forms
 
