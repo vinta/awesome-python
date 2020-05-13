@@ -490,7 +490,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
     * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
-    * [law](https://github.com/riga/law) - Large-scale luigi task workflows on interchangeable resources with abstracted run locations, storage locations and software environments.
+    * [law](https://github.com/riga/law) - Large-scale luigi workflows on distributed resources with remote storage and container support.
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
