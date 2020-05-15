@@ -1228,6 +1228,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Synchronous
     * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
+        * [awesome-django](https://github.com/wsvincent/awesome-django)
         * [awesome-django](https://github.com/shahraizali/awesome-django)
     * [Flask](http://flask.pocoo.org/) - A microframework for Python.
         * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
