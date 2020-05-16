@@ -367,8 +367,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
-    * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
+* [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
+* [Folium](https://github.com/python-visualization/folium) - Interactive map visualization library for python
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
