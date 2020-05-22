@@ -919,6 +919,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 * [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
 * [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
+* [lkpy](https://github.com/lenskit/lkpy) - Python recommendation toolkit - [https://lkpy.readthedocs.io/en/stable/](https://lkpy.readthedocs.io/en/stable/) .
 * [libffm](https://github.com/guestwalk/libffm) - A library for Field-aware Factorization Machine (FFM).
 * [lightfm](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 * [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
