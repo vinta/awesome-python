@@ -1298,6 +1298,7 @@ Where to discover new Python libraries.
 * [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
 * [Сообщество Python Программистов](https://python-scripts.com/)
 * [Pythonic News](https://news.python.sc/)
+* [Miguel Grinberg Blog](https://blog.miguelgrinberg.com/)
 
 ## Weekly
 
