@@ -133,7 +133,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *ASGI-compatible web servers.*
 
-* [uvicorn](https://github.com/encode/uvicorn) - Uvicorn is a lightning-fast ASGI server implementation, using uvloop and httptools.
+* [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+* [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
 
 ## Asynchronous Programming
 
