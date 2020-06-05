@@ -131,7 +131,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## ASGI Servers
 
-*ASGI-compatible web servers.*
+*[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers.*
 
 * [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
 * [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
