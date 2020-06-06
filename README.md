@@ -97,7 +97,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Websites](#websites)
     - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
-    - [Twitter](#twitter)
 - [Contributing](#contributing)
 
 ---
@@ -1296,17 +1295,6 @@ Where to discover learning resources or new Python libraries.
 * [Talk Python To Me](https://talkpython.fm/)
 * [Test and Code](https://testandcode.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
-
-## Twitter
-
-* [@codetengu](https://twitter.com/codetengu)
-* [@getpy](https://twitter.com/getpy)
-* [@importpython](https://twitter.com/importpython)
-* [@pycoders](https://twitter.com/pycoders)
-* [@pythontrending](https://twitter.com/pythontrending)
-* [@PythonWeekly](https://twitter.com/PythonWeekly)
-* [@TalkPython](https://twitter.com/talkpython)
-* [@realpython](https://twitter.com/realpython)
 
 # Contributing
 
