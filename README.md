@@ -1291,7 +1291,7 @@ Where to discover learning resources or new Python libraries.
 
 ## Podcasts
 
-* [Podcast.__init__](https://podcastinit.com/)
+* [Podcast.\_\_init__](https://podcastinit.com/)
 * [Python Bytes](https://pythonbytes.fm)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Test and Code](https://testandcode.com/)
