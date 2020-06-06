@@ -333,6 +333,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [profig](https://profig.readthedocs.io/en/latest/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 
 ## Cryptography
 
