@@ -1290,8 +1290,10 @@ Where to discover learning resources or new Python libraries.
 
 ## Podcasts
 
+* [Django Chat](https://djangochat.com/)
 * [Podcast.\_\_init__](https://podcastinit.com/)
 * [Python Bytes](https://pythonbytes.fm)
+* [Running in Production](https://runninginproduction.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Test and Code](https://testandcode.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
