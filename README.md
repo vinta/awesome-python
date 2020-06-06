@@ -93,10 +93,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
+    - [Books](#books)
+    - [Websites](#websites)
+    - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
     - [Twitter](#twitter)
-    - [Websites](#websites)
-    - [Weekly](#weekly)
 - [Contributing](#contributing)
 
 ---
@@ -1262,15 +1263,36 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 # Resources
 
-Where to discover new Python libraries.
+Where to discover learning resources or new Python libraries.
+
+## Books
+
+- [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
+
+## Websites
+
+* Tutorials
+    * [Full Stack Python](https://www.fullstackpython.com/)
+    * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
+    * [Real Python](https://realpython.com)
+    * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
+* Libraries
+    * [Awesome Python @LibHunt](https://python.libhunt.com/)
+* Others
+    * [Python ZEEF](https://python.zeef.com/alan.richmond)
+    * [Pythonic News](https://news.python.sc/)
+
+## Newsletters
+
+* [Awesome Python Newsletter](http://python.libhunt.com/newsletter)
+* [Pycoder's Weekly](http://pycoders.com/)
+* [Python Weekly](http://www.pythonweekly.com/)
+* [Python Tricks](https://realpython.com/python-tricks/)
 
 ## Podcasts
 
-* [From Python Import Podcast](http://frompythonimportpodcast.com/)
-* [Podcast.init](https://podcastinit.com/)
+* [Podcast.__init__](https://podcastinit.com/)
 * [Python Bytes](https://pythonbytes.fm)
-* [Python Testing](http://pythontesting.net)
-* [Radio Free Python](http://radiofreepython.com/)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Test and Code](https://testandcode.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
@@ -1280,36 +1302,11 @@ Where to discover new Python libraries.
 * [@codetengu](https://twitter.com/codetengu)
 * [@getpy](https://twitter.com/getpy)
 * [@importpython](https://twitter.com/importpython)
-* [@planetpython](https://twitter.com/planetpython)
 * [@pycoders](https://twitter.com/pycoders)
-* [@pypi](https://twitter.com/pypi)
 * [@pythontrending](https://twitter.com/pythontrending)
 * [@PythonWeekly](https://twitter.com/PythonWeekly)
 * [@TalkPython](https://twitter.com/talkpython)
 * [@realpython](https://twitter.com/realpython)
-
-## Websites
-
-* [/r/CoolGithubProjects](https://www.reddit.com/r/coolgithubprojects/)
-* [/r/Python](https://www.reddit.com/r/python)
-* [Awesome Python @LibHunt](https://python.libhunt.com/)
-* [Django Packages](https://djangopackages.org/)
-* [Full Stack Python](https://www.fullstackpython.com/)
-* [Python Cheatsheet](https://www.pythoncheatsheet.org/)
-* [Python ZEEF](https://python.zeef.com/alan.richmond)
-* [Python 开发社区](https://www.ctolib.com/python/)
-* [Real Python](https://realpython.com)
-* [Trending Python repositories on GitHub today](https://github.com/trending?l=python)
-* [Сообщество Python Программистов](https://python-scripts.com/)
-* [Pythonic News](https://news.python.sc/)
-
-## Weekly
-
-* [CodeTengu Weekly 碼天狗週刊](https://weekly.codetengu.com/)
-* [Import Python Newsletter](http://importpython.com/newsletter/)
-* [Pycoder's Weekly](http://pycoders.com/)
-* [Python Weekly](http://www.pythonweekly.com/)
-* [Python Tricks](https://realpython.com/python-tricks/)
 
 # Contributing
 
