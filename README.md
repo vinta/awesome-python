@@ -473,18 +473,24 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Software and libraries for DevOps.*
 
-* [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
-* [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
-* [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
-* [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
-* [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
-* [fabtools](https://github.com/fabtools/fabtools) - Tools for writing awesome Fabric files.
-* [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
-* [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
-* [pexpect](https://github.com/pexpect/pexpect) - Controlling interactive programs in a pseudo-terminal like GNU expect.
-* [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
-* [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
-* [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+* Configuration Management
+    * [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
+    * [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
+    * [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
+    * [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
+* SSH-style Deployment
+    * [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
+    * [fabtools](https://github.com/fabtools/fabtools) - Tools for writing awesome Fabric files.
+    * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
+* Process Management
+    * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+    * [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
+* Monitoring
+    * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
+* Backup
+    * [BorgBackup](https://www.borgbackup.org/) - A deduplicating archiver with compression and encryption.
+* Others
+    * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 
 ## Distributed Computing
 
