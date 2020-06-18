@@ -1107,6 +1107,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
+    * [nox](https://nox.thea.codes/en/stable/) - Command-line tool that automates testing in multiple environments using Python configuration files.
     * [tox](https://tox.readthedocs.io/en/latest/) - Auto builds and tests distributions in multiple Python versions
 * GUI / Web Testing
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
