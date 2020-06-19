@@ -444,6 +444,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
 * Profiler
+    * [Fil](https://github.com/pythonspeed/filprofiler/) - A memory profiler aimed at data processing applications, e.g. those written by scientists and data scientists.
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
     * [profiling](https://github.com/what-studio/profiling) - An interactive Python profiler.
