@@ -835,6 +835,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [key-generator](https://github.com/Sahith02/key-generator) - A simple, yet highly customizable python package to generate professional keys.
 
 ## Natural Language Processing
 
