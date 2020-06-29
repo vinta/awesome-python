@@ -478,6 +478,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
     * [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
     * [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
+    * [pyinfra](https://github.com/Fizzadar/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
 * SSH-style Deployment
     * [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
     * [fabtools](https://github.com/fabtools/fabtools) - Tools for writing awesome Fabric files.
