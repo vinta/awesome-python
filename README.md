@@ -1016,6 +1016,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [elasticsearch-py](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 * [elasticsearch-dsl-py](https://github.com/elastic/elasticsearch-dsl-py) - The official high-level Python client for Elasticsearch.
 * [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
+* [meilisearch-python](https://github.com/meilisearch/meilisearch-python) - Official wrapper for the open-source search engine [MeiliSearch](https://www.meilisearch.com/)
 * [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
 * [whoosh](http://whoosh.readthedocs.io/en/latest/) - A fast, pure Python search engine library.
 
