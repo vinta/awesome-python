@@ -835,6 +835,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
+* [tg](https://github.com/paul-nameless/tg) - Telegram terminal client.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
 
 ## Natural Language Processing
