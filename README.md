@@ -141,6 +141,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
     - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
+* [trio](https://github.com/python-trio/trio) - A friendly library for async concurrency and I/O.
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine.
 
 ## Audio
