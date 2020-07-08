@@ -1239,6 +1239,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
 * [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)- A Python library for pulling data out of HTML and XML files,works with your favorite parser to provide idiomatic ways of navigating, searching, and modifying the parse tree.
+* [Selenium](https://selenium-python.readthedocs.io/)- A browser automation tool, which can be used for many purposes including testing and webscraping. It can be used on its own, or in combination with another scraping library.
 * [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
 
 ## Web Frameworks
