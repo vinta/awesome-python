@@ -804,11 +804,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for generating and working with logs.*
 
-* [Eliot](https://github.com/ScatterHQ/eliot) - Logging for complex & distributed systems.
-* [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
-* [raven](https://github.com/getsentry/raven-python) - Python client for Sentry, a log/error tracking, crash reporting and aggregation platform for web applications.
+* [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
+* [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
 
 ## Machine Learning
 
