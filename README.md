@@ -1113,6 +1113,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
+    * [pycrunch](https://github.com/gleb-sevruk/pycrunch-engine) - Continuous test runner plugin for PyCharm, runs impacted tests on code change. Shows coverage for each test individually.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [tox](https://tox.readthedocs.io/en/latest/) - Auto builds and tests distributions in multiple Python versions
 * GUI / Web Testing
