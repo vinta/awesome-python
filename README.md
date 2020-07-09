@@ -456,6 +456,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 * Others
     * [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
+    * [pytrace](https://github.com/gleb-sevruk/pycrunch-trace) - Time-Travel debugger, inspect variables, call graphs and execution path on recorded session.
     * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
     * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
     * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
