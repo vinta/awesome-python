@@ -376,6 +376,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook
+* [Cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
     * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
