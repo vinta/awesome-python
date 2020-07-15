@@ -810,6 +810,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python.
 * [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 * [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
+* [structlog](https://www.structlog.org/en/stable/) - Structured logging made easy.
 
 ## Machine Learning
 
