@@ -574,6 +574,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
 * Visual Studio Code
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
+    * [kite](https://www.kite.com/) - A machine learning powered autocomplete plugin and coding assistant (kite copilot) for faster development in Python and Javascript. 
 * IDE
     * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
     * [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
