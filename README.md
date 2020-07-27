@@ -748,6 +748,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [PyMatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
+* [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
