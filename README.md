@@ -281,6 +281,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Useful CLI-based tools for productivity.*
 
 * Productivity Tools
+    * [Ciphey](https://github.com/ciphey/ciphey) - Automated decryption tool using artificial intelligence & natural language processing.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
