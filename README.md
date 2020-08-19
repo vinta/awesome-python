@@ -244,12 +244,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Code Linters
     * [flake8](https://pypi.org/project/flake8/) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
-    * [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
     * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
     * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) - The strictest and most opinionated python linter ever.
 * Code Formatters
     * [black](https://github.com/python/black) - The uncompromising Python code formatter.
+    * [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
