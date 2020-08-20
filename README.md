@@ -391,7 +391,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Data Presentation
 
-*Libaries for presenting and sharing your analytics resutls
+*Libaries for presenting and sharing your analytics resutls.*
 
 * [Datapane](https://datapane.com/) - A collection of APIs to turn scripts and notebooks into interactive reports.
 
