@@ -393,7 +393,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libaries for presenting and sharing your analytics resutls
 
-*[Datapane](https://datapane.com/) - Turn scripts and notebooks into interactive reports.
+* [Datapane](https://datapane.com/) - A collection of APIs to turn scripts and notebooks into interactive reports.
 
 ## Database
 
