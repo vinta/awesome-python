@@ -928,6 +928,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks and tools for penetration testing.*
 
 * [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
+* [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 * [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 
 ## Permissions
