@@ -65,6 +65,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [ORM](#orm)
     - [Package Management](#package-management)
     - [Package Repositories](#package-repositories)
+    - [Penetration testing](#penetration-testing)
     - [Permissions](#permissions)
     - [Processes](#processes)
     - [Recommender Systems](#recommender-systems)
@@ -921,6 +922,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [devpi](https://github.com/devpi/devpi) - PyPI server and packaging/testing/release tool.
 * [localshop](https://github.com/jazzband/localshop) - Local PyPI server (custom packages and auto-mirroring of pypi).
 * [warehouse](https://github.com/pypa/warehouse) - Next generation Python Package Repository (PyPI).
+
+## Penetration Testing
+
+*Frameworks and tools for penetration testing.*
+
+* [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
 
 ## Permissions
 
