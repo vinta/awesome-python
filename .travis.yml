@@ -1,10 +1,18 @@
-language: ruby
+language: python
 
-rvm:
-  - 2.2
-
-before_script:
-  - gem install awesome_bot
+python:
+  - "3.6"
 
 script:
-  - awesome_bot README.md --allow-dupe --white-list pyparsing,graphviz.org
+  - python sort.py
+  - cp README.md docs/index.md
+  - mkdocs build
+
+deploy:
+  provider: pages
+  local-dir: site
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
