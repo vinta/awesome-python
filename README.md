@@ -1024,7 +1024,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
-* [SimPy](https://bitbucket.org/simpy/simpy) -  A process-based discrete-event simulation framework.
+* [SimPy](https://gitlab.com/team-simpy/simpy) -  A process-based discrete-event simulation framework.
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
