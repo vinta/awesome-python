@@ -314,6 +314,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Computer Vision.*
 
 * [EasyOCR](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
+* [Face Recognition](https://github.com/ageitgey/face_recognition) - Simple facial recognition library.
 * [Kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
 * [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
