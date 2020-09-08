@@ -118,7 +118,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Algorithms and Design Patterns
 
-*Python implementation of data structures, algorithms and design patterns.*
+*Python implementation of data structures, algorithms and design patterns. Also see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms).*
 
 * Algorithms
     * [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
