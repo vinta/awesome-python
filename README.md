@@ -343,6 +343,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 * [profig](https://profig.readthedocs.io/en/latest/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [confight](https://github.com/avature/confight) - One simple way of parsing configs.
 
 ## Cryptography
 
