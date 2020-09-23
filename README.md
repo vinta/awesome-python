@@ -502,6 +502,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [BorgBackup](https://www.borgbackup.org/) - A deduplicating archiver with compression and encryption.
 * Others
     * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
+    * [DBMQ](https://github.com/lnxpy/dbmq/) - Docker-based message queuing using Django as the web server.
 
 ## Distributed Computing
 
