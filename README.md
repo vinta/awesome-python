@@ -118,7 +118,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Algorithms and Design Patterns
 
-*Python implementation of data structures, algorithms and design patterns.*
+*Python implementation of data structures, algorithms and design patterns. Also see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms).*
 
 * Algorithms
     * [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
@@ -283,6 +283,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Useful CLI-based tools for productivity.*
 
 * Productivity Tools
+    * [copier](https://github.com/pykong/copier) - A library and command-line utility for rendering projects templates.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
@@ -291,8 +292,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
-    * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
-    * [libreselery](https://github.com/protontypes/libreselery) - Funding distribution to your project contributors and dependencies.
+    * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier
+    * [libreselery](https://github.com/protontypes/libreselery) - Distribution of Funding to your project contributors and dependencies.
 * CLI Enhancements
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
@@ -805,6 +806,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
 * [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
+* [Prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [TaskFlow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
@@ -1313,6 +1315,7 @@ Where to discover learning resources or new Python libraries.
     * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
     * [Real Python](https://realpython.com)
     * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
+    * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
 * Libraries
     * [Awesome Python @LibHunt](https://python.libhunt.com/)
 * Others
