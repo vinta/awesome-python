@@ -77,6 +77,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Search](#search)
     - [Serialization](#serialization)
     - [Serverless Frameworks](#serverless-frameworks)
+    - [Shell](#shell)
     - [Specific Formats Processing](#specific-formats-processing)
     - [Static Site Generator](#static-site-generator)
     - [Tagging](#tagging)
@@ -1061,6 +1062,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
 * [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
+
+## Shell
+
+*Shells based on Python.*
+
+* [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered, cross-platform, Unix-gazing shell language and command prompt.
 
 ## Specific Formats Processing
 
