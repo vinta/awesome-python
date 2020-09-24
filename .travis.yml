@@ -4,6 +4,7 @@ python:
   - "3.6"
 
 script:
+  - python sort.py
   - cp README.md docs/index.md
   - mkdocs build
 
