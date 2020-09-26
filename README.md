@@ -257,9 +257,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 * Static Type Annotations Generators
-    * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
-    * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for your Python code - without requiring type annotations
-    * [pyannotate](https://github.com/dropbox/pyannotate) - Insert annotations into your source code based on call arguments and return types observed at runtime
+    * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
+    * [pyannotate](https://github.com/dropbox/pyannotate) - Auto-generate PEP-484 annotations.
+    * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
 ## Command-line Interface Development
 
@@ -295,7 +295,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
-
 * CLI Enhancements
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
