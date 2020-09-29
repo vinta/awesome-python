@@ -1,8 +1,8 @@
-# Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+# CHANGE-LOG
 
-A curated list of awesome Python frameworks, libraries, software and resources.
+# v0.1.0 - June 20, 2020
 
-Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
+Initial Release
 
 - [Awesome Python](#awesome-python)
     - [Admin Panels](#admin-panels)
@@ -98,9 +98,20 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
     - [Websites](#websites)
-- [Contributing](#contributing)
+- [Contributing](#contributing) 
 
----
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# v1.1.0 - June 30, 2020
+
+------------------------------------------------------------Bug Fixes ----------------------------------------------------------------------
 
 ## Admin Panels
 
@@ -190,6 +201,23 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PlatformIO](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 * [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+#v2.1.0 - July 30, 2020
+
+------------------------------------------------------------Bug Fixes ----------------------------------------------------------------------
+
 
 ## Built-in Classes Enhancement
 
@@ -648,6 +676,24 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [more-itertools](https://github.com/erikrose/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 * [returns](https://github.com/dry-python/returns) - A set of type-safe monads, tranformers, and composition utilities.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+# v3.1.0 - Aug. 30, 2020
+
+------------------------------------------------------------Bug Fixes ----------------------------------------------------------------------
 
 ## GUI Development
 
@@ -1169,6 +1215,23 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
     * [radar](https://pypi.org/project/radar/) - Generate random datetime / time.
 
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+# v4.1.0 - Sep. 30, 2020
+
+------------------------------------------------------------Bug Fixes ----------------------------------------------------------------------
+
 ## Text Processing
 
 *Libraries for parsing and manipulating plain texts.*
@@ -1302,53 +1365,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
 * [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
-# Resources
+(-----Newly Added-----)
+## CHANGE-LOG
 
-Where to discover learning resources or new Python libraries.
 
-## Books
 
-- [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
 
-## Websites
 
-* Tutorials
-    * [Full Stack Python](https://www.fullstackpython.com/)
-    * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
-    * [Real Python](https://realpython.com)
-    * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
-    * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
-* Libraries
-    * [Awesome Python @LibHunt](https://python.libhunt.com/)
-* Others
-    * [Python ZEEF](https://python.zeef.com/alan.richmond)
-    * [Pythonic News](https://news.python.sc/)
 
-## Newsletters
-
-* [Awesome Python Newsletter](http://python.libhunt.com/newsletter)
-* [Pycoder's Weekly](http://pycoders.com/)
-* [Python Tricks](https://realpython.com/python-tricks/)
-* [Python Weekly](http://www.pythonweekly.com/)
-
-## Podcasts
-
-* [Django Chat](https://djangochat.com/)
-* [Podcast.\_\_init__](https://podcastinit.com/)
-* [Python Bytes](https://pythonbytes.fm)
-* [Running in Production](https://runninginproduction.com/)
-* [Talk Python To Me](https://talkpython.fm/)
-* [Test and Code](https://testandcode.com/)
-* [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
-
-# Contributing
-
-Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
-
-I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by adding :+1: to them. Pull requests will be merged when their votes reach **20**.
-
-- - -
-
-If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
