@@ -8,7 +8,7 @@ theme:
   name: material
   palette:
     primary: red
-    accent: pink
+    accent: black
 extra:
   social:
     - type: github
