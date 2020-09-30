@@ -78,6 +78,6 @@ def main():
     # Then we call the sorting method
     sort_blocks()
 
-
+# calling main function
 if __name__ == "__main__":
     main()
