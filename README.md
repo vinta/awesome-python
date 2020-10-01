@@ -99,6 +99,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Podcasts](#podcasts)
     - [Websites](#websites)
 - [Contributing](#contributing)
+-http://rgruet.free.fr/#QuickRef (# my mini Python tutorial)
 
 ---
 
