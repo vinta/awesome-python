@@ -392,6 +392,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+* [Plotly](https://plotly.com/python/) - Plotly’s Python graphing library makes it easy to create interactive, publication-quality graphs.
+* [Folium](https://python-visualization.github.io/folium/) - Folium makes it easy to visualize data on an interactive leaflet map. The library has a number of built-in tilesets from OpenStreetMap, Mapbox, and Stamen.
 
 ## Database
 
