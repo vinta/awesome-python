@@ -472,6 +472,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SerpentAI](https://github.com/SerpentAI/SerpentAI) - Game agent framework. Use any video game as a deep learning sandbox.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
+* [Chainer](https://github.com/chainer/chainer) - Chainer is an open-source Deep Learning framework written in Python on top of NumPy and CuPy libraries.
 
 ## DevOps Tools
 
