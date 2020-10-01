@@ -836,6 +836,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+* [PyTorch](https://github.com/pytorch/pytorch) - PyTorch is an open source machine learning library used for developing and training neural network based deep learning models. It is primarily developed by Facebook's AI research group.
+* [Pandas](https://pandas.pydata.org/docs/) - Pandas is the most popular python library that is used for Machine Learning and data analysis. It provides highly optimized performance with back-end source code is purely written in C or Python.
+* [Keras](https://keras.io/) - Keras is a powerful and easy-to-use free open source Python library for developing and evaluating deep learning models. It wraps the efficient numerical computation libraries Theano and TensorFlow and allows you to define and train neural network models in just a few lines of code.
 
 ## Microsoft Windows
 
