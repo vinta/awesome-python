@@ -1315,6 +1315,7 @@ Where to discover learning resources or new Python libraries.
 * Tutorials
     * [Full Stack Python](https://www.fullstackpython.com/)
     * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
+	* [Python3 Cheatsheet](https://github.com/kosmokato/python-4-infosec/blob/master/docs/SANS_-_Python3-Cheat-Sheet.pdf)
     * [Real Python](https://realpython.com)
     * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
     * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
