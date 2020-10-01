@@ -5,8 +5,8 @@
     The approach taken is explained below. I decided to do it simply.
     Initially I was considering parsing the data into some sort of
     structure and then generating an appropriate README. I am still
-    considering doing it - but for now this should work. The only issue
-    I see is that it only sorts the entries at the lowest level, and that
+    considering doing it but for now this should work. The only issue
+    I see is that it only sorts the entries at the lowest level and that
     the order of the top-level contents do not match the order of the actual
     entries.
 
