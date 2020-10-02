@@ -243,6 +243,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
     * [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analysing dead Python code.
 * Code Linters
+    * [fixit](https://pypi.org/project/fixit/) - A framework for creating lint rules and corresponding auto-fixes for source code.
     * [flake8](https://pypi.org/project/flake8/) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
