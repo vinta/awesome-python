@@ -730,6 +730,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
+* [ProxyRequests](https://github.com/rootVIII/proxy_requests) - Make HTTP requests with Proxies.
 
 ## Hardware
 
