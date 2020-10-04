@@ -1,0 +1,23 @@
+yr=int(input('enter year'))
+if yr%100==0: #century year
+       if yr%400==0:
+           print ('{} is leap year'.format(yr))
+       else:
+          print ('{} is not leap year'.format(yr))
+else:
+       if yr%4==0:
+          print ('{} is leap year'.format(yr))
+else:
+         print ('{} is not leap year'.format(yr))
+Sample Output:
+
+enter year2012
+2012 is leap year
+
+enter year2018
+2018 is not leap year
+
+2000 is leap year
+
+enter year1900
+1900 is not leap year
