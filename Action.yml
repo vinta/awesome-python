@@ -1,0 +1,59 @@
+name: 'Automatic Changelog Generator'
+description: 'Creates or updates a changelog file in your repository with the help of the github-changelog-generator project'
+branding:
+  icon: book-open
+  color: green
+inputs:
+  user:
+    description: 'Username of the owner of target GitHub repo (default: extracted from $GITHUB_REPOSITORY)'
+    required: false
+  project:
+    description: 'Name of project on GitHub (default: extracted from $GITHUB_REPOSITORY)'
+    required: false
+  release_branch:
+    description: 'Limit pull requests to the release branch, such as master or release (required, default: master)'
+    required: false
+    default: 'master'
+  output:
+    description: 'Output file. To print to STDOUT instead, use blank as path. (required, default: CHANGELOG.md)'
+    required: false
+    default: 'CHANGELOG.md'
+  base:
+    description: 'Optional base file to append generated changes to (default: HISTORY.md)'
+    required: false
+  token:
+    description: 'To make more than 50 requests per hour your GitHub token is required. You can generate it at: https://github.com/settings/tokens/new<Paste>'
+    required: false
+  since_tag:
+    description: 'Changelog will start after specified tag.'
+    required: false
+  due_tag:
+    description: 'Changelog will end before specified tag.'
+    required: false
+  exclude_tags:
+    description: 'Changelog will exclude specified tags (comma seperated)'
+    required: false
+  exclude_labels:
+    description: 'Issues with the specified labels will be excluded from changelog. Default is "duplicate,question,invalid,wontfix".'
+    required: false
+  date_format:
+    description: 'Date format. Default is %Y-%m-%d'
+    required: false
+  future_release:
+    description: 'Put the unreleased changes in the specified release number.'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.user }}
+    - ${{ inputs.project }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.base }}
+    - ${{ inputs.output }}
+    - ${{ inputs.token }}
+    - ${{ inputs.since_tag }}
+    - ${{ inputs.due_tag }}
+    - ${{ inputs.exclude_tags }}
+    - ${{ inputs.date_format }}
+    - ${{ inputs.future_release }}
