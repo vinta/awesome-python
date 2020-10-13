@@ -1325,6 +1325,7 @@ Where to discover learning resources or new Python libraries.
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
     * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
+    * [http://pythontutor.com](http://pythontutor.com/visualize.html#mode=edit) Excellent, This is an amazing website who help to understand the execution of code with visualization. Best for all beginners. You should visit there.
 
 ## Newsletters
 
