@@ -309,7 +309,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for migrating from Python 2 to 3.*
 
 * [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
-* [python-modernize](https://github.com/mitsuhiko/python-modernize) - Modernizes Python code for eventual Python 3 migration.
+* [modernize](https://github.com/PyCQA/modernize) - Modernizes Python code for eventual Python 3 migration.
 * [six](https://pypi.org/project/six/) - Python 2 and 3 compatibility utilities.
 
 ## Computer Vision
