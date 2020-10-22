@@ -257,7 +257,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 * Static Type Annotations Generators
-    * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types
+    * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
+    * [pyannotate](https://github.com/dropbox/pyannotate) - Auto-generate PEP-484 annotations.
+    * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
 ## Command-line Interface Development
 
@@ -294,6 +296,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier
     * [libreselery](https://github.com/protontypes/libreselery) - Distribution of Funding to your project contributors and dependencies.
+    * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
+    
 * CLI Enhancements
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement.
     * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
@@ -308,7 +312,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for migrating from Python 2 to 3.*
 
 * [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
-* [python-modernize](https://github.com/mitsuhiko/python-modernize) - Modernizes Python code for eventual Python 3 migration.
+* [modernize](https://github.com/PyCQA/modernize) - Modernizes Python code for eventual Python 3 migration.
 * [six](https://pypi.org/project/six/) - Python 2 and 3 compatibility utilities.
 
 ## Computer Vision
@@ -673,6 +677,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with GraphQL.*
 
+* [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
 * [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - An `aiohttp`-based wrapper for Tartiflette to expose GraphQL APIs over HTTP.
 * [tartiflette-asgi](https://github.com/tartiflette/tartiflette-asgi/) - ASGI support for the Tartiflette GraphQL engine.
 * [tartiflette](https://tartiflette.io) - SDL-first GraphQL engine implementation for Python 3.6+ and asyncio.
@@ -825,6 +830,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
@@ -1111,7 +1117,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with task queues.*
 
-* [celery](http://www.celeryproject.org/) - An asynchronous task queue/job queue based on distributed message passing.
+* [celery](https://docs.celeryproject.org/en/stable/) - An asynchronous task queue/job queue based on distributed message passing.
 * [daramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
 * [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 * [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
@@ -1321,6 +1327,7 @@ Where to discover learning resources or new Python libraries.
 * Others
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
+    * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
 
 ## Newsletters
 
