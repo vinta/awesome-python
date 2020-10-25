@@ -20,7 +20,7 @@ def sort_blocks():
         read_me = read_me_file.read()
 
     # Separating the 'table of contents' from the contents (blocks)
-    table_of_contents = ''.join(read_me.split('- - -')[0])
+    table_of_the_contents = ''.join(read_me.split('- - -')[0])
     blocks = ''.join(read_me.split('- - -')[1]).split('\n# ')
     for i in range(len(blocks)):
         if i == 0:
@@ -37,7 +37,7 @@ def sort_blocks():
 
     # Replacing the non-sorted libraries by the sorted ones and gathering all at the final_README file
     blocks[0] = inner_blocks
-    final_README = table_of_contents + '- - -' + ''.join(blocks)
+    final_README = table_of_the_contents + '- - -' + ''.join(blocks)
 
     with open('README.md', 'w+') as sorted_file:
         sorted_file.write(final_README)
