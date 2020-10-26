@@ -703,6 +703,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 * [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
+* [heregeocoder](https://github.com/kaypee90/here_geocoder_wrapper) - A python client library for the HERE GEOCODER API
 
 ## HTML Manipulation
 
