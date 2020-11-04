@@ -647,7 +647,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [more-itertools](https://github.com/erikrose/more-itertools) - More routines for operating on iterables, beyond `itertools`.
-* [returns](https://github.com/dry-python/returns) - A set of type-safe monads, tranformers, and composition utilities.
+* [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
 
 ## GUI Development
