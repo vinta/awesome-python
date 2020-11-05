@@ -1317,6 +1317,7 @@ Where to discover learning resources or new Python libraries.
 ## Books
 
 - [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
+- [High Performance Python for Data Analytics](https://www.manning.com/books/high-performance-python-for-data-analytics/)
 
 ## Websites
 
