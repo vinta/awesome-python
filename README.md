@@ -1199,6 +1199,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Unique identifiers
     * [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
     * [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
+    * [sargon](https://github.com/santiagobasulto/sargon) - Extensible library to generate random Heroku/Youtube like codes.
 * Parser
     * [ply](https://github.com/dabeaz/ply) - Implementation of lex and yacc parsing tools for Python.
     * [pygments](http://pygments.org/) - A generic syntax highlighter.
