@@ -614,6 +614,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 * [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) An cross-platform, object-oriented path library.
 * [PyFilesystem2](https://github.com/pyfilesystem/pyfilesystem2) - Python's filesystem abstraction layer.
+* [python-fsutil](https://github.com/fabiocaccamo/python-fsutil) - file-system utilities for lazy devs.
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
