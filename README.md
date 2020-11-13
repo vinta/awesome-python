@@ -599,6 +599,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
     * [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 
+## Enterprise Application Integrations
+
+*Platforms and tools for systems integrations in enterprise environments*
+
+* [Zato](https://zato.io) - ESB, SOA, REST, APIs and Cloud Integrations in Python.
+
 ## Environment Management
 
 *Libraries for Python version and virtual environment management.*
