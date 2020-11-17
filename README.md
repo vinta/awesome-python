@@ -40,6 +40,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [E-commerce](#e-commerce)
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
+    - [Enterprise Application Integrations](#enterprise-application-integrations)
     - [Environment Management](#environment-management)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
