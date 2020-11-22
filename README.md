@@ -763,7 +763,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
-* [Neuraxle](https://github.com/Neuraxio/Neuraxle) - Scale scikit-learn with hyperparameter spaces, checkpoints and AutoML.
+* [Neuraxle](https://github.com/Neuraxio/Neuraxle) - A Sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects.
 
 ## Microsoft Windows
 
