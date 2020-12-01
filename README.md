@@ -1250,7 +1250,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
         * [awesome-django](https://github.com/shahraizali/awesome-django)
     * [Flask](http://flask.pocoo.org/) - A microframework for Python.
         * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
-    * [Frappe](https://frappe.io/frappe) - A batteries included, full stack, metadata driven web framework with a rich UI for building fast and scalable apps.
+    * [Frappe Framework](https://frappeframework.com) - A batteries included, full stack, metadata driven web framework with a rich UI for building fast and scalable apps.
     * [Pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
