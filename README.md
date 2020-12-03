@@ -22,7 +22,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Compatibility](#compatibility)
     - [Computer Vision](#computer-vision)
     - [Concurrency and Parallelism](#concurrency-and-parallelism)
-    
     - [Configuration](#configuration)
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
