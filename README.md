@@ -22,6 +22,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Compatibility](#compatibility)
     - [Computer Vision](#computer-vision)
     - [Concurrency and Parallelism](#concurrency-and-parallelism)
+    
     - [Configuration](#configuration)
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
@@ -928,8 +929,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pip](https://pip.pypa.io/en/stable/) - The package installer for Python.
     * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
     * [PyPI](https://pypi.org/)
+* [pipenv](https://pipenv.pypa.io/en/latest/) - Python Dev Workflow for Humans.
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [pdm](https://pdm.fming.dev) - A modern Python package manager with PEP 582 support.
 
 ## Package Repositories
 
