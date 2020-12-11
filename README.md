@@ -154,6 +154,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Audio
     * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
+    * [jupylet](https://github.com/nir/jupylet) - Sound synthesis and live music coding in Jupyter notebooks.
     * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors
     * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis
     * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
