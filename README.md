@@ -1001,6 +1001,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [apistar](https://github.com/encode/apistar) - A smart Web API framework, designed for Python 3.
     * [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
     * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
+        * [awesome-fastapi](https://github.com/mjhea0/awesome-fastapi)
     * [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
     * [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
     * [sanic](https://github.com/huge-success/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
@@ -1367,4 +1368,3 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
-
