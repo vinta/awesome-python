@@ -930,6 +930,17 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [pipenv](https://pipenv.pypa.io/en/latest/) - Python Dev Workflow for Humans.
+
+<details><summary>Poetry vs. Pipenv</summary><p>
+
+Generally, Poetry can be considered as a great option for building out libraries, as it has a builtin integration for publishing to PyPI. With Pipenv, you will need additional tooling around packaging and publishing, however it is arguably the easiest to use and especially well suited for building final applications.
+
+</p></details>
+
+* [dephell](https://dephell.org/) - Versatile Python project manager that can convert between formats and many other little things.
+
+
 
 ## Package Repositories
 
