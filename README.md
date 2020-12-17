@@ -208,6 +208,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Content Management Systems.*
 
 * [django-cms](https://www.django-cms.org/en/) - An Open source enterprise CMS based on the Django.
+* [FaraPy](https://github.com/Faral-Ghaemi/FaraPy) - Powerfull smart CMS based on the Django.
 * [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
 * [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 * [Kotti](https://github.com/Kotti/Kotti) - A high-level, Pythonic web application framework built on Pyramid.
