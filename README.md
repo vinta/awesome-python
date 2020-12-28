@@ -215,6 +215,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
 * [quokka](https://github.com/rochacbruno/quokka) - Flexible, extensible, small CMS powered by Flask and MongoDB.
 * [wagtail](https://wagtail.io/) - A Django content management system.
+* [MediaCMS](https://mediacms.io/) - Modern, fully featured open source video and media CMS.
+
 
 ## Caching
 
