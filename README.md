@@ -880,7 +880,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyTorch-NLP](https://github.com/PetrochukM/PyTorch-NLP) - A toolkit enabling rapid deep learning NLP prototyping for research.
     * [spacy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
     * [Stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
-    * [Texthero](github.com/jbesomi/texthero) - Intuitive and well-documented library for text preprocessing, representation, and visualization.
+    * [Texthero](https://github.com/jbesomi/texthero) - Intuitive and well-documented library for text preprocessing, representation, and visualization.
 - Chinese
     * [funNLP](https://github.com/fighting41love/funNLP) - A collection of tools and datasets for Chinese NLP.
     * [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
