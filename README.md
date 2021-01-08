@@ -710,7 +710,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
-* [pygeoip](https://github.com/appliedsec/pygeoip) - Pure Python GeoIP API.
 
 ## HTML Manipulation
 
