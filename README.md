@@ -1039,6 +1039,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
+* [RADIS](http://radis.github.io/) - A library for molecular emission and absorption spectroscopy. 
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 * [SimPy](https://gitlab.com/team-simpy/simpy) -  A process-based discrete-event simulation framework.
