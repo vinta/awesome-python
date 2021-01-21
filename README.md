@@ -417,6 +417,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Other Relational Databases
     * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
     * [SuperSQLite](https://github.com/plasticityai/supersqlite) - A supercharged SQLite library built on top of [apsw](https://github.com/rogerbinns/apsw).
+    * [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     * [happybase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
