@@ -387,6 +387,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
     * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
+* [D-Tale](https://github.com/man-group/dtale) - Visualizer for Pandas Dataframes.
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
