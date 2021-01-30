@@ -395,7 +395,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
-* [PyG2Plot](https://github.com/hustcc/PyG2Plot) - Python3 binding for [@AntV/G2Plot](https://github.com/antvis/G2Plot) which an interactive and responsive charting library.
+* [PyG2Plot](https://github.com/hustcc/PyG2Plot) - Python3 binding for [@AntV/G2Plot](https://github.com/antvis/G2Plot) which is an interactive and responsive charting library.
 
 ## Database
 
