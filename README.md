@@ -350,6 +350,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Cryptography
 
 * [cryptography](https://cryptography.io/en/latest/) - A package designed to expose cryptographic primitives and recipes to Python developers.
+* [rsa](https://stuvel.eu/software/rsa/) - A package for asymmetric encryption using public and private keys.
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 * [passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
 * [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
