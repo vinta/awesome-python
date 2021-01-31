@@ -757,7 +757,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for manipulating images.*
 
-* [Caer](https://github.com/jasmcaus/caer) - High-performance Image Processing library in Python. Scale your research, not boilerplate.
+* [Caer](https://github.com/jasmcaus/caer) - High-performance Image Processing library in Python. Includes powerful image augmentation/transformations.
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 * [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
