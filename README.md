@@ -1215,6 +1215,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
     * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
     * [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
+    * [lark](https://github.com/lark-parser/lark) - Parsing toolkit implementing Earley and LALR(1).
 
 ## Third-party APIs
 
