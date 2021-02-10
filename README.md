@@ -364,6 +364,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [PyArrow](https://arrow.apache.org/docs/python/index.html) - Big Data library for reading/writing Parquet/CSV/JSON on HDFS/S3 with import/export to Pandas/NumPy.
 
 ## Data Validation
 
