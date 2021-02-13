@@ -584,6 +584,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
 * Visual Studio Code
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
+    * [Pylance](https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance) - A performant, feature-rich language server for Python in VSCode
 * IDE
     * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
     * [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
@@ -696,7 +697,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Arcade](https://arcade.academy/index.html) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
 * [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications.
 * [Harfang3D](http://www.harfang3d.com) - Python framework for 3D, VR and game development.
-* [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney.
+* [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney, that also support 2D by making "plane objects".
+* [Ursina Engine](https://ursinaengine.org/) - A 3D game development based on Panda3D but it's really easy to use.
 * [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
