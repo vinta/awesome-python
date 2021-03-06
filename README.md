@@ -684,6 +684,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with GraphQL.*
 
+* [ariadne](https://ariadnegraphql.org/) - A library for implementing GraphQL servers using schema-first approach.
 * [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
 * [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - An `aiohttp`-based wrapper for Tartiflette to expose GraphQL APIs over HTTP.
 * [tartiflette-asgi](https://github.com/tartiflette/tartiflette-asgi/) - ASGI support for the Tartiflette GraphQL engine.
