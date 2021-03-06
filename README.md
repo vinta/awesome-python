@@ -452,6 +452,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * pdb-like Debugger
     * [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
     * [pdb++](https://github.com/antocuni/pdb) - Another drop-in replacement for pdb.
+    * [pdbr](https://github.com/cansarigol/pdbr) - pdb + Rich library.
     * [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
     * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
 * Tracing
