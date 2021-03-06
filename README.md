@@ -468,6 +468,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 
+*Monitoring tools.*
+
+* [celery-exporter](https://github.com/danihodovic/celery-exporter) - A Prometheus exporter for Celery metrics.
+
 ## Distributed Computing
 
 *Frameworks and libraries for Distributed Computing.*
