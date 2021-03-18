@@ -305,6 +305,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
     * [saws](https://github.com/donnemartin/saws) - A Supercharged [aws-cli](https://github.com/aws/aws-cli).
+* Nice Utilities
+    * [dinosay](https://github.com/MatteoGuadrini/dinosay) - Humble, simple, nice and paleolithic alternative to cowsay.
 
 ## Compatibility
 
@@ -756,6 +758,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for manipulating images.*
 
+* [fontpreview](https://github.com/MatteoGuadrini/fontpreview) - Python library for font previews
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 * [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
