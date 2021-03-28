@@ -1018,6 +1018,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *RPC-compatible servers.*
 
+* [aiohttp-rpc](https://github.com/expert-m/aiohttp-rpc) - A library for a simple integration of the JSON-RPC 2.0 protocol to a Python application using [aiohttp](https://github.com/aio-libs/aiohttp).
 * [RPyC](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
 
