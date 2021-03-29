@@ -1037,6 +1037,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [ObsPy](https://github.com/obspy/obspy/wiki/) - A Python toolbox for seismology.
 * [Open Babel](http://openbabel.org/wiki/Main_Page) - A chemical toolbox designed to speak the many languages of chemical data.
+* [pyABC](https://github.com/icb-dcm/pyabc) - Distributed likelihood-free Bayesian inference.
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
