@@ -614,6 +614,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
+* [pipenv](https://github.com/pypa/pipenv) - A Python packaging tool for humans.
 
 ## Files
 
