@@ -1338,9 +1338,11 @@ Where to discover learning resources or new Python libraries.
 * Libraries
     * [Awesome Python @LibHunt](https://python.libhunt.com/)
 * Others
+    * [Curated Python projects](https://www.codementor.io/python-projects) 
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
     * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
+
 
 ## Newsletters
 
