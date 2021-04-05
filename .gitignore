@@ -1,9 +1,10 @@
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+
+# Visual studio / VS Code cache
+.vs/
+.vscode/
+
+# Desktop Service Store
 .DS_Store
-
-*.py[co]
-
-docs/index.md
-site/
-
-# PyCharm IDE
-.idea
