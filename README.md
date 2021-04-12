@@ -416,6 +416,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
 * SQlite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
     * [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0
+    * [SQLLEX](https://github.com/v1a0/sqllex) - Pythonic superstructure over sqlite3. Better than sqlite3. Seriously, try it out.
     * [SuperSQLite](https://github.com/plasticityai/supersqlite) - A supercharged SQLite library built on top of [apsw](https://github.com/rogerbinns/apsw).
 * Other Relational Databases
     * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
