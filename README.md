@@ -1337,6 +1337,8 @@ Where to discover learning resources or new Python libraries.
     * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
 * Libraries
     * [Awesome Python @LibHunt](https://python.libhunt.com/)
+* Projects
+    * [DevProjects: Real-World Python Projects](https://www.codementor.io/projects/python)
 * Others
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
@@ -1368,4 +1370,3 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
-
