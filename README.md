@@ -370,6 +370,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
+* [pydantic](https://github.com/samuelcolvin/pydantic/) - Data parsing and validation using Python type hints
 
 ## Data Visualization
 
