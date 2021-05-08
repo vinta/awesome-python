@@ -27,7 +27,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Data Analysis](#data-analysis)
     - [Data Validation](#data-validation)
     - [Data Visualization](#data-visualization)
-    - [Data Presentation](#data-presentation)
     - [Database Drivers](#database-drivers)
     - [Database](#database)
     - [Date and Time](#date-and-time)
@@ -390,12 +389,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
-
-## Data Presentation
-
-*Libaries for presenting and sharing your analytics resutls.*
-
 * [Datapane](https://datapane.com/) - A collection of APIs to turn scripts and notebooks into interactive reports.
+
 
 ## Database
 
