@@ -835,6 +835,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [igel](https://github.com/nidhaloff/igel) - A delightful tool that allows you to use machine learning without writing code
 * [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
