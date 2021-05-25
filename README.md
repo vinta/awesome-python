@@ -1323,6 +1323,7 @@ Where to discover learning resources or new Python libraries.
 
 ## Books
 
+- [Effective Python](https://effectivepython.com) - Covers all areas of Python and associated pitfalls. 
 - [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
 - [Think Python](https://greenteapress.com/wp/think-python-2e/)
 
