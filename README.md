@@ -477,6 +477,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
 
 * [caffe](https://github.com/BVLC/caffe) - A fast open framework for deep learning..
+* [JAX](https://github.com/google/jax/) - Autograd and XLA brought together for high-performance machine learning research.
 * [keras](https://github.com/keras-team/keras) - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.
 * [mxnet](https://github.com/dmlc/mxnet) - A deep learning framework designed for both efficiency and flexibility.
 * [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
