@@ -395,8 +395,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 - [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 - [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
-
-* [Activeloop](http://activeloop.ai/) - The fastest computer vision dataset management framework for data streaming, version-control, visualization and collaboration.
+- [Activeloop](http://activeloop.ai/) - The fastest computer vision dataset management framework for data streaming, version-control, visualization and collaboration.
 
 ## Database
 
