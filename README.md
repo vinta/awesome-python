@@ -321,6 +321,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [EasyOCR](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
 * [Face Recognition](https://github.com/ageitgey/face_recognition) - Simple facial recognition library.
 * [Kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
+* [MediaPipe](https://github.com/google/mediapipe) - MediaPipe offers cross-platform, customizable ML solutions for live and streaming media.
 * [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [SimpleCV](https://github.com/sightmachine/SimpleCV) - An open source framework for building computer vision applications.
