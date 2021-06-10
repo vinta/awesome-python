@@ -366,7 +366,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
-* [pyreports](https://github.com/MatteoGuadrini/pyreports) - Python library that allows you to create complex report from various sources
 
 ## Data Validation
 
@@ -758,7 +757,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for manipulating images.*
 
-* [fontpreview](https://github.com/MatteoGuadrini/fontpreview) - Python library for font previews
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 * [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
