@@ -364,6 +364,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [pyreports](https://github.com/MatteoGuadrini/pyreports) - Python library that allows you to create complex report from various sources
 
 ## Data Validation
 
@@ -770,7 +771,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 * [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
-* [fontpreview](https://github.com/MatteoGuadrini/fontpreview) - Python library for font previews
 
 ## Implementations
 
