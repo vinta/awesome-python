@@ -729,6 +729,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [xmldataset](https://xmldataset.readthedocs.io/en/latest/) - Simple XML Parsing.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
+## Web development purely with
+
+*Libraries for developing web applications purely with Python.*
+
+* [sierra](https://github.com/BrainStormYourWayIn/sierra) - A lightweight Python framework for building and integrating web applications with HTML and CSS
+
 ## HTTP Clients
 
 *Libraries for working with HTTP.*
