@@ -1096,8 +1096,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
 * PDF
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
-    * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
     * [ReportLab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+    * [PyMuPDF](https://github.com/pymupdf/PyMuPDF) - Python bindings to MuPDF, a powerful and versatile PDF library.
+    * [pikepdf](https://github.com/pikepdf/pikepdf) - A library for analysing and editing PDF documents, based on qpdf.
+    * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A pure-python PDF library capable of splitting, merging and transforming PDF pages. (unmaintained)
 * Markdown
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
