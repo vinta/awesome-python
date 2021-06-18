@@ -729,11 +729,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [xmldataset](https://xmldataset.readthedocs.io/en/latest/) - Simple XML Parsing.
 * [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
-## Web development purely with
-
-*Libraries for developing web applications purely with Python.*
-
-* [sierra](https://github.com/BrainStormYourWayIn/sierra) - A lightweight Python framework for building and integrating web applications with HTML and CSS
 
 ## HTTP Clients
 
@@ -1301,7 +1296,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
         * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
     * [Pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
+    * [sierra](https://github.com/BrainStormYourWayIn/sierra) - A lightweight Python framework for building and integrating web applications with HTML and CSS
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
+
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
 
