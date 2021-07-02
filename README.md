@@ -865,6 +865,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [PyStateMachine](https://github.com/ZigRazor/PyStateMachine) - A Framework that support state machines in Python.
 
 ## Natural Language Processing
 
