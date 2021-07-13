@@ -1164,6 +1164,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
 * Mock
+    * [cornell](https://github.com/hiredscorelabs/cornell) - A [VCR.py](https://github.com/kevin1024/vcrpy) based Record, Replay and proxy HTTP mock server.
     * [doublex](https://pypi.org/project/doublex/) - Powerful test doubles framework for Python.
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
     * [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+.
