@@ -677,6 +677,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
 * [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
+* [vue.py](https://stefanhoelzl.github.io/vue.py/) - A Pythonic wrapper for Vue.js for creating Web UIs.
 * [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 
