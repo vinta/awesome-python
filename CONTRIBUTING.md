@@ -2,7 +2,7 @@
 
 Your contributions are always welcome!
 
-## Guideline
+## Guidelines
 
 * Add one link per Pull Request.
     * Make sure the PR title is in the format of `Add project-name`.
