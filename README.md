@@ -115,7 +115,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-xadmin](https://github.com/sshwsfc/xadmin) - Drop-in replacement of Django admin comes with lots of goodies.
 * [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
-* [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django)
+* [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
 * [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Algorithms and Design Patterns
@@ -154,8 +154,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Audio
     * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
-    * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors
-    * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis
+    * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
+    * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
     * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
     * [mingus](http://bspaans.github.io/python-mingus/) - An advanced music theory and notation package with MIDI file and playback support.
     * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
@@ -383,8 +383,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
-* [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook
-* [Cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support
+* [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
+* [Cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
     * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
