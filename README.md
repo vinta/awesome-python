@@ -1135,6 +1135,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support.
     * [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
+    * [cornell](https://github.com/hiredscorelabs/cornell) - E2E tests record & replay mock server
 * Object Factories
     * [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
     * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supported Django, Flask, SQLAlchemy, Peewee and etc.
