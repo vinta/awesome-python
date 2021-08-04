@@ -844,6 +844,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+* [m2cgen](https://github.com/BayesWitnesses/m2cgen) - A lightweight library which allows to transpile trained machine learning models including many scikit-learn estimators into a native code of C, Java, Go, R, PHP, Dart, Haskell, Rust and many other programming languages.
 
 ## Microsoft Windows
 
