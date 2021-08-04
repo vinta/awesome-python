@@ -1,5 +1,7 @@
 # Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
+[![Code Quality Score](<https://www.code-inspector.com/project/26037/score/svg>)](<https://frontend.code-inspector.com/public/project/26037/Awesome_Python/dashboard>)  [![Code Grade](<https://www.code-inspector.com/project/26037/status/svg>)](<https://frontend.code-inspector.com/public/project/26037/Awesome_Python/dashboard>)
+
 A curated list of awesome Python frameworks, libraries, software and resources.
 
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
