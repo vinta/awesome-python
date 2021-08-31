@@ -1325,6 +1325,7 @@ Where to discover learning resources or new Python libraries.
 
 - [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
 - [Think Python](https://greenteapress.com/wp/think-python-2e/)
+- [Publishing Python Packages](https://www.manning.com/books/publishing-python-packages)
 
 ## Websites
 
