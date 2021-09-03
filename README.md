@@ -760,6 +760,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [pagan](https://github.com/daboth/pagan) - Retro identicon (Avatar) generation based on input string and hash.
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
+* [pyc2pa] (https://github.com/numbersprotocol/pyc2pa) - Create authentic & traceable photos by embedding metadata according to Adobe's Content Authenticity standards and C2PA spec.
 * [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [PyMatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
