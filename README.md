@@ -688,6 +688,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - An `aiohttp`-based wrapper for Tartiflette to expose GraphQL APIs over HTTP.
 * [tartiflette-asgi](https://github.com/tartiflette/tartiflette-asgi/) - ASGI support for the Tartiflette GraphQL engine.
 * [tartiflette](https://tartiflette.io) - SDL-first GraphQL engine implementation for Python 3.6+ and asyncio.
+* [strawberry](https://strawberry.rocks) - Schema first GraphQL Library based on dataclasses and type hints.
 
 ## Game Development
 
