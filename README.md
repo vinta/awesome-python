@@ -1193,6 +1193,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
     * [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
     * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
+    * [humanize](https://github.com/jmoiron/humanize) - Turns raw values into human-readable formats in multiple languages.
     * [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
     * [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
     * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
