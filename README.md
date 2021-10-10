@@ -429,6 +429,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
+* ODBC Databases
+    * [pyodbc](https://github.com/mkleehammer/pyodbc) - An open source Python module that makes accessing ODBC databases simple.
 
 ## Date and Time
 
