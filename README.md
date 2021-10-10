@@ -1190,6 +1190,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * General
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
+    * [codext](https://github.com/dhondta/python-codext) - Python 2/3 compatible extension adding many new encodings to the native [codecs](https://docs.python.org/3/library/codecs.html).
     * [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
     * [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
     * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
