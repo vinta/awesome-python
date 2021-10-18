@@ -11,6 +11,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Asynchronous Programming](#asynchronous-programming)
     - [Audio](#audio)
     - [Authentication](#authentication)
+    - [Boilerplates](#boilerplates)
     - [Build Tools](#build-tools)
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
@@ -182,6 +183,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - A module for generating and verifying JSON Web Tokens.
+
+## Boilerplates
+
+*Boilerplates for quickly setting up new Python projects.*
+
+* Flask
+    * [flask-htmx-boilerplate](https://github.com/marcusschiesser/flask-htmx-boilerplate) - Boilerplate template for a Python Flask application with HTMX and Tailwind CSS
 
 ## Build Tools
 
