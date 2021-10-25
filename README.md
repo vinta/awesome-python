@@ -800,10 +800,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Internationalization
 
-*Libraries for working with i18n.*
+*Libraries and tools for working with i18n.*
 
 * [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
 * [PyICU](https://github.com/ovalhub/pyicu) - A wrapper of International Components for Unicode C++ library ([ICU](http://site.icu-project.org/)).
+* [Free PO editor](https://pofile.net/free-po-editor) - An online tool for editing translations in PO files.
 
 ## Job Scheduler
 
