@@ -15,29 +15,34 @@
 """
 
 def sort_blocks():
+    split_at = '- - -'
+    first_sep = '# '
+    second_sep = '##'
+
     # First, we load the current README into memory
     with open('README.md', 'r') as read_me_file:
         read_me = read_me_file.read()
 
     # Separating the 'table of contents' from the contents (blocks)
-    table_of_contents = ''.join(read_me.split('- - -')[0])
-    blocks = ''.join(read_me.split('- - -')[1]).split('\n# ')
-    for i in range(len(blocks)):
-        if i == 0:
-            blocks[i] = blocks[i] + '\n'
-        else:
-            blocks[i] = '# ' + blocks[i] + '\n'
-
+    # \CHANGED: replaced for function with built-in(s).
+    table_of_contents, blocks = read_me.split(split_at)
+    blocks = [first_sep + i + '\n' for i in blocks.split('\n# ')]
+    blocks[0] = blocks[0].removeprefix(first_sep)
+    
     # Sorting the libraries
-    inner_blocks = sorted(blocks[0].split('##'))
-    for i in range(1, len(inner_blocks)):
-        if inner_blocks[i][0] != '#':
-            inner_blocks[i] = '##' + inner_blocks[i]
-    inner_blocks = ''.join(inner_blocks)
+    
+    # \CHANGED: replaced for-if function, with built-in.
+    # \CHANGED: Handle Case for 0th element.
+    # \REMOVED: arbitrary variable assignment
+    
+    inner_blocks = sorted(blocks[0].split(second_sep))
+    inner_blocks = [second_sep + i for i in inner_blocks if i[0] != '#']
+    inner_blocks[0] = inner_blocks[0].removeprefix(second_sep)
 
     # Replacing the non-sorted libraries by the sorted ones and gathering all at the final_README file
-    blocks[0] = inner_blocks
-    final_README = table_of_contents + '- - -' + ''.join(blocks)
+    blocks[0] = ''.join(inner_blocks)
+
+    final_README = table_of_contents + split_at + ''.join(blocks)
 
     with open('README.md', 'w+') as sorted_file:
         sorted_file.write(final_README)
@@ -59,9 +64,9 @@ def main():
 
         if any([s_line.startswith(s) for s in ['* [', '- [']]):
             if indent == last_indent:
-                blocks[-1].append(line)
+                blocks[-1].append(line)  # appends at the start
             else:
-                blocks.append([line])
+                blocks.append([line])  # appends at the end.
             last_indent = indent
         else:
             blocks.append([line])
