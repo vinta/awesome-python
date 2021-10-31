@@ -21,22 +21,14 @@ def sort_blocks() -> None:
     first_sep: str = '# '
     second_sep: str = '##'
 
-    # First, we load the current README into memory
     with open('README.md', 'r') as read_me_file:
         read_me: str = read_me_file.read()
 
-    # Separating the 'table of contents' from the contents (blocks)
-    # \CHANGED: replaced for function with built-in(s).
     table_of_contents, blocks = read_me.split(split_at)
     blocks = [first_sep + i + '\n' for i in blocks.split('\n# ')]
     blocks[0] = blocks[0].removeprefix(first_sep)
     
-    # Sorting the libraries
-    
-    # \CHANGED: replaced for-if function, with built-in.
-    # \CHANGED: Handle Case for 0th element.
-    # \REMOVED: arbitrary variable assignment
-    
+    # Sorting the libraries   
     inner_blocks: list = sorted(blocks[0].split(second_sep))
     inner_blocks = [second_sep + i for i in inner_blocks if i[0] != '#']
     inner_blocks[0] = inner_blocks[0].removeprefix(second_sep)
@@ -53,9 +45,10 @@ def main() -> None:
     with open('README.md', 'r') as read_me_file:
         read_me = read_me_file.readlines()
 
-    # Then we cluster the lines together as blocks
-    # Each block represents a collection of lines that should be sorted
-    # This was done by assuming only links ([...](...)) are meant to be sorted
+    # We cluster the lines together as blocks
+    # Each block represents a collection of lines that should be sorted.
+    # This was done by assuming only links ([...](...)) are meant to be sorted.
+    
     # Clustering is done by indentation
     blocks: list[list] = []
     last_indent: int = None
@@ -77,7 +70,7 @@ def main() -> None:
         # Then all of the blocks are sorted individually
         blocks = [''.join(sorted(block, key=str.lower)) for block in blocks]
         
-        # And the result is written back to README.md
+        # We write it back to README.md
         sorted_file.write(''.join(blocks))
 
     # Then we call the sorting method
