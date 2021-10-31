@@ -14,6 +14,8 @@
     and flattening the end structure into a list of lines. Revision 2 maybe ^.^.
 """
 
+from __future__ import annotations
+
 def sort_blocks() -> None:
     split_at: str = '- - -'
     first_sep: str = '# '
