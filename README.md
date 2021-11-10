@@ -371,6 +371,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 * [colander](https://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
+* [JSONClasses](https://github.com/fillmula/jsonclasses) - The Modern Declarative Data Flow Framework for the AI Empowered Generation.
 * [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
@@ -910,6 +911,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [SQLAlchemy](https://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
         * [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
     * [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
+    * [JSONClasses Pymongo](https://github.com/fillmula/jsonclasses-pymongo) - Pymongo integration with JSONClasses.
     * [orator](https://github.com/sdispater/orator) -  The Orator ORM provides a simple yet beautiful ActiveRecord implementation.
     * [orm](https://github.com/encode/orm) - An async ORM.
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
@@ -954,6 +956,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
 * [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
+* [JSONClasses](https://github.com/fillmula/jsonclasses) - The Modern Declarative Data Flow Framework for the AI Empowered Generation. It has builtin support for both object level and field level permissions.
 
 ## Processes
 
@@ -995,6 +998,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
     * [flask-api](https://github.com/flask-api/flask-api) - Browsable Web APIs for Flask.
     * [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
+    * [JSONClasses Server](https://github.com/jsonclasses-server) - Server Integration with JSONClasses.
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
@@ -1005,6 +1009,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
     * [sanic](https://github.com/huge-success/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
     * [vibora](https://vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask.
+    * [JSONClasses Server](https://github.com/jsonclasses-server) - Build API server with descriptive Python classes.
 
 ## Robotics
 
@@ -1298,6 +1303,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+* Integrated
+    * [JSONClasses](https://www.jsonclasses.com) - The declarative web framework in the AI empowered era.
 
 ## WebSocket
 
@@ -1367,4 +1374,3 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
-
