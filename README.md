@@ -427,6 +427,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [py2neo](https://py2neo.org/) - A client library and toolkit for working with Neo4j.
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
+    * [beryl-python](https://github.com/beryldb/python-beryl) - The Python client for BerylDB.
 * Asynchronous Clients
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
 
