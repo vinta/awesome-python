@@ -1176,6 +1176,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
     * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supports Django, Flask, SQLAlchemy, Peewee and etc.
     * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
+    * [objectfactory](https://github.com/devinaconley/py-object-factory) - Factory pattern for object creation, serialization, and polymorphism
 * Code Coverage
     * [coverage](https://pypi.org/project/coverage/) - Code coverage measurement.
 * Fake Data
