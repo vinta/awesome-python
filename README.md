@@ -915,6 +915,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
     * [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
+    * [Prisma Client Python](https://github.com/RobertCraigie/prisma-client-py) - An auto-generated, fully type safe ORM tailored specifically for your schema - works with SQLite, PostgreSQL, MySQL, MongoDB, MariaDB, Azure SQL, SQL Server and AWS Aurora.
 * NoSQL Databases
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
     * [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
