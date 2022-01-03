@@ -344,6 +344,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
+* [onacol](https://github.com/calcite/onacol) - flexible configuration management with YAML, env-vars, CLI args and cascading.
 * [profig](https://profig.readthedocs.io/en/latest/) - Config from multiple formats with value conversion.
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
 
