@@ -1226,6 +1226,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
+* [pycord](https://github.com/Pycord-Development/pycord) - A fork maintains discord.py. API wrapper for Discord written in Python.
 
 ## URL Manipulation
 
