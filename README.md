@@ -60,6 +60,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Logging](#logging)
     - [Machine Learning](#machine-learning)
     - [Miscellaneous](#miscellaneous)
+    - [Multiformats](#multiformats)
     - [Natural Language Processing](#natural-language-processing)
     - [Network Virtualization](#network-virtualization)
     - [News Feed](#news-feed)
@@ -69,6 +70,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Penetration testing](#penetration-testing)
     - [Permissions](#permissions)
     - [Processes](#processes)
+    - [P2P Network](#p2p-network)
     - [Recommender Systems](#recommender-systems)
     - [Refactoring](#refactoring)
     - [RESTful API](#restful-api)
@@ -866,6 +868,15 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
 
+
+## Multiformats
+
+*Multiformats is a collection of protocols which aim to future-proof systems.*
+
+* [multiaddr](https://github.com/multiformats/py-multiaddr) - Composable and future-proof network addresses
+* [multihash](https://github.com/multiformats/py-multihash) - A protocol for differentiating outputs from various well-established cryptographic hash functions, addressing size + encoding considerations.
+
+
 ## Natural Language Processing
 
 *Libraries for working with human languages.*
@@ -962,6 +973,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
 * [sarge](https://sarge.readthedocs.io/en/latest/) - Yet another wrapper for subprocess.
 * [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+
+## P2P Network
+
+*Libraries for p2p network*
+
+* [libp2p](https://github.com/libp2p/py-libp2p) - The Python implementation of the libp2p networking stack.
+
 
 ## Recommender Systems
 
