@@ -389,6 +389,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [DataPrep](https://dataprep.ai/) - A framework for data wrangling and exploratory data analysis
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 * [Folium](https://python-visualization.github.io/folium/) - geographic visualization tool using leaflet.js
+* [Glue](https://glueviz.org/) - multi-dimensional linked-data exploration
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
