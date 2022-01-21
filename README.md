@@ -393,6 +393,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [HoloViz](https://holoviz.org/) - a set of high-level tools to simplify visualization in Python
 * [Lux](https://github.com/lux-org/lux) - An API for exploratory data analysis
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [Pandas Profiling](https://github.com/pandas-profiling/pandas-profiling) - Generates profile reports from a pandas DataFrame
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [PyGraphviz](https://pypi.org/project/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
