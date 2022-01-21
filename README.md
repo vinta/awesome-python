@@ -47,7 +47,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Forms](#forms)
     - [Functional Programming](#functional-programming)
     - [Game Development](#game-development)
-    - [Geolocation](#geolocation)
+    - [Geospatial data processing](#geospatial-data-processing)
     - [GUI Development](#gui-development)
     - [Hardware](#hardware)
     - [HTML Manipulation](#html-manipulation)
@@ -703,7 +703,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PySDL2](https://pysdl2.readthedocs.io) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
 
-## Geolocation
+## Geospatial data processing
 
 *Libraries for geocoding addresses and working with latitudes and longitudes.*
 
