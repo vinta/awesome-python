@@ -711,6 +711,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
+* [GeoPandas](https://github.com/geopandas/geopandas) - A cartographic python library with Pandas support.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 
 ## HTML Manipulation
