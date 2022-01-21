@@ -482,7 +482,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 * [SerpentAI](https://github.com/SerpentAI/SerpentAI) - Game agent framework. Use any video game as a deep learning sandbox.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
-* [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
+* [Aesara](https://github.com/aesara-devs/aesara) (formerly Theano) - A library for fast numerical computation.
 
 ## DevOps Tools
 
