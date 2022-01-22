@@ -384,23 +384,23 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
-* [D-Tale](https://github.com/man-group/dtale#charts) - A Pandas DataFrame visualizer
+* [D-Tale](https://github.com/man-group/dtale#charts) - A Pandas DataFrame visualizer.
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
     * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
-* [DataPrep](https://dataprep.ai/) - A framework for data wrangling and exploratory data analysis
+* [DataPrep](https://dataprep.ai/) - A framework for data wrangling and exploratory data analysis.
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
-* [Folium](https://python-visualization.github.io/folium/) - geographic visualization tool using leaflet.js
-* [Glue](https://glueviz.org/) - multi-dimensional linked-data exploration
-* [HoloViz](https://holoviz.org/) - a set of high-level tools to simplify visualization in Python
-* [Lux](https://github.com/lux-org/lux) - An API for exploratory data analysis
+* [Folium](https://python-visualization.github.io/folium/) - Geographic visualization tool using leaflet.js.
+* [Glue](https://glueviz.org/) - Multi-dimensional linked-data exploration.
+* [HoloViz](https://holoviz.org/) - A set of high-level tools for simplifying visualization in Python.
+* [Lux](https://github.com/lux-org/lux) - An API for exploratory data analysis.
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
-* [Pandas Profiling](https://github.com/pandas-profiling/pandas-profiling) - Generates profile reports from a pandas DataFrame
+* [Pandas Profiling](https://github.com/pandas-profiling/pandas-profiling) - Generates profile reports from a pandas DataFrame.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
 * [PyGraphviz](https://pypi.org/project/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
-* [Sweetviz](https://github.com/fbdesignpro/sweetviz) - open-source library for exploratory data analysis
+* [Sweetviz](https://github.com/fbdesignpro/sweetviz) - Open-source library for exploratory data analysis.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
 
 ## Database
@@ -719,7 +719,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
-* [GeoPandas](https://github.com/geopandas/geopandas) - Python tools for geographic data
+* [GeoPandas](https://github.com/geopandas/geopandas) - Python tools for geographic data.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 
 ## HTML Manipulation
@@ -766,7 +766,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
 * [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
-* [napari](https://napari.org/) - A fast, interactive, multi-dimensional image viewer for Python
+* [napari](https://napari.org/) - A fast, interactive, multi-dimensional image viewer for Python.
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [pagan](https://github.com/daboth/pagan) - Retro identicon (Avatar) generation based on input string and hash.
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
@@ -890,7 +890,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyTorch-NLP](https://github.com/PetrochukM/PyTorch-NLP) - A toolkit enabling rapid deep learning NLP prototyping for research.
     * [spacy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
     * [Stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
-    * [TextBlob](https://textblob.readthedocs.io/en/dev/) - A simple API for common NLP tasks built on top of NLTK and Pattern
+    * [TextBlob](https://textblob.readthedocs.io/en/dev/) - A simple API for common NLP tasks built on top of NLTK and Pattern.
 - Chinese
     * [funNLP](https://github.com/fighting41love/funNLP) - A collection of tools and datasets for Chinese NLP.
     * [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
