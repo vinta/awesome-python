@@ -385,6 +385,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for visualizing data. Also see [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
 * [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
+* [bamboolib](https://bamboolib.8080labs.com/) - An interface for interactive transformation and visualization of dataframes.
 * [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
 * [D-Tale](https://github.com/man-group/dtale#charts) - A Pandas DataFrame visualizer.
