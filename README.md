@@ -533,7 +533,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks and libraries for Distributed Computing.*
 
 * Batch Processing
-    * [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
+    * [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing, part of the Blaze ecosystem.
     * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
     * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
     * [PySpark](https://pypi.org/project/pyspark/) - [Apache Spark](https://spark.apache.org/) Python API.
