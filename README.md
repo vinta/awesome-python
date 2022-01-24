@@ -365,7 +365,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [AWS Data Wrangler](https://github.com/awslabs/aws-data-wrangler) - Pandas on AWS.
 * [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
-* [cuDF](https://github.com/rapidsai/cudf) - A Pandas DataFrame-like API on top of CUDA.
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
@@ -373,6 +372,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Polars](https://github.com/pola-rs/polars) - Fast, multi-threaded dataframes built in Python and Rust.
 * [PyArrow](https://arrow.apache.org/docs/python/) - A Python wrapper for the the Apache Arrow in-memory analytics platform.
 * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
+* [RAPIDS](https://rapids.ai/) - A suite of open source libraries for running data science and analytics pipelines on GPUs.
 * [Vaex](https://github.com/vaexio/vaex) - Hybrid Arrow-NumPy dataframes for big tabular datasets.
 * [xarray](https://xarray.pydata.org/en/stable/index.html) - A generalization of Pandas into n-dimensional data.
 
