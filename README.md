@@ -25,6 +25,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Configuration](#configuration)
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
+      - [Core structures and frameworks](#Core-structures-and-frameworks)
     - [Data Validation](#data-validation)
     - [Data Visualization](#data-visualization)
     - [Database Drivers](#database-drivers)
@@ -356,7 +357,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Data Analysis
 
-*Libraries for data analyzing.*
+*Libraries for data analysis.*
+
+### Core structures and frameworks
+
+*Libraries that provide data structures and algorithms for data analysis.*
 
 * [AWS Data Wrangler](https://github.com/awslabs/aws-data-wrangler) - Pandas on AWS.
 * [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
@@ -370,7 +375,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Vaex](https://github.com/vaexio/vaex) - Hybrid Arrow-NumPy dataframes for big tabular datasets.
 * [xarray](https://xarray.pydata.org/en/stable/index.html) - A generalization of Pandas into n-dimensional data.
 
-## Data Validation
+### Data Validation
 
 *Libraries for validating data. Used for forms in many cases.*
 
@@ -382,7 +387,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 
-## Data Visualization
+### Data Visualization
 
 *Libraries for visualizing data. Also see [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
