@@ -26,8 +26,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
       - [Core structures and frameworks](#Core-structures-and-frameworks)
-    - [Data Validation](#data-validation)
-    - [Data Visualization](#data-visualization)
+      - [Data Validation](#data-validation)
+      - [Data Visualization](#data-visualization)
     - [Database Drivers](#database-drivers)
     - [Database](#database)
     - [Date and Time](#date-and-time)
@@ -372,6 +372,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [Polars](https://github.com/pola-rs/polars) - Fast, multi-threaded dataframes built in Python and Rust.
 * [PyArrow](https://arrow.apache.org/docs/python/) - A Python wrapper for the the Apache Arrow in-memory analytics platform.
+* [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 * [Vaex](https://github.com/vaexio/vaex) - Hybrid Arrow-NumPy dataframes for big tabular datasets.
 * [xarray](https://xarray.pydata.org/en/stable/index.html) - A generalization of Pandas into n-dimensional data.
 
