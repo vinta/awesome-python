@@ -365,6 +365,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [AWS Data Wrangler](https://github.com/awslabs/aws-data-wrangler) - Pandas on AWS.
 * [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
+* [Modin](https://modin.readthedocs.io/en/stable/) - A Pandas-like wrapper on top of Dask and Ray.
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
