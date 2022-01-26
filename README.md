@@ -1328,6 +1328,9 @@ Where to discover learning resources or new Python libraries.
 - [Publishing Python Packages](https://www.manning.com/books/publishing-python-packages)
 - [Python Concurrency with asyncio](https://www.manning.com/books/python-concurrency-with-asyncio)
 - [Full Stack Python Security](https://www.manning.com/books/full-stack-python-security)
+- [Time Series Forecasting in Python](https://www.manning.com/books/time-series-forecasting-in-python-book)
+- [The Well-Grounded Python Developer](https://www.manning.com/books/the-well-grounded-python-developer)
+- [Deep Learning with Python, Second Edition](https://www.manning.com/books/deep-learning-with-python-second-edition)
 
 ## Websites
 
