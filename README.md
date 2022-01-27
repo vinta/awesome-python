@@ -844,6 +844,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+* [Gradio](https://github.com/gradio-app/gradio) - Gradio is a python library that makes it easy for machine learning engineers to create user interfaces. 
 
 ## Microsoft Windows
 
