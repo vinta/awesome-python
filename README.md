@@ -816,6 +816,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
 * [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
+* [Ploomber](https://github.com/ploomber/ploomber) - The fastest ⚡️ way to build data workflows. Develop iteratively, deploy anywhere. ☁️.
 * [Prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
