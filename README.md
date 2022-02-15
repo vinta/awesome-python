@@ -287,8 +287,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Useful CLI-based tools for productivity.*
 
 * Productivity Tools
-    * [copier](https://github.com/pykong/copier) - A library and command-line utility for rendering projects templates.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
+    * [copier](https://github.com/pykong/copier) - A library and command-line utility for rendering projects templates.
+    * [databooks](https://github.com/datarootsio/databooks) - A command-line utility that eases versioning and sharing of notebooks.
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [Invoke](https://github.com/pyinvoke/invoke#readme) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
@@ -310,8 +311,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for migrating from Python 2 to 3.*
 
-* [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
 * [modernize](https://github.com/PyCQA/modernize) - Modernizes Python code for eventual Python 3 migration.
+* [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
 * [six](https://pypi.org/project/six/) - Python 2 and 3 compatibility utilities.
 
 ## Computer Vision
@@ -418,8 +419,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0
     * [SuperSQLite](https://github.com/plasticityai/supersqlite) - A supercharged SQLite library built on top of [apsw](https://github.com/rogerbinns/apsw).
 * Other Relational Databases
-    * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
     * [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
+    * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     * [happybase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
@@ -664,6 +665,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with graphical user interface applications.*
 
 * [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
+* [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 * [Eel](https://github.com/ChrisKnott/Eel) - A library for making simple Electron-like offline HTML/JS GUI apps.
 * [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
@@ -678,7 +680,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
-* [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 
 ## GraphQL
 
@@ -760,12 +761,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [pagan](https://github.com/daboth/pagan) - Retro identicon (Avatar) generation based on input string and hash.
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
-* [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [PyMatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
+* [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
-* [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 * [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
+* [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
@@ -835,15 +836,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python).*
 
+* [databooks](https://github.com/datarootsio/databooks) - A command-line utility that eases versioning and sharing of notebooks.
 * [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
+* [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
-* [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 
 ## Microsoft Windows
 
@@ -1113,8 +1115,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Static site generator is a software that takes some text + templates as input and produces HTML files on the output.*
 
 * [lektor](https://github.com/lektor/lektor) - An easy to use static CMS and blog engine.
-* [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 * [makesite](https://github.com/sunainapai/makesite) - Simple, lightweight, and magic-free static site/blog generator (< 130 lines).
+* [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 * [nikola](https://github.com/getnikola/nikola) - A static website and blog generator.
 * [pelican](https://github.com/getpelican/pelican) - Static site generator that supports Markdown and reST syntax.
 
@@ -1367,4 +1369,5 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
+
 
