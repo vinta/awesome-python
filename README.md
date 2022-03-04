@@ -41,6 +41,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
     - [Enterprise Application Integrations](#enterprise-application-integrations)
+    - [Enterprise Resource Management](#enterprise-resource-management)
     - [Environment Management](#environment-management)
     - [Files](#files)
     - [Foreign Function Interface](#foreign-function-interface)
@@ -607,6 +608,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Platforms and tools for systems integrations in enterprise environments*
 
 * [Zato](https://zato.io) - ESB, SOA, REST, APIs and Cloud Integrations in Python.
+
+## Enterprise Resource Management
+
+*Open Source ERP *
+
+* [ERPNext](https://erpnext.com/) - ERPNext is the world's best free and open source ERP
+
+.
+
+
 
 ## Environment Management
 
