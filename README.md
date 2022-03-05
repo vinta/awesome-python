@@ -947,6 +947,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
 * [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 * [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
+* [scanmycode](https://github.com/marcinguy/scanmycode-ce) - Code Scanning/SAST/Static Analysis/Linting using many tools/Scanners with One Report - Scanmycode Community Edition (CE).
 
 ## Permissions
 
