@@ -1334,12 +1334,14 @@ Where to discover learning resources or new Python libraries.
     * [Real Python](https://realpython.com)
     * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
     * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
+    * [Learn Python: Basic to Advanced Concepts](https://www.interviewbit.com/python-cheat-sheet/)
 * Libraries
     * [Awesome Python @LibHunt](https://python.libhunt.com/)
 * Others
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
     * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
+    * [Python Online Compiler](https://www.interviewbit.com/online-python-compiler/)
 
 ## Newsletters
 
