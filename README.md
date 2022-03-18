@@ -182,6 +182,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - A module for generating and verifying JSON Web Tokens.
+    * [drf-jwt](https://github.com/Styria-Digital/django-rest-framework-jwt) - A JSON Web Token Authentication support for Django REST Framework
 
 ## Build Tools
 
