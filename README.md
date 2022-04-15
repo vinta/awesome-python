@@ -702,6 +702,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](https://pysdl2.readthedocs.io) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
+* [raylib-python-cffi](https://github.com/electronstudio/raylib-python-cffi/) - Python cffi bindings for Raylib.
 
 ## Geolocation
 
