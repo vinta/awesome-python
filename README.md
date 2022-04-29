@@ -431,7 +431,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [aiomysql](https://github.com/aio-libs/aiomysql) - aiomysql is a library for accessing a MySQL database from the asyncio.
     * [aiopg](https://github.com/aio-libs/aiopg) - aiopg is a library for accessing a PostgreSQL database from the asyncio.
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
-    
+
 ## Date and Time
 
 *Libraries for working with dates and times.*
