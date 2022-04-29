@@ -428,8 +428,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
+    * [aiomysql](https://github.com/aio-libs/aiomysql) - aiomysql is a library for accessing a MySQL database from the asyncio.
+    * [aiopg](https://github.com/aio-libs/aiopg) - aiopg is a library for accessing a PostgreSQL database from the asyncio.
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
-
+    
 ## Date and Time
 
 *Libraries for working with dates and times.*
