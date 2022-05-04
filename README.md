@@ -1025,6 +1025,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists).*
 
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+* [skyfield](https://rhodesmill.org/skyfield/) - A pure Python astronomy package that makes it easy to generate high precision - research grade positions for planet and earth satellites.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
