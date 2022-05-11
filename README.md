@@ -506,6 +506,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Backup
     * [BorgBackup](https://www.borgbackup.org/) - A deduplicating archiver with compression and encryption.
 * Others
+    * [Argonaut](https://argonaut.dev/) - Deploy apps and infrastructure on your cloud in minutes. Supports Django apps on AWS Lambda environments.
     * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 
 ## Distributed Computing
