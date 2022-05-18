@@ -702,6 +702,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 * [PySDL2](https://pysdl2.readthedocs.io) - A ctypes based wrapper for the SDL2 library.
 * [RenPy](https://www.renpy.org/) - A Visual Novel engine.
+* [Ursina](https://ursinaengine.org) - Ursina makes it easier to develop games, visualizations and other kinds of software.
 
 ## Geolocation
 
