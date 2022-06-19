@@ -510,8 +510,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 
 ## Discord Bots
-* [nextcord](https://github.com/nextcord/nextcord) - A modern, easy-to-use, feature-rich, and async-ready API wrapper for Discord written in Python.
-
+* [nextcord](https://github.com/nextcord/nextcord) - A modern, easy-to-use, feature-rich, and async-ready API wrapper for Discord.
 
 ## Distributed Computing
 
