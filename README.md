@@ -33,6 +33,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Debugging Tools](#debugging-tools)
     - [Deep Learning](#deep-learning)
     - [DevOps Tools](#devops-tools)
+    - [Discord Bots](#discord-bots)
     - [Distributed Computing](#distributed-computing)
     - [Distribution](#distribution)
     - [Documentation](#documentation)
@@ -507,6 +508,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [BorgBackup](https://www.borgbackup.org/) - A deduplicating archiver with compression and encryption.
 * Others
     * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
+
+## Discord Bots
+* [nextcord](https://github.com/nextcord/nextcord) - A modern, easy-to-use, feature-rich, and async-ready API wrapper for Discord written in Python.
+
 
 ## Distributed Computing
 
