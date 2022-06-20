@@ -518,6 +518,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
     * [PySpark](https://pypi.org/project/pyspark/) - [Apache Spark](https://spark.apache.org/) Python API.
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
+    * [Covalent](https://github.com/AgnostiqHQ/covalent/) - A workflow orchestration system for quantum and HPC.
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
@@ -820,6 +821,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [TaskFlow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [Covalent](https://github.com/AgnostiqHQ/covalent/) - A workflow orchestration system for quantum and HPC.
 
 ## Logging
 
