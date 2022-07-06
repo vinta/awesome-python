@@ -1340,7 +1340,7 @@ Where to discover learning resources or new Python libraries.
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
     * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
-
+    * [Explore Python on kandi](https://kandi.openweaver.com/explore/python)
 ## Newsletters
 
 * [Awesome Python Newsletter](http://python.libhunt.com/newsletter)
