@@ -130,6 +130,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Design Patterns
     * [PyPattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
     * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
+    * [Python-Pattern-Programs](https://github.com/dev-aniketj/Python-Pattern-Programs) - Having more than 100 programs, based on logics.
     * [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
 
 ## ASGI Servers
