@@ -631,6 +631,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for providing foreign function interface.*
 
+* [pybind11](https://pybind11.readthedocs.io/en/stable/index.html) - Header-only Python wrapper for Modern C++11
 * [cffi](https://pypi.org/project/cffi/) - Foreign Function Interface for Python calling C code.
 * [ctypes](https://docs.python.org/3/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
 * [PyCUDA](https://mathema.tician.de/software/pycuda/) - A Python wrapper for Nvidia's CUDA API.
