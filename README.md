@@ -152,6 +152,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for manipulating audio and its metadata.*
 
 * Audio
+    * [Django Audio Validator](https://github.com/rzashakeri/django-audio-validator) - a Audio Validator For Django With MIME type checking And Extension 
     * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
     * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
