@@ -820,6 +820,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 * [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 * [TaskFlow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
+* [CML](https://cml.dev/) - Continuous Machine Learning (CML) is CI/CD for Machine Learning Projects
 
 ## Logging
 
@@ -844,6 +845,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+* [DVC](https://dvc.org) - Open-source Version Control System for Machine Learning Projects
+* [MLEM](https://mlem.ai) - Version and deploy your ML models following GitOps principles
 
 ## Microsoft Windows
 
