@@ -1320,6 +1320,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 # Resources
 
 Where to discover learning resources or new Python libraries.
+Get started with core python resources:
+- [Python Resources](https://github.com/thegeekyb0y/learnpython)
 
 ## Books
 
