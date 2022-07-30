@@ -995,6 +995,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
     * [flask-api](https://github.com/flask-api/flask-api) - Browsable Web APIs for Flask.
     * [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
+    * [flask-restx](https://github.com/python-restx/flask-restx) - Fully featured framework for fast, easy and documented API development with Flask.
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
