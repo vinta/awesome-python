@@ -929,7 +929,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-* [Hatch](https://github.com/ofek/hatch) - Modern, extensible Python project management.
+* [Hatch](https://github.com/pypa/hatch) - Modern, extensible Python project management.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 
 ## Package Repositories
