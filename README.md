@@ -305,6 +305,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
     * [saws](https://github.com/donnemartin/saws) - A Supercharged [aws-cli](https://github.com/aws/aws-cli).
+    * [trunk](https://trunk.io) - Toolkit to check, test, merge, and monitor code. 
 
 ## Compatibility
 
