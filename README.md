@@ -352,7 +352,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [cryptography](https://cryptography.io/en/latest/) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 * [passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
-* [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [pynacl](https://github.com/pyca/pynacl) - Python binding to the libsodium library.
 
 ## Data Analysis
 
