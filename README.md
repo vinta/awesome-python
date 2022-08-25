@@ -358,7 +358,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for data analyzing.*
 
-* [AWS Data Wrangler](https://github.com/awslabs/aws-data-wrangler) - Pandas on AWS.
+* [AWS SDK for pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 * [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
 * [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
