@@ -658,6 +658,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [more-itertools](https://github.com/erikrose/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 * [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 * [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+* [Pysha](https://github.com/Arshiatmi/Pysha) - A Python Framework that brings other languages benefits to python and it has other cool things too.
 
 ## GUI Development
 
