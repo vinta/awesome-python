@@ -930,6 +930,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [mamba](https://github.com/mamba-org/mamba) - The Fast Cross-Platform Package Manager.
+    * [micromamba](https://mamba.readthedocs.io/en/latest/installation.html#micromamba) - A tiny version of the mamba package manager.
 
 ## Package Repositories
 
