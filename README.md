@@ -998,7 +998,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
-    * [apistar](https://github.com/encode/apistar) - A smart Web API framework, designed for Python 3.
     * [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
     * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
     * [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
