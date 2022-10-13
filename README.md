@@ -1323,8 +1323,11 @@ Where to discover learning resources or new Python libraries.
 
 ## Books
 
-- [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
 - [Think Python](https://greenteapress.com/wp/think-python-2e/)
+- [Python Tips: Intermediate Python](https://book.pythontips.com/en/latest/index.html/)
+- [Python Notes for Professionals](https://goalkicker.com/PythonBook/)
+- [Automate the Boring Stuff With Python](https://automatetheboringstuff.com/)
+- [A Byte of Python](https://python.swaroopch.com/)
 
 ## Websites
 
