@@ -1330,8 +1330,8 @@ Where to discover learning resources or new Python libraries.
 
 * Tutorials
     * [Full Stack Python](https://www.fullstackpython.com/)
-    * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
     * [Libraries in Python](https://www.geeksforgeeks.org/libraries-in-python/)
+    * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
     * [Python Libraries](https://www.scaler.com/topics/python-libraries/)
     * [Real Python](https://realpython.com)
     * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
