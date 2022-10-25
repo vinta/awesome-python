@@ -1329,6 +1329,7 @@ Where to discover learning resources or new Python libraries.
 ## Websites
 
 * Tutorials
+    * [Applications of Python](https://www.scaler.com/topics/python/applications-of-python/)
     * [Full Stack Python](https://www.fullstackpython.com/)
     * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
     * [Real Python](https://realpython.com)
