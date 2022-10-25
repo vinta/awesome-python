@@ -227,6 +227,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [HermesCache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](https://libmemcached.org/libMemcached.html) interface.
 * [python-diskcache](http://www.grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
+* [ucache](https://github.com/coleifer/ucache) - Lightweight and efficient caching library (in-memory dict, KyotoTycoon, Redis, Kyoto Cabinet).
 
 ## ChatOps Tools
 
