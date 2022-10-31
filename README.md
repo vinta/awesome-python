@@ -189,6 +189,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [BitBake](http://www.yoctoproject.org/docs/1.6/bitbake-user-manual/bitbake-user-manual.html) - A make-like build tool for embedded Linux.
 * [buildout](http://www.buildout.org/en/latest/) - A build system for creating, assembling and deploying applications from multiple parts.
+* [Pants](https://www.pantsbuild.org/) - A fast, scalable, and flexible build system for multiple languages. Written in Python and Rust.
 * [PlatformIO](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 * [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 * [SCons](http://www.scons.org/) - A software construction tool.
