@@ -1225,6 +1225,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [facebook-sdk](https://github.com/mobolic/facebook-sdk) - Facebook Platform Python SDK.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
+* [svix](https://github.com/svix/svix-webhooks/tree/main/python) - Python library for interacting with the Svix API and verifying webhook signatures.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 
 ## URL Manipulation
