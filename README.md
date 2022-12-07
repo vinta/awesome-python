@@ -915,6 +915,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
     * [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
+    * [sqlmodel](https://github.com/tiangolo/sqlmodel) - A wrapper of [SQLAlchemy](https://www.sqlalchemy.org/) based on [pydantic](https://github.com/pydantic/pydantic) objects.
 * NoSQL Databases
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
     * [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
