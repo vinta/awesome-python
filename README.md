@@ -4,102 +4,104 @@ A curated list of awesome Python frameworks, libraries, software and resources.
 
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
-- [Awesome Python](#awesome-python)
-    - [Admin Panels](#admin-panels)
-    - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-    - [ASGI Servers](#asgi-servers)
-    - [Asynchronous Programming](#asynchronous-programming)
-    - [Audio](#audio)
-    - [Authentication](#authentication)
-    - [Build Tools](#build-tools)
-    - [Built-in Classes Enhancement](#built-in-classes-enhancement)
-    - [Caching](#caching)
-    - [ChatOps Tools](#chatops-tools)
-    - [CMS](#cms)
-    - [Code Analysis](#code-analysis)
-    - [Command-line Interface Development](#command-line-interface-development)
-    - [Command-line Tools](#command-line-tools)
-    - [Compatibility](#compatibility)
-    - [Computer Vision](#computer-vision)
-    - [Concurrency and Parallelism](#concurrency-and-parallelism)
-    - [Configuration](#configuration)
-    - [Cryptography](#cryptography)
-    - [Data Analysis](#data-analysis)
-    - [Data Validation](#data-validation)
-    - [Data Visualization](#data-visualization)
-    - [Database Drivers](#database-drivers)
-    - [Database](#database)
-    - [Date and Time](#date-and-time)
-    - [Debugging Tools](#debugging-tools)
-    - [Deep Learning](#deep-learning)
-    - [DevOps Tools](#devops-tools)
-    - [Distributed Computing](#distributed-computing)
-    - [Distribution](#distribution)
-    - [Documentation](#documentation)
-    - [Downloader](#downloader)
-    - [E-commerce](#e-commerce)
-    - [Editor Plugins and IDEs](#editor-plugins-and-ides)
-    - [Email](#email)
-    - [Enterprise Application Integrations](#enterprise-application-integrations)
-    - [Environment Management](#environment-management)
-    - [Files](#files)
-    - [Foreign Function Interface](#foreign-function-interface)
-    - [Forms](#forms)
-    - [Functional Programming](#functional-programming)
-    - [Game Development](#game-development)
-    - [Geolocation](#geolocation)
-    - [GUI Development](#gui-development)
-    - [Hardware](#hardware)
-    - [HTML Manipulation](#html-manipulation)
-    - [HTTP Clients](#http-clients)
-    - [Image Processing](#image-processing)
-    - [Implementations](#implementations)
-    - [Interactive Interpreter](#interactive-interpreter)
-    - [Internationalization](#internationalization)
-    - [Job Scheduler](#job-scheduler)
-    - [Logging](#logging)
-    - [Machine Learning](#machine-learning)
-    - [Miscellaneous](#miscellaneous)
-    - [Natural Language Processing](#natural-language-processing)
-    - [Network Virtualization](#network-virtualization)
-    - [News Feed](#news-feed)
-    - [ORM](#orm)
-    - [Package Management](#package-management)
-    - [Package Repositories](#package-repositories)
-    - [Penetration testing](#penetration-testing)
-    - [Permissions](#permissions)
-    - [Processes](#processes)
-    - [Recommender Systems](#recommender-systems)
-    - [Refactoring](#refactoring)
-    - [RESTful API](#restful-api)
-    - [Robotics](#robotics)
-    - [RPC Servers](#rpc-servers)
-    - [Science](#science)
-    - [Search](#search)
-    - [Serialization](#serialization)
-    - [Serverless Frameworks](#serverless-frameworks)
-    - [Shell](#shell)
-    - [Specific Formats Processing](#specific-formats-processing)
-    - [Static Site Generator](#static-site-generator)
-    - [Tagging](#tagging)
-    - [Task Queues](#task-queues)
-    - [Template Engine](#template-engine)
-    - [Testing](#testing)
-    - [Text Processing](#text-processing)
-    - [Third-party APIs](#third-party-apis)
-    - [URL Manipulation](#url-manipulation)
-    - [Video](#video)
-    - [Web Asset Management](#web-asset-management)
-    - [Web Content Extracting](#web-content-extracting)
-    - [Web Crawling](#web-crawling)
-    - [Web Frameworks](#web-frameworks)
-    - [WebSocket](#websocket)
-    - [WSGI Servers](#wsgi-servers)
+- [Awesome Python ](#awesome-python-)
+  - [Admin Panels](#admin-panels)
+  - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+  - [ASGI Servers](#asgi-servers)
+  - [Asynchronous Programming](#asynchronous-programming)
+  - [Audio](#audio)
+  - [Authentication](#authentication)
+  - [Build Tools](#build-tools)
+  - [Built-in Classes Enhancement](#built-in-classes-enhancement)
+  - [CMS](#cms)
+  - [Caching](#caching)
+  - [ChatOps Tools](#chatops-tools)
+  - [Code Analysis](#code-analysis)
+  - [Command-line Interface Development](#command-line-interface-development)
+  - [Command-line Tools](#command-line-tools)
+  - [Compatibility](#compatibility)
+  - [Computer Vision](#computer-vision)
+  - [Concurrency and Parallelism](#concurrency-and-parallelism)
+  - [Configuration](#configuration)
+  - [Cryptography](#cryptography)
+  - [Data Analysis](#data-analysis)
+  - [Data Validation](#data-validation)
+  - [Data Visualization](#data-visualization)
+  - [Database](#database)
+  - [Database Drivers](#database-drivers)
+  - [Date and Time](#date-and-time)
+  - [Debugging Tools](#debugging-tools)
+  - [Deep Learning](#deep-learning)
+  - [DevOps Tools](#devops-tools)
+  - [Distributed Computing](#distributed-computing)
+  - [Distribution](#distribution)
+  - [Documentation](#documentation)
+  - [Downloader](#downloader)
+  - [E-commerce](#e-commerce)
+  - [Editor Plugins and IDEs](#editor-plugins-and-ides)
+  - [Email](#email)
+  - [Enterprise Application Integrations](#enterprise-application-integrations)
+  - [Environment Management](#environment-management)
+  - [Files](#files)
+  - [Foreign Function Interface](#foreign-function-interface)
+  - [Forms](#forms)
+  - [Functional Programming](#functional-programming)
+  - [GUI Development](#gui-development)
+  - [GraphQL](#graphql)
+  - [Game Development](#game-development)
+  - [Geolocation](#geolocation)
+  - [HTML Manipulation](#html-manipulation)
+  - [HTTP Clients](#http-clients)
+  - [Hardware](#hardware)
+  - [Image Processing](#image-processing)
+  - [Implementations](#implementations)
+  - [Interactive Interpreter](#interactive-interpreter)
+  - [Internationalization](#internationalization)
+  - [Job Scheduler](#job-scheduler)
+  - [Logging](#logging)
+  - [Machine Learning](#machine-learning)
+  - [Microsoft Windows](#microsoft-windows)
+  - [Miscellaneous](#miscellaneous)
+  - [Natural Language Processing](#natural-language-processing)
+  - [Network Virtualization](#network-virtualization)
+  - [News Feed](#news-feed)
+  - [ORM](#orm)
+  - [Package Management](#package-management)
+  - [Package Repositories](#package-repositories)
+  - [Penetration Testing](#penetration-testing)
+  - [Permissions](#permissions)
+  - [Processes](#processes)
+  - [Recommender Systems](#recommender-systems)
+  - [Refactoring](#refactoring)
+  - [RESTful API](#restful-api)
+  - [Robotics](#robotics)
+  - [RPC Servers](#rpc-servers)
+  - [Science](#science)
+  - [Search](#search)
+  - [Serialization](#serialization)
+  - [Serverless Frameworks](#serverless-frameworks)
+  - [Shell](#shell)
+  - [Specific Formats Processing](#specific-formats-processing)
+  - [Static Site Generator](#static-site-generator)
+  - [Tagging](#tagging)
+  - [Task Queues](#task-queues)
+  - [Template Engine](#template-engine)
+  - [Testing](#testing)
+  - [Text Processing](#text-processing)
+  - [Third-party APIs](#third-party-apis)
+  - [URL Manipulation](#url-manipulation)
+  - [Video](#video)
+  - [Web Asset Management](#web-asset-management)
+  - [Web Content Extracting](#web-content-extracting)
+  - [Web Crawling](#web-crawling)
+  - [Web Frameworks](#web-frameworks)
+  - [WebSocket](#websocket)
+  - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
-    - [Books](#books)
-    - [Newsletters](#newsletters)
-    - [Podcasts](#podcasts)
-    - [Websites](#websites)
+  - [Books](#books)
+  - [Websites](#websites)
+  - [Newsletters](#newsletters)
+  - [Podcasts](#podcasts)
 - [Contributing](#contributing)
 
 ---
@@ -161,6 +163,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
     * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
     * [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+    * [whisper](https://github.com/openai/whisper) - Robust Speech Recognition via Large-Scale Weak Supervision.
 * Metadata
     * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
     * [eyeD3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
@@ -287,8 +290,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Useful CLI-based tools for productivity.*
 
 * Productivity Tools
-    * [copier](https://github.com/pykong/copier) - A library and command-line utility for rendering projects templates.
     * [cookiecutter](https://github.com/audreyr/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
+    * [copier](https://github.com/pykong/copier) - A library and command-line utility for rendering projects templates.
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [Invoke](https://github.com/pyinvoke/invoke#readme) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
@@ -310,8 +313,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for migrating from Python 2 to 3.*
 
-* [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
 * [modernize](https://github.com/PyCQA/modernize) - Modernizes Python code for eventual Python 3 migration.
+* [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
 * [six](https://pypi.org/project/six/) - Python 2 and 3 compatibility utilities.
 
 ## Computer Vision
@@ -418,8 +421,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0
     * [SuperSQLite](https://github.com/plasticityai/supersqlite) - A supercharged SQLite library built on top of [apsw](https://github.com/rogerbinns/apsw).
 * Other Relational Databases
-    * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
     * [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
+    * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     * [happybase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
@@ -664,6 +667,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with graphical user interface applications.*
 
 * [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
+* [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 * [Eel](https://github.com/ChrisKnott/Eel) - A library for making simple Electron-like offline HTML/JS GUI apps.
 * [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
@@ -678,7 +682,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
-* [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 
 ## GraphQL
 
@@ -760,12 +763,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
 * [pagan](https://github.com/daboth/pagan) - Retro identicon (Avatar) generation based on input string and hash.
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
-* [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 * [pygram](https://github.com/ajkumar25/pygram) - Instagram-like image filters.
 * [PyMatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
+* [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
-* [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 * [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
+* [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 * [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
@@ -838,12 +841,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
+* [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
-* [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 
 ## Microsoft Windows
 
@@ -1113,8 +1116,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Static site generator is a software that takes some text + templates as input and produces HTML files on the output.*
 
 * [lektor](https://github.com/lektor/lektor) - An easy to use static CMS and blog engine.
-* [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 * [makesite](https://github.com/sunainapai/makesite) - Simple, lightweight, and magic-free static site/blog generator (< 130 lines).
+* [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 * [nikola](https://github.com/getnikola/nikola) - A static website and blog generator.
 * [pelican](https://github.com/getpelican/pelican) - Static site generator that supports Markdown and reST syntax.
 
@@ -1367,4 +1370,6 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
+
+
 
