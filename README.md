@@ -352,7 +352,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [cryptography](https://cryptography.io/en/latest/) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 * [passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
+* [pycryptodome](https://pycryptodome.readthedocs.io/en/latest/) - PyCryptodome is a self-contained Python package of low-level cryptographic primitives.
 * [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [sagemath](https://www.sagemath.org/) - Creating a Viable Open Source Alternative to Magma, Maple, Mathematica, and MATLAB
 
 ## Data Analysis
 
