@@ -394,7 +394,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyGraphviz](https://pypi.org/project/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
-* [Streamlit](https://github.com/streamlit) - A fast way to build simple data apps.
+* [Streamlit](https://github.com/streamlit/streamlit) - A fast way to build simple data apps.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
 
 ## Database
