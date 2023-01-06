@@ -1333,6 +1333,7 @@ Where to discover learning resources or new Python libraries.
     * [Real Python](https://realpython.com)
     * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
     * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
+    * [Python Tutorial](https://www.scaler.com/topics/python/)
 * Libraries
     * [Awesome Python @LibHunt](https://python.libhunt.com/)
 * Others
