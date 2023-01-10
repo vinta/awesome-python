@@ -1103,9 +1103,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * YAML
     * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
 * CSV
+    * [csv](https://docs.python.org/3/library/csv.html) - (Python standard libray) Read and write tabular data in CSV format.
     * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
     * [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
+* TOML
+    * [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Provides an interface for parsing TOML
 
 ## Static Site Generator
 
