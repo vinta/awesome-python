@@ -161,6 +161,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
     * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
     * [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+    * [sounddevice](https://pypi.org/project/sounddevice/)- A library for playing and recording sound
 * Metadata
     * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
     * [eyeD3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
