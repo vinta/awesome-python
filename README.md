@@ -260,7 +260,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
-    * [pyannotate](https://github.com/dropbox/pyannotate) - Auto-generate PEP-484 annotations.
     * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
 ## Command-line Interface Development
