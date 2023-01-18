@@ -1,0 +1,9 @@
+.DS_Store
+
+*.py[co]
+
+docs/index.md
+site/
+
+# PyCharm IDE
+.idea
