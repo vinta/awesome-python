@@ -520,6 +520,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
+    * [bytewax](https://github.com/bytewax/bytewax) - Python stream processing framework built on [timely-dataflow](https://github.com/TimelyDataflow/timely-dataflow).
 
 ## Distribution
 
