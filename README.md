@@ -1295,6 +1295,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
+    * [pyscript](https://github.com/pyscript/pyscript) - A framework for creation of Python apps in the browser using Pyodide, WASM, and HTML.
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
 
