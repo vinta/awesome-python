@@ -303,6 +303,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
+    * [okcli](https://github.com/man-group/okcli) - Oracle CLI with autocompletion and syntax highlighting.
     * [saws](https://github.com/donnemartin/saws) - A Supercharged [aws-cli](https://github.com/aws/aws-cli).
 
 ## Compatibility
