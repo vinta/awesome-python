@@ -96,6 +96,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
+    - [Roadmaps](#roadmaps)
     - [Books](#books)
     - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
@@ -1319,6 +1320,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 # Resources
 
 Where to discover learning resources or new Python libraries.
+
+## Roadmaps
+
+- [Python Roadmap](https://roadmap.sh/python)
 
 ## Books
 
