@@ -1070,6 +1070,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
 * [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
+* [Serverless](https://www.serverless.com/) - The easy & open way to build serverless applications.
 
 ## Shell
 
@@ -1297,6 +1298,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+    * [FastAPI](https://fastapi.tiangolo.com/) - High performance, easy to learn, fast to code, ready for production
 
 ## WebSocket
 
