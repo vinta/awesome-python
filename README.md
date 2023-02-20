@@ -520,6 +520,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
+    * [Quix Streams](https://github.com/quixio/quix-streams) - A stream processing library originally designed for the McLaren Formula 1 racing team that can process high volumes of time-series data with up to nanosecond precision using Apache Kafka as a message broker.
 
 ## Distribution
 
