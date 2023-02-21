@@ -43,6 +43,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Enterprise Application Integrations](#enterprise-application-integrations)
     - [Environment Management](#environment-management)
     - [Files](#files)
+    - [Finance](#finance)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
     - [Functional Programming](#functional-programming)
@@ -625,6 +626,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+
+## Finance
+
+*Libraries for interacting with financial markets (stocks, options, forex, crypto, etc).*
+
+* [client-python](https://github.com/polygon-io/client-python) - Easy API and streaming for stock, options, forex and crypto market data.
 
 ## Foreign Function Interface
 
