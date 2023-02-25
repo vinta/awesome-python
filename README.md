@@ -862,7 +862,6 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
-- [django-extensions](https://github.com/django-extensions/django-extensions) - Global custom management extensions for the Django Framework.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 - [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
