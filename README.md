@@ -202,6 +202,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 * [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
 * [DottedDict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
+* [python-benedict](https://github.com/fabiocaccamo/python-benedict) - A dict subclass with keylist/keypath support, built-in I/O operations (base64, csv, ini, json, pickle, plist, query-string, toml, xls, xml, yaml), s3 support and many utilities.
 
 ## CMS
 
