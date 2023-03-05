@@ -626,6 +626,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+* [File Validator](https://github.com/file-validator/file-validator) - Python validation library to validate files using type, mime, extension, magic numbers and size that supports Django. ✅
 
 ## Foreign Function Interface
 
