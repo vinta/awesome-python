@@ -176,6 +176,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
     * [django-oauth-toolkit](https://github.com/evonove/django-oauth-toolkit) - OAuth 2 goodies for Django.
     * [oauthlib](https://github.com/idan/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
+    * [aioauth](https://github.com/aliev/aioauth) - Asynchronous OAuth 2.0 provider for Python 3.
     * [python-oauth2](https://github.com/joestump/python-oauth2) - A fully tested, abstract interface to creating OAuth clients and servers.
     * [python-social-auth](https://github.com/omab/python-social-auth) - An easy-to-setup social authentication mechanism.
 * JWT
