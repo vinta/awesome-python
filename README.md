@@ -1331,6 +1331,7 @@ Where to discover learning resources or new Python libraries.
     * [Full Stack Python](https://www.fullstackpython.com/)
     * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
     * [Real Python](https://realpython.com)
+    * [SecDim Play Python](https://play.secdim.com/game/python)
     * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
     * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
 * Libraries
