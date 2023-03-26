@@ -542,6 +542,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc)
 * [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 * [pycco](https://github.com/pycco-docs/pycco) - The literate-programming-style documentation generator.
+* [MkDocs](https://www.mkdocs.org/) - Markdown friendly documentation generator.
+* [pdoc3](https://pdoc3.github.io/pdoc/) - Automatic API documentation generator for Python modules.
+
 
 ## Downloader
 
@@ -1146,6 +1149,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for testing codebases and generating test data.*
 
 * Testing Frameworks
+    * [doctest](https://docs.python.org/3/library/doctest.html) - Python's built-in testing framework that parses inline documentation examples.
     * [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
     * [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2.
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
@@ -1213,7 +1217,23 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
     * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
     * [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
-
+* Natural Language Processing
+    * [NLTK](https://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
+    * [spaCy](https://spacy.io/) - An open-source software library for advanced natural language processing, written in Python and Cython.
+    * [gensim](https://radimrehurek.com/gensim/) - A Python library for topic modeling, document indexing and similarity retrieval with large corpora.
+    * [TextBlob](https://textblob.readthedocs.io/) - A Python (2 and 3) library for processing textual data. It provides a simple API for diving into common natural language processing (NLP) tasks such as part-of-speech tagging, noun phrase extraction, sentiment analysis, classification, translation, and more.
+    * [Polyglot](https://polyglot.readthedocs.io/) - A natural language pipeline that supports massive multilingual applications.
+* Regular Expressions
+    * [re](https://docs.python.org/3/library/re.html) - The standard Python library for working with regular expressions.
+    * [regex](https://pypi.org/project/regex/) - A Python library that provides regular expression matching with a syntax that is compatible with the Perl programming language.
+    * [PyParsing](http://pyparsing.wikispaces.com/) - A Python library for creating parsers for complex grammars, such as programming languages or configuration files.
+    * [parsimonious](https://github.com/erikrose/parsimonious) - A fast pure-Python PEG parser library, designed for parsing programming languages and other complex grammars.
+* String Manipulation
+    * [py_stringmatching](https://github.com/anhaidgroup/py_stringmatching) - A Python library for string matching and similarity measurement, including various edit distance methods, token-based measures, and phonetic algorithms.
+    * [FuzzyWuzzy](https://github.com/seatgeek/fuzzywuzzy) - A Python library for fuzzy string matching, built on top of `difflib`.
+    * [Unidecode](https://pypi.org/project/Unidecode/) - A Python library that provides ASCII transliterations of Unicode text.
+    * [python-Levenshtein](https://github.com/ztane/python-Levenshtein/) - A Python extension that provides fast implementation of the Levenshtein distance (edit distance) calculation.
+    
 ## Third-party APIs
 
 *Libraries for accessing third party services APIs. Also see [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
