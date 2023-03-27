@@ -1132,6 +1132,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 * [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
 * [rq](https://github.com/rq/rq) - Simple job queues for Python.
+* [taskiq](https://github.com/taskiq-python/taskiq) - An asynchronous task queue with multiple queue backends and full asyncio support.
 
 ## Template Engine
 
