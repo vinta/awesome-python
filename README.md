@@ -1347,6 +1347,7 @@ Where to discover learning resources or new Python libraries.
 * [Pycoder's Weekly](http://pycoders.com/)
 * [Python Tricks](https://realpython.com/python-tricks/)
 * [Python Weekly](http://www.pythonweekly.com/)
+* [Python Weekly Recap](https://discu.eu/weekly/python/)
 
 ## Podcasts
 
