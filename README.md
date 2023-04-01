@@ -1340,6 +1340,7 @@ Where to discover learning resources or new Python libraries.
     * [Python ZEEF](https://python.zeef.com/alan.richmond)
     * [Pythonic News](https://news.python.sc/)
     * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
+    * [Python Developer Roadmap](https://roadmap.sh/python)
 
 ## Newsletters
 
