@@ -596,6 +596,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
     * [salmon](https://github.com/moggers87/salmon) - A Python Mail Server.
 * Clients
+    * [smtplib](https://docs.python.org/3/library/smtplib.html) - (Python standard library) Provides an SMTP client session object to send emails over the internet.
     * [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
     * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 * Others
