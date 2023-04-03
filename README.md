@@ -872,6 +872,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 - General
     * [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
+    * [Haystack](https://github.com/deepset-ai/haystack) - A framework for building NLP applications (like semantic search, agents and question-answering) with Transformers and LLMs.
     * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
     * [nltk](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
     * [pattern](https://github.com/clips/pattern) - A web mining module.
