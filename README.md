@@ -124,7 +124,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Algorithms
     * [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
-    * [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structure and algorithms for coding interviews.
+    * [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structures and algorithms for coding interviews.
     * [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
     * [TheAlgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
 * Design Patterns
