@@ -1192,7 +1192,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
     * [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
     * [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
-    * [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
+    * [thefuzz](https://github.com/seatgeek/thefuzz) - Fuzzy String Matching.
     * [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
     * [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
     * [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
