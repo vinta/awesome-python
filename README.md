@@ -559,6 +559,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks and libraries for e-commerce and payments.*
 
 * [alipay](https://github.com/lxneng/alipay) - Unofficial Alipay API for Python.
+* [Stripe](https://github.com/stripe/stripe-python) - Stripe API for Python.
 * [Cartridge](https://github.com/stephenmcd/cartridge) - A shopping cart app built using the Mezzanine.
 * [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
 * [django-shop](https://github.com/awesto/django-shop) - A Django based shop system.
