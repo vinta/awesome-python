@@ -325,6 +325,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [SimpleCV](https://github.com/sightmachine/SimpleCV) - An open source framework for building computer vision applications.
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
+* [Media Pipe](https://developers.google.com/mediapipe/solutions/guide) - MediaPipe Solutions provides a suite of libraries and tools for you to quickly apply artificial intelligence (AI) and machine learning (ML) techniques in your applications.
 
 ## Concurrency and Parallelism
 
