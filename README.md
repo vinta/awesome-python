@@ -485,8 +485,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 * [DI-engine](https://github.com/opendilab/DI-engine) - A generalized decision intelligence engine for PyTorch and JAX.
 
-
-
 ## DevOps Tools
 
 *Software and libraries for DevOps.*
