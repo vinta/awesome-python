@@ -462,6 +462,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Profiler
     * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
     * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
+    * [memray](https://github.com/bloomberg/memray) - A memory profiler used by Bloomberg to analyze the captured memory usage data and generate detailed reports.
     * [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
     * [pyflame](https://github.com/uber/pyflame) - A ptracing profiler For Python.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
