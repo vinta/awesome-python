@@ -203,7 +203,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 * [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
 * [DottedDict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
-* [pydantic](https://github.com/samuelcolvin/pydantic/) - Data validation and settings management using Python type hinting.  Compatible with pure Python dataclasses.
 
 ## CMS
 
@@ -373,6 +372,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 * [colander](https://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
 * [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
+* [pydantic](https://github.com/samuelcolvin/pydantic/) - Data validation and settings management using Python type hinting.  Compatible with pure Python dataclasses.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
