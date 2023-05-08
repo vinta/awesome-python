@@ -930,6 +930,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [deptry](https://github.com/fpgmaas/deptry) - A command line utility to check for unused, missing and transitive dependencies in a Python project.
 
 ## Package Repositories
 
