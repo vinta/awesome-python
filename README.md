@@ -435,7 +435,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for generating and managing migrations.*
 
-* [alembic](https://alembic.sqlalchemy.org/en/latest/) - Alembic is a lightweight database migration tool for usage with SQLAlchemy.
+* [alembic](https://alembic.sqlalchemy.org/en/latest/) - Alembic provides for the creation, management, and invocation of change management scripts for a relational database.
 
 ## Date and Time
 
