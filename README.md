@@ -17,6 +17,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [ChatOps Tools](#chatops-tools)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
+    - [Code Snapshot](#code-snapshot)
     - [Command-line Interface Development](#command-line-interface-development)
     - [Command-line Tools](#command-line-tools)
     - [Compatibility](#compatibility)
@@ -262,6 +263,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
     * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
+
+## Code Snapshot
+
+*Libraries for converting code into snapshot images*
+
+* Code Snapshot
+    * [code-snapshot](https://github.com/ainomic/code-snapshot) - Turn your code snippets into PNG images similar to the snapshot images.
 
 ## Command-line Interface Development
 
