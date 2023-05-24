@@ -865,6 +865,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [mapfun](https://github.com/zakarialaoui10/mapfun/blob/main/Python/README.md) - A function that applies a mapping function to an infinite number of input elements, with options to skip certain elements and selectively apply the mapping to keys and/or values of objects.
 
 ## Natural Language Processing
 
