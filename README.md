@@ -429,6 +429,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
 * Asynchronous Clients
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
+* Oracle
+    * [python-oracledb](https://github.com/oracle/python-oracledb) - Python driver for Oracle Database conforming to the Python DB API 2.0 specification
+    * [python-cx_Oracle](https://github.com/oracle/python-cx_Oracle) - Python interface to Oracle Database now superseded by python-oracledb
 
 ## Date and Time
 
