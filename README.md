@@ -1156,6 +1156,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [tox](https://tox.readthedocs.io/en/latest/) - Auto builds and tests distributions in multiple Python versions
+    * [pytest-watcher](https://github.com/olzhasar/pytest-watcher) - Automatically rerun `pytest` whenever your code changes
 * GUI / Web Testing
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
     * [PyAutoGUI](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
