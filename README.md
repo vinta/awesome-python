@@ -353,6 +353,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 * [passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
 * [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [M2Crypto](https://gitlab.com/m2crypto/m2crypto) - A fast library built as a wrapper for OpenSSL
 
 ## Data Analysis
 
