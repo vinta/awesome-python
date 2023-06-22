@@ -42,7 +42,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Email](#email)
     - [Enterprise Application Integrations](#enterprise-application-integrations)
     - [Environment Management](#environment-management)
-    - [Files](#files)
+    - [Files](#file)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
     - [Functional Programming](#functional-programming)
@@ -153,6 +153,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Audio
     * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
+    * [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
     * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
     * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
@@ -614,7 +615,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
-## Files
+## File
 
 *Libraries for file manipulation and MIME type detection.*
 
@@ -1069,7 +1070,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks for developing serverless Python code.*
 
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
-* [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
+* [Zappa](https://github.com/zappa/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
 
 ## Shell
 
