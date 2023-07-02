@@ -183,7 +183,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
     * [python-jwt](https://github.com/davedoesdev/python-jwt) - A module for generating and verifying JSON Web Tokens.
+      
+## Autonomous Agents
 
+*Libraries for automating user prompts*
+
+* [DemoGPT](https://github.com/melih-unsal/DemoGPT) - DemoGPT enables you to create quick demos by just using prompts.
+  
 ## Build Tools
 
 *Compile software from source code.*
