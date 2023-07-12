@@ -1,6 +1,6 @@
 # Contributing
 
-Your contributions are always welcome!
+**Your contributions are always welcome!**
 
 ## Guidelines
 
