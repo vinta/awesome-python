@@ -1,0 +1,31 @@
+name: 💡 General Feature Request
+description: Have a new idea/feature for LinkFree? Please suggest!
+title: "[FEATURE] <description>"
+labels: ["⭐ goal: addition","🚦 status: awaiting triage"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A brief description of the enhancement you propose, also include what you tried and what worked.
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Please add screenshots if applicable
+    validations:
+      required: false
+  - type: textarea
+    id: extrainfo
+    attributes:
+      label: Additional information
+      description: Is there anything else we should know about this idea?
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        You can also join our Discord community [here]().
+        Feel free to check out other cool repositories [here](https://github.com/vinta?tab=overview&from=2015-12-01&to=2015-12-31).
