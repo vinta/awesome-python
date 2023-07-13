@@ -783,6 +783,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [IronPython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C#.
 * [Jython](https://hg.python.org/jython) - Implementation of Python programming language written in Java for the JVM.
 * [MicroPython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
+* [CircuitPython](https://circuitpython.org/) - Python implementation for microcontrollers.
 * [Numba](http://numba.pydata.org/) - Python JIT compiler to LLVM aimed at scientific Python.
 * [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python.
 * [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
