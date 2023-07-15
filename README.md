@@ -152,6 +152,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for manipulating audio and its metadata.*
 
 * Audio
+    * [Django Audio Validator](https://github.com/rzashakeri/django-audio-validator) - a Audio Validator For Django With MIME type checking And Extension 
     * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
     * [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
@@ -627,6 +628,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+* [File Validator](https://github.com/file-validator/file-validator) - Python validation library to validate files using type, mime, extension, magic numbers and size that supports Django. ✅
 
 ## Foreign Function Interface
 
