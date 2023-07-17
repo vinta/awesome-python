@@ -554,6 +554,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [s4cmd](https://github.com/bloomreach/s4cmd) - Super S3 command line tool, good for higher performance.
 * [you-get](https://you-get.org/) - A YouTube/Youku/Niconico video downloader written in Python 3.
 * [youtube-dl](https://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
+* [pytube](https://pypi.org/project/pytube/) - pytube is a genuine, lightweight, dependency-free Python library (and command-line utility) for downloading YouTube videos.
 
 ## E-commerce
 
