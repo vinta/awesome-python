@@ -7,7 +7,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Awesome Python](#awesome-python)
     - [Admin Panels](#admin-panels)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-    - [ASGI Servers](#asgi-servers)
+    - [ASGI](#asgi)
     - [Asynchronous Programming](#asynchronous-programming)
     - [Audio](#audio)
     - [Authentication](#authentication)
@@ -132,12 +132,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
     * [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
 
-## ASGI Servers
+## ASGI 
 
-*[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers.*
+*[ASGI](https://asgi.readthedocs.io/en/latest/)  (Asynchronous Server Gateway Interface) is a communication protocol that offers async capabilities for python frameworks*
 
-* [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
-* [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+* ASGI Servers
+    * [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
+    * [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+
+* ASGI Frameworks
+    * [Starlette](https://github.com/vinta/awesome-python.git) - A lightweight ASGI framework/toolkit
 
 ## Asynchronous Programming
 
