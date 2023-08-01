@@ -885,7 +885,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [funNLP](https://github.com/fighting41love/funNLP) - A collection of tools and datasets for Chinese NLP.
     * [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
     * [pkuseg-python](https://github.com/lancopku/pkuseg-python) - A toolkit for Chinese word segmentation in various domains.
-    * [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
+    * [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text. 
+- Persian
+    * [hazm](https://github.com/roshan-research/hazm) - Persian NLP Toolkit.
 
 ## Network Virtualization
 
