@@ -268,7 +268,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for building command-line applications.*
 
 * Command-line Application Development
-    * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
+    * [cement](http://builtoncement.com/) - CLI Application Framework for Pytho
     * [click](http://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
