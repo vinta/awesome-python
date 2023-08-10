@@ -117,6 +117,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 * [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
 * [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
+* [django-jazzmin](https://github.com/farridav/django-jazzmin) -  Jazz up your django admin interface, with plenty of things you can easily customise, including a built-in UI customizer
 
 ## Algorithms and Design Patterns
 
