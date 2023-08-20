@@ -364,6 +364,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [Polars](https://www.pola.rs) - A lightning fast DataFrame library/in-memory query engine. Its embarrassingly parallel execution, cache efficient algorithms.
 
 ## Data Validation
 
@@ -395,6 +396,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
 * [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+* [Plotly](https://plotly.com/python/) - graphing library makes interactive, publication-quality graphs
 
 ## Database
 
