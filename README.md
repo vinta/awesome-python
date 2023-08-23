@@ -56,6 +56,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Implementations](#implementations)
     - [Interactive Interpreter](#interactive-interpreter)
     - [Internationalization](#internationalization)
+    - [Javascript](#javascript)
     - [Job Scheduler](#job-scheduler)
     - [Logging](#logging)
     - [Machine Learning](#machine-learning)
@@ -805,6 +806,22 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
 * [PyICU](https://github.com/ovalhub/pyicu) - A wrapper of International Components for Unicode C++ library ([ICU](http://site.icu-project.org/)).
+
+## Javascript
+
+*Libraries for interpolating with javascript code.*
+
+* Duktape
+    * [dukpy](https://github.com/amol-/dukpy) - Simple JavaScript interpreter for Python.
+* Node
+    * [JSPyBridge](https://github.com/extremeheat/JSPyBridge) - 🌉. Bridge to interoperate Node.js and Python.
+* SpiderMonkey
+    * [PythonMonkey](https://github.com/Distributive-Network/PythonMonkey) - A Mozilla SpiderMonkey JavaScript engine embedded into the Python VM, using the Python engine to provide the JS host environment.
+* Transpiler
+    * [Js2Py](https://github.com/PiotrDabkowski/Js2Py/) - JavaScript to Python Translator & JavaScript interpreter written in 100% pure Python🚀
+* V8
+    * [PyMiniRacer](https://github.com/sqreen/PyMiniRacer) - PyMiniRacer is a V8 bridge in Python.
+    * [STPyV8](https://github.com/cloudflare/stpyv8) - Python 3 and JavaScript interoperability. Successor To PyV8.
 
 ## Job Scheduler
 
