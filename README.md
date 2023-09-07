@@ -1283,6 +1283,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [wiki-link](https://github.com/tranlyvu/wiki-link) - A multiprocessing web-scraping application to scrape the wiki pages.
 
 ## Web Frameworks
 
