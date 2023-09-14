@@ -1,6 +1,7 @@
 .DS_Store
 
 *.py[co]
+*.log
 
 docs/index.md
 site/
