@@ -199,7 +199,7 @@ def readme_process_line(index: int, line: str, pkname: str, pkurl: str, pkdesc: 
         "* [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery. **INSTALL**: `pip install flower`"
         If None is returned, the original line will remain intact.
     """
-    logging.info(f'{TAB}🔵 Processing LINE {index:03} :: PK NAME = {pkname} :: PK URL = {pkurl} ◦ ◦ ◦')
+    logging.info(f'{TAB}🔵 Processing LINE {index:04} :: PK NAME = {pkname} :: PK URL = {pkurl} ◦ ◦ ◦')
     
     # use 'naive' approach: try downloading the package page from PyPI and parsing its content
 
