@@ -140,7 +140,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Asynchronous Programming
 
-* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks. **INSTALL**: `pip install asyncio`
+* [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
     - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
 * [trio](https://github.com/python-trio/trio) - A friendly library for async concurrency and I/O. **INSTALL**: `pip install trio`
 * [Twisted](https://twistedmatrix.com/trac/) - An event-driven networking engine. **INSTALL**: `pip install Twisted`
@@ -200,7 +200,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions. **INSTALL**: `pip install attrs`
 * [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality.. **INSTALL**: `pip install bidict`
 * [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access. **INSTALL**: `pip install python-box`
-* [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes. **INSTALL**: `pip install dataclasses`
+* [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
 * [DottedDict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation. **INSTALL**: `pip install dotteddict`
 
 ## CMS
@@ -295,7 +295,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [percol](https://github.com/mooz/percol) - Adds flavor of interactive selection to the traditional pipe concept on UNIX. **INSTALL**: `pip install percol`
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command. **INSTALL**: `pip install thefuck`
     * [tmuxp](https://github.com/tony/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager. **INSTALL**: `pip install tmuxp`
-    * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
+    * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier. **INSTALL**: `pip install trypackage`
 * CLI Enhancements
     * [httpie](https://github.com/jakubroztocil/httpie) - A command line HTTP client, a user-friendly cURL replacement. **INSTALL**: `pip install httpie`
     * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting. **INSTALL**: `pip install iredis`
@@ -320,7 +320,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [EasyOCR](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported. **INSTALL**: `pip install easyocr`
 * [Face Recognition](https://github.com/ageitgey/face_recognition) - Simple facial recognition library. **INSTALL**: `pip install face-recognition`
 * [Kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch. **INSTALL**: `pip install kornia`
-* [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
+* [OpenCV](https://opencv.org/) - Open Source Computer Vision Library. **INSTALL**: `pip install opencv-python`
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr). **INSTALL**: `pip install pytesseract`
 * [SimpleCV](https://github.com/sightmachine/SimpleCV) - An open source framework for building computer vision applications. **INSTALL**: `pip install SimpleCV`
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR. **INSTALL**: `pip install tesserocr`
@@ -332,7 +332,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
 * [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support. **INSTALL**: `pip install eventlet`
 * [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet). **INSTALL**: `pip install gevent`
-* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism. **INSTALL**: `pip install multiprocessing`
+* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
 * [scoop](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python. **INSTALL**: `pip install scoop`
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of `asyncio` event loop on top of `libuv`. **INSTALL**: `pip install uvloop`
 
@@ -341,7 +341,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for storing and parsing configuration options.*
 
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation. **INSTALL**: `pip install configobj`
-* [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser. **INSTALL**: `pip install configparser`
+* [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications. **INSTALL**: `pip install Hydra`
 * [profig](https://profig.readthedocs.io/en/latest/) - Config from multiple formats with value conversion. **INSTALL**: `pip install profig`
 * [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code. **INSTALL**: `pip install python-decouple`
@@ -621,7 +621,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html). **INSTALL**: `pip install path.py`
-* [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) An cross-platform, object-oriented path library. **INSTALL**: `pip install pathlib`
+* [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) An cross-platform, object-oriented path library.
 * [PyFilesystem2](https://github.com/pyfilesystem/pyfilesystem2) - Python's filesystem abstraction layer.
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library. **INSTALL**: `pip install python-magic`
 * [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations. **INSTALL**: `pip install Unipath`
@@ -826,7 +826,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for generating and working with logs.*
 
 * [logbook](http://logbook.readthedocs.io/en/stable/) - Logging replacement for Python. **INSTALL**: `pip install Logbook`
-* [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python. **INSTALL**: `pip install logging`
+* [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 * [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python. **INSTALL**: `pip install loguru`
 * [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
 * [structlog](https://www.structlog.org/en/stable/) - Structured logging made easy. **INSTALL**: `pip install structlog`
@@ -1151,7 +1151,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2. **INSTALL**: `pip install nose2`
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool. **INSTALL**: `pip install pytest`
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
-    * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework. **INSTALL**: `pip install unittest`
+    * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner. **INSTALL**: `pip install green`
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD. **INSTALL**: `pip install mamba`
@@ -1168,7 +1168,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module. **INSTALL**: `pip install freezegun`
     * [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+. **INSTALL**: `pip install httmock`
     * [httpretty](https://github.com/gabrielfalcao/HTTPretty) - HTTP request mock tool for Python. **INSTALL**: `pip install httpretty`
-    * [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library. **INSTALL**: `pip install mock`
+    * [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
     * [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support. **INSTALL**: `pip install mocket`
     * [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library. **INSTALL**: `pip install responses`
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.

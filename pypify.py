@@ -96,6 +96,8 @@ def readme_process(readme: str, line_callback: Optional[Callable] = None) -> str
     lines = readme.split(NL)
     # for each line
     for i, line in enumerate(lines):
+        # skip standard Python packages
+        if '(Python standard library)' in line: continue
         # parse using the precompiled regex pattern for packages
         m = re.match(RPATTERN, line)
         # if not a package line, go to next line
@@ -203,8 +205,13 @@ def readme_process_line(index: int, line: str, pkname: str, pkurl: str, pkdesc: 
     
     # use 'naive' approach: try downloading the package page from PyPI and parsing its content
 
+    # if line already contains pip command, return None
+    if '**INSTALL**:' in line:
+        logging.info(f'{TAB*2}🟢 Already pypified!')
+        return None
+    
     # make at least two options for package name to locate on PyPI
-    pks = [pkname, f'python-{pkname}']
+    pks = [pkname, f'python-{pkname}', f'{pkname}-python']
     # try scraping the pip one-liner
     pipcmd = parse_pypi(pks, pkurl)
     if pipcmd:
@@ -218,7 +225,7 @@ def readme_process_line(index: int, line: str, pkname: str, pkurl: str, pkdesc: 
 
 def main():
     # read README.md to string
-    with open(README, 'r') as read_me_file:
+    with open(README, 'r', encoding=ENC) as read_me_file:
         read_me = read_me_file.read()
 
     # split content: header (TOC), body (libraries proper), footer (everything from Resources section to end)
@@ -241,7 +248,7 @@ def main():
 
     # write back to README.md
     logging.info('🟠 WRITING TO README ◦ ◦ ◦')
-    with open(README, 'w', encoding='utf-8') as wfile:
+    with open(README, 'w', encoding=ENC) as wfile:
         wfile.write(read_me)
     logging.info(f'{TAB}🟢 DONE')
 
