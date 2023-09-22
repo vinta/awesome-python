@@ -522,7 +522,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
-    * [FastStream](https://github.com/airtai/faststream) - All in one stream processing framework using [Kafka Streams](https://kafka.apache.org/documentation/streams/) or [RabbitMQ](https://www.rabbitmq.com/).
+    * [FastStream](https://github.com/airtai/faststream) - All in one stream processing framework currently supporting [Kafka](https://kafka.apache.org/) or [RabbitMQ](https://www.rabbitmq.com/).
 
 ## Distribution
 
