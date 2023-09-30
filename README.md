@@ -484,6 +484,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 * [lightning](https://github.com/Lightning-AI/lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
+* [Scikit-Learn](https://github.com/scikit-learn/scikit-learn) - For classical machine learning algorithms, like spam detection, image recognition, prediction-making, and customer segmentation. 
 
 ## DevOps Tools
 
