@@ -42,7 +42,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Email](#email)
     - [Enterprise Application Integrations](#enterprise-application-integrations)
     - [Environment Management](#environment-management)
-    - [Files](#files)
+    - [Files](#file)
     - [Foreign Function Interface](#foreign-function-interface)
     - [Forms](#forms)
     - [Functional Programming](#functional-programming)
@@ -153,6 +153,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Audio
     * [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
+    * [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
     * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
     * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
@@ -482,6 +483,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [SerpentAI](https://github.com/SerpentAI/SerpentAI) - Game agent framework. Use any video game as a deep learning sandbox.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
+* [lightning](https://github.com/Lightning-AI/lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
 
 ## DevOps Tools
 
@@ -614,7 +616,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
-## Files
+## File
 
 *Libraries for file manipulation and MIME type detection.*
 
@@ -785,7 +787,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python.
 * [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
 * [PyPy](https://foss.heptapod.net/pypy/pypy) - A very fast and compliant implementation of the Python language.
-* [Pyston](https://github.com/dropbox/pyston) - A Python implementation using JIT techniques.
+* [Pyston](https://github.com/pyston/pyston/) - A Python implementation using JIT techniques.
 * [Stackless Python](https://github.com/stackless-dev/stackless) - An enhanced version of the Python programming language.
 
 ## Interactive Interpreter
@@ -1069,7 +1071,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks for developing serverless Python code.*
 
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
-* [Zappa](https://github.com/Miserlou/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
+* [Zappa](https://github.com/zappa/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
 
 ## Shell
 
