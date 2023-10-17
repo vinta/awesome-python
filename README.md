@@ -484,6 +484,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 * [joliGEN](https://github.com/jolibrain/joliGEN) - An integrated framework for training custom generative AI image-to-image models.
+* [lightning](https://github.com/Lightning-AI/lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
 
 ## DevOps Tools
 
