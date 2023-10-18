@@ -388,6 +388,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
     * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
+* [Holoviews](https://github.com/holoviz/holoviews) - A high-level plotting library supporting many backends
 * [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
