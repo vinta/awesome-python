@@ -509,6 +509,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Others
     * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
 
+*Monitoring tools.*
+
+* [celery-exporter](https://github.com/danihodovic/celery-exporter) - A Prometheus exporter for Celery metrics.
+
 ## Distributed Computing
 
 *Frameworks and libraries for Distributed Computing.*
