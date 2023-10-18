@@ -1,0 +1,31 @@
+# A remote Thoth service to talk to:
+host: khemenu.thoth-station.ninja
+
+# Configure TLS verification for communication with remote Thoth instance:
+tls_verify: true
+
+# Format of requirements file, supported are "pip" and "pipenv":
+requirements_format: pip
+
+#
+# Configuration of bots:
+#
+managers:
+  - name: version
+    configuration:
+      # A list of maintainers (GitHub or GitLab accounts) of this repository:
+      maintainers: ["vinta"]
+      # A list of assignees to which the opened pull requests and issues should
+      # be assigned to:
+      assignees: ["vinta"]
+      # Labels for issues and pull requests:
+      labels:
+        - bot
+      # Automatically maintain a changelog file stating features of new
+      # releases:
+      changelog_file: true
+      # Use AI/ML to group messages in a smart way.
+      changelog_smart: true
+  - name: update
+    configuration:
+      labels: [bot]
