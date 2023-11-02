@@ -364,6 +364,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
 * [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
 * [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [PandasTable](https://github.com/dmnfarrell/pandastable) - A library provides a table widget for Tkinter with plotting and data manipulation functionality.
 
 ## Data Validation
 
