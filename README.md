@@ -444,6 +444,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [PyTime](https://github.com/shinux/PyTime) - An easy-to-use Python module which aims to operate date/time/datetime by string.
 * [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 * [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
+* [pytime-manager](https://github.com/xzripper/time_manager) - Improves work with time in Python. Includes a unit converter and over 10 functions for enhanced work with time. Also supports asynchronous mode.
 
 ## Debugging Tools
 
