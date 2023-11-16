@@ -269,9 +269,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Command-line Application Development
     * [cement](https://builtoncement.com/) - CLI Application Framework for Python.
-    * [click](https://click.pocoo.org/dev/) - A package for creating beautiful command line interfaces in a composable way.
+    * [click](https://palletsprojects.com/p/click/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
-    * [docopt](https://docopt.org/) - Pythonic command line arguments parser.
+    * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit) - A library for building powerful interactive command lines.
 * Terminal Rendering
