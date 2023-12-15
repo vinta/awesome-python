@@ -1299,6 +1299,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+    * [Robyn](https://github.com/sparckles/robyn) - A high-performance, community-driven, and innovator-friendly web framework with a Rust runtime.
 
 ## WebSocket
 
