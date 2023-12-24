@@ -1305,7 +1305,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to interact with the [HTML DOM](https://en.wikipedia.org/wiki/HTML_DOM)*
 
-*[Brython](https://github.com/brython-dev/brython) - Allow you to use Python instead of Javascript.
+* [Brython](https://github.com/brython-dev/brython) - Allow you to use Python instead of Javascript.
 
 ## WebSocket
 
