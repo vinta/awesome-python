@@ -93,6 +93,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Content Extracting](#web-content-extracting)
     - [Web Crawling](#web-crawling)
     - [Web Frameworks](#web-frameworks)
+    - [Web Frontend](#web-frontend)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
