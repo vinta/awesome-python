@@ -1299,6 +1299,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+ 
+## Web Frontend
+
+*Libraries to interact with the [HTML DOM](https://en.wikipedia.org/wiki/HTML_DOM)*
+
+*[Brython](https://github.com/brython-dev/brython) - Allow you to use Python instead of Javascript.
 
 ## WebSocket
 
