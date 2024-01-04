@@ -696,7 +696,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Arcade](https://api.arcade.academy/en/latest/) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
 * [Cocos2d](http://cocos2d.org/) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications.
-* [Fusion Engine](https://fusion-engine.tech/) - Fusion is a game engine focus on ease of use. It's easy, but still very powerfull.
+* [Fusion Engine](https://fusion-engine.tech/) - Fusion is a game engine with focus on ease of use. It's easy, but still very powerfull.
 * [Harfang3D](http://www.harfang3d.com) - Python framework for 3D, VR and game development.
 * [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney.
 * [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
