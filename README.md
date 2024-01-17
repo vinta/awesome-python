@@ -493,6 +493,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
     * [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
     * [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
+    * [pulumi](https://www.pulumi.com/) - Build, manage, and scale your cloud infrastructure as code.
     * [pyinfra](https://github.com/Fizzadar/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
     * [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * SSH-style Deployment
