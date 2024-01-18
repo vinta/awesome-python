@@ -931,6 +931,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [instld](https://github.com/pomponchik/instld) - The most simple Python dependency management.
 
 ## Package Repositories
 
@@ -1368,4 +1369,3 @@ I will keep some pull requests open if I'm not sure whether those libraries are 
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
-
