@@ -713,6 +713,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
 * [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
+* [IP2Location.io Python SDK](https://github.com/ip2location/ip2location-io-python) - Python SDK to helps user to query IP2Location.io API.
 
 ## HTML Manipulation
 
