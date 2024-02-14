@@ -484,7 +484,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 * [lightning](https://github.com/Lightning-AI/lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
-* [MindsDB](https://github.com/mindsdb/mindsdb) - allows you to effortlessly develop,train and deploy state-of-the-art machine learning models using standard queries
+* [MindsDB](https://github.com/mindsdb/mindsdb) - Allows you to effortlessly develop,train and deploy state-of-the-art machine learning models using standard queries.
 
 ## DevOps Tools
 
