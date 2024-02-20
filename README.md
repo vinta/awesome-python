@@ -481,6 +481,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mxnet](https://github.com/dmlc/mxnet) - A deep learning framework designed for both efficiency and flexibility.
 * [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 * [SerpentAI](https://github.com/SerpentAI/SerpentAI) - Game agent framework. Use any video game as a deep learning sandbox.
+* [Synapses](https://github.com/mrdimosthenis/Synapses) - A lightweight library for neural networks that runs anywhere.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 * [lightning](https://github.com/Lightning-AI/lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
