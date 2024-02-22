@@ -249,7 +249,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flake8](https://pypi.org/project/flake8/) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
     * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
-    * [pylint](https://www.pylint.org/) - A fully customizable source code analyzer.
+    * [pylint](https://pylint.readthedocs.io/en/latest/) - A fully customizable source code analyzer.
     * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) - The strictest and most opinionated python linter ever.
 * Code Formatters
     * [black](https://github.com/python/black) - The uncompromising Python code formatter.
@@ -269,7 +269,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Command-line Application Development
     * [cement](https://builtoncement.com/) - CLI Application Framework for Python.
-    * [click](https://palletsprojects.com/p/click/) - A package for creating beautiful command line interfaces in a composable way.
+    * [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
