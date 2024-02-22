@@ -20,7 +20,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Command-line Interface Development](#command-line-interface-development)
     - [Command-line Tools](#command-line-tools)
     - [Computer Vision](#computer-vision)
-    - [Concurrency and Parallelism](#concurrency-and-parallelism)
     - [Configuration](#configuration)
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
@@ -137,11 +136,17 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Asynchronous Programming
 
+*Libraries for asynchronous, concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
+
 * [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
     - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
+* [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
+* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
 * [trio](https://github.com/python-trio/trio) - A friendly library for async concurrency and I/O.
 * [twisted](https://github.com/twisted/twisted) - An event-driven networking engine.
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
+* [eventlet](https://github.com/eventlet/eventlet) - Asynchronous framework with WSGI support.
+* [gevent](https://github.com/gevent/gevent) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
 
 ## Audio
 
@@ -292,23 +297,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for Computer Vision.*
 
 * [EasyOCR](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
-* [Face Recognition](https://github.com/ageitgey/face_recognition) - Simple facial recognition library.
 * [Kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
 * [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
-* [SimpleCV](https://github.com/sightmachine/SimpleCV) - An open source framework for building computer vision applications.
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
-
-## Concurrency and Parallelism
-
-*Libraries for concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
-
-* [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
-* [eventlet](http://eventlet.net/) - Asynchronous framework with WSGI support.
-* [gevent](http://www.gevent.org/) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
-* [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
-* [scoop](https://github.com/soravux/scoop) - Scalable Concurrent Operations in Python.
-* [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast implementation of `asyncio` event loop on top of `libuv`.
 
 ## Configuration
 
