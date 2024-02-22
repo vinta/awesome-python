@@ -224,10 +224,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [beaker](https://github.com/bbangert/beaker) - A WSGI middleware for sessions and caching.
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
-* [dogpile.cache](http://dogpilecache.readthedocs.io/en/latest/) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
+* [dogpile.cache](https://dogpilecache.sqlalchemy.org/en/latest/) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
 * [HermesCache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](https://libmemcached.org/libMemcached.html) interface.
-* [python-diskcache](http://www.grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
+* [python-diskcache](https://grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 
 ## ChatOps Tools
 
@@ -256,7 +256,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
-    * [mypy](http://mypy-lang.org/) - Check variable types during compile time.
+    * [mypy](https://mypy-lang.org/) - Check variable types during compile time.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 * Static Type Annotations Generators
@@ -268,8 +268,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for building command-line applications.*
 
 * Command-line Application Development
-    * [cement](http://builtoncement.com/) - CLI Application Framework for Python.
-    * [click](https://click.palletsprojects.com/en/8.1.x/) - A package for creating beautiful command line interfaces in a composable way.
+    * [cement](https://builtoncement.com/) - CLI Application Framework for Python.
+    * [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://docs.openstack.org/developer/cliff/) - A framework for creating command-line programs with multi-level commands.
     * [docopt](http://docopt.org/) - Pythonic command line arguments parser.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
