@@ -518,6 +518,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for file manipulation.*
 
+* [auto-py-to-exe](https://pypi.org/project/auto-py-to-exe/) - A .py to .exe converter using a simple graphical interface and [PyInstaller](https://pyinstaller.org/) in Python.
 * [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
 * [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) An cross-platform, object-oriented path library.
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
