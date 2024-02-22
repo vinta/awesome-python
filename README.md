@@ -434,6 +434,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Process Management
     * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 * Monitoring
+    * [large-file-finder](https://github.com/rbrahul/large-file-finder) - A CLI application to monitor large files that are eating up your system storage.
     * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * Backup
     * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
