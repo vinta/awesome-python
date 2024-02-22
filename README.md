@@ -1,6 +1,6 @@
 # Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-A curated list of awesome Python frameworks, libraries, software and resources.
+An opinionated curated list of awesome Python frameworks, libraries, software and resources.
 
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
@@ -90,10 +90,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
-    - [Books](#books)
     - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
-    - [Websites](#websites)
 - [Contributing](#contributing)
 
 ---
@@ -460,7 +458,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [py2app](https://github.com/ronaldoussoren/py2app) - Freezes Python scripts (Mac OS X).
 * [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
 * [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
-* [PyInstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
+* [pyinstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
 * [shiv](https://github.com/linkedin/shiv) - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.
 
 ## Documentation
@@ -850,8 +848,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for building RESTful APIs.*
 
 * Django
-    * [django-rest-framework](http://www.django-rest-framework.org/) - A powerful and flexible toolkit to build web APIs.
-    * [django-tastypie](http://tastypieapi.org/) - Creating delicious APIs for Django apps.
+    * [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
+    * [django-tastypie](https://github.com/django-tastypie/django-tastypie) - Creating delicious APIs for Django apps.
 * Flask
     * [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
     * [flask-api](https://github.com/flask-api/flask-api) - Browsable Web APIs for Flask.
@@ -859,13 +857,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
-    * [apistar](https://github.com/encode/apistar) - A smart Web API framework, designed for Python 3.
     * [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
     * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
     * [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
     * [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
-    * [sanic](https://github.com/huge-success/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
-    * [vibora](https://docs.vibora.io/) - Fast, efficient and asynchronous Web framework inspired by Flask.
+    * [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
 
 ## Robotics
 
@@ -1135,30 +1131,26 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to automate web scraping.*
 
-* [cola](https://github.com/chineking/cola) - A distributed crawling framework.
-* [feedparser](https://pythonhosted.org/feedparser/) - Universal feed parser.
+* [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
-* [MechanicalSoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
-* [portia](https://github.com/scrapinghub/portia) - Visual scraping for Scrapy.
-* [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
-* [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
-* [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
+* [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 
 ## Web Frameworks
 
 *Traditional full stack web frameworks. Also see [RESTful API](https://github.com/vinta/awesome-python#restful-api).*
 
 * Synchronous
-    * [Django](https://www.djangoproject.com/) - The most popular web framework in Python.
+    * [django](https://github.com/django/django) - The most popular web framework in Python.
         * [awesome-django](https://github.com/shahraizali/awesome-django)
         * [awesome-django](https://github.com/wsvincent/awesome-django)
-    * [Flask](http://flask.pocoo.org/) - A microframework for Python.
+    * [flask](https://github.com/pallets/flask) - A microframework for Python.
         * [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
-    * [Pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
+    * [pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
-    * [Masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
+    * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
-    * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+    * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
 ## WebSocket
 
@@ -1172,9 +1164,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *WSGI-compatible web servers.*
 
-* [bjoern](https://github.com/jonashaag/bjoern) - Asynchronous, very fast and written in C.
 * [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, ported from Ruby's Unicorn project.
-* [uWSGI](https://uwsgi-docs.readthedocs.io/en/latest/) - A project aims at developing a full stack for building hosting services, written in C.
+* [uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/) - A project aims at developing a full stack for building hosting services, written in C.
 * [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
 * [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
@@ -1182,47 +1173,24 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 Where to discover learning resources or new Python libraries.
 
-## Books
-
-- [Fluent Python](https://www.oreilly.com/library/view/fluent-python/9781491946237/)
-- [Think Python](https://greenteapress.com/wp/think-python-2e/)
-
-## Websites
-
-* Tutorials
-    * [Full Stack Python](https://www.fullstackpython.com/)
-    * [Python Cheatsheet](https://www.pythoncheatsheet.org/)
-    * [Real Python](https://realpython.com)
-    * [The Hitchhiker’s Guide to Python](https://docs.python-guide.org/)
-    * [Ultimate Python study guide](https://github.com/huangsam/ultimate-python)
-* Libraries
-    * [Awesome Python @LibHunt](https://python.libhunt.com/)
-* Others
-    * [Python ZEEF](https://python.zeef.com/alan.richmond)
-    * [What the f*ck Python!](https://github.com/satwikkansal/wtfpython)
-
 ## Newsletters
 
 * [Awesome Python Newsletter](http://python.libhunt.com/newsletter)
-* [Pycoder's Weekly](http://pycoders.com/)
+* [Pycoder's Weekly](https://pycoders.com/)
 * [Python Tricks](https://realpython.com/python-tricks/)
-* [Python Weekly](http://www.pythonweekly.com/)
+* [Python Weekly](https://www.pythonweekly.com/)
 
 ## Podcasts
 
 * [Django Chat](https://djangochat.com/)
-* [Podcast.\_\_init__](https://podcastinit.com/)
 * [Python Bytes](https://pythonbytes.fm)
-* [Running in Production](https://runninginproduction.com/)
 * [Talk Python To Me](https://talkpython.fm/)
-* [Test and Code](https://testandcode.com/)
+* [Python Test](https://podcast.pythontest.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
 
 # Contributing
 
 Your contributions are always welcome! Please take a look at the [contribution guidelines](https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md) first.
-
-I will keep some pull requests open if I'm not sure whether those libraries are awesome, you could [vote for them](https://github.com/vinta/awesome-python/pulls) by adding :+1: to them. Pull requests will be merged when their votes reach **20**.
 
 - - -
 
