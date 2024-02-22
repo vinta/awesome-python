@@ -1,6 +1,6 @@
 # Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-An opinionated list of awesome Python frameworks, libraries, software and resources.
+An opinionated list of awesome Python frameworks, libraries, software, and resources.
 
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
@@ -789,6 +789,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [pyrgo](https://github.com/Tomperez98/pyrgo) - Python project manager inspired in [Cargo](https://doc.rust-lang.org/cargo/).
 
 ## Package Repositories
 
