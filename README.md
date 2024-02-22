@@ -1254,6 +1254,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyspider](https://github.com/binux/pyspider) - A powerful spider system.
 * [robobrowser](https://github.com/jmcarp/robobrowser) - A simple, Pythonic library for browsing the web without a standalone web browser.
 * [scrapy](https://scrapy.org/) - A fast high-level screen scraping and web crawling framework.
+* [fastbots](https://github.com/ubertidavide/fastbots) - A simple library designed for rapid bot and scraper development using Selenium and the POM (Page Object Model) design.
 
 ## Web Frameworks
 
