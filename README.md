@@ -182,11 +182,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Compile software from source code.*
 
-* [BitBake](https://docs.yoctoproject.org/bitbake/2.4/index.html) - A make-like build tool for embedded Linux.
-* [buildout](http://www.buildout.org/en/latest/) - A build system for creating, assembling and deploying applications from multiple parts.
-* [PlatformIO](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
+* [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
+* [buildout](https://github.com/buildout/buildout) - A build system for creating, assembling and deploying applications from multiple parts.
+* [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 * [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
-* [SCons](http://www.scons.org/) - A software construction tool.
+* [SCons](https://github.com/SCons/scons) - A software construction tool.
 
 ## Built-in Classes Enhancement
 
@@ -202,14 +202,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Content Management Systems.*
 
-* [django-cms](https://www.django-cms.org/en/) - An Open source enterprise CMS based on the Django.
 * [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
 * [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
-* [Kotti](https://github.com/Kotti/Kotti) - A high-level, Pythonic web application framework built on Pyramid.
-* [mezzanine](https://github.com/stephenmcd/mezzanine) - A powerful, consistent, and flexible content management platform.
-* [plone](https://plone.org/) - A CMS built on top of the open source application server Zope.
-* [quokka](https://github.com/rochacbruno/quokka) - Flexible, extensible, small CMS powered by Flask and MongoDB.
-* [wagtail](https://wagtail.io/) - A Django content management system.
+* [wagtail](https://github.com/wagtail/wagtail) - A Django content management system.
 
 ## Caching
 
@@ -218,10 +213,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [beaker](https://github.com/bbangert/beaker) - A WSGI middleware for sessions and caching.
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
-* [dogpile.cache](https://dogpilecache.sqlalchemy.org/en/latest/) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
+* [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
 * [HermesCache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](https://libmemcached.org/libMemcached.html) interface.
-* [python-diskcache](https://grantjenks.com/docs/diskcache/) - SQLite and file backed cache backend with faster lookups than memcached and redis.
+* [python-diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 
 ## ChatOps Tools
 
