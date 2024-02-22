@@ -295,6 +295,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [opencv](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
+* [scikit-image](https://scikit-image.org/) - A comprehensive image processing library integrated into the SciPy ecosystem.
 
 ## Configuration Files
 
