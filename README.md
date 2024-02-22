@@ -35,14 +35,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Distribution](#distribution)
     - [Documentation](#documentation)
     - [Downloader](#downloader)
-    - [E-commerce](#e-commerce)
     - [Editor Plugins and IDEs](#editor-plugins-and-ides)
     - [Email](#email)
-    - [Enterprise Application Integrations](#enterprise-application-integrations)
     - [Environment Management](#environment-management)
-    - [Files](#file)
-    - [Foreign Function Interface](#foreign-function-interface)
-    - [Forms](#forms)
+    - [File Manipulation](#file-manipulation)
     - [Functional Programming](#functional-programming)
     - [Game Development](#game-development)
     - [Geolocation](#geolocation)
@@ -121,9 +117,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
     * [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structure and algorithms for coding interviews.
     * [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
-    * [TheAlgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
+    * [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
 * Design Patterns
-    * [PyPattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
+    * [pypattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
     * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
     * [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
 
@@ -133,6 +129,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
 * [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+* [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
 
 ## Asynchronous Programming
 
@@ -160,12 +157,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
     * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
     * [mingus](http://bspaans.github.io/python-mingus/) - An advanced music theory and notation package with MIDI file and playback support.
-    * [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
+    * [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
     * [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
-    * [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+    * [timeside](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
 * Metadata
     * [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
-    * [eyeD3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
+    * [eyed3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
     * [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
     * [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 
@@ -190,7 +187,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [buildout](https://github.com/buildout/buildout) - A build system for creating, assembling and deploying applications from multiple parts.
 * [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 * [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
-* [SCons](https://github.com/SCons/scons) - A software construction tool.
+* [scons](https://github.com/SCons/scons) - A software construction tool.
 
 ## Built-in Classes Enhancement
 
@@ -198,9 +195,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
 * [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality..
-* [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
+* [box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 * [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
-* [DottedDict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
+* [dotteddict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
 
 ## CMS
 
@@ -218,7 +215,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
-* [HermesCache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
+* [hermescache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](https://libmemcached.org/libMemcached.html) interface.
 * [python-diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 
@@ -249,7 +246,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 * Static Type Annotations Generators
-    * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
+    * [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
     * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
 ## Command-line Interface Development
@@ -279,8 +276,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
-    * [Invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
-    * [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
+    * [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
+    * [pathpicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
@@ -295,9 +292,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for Computer Vision.*
 
-* [EasyOCR](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
-* [Kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
-* [OpenCV](https://opencv.org/) - Open Source Computer Vision Library.
+* [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
+* [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
+* [opencv](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
 
@@ -341,20 +338,18 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for visualizing data. Also see [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization).*
 
-* [Altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
-* [Bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
+* [altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
+* [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
-* [Cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
-* [Dash](https://plot.ly/products/dash/) - Built on top of Flask, React and Plotly aimed at analytical web applications.
-    * [awesome-dash](https://github.com/Acrotrend/awesome-dash)
+* [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
-* [Matplotlib](http://matplotlib.org/) - A Python 2D plotting library.
+* [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
-* [Pygal](http://www.pygal.org/en/latest/) - A Python SVG Charts Creator.
-* [PyGraphviz](https://pypi.org/project/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
-* [PyQtGraph](http://www.pyqtgraph.org/) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
-* [Seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
-* [VisPy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+* [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
+* [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
+* [pyqtgraph](https://github.com/pyqtgraph/pyqtgraph) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+* [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
+* [vispy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
 
 ## Database
 
@@ -362,7 +357,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pickleDB](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 * [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
-* [ZODB](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
+* [zodb](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
 
 ## Database Drivers
 
@@ -370,7 +365,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
-    * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
+    * [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
 * PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
     * [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
 * SQlite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
@@ -391,16 +386,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with dates and times.*
 
-* [Arrow](https://arrow.readthedocs.io/en/latest/) - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.
-* [Chronyk](https://github.com/KoffeinFlummi/Chronyk) - A Python 3 library for parsing human-written times and dates.
+* [arrow](https://github.com/arrow-py/arrow) - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.
 * [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
-* [delorean](https://github.com/myusuf3/delorean/) - A library for clearing up the inconvenient truths that arise dealing with datetimes.
-* [maya](https://github.com/timofurrer/maya) - Datetimes for Humans.
-* [moment](https://github.com/zachwill/moment) - A Python library for dealing with dates/times. Inspired by [Moment.js](http://momentjs.com/).
-* [Pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
-* [PyTime](https://github.com/shinux/PyTime) - An easy-to-use Python module which aims to operate date/time/datetime by string.
-* [pytz](https://launchpad.net/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
-* [when.py](https://github.com/dirn/When.py) - Providing user-friendly functions to help perform common date and time actions.
+* [pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
+* [pytz](https://pypi.org/project/pytz/) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 
 ## Debugging Tools
 
@@ -408,24 +397,16 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * pdb-like Debugger
     * [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
-    * [pdb++](https://github.com/antocuni/pdb) - Another drop-in replacement for pdb.
     * [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
-    * [wdb](https://github.com/Kozea/wdb) - An improbable web debugger through WebSockets.
 * Tracing
-    * [lptrace](https://github.com/khamidou/lptrace) - [strace](http://man7.org/linux/man-pages/man1/strace.1.html) for Python programs.
     * [manhole](https://github.com/ionelmc/python-manhole) - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
-    * [pyringe](https://github.com/google/pyringe) - Debugger capable of attaching to and injecting code into Python processes.
     * [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
 * Profiler
-    * [line_profiler](https://github.com/rkern/line_profiler) - Line-by-line profiling.
-    * [memory_profiler](https://github.com/fabianp/memory_profiler) - Monitor Memory usage of Python code.
     * [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
-    * [pyflame](https://github.com/uber/pyflame) - A ptracing profiler For Python.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
 * Others
     * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
-    * [django-devserver](https://github.com/dcramer/django-devserver) - A drop-in replacement for Django's runserver.
-    * [flask-debugtoolbar](https://github.com/mgood/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
+    * [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
     * [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
     * [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
 
@@ -433,14 +414,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
 
-* [caffe](https://github.com/BVLC/caffe) - A fast open framework for deep learning..
 * [keras](https://github.com/keras-team/keras) - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.
-* [mxnet](https://github.com/dmlc/mxnet) - A deep learning framework designed for both efficiency and flexibility.
 * [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
-* [SerpentAI](https://github.com/SerpentAI/SerpentAI) - Game agent framework. Use any video game as a deep learning sandbox.
+* [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
-* [Theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
-* [lightning](https://github.com/Lightning-AI/lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
+* [theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
 
 ## DevOps Tools
 
@@ -448,23 +426,19 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Configuration Management
     * [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
-    * [cloudinit](https://cloudinit.readthedocs.io/en/latest/) - A multi-distribution package that handles early initialization of a cloud instance.
-    * [OpenStack](https://www.openstack.org/) - Open source software for building private and public clouds.
-    * [pyinfra](https://github.com/Fizzadar/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
+    * [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
+    * [openstack](https://www.openstack.org/) - Open source software for building private and public clouds.
+    * [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
     * [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 * SSH-style Deployment
     * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
     * [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
-    * [fabtools](https://github.com/fabtools/fabtools) - Tools for writing awesome Fabric files.
 * Process Management
-    * [honcho](https://github.com/nickstenning/honcho) - A Python clone of [Foreman](https://github.com/ddollar/foreman), for managing Procfile-based applications.
     * [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 * Monitoring
     * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * Backup
-    * [BorgBackup](https://www.borgbackup.org/) - A deduplicating archiver with compression and encryption.
-* Others
-    * [docker-compose](https://docs.docker.com/compose/) - Fast, isolated development environments using [Docker](https://www.docker.com/).
+    * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
 
 ## Distributed Computing
 
@@ -473,8 +447,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Batch Processing
     * [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
     * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
-    * [mrjob](https://github.com/Yelp/mrjob) - Run MapReduce jobs on Hadoop or Amazon Web Services.
-    * [PySpark](https://pypi.org/project/pyspark/) - [Apache Spark](https://spark.apache.org/) Python API.
+    * [PySpark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
@@ -484,13 +457,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to create packaged executables for release distribution.*
 
-* [dh-virtualenv](https://github.com/spotify/dh-virtualenv) - Build and distribute a virtualenv as a Debian package.
-* [Nuitka](http://nuitka.net/) - Compile scripts, modules, packages to an executable or extension module.
-* [py2app](http://pythonhosted.org/py2app/) - Freezes Python scripts (Mac OS X).
-* [py2exe](http://www.py2exe.org/) - Freezes Python scripts (Windows).
+* [py2app](https://github.com/ronaldoussoren/py2app) - Freezes Python scripts (Mac OS X).
+* [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
 * [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
 * [PyInstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
-* [pynsist](http://pynsist.readthedocs.io/en/latest/) - A tool to build Windows installers, installers bundle Python itself.
 * [shiv](https://github.com/linkedin/shiv) - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.
 
 ## Documentation
@@ -500,7 +470,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
     * [awesome-sphinxdoc](https://github.com/yoloseem/awesome-sphinxdoc)
 * [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
-* [pycco](https://github.com/pycco-docs/pycco) - The literate-programming-style documentation generator.
 
 ## Downloader
 
@@ -508,32 +477,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
-* [s4cmd](https://github.com/bloomreach/s4cmd) - Super S3 command line tool, good for higher performance.
-* [you-get](https://you-get.org/) - A YouTube/Youku/Niconico video downloader written in Python 3.
-* [youtube-dl](https://rg3.github.io/youtube-dl/) - A small command-line program to download videos from YouTube.
-
-## E-commerce
-
-*Frameworks and libraries for e-commerce and payments.*
-
-* [alipay](https://github.com/lxneng/alipay) - Unofficial Alipay API for Python.
-* [Cartridge](https://github.com/stephenmcd/cartridge) - A shopping cart app built using the Mezzanine.
-* [django-oscar](http://oscarcommerce.com/) - An open-source e-commerce framework for Django.
-* [django-shop](https://github.com/awesto/django-shop) - A Django based shop system.
-* [forex-python](https://github.com/MicroPyramid/forex-python) - Foreign exchange rates, Bitcoin price index and currency conversion.
-* [merchant](https://github.com/agiliq/merchant) - A Django app to accept payments from various payment processors.
-* [money](https://github.com/carlospalol/money) - `Money` class with optional CLDR-backed locale-aware formatting and an extensible currency exchange.
-* [python-currencies](https://github.com/Alir3z4/python-currencies) - Display money format and its filthy currencies.
-* [saleor](https://saleor.io/) - Headless open-source e-commerce platform.
-* [shoop](https://www.shuup.com/) - An open source E-Commerce platform based on Django.
+* [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
 
 ## Editor Plugins and IDEs
 
 * Emacs
     * [elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
-* Sublime Text
-    * [anaconda](https://github.com/DamnWidget/anaconda) - Anaconda turns your Sublime Text 3 in a full featured Python development IDE.
-    * [SublimeJEDI](https://github.com/srusskih/SublimeJEDI) - A Sublime Text plugin to the awesome auto-complete library Jedi.
 * Vim
     * [jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
     * [python-mode](https://github.com/python-mode/python-mode) - An all in one plugin for turning Vim into a Python IDE.
@@ -560,12 +509,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
     * [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 
-## Enterprise Application Integrations
-
-*Platforms and tools for systems integrations in enterprise environments*
-
-* [Zato](https://zato.io) - ESB, SOA, REST, APIs and Cloud Integrations in Python.
-
 ## Environment Management
 
 *Libraries for Python version and virtual environment management.*
@@ -573,49 +516,26 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
-## File
+## File Manipulation
 
-*Libraries for file manipulation and MIME type detection.*
+*Libraries for file manipulation.*
 
 * [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
-* [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 * [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) An cross-platform, object-oriented path library.
-* [PyFilesystem2](https://github.com/pyfilesystem/pyfilesystem2) - Python's filesystem abstraction layer.
+* [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
-* [Unipath](https://github.com/mikeorr/Unipath) - An object-oriented approach to file/directory operations.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
-
-## Foreign Function Interface
-
-*Libraries for providing foreign function interface.*
-
-* [cffi](https://pypi.org/project/cffi/) - Foreign Function Interface for Python calling C code.
-* [ctypes](https://docs.python.org/3/library/ctypes.html) - (Python standard library) Foreign Function Interface for Python calling C code.
-* [PyCUDA](https://mathema.tician.de/software/pycuda/) - A Python wrapper for Nvidia's CUDA API.
-* [SWIG](http://www.swig.org/Doc1.3/Python.html) - Simplified Wrapper and Interface Generator.
-
-## Forms
-
-*Libraries for working with forms.*
-
-* [Deform](https://github.com/Pylons/deform) - Python HTML form generation library influenced by the formish form generation library.
-* [django-bootstrap3](https://github.com/dyve/django-bootstrap3) - Bootstrap 3 integration with Django.
-* [django-bootstrap4](https://github.com/zostera/django-bootstrap4) - Bootstrap 4 integration with Django.
-* [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) - A Django app which lets you create beautiful forms in a very elegant and DRY way.
-* [django-remote-forms](https://github.com/WiserTogether/django-remote-forms) - A platform independent Django form serializer.
-* [WTForms](https://github.com/wtforms/wtforms) - A flexible forms validation and rendering library.
 
 ## Functional Programming
 
 *Functional Programming with Python.*
 
-* [Coconut](https://github.com/evhub/coconut) - A variant of Python built for simple, elegant, Pythonic functional programming.
-* [CyToolz](https://github.com/pytoolz/cytoolz/) - Cython implementation of `Toolz`: High performance functional utilities.
-* [fn.py](https://github.com/kachayev/fn.py) - Functional programming in Python: implementation of missing features to enjoy FP.
+* [coconut](https://github.com/evhub/coconut) - A variant of Python built for simple, elegant, Pythonic functional programming.
 * [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 * [more-itertools](https://github.com/erikrose/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 * [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
-* [Toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+* [cytoolz](https://github.com/pytoolz/cytoolz/) - Cython implementation of `Toolz`: High performance functional utilities.
+* [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
 
 ## GUI Development
 
@@ -643,9 +563,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with GraphQL.*
 
 * [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
-* [tartiflette-aiohttp](https://github.com/tartiflette/tartiflette-aiohttp/) - An `aiohttp`-based wrapper for Tartiflette to expose GraphQL APIs over HTTP.
-* [tartiflette-asgi](https://github.com/tartiflette/tartiflette-asgi/) - ASGI support for the Tartiflette GraphQL engine.
-* [tartiflette](https://tartiflette.io) - SDL-first GraphQL engine implementation for Python 3.6+ and asyncio.
 
 ## Game Development
 
@@ -666,21 +583,20 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for geocoding addresses and working with latitudes and longitudes.*
 
 * [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
-* [GeoDjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
-* [GeoIP](https://github.com/maxmind/geoip-api-python) - Python API for MaxMind GeoIP Legacy Database.
-* [geojson](https://github.com/frewsxcv/python-geojson) - Python bindings and utilities for GeoJSON.
+* [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
+* [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 
 ## HTML Manipulation
 
 *Libraries for working with HTML and XML.*
 
-* [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
+* [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
 * [bleach](https://github.com/mozilla/bleach) - A whitelist-based HTML sanitization and text linkification library.
 * [cssutils](https://pypi.org/project/cssutils/) - A CSS library for Python.
 * [html5lib](https://github.com/html5lib/html5lib-python) - A standards-compliant library for parsing and serializing HTML documents and fragments.
 * [lxml](http://lxml.de/) - A very fast, easy-to-use and versatile library for handling HTML and XML.
-* [MarkupSafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
+* [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 * [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
 * [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access.
 * [WeasyPrint](http://weasyprint.org) - A visual rendering engine for HTML and CSS that can export to PDF.
@@ -691,60 +607,48 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with HTTP.*
 
-* [grequests](https://github.com/spyoungtech/grequests) - requests + gevent for asynchronous HTTP requests.
-* [httplib2](https://github.com/httplib2/httplib2) - Comprehensive HTTP client library.
 * [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 * [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
-* [urllib3](https://github.com/shazow/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
+* [urllib3](https://github.com/urllib3/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 
 ## Hardware
 
 *Libraries for programming with hardware.*
 
-* [ino](http://inotool.org/) - Command line toolkit for working with [Arduino](https://www.arduino.cc/).
 * [keyboard](https://github.com/boppreh/keyboard) - Hook and simulate global keyboard events on Windows and Linux.
 * [mouse](https://github.com/boppreh/mouse) - Hook and simulate global mouse events on Windows and Linux.
-* [Pingo](http://www.pingo.io/) - Pingo provides a uniform API to program devices like the Raspberry Pi, pcDuino, Intel Galileo, etc.
-* [PyUserInput](https://github.com/SavinaRoja/PyUserInput) - A module for cross-platform control of the mouse and keyboard.
+* [pynput](https://github.com/moses-palmer/pynput) - A library to control and monitor input devices.
 * [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 
 ## Image Processing
 
 *Libraries for manipulating images.*
 
-* [hmap](https://github.com/rossgoodwin/hmap) - Image histogram remapping.
-* [imgSeek](https://sourceforge.net/projects/imgseek/) - A project for searching a collection of images using visual similarity.
-* [nude.py](https://github.com/hhatto/nude.py) - Nudity detection.
-* [pagan](https://github.com/daboth/pagan) - Retro identicon (Avatar) generation based on input string and hash.
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
 * [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
-* [PyMatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
+* [pymatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 * [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 * [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
-* [Quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
+* [quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 * [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 * [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
-* [wand](https://github.com/dahlia/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
+* [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
 
 ## Implementations
 
 *Implementations of Python.*
 
-* [CLPython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
-* [CPython](https://github.com/python/cpython) - **Default, most widely used implementation of the Python programming language written in C.**
-* [Cython](http://cython.org/) - Optimizing Static Compiler for Python.
-* [Grumpy](https://github.com/google/grumpy) - More compiler than interpreter as more powerful CPython2.7 replacement (alpha).
-* [IronPython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C#.
-* [Jython](https://hg.python.org/jython) - Implementation of Python programming language written in Java for the JVM.
-* [MicroPython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
-* [Numba](http://numba.pydata.org/) - Python JIT compiler to LLVM aimed at scientific Python.
-* [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python.
-* [Pyjion](https://github.com/Microsoft/Pyjion) - A JIT for Python based upon CoreCLR.
-* [PyPy](https://foss.heptapod.net/pypy/pypy) - A very fast and compliant implementation of the Python language.
-* [Pyston](https://github.com/pyston/pyston/) - A Python implementation using JIT techniques.
-* [Stackless Python](https://github.com/stackless-dev/stackless) - An enhanced version of the Python programming language.
+* [cpython](https://github.com/python/cpython) - **Default, most widely used implementation of the Python programming language written in C.**
+* [cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
+* [clpython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
+* [ironpython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C#.
+* [micropython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
+* [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
+* [peachpy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python.
+* [pypy](https://foss.heptapod.net/pypy/pypy) - A very fast and compliant implementation of the Python language.
+* [pyston](https://github.com/pyston/pyston/) - A Python implementation using JIT techniques.
 
 ## Interactive Interpreter
 
