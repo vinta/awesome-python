@@ -20,7 +20,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Command-line Interface Development](#command-line-interface-development)
     - [Command-line Tools](#command-line-tools)
     - [Computer Vision](#computer-vision)
-    - [Configuration](#configuration)
+    - [Configuration Files](#configuration-files)
     - [Cryptography](#cryptography)
     - [Data Analysis](#data-analysis)
     - [Data Validation](#data-validation)
@@ -248,7 +248,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mypy](https://github.com/python/mypy) - Check variable types during compile time.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
-    * [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
     * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
@@ -302,45 +301,41 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
 
-## Configuration
+## Configuration Files
 
 *Libraries for storing and parsing configuration options.*
 
-* [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
+* [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
-* [profig](https://profig.readthedocs.io/en/latest/) - Config from multiple formats with value conversion.
-* [python-decouple](https://github.com/henriquebastos/python-decouple) - Strict separation of settings from code.
+* [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
 
 ## Cryptography
 
-* [cryptography](https://cryptography.io/en/latest/) - A package designed to expose cryptographic primitives and recipes to Python developers.
+* [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
-* [passlib](https://passlib.readthedocs.io/en/stable/) - Secure password storage/hashing library, very high level.
 * [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 
 ## Data Analysis
 
 *Libraries for data analyzing.*
 
-* [AWS Data Wrangler](https://github.com/awslabs/aws-data-wrangler) - Pandas on AWS.
-* [Blaze](https://github.com/blaze/blaze) - NumPy and Pandas interface to Big Data.
-* [Open Mining](https://github.com/mining/mining) - Business Intelligence (BI) in Pandas interface.
-* [Optimus](https://github.com/ironmussa/Optimus) - Agile Data Science Workflows made easy with PySpark.
-* [Orange](https://orange.biolab.si/) - Data mining, data visualization, analysis and machine learning through visual programming or scripts.
-* [Pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
+* [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
+* [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 
 ## Data Validation
 
 *Libraries for validating data. Used for forms in many cases.*
 
-* [Cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
-* [colander](https://docs.pylonsproject.org/projects/colander/en/latest/) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
-* [jsonschema](https://github.com/Julian/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
+* [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
+* [colander](https://github.com/Pylons/colander) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
+* [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
-* [Schematics](https://github.com/schematics/schematics) - Data Structure Validation.
-* [valideer](https://github.com/podio/valideer) - Lightweight extensible data validation and adaptation library.
+* [schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
+* [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 
 ## Data Visualization
 
