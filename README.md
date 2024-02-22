@@ -382,25 +382,23 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for connecting and operating databases.*
 
 * MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
-    * [mysqlclient](https://github.com/PyMySQL/mysqlclient-python) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
+    * [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
     * [PyMySQL](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
 * PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
-    * [psycopg](https://www.psycopg.org/) - The most popular PostgreSQL adapter for Python.
-    * [queries](https://github.com/gmr/queries) - A wrapper of the psycopg2 library for interacting with PostgreSQL.
+    * [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
 * SQlite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
-    * [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0
-    * [SuperSQLite](https://github.com/plasticityai/supersqlite) - A supercharged SQLite library built on top of [apsw](https://github.com/rogerbinns/apsw).
+    * [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0.
+    * [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
 * Other Relational Databases
-    * [pymssql](https://pymssql.readthedocs.io/en/latest/) - A simple database interface to Microsoft SQL Server.
+    * [pymssql](https://github.com/pymssql/pymssql) - A simple database interface to Microsoft SQL Server.
     * [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
-    * [happybase](https://github.com/wbolster/happybase) - A developer-friendly library for Apache HBase.
+    * [happybase](https://github.com/python-happybase/happybase) - A developer-friendly library for Apache HBase.
     * [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
     * [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
-    * [redis-py](https://github.com/andymccurdy/redis-py) - The Python client for Redis.
-* Asynchronous Clients
     * [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
+    * [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
 
 ## Date and Time
 
