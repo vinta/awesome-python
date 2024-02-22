@@ -229,25 +229,22 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
 
 * Code Analysis
-    * [coala](https://github.com/coala/coala/) - Language independent and easily extendable code analysis application.
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
     * [prospector](https://github.com/PyCQA/prospector) - A tool to analyse Python code.
-    * [pycallgraph](https://github.com/gak/pycallgraph) - A library that visualises the flow (call graph) of your Python application.
     * [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analysing dead Python code.
 * Code Linters
-    * [flake8](https://pypi.org/project/flake8/) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
+    * [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
-    * [pylama](https://github.com/klen/pylama) - A code audit tool for Python and JavaScript.
-    * [pylint](https://pylint.readthedocs.io/en/latest/) - A fully customizable source code analyzer.
-    * [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide) - The strictest and most opinionated python linter ever.
+    * [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
 * Code Formatters
-    * [black](https://github.com/python/black) - The uncompromising Python code formatter.
+    * [black](https://github.com/psf/black) - The uncompromising Python code formatter.
     * [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
-    * [mypy](https://mypy-lang.org/) - Check variable types during compile time.
+    * [mypy](https://github.com/python/mypy) - Check variable types during compile time.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
     * [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
+    * [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 * Static Type Annotations Generators
     * [MonkeyType](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
     * [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
