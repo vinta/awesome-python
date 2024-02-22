@@ -19,7 +19,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Code Analysis](#code-analysis)
     - [Command-line Interface Development](#command-line-interface-development)
     - [Command-line Tools](#command-line-tools)
-    - [Compatibility](#compatibility)
     - [Computer Vision](#computer-vision)
     - [Concurrency and Parallelism](#concurrency-and-parallelism)
     - [Configuration](#configuration)
@@ -287,14 +286,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
-
-## Compatibility
-
-*Libraries for migrating from Python 2 to 3.*
-
-* [python-future](http://python-future.org/index.html) - The missing compatibility layer between Python 2 and Python 3.
-* [modernize](https://github.com/PyCQA/modernize) - Modernizes Python code for eventual Python 3 migration.
-* [six](https://pypi.org/project/six/) - Python 2 and 3 compatibility utilities.
 
 ## Computer Vision
 
