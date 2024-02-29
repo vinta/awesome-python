@@ -1274,7 +1274,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to automate web scraping.*
 
-* [bose](https://github.com/omkarcloud/bose) - A Powerful Web Scraping Framework
+* [botasaurus](https://github.com/omkarcloud/botasaurus) - The All in Web Scraping Framework.
 * [cola](https://github.com/chineking/cola) - A distributed crawling framework.
 * [feedparser](https://pythonhosted.org/feedparser/) - Universal feed parser.
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
