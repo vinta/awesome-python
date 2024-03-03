@@ -774,6 +774,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
     * [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
     * [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
+    * [piccolo](https://github.com/piccolo-orm/piccolo) - A fast, user friendly ORM and query builder which supports asyncio.
 * NoSQL Databases
     * [hot-redis](https://github.com/stephenmcd/hot-redis) - Rich Python data types for Redis.
     * [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
@@ -789,6 +790,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+* [uv](https://github.com/astral-sh/uv) - An extremely fast Python package installer and resolver, written in Rust.
 
 ## Package Repositories
 
@@ -1151,6 +1153,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
+    * [sanic](https://github.com/sanic-org/sanic) - Accelerate your web app development | Build fast. Run fast.
+    * [BlackSheep](https://github.com/Neoteroi/BlackSheep) - Fast ASGI web framework for Python
 
 ## WebSocket
 
