@@ -605,6 +605,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for working with HTTP.*
 
+* [aiosonic](https://github.com/sonic182/aiosonic) - An async http client written for speed
 * [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 * [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
