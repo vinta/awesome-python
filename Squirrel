@@ -1,0 +1,3 @@
+Add Squirrel
+Squirrel is a great library for fast and flexible loading of large-scale datasets which makes it very useful for anyone working with deep learning. You can write your own drivers and load, transform, share datasets of images, text or multi-modal.
+* [Squirrel](https://github.com/merantix-momentum/squirrel-core) - Squirrel enables ML teams to share, load, and transform large-scale datasets in a collaborative, flexible, and efficient way.
