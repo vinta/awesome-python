@@ -791,7 +791,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 * [pdm](https://github.com/pdm-project/pdm) - A modern Python package and dependency manager supporting the latest PEP standards.
 
-
 ## Package Repositories
 
 *Local PyPI repository server and proxies.*
