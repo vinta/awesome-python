@@ -931,7 +931,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PyPI](https://pypi.org/)
 * [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 * [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
-* [PDM](https://pdm.fming.dev/latest/) - A modern Python package and dependency manager supporting the latest PEP standards.
+* [PDM](https://pdm-project.org/latest/) - A modern Python package and dependency manager supporting the latest PEP standards.
 
 ## Package Repositories
 
