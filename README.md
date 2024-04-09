@@ -196,6 +196,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 * [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
 * [dotteddict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
+* [pydantic](https://github.com/samuelcolvin/pydantic/) - Data validation and settings management using Python type hinting.  Compatible with pure Python dataclasses.
 
 ## CMS
 
