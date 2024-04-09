@@ -341,6 +341,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
 * [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
 * [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
+* [Holoviews](https://github.com/holoviz/holoviews) - A high-level plotting library supporting many backends
 * [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
