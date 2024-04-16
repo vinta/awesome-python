@@ -956,6 +956,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PDFMiner](https://github.com/euske/pdfminer) - A tool for extracting information from PDF documents.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
     * [ReportLab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+    * [PyMuPDF](https://github.com/pymupdf/pymupdf) - A library for data extraction, analysis, conversion & manipulation of PDF (and other) documents.
 * Markdown
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
