@@ -303,6 +303,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
+* [dynaconf](https://github.com/dynaconf/dynaconf) - Dynaconf is a configuration manager with plugins for Django, Flask and FastAPI.
 * [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 * [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
 
