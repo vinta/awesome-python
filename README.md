@@ -456,6 +456,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to create packaged executables for release distribution.*
 
+* [nuitka](https://github.com/Nuitka/Nuitka) - An optimizing Python compiler written in Python that creates executables that run without an need for a separate installer.
 * [py2app](https://github.com/ronaldoussoren/py2app) - Freezes Python scripts (Mac OS X).
 * [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
 * [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
