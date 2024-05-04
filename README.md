@@ -1118,6 +1118,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for extracting web contents.*
 
+* [archivebox](https://github.com/ArchiveBox/ArchiveBox) - Extract text, media, images, git repos, and more.
 * [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
