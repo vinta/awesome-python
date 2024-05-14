@@ -223,6 +223,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
+* [ampalibe](https://ampalibe.readthedocs.io/en/latest/) - Lightweight Python framework for building Facebook Messenger bots faster.
 
 ## Code Analysis
 
