@@ -1174,6 +1174,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 Where to discover learning resources or new Python libraries.
 
+* [Prompt Engineering for Vision Models](https://www.deeplearning.ai/short-courses/prompt-engineering-for-vision-models/) - A hands-on course that helps you get started with prompting and fine-tuning vision models including SAM, OWL-ViT, and Stable Diffusion.
+
 ## Newsletters
 
 * [Awesome Python Newsletter](http://python.libhunt.com/newsletter)
