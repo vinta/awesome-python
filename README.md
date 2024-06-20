@@ -89,6 +89,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
+    - [Boilerplate](#Boilerplate)
 - [Resources](#resources)
     - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
@@ -1169,6 +1170,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/) - A project aims at developing a full stack for building hosting services, written in C.
 * [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
 * [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
+
+
+## Boilerplate
+
+*Boilerplate or code structure for python framework.*
+* [Flask Restx boilerplate](https://github.com/tranlyvu/Flask-RESTX-boilerplate) - Code base/boiler plate with restfull Flask-Restx framework.
+
 
 # Resources
 
