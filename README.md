@@ -263,6 +263,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
     * [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
     * [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
+    * [outfancy](https://github.com/carlosplanchon/outfancy) - A library to print tables in terminal.
     * [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
     * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
 
