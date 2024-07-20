@@ -211,6 +211,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for caching data.*
 
 * [beaker](https://github.com/bbangert/beaker) - A WSGI middleware for sessions and caching.
+* [cachetools](https://github.com/bbangert/beaker) - Extensions to the builtin [functools.cache](https://docs.python.org/3/library/functools.html#functools.cache) to cache function/method outputs.
 * [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 * [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 * [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
