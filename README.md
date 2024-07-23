@@ -362,7 +362,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for connecting and operating databases.*
 
-* MySQL - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/)
+* MySQL and MariaDB - [awesome-mysql](http://shlomi-noach.github.io/awesome-mysql/), [awesome-mariadb](https://github.com/Vettabase/awesome-mariadb)
     * [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
     * [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
 * PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
