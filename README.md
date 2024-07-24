@@ -1133,10 +1133,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to automate web scraping.*
 
+* [crawlee-python](https://github.com/apify/crawlee-python) - A web scraping and browser automation library to build reliable scrapers fast.
 * [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
 * [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 * [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
+
 
 ## Web Frameworks
 
