@@ -7,6 +7,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Awesome Python](#awesome-python)
     - [Admin Panels](#admin-panels)
     - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
+    - [App Development](#app-dev)
     - [ASGI Servers](#asgi-servers)
     - [Asynchronous Programming](#asynchronous-programming)
     - [Audio](#audio)
@@ -121,6 +122,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pypattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
     * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
     * [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
+
+## App Development
+
+*App developement frameworks of python.*
+
+* [kivy](https://kivy.org/) - The cross platform python app development Framework
 
 ## ASGI Servers
 
