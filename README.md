@@ -258,6 +258,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cliff](https://github.com/openstack/cliff) - A framework for creating command-line programs with multi-level commands.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
+    * [typer](https://github.com/tiangolo/typer) - A library for building CLI applications in Python with automatic type checking and validation.
 * Terminal Rendering
     * [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
