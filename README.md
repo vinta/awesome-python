@@ -525,6 +525,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+* [watchfiles](https://github.com/samuelcolvin/watchfiles) - Simple, modern and fast file watching and code reload in python.
 
 ## Functional Programming
 
