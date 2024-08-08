@@ -408,6 +408,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
     * [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
     * [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
+    * [smart-exceptions](https://github.com/roma-guru/smart-exceptions) - AI-Powered Python Error Analysis.
 
 ## Deep Learning
 
