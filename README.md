@@ -1103,6 +1103,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 * [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 
+## Virtual Machine
+
+*Libraries for emulating ISAs.*
+
+* [pywasm](https://github.com/mohanson/pywasm) - A WebAssembly interpreter written in pure Python.
+
 ## Web Asset Management
 
 *Tools for managing, compressing and minifying website assets.*
