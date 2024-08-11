@@ -889,6 +889,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [Colour](http://colour-science.org/) - Implementing a comprehensive number of colour theory transformations and algorithms.
+* [Cubes](http://cubes.databrewery.org/) - Cubes is a light-weight Python framework and set of tools for the development of reporting and analytical applications, Online    Analytical Processing (OLAP), multidimensional analysis, and browsing of aggregated data.
 * [Karate Club](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 * [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
