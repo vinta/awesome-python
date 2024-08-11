@@ -265,6 +265,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
     * [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
     * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
+    * [printy](https://github.com/edraobdu/printy) - Light and cross-platform library that extends the builtins print() and input() functionalities
 
 ## Command-line Tools
 
