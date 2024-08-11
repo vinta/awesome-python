@@ -403,6 +403,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Profiler
     * [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
+    * [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler.
 * Others
     * [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
     * [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
