@@ -86,8 +86,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Asset Management](#web-asset-management)
     - [Web Content Extracting](#web-content-extracting)
     - [Web Crawling](#web-crawling)
-    - [Web Client Frameworks] (#web-client-frameworks)
     - [Web Frameworks](#web-frameworks)
+    - [Web UI Frameworks] (#web-ui-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
@@ -1157,6 +1157,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
+## Web UI Frameworks
+
+*Client oriented frameworks for working with Python also on the client side*
+
+* [NiceGui](https://nicegui.io/) - Python only web UI Framework
+
 ## WebSocket
 
 *Libraries for working with WebSocket.*
@@ -1166,11 +1172,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
 
 
-## Web UI Frameworks
 
-*Client oriented frameworks for working with Python also on the client side*
-
-* [NiceGui](https://nicegui.io/) - Python only web UI Framework
 
 
 ## WSGI Servers
