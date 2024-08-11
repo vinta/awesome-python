@@ -86,6 +86,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Asset Management](#web-asset-management)
     - [Web Content Extracting](#web-content-extracting)
     - [Web Crawling](#web-crawling)
+    - [Web Client Frameworks] (#web-client-frameworks)
     - [Web Frameworks](#web-frameworks)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
@@ -1138,6 +1139,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 * [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 
+
+
 ## Web Frameworks
 
 *Traditional full stack web frameworks. Also see [RESTful API](https://github.com/vinta/awesome-python#restful-api).*
@@ -1161,6 +1164,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 * [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 * [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
+
+
+## Web UI Frameworks
+
+*Client oriented frameworks for working with Python also on the client side*
+
+* [NiceGui](https://nicegui.io/) - Python only web UI Framework
+
 
 ## WSGI Servers
 
