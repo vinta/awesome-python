@@ -871,6 +871,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 * [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
+* [pybotics](https://github.com/engnadeau/pybotics) - An open-source Python toolbox for robot kinematics and calibration.
 
 ## RPC Servers
 
