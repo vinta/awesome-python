@@ -586,6 +586,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
+* [utm](https://github.com/Turbo87/utm) - A bidirectional UTM-WGS84 converter.
 
 ## HTML Manipulation
 
