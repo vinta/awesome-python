@@ -833,6 +833,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
 * [libffm](https://github.com/guestwalk/libffm) - A library for Field-aware Factorization Machine (FFM).
 * [lightfm](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
+* [recommenders](https://github.com/tensorflow/recommenders) - A library for building recommender system models using TensorFlow.
 * [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 * [Surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 * [tensorrec](https://github.com/jfkirk/tensorrec) - A Recommendation Engine Framework in TensorFlow.
