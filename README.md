@@ -1185,6 +1185,7 @@ Where to discover learning resources or new Python libraries.
 ## Podcasts
 
 * [Django Chat](https://djangochat.com/)
+* [PyPodcats](https://pypodcats.live) - Hidden Figures of Python: Stories from the underrepresented group members of the Python community.
 * [Python Bytes](https://pythonbytes.fm)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Python Test](https://podcast.pythontest.com/)
