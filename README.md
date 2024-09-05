@@ -762,7 +762,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
 * [Stream Framework](https://github.com/tschellenbach/Stream-Framework) - Building news feed and notification systems using Cassandra and Redis.
 
-## ORM
+## ORM and other database mapping tools
 
 *Libraries that implement Object-Relational Mapping or data mapping techniques.*
 
