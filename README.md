@@ -57,7 +57,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Natural Language Processing](#natural-language-processing)
     - [Network Virtualization](#network-virtualization)
     - [News Feed](#news-feed)
-    - [ORM](#orm)
+    - [ORM and other Database Mapping Tools](#orm-and-other-database-mapping-tools)
     - [Package Management](#package-management)
     - [Package Repositories](#package-repositories)
     - [Penetration testing](#penetration-testing)
@@ -762,7 +762,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
 * [Stream Framework](https://github.com/tschellenbach/Stream-Framework) - Building news feed and notification systems using Cassandra and Redis.
 
-## ORM and other database mapping tools
+## ORM and other Database Mapping Tools
 
 *Libraries that implement Object-Relational Mapping or data mapping techniques.*
 
@@ -781,6 +781,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
     * [PynamoDB](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
+    * [Beanie](https://github.com/roman-right/beanie) -An Asynchronous Python object-document mapper (ODM) for MongoDB. Data models are based on [Pydantic](https://pydantic-docs.helpmanual.io/).
 
 ## Package Management
 
