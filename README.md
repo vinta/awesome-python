@@ -451,6 +451,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
+    * [GlassFlow](https://github.com/glassflow/glassflow-python-sdk) - Build real-time data pipelines in Python within minutes.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Distribution
