@@ -1151,6 +1151,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
+    * [reflex](https://github.com/reflex-dev/reflex) - A Python web framework for building both your frontend and backend with no JavaScript
+        * [awesome-reflex](https://github.com/reflex-dev/reflex)
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
