@@ -345,6 +345,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 * [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 * [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
+* [plotly.py](https://github.com/plotly/plotly.py) - The interactive graphing library for Python.
 * [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [pyqtgraph](https://github.com/pyqtgraph/pyqtgraph) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
