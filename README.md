@@ -675,6 +675,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
+* [iWF](https://github.com/indeedeng/iwf) - iWF is a workflow-as-code platform for building resilient, fault-tolerant, scalable long-running processes. [Python](https://github.com/indeedeng/iwf-python-sdk) and other SDKs are supported.
 * [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [Prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
