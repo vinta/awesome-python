@@ -305,6 +305,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 * [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 * [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
+* [simputils-config](https://pypi.org/project/simputils-config) - Library that simplifies working with configs and params.
 
 ## Cryptography
 
