@@ -1161,7 +1161,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries to interact with the [HTML DOM](https://en.wikipedia.org/wiki/HTML_DOM)*
 
 * [Brython](https://github.com/brython-dev/brython) - Allow you to use Python instead of Javascript.
-* [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
 
 ## WebSocket
