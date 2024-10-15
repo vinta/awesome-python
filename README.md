@@ -1137,6 +1137,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
 * [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 * [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
+* [ScrapegraphAI](https://github.com/ScrapeGraphAI/Scrapegraph-ai) - Python library for extracting data with the use of the AI
 
 ## Web Frameworks
 
