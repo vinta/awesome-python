@@ -419,7 +419,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
-* [sentence-transformer](https://github.com/UKPLab/sentence-transformers) - A library to easily embed sentences. 
+* [sentence-transformers](https://github.com/UKPLab/sentence-transformers) - A library to easily embed sentences. 
 
 ## DevOps Tools
 
