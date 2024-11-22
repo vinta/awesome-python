@@ -439,6 +439,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * Backup
     * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+* Secret Management
+    * [envcloak](https://github.com/Veinar/envcloak) - A lightweight package and standalone CLI tool for encrypting secrets, designed for seamless integration with CI/CD workflows.
 
 ## Distributed Computing
 
