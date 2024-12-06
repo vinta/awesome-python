@@ -507,6 +507,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 * Others
     * [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
+    * [email-validator](https://github.com/JoshData/python-email-validator) - A robust email address syntax and deliverability validation library for Python 3.8+.
     * [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 
 ## Environment Management
