@@ -1135,6 +1135,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
 * [grab](https://github.com/lorien/grab) - Site scraping framework.
+* [hyperbrowser](https://github.com/hyperbrowserai/python-sdk) - A browser automation tool that allows you to automate web browsing, scraping, and crawling tasks.
 * [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 * [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 
