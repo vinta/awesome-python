@@ -896,6 +896,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [ObsPy](https://github.com/obspy/obspy/wiki/) - A Python toolbox for seismology.
 * [Open Babel](https://open-babel.readthedocs.io/) - A chemical toolbox designed to speak the many languages of chemical data.
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
+* [PyGMTSAR](https://github.com/AlexeyPechnikov/pygmtsar) - PyGMTSAR (Python InSAR): Powerful and Accessible Satellite Interferometry.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 * [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
