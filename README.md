@@ -1153,6 +1153,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
+    * [Jam.py](https://github.com/jam-py-v5/jam-py) - A web framework with asynchronous server requests.
+
 
 ## WebSocket
 
