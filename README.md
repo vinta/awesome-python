@@ -935,7 +935,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Shells based on Python.*
 
-* [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered, cross-platform, Unix-gazing shell language and command prompt.
+* [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform. 
 
 ## Specific Formats Processing
 
