@@ -515,6 +515,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 * [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
+* [KillPy](https://github.com/Tlaloc-Es/killpy) - A tool to reclaim disk space by detecting unused Python environments and pipx packages.
 
 ## File Manipulation
 
