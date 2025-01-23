@@ -917,7 +917,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Serialization
 
-*Libraries for serializing complex data types*
+*Libraries for serializing complex data types.*
 
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 * [pysimdjson](https://github.com/TkTech/pysimdjson) - A Python bindings for [simdjson](https://github.com/lemire/simdjson).
