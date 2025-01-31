@@ -457,6 +457,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries to create packaged executables for release distribution.*
 
+* [Portable Python Bundles on MS Windows](https://dev.to/treehouse/portable-python-bundles-on-windows-41ac) - a distribution technique for self-contained Python environments on Windows. Between venvs and PyInstaller.
 * [py2app](https://github.com/ronaldoussoren/py2app) - Freezes Python scripts (Mac OS X).
 * [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
 * [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
