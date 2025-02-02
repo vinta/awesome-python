@@ -1153,6 +1153,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
+    * [microdot](https://github.com/miguelgrinberg/microdot) - The impossibly small web framework for Python and MicroPython.
 
 ## WebSocket
 
