@@ -81,3 +81,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# Automated edit: [Edited] Add docstring to improve documentation
