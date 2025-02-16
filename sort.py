@@ -16,6 +16,13 @@
 
 def sort_blocks():
     # First, we load the current README into memory
+    def sort_blocks():
+        """Sorts and restructures the README file.
+
+        The function reads the  file(README.md) and sorts its library entries,
+        alphabetically while maintaining section headers, and writes the sorted,
+        content back to the file."""
+    
     with open('README.md', 'r') as read_me_file:
         read_me = read_me_file.read()
 
@@ -43,40 +50,55 @@ def sort_blocks():
         sorted_file.write(final_README)
 
 def main():
+    """
+    Main function to process and sort blocks in `README.md`.
+
+    This function reads the file, groups list entries into sortable blocks,
+    sorts them alphabetically while preserving indentation and headers,
+    and writes the sorted content back to `README.md`.
+
+    It then calls `sort_blocks()` to further refine the sorting.
+
+    Raises:
+        Exception: If any error occurs while processing the file.
+    """
+    try:
     # First, we load the current README into memory as an array of lines
-    with open('README.md', 'r') as read_me_file:
-        read_me = read_me_file.readlines()
+        with open('README.md', 'r') as read_me_file:
+            read_me = read_me_file.readlines()
 
-    # Then we cluster the lines together as blocks
-    # Each block represents a collection of lines that should be sorted
-    # This was done by assuming only links ([...](...)) are meant to be sorted
-    # Clustering is done by indentation
-    blocks = []
-    last_indent = None
-    for line in read_me:
-        s_line = line.lstrip()
-        indent = len(line) - len(s_line)
+        # Then we cluster the lines together as blocks
+        # Each block represents a collection of lines that should be sorted
+        # This was done by assuming only links ([...](...)) are meant to be sorted
+        # Clustering is done by indentation
+        blocks = []
+        last_indent = None
+        for line in read_me:
+            s_line = line.lstrip()
+            indent = len(line) - len(s_line)
 
-        if any([s_line.startswith(s) for s in ['* [', '- [']]):
-            if indent == last_indent:
-                blocks[-1].append(line)
+            if any([s_line.startswith(s) for s in ['* [', '- [']]):
+                if indent == last_indent:
+                    blocks[-1].append(line)
+                else:
+                    blocks.append([line])
+                last_indent = indent
             else:
                 blocks.append([line])
-            last_indent = indent
-        else:
-            blocks.append([line])
-            last_indent = None
+                last_indent = None
 
-    with open('README.md', 'w+') as sorted_file:
-        # Then all of the blocks are sorted individually
-        blocks = [
-            ''.join(sorted(block, key=str.lower)) for block in blocks
-        ]
-        # And the result is written back to README.md
-        sorted_file.write(''.join(blocks))
+        with open('README.md', 'w+') as sorted_file:
+            # Then all of the blocks are sorted individually
+            blocks = [
+                ''.join(sorted(block, key=str.lower)) for block in blocks
+            ]
+            # And the result is written back to README.md
+            sorted_file.write(''.join(blocks))
 
-    # Then we call the sorting method
-    sort_blocks()
+        # Then we call the sorting method
+        sort_blocks()
+    except Exception as e:
+        print(f"Error in processing README.md file: {e}")
 
 
 if __name__ == "__main__":
