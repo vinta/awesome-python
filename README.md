@@ -319,6 +319,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
+* [fireducks](https://fireducks-dev.github.io/) - A parallelized version of Pandas library, designed to speed up data processing by leveraging distributed computing capabilities.
 * [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 
 ## Data Validation
