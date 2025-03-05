@@ -461,6 +461,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
 * [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
 * [pyinstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
+* [nuitka](https://github.com/Nuitka/Nuitka) -  Translates the Python modules into a C level program that then uses and static C files of its own to execute in the same way as CPython does.
 * [shiv](https://github.com/linkedin/shiv) - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.
 
 ## Documentation
