@@ -930,7 +930,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
 * [Zappa](https://github.com/zappa/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
-* [Nodeless Desktop Javascript Python](https://github.com/non-npc/Nodeless-Desktop-Javascript-Python) - A template for developing serverless desktop apps and games directly with python and javascript/html.
+* [Desktop Javascript Python](https://github.com/non-npc/Desktop-Javascript-Python-GameDemo) - A template for developing serverless desktop apps and games with python and javascript/html.
 
 ## Shell
 
