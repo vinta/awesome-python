@@ -609,6 +609,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 * [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
+* [meatie](https://github.com/pmateusz/meatie) - Generates code for calling REST endpoints based on method signatures annotated with type hints.
 * [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
 * [urllib3](https://github.com/urllib3/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
 
