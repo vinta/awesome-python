@@ -419,7 +419,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.
 * [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 * [theano](https://github.com/Theano/Theano) - A library for fast numerical computation.
-
+* [DGL](https://github.com/dmlc/dgl) - A Python package built to ease deep learning on graph, designed for both efficiency and flexibility.
 ## DevOps Tools
 
 *Software and libraries for DevOps.*
@@ -705,7 +705,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
-
+* [SHAP](https://github.com/shap/shap) - SHapley Additive exPlanations: A powerful library for explaining the output of machine learning models. Using game theory for feature prediction.
+* [LIME](https://github.com/marcotcr/lime) - Local Interpretable Model-agnostic Explanations: Explains the predictions of any classifier or regressor in a local, interpretable fashion.
+* [InterpretML](https://github.com/interpretml/interpret) - A unified framework for training interpretable machine learning models and explaining blackbox systems
 ## Microsoft Windows
 
 *Python programming on Microsoft Windows.*
