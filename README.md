@@ -726,6 +726,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [Sprite Toolz](https://github.com/non-npc/Sprite-Toolz) - Features for working with sprite sheets, including frame manipulation, batch processing, and animation export.
 
 ## Natural Language Processing
 
