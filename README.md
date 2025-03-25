@@ -1,3 +1,7 @@
+# 25 DE MARZO DE 2025
+# ESTE CAMBIO ES PARA EVIDENCIA DE LA PRÁCTICA 1.2 FLUJO COMPLETO GITHUB, GIT & VSCode
+
+
 # Awesome Python [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 An opinionated list of awesome Python frameworks, libraries, software and resources.
