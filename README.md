@@ -1208,3 +1208,5 @@ A curated list of awesome Python frameworks, libraries, software, and resources.
 1. Clone the repository
 2. Open terminal and navigate to the project folder
 3. Run `python script.py` (if applicable)
+T h i s   i s   a   c o n f l i c t i n g   c h a n g e   f r o m   c o n f l i c t - d e m o   b r a n c h  
+ 
