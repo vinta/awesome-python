@@ -864,6 +864,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
     * [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
     * [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
+    * [Nexios](https://github.com/nexios-labs/nexios) - A modern, flexible, and high-performance Python web framework designed for seamless API development with built-in authentication, WebSockets, and fully async .
 
 ## Robotics
 
