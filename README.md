@@ -1198,3 +1198,13 @@ Your contributions are always welcome! Please take a look at the [contribution g
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
 
+
+# Awesome Python
+
+## Description
+A curated list of awesome Python frameworks, libraries, software, and resources.
+
+## Steps to Run
+1. Clone the repository
+2. Open terminal and navigate to the project folder
+3. Run `python script.py` (if applicable)
