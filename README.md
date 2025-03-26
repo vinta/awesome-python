@@ -2,6 +2,8 @@
 
 An opinionated list of awesome Python frameworks, libraries, software and resources.
 
+# Texto añadido por Adosedeel Herrera
+
 Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 - [Awesome Python](#awesome-python)
