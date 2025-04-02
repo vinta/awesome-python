@@ -904,6 +904,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 * [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 * [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
+* [DFA simulator](https://github.com/coderatul/DFA-Simulator) - An Educational tool to learn Theory of computation.
 
 ## Search
 
