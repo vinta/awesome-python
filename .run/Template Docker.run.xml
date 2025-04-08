@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="docker-deploy" factoryName="dockerfile" editBeforeRun="true" focusToolWindowBeforeRun="true" singleton="false" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="buildOnly" value="true" />
+        <option name="sourceFilePath" value="../AIQuickFix/.idea/codeStyles/codeStyleConfig.xml" />
+      </settings>
+    </deployment>
+    <method v="2">
+      <option name="TypeScript.Before.Run" enabled="true" FAIL_ON_ERROR="true" CONFIG_PATH="C:\Users\tpsai\OneDrive\Desktop\(20+) Edit feed _ daily.dev_files\top1000repos\node_modules\@esbuild\win32-x64\package.json" />
+    </method>
+  </configuration>
+</component>
