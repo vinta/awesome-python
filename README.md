@@ -485,7 +485,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
 * Vim
     * [jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
-    * [python-mode](https://github.com/python-mode/python-mode) - An all in one plugin for turning Vim into a Python IDE.
+    * [python-mode](https://github.com/python-mode/python-mode) - An all-in-one plugin for turning Vim into a Python IDE.
     * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
 * Visual Studio
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
