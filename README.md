@@ -886,7 +886,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
-* [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
+* [Biopython](https://biopython.org/) - Biopython is a set of freely available tools for biological computation.
 * [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 * [Colour](http://colour-science.org/) - Implementing a comprehensive number of colour theory transformations and algorithms.
 * [Karate Club](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
@@ -1013,7 +1013,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
-    * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
+    * [mamba](https://nestorsalceda.com/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
     * [tox](https://tox.readthedocs.io/en/latest/) - Auto builds and tests distributions in multiple Python versions
 * GUI / Web Testing
     * [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
