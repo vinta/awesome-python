@@ -327,7 +327,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 * [colander](https://github.com/Pylons/colander) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
-* [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
+* [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
 * [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 * [schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
@@ -451,7 +451,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 * Stream Processing
     * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
-    * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
+    * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](https://storm.apache.org/).
 
 ## Distribution
 
@@ -570,7 +570,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Arcade](https://api.arcade.academy/en/latest/) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
 * [Cocos2d](https://www.cocos.com/en/cocos2d-x) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications.
-* [Harfang3D](http://www.harfang3d.com) - Python framework for 3D, VR and game development.
+* [Harfang3D](https://www.harfang3d.com) - Python framework for 3D, VR and game development.
 * [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney.
 * [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
 * [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
@@ -627,7 +627,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
 * [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
-* [pymatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
+* [pymatting](https://github.com/pymatting/pymatting) - A library for alpha matting.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 * [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 * [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
@@ -673,7 +673,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Airflow](https://airflow.apache.org/) - Airflow is a platform to programmatically author, schedule and monitor workflows.
 * [APScheduler](http://apscheduler.readthedocs.io/en/latest/) - A light but powerful in-process task scheduler that lets you schedule functions.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
-* [doit](http://pydoit.org/) - A task runner and build tool.
+* [doit](https://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
 * [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
@@ -700,7 +700,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
-* [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
+* [scikit-learn](https://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
@@ -725,7 +725,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
-* [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [tryton](https://www.tryton.org/) - A general purpose business framework.
 
 ## Natural Language Processing
 
@@ -877,7 +877,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *RPC-compatible servers.*
 
 * [RPyC](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
-* [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+* [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](https://msgpack.org/).
 
 ## Science
 
@@ -891,13 +891,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Colour](http://colour-science.org/) - Implementing a comprehensive number of colour theory transformations and algorithms.
 * [Karate Club](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
 * [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
-* [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
-* [NumPy](http://www.numpy.org/) - A fundamental package for scientific computing with Python.
+* [NIPY](https://nipy.org) - A collection of neuroimaging toolkits.
+* [NumPy](https://www.numpy.org/) - A fundamental package for scientific computing with Python.
 * [ObsPy](https://github.com/obspy/obspy/wiki/) - A Python toolbox for seismology.
 * [Open Babel](https://open-babel.readthedocs.io/) - A chemical toolbox designed to speak the many languages of chemical data.
-* [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
+* [PyDy](https://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
-* [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
+* [QuTiP](https://qutip.org/) - Quantum Toolbox in Python.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 * [SimPy](https://gitlab.com/team-simpy/simpy) -  A process-based discrete-event simulation framework.
@@ -961,7 +961,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
 * YAML
-    * [PyYAML](http://pyyaml.org/) - YAML implementations for Python.
+    * [PyYAML](https://pyyaml.org/) - YAML implementations for Python.
 * CSV
     * [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 * Archive
@@ -1067,7 +1067,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
 * Parser
     * [ply](https://github.com/dabeaz/ply) - Implementation of lex and yacc parsing tools for Python.
-    * [pygments](http://pygments.org/) - A generic syntax highlighter.
+    * [pygments](https://pygments.org/) - A generic syntax highlighter.
     * [pyparsing](https://github.com/pyparsing/pyparsing) - A general purpose framework for generating parsers.
     * [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
     * [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
