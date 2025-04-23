@@ -1033,11 +1033,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 * Object Factories
     * [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
+    * [fake.py](https://github.com/barseghyanartur/fake.py) - A zero-dependency, portable Python library for generating fake data, documents and images. Data factories included.
     * [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supports Django, Flask, SQLAlchemy, Peewee and etc.
     * [model_mommy](https://github.com/vandersonmota/model_mommy) - Creating random fixtures for testing in Django.
 * Code Coverage
     * [coverage](https://pypi.org/project/coverage/) - Code coverage measurement.
 * Fake Data
+    * [fake.py](https://github.com/barseghyanartur/fake.py) - A zero-dependency, portable Python library for generating fake data, documents and images. Data factories included.
     * [fake2db](https://github.com/emirozer/fake2db) - Fake database generator.
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
