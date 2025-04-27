@@ -224,6 +224,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
 
+## Cross-cloud large file transfer ##
+
+* [CloudFile-Mover](https://github.com/RaghavaCh440/cloudfile-mover) - Cross-cloud large file transfer tool for GCS, AWS S3, and Azure Blob Storage.
+
 ## Code Analysis
 
 *Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
