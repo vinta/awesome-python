@@ -223,6 +223,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
+* [ngpt](https://github.com/nazdridoy/ngpt) - An interactive LLM chatbot with conversation memory that supports multiple providers like OpenAI, Ollama, Groq, and Claude. Features OS-aware shell command generation and execution capabilities.
 
 ## Code Analysis
 
@@ -256,6 +257,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
     * [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://github.com/openstack/cliff) - A framework for creating command-line programs with multi-level commands.
+    * [ngpt](https://github.com/nazdridoy/ngpt) - A CLI framework for building AI-powered command-line tools with features like chat, code generation, and markdown rendering.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
 * Terminal Rendering
@@ -276,6 +278,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
+    * [ngpt](https://github.com/nazdridoy/ngpt) - A Swiss army knife for LLMs: powerful CLI, interactive chatbot, and flexible library. Supports OpenAI, Ollama, Groq, Claude, or any OpenAI-compatible API.
     * [pathpicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
@@ -1197,4 +1200,3 @@ Your contributions are always welcome! Please take a look at the [contribution g
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
-
