@@ -265,6 +265,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
     * [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
     * [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
+    * [rich](https://github.com/Textualize/rich) - Render rich text, tables, markdown, syntax highlighting, and progress bars in the terminal.
+    * [textual](https://github.com/Textualize/textual) - Build modern TUI applications with widgets, styles, and animations using Rich.
+    * [termynal](https://github.com/ines/termynal) - A simple and customizable terminal-like interface for showing code or output.
+
 
 ## Command-line Tools
 
