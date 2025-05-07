@@ -957,6 +957,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - Pdfminer.six is a community maintained fork of the original PDFMiner.
     * [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
     * [ReportLab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+    * [pdf2wordx](https://github.com/tutosrive/pdf2wordx/) - Convert PDF to `.docx` (Word file), using a graphical interface (TKinter)
 * Markdown
     * [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
     * [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
