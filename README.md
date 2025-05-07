@@ -691,6 +691,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 * [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
 * [structlog](https://www.structlog.org/en/stable/) - Structured logging made easy.
+* [chromologger](https://pypi.org/project/chromologger/) - Create time-stamped logs and save them to files, info logs, and structured exceptions.
 
 ## Machine Learning
 
