@@ -1102,6 +1102,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 * [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 * [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
+* [effect-srm](https://github.com/tutosrive/effect-screen-recorder-master) - A 100% AI-encoded "Screen Recorder" written in Python that adds effects in 'real time' (no post-processing)
 
 ## Web Asset Management
 
