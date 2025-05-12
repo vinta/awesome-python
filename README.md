@@ -1151,6 +1151,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
+    * [duck](https://github.com/digreatbrian/duck) - A lightweight Python web framework designed for building scalable, production-ready applications—with a built-in component system (an alternative to React), native HTTPS and HTTP/2 support, and seamless integration with Django.
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
