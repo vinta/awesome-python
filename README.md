@@ -256,6 +256,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
     * [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
     * [cliff](https://github.com/openstack/cliff) - A framework for creating command-line programs with multi-level commands.
+    * [mininterface](https://github.com/CZ-NIC/mininterface) - A dialog toolkit that makes command line interface interactive.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
 * Terminal Rendering
