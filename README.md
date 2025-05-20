@@ -827,7 +827,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Recommender Systems
 
 *Libraries for building recommender systems.*
-
+* [Movie Recommendation System](https://github.com/HariomSinghalPuri/Movie_Recommendation_System) - A content-based filtering and collaborative filtering recommendation system using Python and machine learning.
 * [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 * [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
 * [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
