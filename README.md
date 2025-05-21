@@ -439,6 +439,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * Backup
     * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+* Network Analysis
+    * [ServicePathMapper](https://github.com/irisonia/ServicePathMapper) - Map & analyze service-based paths between servers in a distributed system, using fine-grained constraints.
 
 ## Distributed Computing
 
