@@ -491,6 +491,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
 * Visual Studio Code
     * [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
+    * [Dependi](https://marketplace.visualstudio.com/items?itemName=fill-labs.dependi) - A dependency management extension for Visual Studio Code supporting Python
 * IDE
     * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
     * [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
