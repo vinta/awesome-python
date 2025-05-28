@@ -236,10 +236,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
     * [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
+    * [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter, written in Rust.
 * Code Formatters
     * [black](https://github.com/psf/black) - The uncompromising Python code formatter.
     * [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
     * [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
+    * [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter, written in Rust.
 * Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
     * [mypy](https://github.com/python/mypy) - Check variable types during compile time.
     * [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
