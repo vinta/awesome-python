@@ -1011,6 +1011,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
     * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
+* Test Reports
+    * [pytest-reporter-plus](https://github.com/reach2jeyan/pytest-reporter-plus) - Pytest plugin for beautiful reports, flaky test insights, and powerful filtering.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
