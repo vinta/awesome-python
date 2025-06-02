@@ -332,6 +332,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 * [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 * [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
+* [pointblank](https://github.com/posit-dev/pointblank) - Validate a wide range of DataFrame and database tables.
 
 ## Data Visualization
 
