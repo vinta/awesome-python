@@ -859,6 +859,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Pyramid
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
+    * [apitally](https://github.com/apitally/apitally-py) - A simple API monitoring, analytics, and request logging tool. Supports FastAPI, Django, Flask, and other frameworks.
     * [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
     * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
     * [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
