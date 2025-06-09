@@ -732,7 +732,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with human languages.*
 
 - General
-    * [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
+    * [AI DevToolBox](https://github.com/aiwithjusl/ai-dev-toolbox) - Modular Python toolkit for NLP, error debugging, data cleaning, and vector-based search.
+    *  [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
     * [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
     * [nltk](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
     * [pattern](https://github.com/clips/pattern) - A web mining module.
