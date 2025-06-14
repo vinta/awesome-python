@@ -70,6 +70,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [RPC Servers](#rpc-servers)
     - [Science](#science)
     - [Search](#search)
+    - [SEO](#SEO)
     - [Serialization](#serialization)
     - [Serverless Frameworks](#serverless-frameworks)
     - [Shell](#shell)
@@ -914,6 +915,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [elasticsearch-py](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 * [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
 * [whoosh](http://whoosh.readthedocs.io/en/latest/) - A fast, pure Python search engine library.
+
+## SEO
+
+*Libraries for search engine optimization (SEO).*
+
+* [pyseo](https://www.masem.at/#:~:text=%F0%9F%A7%AA-,pyseoa,-Fast%2C%20extensible%20Python) - fast, extensible library for analyzing SEO health across one or more URLs, with CLI
 
 ## Serialization
 
