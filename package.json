@@ -1,0 +1,15 @@
+{
+  "name": "awesome-python",
+  "version": "1.0.0",
+  "description": "An opinionated list of awesome Python frameworks, libraries, software and resources.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Your Name <your.email@example.com>",
+  "license": "ISC"
+}
