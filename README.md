@@ -478,6 +478,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
 * [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 * [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
+* [AS Youtube Downloader](https://github.com/AhmedShaikh0/AS-YouTube-Downloader) - A modern Python GUI to download YouTube videos/audio using yt-dlp and tkinter.
 
 ## Editor Plugins and IDEs
 
