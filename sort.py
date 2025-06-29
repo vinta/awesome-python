@@ -20,8 +20,22 @@ def sort_blocks():
         read_me = read_me_file.read()
 
     # Separating the 'table of contents' from the contents (blocks)
-    table_of_contents = ''.join(read_me.split('- - -')[0])
-    blocks = ''.join(read_me.split('- - -')[1]).split('\n# ')
+    # The README uses the Markdown horizontal-rule delimiter `---` (three dashes) to
+    # separate the table of contents from the rest of the document.  Historically
+    # the script expected the string "- - -", which no longer exists in the file
+    # and therefore caused the split to fail, producing an IndexError and an empty
+    # output.  We now look for the correct delimiter and fall back gracefully if
+    # it is missing.
+    delimiter = "---"
+    parts = read_me.split(delimiter, 1)
+    if len(parts) == 1:
+        # Delimiter not found – keep behaviour unchanged to avoid corrupting file
+        table_of_contents, remainder = parts[0], ""
+    else:
+        table_of_contents, remainder = parts
+    blocks = remainder.split('\n# ')
+    # restore the delimiter to be re-inserted later exactly as it appeared
+    delimiter_with_newlines = f"\n{delimiter}\n"
     for i in range(len(blocks)):
         if i == 0:
             blocks[i] = blocks[i] + '\n'
@@ -37,7 +51,7 @@ def sort_blocks():
 
     # Replacing the non-sorted libraries by the sorted ones and gathering all at the final_README file
     blocks[0] = inner_blocks
-    final_README = table_of_contents + '- - -' + ''.join(blocks)
+    final_README = table_of_contents + delimiter_with_newlines + ''.join(blocks)
 
     with open('README.md', 'w+') as sorted_file:
         sorted_file.write(final_README)
