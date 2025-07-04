@@ -1,0 +1,71 @@
+@media print {
+    /* PDF için özel stiller */
+    .md-header, .md-footer {
+        display: none;
+    }
+    
+    .md-content {
+        max-width: none;
+        margin: 0;
+        padding: 20px;
+    }
+    
+    /* Sayfa sonları */
+    h1 {
+        page-break-before: always;
+        margin-top: 50px;
+    }
+    
+    h1:first-of-type {
+        page-break-before: avoid;
+    }
+    
+    /* Link stilleri */
+    a {
+        color: #1976d2;
+        text-decoration: none;
+    }
+    
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #666;
+    }
+    
+    /* Liste stilleri */
+    ul, ol {
+        margin: 10px 0;
+        padding-left: 20px;
+    }
+    
+    li {
+        margin: 5px 0;
+        line-height: 1.4;
+    }
+    
+    /* Kod blokları */
+    code {
+        background: #f5f5f5;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: 'Monaco', 'Consolas', monospace;
+    }
+    
+    /* Tablo stilleri */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 15px 0;
+    }
+    
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    
+    th {
+        background-color: #f8f9fa;
+        font-weight: bold;
+    }
+}
