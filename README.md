@@ -236,6 +236,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
     * [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
+    * [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
 * Code Formatters
     * [black](https://github.com/psf/black) - The uncompromising Python code formatter.
     * [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
