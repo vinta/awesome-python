@@ -707,6 +707,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 
+## 🤖 Generative AI + LLM
+
+- **[LangChain](https://github.com/langchain-ai/langchain)** — A framework for building context-aware LLM applications using modular components like chains, agents, and RAG; includes LangSmith for production and monitoring, and supports +50 document types and diverse integrations.
+- **[LlamaIndex](https://github.com/run-llama/llama_index)** (formerly GPT‑Index) — A toolkit for building retrieval‑augmented LLM systems: ingest documents, index, query, and integrate with LangChain, workflows, and vector databases.
+- **[LLaVA](https://github.com/haotian-liu/LLaVA)** — A multimodal LLM (vision + text) fine-tuned to GPT‑4‑level visual instruction performance.
+
 ## Microsoft Windows
 
 *Python programming on Microsoft Windows.*
