@@ -154,6 +154,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
     * [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
     * [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
+    * [pedalboard](https://github.com/spotify/pedalboard) - A library for working with audio.
     * [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
     * [mingus](http://bspaans.github.io/python-mingus/) - An advanced music theory and notation package with MIDI file and playback support.
     * [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
