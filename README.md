@@ -143,6 +143,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
 * [eventlet](https://github.com/eventlet/eventlet) - Asynchronous framework with WSGI support.
 * [gevent](https://github.com/gevent/gevent) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
+* [dispytch](https://github.com/e1-m/dispytch) - A lightweight, async-first Python framework for event-driven services.
 
 ## Audio
 
