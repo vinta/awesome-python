@@ -482,6 +482,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Editor Plugins and IDEs
 
+*GGUF Loader
+    * [GGUF Loader](https://github.com/GGUFloader/gguf-loader) — Lightweight, cross-platform UI app built with PySide6 for loading LLM's + addon support
 * Emacs
     * [elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
 * Vim
