@@ -526,6 +526,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 * [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 * [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+* [Metadata Cleaner](https://github.com/AntGalanin06/Metadata_Cleaner) — A cross-platform GUI to remove hidden metadata from files (images, documents, videos). Offline, batch support, Material 3 UI, multilingual (EN/RU).
 
 ## Functional Programming
 
