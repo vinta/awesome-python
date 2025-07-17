@@ -4,11 +4,52 @@ site_description: A curated list of awesome Python frameworks, libraries and sof
 site_author: Vinta Chen
 repo_name: vinta/awesome-python
 repo_url: https://github.com/vinta/awesome-python
+
 theme:
   name: material
   palette:
     primary: red
     accent: pink
+  # PDF için ek özellikler
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+
+# PDF oluşturma eklentileri
+plugins:
+  - search
+  - with-pdf:
+      author: "Vinta Chen"
+      copyright: "© 2025 Awesome Python"
+      cover: true
+      back_cover: true
+      cover_title: "Awesome Python"
+      cover_subtitle: "A curated list of awesome Python frameworks, libraries and software"
+      custom_template_path: "docs/pdf_template.html"
+      toc_title: "Table of Contents"
+      heading_shift: false
+      toc_level: 3
+      ordered_chapter_level: 2
+      excludes_children:
+        - 'release-notes/:upgrading'
+        - 'release-notes/:changelog'
+      exclude_pages:
+        - 'bugs/'
+        - 'appendix/contribute/'
+      convert_iframe:
+        - src: IFRAME SRC
+          img: POSTER IMAGE URL
+          text: ALTERNATE TEXT
+      two_columns_level: 3
+      render_js: true
+      headless_chrome_path: "/usr/bin/google-chrome"
+      output_path: "awesome-python.pdf"
+      enabled_if_env: ENABLE_PDF_EXPORT
+      debug_html: false
+      show_anchors: false
+      verbose: true
+
 extra:
   social:
     - type: github
@@ -17,10 +58,14 @@ extra:
       link: https://twitter.com/vinta
     - type: linkedin
       link: https://www.linkedin.com/in/vinta
+
 google_analytics:
   - UA-510626-7
   - auto
+
 extra_css:
-    - css/extra.css
+  - css/extra.css
+  - css/pdf.css  # PDF için özel CSS
+
 nav:
   - "Life is short, you need Python.": "index.md"
