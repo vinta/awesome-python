@@ -224,6 +224,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
 
+## Cross-cloud large file transfer ##
+
+* [CloudFile-Mover](https://github.com/RaghavaCh440/cloudfile-mover) - Cross-cloud large file transfer tool for GCS, AWS S3, and Azure Blob Storage.
+
 ## Code Analysis
 
 *Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/mre/awesome-static-analysis).*
@@ -259,6 +263,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [cliff](https://github.com/openstack/cliff) - A framework for creating command-line programs with multi-level commands.
     * [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
     * [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
+    * [cloudfile-mover](https://github.com/RaghavaCh440/cloudfile-mover) - AI-enhanced, cloud-native file transfer utility supporting multi-cloud and secure batch operations.
 * Terminal Rendering
     * [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
     * [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
@@ -281,6 +286,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
+    * [cloudfile-mover](https://github.com/RaghavaCh440/cloudfile-mover) - AI-enhanced, cloud-native file transfer utility supporting multi-cloud and secure batch operations
 * CLI Enhancements
     * [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
     * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
