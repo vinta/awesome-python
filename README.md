@@ -197,6 +197,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 * [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Data classes.
 * [dotteddict](https://github.com/carlosescri/DottedDict) - A library that provides a method of accessing lists and dicts with a dotted path notation.
+* [Traitlets](https://github.com/ipython/traitlets) - A library that enables enforcement of strong typing of attributes, dynamic calculation of default values, and automatic validation when values change.
 
 ## CMS
 
