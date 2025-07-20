@@ -705,7 +705,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
-* [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+
 
 ## Microsoft Windows
 
@@ -727,6 +727,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [Quantum Libraries](https://github.com/microsoft/QuantumLibraries) - Q# libraries for the Quantum Development Kit
 
 ## Natural Language Processing
 
@@ -825,6 +826,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
 * [sarge](https://sarge.readthedocs.io/en/latest/) - Yet another wrapper for subprocess.
 * [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+
 
 ## Recommender Systems
 
