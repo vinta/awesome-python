@@ -564,6 +564,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with GraphQL.*
 
 * [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
+* [ariadne](https://github.com/mirumee/ariadne/) - Ariadne is a Python GraphQL framework with an SDL-based design, async support, and FastAPI integration.
 
 ## Game Development
 
