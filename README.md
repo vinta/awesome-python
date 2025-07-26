@@ -68,6 +68,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [RESTful API](#restful-api)
     - [Robotics](#robotics)
     - [RPC Servers](#rpc-servers)
+    - [Security issues](#security-issues)
     - [Science](#science)
     - [Search](#search)
     - [Serialization](#serialization)
@@ -880,6 +881,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [RPyC](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+
+## Security issues
+
+*Tools and services for finding common security issues in Python code.*
+
+* [Bandit](https://bandit.readthedocs.io/en/latest/) - designed to find common security issues in Python code.
+
 
 ## Science
 
