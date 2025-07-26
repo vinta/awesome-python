@@ -543,7 +543,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with graphical user interface applications.*
 
 * [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
-* [Eel](https://github.com/ChrisKnott/Eel) - A library for making simple Electron-like offline HTML/JS GUI apps.
 * [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
 * [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
 * [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
