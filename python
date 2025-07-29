@@ -1,0 +1,4344 @@
+“# Importation of data
+
+
+list_tickers = [
+ "FB"
+ ,
+ "NFLX"
+ ,
+ "TSLA"
+ ]
+ 1
+
+
+database = yf.download(list_tickers)
+ 2
+
+
+ 
+
+
+# Take only the adjusted stock price
+
+
+database = database[
+ "Adj Close"
+ ]
+ 3”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“
+
+
+
+
+# Importation of data
+
+
+list_tickers = [
+ "FB"
+ ,
+ "NFLX"
+ ,
+ "TSLA"
+ ]
+ 1
+
+
+database = yf.download(list_tickers)
+ 2
+
+
+ 
+
+
+# Take only the adjusted stock price
+
+
+database = database[
+ "Adj Close"
+ ]
+ 3
+
+
+ 
+
+
+# Drop missing values
+
+
+data = database.dropna().pct_change(
+ 1
+ ).dropna(
+ )
+ 4”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ MV_criterion
+ (
+ weights
+ ,
+ data
+ ):
+
+
+   
+ """
+
+
+    --------------------------------------------------------------------------
+
+
+    | Output: optimization portfolio criterion                                   |
+
+
+    --------------------------------------------------------------------------
+
+
+    | Inputs: -weight (type ndarray numpy): Weight for portfolio               |
+
+
+    |         -data (type ndarray numpy): Returns of stocks                     |
+
+
+    --------------------------------------------------------------------------
+
+
+    """
+
+
+ 
+
+
+   
+ # Parameters
+ 1
+
+
+    Lambda =
+ 3
+
+
+    W =
+ 1
+
+
+    Wbar =
+ 1
+ +
+ 0.25
+ /
+ 10
+ 0
+ 2
+
+
+ 
+
+
+   
+ # Compute portfolio returns
+
+
+    portfolio_return = np.multiply(data, np.transpose(weights)
+ )
+ 3
+
+
+    portfolio_return = portfolio_return.
+ sum
+ (axis=
+ 1
+ )
+ 4
+
+
+ 
+
+
+   
+ # Compute mean and volatility of the portfolio
+
+
+    mean = np.mean(portfolio_return, axis=
+ 0
+ )
+ 5
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“std = np.std(portfolio_return, axis=
+ 0
+ )
+ 6
+
+
+ 
+
+
+   
+ # Compute the criterion
+
+
+   
+ criterion = Wbar ** (
+ 1
+ - Lambda) / (
+ 1
+ + Lambda) + Wbar ** (-Lambda)
+
+
+    \ * W * mean - Lambda /
+ 2
+ * Wbar ** (
+ -1
+ - Lambda) * W **
+ 2
+ *\
+ std
+
+
+    **  
+ 2
+ 7
+
+
+ 
+
+
+    criterion = -criterio
+ n
+ 8
+
+
+   
+ return
+ criterion
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“split = int(
+ 0.7
+ *
+ len
+ (data)
+ )
+ 1
+
+
+train_set = data.iloc[:split, :]
+
+
+test_set = data.iloc[split:, :]
+
+
+ 
+
+
+# Find the number of assets
+
+
+n = data.shape[
+ 1
+ ]
+ 2
+
+
+ 
+
+
+# Initialization weight value
+
+
+x0 = np.ones(n
+ )
+ 3
+
+
+ 
+
+
+# Optimization constraints problem
+
+
+cons = ({
+ 'type'
+ :
+ 'eq'
+ ,
+ 'fun'
+ :
+ lambda
+ x:
+ sum
+ (
+ abs
+ (x)) -
+ 1
+ }
+ )
+ 4
+
+
+ 
+
+
+# Set the bounds
+
+
+Bounds = [(
+ 0
+ ,
+ 1
+ )
+ for
+ i
+ in
+ range
+ (
+ 0
+ , n)
+ ]
+ 5
+
+
+ 
+
+
+# Optimization problem solving
+
+
+res_MV = minimize(MV_criterion, x0, method=
+ "SLSQP"
+ ,
+
+
+                  args=(train_set), bounds=Bounds,
+
+
+                  constraints=cons, options={
+ 'disp'
+ :
+ True
+ }
+ )
+ 6
+
+
+ 
+
+
+# Result
+
+
+X_MV = res_MV.x
+ 7
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“split = int(
+ 0.7
+ *
+ len
+ (data)
+ )
+ 1
+
+
+train_set = data.iloc[:split, :]
+
+
+test_set = data.iloc[split:, :]
+
+
+ 
+
+
+# Find the number of assets
+
+
+n = data.shape[
+ 1
+ ]
+ 2
+
+
+ 
+
+
+# Initialization weight value
+
+
+x0 = np.ones(n
+ )
+ 3
+
+
+ 
+
+
+# Optimization constraints problem
+
+
+cons = ({
+ 'type'
+ :
+ 'eq'
+ ,
+ 'fun'
+ :
+ lambda
+ x:
+ sum
+ (
+ abs
+ (x)) -
+ 1
+ }
+ )
+ 4
+
+
+ 
+
+
+# Set the bounds
+
+
+Bounds = [(
+ 0
+ ,
+ 1
+ )
+ for
+ i
+ in
+ range
+ (
+ 0
+ , n)
+ ]
+ 5
+
+
+ 
+
+
+# Optimization problem solving
+
+
+res_MV = minimize(MV_criterion, x0, method=
+ "SLSQP"
+ ,
+
+
+                  args=(train_set), bounds=Bounds,
+
+
+                  constraints=cons, options={
+ 'disp'
+ :
+ True
+ }
+ )
+ 6
+
+
+ 
+
+
+# Result
+
+
+X_MV = res_MV.x
+ 7
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ SK_criterion
+ (
+ weights
+ ,
+ data
+ ):
+
+
+   
+ ""”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“data
+ ):
+
+
+   
+ """
+
+
+    --------------------------------------------------------------------------
+
+
+    | Output: optimization portfolio criterion                                  |
+
+
+    --------------------------------------------------------------------------
+
+
+    | Inputs: -weight (type ndarray numpy): Weight for portfolio               |
+
+
+    |         -data (type ndarray numpy): Returns of stocks                     |
+
+
+    --------------------------------------------------------------------------
+
+
+    """
+
+
+   
+ from
+ scipy.stats
+ import
+ skew, kurtosis
+
+
+   
+ # Parameter
+ s
+ 1
+
+
+    Lambda =
+ 3
+
+
+    W =
+ 1
+
+
+    Wbar =
+ 1
+ +
+ 0.25
+ /
+ 100
+
+
+ 
+
+
+   
+ # Compute portfolio return
+ s
+ 2
+
+
+    portfolio_return = np.multiply(data, np.transpose(weights))
+
+
+    portfolio_return = portfolio_return.
+ sum
+ (axis=
+ 1
+ )
+
+
+ 
+
+
+   
+ # Compute mean, volatility, skew, kurtosis of the portfolio
+
+
+    mean = np.mean(portfolio_return, axis=
+ 0
+ )
+
+
+    std = np.std(portfolio_return, axis=
+ 0
+ )
+
+
+    skewness = skew(portfolio_return,
+ 0
+ )
+ 3
+
+
+    kurt = kurtosis(portfolio_return,
+ 0
+ )
+ 4
+
+
+ 
+
+
+   
+ # Compute the criterion
+
+
+    criterion =
+ Wbar ** (
+ 1
+ - Lambda) / (
+ 1
+ + Lambda) + Wbar ** (-Lambda) \
+
+
+     * W * mean - Lambda /
+ 2
+ * Wbar ** (
+ -1
+ - Lambda) * W **
+ 2
+ * std **
+ 2
+ \
+
+
+      + Lambda * (Lambda +
+ 1
+ ) / (
+ 6
+ ) * Wbar ** (
+ -2
+ - Lambda) * W **
+ 3
+ * skewnes\            
+
+
+      - Lambda * (Lambda +
+ 1
+ ) * (Lambda +
+ 2
+ ) / (
+ 24
+ ) * Wbar ** (
+ -3
+ - Lambda) *\
+
+
+     W **
+ 4
+ * kur
+ t
+ 5
+
+
+ 
+
+
+    criterion = -criterio
+ n
+ 6
+
+
+   
+ return
+ criterion”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“
+
+
+
+
+# Find the number of assets
+
+
+n = data.shape[
+ 1
+ ]
+
+
+ 
+
+
+# Initialization weight value
+
+
+x0 = np.ones(n)
+
+
+ 
+
+
+# Optimization constraints problem
+
+
+cons = ({
+ 'type'
+ :
+ 'eq'
+ ,
+ 'fun'
+ :
+ lambda
+ x:
+ sum
+ (
+ abs
+ (x)) -
+ 1
+ })
+
+
+ 
+
+
+# Set the bounds
+
+
+Bounds = [(
+ 0
+ ,
+ 1
+ )
+ for
+ i
+ in
+ range
+ (
+ 0
+ , n)]
+
+
+ 
+
+
+# Optimization problem solving
+
+
+res_SK = minimize(SK_criterion, x0, method=
+ "SLSQP"
+ ,
+
+
+                  args=(train_set), bounds=Bounds,
+
+
+                  constraints=cons, options={
+ 'disp'
+ :
+ True
+ })
+
+
+# Result for computations
+
+
+X_SK = res_SK.x
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ SR_criterion
+ (
+ weight
+ ,
+ data
+ ):
+
+
+   
+ """
+
+
+    --------------------------------------------------------------------------
+
+
+    | Output: Opposite Sharpe ratio to minimize it.                          |
+
+
+    --------------------------------------------------------------------------
+
+
+    | Inputs: -Weight (type ndarray numpy): Weight for portfolio               |
+
+
+    |         -data (type dataframe pandas): Returns of stocks                  |
+
+
+    --------------------------------------------------------------------------
+
+
+    """
+
+
+   
+ # Compute portfolio returns
+
+
+    portfolio_return = np.multiply(data, np.transpose(weight))
+
+
+    portfolio_return = portfolio_return.
+ sum
+ (axis=
+ 1
+ )
+
+
+ 
+
+
+   
+ # Compute mean, volatility of the portfolio
+
+
+    mean = np.mean(portfolio_return, axis=
+ 0
+ )
+
+
+    std = np.std(portfolio_return, axis=
+ 0
+ )
+
+
+ 
+
+
+   
+ # Compute the opposite of the Sharpe ratio
+
+
+    Sharpe = mean / std
+
+
+    Sharpe = -Sharpe
+
+
+   
+ return
+ Sharpe
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ SOR_criterion
+ (
+ weight
+ ,
+ data
+ ):
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“data[
+ "SMA15 FB"
+ ] = data[
+ "FB"
+ ].rolling(
+ 15
+ ).mean().shift(
+ 1
+ )
+
+
+data[
+ "SMA15 NFLX"
+ ] = data[
+ "NFLX"
+ ].rolling(
+ 15
+ ).mean().shift(
+ 1
+ )
+
+
+data[
+ "SMA15 TSLA"
+ ] = data[
+ "TSLA"
+ ].rolling(
+ 15
+ ).mean().shift(
+ 1
+ )
+
+
+
+
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“list_tickers = [
+ "FB"
+ ,
+ "NFLX"
+ ,
+ "TSLA"
+ ]
+
+
+# We do a loop to create the SMAs for each asset
+
+
+for
+ col
+ in
+ list_tickers:
+
+
+  data[
+ f
+ "pct
+ {col}
+ "
+ ] = data[col].pct_change(
+ 1
+ )
+
+
+  data[
+ f
+ "SMA3
+ {col}
+ "
+ ] = data[col].rolling(
+ 3
+ ).mean().shift(
+ 1
+ )
+
+
+  data[
+ f
+ "SMA12
+ {col}
+ "
+ ] = data[col].rolling(
+ 12
+ ).mean().shift(
+ 1
+ )
+
+
+  data[
+ f
+ "Momentum factor
+ {col}
+ "
+ ] = data[
+ f
+ "SMA3
+ {col}
+ "
+ ] - \
+
+
+  data[
+ f
+ "SMA12
+ {col}
+ "
+ ]
+
+
+ 
+
+
+# Normalizing the zscore
+
+
+split = int(
+ 0.7
+ *
+ len
+ (data))
+
+
+train_set = data.iloc[:split,:]
+
+
+test_set = data.iloc[split:,:]”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“
+# Compute the signals and the profits
+
+
+for
+i
+  in
+  range(
+    len(columns)):
+  1
+
+
+
+
+
+
+# Initialize a new column
+for the signal
+
+
+test_set[
+    f "signal { columns[i] }
+    "
+  ] =
+  0
+2
+
+
+
+
+
+
+# Signal is - 1
+if factor < median
+
+”
+
+Excerpt From
+Python
+for Finance and Algorithmic trading(2n d edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management
+for MetaTrader™ 5 Live Trading
+Inglese, Lucas
+https: //itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+  This material may be protected by copyright.
+  “test_set.loc[test_set[
+ f
+ "
+ {columns[i]}
+ "
+ ]<median[i],
+
+
+              
+ f
+ "signal
+ {columns[i]}
+ "
+ ] =
+ -1
+
+
+ 
+
+
+ 
+ # Signal is 1 if factor > median
+
+
+  test_set.loc[test_set[
+ f
+ "
+ {columns[i]}
+ "
+ ]>median[i],
+
+
+              
+ f
+ "signal
+ {columns[i]}
+ "
+ ] =
+ 1
+
+
+ 
+
+
+ 
+ # Compute the profit
+
+
+  test_set[
+ f
+ "profit
+ {columns[i]}
+ "
+ ] = (test_set[
+ f
+ "signal
+ {columns[i]}
+ "
+ ].shift(
+ 1
+ )) * test_set[
+ f
+ "pct
+ {list_tickers[i]}
+ "
+ ]
+ 3”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“# Compute the lookback and hold period
+
+
+for
+ col
+ in
+ list_:
+
+
+  data[
+ f
+ "pct+1
+ {col}
+ "
+ ] = data[
+ f
+ "
+ {col}
+ "
+ ].pct_change(
+ -1
+ )
+ 1
+
+
+  data[
+ f
+ "pct-12
+ {col}
+ "
+ ] = data[
+ f
+ "
+ {col}
+ "
+ ].pct_change(
+ 12
+ )
+ 2
+
+
+ 
+
+
+# Normalizing the zscore
+
+
+split = int(
+ 0.7
+ *
+ len
+ (data))
+
+
+train_set = data.iloc[:split,:]
+
+
+test_set = data.iloc[split:,:]
+
+
+ 
+
+
+# Compute the correlation
+
+
+corr = []
+
+
+for
+ col
+ in
+ list_:
+
+
+  cor = train_set[[
+ f
+ "pct-12
+ {col}
+ "
+ ,
+ f
+ "pct+1
+ {col}
+ "
+ ]].corr().values[
+ 0
+ ][
+ 1
+ ]
+
+
+ 
+
+
+  corr.append(cor)
+
+
+correlation = pd.DataFrame(corr, index=list_, columns=[
+ "Corr"
+ ]
+ )
+ 3
+
+
+correlation.sort_values(by=
+ "Corr"
+ , ascending=
+ False
+ )”
+
+“def
+ beta_function
+ (
+ portfolio
+ ,
+ ben
+ =
+ "^GSPC"
+ )
+ :
+ 1
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: Beta CAPM metric                                                  |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - portfolio (type dataframe pandas): Returns of the portfolio     |
+
+
+  |         - ben (type string): Name of the benchmark                        |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+
+
+ 
+ # Import the benchmark
+
+
+  benchmark = yf.download(ben)[
+ "Adj Close"
+ ].pct_change(
+ 1
+ ).dropna()
+
+
+ 
+
+
+ 
+ # Concat the asset and the benchmark
+
+
+  join = pd.concat((portfolio, benchmark), axis=
+ 1
+ ).dropna(
+ )
+ 2
+
+
+ 
+
+
+ 
+ # Covariance between the asset and the benchmark
+
+
+  cov = np.cov(join, rowvar=
+ False
+ )[
+ 0
+ ][
+ 1
+ ]
+ 3
+
+
+ 
+
+
+ 
+ # Compute the variance of the benchmark
+
+
+  var = np.cov(join, rowvar=
+ False
+ )[
+ 1
+ ][
+ 1
+ ]
+
+
+ 
+
+
+ 
+ return
+ cov/var”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ alpha_function
+ (
+ portfolio
+ ,
+ ben
+ =
+ "^GSPC"
+ ,
+ timeframe
+ =
+ 252
+ ):
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: Alpha CAPM metric                                                 |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - portfolio (type dataframe pandas): Returns of the portfolio     |
+
+
+  |         - ben (type string): Name of the benchmark                        |
+
+
+  |         - timeframe (type int): annualization factor                      |”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“|
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+
+
+ 
+ # Import the benchmark
+
+
+  benchmark = yf.download(ben)[
+ "Adj Close"
+ ].pct_change(
+ 1
+ ).dropna()
+
+
+ 
+
+
+ 
+ # Concat the asset and the benchmark
+
+
+  join = pd.concat((portfolio, benchmark), axis=
+ 1
+ ).dropna()
+
+
+ 
+
+
+ 
+ # Compute the beta
+
+
+  beta = beta_function(portfolio_return_MV, ben=ben
+ )
+ 1
+
+
+ 
+
+
+  mean_stock_return = join.iloc[:,
+ 0
+ ].mean()*timeframe
+
+
+  mean_market_return = join.iloc[:,
+ 1
+ ].mean()*timeframe
+
+
+ 
+ return
+ mean_stock_return - beta*mean_market_return”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ sharpe_function
+ (
+ portfolio
+ ,
+ timeframe
+ =
+ 252
+ ):
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: Sharpe ratio metric                                               |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - portfolio (type dataframe pandas): Returns of the portfolio     |
+
+
+  |         - timeframe (type int): annualization factor                      |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+  mean = portfolio.mean() * timeframe
+
+
+  std = portfolio.std() * np.sqrt(timeframe)
+
+
+ 
+
+
+ 
+ return
+ mean/std”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ sortino_function
+ (
+ portfolio
+ ,
+ timeframe
+ =
+ 252
+ ):
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: Sortino ratio metric                                              |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - portfolio (type dataframe pandas): Returns of the portfolio     |
+
+
+  |         - timeframe (type int): annualization factor                      |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+
+
+ 
+ # Take downward values
+
+
+  portfolio = portfolio.values
+
+
+  downward = portfolio[portfolio<
+ 0
+ ]
+
+
+ 
+
+
+  mean = portfolio.mean() * timeframe
+
+
+  std = downward.std() * np.sqrt(timeframe)
+
+
+ 
+
+
+ 
+ return
+ mean/std”
+
+
+“def
+ drawdown_function
+ (
+ portfolio
+ ):
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: Drawdown                                                          |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - portfolio (type dataframe pandas): Returns of the portfolio     |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+ # Compute the cumulative product returns
+
+
+  cum_rets = (portfolio+
+ 1
+ ).cumprod(
+ )
+ 1
+
+
+ 
+
+
+ 
+ # Compute the running max
+
+
+  running_max = np.maximum.accumulate(cum_rets.dropna()
+ )
+ 2
+
+
+  running_max[running_max <
+ 1
+ ] =
+ 1
+
+
+ 
+
+
+ 
+ # Compute the drawdown
+
+
+  drawdown = ((cum_rets)/running_max -
+ 1
+ )
+ 3
+
+
+ 
+
+
+ 
+ return
+ drawdown
+
+
+
+
+
+”
+
+
+“def
+ VaR_function
+ (
+ theta
+ ,
+ mu
+ ,
+ sigma
+ ):
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: VaR                                                               |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - theta (type float): % error threshold                           |
+
+
+  |         - mu (type float): portfolio expected return                      |
+
+”
+
+
+“  |         - sigma (type float): portfolio volatility                        |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+ # Number of simulations
+
+
+  n =
+ 100000
+
+
+ 
+
+
+ 
+ # Find the values for theta% error threshold
+
+
+  t = int(n*theta)
+
+
+ 
+
+
+ 
+ # Create a vector with n simulations of the normal law
+
+
+  vec = pd.DataFrame(np.random.normal(mu, sigma, size=(n,)),
+
+
+                     columns = [
+ "Simulations"
+ ])
+
+
+ 
+
+
+ 
+ # Orderer the values and find the theta% value
+
+
+  var = vec.sort_values(by=
+ "Simulations"
+ ).iloc[t].values[
+ 0
+ ]
+
+
+ 
+
+
+ 
+ return
+ var”
+
+“def
+ cVaR_function
+ (
+ theta
+ ,
+ mu
+ ,
+ sigma
+ ):
+
+
+"""
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: cVaR                                                              |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - theta (type float): % error threshold                           |
+
+
+  |         - mu (type float): portfolio expected return                      |
+
+
+  |         - sigma (type float): portfolio volatility                        |
+
+
+  ----------------------------------------------------------------------------
+
+
+"""
+
+
+ 
+ # Number of simulations
+
+
+  n =
+ 100000
+
+
+ 
+
+
+ 
+ # Find the values for theta% error threshold
+
+
+  t = int(n*theta)
+
+
+ 
+
+
+ 
+ # Create a vector with n simulations of the normal law
+
+
+  vec = pd.DataFrame(np.random.normal(mu, sigma, size=(n,)),
+
+
+                     columns = [
+ "Simulations"
+ ])
+
+
+ 
+
+
+ 
+ # Orderer the values and find the theta% value
+
+
+  cvar =vec.sort_values(by=
+ "Simulations"
+ ).iloc[
+ 0
+ :t,:].mean().values[
+ 0
+ ]
+
+
+ 
+
+
+ 
+ return
+ cvar”
+
+“def
+ CR_function
+ (
+ weights
+ ,
+ database
+ ,
+ ben
+ =
+ "^GSPC"
+ ):
+
+
+  """-------------------------------------------------------------------------
+
+
+  | Output: Contribution risk metric                                          |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - weights (type 1d array numpy): weights of the portfolio         |
+
+
+  |         - database (type dataframe pandas): Returns of the asset          |
+
+
+  |         - ben (type string): Name of the benchmark                        |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+ # Find the number of the asset in the portfolio
+
+
+  l =
+ len
+ (weights)
+
+
+ 
+
+
+ 
+ # Compute the risk contribution of each asset
+
+
+  crs = []
+
+
+ 
+ for
+ i
+ in
+ range
+ (l):
+
+
+    cr = beta_function(data.iloc[:,i]) * weights[i]
+
+
+    crs.append(cr)
+
+”
+
+ 
+
+
+ 
+ return
+ crs/np.
+ sum
+ (crs)
+ # Normalizing by the sum of the risk contribution
+
+
+ 
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ backtest
+ (
+ weights
+ ,
+ database
+ ,
+ ben
+ =
+ "^GSPC"
+ ,
+ timeframe
+ =
+ 252
+ ,
+ CR
+ =
+ False
+ ):”
+
+ ):
+
+
+ 
+ """
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Output: Beta CAPM metric                                                  |
+
+
+  ----------------------------------------------------------------------------
+
+
+  | Inputs: - weights (type 1d array numpy): weights of the portfolio         |
+
+
+  |         - database (type dataframe pandas): Returns of the asset          |
+
+
+  |         - ben (type string): Name of the benchmark                        |
+
+
+  |         - timeframe (type int): annualization factor                      |
+
+
+  ----------------------------------------------------------------------------
+
+
+  """
+
+
+ 
+ # Compute the portfolio
+
+
+  portfolio = np.multiply(database,np.transpose(weights))
+
+
+  portfolio = portfolio.
+ sum
+ (axis=
+ 1
+ )
+
+
+  columns = database.columns
+
+
+  columns = [col
+ for
+ col
+ in
+ columns]
+
+
+ 
+
+
+ 
+ ###################### COMPUTE THE BETA #########################
+
+
+ 
+ # Import the benchmark
+
+
+  benchmark = yf.download(ben)[
+ "Adj Close"
+ ].pct_change(
+ 1
+ ).dropna()
+
+
+ 
+
+
+ 
+ # Concat the asset and the benchmark
+
+
+  join = pd.concat((portfolio, benchmark), axis=
+ 1
+ ).dropna()
+
+
+ 
+
+
+ 
+ # Covariance between the asset and the benchmark
+
+
+  cov = np.cov(join, rowvar=
+ False
+ )[
+ 0
+ ][
+ 1
+ ]
+
+
+ 
+
+
+ 
+ # Compute the variance of the benchmark
+
+
+  var = np.cov(join, rowvar=
+ False
+ )[
+ 1
+ ][
+ 1
+ ]
+
+
+ 
+
+
+  beta = cov/var
+
+
+ 
+
+
+ 
+ ####################### COMPUTE THE ALPHA ########################
+
+
+ 
+ # Mean of returns for the asset
+
+
+  mean_stock_return = join.iloc[:,
+ 0
+ ].mean()*timeframe
+
+
+ 
+
+
+ 
+ # Mean of returns for the market
+
+
+  mean_market_return = join.iloc[:,
+ 1
+ ].mean()*timeframe
+
+
+ 
+
+
+ 
+ # Alpha
+
+
+  alpha = mean_stock_return - beta*mean_market_return
+
+
+ 
+
+
+ 
+ ###################### COMPUTE THE SHARPE ######################
+
+
+  mean = portfolio.mean() * timeframe
+
+
+  std = portfolio.std() * np.sqrt(timeframe)
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“Sharpe = mean/std
+
+
+ 
+
+
+ 
+ ###################### COMPUTE THE SORTINO #######################
+
+
+  downward = portfolio[portfolio<
+ 0
+ ]
+
+
+  std_downward = downward.std() * np.sqrt(timeframe)
+
+
+  Sortino = mean/std_downward
+
+
+ 
+
+
+ 
+ ##################### COMPUTE THE DRAWDOWN #######################
+
+
+ 
+ # Compute the cumulative product returns
+
+
+  cum_rets = (portfolio+
+ 1
+ ).cumprod()
+
+
+ 
+
+
+ 
+ # Compute the running max
+
+
+  running_max = np.maximum.accumulate(cum_rets.dropna())
+
+
+  running_max[running_max <
+ 1
+ ] =
+ 1
+
+
+ 
+
+
+ 
+ # Compute the drawdown
+
+
+  drawdown = ((cum_rets)/running_max -
+ 1
+ )
+
+
+  min_drawdon = -drawdown.
+ min
+ ()
+
+
+ 
+
+
+ 
+ ###################### COMPUTE THE VaR ###########################
+
+
+  theta =
+ 0.01
+
+
+ 
+ # Number of simulations
+
+
+  n =
+ 100000
+
+
+ 
+
+
+ 
+ # Find the values for theta% error threshold
+
+
+  t = int(n*theta)
+
+
+ 
+
+
+ 
+ # Create a vector with n simulations of the normal law
+
+
+  vec = pd.DataFrame(np.random.normal(mean, std, size=(n,)),
+
+
+                     columns = [
+ "Simulations"
+ ])
+
+
+ 
+
+
+ 
+ # Orderer the values and find the theta% value
+
+
+  VaR = -vec.sort_values(by=
+ "Simulations"
+ ).iloc[t].values[
+ 0
+ ]
+
+
+ 
+
+
+ 
+ ##################### COMPUTE THE cVaR ###########################
+
+
+  cVaR = -vec.sort_values(by=
+ "Simulations"
+ ).iloc[
+ 0
+ :t,:].mean()\
+
+
+  .values[
+ 0
+ ]
+
+
+ 
+
+
+ 
+ ##################### COMPUTE THE RC #############################
+
+
+ 
+ if
+ CR:
+
+
+   
+ # Find the number of the asset in the portfolio
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“    l =
+ len
+ (weights)
+
+
+ 
+
+
+   
+ # Compute the risk contribution of each asset
+
+
+    crs = []
+
+
+   
+ for
+ i
+ in
+ range
+ (l):
+
+
+      cr = beta_function(data.iloc[:,i]) * weights[i]
+
+
+      crs.append(cr)
+
+
+ 
+
+
+    crs = crs/np.
+ sum
+ (crs)
+ # Normalizing by the sum of the risk contribution
+
+
+ 
+
+
+ 
+ ##################### PLOT THE RESULTS ###########################
+
+
+ 
+ print
+ (
+ f
+ """ -----------------------------------------------------------
+
+
+   Portfolio:
+ {columns}
+                                                      
+
+
+  ---------------------------------------------------------------------
+
+
+   Beta :
+ {np.
+ round
+ (beta,
+ 3
+ )}
+ \t Alpha:
+ {np.
+ round
+ (alpha,
+ 3
+ )}
+ \t \
+
+
+   Sharpe:
+ {np.
+ round
+ (Sharpe,
+ 3
+ )}
+ \t Sortino:
+ {np.
+ round
+ (Sortino,
+ 3
+ )}
+
+
+  ---------------------------------------------------------------------
+
+
+   VaR :
+ {np.
+ round
+ (VaR,
+ 3
+ )}
+ \t cVaR:
+ {np.
+ round
+ (cVaR,
+ 3
+ )}
+ \t \
+
+
+   VaR/cVaR:
+ {np.
+ round
+ (cVaR/VaR,
+ 3
+ )}
+
+
+  ---------------------------------------------------------------------
+
+
+  """
+ )
+
+
+  plt.figure(figsize=(
+ 10
+ ,
+ 6
+ ))
+
+
+  plt.plot(portfolio.cumsum())
+
+
+  plt.title(
+ "CUMULTATIVE RETURN"
+ , size=
+ 15
+ )
+
+
+  plt.show()
+
+
+ 
+
+
+  plt.figure(figsize=(
+ 10
+ ,
+ 6
+ ))
+
+
+  plt.fill_between(drawdown.index, drawdown*
+ 100
+ ,
+ 0
+ , color=
+ "#E95751"
+ )
+
+
+  plt.title(
+ "DRAWDOWN"
+ , size=
+ 15
+ )
+
+
+  plt.show()
+
+
+ 
+
+
+ 
+ if
+ CR:
+
+
+    plt.figure(figsize=(
+ 10
+ ,
+ 6
+ ))
+
+
+    plt.scatter(columns, crs, linewidth=
+ 3
+ , color =
+ "#B96553"
+ )
+
+
+    plt.axhline(
+ 0
+ , color=
+ "#53A7B9"
+ )
+
+
+    plt.grid(axis=
+ "x"
+ )
+
+
+    plt.title(
+ "RISK CONTRIBUTION PORTFOLIO"
+ , size=
+ 15
+ )
+
+
+    plt.xlabel(
+ "Assets"
+ )
+
+
+    plt.ylabel(
+ "Risk contribution"
+ )
+
+
+    plt.show()”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ find_timestamp_extremum
+ (
+ data
+ ,
+ df_lowest_timeframe
+ ):
+
+
+   
+ """
+
+
+    :params: data(highest timeframe OHLCV data), df_lowest_timeframe (lowest timeframe OHLCV data)
+
+
+    :return: data with three new columns: Low_time (TimeStamp), High_time (TimeStamp), High_first (Boolean)
+
+
+    """
+
+
+ 
+
+
+   
+ # Set new columns
+
+
+    data[
+ "Low_time"
+ ] = np.nan
+
+
+    data[
+ "High_time"
+ ] = np.nan
+
+
+    data[
+ "First"
+ ] = np.nan
+
+
+ 
+
+
+   
+ # Loop to find out which of the Take Profit and Stop loss appears first
+
+
+   
+ for
+ i
+ in
+ tqdm(
+ range
+ (
+ len
+ (data) -
+ 1
+ )):
+ 1
+
+
+ 
+
+
+       
+ # Extract values from the lowest timeframe dataframe
+
+
+        start = data.iloc[i:i +
+ 1
+ ].index[
+ 0
+ ]
+
+
+        end = data.iloc[i +
+ 1
+ :i +
+ 2
+ ].index[
+ 0
+ ]
+
+
+        row_lowest_timeframe = df_lowest_timeframe.loc[start:end].
+
+
+        iloc[:
+ -1
+ ]
+
+
+ 
+
+
+       
+ # Extract Timestamp of the max and min over the period (highest timeframe)
+
+
+       
+ try
+ :
+
+
+            high = row_lowest_timeframe[
+ "high"
+ ].idxmax()
+
+
+            low = row_lowest_timeframe[
+ "low"
+ ].idxmin()
+ 
+“idxmin()
+
+
+ 
+
+
+            data.loc[start,
+ "Low_time"
+ ] = low
+
+
+            data.loc[start,
+ "High_time"
+ ] = high
+
+
+ 
+
+
+       
+ except
+ Exception
+ as
+ e:
+
+
+           
+ print
+ (e)
+
+
+            data.loc[start,
+ "Low_time"
+ ] = start
+
+
+            data.loc[start,
+ "High_time"
+ ] = start
+
+
+ 
+
+
+   
+ # Find out which appears first
+
+
+    data.loc[data[
+ "High_time"
+ ] > data[
+ "Low_time"
+ ],
+ "First"
+ ] =
+ 1
+
+
+    data.loc[data[
+ "High_time"
+ ] < data[
+ "Low_time"
+ ],
+ "First"
+ ] =
+ 2
+
+
+    data.loc[data[
+ "High_time"
+ ] == data[
+ "Low_time"
+ ],
+ "First"
+ ] =
+ 0
+ 2
+
+
+ 
+
+
+   
+ # Verify the number of row without both TP and SL on same time
+
+
+    percentage_garbage_row=
+ len
+ (data.loc[data[
+ "First"
+ ]==
+ 0
+ ].dropna())
+
+
+/
+ len
+ (data) *
+ 100
+
+
+ 
+
+
+   
+ #if percentage_garbage_row<95:
+
+
+   
+ print
+ (
+ f
+ "WARNINGS: Garbage row:
+ {
+ '%.2f'
+ % percentage_garbage_row}
+ %"
+ )
+ 3
+
+
+ 
+
+
+ 
+
+
+   
+ # Transform the columns in datetime columns
+
+
+    data.High_time = pd.to_datetime(data.High_time)
+
+
+    data.Low_time = pd.to_datetime(data.Low_time)
+
+
+ 
+
+
+   
+ # We delete the last row because we can't find the extremum
+
+
+    data = data.iloc[:
+ -1
+ ]
+
+
+ 
+
+
+   
+ # Specific to the current data
+
+
+   
+ if
+ "timestamp"
+ is
+ data.columns:
+
+
+       
+ del
+ data[
+ "timestamp"
+ ]
+
+
+ 
+
+
+   
+ return
+ data”
+
+np.random.seed(
+ 70
+ )
+
+
+values = [
+ -1
+ ,
+ 0
+ ,
+ 1
+ ]
+
+
+df[
+ "Signal"
+ ] = [np.random.choice(values
+
+
+           , p=[
+ 0.10
+ ,
+ 0.80
+ ,
+ 0.10
+ ])
+ for
+ _
+ in
+ range
+ (
+ len
+ (df))]
+
+ run_tp_sl
+ (
+ data
+ ,
+ leverage
+ =
+ 1
+ ,
+ tp
+ =
+ 0.015
+ ,
+ sl
+ =
+ -0.015
+ ,
+ cost
+ =
+ 0.00
+ ):
+
+
+   
+ """
+
+
+    :params (mandatory): data(have to contain a High_time and a Low_time columns)
+
+
+    :params (optional): leverage=1, tp=0.015, sl=-0.015, cost=0.00
+
+
+    :return: data with three new columns: Low_time (TimeStamp), High_time (TimeStamp), High_first (Boolean)
+
+
+    """
+
+
+ 
+
+
+   
+ # Set some parameters
+
+    sell=
+ False
+
+
+    data[
+ "duration"
+ ] =
+ 0
+
+
+ 
+
+
+ 
+
+
+   
+ for
+ i
+ in
+ range
+ (
+ len
+ (data)):
+
+
+ 
+
+
+       
+ # Extract data
+
+
+        row = data.iloc[i]
+
+
+ 
+
+
+       
+ ######## OPEN BUY ########
+
+
+       
+ if
+ buy==
+ False
+ and
+ row[
+ "Signal"
+ ]==
+ 1
+ :
+
+
+            buy =
+ True
+
+
+            open_buy_price = row[
+ "open"
+ ]
+
+
+            open_buy_date = row.name
+
+
+ 
+
+
+       
+ #VERIF
+
+
+       
+ if
+ buy:
+
+
+            var_buy_high = (row[
+ "high"
+ ] - open_buy_price) /   
+
+
+            open_buy_price
+
+
+            var_buy_low = (row[
+ "low"
+ ] - open_buy_price) /
+
+
+      open_buy_price
+
+
+ 
+
+
+           
+ # VERIF FOR TP AND SL ON THE SAME CANDLE
+
+
+           
+ if
+ (var_buy_high > tp)
+ and
+ (var_buy_low < sl):
+ 1
+
+
+ 
+
+
+               
+ # IF TP / SL ON THE SAME TIMESTAMP, WE DELETE THE TRADE RETURN
+
+
+               
+ if
+ row[
+ "Low_time"
+ ] == row[
+ "High_time"
+ ]:
+
+
+                   
+ pass
+
+
+ 
+
+
+               
+ elif
+ row[
+ "First"
+ ]==
+ 2
+ :
+
+
+                    data.loc[row.name,
+ "returns"
+ ] = (tp-cost) *
+
+
+                    leverage
+
+
+                    data.loc[row.name,
+ "duration"
+ ] = row.High_time –
+
+
+                    open_buy_date
+
+
+ 
+
+
+               
+ elif
+ row[
+ "First"
+ ]==
+ 1
+ :
+
+
+                    data.loc[row.name,
+ "returns"
+ ] = (sl-cost) *
+
+
+                    leverage
+
+
+                    data.loc[row.name,
+ "duration"
+ ] = row.Low_time –
+
+
+                    open_buy_date
+
+
+ 
+
+
+                buy =
+ False
+
+
+                open_buy_price =
+ None
+
+
+                var_buy_high =
+ 0
+
+
+                var_buy_low =
+ 0
+
+”
+ 
+           
+ elif
+ var_buy_high > tp:
+
+
+                data.loc[row.name,
+ "returns"
+ ] = (tp-cost) * leverage
+
+
+                buy =
+ False
+
+
+                open_buy_price =
+ None
+
+
+                var_buy_high =
+ 0
+
+
+                var_buy_low =
+ 0
+
+
+                data.loc[row.name,
+ "duration"
+ ] = row.High_time –
+
+
+                open_buy_date
+
+
+                open_buy_date =
+ None
+
+
+ 
+
+
+           
+ elif
+ var_buy_low < sl:
+
+
+                data.loc[row.name,
+ "returns"
+ ] = (sl-cost) * leverage
+
+
+                buy =
+ False
+
+
+                open_buy_price =
+ None
+
+
+                var_buy_high =
+ 0
+
+
+                var_buy_low =
+ 0
+
+
+                data.loc[row.name,
+ "duration"
+ ] = row.Low_time –
+
+
+                open_buy_date
+
+
+                open_buy_date =
+ None
+
+
+ 
+
+
+ 
+
+
+       
+ ######## OPEN SELL ########
+
+
+       
+ if
+ sell==
+ False
+ and
+ row[
+ "Signal"
+ ]==
+ -1
+ :
+
+
+            sell =
+ True
+
+
+            open_sell_price = row[
+ "open"
+ ]
+
+
+            open_sell_date = row.name
+
+
+ 
+
+
+       
+ #VERIF
+
+
+       
+ if
+ sell:
+ 2
+
+
+            var_sell_high = -(row[
+ "high"
+ ] - open_sell_price) /
+
+
+            open_sell_price
+
+
+            var_sell_low = -(row[
+ "low"
+ ] - open_sell_price) /
+
+
+            open_sell_price
+
+
+ 
+
+
+           
+ if
+ (var_sell_low > tp)
+ and
+ (var_sell_high < sl):
+
+
+ 
+
+
+               
+ if
+ row[
+ "Low_time"
+ ] == row[
+ "High_time"
+ ]:
+
+
+                   
+ pass
+
+
+               
+ elif
+ row[
+ "First"
+ ]==
+ 1
+ :
+ #À INVERSER POUR LE BUY
+
+
+                    data.loc[row.name,
+ "returns"
+ ] = (tp-cost) *
+
+
+                    leverage
+
+
+                    data.loc[row.name,
+ "duration"
+ ] = row.Low_time –
+
+
+                   open_sell_date
+
+
+ 
+
+
+               
+ elif
+ row[
+ "First"
+ ]==
+ 2
+ :
+
+
+                    data.loc[row.name,
+ "returns"
+ ] = (sl-cost) *”
+
+
+                    data.loc[row.name,
+ "duration"
+ ] = row.High_time –
+
+
+                    open_sell_date
+
+
+ 
+
+
+                sell =
+ False
+
+
+                open_sell_price =
+ None
+
+
+                var_sell_high =
+ 0
+
+
+                var_sell_low =
+ 0
+
+
+                open_sell_date =
+ None
+
+
+ 
+
+
+           
+ elif
+ var_sell_low > tp:
+
+
+                data.loc[row.name,
+ "returns"
+ ] = (tp-cost) * leverage
+
+
+                sell =
+ False
+
+
+                open_sell_price =
+ None
+
+
+                var_sell_high =
+ 0
+
+
+                var_sell_low =
+ 0
+
+
+                data.loc[row.name,
+ "duration"
+ ] = row.Low_time –
+
+
+               open_sell_date
+
+
+                open_sell_date =
+ None
+
+
+ 
+
+
+           
+ elif
+ var_sell_high < sl:
+
+
+                data.loc[row.name,
+ "returns"
+ ] = (sl-cost) * leverage
+
+
+                sell =
+ False
+
+
+                open_sell_price =
+ None
+
+
+                var_sell_high =
+ 0
+
+
+                var_sell_low =
+ 0
+
+
+                data.loc[row.name,
+ "duration"
+ ] = row.High_time –
+
+
+               open_sell_date
+
+
+                open_sell_date =
+ None
+
+
+ 
+
+
+   
+ # Put 0 when we have missing values           
+
+
+    data[
+ "returns"
+ ] = data[
+ "returns"
+ ].fillna(value=
+ 0
+ )
+ 3
+
+
+   
+ return
+ data”
+
+def
+ profitable_month_return
+ (
+ p
+ ):
+
+
+    total =
+ 0
+
+
+    positif =
+ 0
+
+
+ 
+
+
+    r=[]
+
+
+   
+ # Loop on each different year
+
+
+   
+ for
+ year
+ in
+ p.index.strftime(
+ "%y"
+ ).unique():
+
+
+        e = []
+
+
+        nbm = p.loc[p.index.strftime(
+ "%y"
+ )==year].index.strftime(
+ "%m"
+ ).unique()
+
+
+       
+ # Loop on each different month
+
+
+       
+ for
+ mois
+ in
+ nbm:
+
+
+ 
+
+
+            monthly_values =  p.loc[p.index.strftime(
+ "%y:%m"
+ )==
+ f
+ "
+ {year}
+ :
+ {mois}
+ "
+ ]
+
+
+            sum_ = monthly_values.
+ sum
+ ()
+
+
+ 
+
+
+           
+ # Verifying that there is at least 75% of the values
+
+
+           
+ if
+ len
+ (monthly_values)>
+ 15
+ :”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“# Computing sum return
+
+
+                s = monthly_values.
+ sum
+ ()
+
+
+ 
+
+
+               
+ if
+ s>
+ 0
+ :
+
+
+                    positif+=
+ 1
+
+
+ 
+
+
+               
+ else
+ :
+
+
+                   
+ pass
+
+
+ 
+
+
+                total+=
+ 1
+
+
+ 
+
+
+           
+ else
+ :
+
+
+               
+ pass
+
+
+            e.append(sum_)
+
+
+        r.append(e)
+
+
+    r[
+ 0
+ ]=[
+ 0
+ for
+ _
+ in
+ range
+ (
+ 12
+ -
+ len
+ (r[
+ 0
+ ]))] + r[
+ 0
+ ]
+
+
+    r[
+ -1
+ ]= r[
+ -1
+ ]  + [
+ 0
+ for
+ _
+ in
+ range
+ (
+ 12
+ -
+ len
+ (r[
+ -1
+ ]))]
+
+
+   
+ return
+ pd.DataFrame(r,columns=[
+ "January"
+ ,
+ "February"
+ ,
+ "March"
+ ,
+ "April"
+ ,
+ "May"
+ ,
+ "June"
+ ,
+
+
+                                 
+ "July"
+ ,
+ "August"
+ ,
+ "September"
+ ,
+ "October"
+ ,
+ "November"
+ ,
+ "December"
+ ], index=p.index.strftime(
+ "%y"
+ ).unique())
+
+
+ 
+
+
+def
+ heatmap
+ (
+ data
+ ):
+
+
+    htm = profitable_month_return(data[
+ "returns"
+ ])*
+ 100
+
+
+    htm.index.name =
+ "Year"
+
+
+    htm.index = [
+ f
+ "20
+ {idx}
+ "
+ for
+ idx
+ in
+ htm.index]
+
+
+ 
+
+
+    plt.figure(figsize=(
+ 20
+ ,
+ 8
+ ))
+
+
+    pal = sns.color_palette(
+ "RdYlGn"
+ ,n_colors=
+ 15
+ )
+
+
+    sns.heatmap(htm, annot=
+ True
+ , cmap =pal, vmin=
+ -100
+ , vmax=
+ 100
+ )
+
+
+ 
+
+
+    plt.title(
+ "Heatmap Monthly returns"
+ )
+
+
+    plt.show()
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ monte_carlo
+ (
+ data
+ ,
+ method
+ =
+ "simple"
+ ):
+ 1
+
+
+    random_returns = []
+
+
+    data[
+ "returns"
+ ] = data[
+ "returns"
+ ].fillna(value=
+ 0
+ )
+
+
+ 
+
+
+   
+ for
+ _
+ in
+ tqdm(
+ range
+ (
+ 100
+ )):
+
+
+        returns = data[
+ "returns"
+ ]
+ -10
+ **
+ -100
+ 2
+
+
+        np.random.shuffle(returns)
+
+
+        random_returns.append(returns)
+
+
+ 
+
+
+   
+ if
+ method==
+ "simple"
+ :
+
+
+        df_ret = pd.DataFrame(random_returns).transpose().cumsum()*
+ 100
+
+
+        cur_ret = data[
+ "returns"
+ ].cumsum()*
+ 100
+
+
+   
+ else
+ :
+
+
+        df_ret = ((
+ 1
+ +pd.DataFrame(random_returns).transpose()).cumprod()
+ -1
+ )*
+ 100
+
+
+        cur_ret = ((
+ 1
+ +data[
+ "returns"
+ ]).cumprod()
+ -1
+ )*
+ 100
+
+
+ 
+
+
+    p_90 = np.percentile(df_ret,
+ 99
+ , axis=
+ 1
+ )
+
+
+    p_50 = np.percentile(df_ret,
+ 50
+ , axis=
+ 1
+ )
+
+
+    p_10 = np.percentile(df_ret,
+ 1
+ , axis=
+ 1
+ )
+
+
+ 
+
+
+    plt.figure(figsize=(
+ 20
+ ,
+ 8
+ ))
+
+
+ 
+
+
+    plt.plot(df_ret.index, p_90, color=
+ "#39B3C7"
+ )
+
+
+    plt.plot(df_ret.index, p_50, color=
+ "#39B3C7"
+ )
+
+
+    plt.plot(df_ret.index, p_10, color=
+ "#39B3C7"
+ )
+
+
+ 
+
+
+    plt.plot(cur_ret, color=
+ "blue"
+ , alpha=
+ 0.60
+ , linewidth=
+ 3
+ , label=
+ "Current returns"
+ )”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“returns"
+ )
+
+
+ 
+
+
+    plt.fill_between(df_ret.index, p_90, p_10,
+
+
+                        p_90>p_10, color=
+ "#669FEE"
+ , alpha=
+ 0.20
+ , label=
+ "Monte carlo area"
+ )
+
+
+ 
+
+
+    plt.ylabel(
+ "Cumulative returns %"
+ , size=
+ 13
+ )
+
+
+    plt.title(
+ "MONTE CARLO SIMULATION"
+ , size=
+ 20
+ )
+
+
+ 
+
+
+    plt.legend()
+
+
+    plt.show()
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“def
+ run_tsl
+ (
+ data
+ ,
+ leverage
+ =
+ 1
+ ,
+ tp
+ =
+ 0.015
+ ,
+ sl
+ =
+ -0.015
+ ,
+ tsl
+ =
+ 0.001
+ ,
+ cost
+ =
+ 0.00
+ ):
+
+
+   
+ """
+
+
+    :params (mandatory): data(have to contain a High_time and a Low_time columns)
+
+
+    :params (optional): leverage=1, tp=0.015, sl=-0.015, cost=0.00
+
+
+    :return: data with three new columns: Low_time (TimeStamp), High_time (TimeStamp), High_first (Boolean)
+
+
+    """
+
+
+    tpl = tp – tsl
+ 1
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“import
+ statsmodels.api
+ as
+ stat
+
+
+import
+ statsmodels.tsa.stattools
+ as
+ ts
+
+
+ 
+
+
+def
+ cointegration
+ (
+ x
+ ,
+ y
+ ):
+
+
+    ols = stat.OLS(x, y).fit(
+ )
+ 1
+
+
+    adf_results = ts.adfuller(ols.resid)
+ 2
+  
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“   
+ if
+ adf_results[
+ 1
+ ] <=
+ 0.1
+ :
+ 3
+
+
+       
+ return
+ 'Cointegration'
+
+
+   
+ else
+ :
+
+
+       
+ return
+ 'No Cointegration'
+
+
+
+
+
+
+ ”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“# We need to find the number of combinations of 2 by 10
+
+
+# 10! / (2!*8!) = 4
+ 5
+ 1
+
+
+ 
+
+
+# Initialize the variables
+
+
+nbc =
+ 0
+
+
+list_com = []
+
+
+ 
+
+
+while
+ nbc <
+ 45
+ :
+
+
+ 
+ # Take the assetes for the pair randomly
+
+
+  c1 = np.random.choice(currencies)
+
+
+  c2 = np.random.choice(currencies
+ )
+ 2
+
+
+ 
+
+
+ 
+ # Add the list of the two asset
+
+
+ 
+ if
+ c1 != c2
+ and
+ [c1, c2]
+ not
+ in
+ list_com
+ and
+ [c2, c1]
+ not
+ in
+ list_com:
+
+
+    list_com.append([c1,c2])
+
+
+    nbc+=
+ 1
+ 3”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“# Initialize the storage variable for all row
+
+
+resume = []
+
+
+for
+ com
+ in
+ list_com:
+
+
+ 
+ # Initialize the list
+
+
+  row = []
+
+
+ 
+
+
+ 
+ # Add the name of the assets in the list
+
+
+  row.extend(com)
+
+”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
+“ 
+ # Add the result of the cointegration test
+
+
+  row.append(cointegration(train_set[com[
+ 0
+ ]].values, train_set[com[
+ 1
+ ]].values))
+
+
+ 
+
+
+ 
+ # Add the results of the correlation
+
+
+  row.append(train_set[com].pct_change(
+ 1
+ ).corr().values[
+ 0
+ ][
+ 1
+ ])
+
+
+ 
+
+
+ 
+ # Add each row to make a list of lists
+
+
+  resume.append(row)
+
+
+ 
+
+
+# Create a dataframe to a better visualization
+
+
+sum = pd.DataFrame(resume,columns=[
+ "Asset1"
+ ,
+ "Asset2"
+ ,
+
+
+      "Cointegration"
+ ,
+ "Cor"
+ ])
+
+
+ 
+
+
+# Filtered the row by the cointegred pair
+
+
+sum.loc[sum[
+ "Cointegration"
+ ] ==
+ "Cointegration"
+ ]”
+
+Excerpt From
+Python for Finance and Algorithmic trading (2nd edition): Machine Learning, Deep Learning, Time series Analysis, Risk and Portfolio Management for MetaTrader™5 Live Trading
+Inglese, Lucas
+https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0
+This material may be protected by copyright.
