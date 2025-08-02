@@ -223,6 +223,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
+* [hubot](https://github.com/hubotio/hubot) - A highly flexible chatbot designed for automating tasks with various services in chat environments, making it easy to implement ChatOps.
 
 ## Code Analysis
 
