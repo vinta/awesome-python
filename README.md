@@ -112,8 +112,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Python Agentic Frameworks.*
 
-*[langgraph](https://github.com/langchain-ai/langgraph) - Build resilient language agents as graphs. 
-*[crewai](https://github.com/crewAIInc/crewAI) - Framework for orchestrating role-playing, autonomous AI agents. 
 *[pilottai](https://github.com/pilottai/pilottai) - Python framework for building scalable multi-agent systems.
 
 ## Algorithms and Design Patterns
