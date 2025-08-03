@@ -108,6 +108,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 * [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 
+## Agentic Frameworks
+
+*Python Agentic Frameworks.*
+
+*[langgraph](https://github.com/langchain-ai/langgraph) - Build resilient language agents as graphs. 
+*[crewai](https://github.com/crewAIInc/crewAI) - Framework for orchestrating role-playing, autonomous AI agents. 
+*[pilottai](https://github.com/pilottai/pilottai) - Python framework for building scalable multi-agent systems.
+
 ## Algorithms and Design Patterns
 
 *Python implementation of data structures, algorithms and design patterns. Also see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms).*
