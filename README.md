@@ -726,7 +726,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
-* [pytpro](https://pypi.org/project/pytpro/) - Lightweight Python library for math utilities, HTML/CSS/JavaScript rendering, Markdown preview, and quick UI components.
+* [pytpro](https://pypi.org/project/pytpro/) - Library for math , HTML/CSS/JS , Md preview, website building UI components.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
 
 ## Natural Language Processing
