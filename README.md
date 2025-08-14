@@ -1023,6 +1023,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Schemathesis](https://github.com/kiwicom/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
     * [Selenium](https://pypi.org/project/selenium/) - Python bindings for [Selenium](http://www.seleniumhq.org/) WebDriver.
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
+    * [django-google-optimize](https://github.com/adinhodovic/django-google-optimize) - A/B testing in Django using Google Optimize.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
 * Mock
     * [doublex](https://pypi.org/project/doublex/) - Powerful test doubles framework for Python.
