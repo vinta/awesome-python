@@ -297,6 +297,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [opencv](https://opencv.org/) - Open Source Computer Vision Library.
 * [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
 * [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
+* [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) - 9.4MB multifunctional lightweight OCR visual library, supporting training, semi-automatic labeling and chart analysis.
 
 ## Configuration Files
 
