@@ -583,6 +583,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Libraries for geocoding addresses and working with latitudes and longitudes.*
 
+* [gpx-converter](https://github.com/nidhaloff/gpx-converter) - A package for gpx files manipulation.
 * [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
 * [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
