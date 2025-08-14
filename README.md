@@ -431,6 +431,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [openstack](https://www.openstack.org/) - Open source software for building private and public clouds.
     * [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
     * [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
+    * [klotho](https://github.com/klothoplatform/klotho) - A CLI tool for transforming plain Python code to deployable cloud native code.
 * SSH-style Deployment
     * [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
     * [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
