@@ -223,6 +223,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for chatbot development.*
 
 * [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
+* [opsdroid](https://github.com/opsdroid/opsdroid) - An open source chatbot framework designed to be extendable, scalable and simple.
 
 ## Code Analysis
 
