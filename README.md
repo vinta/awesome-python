@@ -11,6 +11,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Asynchronous Programming](#asynchronous-programming)
     - [Audio](#audio)
     - [Authentication](#authentication)
+    - [Benchmarking](#benchmarking)
     - [Build Tools](#build-tools)
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
@@ -177,6 +178,17 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * JWT
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
+
+## Benchmarking
+
+*Libraries for benchmarking source code.*
+
+* Benchmark Harnesses
+    * [asv](https://github.com/airspeed-velocity/asv) - Airspeed Velocity: A simple Python benchmarking tool with web-based reporting.
+    * [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - py.test fixture for benchmarking code.
+    * [timeit](https://docs.python.org/3/library/timeit.html) - (Python standard library) Provides a simple way to time small bits of Python code.
+* Continuous Benchmarking
+    * [bencher](https://github.com/bencherdev/bencher) - [Bencher](https://bencher.dev) is a suite of continuous benchmarking tools designed to catch performance regressions in CI.
 
 ## Build Tools
 
