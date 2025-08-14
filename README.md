@@ -463,6 +463,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
 * [pyinstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
 * [shiv](https://github.com/linkedin/shiv) - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.
+* [PyOxidizer](https://github.com/indygreg/PyOxidizer) - A utility for producing binaries that embed Python.
 
 ## Documentation
 
