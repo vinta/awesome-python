@@ -374,6 +374,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Other Relational Databases
     * [pymssql](https://github.com/pymssql/pymssql) - A simple database interface to Microsoft SQL Server.
     * [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
+    * [pyodbc](https://github.com/mkleehammer/pyodbc) - An open source Python module that makes accessing ODBC databases simple.
 * NoSQL Databases
     * [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
     * [happybase](https://github.com/python-happybase/happybase) - A developer-friendly library for Apache HBase.
