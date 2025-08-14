@@ -627,6 +627,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for manipulating images.*
 
 * [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
+* [pyc2pa] (https://github.com/numbersprotocol/pyc2pa) - Create authentic & traceable photos by embedding metadata according to Adobe's Content Authenticity standards and C2PA spec.
 * [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 * [pymatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
 * [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
