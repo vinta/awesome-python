@@ -31,6 +31,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Debugging Tools](#debugging-tools)
     - [Deep Learning](#deep-learning)
     - [DevOps Tools](#devops-tools)
+    - [Discord Bots](#discord-bots)
     - [Distributed Computing](#distributed-computing)
     - [Distribution](#distribution)
     - [Documentation](#documentation)
@@ -440,6 +441,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * Backup
     * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+
+## Discord Bots
+* [nextcord](https://github.com/nextcord/nextcord) - A modern, easy-to-use, feature-rich, and async-ready API wrapper for Discord.
 
 ## Distributed Computing
 
