@@ -122,7 +122,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
     * [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
 
-## Servers
+## ASGI Servers
 
 *[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers.*
 
