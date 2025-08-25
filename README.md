@@ -818,6 +818,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
 * [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
 
+## Performance
+
+*Libraries and tools that help analyze, optimize, and improve software efficiency and speed.*
+
+* [CodeFlash.AI](https://codeflash.ai) - AI-powered Python code optimizer that automatically rewrites code for maximum performance with guaranteed correctness.
+
 ## Processes
 
 *Libraries for starting and communicating with OS processes.*
