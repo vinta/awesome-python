@@ -277,6 +277,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
+    * [instagram-priv-sniffer](https://github.com/obitouka/InstagramPrivSniffer) - Views Instagram private account's media without login.
     * [pathpicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
     * [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
     * [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
@@ -808,6 +809,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Frameworks and tools for penetration testing.*
 
 * [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
+* [instagram-priv-sniffer](https://github.com/obitouka/InstagramPrivSniffer) - Views Instagram private account's media without login.
 * [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 * [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 
