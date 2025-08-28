@@ -658,7 +658,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [bpython](https://github.com/bpython/bpython) - A fancy interface to the Python interpreter.
 * [Jupyter Notebook (IPython)](https://jupyter.org) - A rich toolkit to help you make the most out of using Python interactively.
     * [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
-* [marimo](https://github.com/marimo-team/marimo) - A reactive notebook: reproducible, Git-friendly, AI-native, SQL built-in, executable as a script, shareable as an app.
+* [marimo](https://github.com/marimo-team/marimo) - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
 * [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
 
 ## Internationalization
