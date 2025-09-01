@@ -282,6 +282,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
     * [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
 * CLI Enhancements
+    
+    * [CN-Kaltools](https://github.com/CyberNaught-XyZ/CN-Kaltools) - A Python tool for temporarily installing Kali Linux metapackages on non-Kali systems without permanent changes, ideal for penetration testers needing quick access to Kali tools in non-Kali environments.
     * [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
     * [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
     * [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
