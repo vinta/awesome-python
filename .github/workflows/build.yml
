@@ -1,0 +1,69 @@
+name: Build & Deploy Smart Interview
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # --- Backend ---
+      - name: Install & build server
+        working-directory: server
+        run: |
+          npm install
+          npm run build
+
+      - name: Upload server artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: server-dist
+          path: server/dist
+
+      # --- Frontend ---
+      - name: Install & build web
+        working-directory: web
+        run: |
+          npm install
+          npm run build
+
+      - name: Upload web artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: web-build
+          path: web/build
+
+  deploy-frontend:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0
+        with:
+          publish-dir: ./web/build
+          production-deploy: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+  deploy-backend:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/smart-interview-server:latest ./server
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/smart-interview-server:latest
