@@ -13,70 +13,111 @@
     This could be extended by having nested blocks, sorting them recursively
     and flattening the end structure into a list of lines. Revision 2 maybe ^.^.
 """
+import re
+from typing import List
 
 def sort_blocks():
-    # First, we load the current README into memory
-    with open('README.md', 'r') as read_me_file:
-        read_me = read_me_file.read()
+    """Sort the main content blocks of the README file."""
+    try:
+        # Read the current README
+        with open('README.md', 'r', encoding='utf-8') as read_me_file:
+            read_me = read_me_file.read()
 
-    # Separating the 'table of contents' from the contents (blocks)
-    table_of_contents = ''.join(read_me.split('- - -')[0])
-    blocks = ''.join(read_me.split('- - -')[1]).split('\n# ')
-    for i in range(len(blocks)):
-        if i == 0:
-            blocks[i] = blocks[i] + '\n'
-        else:
-            blocks[i] = '# ' + blocks[i] + '\n'
+        # Split into table of contents and content blocks
+        parts = read_me.split('- - -', 1)
+        if len(parts) < 2:
+            print("No content separator found (- - -)")
+            return
+            
+        table_of_contents = parts[0]
+        content_blocks = parts[1].split('\n# ')
+        
+        # Ensure proper formatting for each block
+        formatted_blocks = []
+        for i, block in enumerate(content_blocks):
+            if i == 0:
+                formatted_blocks.append(block + '\n')
+            else:
+                formatted_blocks.append('# ' + block + '\n')
 
-    # Sorting the libraries
-    inner_blocks = sorted(blocks[0].split('##'))
-    for i in range(1, len(inner_blocks)):
-        if inner_blocks[i][0] != '#':
-            inner_blocks[i] = '##' + inner_blocks[i]
-    inner_blocks = ''.join(inner_blocks)
+        # Sort the libraries section (first block)
+        if formatted_blocks:
+            inner_sections = formatted_blocks[0].split('##')
+            if len(inner_sections) > 1:
+                # Sort alphabetically, case-insensitive
+                sorted_sections = sorted(inner_sections[1:], key=lambda x: x.strip().lower())
+                # Add the header back to each section
+                sorted_sections = ['##' + section for section in sorted_sections]
+                formatted_blocks[0] = inner_sections[0] + ''.join(sorted_sections)
 
-    # Replacing the non-sorted libraries by the sorted ones and gathering all at the final_README file
-    blocks[0] = inner_blocks
-    final_README = table_of_contents + '- - -' + ''.join(blocks)
+        # Reconstruct the README
+        final_README = table_of_contents + '- - -' + ''.join(formatted_blocks)
 
-    with open('README.md', 'w+') as sorted_file:
-        sorted_file.write(final_README)
+        # Write the sorted content back to the file
+        with open('README.md', 'w', encoding='utf-8') as sorted_file:
+            sorted_file.write(final_README)
+            
+    except FileNotFoundError:
+        print("Error: README.md file not found.")
+    except Exception as e:
+        print(f"An error occurred during block sorting: {e}")
+
+
+def sort_bullet_points():
+    """Sort bullet points within the README file."""
+    try:
+        # Read the current README
+        with open('README.md', 'r', encoding='utf-8') as read_me_file:
+            read_me_lines = read_me_file.readlines()
+
+        # Cluster lines into blocks based on indentation
+        blocks = []
+        current_block = []
+        last_indent = None
+        
+        for line in read_me_lines:
+            stripped_line = line.lstrip()
+            indent = len(line) - len(stripped_line)
+            
+            # Check if this is a bullet point
+            is_bullet_point = any(stripped_line.startswith(prefix) for prefix in ['* [', '- ['])
+            
+            if is_bullet_point and indent == last_indent:
+                current_block.append(line)
+            else:
+                if current_block:
+                    blocks.append(current_block)
+                current_block = [line]
+                last_indent = indent if is_bullet_point else None
+
+        if current_block:
+            blocks.append(current_block)
+
+        # Sort each block alphabetically, case-insensitive
+        sorted_blocks = []
+        for block in blocks:
+            if len(block) > 1 and any(line.lstrip().startswith(('* [', '- [')) for line in block):
+                sorted_blocks.append(sorted(block, key=lambda x: x.strip().lower()))
+            else:
+                sorted_blocks.append(block)
+
+        # Write the sorted content back to the file
+        with open('README.md', 'w', encoding='utf-8') as sorted_file:
+            for block in sorted_blocks:
+                sorted_file.write(''.join(block))
+                
+    except FileNotFoundError:
+        print("Error: README.md file not found.")
+    except Exception as e:
+        print(f"An error occurred during bullet point sorting: {e}")
+
 
 def main():
-    # First, we load the current README into memory as an array of lines
-    with open('README.md', 'r') as read_me_file:
-        read_me = read_me_file.readlines()
-
-    # Then we cluster the lines together as blocks
-    # Each block represents a collection of lines that should be sorted
-    # This was done by assuming only links ([...](...)) are meant to be sorted
-    # Clustering is done by indentation
-    blocks = []
-    last_indent = None
-    for line in read_me:
-        s_line = line.lstrip()
-        indent = len(line) - len(s_line)
-
-        if any([s_line.startswith(s) for s in ['* [', '- [']]):
-            if indent == last_indent:
-                blocks[-1].append(line)
-            else:
-                blocks.append([line])
-            last_indent = indent
-        else:
-            blocks.append([line])
-            last_indent = None
-
-    with open('README.md', 'w+') as sorted_file:
-        # Then all of the blocks are sorted individually
-        blocks = [
-            ''.join(sorted(block, key=str.lower)) for block in blocks
-        ]
-        # And the result is written back to README.md
-        sorted_file.write(''.join(blocks))
-
-    # Then we call the sorting method
+    """Main function to execute the sorting process."""
+    print("Sorting README content...")
+    sort_bullet_points()
     sort_blocks()
+    print("README sorting completed.")
 
 
 if __name__ == "__main__":
