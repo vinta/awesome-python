@@ -232,6 +232,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
     * [prospector](https://github.com/PyCQA/prospector) - A tool to analyse Python code.
     * [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analysing dead Python code.
+    * [gito](https://github.com/Nayjest/Gito) - AI code reviewer that works with any language model, locally or in GitHub Actions.
 * Code Linters
     * [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
