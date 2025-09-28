@@ -693,6 +693,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 * [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
 * [structlog](https://www.structlog.org/en/stable/) - Structured logging made easy.
+* [logcore](https://github.com/SarkarRana/logcore) - Modern structured, production ready logging library for Python
 
 ## Machine Learning
 
