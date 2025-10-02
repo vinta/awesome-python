@@ -92,6 +92,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Resources](#resources)
     - [Newsletters](#newsletters)
     - [Podcasts](#podcasts)
+    - [Other](#other)
 - [Contributing](#contributing)
 
 ---
@@ -1192,6 +1193,9 @@ Where to discover learning resources or new Python libraries.
 * [Talk Python To Me](https://talkpython.fm/)
 * [Python Test](https://podcast.pythontest.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
+
+## Other 
+* [libs.tech](https://libs.tech/python) – Awesome Python libraries and hidden gems
 
 # Contributing
 
