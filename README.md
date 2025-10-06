@@ -1025,6 +1025,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [Selenium](https://pypi.org/project/selenium/) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
     * [sixpack](https://github.com/seatgeek/sixpack) - A language-agnostic A/B Testing framework.
     * [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
+    * [Hercules](https://github.com/test-zeus-ai/testzeus-hercules) - World's first open source end to end testing agent.
 * Mock
     * [doublex](https://pypi.org/project/doublex/) - Powerful test doubles framework for Python.
     * [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
