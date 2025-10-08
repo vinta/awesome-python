@@ -440,6 +440,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 * Backup
     * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+* Infrastructure
+    * [cdktf](https://pypi.org/project/cdktf/) - A framework to define Terraform infrastructure using familiar programming languages with high-level constructs and provider integration.
 
 ## Distributed Computing
 
