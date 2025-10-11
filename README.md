@@ -702,6 +702,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
+* [Hugging Face](https://huggingface.co/) - A platform where the machine learning community collaborates on models, datasets, and applications.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
