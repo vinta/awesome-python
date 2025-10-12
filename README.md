@@ -178,6 +178,18 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
 
+## Bluetooth
+
+*Libraries to work with bluetooth and BLE.*
+
+* [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
+* [SimplePyBLE](https://simpleble.readthedocs.io/en/latest/simplepyble/usage.html) - Another cross-platform library and bindings for Bluetooth Low Energy (BLE), designed for simplicity and ease of use.
+* [pygatt](https://github.com/peplin/pygatt) - Python wrapper for gatttool (a deprecated tool from BlueZ) and the BGAPI for accessing Bluetooth LE Devices.
+* [bless](https://github.com/kevincar/bless) - Cross-platform Bluetooth Low Energy Server Python Library.
+* [bumble](https://github.com/google/bumble) - A is a full-featured Bluetooth stack written entirely in Python maintained by google.
+* [PySide/QtBluetooth](https://doc.qt.io/qtforpython-6/PySide6/QtBluetooth/index.html) - Python bindings for cross-platform QtBluetooth API from PySide.
+* [PyQt/QtBluetooth](https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtbluetooth/qtbluetooth-module.html) - Python bindings for cross-platform QtBluetooth API from PyQt.
+
 ## Build Tools
 
 *Compile software from source code.*
