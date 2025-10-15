@@ -312,6 +312,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 * [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [random_permutation](https://github.com/gwf/random_permutation) - A module that can generate a random permutation of a given length in O(1) time and space, including extremely large ranges
 
 ## Data Analysis
 
