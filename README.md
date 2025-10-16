@@ -724,6 +724,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 * [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+* [Chinese-Elite](https://github.com/anonym-g/Chinese-Elite) - A tool that automatically maps and analyzes relationship networks of Chinese elites by parsing public data using LLMs, in Python.
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
