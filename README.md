@@ -876,6 +876,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
     * [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
     * [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
+    * [micropie](https://github.com/patx/micropie) - An ultra-micro ASGI web framework with automatic routing.
     * [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
     * [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
 
