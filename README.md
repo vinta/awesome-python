@@ -216,6 +216,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
 * [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 * [wagtail](https://github.com/wagtail/wagtail) - A Django content management system.
+* [mezzanine](https://github.com/stephenmcd/mezzanine) - A flexible and user-friendly content management system built on Django, providing a powerful structure for blogs and content pages.
+* [pelican]( https://github.com/getpelican/pelican) - A Python-based static site generator, Pelican offers a fast and efficient solution, especially for blogs and personal websites.
 
 ## Caching
 
