@@ -717,6 +717,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
 * [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
+* [PyCaret](https://pycaret.org/) - low code machine learning library seeking to streamline machine learning workflows.
 * [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 
 ## Microsoft Windows
@@ -898,6 +899,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists).*
 
 * [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+* [skyfield](https://rhodesmill.org/skyfield/) - A pure Python astronomy package that makes it easy to generate high precision - research grade positions for planet and earth satellites.
 * [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
 * [bccb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 * [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
