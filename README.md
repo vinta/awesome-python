@@ -98,6 +98,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Web Content Extracting](#web-content-extracting)
     - [Web Crawling](#web-crawling)
     - [Web Frameworks](#web-frameworks)
+    - [Web Frontend](#web-frontend)
     - [WebSocket](#websocket)
     - [WSGI Servers](#wsgi-servers)
 - [Resources](#resources)
@@ -1166,7 +1167,15 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
-    * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
+
+    * [Tornado](http://www.tornadoweb.org/en/latest/) - A web framework and asynchronous networking library.
+ 
+## Web Frontend
+
+*Libraries to interact with the [HTML DOM](https://en.wikipedia.org/wiki/HTML_DOM)*
+
+* [Brython](https://github.com/brython-dev/brython) - Allow you to use Python instead of Javascript.
+
 
 ## WebSocket
 
