@@ -599,6 +599,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
 * [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 * [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
+* [ipinfo](https://github.com/ipinfo/python) - Python library for the IPinfo.io API (IP Geolocation and other IP data) supports caching, bulk enrichment, etc.
 
 ## HTML Manipulation
 
