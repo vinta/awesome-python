@@ -412,6 +412,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Tracing
     * [manhole](https://github.com/ionelmc/python-manhole) - Debugging UNIX socket connections and present the stacktraces for all threads and an interactive prompt.
     * [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
+    * [SEAPIE](https://github.com/hirsimaki-markus/SEAPIE) - Opens clone of default interpreter during execution with the ability to change program state and magic commands like step until line.
 * Profiler
     * [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
     * [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
