@@ -452,6 +452,10 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Backup
     * [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
 
+*Monitoring tools.*
+
+* [celery-exporter](https://github.com/danihodovic/celery-exporter) - A Prometheus exporter for Celery metrics.
+
 ## Distributed Computing
 
 *Frameworks and libraries for Distributed Computing.*
