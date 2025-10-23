@@ -332,6 +332,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 * [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
+* [Pathway](https://github.com/pathwaycom/pathway) - Performant open-source Python ETL framework with Rust runtime, supporting 300+ data sources.
 
 ## Data Validation
 
