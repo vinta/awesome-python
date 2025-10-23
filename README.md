@@ -193,6 +193,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Compile software from source code.*
 
+* [awesome-dev-tools](https://github.com/t18n/awesome-dev-tools) - A curated list of high-quality development tools for efficient workflows.
 * [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
 * [buildout](https://github.com/buildout/buildout) - A build system for creating, assembling and deploying applications from multiple parts.
 * [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
