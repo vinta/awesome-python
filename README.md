@@ -506,6 +506,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * IDE
     * [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
     * [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+* Documentation Browser
+    * [Dash](https://kapeli.com/dash) - Offline API documentation browser for macOS with instant search for Python docs and 200+ other frameworks.
 
 ## Email
 
