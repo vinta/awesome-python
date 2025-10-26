@@ -685,6 +685,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [Airflow](https://airflow.apache.org/) - Airflow is a platform to programmatically author, schedule and monitor workflows.
 * [APScheduler](http://apscheduler.readthedocs.io/en/latest/) - A light but powerful in-process task scheduler that lets you schedule functions.
+* [AutoCron](https://github.com/mdshoaibuddinchanda/autocron) – One-line, cross-platform Python task scheduler.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
 * [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
