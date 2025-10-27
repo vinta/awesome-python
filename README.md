@@ -795,6 +795,11 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [PynamoDB](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
     * [redisco](https://github.com/kiddouk/redisco) - A Python Library for Simple Models and Containers Persisted in Redis.
 
+    * [nosqlmodel](https://gitlab.com/mozgurbayhan/nosqlmodel) - nosqlmodel is a first non-relational NoSql ORM framework.
+* Others
+    * [butterdb](https://github.com/terrible-ideas/butterdb) - A Python ORM for Google Drive Spreadsheets.
+    * [dataset](https://github.com/pudo/dataset) - A JSON-based database.
+
 ## Package Management
 
 *Libraries for package and dependency management.*
