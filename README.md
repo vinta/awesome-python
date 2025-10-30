@@ -298,7 +298,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
-
+    * [CCMD](https://github.com/Wisyle/ccmd) - Security-hardened command manager that replaces complex terminal syntax with simple shortcuts. Published on PyPI.
 ## Computer Vision
 
 *Libraries for Computer Vision.*
