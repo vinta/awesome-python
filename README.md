@@ -1098,6 +1098,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [facebook-sdk](https://github.com/mobolic/facebook-sdk) - Facebook Platform Python SDK.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
+* [llm-async](https://github.com/sonic182/llm-async) - An async-first Python library for interacting with Large Language Model (LLM) providers.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 
 ## URL Manipulation
