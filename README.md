@@ -911,6 +911,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Open Babel](https://open-babel.readthedocs.io/) - A chemical toolbox designed to speak the many languages of chemical data.
 * [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 * [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
+* [pyaspenplus](https://github.com/YuzeHao2023/pyaspenplus) - pyaspenplus is a lightweight Python wrapper to interact with Aspen Plus via a programmatic API.
 * [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 * [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 * [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
