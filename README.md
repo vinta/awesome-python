@@ -713,6 +713,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
+* [Neurolink](https://github.com/juspay/neurolink) - Enterprise LLM integration framework with universal provider support, multi-agent orchestration, and RAG capabilities.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 * [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 * [vowpal_porpoise](https://github.com/josephreisinger/vowpal_porpoise) - A lightweight Python wrapper for [Vowpal Wabbit](https://github.com/JohnLangford/vowpal_wabbit/).
