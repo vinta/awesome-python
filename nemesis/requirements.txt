@@ -1,0 +1,12 @@
+flask==3.0.0
+flask-cors==4.0.0
+plotly==5.18.0
+numpy==1.26.2
+scipy==1.11.4
+pandas==2.1.4
+requests==2.31.0
+python-dateutil==2.8.2
+psutil==5.9.6
+websockets==12.0
+pywavelets==1.5.0
+scikit-learn==1.3.2
