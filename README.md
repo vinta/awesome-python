@@ -1135,6 +1135,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
+* [PhantomCollect](https://github.com/xsser01/phantomcollect) - Client-side web data collection framework for geolocation, device fingerprinting, and browser information extraction.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
 * [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
