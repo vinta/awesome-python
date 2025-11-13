@@ -37,7 +37,7 @@ def sort_blocks():
 
     # Replacing the non-sorted libraries by the sorted ones and gathering all at the final_README file
     blocks[0] = inner_blocks
-    final_README = table_of_contents + '- - -' + ''.join(blocks)
+    final_README = table_of_contents + '---' + ''.join(blocks)
 
     with open('README.md', 'w+') as sorted_file:
         sorted_file.write(final_README)
