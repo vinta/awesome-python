@@ -1135,6 +1135,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for extracting web contents.*
 
 * [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
+* [docpull](https://github.com/raintree-technology/docpull) - Extracts documentation from websites and converts it into clean, AI-ready Markdown files.
 * [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 * [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 * [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
