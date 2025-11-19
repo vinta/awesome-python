@@ -1204,6 +1204,8 @@ Where to discover learning resources or new Python libraries.
 * [Talk Python To Me](https://talkpython.fm/)
 * [Python Test](https://podcast.pythontest.com/)
 * [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
+* [Python People](https://pythonpeople.fm/) - Interviews with Python developers.
+
 
 # Contributing
 
