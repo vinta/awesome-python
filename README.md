@@ -22,6 +22,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Asynchronous Programming](#asynchronous-programming)
     - [Audio](#audio)
     - [Authentication](#authentication)
+    - [Bluetooth](#Bluetooth)
     - [Build Tools](#build-tools)
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
@@ -188,6 +189,18 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * JWT
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
+
+## Bluetooth
+
+*Libraries to work with bluetooth and BLE.*
+
+* [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
+* [SimplePyBLE](https://simpleble.readthedocs.io/en/latest/simplepyble/usage.html) - Another cross-platform library and bindings for Bluetooth Low Energy (BLE), designed for simplicity and ease of use.
+* [pygatt](https://github.com/peplin/pygatt) - Python wrapper for gatttool (a deprecated tool from BlueZ) and the BGAPI for accessing Bluetooth LE Devices.
+* [bless](https://github.com/kevincar/bless) - Cross-platform Bluetooth Low Energy Server Python Library.
+* [bumble](https://github.com/google/bumble) - A is a full-featured Bluetooth stack written entirely in Python maintained by google.
+* [PySide/QtBluetooth](https://doc.qt.io/qtforpython-6/PySide6/QtBluetooth/index.html) - Python bindings for cross-platform QtBluetooth API from PySide.
+* [PyQt/QtBluetooth](https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtbluetooth/qtbluetooth-module.html) - Python bindings for cross-platform QtBluetooth API from PyQt.
 
 ## Build Tools
 
@@ -555,6 +568,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with graphical user interface applications.*
 
 * [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
+* [CustomTkinter](https://customtkinter.tomschimansky.com/) - A modern and customizable python UI-library based on Tkinter.
 * [Eel](https://github.com/ChrisKnott/Eel) - A library for making simple Electron-like offline HTML/JS GUI apps.
 * [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
 * [Flet](https://flet.dev) - Cross-platform GUI framework for building modern apps in pure Python. Run on Windows, macOS, Linux, Android, iOS, and the Web.
@@ -563,7 +577,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [kivy](https://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
 * [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
 * [PyGObject](https://pygobject.readthedocs.io/) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
-* [PyQt](https://doc.qt.io/qtforpython/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
+* [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
+* [PySide](https://doc.qt.io/qtforpython/) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), same as PyQt but this is the official binding.
 * [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI) - Wrapper for tkinter, Qt, WxPython and Remi.
 * [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
 * [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
@@ -712,6 +727,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 * [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
+* [Hugging Face](https://huggingface.co/) - A platform where the machine learning community collaborates on models, datasets, and applications.
 * [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 * [NuPIC](https://github.com/numenta/nupic) - Numenta Platform for Intelligent Computing.
 * [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
