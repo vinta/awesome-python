@@ -1,0 +1,54 @@
+{
+  "system": {
+    "title": "Nemesis Oracle",
+    "phase": "10C",
+    "version": "1.0.0",
+    "environment": "linux_sandbox"
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 7777,
+    "debug": true
+  },
+  "data_sources": {
+    "kraken": {
+      "enabled": true,
+      "symbols": ["BTC/USD", "XRP/USD", "ETH/USD"],
+      "update_interval": 30
+    },
+    "sentiment": {
+      "enabled": true,
+      "sources": ["mock"],
+      "update_interval": 60
+    }
+  },
+  "engines": {
+    "quantum_forecast": {
+      "enabled": true,
+      "fourier_components": 10,
+      "wavelet_type": "morlet",
+      "pi_cycle_enabled": true
+    },
+    "hci": {
+      "enabled": true,
+      "sentiment_weight": 0.6,
+      "linguistic_weight": 0.4
+    },
+    "civilization": {
+      "enabled": true,
+      "cycles": ["kondratiev", "turchin", "armstrong"]
+    }
+  },
+  "watchdog": {
+    "enabled": true,
+    "check_interval": 10,
+    "restart_attempts": 3,
+    "health_check_timeout": 5
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "json",
+    "max_file_size_mb": 10,
+    "backup_count": 5
+  }
+}
