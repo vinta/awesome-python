@@ -333,6 +333,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 * [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 * [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
+* [Pathway](https://github.com/pathwaycom/pathway) - Performant open-source Python ETL framework with Rust runtime, supporting 300+ data sources.
 
 ## Data Validation
 
