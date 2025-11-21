@@ -298,6 +298,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
     * [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
     * [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
+    * [thanos](https://github.com/soldatov-ss/thanos) - A CLI tool that deletes half your files — perfectly balanced, as all things should be.
 
 ## Computer Vision
 
