@@ -1168,6 +1168,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
         * [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
+    * [qakeapi](https://github.com/Craxti/qakeapi) - Modern asynchronous web framework built from scratch using only Python standard library. Zero dependencies for core functionality.
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
 ## WebSocket
