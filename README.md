@@ -1074,6 +1074,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
     * [textdistance](https://github.com/orsinium/textdistance) - Compute distance between sequences with 30+ algorithms.
     * [unidecode](https://pypi.org/project/Unidecode/) - ASCII transliterations of Unicode text.
+    * [CaesarCipher.extended](https://github.com/ViratiAkiraNandhanReddy/CaesarCipher.extended) - Extended Caesar cipher with support for text, numbers, symbols and emojis.
 * Slugify
     * [awesome-slugify](https://github.com/dimka665/awesome-slugify) - A Python slugify library that can preserve unicode.
     * [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
