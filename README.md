@@ -739,6 +739,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
+* [reflexio](https://github.com/aponysus/reflexio) - A lightweight retry library with pluggable error classification, per-class backoff strategies, and structured observability for distributed systems.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
 
 ## Natural Language Processing
