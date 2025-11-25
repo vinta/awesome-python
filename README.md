@@ -1100,6 +1100,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [facebook-sdk](https://github.com/mobolic/facebook-sdk) - Facebook Platform Python SDK.
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
+* [oilpriceapi](https://github.com/oilpriceapi/python-sdk) - Official SDK for oil & commodity price data with Pandas integration.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 
 ## URL Manipulation
