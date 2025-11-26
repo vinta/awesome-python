@@ -1,2 +1,6 @@
-mkdocs==1.0.4
-mkdocs-material==4.0.2
+mkdocs>=1.4.0
+mkdocs-material>=8.0.0
+mkdocs-pdf-export-plugin
+mkdocs-with-pdf
+weasyprint
+reportlab

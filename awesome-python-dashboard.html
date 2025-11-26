@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐍 Awesome Python Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2c3e50;
+        }
+        
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+        
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .chart-title {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            text-align: center;
+        }
+        
+        .top-categories {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .category-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .category-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .category-count {
+            background: #3498db;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>🐍 Awesome Python Dashboard</h1>
+            <p>Interactive Analytics & Statistics</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">591</div>
+                <div class="stat-label">Total Libraries</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">88</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">30</div>
+                <div class="stat-label">Largest Category</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">6.7</div>
+                <div class="stat-label">Avg per Category</div>
+            </div>
+        </div>
+        
+        <div class="charts-container">
+            <div class="chart-card">
+                <div class="chart-title">📊 Category Distribution</div>
+                <canvas id="categoryChart"></canvas>
+            </div>
+            <div class="chart-card">
+                <div class="chart-title">📈 Library Count by Category</div>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="top-categories">
+            <h2 style="margin-bottom: 20px; color: #2c3e50;">🏆 Top Categories</h2>
+            <div class="category-item">
+                <span class="category-name">Testing</span>
+                <span class="category-count">30</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Text Processing</span>
+                <span class="category-count">22</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Science</span>
+                <span class="category-count">21</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Specific Formats Processing</span>
+                <span class="category-count">18</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">GUI Development</span>
+                <span class="category-count">16</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Audio</span>
+                <span class="category-count">14</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Code Analysis</span>
+                <span class="category-count">14</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Command-line Tools</span>
+                <span class="category-count">14</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Database Drivers</span>
+                <span class="category-count">13</span>
+            </div>
+            <div class="category-item">
+                <span class="category-name">Natural Language Processing</span>
+                <span class="category-count">13</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Category Pie Chart
+        const categoryCtx = document.getElementById('categoryChart').getContext('2d');
+        new Chart(categoryCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Testing', 'Text Processing', 'Science', 'Specific Formats Pro...', 'GUI Development', 'Audio', 'Code Analysis', 'Command-line Tools'],
+                datasets: [{
+                    data: [30, 22, 21, 18, 16, 14, 14, 14],
+                    backgroundColor: [
+                        '#3498db', '#e74c3c', '#2ecc71', '#f39c12',
+                        '#9b59b6', '#1abc9c', '#34495e', '#e67e22'
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }
+        });
+        
+        // Bar Chart
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Testing', 'Text Processing', 'Science', 'Specific Formats Pro...', 'GUI Development', 'Audio', 'Code Analysis', 'Command-line Tools'],
+                datasets: [{
+                    label: 'Number of Libraries',
+                    data: [30, 22, 21, 18, 16, 14, 14, 14],
+                    backgroundColor: 'rgba(52, 152, 219, 0.8)',
+                    borderColor: '#3498db',
+                    borderWidth: 2,
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0,0,0,0.1)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+        
+        // Animate counters
+        function animateCounters() {
+            document.querySelectorAll('.stat-value').forEach(counter => {
+                const target = parseFloat(counter.textContent);
+                const increment = target / 50;
+                let current = 0;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target % 1 === 0 ? target : target.toFixed(1);
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = current % 1 === 0 ? Math.ceil(current) : current.toFixed(1);
+                    }
+                }, 30);
+            });
+        }
+        
+        window.addEventListener('load', animateCounters);
+    </script>
+</body>
+</html>
