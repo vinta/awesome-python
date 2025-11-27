@@ -323,6 +323,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 * [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 * [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+* [enigmapython](https://github.com/denismaggior8/enigma-python) - A simple yet faithful library to emulate different Enigma machines models, noted for its historical accuracy.
 
 ## Data Analysis
 
