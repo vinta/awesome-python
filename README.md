@@ -285,6 +285,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Productivity Tools
     * [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
     * [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
+    * [TESH-Query](https://pypi.org/project/teshq/) - AI-powered CLI tool that converts natural language queries into SQL, retrieves data from databases, and allows CSV downloads.
+
     * [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
     * [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
     * [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
@@ -333,6 +335,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 * [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 * [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
+* [TESH-Query](https://pypi.org/project/teshq/) - AI-powered CLI tool that converts natural language queries into SQL, retrieves data from databases, and allows CSV downloads.
 
 ## Data Validation
 
@@ -370,6 +373,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pickleDB](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 * [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [zodb](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
+* ____[TESH-Query](https://pypi.org/project/teshq/) - AI-powered CLI tool that converts natural language queries into SQL, retrieves data from databases, and allows CSV downloads.
+
 
 ## Database Drivers
 
