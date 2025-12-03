@@ -1098,6 +1098,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
 * [django-wordpress](https://github.com/istrategylabs/django-wordpress) - WordPress models and views for Django.
 * [facebook-sdk](https://github.com/mobolic/facebook-sdk) - Facebook Platform Python SDK.
+* [fdnpy](https://github.com/financialdatanet/fdnpy) - A Python SDK for FinancialData.Net API
 * [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
 * [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
 * [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
