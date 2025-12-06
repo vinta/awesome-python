@@ -361,6 +361,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
 * [pyqtgraph](https://github.com/pyqtgraph/pyqtgraph) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
 * [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
+* [UltraPlot](https://github.com/ultraplot/UltraPlot) - Matplotlib wrapper for publication-ready scientific figures with minimal code. Includes advanced subplot management, panel layouts, and batteries-included geoscience plotting.
 * [vispy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
 
 ## Database
@@ -1213,4 +1214,3 @@ Your contributions are always welcome! Please take a look at the [contribution g
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
-
