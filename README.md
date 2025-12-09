@@ -1213,4 +1213,6 @@ Your contributions are always welcome! Please take a look at the [contribution g
 - - -
 
 If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
+Contribution by lamtb240228 for Lab 7
+
 
