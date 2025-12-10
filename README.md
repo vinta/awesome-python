@@ -331,6 +331,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
+* [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 * [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 
 ## Data Validation
@@ -936,6 +937,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 * [pysimdjson](https://github.com/TkTech/pysimdjson) - A Python bindings for [simdjson](https://github.com/lemire/simdjson).
 * [python-rapidjson](https://github.com/python-rapidjson/python-rapidjson) - A Python wrapper around [RapidJSON](https://github.com/Tencent/rapidjson).
+* [toonify](https://github.com/ScrapeGraphAI/toonify) - A compact, human-readable serialization format that reduces LLM token usage by 30-60% compared to JSON.
 * [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
 
 ## Serverless Frameworks
