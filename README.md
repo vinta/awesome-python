@@ -459,11 +459,12 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Batch Processing
     * [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
+    * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
     * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
     * [PySpark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 * Stream Processing
-    * [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
+    * [Reflexio](https://github.com/aponyusus/reflexio) – retry library with error classification and per-class strategies for sync/async distributed systems.
     * [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Distribution
@@ -739,7 +740,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
-* [reflexio](https://github.com/aponysus/reflexio) - A lightweight retry library with pluggable error classification, per-class backoff strategies, and structured observability for distributed systems.
 * [tryton](http://www.tryton.org/) - A general purpose business framework.
 
 ## Natural Language Processing
