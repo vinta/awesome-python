@@ -329,6 +329,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for data analyzing.*
 
 * [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+* [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
 * [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 * [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
