@@ -1027,6 +1027,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
     * [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
     * [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
+    * [VectorWave](https://github.com/junyeong0619/VectorWave) - RAG-based test automation framework that records and replays function execution flows.
 * Test Runners
     * [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
     * [mamba](http://nestorsalceda.github.io/mamba/) - The definitive testing tool for Python. Born under the banner of BDD.
