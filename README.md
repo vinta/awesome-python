@@ -819,6 +819,13 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Penetration Testing
 
 *Frameworks and tools for penetration testing.*
+* [Scapy](https://github.com/secdev/scapy) - A powerful interactive packet manipulation program that allows you to craft and send custom network packets.
+* [Impacket](https://github.com/SecureAuthCorp/impacket) - A collection of Python classes for working with network protocols, useful for penetration testers.
+* [Pwntools](https://github.com/Gallopsled/pwntools) - A CTF (Capture the Flag) framework and exploit development library.
+* [Nikto](https://github.com/sullo/nikto) - A web server scanner which performs comprehensive tests against web servers for multiple vulnerabilities.
+* [Sublist3r](https://github.com/aboul3la/Sublist3r) - A fast subdomain enumeration tool for penetration testers.
+* [Burp Suite Python Bindings](https://github.com/PortSwigger/pyburp) - Python bindings for Burp Suite, a leading web application security testing tool.
+* [Requests](https://github.com/psf/requests) - A simple and elegant HTTP library for Python that can be used in penetration testing for sending requests and handling responses.
 
 * [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
 * [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
@@ -855,7 +862,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 ## Refactoring
 
 *Refactoring tools and libraries for Python*
-
+ 
  * [Bicycle Repair Man](http://bicyclerepair.sourceforge.net/) - Bicycle Repair Man, a refactoring tool for Python.
  * [Bowler](https://pybowler.io/) - Safe code refactoring for modern Python.
  * [Rope](https://github.com/python-rope/rope) -  Rope is a python refactoring library.
@@ -871,7 +878,14 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
     * [flask-api](https://github.com/flask-api/flask-api) - Browsable Web APIs for Flask.
     * [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
+    * [Flask-Swagger-UI](https://github.com/swagger-api/swagger-ui) - Flask extension that integrates Swagger UI to easily document and test REST APIs.
+    * [Flask-HTTPAuth](https://github.com/miguelgrinberg/Flask-HTTPAuth) - Provides basic authentication and token-based authentication for Flask RESTful APIs.
+        
 * Pyramid
+    * [Pyramid-RESTful](https://github.com/boundlessgeo/pyramid-restful) - A simple extension to add RESTful support to Pyramid applications.
+    * [Pyramid-JSON](https://github.com/pyramid/pyramid_json) - A utility for easily converting data to and from JSON format in Pyramid applications.
+    * [Pyramid-Request-Body](https://github.com/tomita/pyramid_request_body) - A helper to extract and parse request bodies in Pyramid-based RESTful APIs.
+    * [Pyramid-Auth](https://github.com/pyramid/pyramid_auth) - An authentication system for Pyramid, useful in securing RESTful APIs.
     * [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 * Framework agnostic
     * [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
@@ -893,6 +907,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * [RPyC](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
 * [zeroRPC](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
+* [Pyro5](https://github.com/irmen/pyro) - Pyro is a Python library that allows you to build applications in which objects can talk to each other over the network.
+* [gRPC](https://github.com/grpc/grpc) - A high-performance, open-source and universal RPC framework developed by Google.
 
 ## Science
 
@@ -939,6 +955,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [python-rapidjson](https://github.com/python-rapidjson/python-rapidjson) - A Python wrapper around [RapidJSON](https://github.com/Tencent/rapidjson).
 * [toonify](https://github.com/ScrapeGraphAI/toonify) - A compact, human-readable serialization format that reduces LLM token usage by 30-60% compared to JSON.
 * [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
+* [PyYAML](https://github.com/yaml/pyyaml) - YAML parser and emitter for Python.
+* [serpy](https://github.com/marshmallow-code/serpy) - A fast and flexible Python library for serializing data into various formats.
+* [MessagePack](https://github.com/msgpack/msgpack-python) - A fast binary serialization format that is more compact than JSON.
 
 ## Serverless Frameworks
 
@@ -1016,6 +1035,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [Genshi](https://genshi.edgewall.org/) - Python templating toolkit for generation of web-aware output.
 * [Jinja2](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
 * [Mako](http://www.makotemplates.org/) - Hyperfast and lightweight templating for the Python platform.
+* [Chameleon](https://github.com/macropodus/chameleon) - A fast and expressive template engine for Python.
+* [Tornado Templates](https://github.com/tornadoweb/tornado) - Templates in Tornado (a Python web framework), offering high performance and scalability.
+
 
 ## Testing
 
