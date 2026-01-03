@@ -188,6 +188,9 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * JWT
     * [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
     * [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
+    * [auth0-api-python](https://github.com/auth0/auth0-api-python) - A SDK for securing APIs with Auth0 issued tokens, supports token validation and Bearer/DPoP authentication schemes.
+
+
 
 ## Build Tools
 
