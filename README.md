@@ -141,7 +141,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
 * [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
 * [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
-
+* [granian](https://github.com/emmett-framework/granian) - Granian is a Rust HTTP server for Python applications built on top of Hyper and Tokio,supporting WSGI/ASGI/RSGI.
 ## Asynchronous Programming
 
 *Libraries for asynchronous, concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).*
