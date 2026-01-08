@@ -736,7 +736,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pythonlibs](http://www.lfd.uci.edu/~gohlke/pythonlibs/) - Unofficial Windows binaries for Python extension packages.
 * [PythonNet](https://github.com/pythonnet/pythonnet) - Python Integration with the .NET Common Language Runtime (CLR).
 * [PyWin32](https://github.com/mhammond/pywin32) - Python Extensions for Windows.
-* [WinPython](https://winpython.github.io/) - Portable development environment for Windows 7/8.
+* [WinPython](https://winpython.github.io/) - Portable development environment for Windows 10/11.
 
 ## Miscellaneous
 
