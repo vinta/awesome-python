@@ -9,7 +9,6 @@ Before submitting a PR, verify:
 - [ ] One link per Pull Request
 - [ ] PR title format: `Add project-name`
 - [ ] Entry format: `* [project-name](url) - A short description ending with a period.`
-- [ ] Alphabetical order maintained (run `python sort.py`)
 - [ ] No mention of "Python" in description (it's implied)
 - [ ] Description is concise (one sentence)
 - [ ] No trailing whitespace
