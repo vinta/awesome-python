@@ -88,7 +88,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Template Engine](#template-engine)
     - [Testing](#testing)
     - [Text Processing](#text-processing)
-    - [Third-party APIs](#third-party-apis)
     - [URL Manipulation](#url-manipulation)
     - [Video](#video)
     - [Web Asset Management](#web-asset-management)
@@ -1070,18 +1069,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
     * [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
     * [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
-
-## Third-party APIs
-
-*Libraries for accessing third party services APIs. Also see [List of Python API Wrappers and Libraries](https://github.com/realpython/list-of-python-api-wrappers).*
-
-* [apache-libcloud](https://libcloud.apache.org/) - One Python library for all clouds.
-* [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
-* [django-wordpress](https://github.com/istrategylabs/django-wordpress) - WordPress models and views for Django.
-* [facebook-sdk](https://github.com/mobolic/facebook-sdk) - Facebook Platform Python SDK.
-* [google-api-python-client](https://github.com/google/google-api-python-client) - Google APIs Client Library for Python.
-* [gspread](https://github.com/burnash/gspread) - Google Spreadsheets Python API.
-* [twython](https://github.com/ryanmcgrath/twython) - A Python wrapper for the Twitter API.
 
 ## URL Manipulation
 
