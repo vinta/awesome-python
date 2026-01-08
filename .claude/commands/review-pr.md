@@ -23,10 +23,10 @@ Check these rules first - if any fail, recommend rejection:
 
 - Add more than one project per PR
 - Duplicate of existing entry
-- Self-promotion (wait for someone else to find it useful and submit)
-- Less than 100 GitHub stars AND not justified as a hidden gem
+- Placed under an inappropriate category
 - Project is archived or abandoned (no commits in 12+ months)
 - No documentation or unclear use case
+- Less than 100 GitHub stars AND not justified as a hidden gem
 
 ## Output Format
 
