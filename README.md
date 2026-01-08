@@ -1180,6 +1180,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     * [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 * Asynchronous
     * [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
+    * [reflex](https://github.com/reflex-dev/reflex) – A framework for building reactive, full-stack web applications entirely in Python.
 
 ## WebSocket
 
