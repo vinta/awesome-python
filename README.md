@@ -22,6 +22,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Asynchronous Programming](#asynchronous-programming)
   - [Audio](#audio)
   - [Authentication](#authentication)
+  - [Bluetooth](#Bluetooth)
   - [Build Tools](#build-tools)
   - [Built-in Classes Enhancement](#built-in-classes-enhancement)
   - [Caching](#caching)
