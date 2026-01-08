@@ -9,7 +9,7 @@ on:
 jobs:
   claude-pr-review:
     if: |
-      github.event.label.name == 'claude-review' ||
+      github.event.label.name == 'claude review' ||
       github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR' ||
       github.event.pull_request.author_association == 'FIRST_TIMER' ||
       github.event.pull_request.author_association == 'NONE'
