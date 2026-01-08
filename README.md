@@ -1138,7 +1138,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [django-pipeline](https://github.com/jazzband/django-pipeline) - An asset packaging library for Django.
 * [django-storages](https://github.com/jschneier/django-storages) - A collection of custom storage back ends for Django.
 * [fanstatic](http://www.fanstatic.org/en/latest/) - Packages, optimizes, and serves static file dependencies as Python packages.
-* [fileconveyor](http://wimleers.com/fileconveyor) - A daemon to detect and sync files to CDNs, S3 and FTP.
 * [flask-assets](https://github.com/miracle2k/flask-assets) - Helps you integrate webassets into your Flask app.
 * [webassets](https://github.com/miracle2k/webassets) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
 
