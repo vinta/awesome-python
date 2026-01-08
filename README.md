@@ -25,7 +25,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Build Tools](#build-tools)
     - [Built-in Classes Enhancement](#built-in-classes-enhancement)
     - [Caching](#caching)
-    - [ChatOps Tools](#chatops-tools)
     - [CMS](#cms)
     - [Code Analysis](#code-analysis)
     - [Command-line Interface Development](#command-line-interface-development)
@@ -67,7 +66,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Miscellaneous](#miscellaneous)
     - [Natural Language Processing](#natural-language-processing)
     - [Network Virtualization](#network-virtualization)
-    - [News Feed](#news-feed)
     - [ORM](#orm)
     - [Package Management](#package-management)
     - [Package Repositories](#package-repositories)
@@ -228,12 +226,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [hermescache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
 * [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](https://libmemcached.org/libMemcached.html) interface.
 * [python-diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend with faster lookups than memcached and redis.
-
-## ChatOps Tools
-
-*Libraries for chatbot development.*
-
-* [errbot](https://github.com/errbotio/errbot/) - The easiest and most popular chatbot to implement ChatOps.
 
 ## Code Analysis
 
@@ -443,6 +435,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Software and libraries for DevOps.*
 
+* Cloud Providers
+    * [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
 * Configuration Management
     * [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
     * [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
@@ -774,13 +768,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mininet](https://github.com/mininet/mininet) - A popular network emulator and API written in Python.
 * [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
 * [pox](https://github.com/noxrepo/pox) - A Python-based SDN control applications, such as OpenFlow SDN controllers.
-
-## News Feed
-
-*Libraries for building user's activities.*
-
-* [django-activity-stream](https://github.com/justquick/django-activity-stream) - Generating generic activity streams from the actions on your site.
-* [Stream Framework](https://github.com/tschellenbach/Stream-Framework) - Building news feed and notification systems using Cassandra and Redis.
 
 ## ORM
 
