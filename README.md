@@ -377,6 +377,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [pickleDB](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 * [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 * [zodb](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
+* [DuckDB](https://duckdb.org/) - An in-process SQL OLAP database management system; optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
 
 ## Database Drivers
 
@@ -434,6 +435,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning).*
 
+* [jax](https://github.com/google/jax) - a library for high-performance numerical computing with automatic differentiation and JIT compilation.
 * [keras](https://github.com/keras-team/keras) - A high-level neural networks library and capable of running on top of either TensorFlow or Theano.
 * [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 * [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
@@ -581,6 +583,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 * [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 * [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
+* [NiceGui](https://github.com/zauberzeug/nicegui) - It is great for micro web apps, dashboards, robotics projects, smart home solutions and similar use cases. You can also use it in development, for example when tweaking/configuring a machine learning algorithm or tuning motor controllers.
 
 ## GraphQL
 
@@ -1220,6 +1223,7 @@ Where to discover learning resources or new Python libraries.
 ## Podcasts
 
 * [Django Chat](https://djangochat.com/)
+* [PyPodcats](https://pypodcats.live) - Hidden Figures of Python: Stories from the underrepresented group members of the Python community.
 * [Python Bytes](https://pythonbytes.fm)
 * [Talk Python To Me](https://talkpython.fm/)
 * [Python Test](https://podcast.pythontest.com/)
