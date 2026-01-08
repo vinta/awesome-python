@@ -21,6 +21,7 @@ jobs:
       pull-requests: write
       issues: read
       actions: read # Required for Claude to read CI results on PRs
+      id-token: write # Required for OIDC authentication with GitHub
 
     steps:
       - name: Checkout repository
