@@ -10,7 +10,7 @@ Review pending PRs against [CONTRIBUTING.md](../../CONTRIBUTING.md) acceptance c
 
 ## Instructions
 
-1. Fetch open PRs (skip reviewed): `gh pr list --repo vinta/awesome-python --limit 20 --json number,title,author,url,labels --jq '[.[] | select(.labels | map(.name) | index("claude reviewed") | not)] | .[:10]'`
+1. Fetch 10 open PRs (skip reviewed): `gh pr list --repo vinta/awesome-python --limit 10 --search "-label:\"claude reviewed\"" --json number,title,author,url`
 2. For each PR:
    - Fetch PR details: `gh pr view <number> --repo vinta/awesome-python --json title,body,author,files,url,mergeable,mergeStateStatus`
    - Fetch PR diff: `gh pr diff <number> --repo vinta/awesome-python`
@@ -24,27 +24,27 @@ Would you like me to:
 
 1. Close the rejected PRs with comments?
 2. Add "claude reviewed" label to the approved PRs?
-3. Add comments to PRs need to be fixed?
+3. Do all
 ```
 
 ## Quick Rejection Checks
 
 Check these rules first - if any fail, recommend rejection:
 
+- PR has merge conflicts
 - Add more than one project per PR
 - Duplicate of existing entry
 - Placed under an inappropriate category
 - Project is archived or abandoned (no commits in 12+ months)
 - No documentation or unclear use case
 - Less than 100 GitHub stars AND not justified as a hidden gem
-- PR has merge conflicts (notify author to resolve)
 
 ## Output Format
 
 Provide a simple review:
 
-1. **Rejection Check** - table with the 3 rules and PASS/FAIL
-2. **Recommendation** - APPROVE for further review, or REJECT with reason
+1. **Rejection Check** - table with the above rules and PASS/FAIL
+2. **Recommendation** - APPROVE or REJECT
 
 ## Closing PRs
 
