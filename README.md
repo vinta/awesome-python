@@ -863,7 +863,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 *Refactoring tools and libraries for Python.*
 
- * [Bicycle Repair Man](http://bicyclerepair.sourceforge.net/) - Bicycle Repair Man, a refactoring tool for Python.
  * [Bowler](https://pybowler.io/) - Safe code refactoring for modern Python.
  * [Rope](https://github.com/python-rope/rope) -  Rope is a python refactoring library.
 
