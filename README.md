@@ -197,8 +197,8 @@ _Libraries to work with bluetooth and BLE._
 - [pygatt](https://github.com/peplin/pygatt) - Python wrapper for gatttool (a deprecated tool from BlueZ) and the BGAPI for accessing Bluetooth LE Devices.
 - [bless](https://github.com/kevincar/bless) - Cross-platform Bluetooth Low Energy Server Python Library.
 - [bumble](https://github.com/google/bumble) - A is a full-featured Bluetooth stack written entirely in Python maintained by google.
-- [PySide/QtBluetooth](https://doc.qt.io/qtforpython-6/PySide6/QtBluetooth/index.html) - Python bindings for cross-platform QtBluetooth API from PySide.
 - [PyQt/QtBluetooth](https://www.riverbankcomputing.com/static/Docs/PyQt6/api/qtbluetooth/qtbluetooth-module.html) - Python bindings for cross-platform QtBluetooth API from PyQt.
+- [PySide/QtBluetooth](https://doc.qt.io/qtforpython-6/PySide6/QtBluetooth/index.html) - Python bindings for cross-platform QtBluetooth API from PySide, same as PyQt but different licensing.
 
 ## Build Tools
 
