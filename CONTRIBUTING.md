@@ -1,7 +1,5 @@
 # Contributing
 
-Your contributions are always welcome!
-
 ## Quick Checklist
 
 Before submitting a PR, verify:
@@ -9,8 +7,8 @@ Before submitting a PR, verify:
 - [ ] One link per Pull Request
 - [ ] PR title format: `Add project-name`
 - [ ] Entry format: `* [project-name](url) - A short description ending with a period.`
-- [ ] No mention of "Python" in description (it's implied)
 - [ ] Description is concise (one sentence)
+- [ ] Placed in the appropriate category/subcategory
 - [ ] No trailing whitespace
 - [ ] Spelling and grammar checked
 
@@ -47,17 +45,6 @@ All submissions must satisfy **ALL** of these:
 3. **Stable**: Production-ready, not alpha/beta/experimental
 4. **Documented**: Clear README with examples and use cases
 5. **Unique**: Adds distinct value, not "yet another X"
-
-## Automatic Rejection
-
-PRs will be **closed without review** if:
-
-- Project is archived or abandoned (no commits in 12+ months)
-- Duplicate of existing entry without clear advantages
-- No documentation or unclear use case
-- Alpha/beta/experimental status
-- Self-promotion (wait for someone else to find it useful and submit)
-- Less than 500 GitHub stars AND not justified as a hidden gem
 
 ## Entry Format Reference
 
@@ -120,8 +107,20 @@ Please include the following in your PR description:
 PRs are reviewed by automated tools and maintainers:
 
 1. **Format Check**: Entry follows the correct format
-2. **Duplicate Check**: Not already listed or previously rejected
-3. **Activity Check**: Project shows recent activity
-4. **Quality Check**: Meets acceptance criteria
+2. **Category Check**: Placed in the appropriate category/subcategory
+3. **Duplicate Check**: Not already listed or previously rejected
+4. **Activity Check**: Project shows recent activity
+5. **Quality Check**: Meets acceptance criteria
 
 Search previous Pull Requests and Issues before submitting, as yours may be a duplicate.
+
+## Automatic Rejection
+
+PRs will be **closed** if:
+
+- Add more than one project per PR
+- Duplicate of existing entry
+- Self-promotion (wait for someone else to find it useful and submit)
+- Less than 100 GitHub stars AND not justified as a hidden gem
+- Project is archived or abandoned (no commits in 12+ months)
+- No documentation or unclear use case
