@@ -193,7 +193,7 @@ _Libraries for implementing authentication schemes._
 _Libraries to work with bluetooth and BLE._
 
 - [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
-- [SimplePyBLE](https://simpleble.readthedocs.io/en/latest/simplepyble/usage.html) - Another cross-platform library and bindings for Bluetooth Low Energy (BLE), designed for simplicity and ease of use.
+- [SimplePyBLE](https://github.com/simpleble/simpleble) - Another cross-platform library and bindings for Bluetooth Low Energy (BLE), designed for simplicity and ease of use.
 - [pygatt](https://github.com/peplin/pygatt) - Python wrapper for gatttool (a deprecated tool from BlueZ) and the BGAPI for accessing Bluetooth LE Devices.
 - [bless](https://github.com/kevincar/bless) - Cross-platform Bluetooth Low Energy Server Python Library.
 - [bumble](https://github.com/google/bumble) - A is a full-featured Bluetooth stack written entirely in Python maintained by google.
