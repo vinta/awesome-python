@@ -1059,7 +1059,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Fake Data
     * [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
     * [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
-    * [radar](https://pypi.org/project/radar/) - Generate random datetime / time.
 
 ## Text Processing
 
