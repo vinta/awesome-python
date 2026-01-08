@@ -334,6 +334,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 * [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 * [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
+* [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
+
 
 ## Data Validation
 
