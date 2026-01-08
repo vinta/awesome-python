@@ -179,7 +179,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Authentication
 
-*Libraries for implementing authentications schemes.*
+*Libraries for implementing authentication schemes.*
 
 * OAuth
     * [authlib](https://github.com/lepture/authlib) - JavaScript Object Signing and Encryption draft implementation.
@@ -242,8 +242,8 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 * Code Analysis
     * [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
-    * [prospector](https://github.com/PyCQA/prospector) - A tool to analyse Python code.
-    * [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analysing dead Python code.
+    * [prospector](https://github.com/PyCQA/prospector) - A tool to analyze Python code.
+    * [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
 * Code Linters
     * [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
         * [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
@@ -328,7 +328,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 
 ## Data Analysis
 
-*Libraries for data analyzing.*
+*Libraries for data analysis.*
 
 * [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 * [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
@@ -750,7 +750,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 * [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 * [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
-* [tryton](http://www.tryton.org/) - A general purpose business framework.
+* [tryton](http://www.tryton.org/) - A general-purpose business framework.
 
 ## Natural Language Processing
 
