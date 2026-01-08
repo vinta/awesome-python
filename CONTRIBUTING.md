@@ -2,19 +2,127 @@
 
 Your contributions are always welcome!
 
-## Guidelines
+## Quick Checklist
 
-* Add one link per Pull Request.
-    * Make sure the PR title is in the format of `Add project-name`.
-    * Write down the reason why the library is awesome.
-* Add the link: `* [project-name](http://example.com/) - A short description ends with a period.`
-    * Keep descriptions concise and **short**.
-* Add a section if needed.
-    * Add the section description.
-    * Add the section title to Table of Contents.
-* Search previous Pull Requests or Issues before making a new one, as yours may be a duplicate.
-* Don't mention `Python` in the description as it's implied.
-* Check your spelling and grammar.
-* Remove any trailing whitespace.
+Before submitting a PR, verify:
 
-Just a gentle reminder: **Try not to submit your own project. Instead, wait for someone finds it useful and submits it for you.**
+- [ ] One link per Pull Request
+- [ ] PR title format: `Add project-name`
+- [ ] Entry format: `* [project-name](url) - A short description ending with a period.`
+- [ ] Alphabetical order maintained (run `python sort.py`)
+- [ ] No mention of "Python" in description (it's implied)
+- [ ] Description is concise (one sentence)
+- [ ] No trailing whitespace
+- [ ] Spelling and grammar checked
+
+## Acceptance Criteria
+
+Your submission must meet **ONE** of the following criteria:
+
+### 1. Industry Standard
+
+- The go-to tool that almost everyone uses for a specific use case
+- Examples: Requests, Flask, Pandas, NumPy
+- Limit: 1-3 tools per category
+
+### 2. Rising Star
+
+- Rapid growth: 5,000+ GitHub stars in less than 2 years
+- Significant community buzz and adoption
+- Solving problems in new or better ways
+- Examples: FastAPI, Ruff, uv
+
+### 3. Hidden Gem
+
+- Exceptional quality despite fewer stars (may have <500 stars)
+- Solves niche problems elegantly
+- Strong recommendation from experienced developers
+- Must include compelling justification in PR description
+
+## Quality Requirements
+
+All submissions must satisfy **ALL** of these:
+
+1. **Python-first**: Primarily written in Python (>50% of codebase)
+2. **Active**: Commits within the last 12 months
+3. **Stable**: Production-ready, not alpha/beta/experimental
+4. **Documented**: Clear README with examples and use cases
+5. **Unique**: Adds distinct value, not "yet another X"
+
+## Automatic Rejection
+
+PRs will be **closed without review** if:
+
+- Project is archived or abandoned (no commits in 12+ months)
+- Duplicate of existing entry without clear advantages
+- No documentation or unclear use case
+- Alpha/beta/experimental status
+- Self-promotion (wait for someone else to find it useful and submit)
+- Less than 500 GitHub stars AND not justified as a hidden gem
+
+## Entry Format Reference
+
+### Standard Entry
+
+```markdown
+- [project-name](https://github.com/owner/repo) - Description ending with period.
+```
+
+### Standard Library Module
+
+```markdown
+- [module](https://docs.python.org/3/library/module.html) - (Python standard library) Description.
+```
+
+### Fork of Another Project
+
+```markdown
+- [new-name](https://github.com/owner/new-name) - Description ([original-name](original-url) fork).
+```
+
+### Entry with Related Awesome List
+
+```markdown
+- [project](https://github.com/owner/project) - Description.
+  - [awesome-project](https://github.com/someone/awesome-project)
+```
+
+### Subcategory Format
+
+```markdown
+- Subcategory Name
+  - [project](url) - Description.
+```
+
+## Adding a New Section
+
+If adding a new category:
+
+1. Add section description in italics: `*Libraries for doing X.*`
+2. Add the section title to the Table of Contents
+3. Keep sections in alphabetical order
+
+## PR Description Template
+
+Please include the following in your PR description:
+
+```
+## Why This Project Is Awesome
+
+[Explain which criterion it meets: Industry Standard / Rising Star / Hidden Gem]
+
+## How It Differs
+
+[If similar entries exist, explain what makes this one unique]
+```
+
+## Review Process
+
+PRs are reviewed by automated tools and maintainers:
+
+1. **Format Check**: Entry follows the correct format
+2. **Duplicate Check**: Not already listed or previously rejected
+3. **Activity Check**: Project shows recent activity
+4. **Quality Check**: Meets acceptance criteria
+
+Search previous Pull Requests and Issues before submitting, as yours may be a duplicate.
