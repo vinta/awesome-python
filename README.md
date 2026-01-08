@@ -579,6 +579,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with GraphQL.*
 
 * [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
+* [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
 
 ## Game Development
 
