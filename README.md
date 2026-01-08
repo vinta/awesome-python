@@ -467,6 +467,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * Batch Processing
     * [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
     * [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
+    * [mpi4py](https://github.com/mpi4py/mpi4py) - Python bindings for MPI.
     * [PySpark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
     * [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 * Stream Processing
