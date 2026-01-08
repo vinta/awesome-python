@@ -699,7 +699,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [APScheduler](http://apscheduler.readthedocs.io/en/latest/) - A light but powerful in-process task scheduler that lets you schedule functions.
 * [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
 * [doit](http://pydoit.org/) - A task runner and build tool.
-* [gunnery](https://github.com/gunnery/gunnery) - Multipurpose task execution tool for distributed systems with web-based interface.
 * [Joblib](https://joblib.readthedocs.io/) - A set of tools to provide lightweight pipelining in Python.
 * [Plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 * [Prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
