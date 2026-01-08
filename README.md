@@ -617,7 +617,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 *Libraries for working with HTML and XML.*
 
 * [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
-* [bleach](https://github.com/mozilla/bleach) - A whitelist-based HTML sanitization and text linkification library.
 * [cssutils](https://pypi.org/project/cssutils/) - A CSS library for Python.
 * [html5lib](https://github.com/html5lib/html5lib-python) - A standards-compliant library for parsing and serializing HTML documents and fragments.
 * [JustHTML](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works. No C extensions to compile. No system dependencies to install. No complex API to learn.
