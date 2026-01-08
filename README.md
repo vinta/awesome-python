@@ -86,7 +86,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
     - [Shell](#shell)
     - [Specific Formats Processing](#specific-formats-processing)
     - [Static Site Generator](#static-site-generator)
-    - [Tagging](#tagging)
     - [Task Queues](#task-queues)
     - [Template Engine](#template-engine)
     - [Testing](#testing)
@@ -996,12 +995,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 * [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 * [nikola](https://github.com/getnikola/nikola) - A static website and blog generator.
 * [pelican](https://github.com/getpelican/pelican) - Static site generator that supports Markdown and reST syntax.
-
-## Tagging
-
-*Libraries for tagging items.*
-
-* [django-taggit](https://github.com/jazzband/django-taggit) - Simple tagging for Django.
 
 ## Task Queues
 
