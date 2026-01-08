@@ -1,6 +1,7 @@
-# Review Pending PRs
-
-Review pending PRs against [CONTRIBUTING.md](../../CONTRIBUTING.md) acceptance criteria.
+---
+description: Review pending PRs against CONTRIBUTING.md acceptance criteria.
+allowed-tools: Bash(gh api:*), Bash(gh pr close:*), Bash(gh pr diff:*), Bash(gh pr edit:*), Bash(gh pr list:*), Bash(gh pr view:*)
+---
 
 ## Usage
 
