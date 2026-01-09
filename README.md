@@ -471,6 +471,7 @@ _Frameworks and libraries for Distributed Computing._
 
 _Libraries to create packaged executables for release distribution._
 
+- [cx_freeze](https://github.com/marcelotduarte/cx_Freeze) - It is a Python tool that converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
 - [Nuitka](https://github.com/Nuitka/Nuitka) - Compiles Python programs into high-performance standalone executables (cross-platform, supports all Python versions).
 - [py2app](https://github.com/ronaldoussoren/py2app) - Freezes Python scripts (Mac OS X).
 - [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
