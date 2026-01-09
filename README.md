@@ -567,6 +567,7 @@ _Libraries for working with graphical user interface applications._
 - [NiceGui](https://github.com/zauberzeug/nicegui) - It is great for micro web apps, dashboards, robotics projects, smart home solutions and similar use cases. You can also use it in development, for example when tweaking/configuring a machine learning algorithm or tuning motor controllers.
 - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
 - [PyGObject](https://pygobject.readthedocs.io/) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
+- [PySide](https://doc.qt.io/qtforpython/) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
 - [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
 - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
 - [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
