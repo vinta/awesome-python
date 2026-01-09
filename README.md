@@ -896,6 +896,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
 - [cclib](http://cclib.github.io/) - A library for parsing and interpreting the results of computational chemistry packages.
 - [Colour](http://colour-science.org/) - Implementing a comprehensive number of colour theory transformations and algorithms.
+- [dimtensor](https://github.com/marcoloco23/dimtensor) - Unit-aware tensors for physics and scientific machine learning with NumPy, PyTorch, and JAX.
 - [Karate Club](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
 - [NetworkX](https://networkx.github.io/) - A high-productivity software for complex networks.
 - [NIPY](http://nipy.org) - A collection of neuroimaging toolkits.
