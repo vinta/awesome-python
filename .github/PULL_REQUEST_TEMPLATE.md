@@ -1,11 +1,20 @@
-## What is this Python project?
+## Checklist
 
-Describe features.
+- [ ] One link per Pull Request
+- [ ] PR title format: `Add project-name`
+- [ ] Entry format: `* [project-name](url) - Description ending with period.`
+- [ ] Description is concise (no mention of "Python")
 
-## What's the difference between this Python project and similar ones?
+## Why This Project Is Awesome
 
-Enumerate comparisons.
+Which criterion does it meet? (pick one)
 
---
+- [ ] **Industry Standard** - The go-to tool for a specific use case
+- [ ] **Rising Star** - 5,000+ stars in <2 years, significant adoption
+- [ ] **Hidden Gem** - Exceptional quality, solves niche problems elegantly
 
-Anyone who agrees with this pull request could submit an *Approve* review to it.
+Explain:
+
+## How It Differs
+
+If similar entries exist, what makes this one unique?
