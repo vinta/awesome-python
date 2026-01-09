@@ -1140,6 +1140,7 @@ _Traditional full stack web frameworks. Also see [RESTful API](https://github.co
     - [awesome-fasthtml](https://github.com/amosgyamfi/awesome-fasthtml)
 - Asynchronous
   - [microdot](https://github.com/miguelgrinberg/microdot) - The impossibly small web framework for Python and MicroPython.
+  - [reflex](https://github.com/reflex-dev/reflex) – A framework for building reactive, full-stack web applications entirely with python .
   - [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
 ## WebSocket
