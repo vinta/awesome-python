@@ -49,7 +49,7 @@ jobs:
             DECISION: REJECT or DECISION: PASS
 
       - name: Close PR if rejected
-        if: contains(steps.claude-review.outputs.response, 'DECISION: REJECT')
+        if: "contains(steps.claude-review.outputs.response, 'DECISION: REJECT')"
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
