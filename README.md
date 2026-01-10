@@ -452,6 +452,8 @@ _Software and libraries for DevOps._
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
 - Backup
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+- Chaos Engineering
+  - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
 
 ## Distributed Computing
 
