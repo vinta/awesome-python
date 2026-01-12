@@ -1125,6 +1125,7 @@ _Libraries for extracting web contents._
 
 _Libraries to automate web scraping._
 
+- [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - A Python library used to parse and automate data extraction from HTML and XML documents for web scraping.
 - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
 - [grab](https://github.com/lorien/grab) - Site scraping framework.
 - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
