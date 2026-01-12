@@ -639,6 +639,7 @@ _Libraries for working with HTTP._
 
 _Libraries for programming with hardware._
 
+- [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
 - [keyboard](https://github.com/boppreh/keyboard) - Hook and simulate global keyboard events on Windows and Linux.
 - [mouse](https://github.com/boppreh/mouse) - Hook and simulate global mouse events on Windows and Linux.
 - [pynput](https://github.com/moses-palmer/pynput) - A library to control and monitor input devices.
