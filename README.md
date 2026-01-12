@@ -495,6 +495,7 @@ _Libraries for generating project documentation._
 _Libraries for downloading._
 
 - [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
+- [OpenBB](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
 - [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 - [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
 
