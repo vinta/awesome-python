@@ -386,7 +386,7 @@ _Libraries for connecting and operating databases._
   - [pymssql](https://github.com/pymssql/pymssql) - A simple database interface to Microsoft SQL Server.
 - NoSQL Databases
   - [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
-  - [Django MongoDB Backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django
+  - [Django MongoDB Backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
   - [happybase](https://github.com/python-happybase/happybase) - A developer-friendly library for Apache HBase.
   - [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
   - [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
