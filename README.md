@@ -770,6 +770,7 @@ _Libraries for working with human languages._
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
   - [pkuseg-python](https://github.com/lancopku/pkuseg-python) - A toolkit for Chinese word segmentation in various domains.
   - [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
+  - [zhtw](https://github.com/rajatim/zhtw) - A Taiwan Traditional Chinese converter with 3,490 curated Taiwan-specific terms.
 
 ## Network Virtualization
 
