@@ -246,8 +246,8 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 - Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
-  - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
+  - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 - Static Type Annotations Generators
   - [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
