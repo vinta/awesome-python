@@ -920,6 +920,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 - [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 - [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
+- [shapely](https://github.com/shapely/shapely) - Manipulation and analysis of geometric objects in the Cartesian plane.
 - [SimPy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
 - [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 - [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
