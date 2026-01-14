@@ -392,6 +392,7 @@ _Libraries for connecting and operating databases._
   - [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
+  - [Beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
 
 ## Date and Time
 
