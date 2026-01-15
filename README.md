@@ -811,9 +811,8 @@ _Libraries for package and dependency management._
 
 - [pip](https://pip.pypa.io/en/stable/) - The package installer for Python.
   - [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
-  - [PyPI](https://pypi.org/)
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-- [Hatch](https://github.com/pypa/hatch) - Modern, extensible Python project management.
+- [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project management.
 - [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python package and project manager, written in Rust.
 
@@ -1157,8 +1156,8 @@ _Traditional full stack web frameworks. Also see [RESTful API](https://github.co
   - [pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
     - [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
   - [fastHTML](https://github.com/AnswerDotAI/fasthtml) - The fastest way to create an HTML app.
-  - [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
     - [awesome-fasthtml](https://github.com/amosgyamfi/awesome-fasthtml)
+  - [masonite](https://github.com/MasoniteFramework/masonite) - The modern and developer centric Python web framework.
 - Asynchronous
   - [microdot](https://github.com/miguelgrinberg/microdot) - The impossibly small web framework for Python and MicroPython.
   - [reflex](https://github.com/reflex-dev/reflex) – A framework for building reactive, full-stack web applications entirely with python .
