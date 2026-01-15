@@ -130,6 +130,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
   - [pypattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
   - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
   - [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
+- [X-AlgoVision Pro](https://github.com/dogemos-josh/X-AlgoVision-Pro-Open-Source-Web3-Growth-Engine) - An open-source predictive engine for X (Twitter) algorithm ranking weights and visibility scoring.
 
 ## ASGI Servers
 
