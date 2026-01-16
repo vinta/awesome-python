@@ -759,7 +759,6 @@ _Libraries for working with human languages._
   - [nltk](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
   - [pattern](https://github.com/clips/pattern) - A web mining module.
   - [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
-  - [pytext](https://github.com/facebookresearch/pytext) - A natural language modeling framework based on PyTorch.
   - [spacy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
   - [Stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
