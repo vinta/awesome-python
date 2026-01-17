@@ -332,7 +332,6 @@ _Libraries for data analysis._
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
 
-
 ## Data Validation
 
 _Libraries for validating data. Used for forms in many cases._
