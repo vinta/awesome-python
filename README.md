@@ -127,7 +127,6 @@ _Python implementation of data structures, algorithms and design patterns. Also 
   - [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
   - [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
 - Design Patterns
-  - [pypattyrn](https://github.com/tylerlaberge/PyPattyrn) - A simple yet effective library for implementing common design patterns.
   - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
   - [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
 
@@ -388,9 +387,7 @@ _Libraries for connecting and operating databases._
 - NoSQL Databases
   - [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
   - [Django MongoDB Backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
-  - [happybase](https://github.com/python-happybase/happybase) - A developer-friendly library for Apache HBase.
   - [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
-  - [motor](https://github.com/mongodb/motor) - The async Python driver for MongoDB.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
   - [Beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
@@ -470,7 +467,6 @@ _Frameworks and libraries for Distributed Computing._
   - [PySpark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
   - [Ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
 - Stream Processing
-  - [faust](https://github.com/robinhood/faust) - A stream processing library, porting the ideas from [Kafka Streams](https://kafka.apache.org/documentation/streams/) to Python.
   - [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Distribution
@@ -525,7 +521,6 @@ _Libraries for sending and parsing email._
 
 - Mail Servers
   - [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
-  - [salmon](https://github.com/moggers87/salmon) - A Python Mail Server.
 - Clients
   - [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
   - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
@@ -646,7 +641,6 @@ _Libraries for working with HTTP._
 _Libraries for programming with hardware._
 
 - [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
-- [keyboard](https://github.com/boppreh/keyboard) - Hook and simulate global keyboard events on Windows and Linux.
 - [mouse](https://github.com/boppreh/mouse) - Hook and simulate global mouse events on Windows and Linux.
 - [pynput](https://github.com/moses-palmer/pynput) - A library to control and monitor input devices.
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
@@ -660,7 +654,6 @@ _Libraries for manipulating images._
 - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 - [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 - [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
-- [pywal](https://github.com/dylanaraps/pywal) - A tool that generates color schemes from images.
 - [quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 - [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
 - [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
@@ -695,7 +688,6 @@ _Interactive Python interpreters (REPL)._
 _Libraries for working with i18n._
 
 - [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
-- [PyICU](https://github.com/ovalhub/pyicu) - A wrapper of International Components for Unicode C++ library ([ICU](http://site.icu-project.org/)).
 
 ## Job Scheduler
 
@@ -755,7 +747,6 @@ _Useful libraries or tools that don't fit in the categories above._
 - [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
-- [magenta](https://github.com/magenta/magenta) - A tool to generate music and art using artificial intelligence.
 - [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 - [tryton](http://www.tryton.org/) - A general-purpose business framework.
 
@@ -769,8 +760,6 @@ _Libraries for working with human languages._
   - [nltk](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
   - [pattern](https://github.com/clips/pattern) - A web mining module.
   - [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
-  - [pytext](https://github.com/facebookresearch/pytext) - A natural language modeling framework based on PyTorch.
-  - [PyTorch-NLP](https://github.com/PetrochukM/PyTorch-NLP) - A toolkit enabling rapid deep learning NLP prototyping for research.
   - [spacy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
   - [Stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
@@ -796,7 +785,6 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
   - [SQLAlchemy](https://www.sqlalchemy.org/) - The Python SQL Toolkit and Object Relational Mapper.
     - [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
   - [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
-  - [orm](https://github.com/encode/orm) - An async ORM.
   - [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
   - [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
   - [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
@@ -855,7 +843,6 @@ _Libraries for building recommender systems._
 - [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 - [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
 - [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
-- [libffm](https://github.com/guestwalk/libffm) - A library for Field-aware Factorization Machine (FFM).
 - [lightfm](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 - [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 - [Surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
@@ -893,7 +880,6 @@ _Libraries for building RESTful APIs._
 _Libraries for robotics._
 
 - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
-- [rospy](http://wiki.ros.org/rospy) - This is a library for ROS (Robot Operating System).
 
 ## RPC Servers
 
@@ -976,10 +962,8 @@ _Libraries for parsing and manipulating specific text formats._
   - [pyexcel](https://github.com/pyexcel/pyexcel) - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
   - [python-docx](https://github.com/python-openxml/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
   - [python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint (.pptx) files.
-  - [unoconv](https://github.com/unoconv/unoconv) - Convert between any document format supported by LibreOffice/OpenOffice.
   - [XlsxWriter](https://github.com/jmcnamara/XlsxWriter) - A Python module for creating Excel .xlsx files.
   - [xlwings](https://github.com/ZoomerAnalytics/xlwings) - A BSD-licensed library that makes it easy to call Python from Excel and vice versa.
-  - [xlwt](https://github.com/python-excel/xlwt) / [xlrd](https://github.com/python-excel/xlrd) - Writing and reading data and formatting information from Excel files.
 - PDF
   - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - Pdfminer.six is a community maintained fork of the original PDFMiner.
   - [pikepdf](https://github.com/pikepdf/pikepdf) - A powerful library for reading and editing PDF files, based on qpdf.
@@ -1070,7 +1054,6 @@ _Libraries for parsing and manipulating plain texts._
   - [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
   - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
-  - [fuzzywuzzy](https://github.com/seatgeek/fuzzywuzzy) - Fuzzy String Matching.
   - [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
   - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
@@ -1085,7 +1068,6 @@ _Libraries for parsing and manipulating plain texts._
   - [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
   - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
 - Parser
-  - [ply](https://github.com/dabeaz/ply) - Implementation of lex and yacc parsing tools for Python.
   - [pygments](http://pygments.org/) - A generic syntax highlighter.
   - [pyparsing](https://github.com/pyparsing/pyparsing) - A general purpose framework for generating parsers.
   - [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
@@ -1099,7 +1081,6 @@ _Libraries for parsing URLs._
 
 - [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
 - [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
-- [pyshorteners](https://github.com/ellisonleao/pyshorteners) - A pure Python URL shortening lib.
 - [webargs](https://github.com/marshmallow-code/webargs) - A friendly library for parsing HTTP request arguments with built-in support for popular web frameworks.
 
 ## Video
