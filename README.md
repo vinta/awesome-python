@@ -326,11 +326,11 @@ _Libraries for data analysis._
 - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
+- [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 - [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
-- [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 
 
 ## Data Validation
