@@ -1046,6 +1046,8 @@ _Libraries for testing codebases and generating test data._
 - Fake Data
   - [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
   - [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
+- Duplicate Tests
+  - [TestIQ](https://github.com/pydevtools/TestIQ) - Find duplicate and redundant tests using coverage analysis. 
 
 ## Text Processing
 
