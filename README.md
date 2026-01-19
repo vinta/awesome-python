@@ -135,7 +135,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 _[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers._
 
 - [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
-- [granian](https://github.com/emmett-framework/granian) - Granian is a Rust HTTP server for Python applications built on top of Hyper and Tokio,supporting WSGI/ASGI/RSGI.
+- [granian](https://github.com/emmett-framework/granian) - A Rust HTTP server for Python applications built on top of Hyper and Tokio, supporting WSGI/ASGI/RSGI.
 - [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
 - [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
 
@@ -535,6 +535,7 @@ _Libraries for Python version and virtual environment management._
 
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 - [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
+- [uv](https://github.com/astral-sh/uv) - An extremely fast Python package and project manager, written in Rust.
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
 ## File Manipulation
@@ -567,11 +568,11 @@ _Libraries for working with graphical user interface applications._
 - [CustomTkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
 - [DearPyGui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
 - [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
-- [Flet](https://flet.dev) - Cross-platform GUI framework for building modern apps in pure Python. Run on Windows, macOS, Linux, Android, iOS, and the Web.
+- [Flet](https://flet.dev) - Cross-platform GUI framework for building modern apps in pure Python.
 - [Flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
 - [Gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
 - [kivy](https://kivy.org/) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
-- [NiceGui](https://github.com/zauberzeug/nicegui) - It is great for micro web apps, dashboards, robotics projects, smart home solutions and similar use cases. You can also use it in development, for example when tweaking/configuring a machine learning algorithm or tuning motor controllers.
+- [NiceGUI](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
 - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
 - [PyGObject](https://pygobject.readthedocs.io/) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
 - [PySide](https://doc.qt.io/qtforpython/) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
@@ -594,7 +595,7 @@ _Libraries for working with GraphQL._
 _Awesome game development libraries._
 
 - [Arcade](https://api.arcade.academy/en/latest/) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
-- [Cocos2d](https://www.cocos.com/en/cocos2d-x) - cocos2d is a framework for building 2D games, demos, and other graphical/interactive applications.
+- [Cocos2d](https://www.cocos.com/en/cocos2d-x) - A framework for building 2D games, demos, and other graphical/interactive applications.
 - [Harfang3D](http://www.harfang3d.com) - Python framework for 3D, VR and game development.
 - [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney.
 - [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
@@ -620,7 +621,7 @@ _Libraries for working with HTML and XML._
 - [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
 - [cssutils](https://pypi.org/project/cssutils/) - A CSS library for Python.
 - [html5lib](https://github.com/html5lib/html5lib-python) - A standards-compliant library for parsing and serializing HTML documents and fragments.
-- [JustHTML](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works. No C extensions to compile. No system dependencies to install. No complex API to learn.
+- [JustHTML](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works.
 - [lxml](http://lxml.de/) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 - [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
@@ -666,7 +667,7 @@ _Libraries for manipulating images._
 _Implementations of Python._
 
 - [clpython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
-- [cpython](https://github.com/python/cpython) - **Default, most widely used implementation of the Python programming language written in C.**
+- [cpython](https://github.com/python/cpython) - Default, most widely used implementation of the Python programming language written in C.
 - [cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
 - [ironpython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C#.
 - [micropython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
@@ -948,7 +949,7 @@ _Frameworks for developing serverless Python code._
 
 ## Shell
 
-_Shells based on Python._
+_Shells built with Python._
 
 - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
 
@@ -1190,4 +1191,4 @@ Your contributions are always welcome! Please take a look at the [contribution g
 
 ---
 
-If you have any question about this opinionated list, do not hesitate to contact me [@VintaChen](https://twitter.com/VintaChen) on Twitter or open an issue on GitHub.
+If you have any question about this opinionated list, do not hesitate to contact [@VintaChen](https://twitter.com/VintaChen) on Twitter.
