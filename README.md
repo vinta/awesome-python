@@ -730,6 +730,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) - Production-ready Multi-AI Agents framework with self-reflection, 100+ LLM support, MCP integration, and agentic workflows.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
 - [RAGFlow](https://github.com/infiniflow/ragflow) - An open-source RAG engine for document understanding and question answering with LLMs.
+- [rasa](https://github.com/RasaHQ/rasa) - An open-source machine learning framework for automated text and voice-based conversations.
 - [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning.
 - [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library.
 - [Transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pretrained transformer models for NLP, vision, and audio tasks.
