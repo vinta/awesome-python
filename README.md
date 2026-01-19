@@ -534,6 +534,7 @@ _Libraries for sending and parsing email._
 _Libraries for Python version and virtual environment management._
 
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
+- [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
 ## File Manipulation
