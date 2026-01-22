@@ -435,17 +435,16 @@ _Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learni
 
 ## DevOps Tools
 
-_Software and libraries for DevOps._
-
+_Software and libraries that help automate infrastructure, deployment, monitoring, and operations workflows._
 - Cloud Providers
-  - [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
-- Configuration Management
+  - [boto3](https://github.com/boto/boto3) - Official Python SDK for interacting with Amazon Web Services (AWS).
+- Configuration Management (infrastructure provisioning and automation)
   - [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
   - [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
   - [openstack](https://www.openstack.org/) - Open source software for building private and public clouds.
   - [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
   - [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
-- SSH-style Deployment
+- SSH-style Deployment (remote execution and deployment over SSH)
   - [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
 - Process Management
