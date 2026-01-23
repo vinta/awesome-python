@@ -276,6 +276,7 @@ _Libraries for building command-line applications._
 _Useful CLI-based tools for productivity._
 
 - Productivity Tools
+  - [ccb](https://github.com/bfly123/claude_code_bridge) - A CLI tool to orchestrate multiple LLMs (Claude, Gemini, etc.) in Tmux panes with cross-agent interaction.
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
