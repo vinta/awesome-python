@@ -327,6 +327,7 @@ _Libraries for data analysis._
 - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
+- [edgartools](https://github.com/dgunning/edgartools) - Library for getting structured data from SEC EDGAR filings and XBRL financial statements.
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 - [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
