@@ -1034,6 +1034,7 @@ _Libraries for testing codebases and generating test data._
   - [Schemathesis](https://github.com/kiwicom/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [Selenium](https://pypi.org/project/selenium/) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
   - [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
+  - [osn-selenium](https://github.com/oddshellnick/osn-selenium) - Advanced Selenium wrapper for Blink browsers with native Trio support, deep CDP integration, and built-in fingerprint spoofing.
 - Mock
   - [doublex](https://pypi.org/project/doublex/) - Powerful test doubles framework for Python.
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
