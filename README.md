@@ -123,6 +123,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 
 - Algorithms
   - [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
+- [Nexus-Stellar](https://github.com/Tryboy869/nexus-stellar) - Moteur de calcul émergent polyglotte auto-compilant
   - [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structure and algorithms for coding interviews.
   - [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
   - [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
