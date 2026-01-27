@@ -1141,7 +1141,6 @@ _Traditional full stack web frameworks. Also see [RESTful API](https://github.co
 - Synchronous
   - [django](https://github.com/django/django) - The most popular web framework in Python.
     - [awesome-django](https://github.com/shahraizali/awesome-django)
-    - [awesome-django](https://github.com/wsvincent/awesome-django)
   - [flask](https://github.com/pallets/flask) - A microframework for Python.
     - [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
   - [pyramid](https://pylonsproject.org/) - A small, fast, down-to-earth, open source Python web framework.
