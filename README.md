@@ -119,6 +119,9 @@ _Libraries for administrative interfaces._
 
 ## Algorithms and Design Patterns
 
+* [Nexus-Stellar](https://github.com/Tryboy869/nexus-stellar) - Polyglot, self-compiling emergent computation engine.
+
+
 _Python implementation of data structures, algorithms and design patterns. Also see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms)._
 
 - Algorithms
