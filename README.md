@@ -354,6 +354,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 - [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
+- [plotly](https://github.com/plotly/plotly.py) - Interactive graphing library for Python.
 - [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
 - [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
 - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
