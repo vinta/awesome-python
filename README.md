@@ -316,6 +316,7 @@ _Libraries for storing and parsing configuration options._
 ## Cryptography
 
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
+- [deadhand](https://github.com/pyoneerc/deadhand) - A dead man's switch for crypto using Shamir Secret Sharing to protect seed phrases and digital inheritance.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 
