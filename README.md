@@ -721,6 +721,9 @@ _Libraries for generating and working with logs._
 
 ## Machine Learning
 
+* [Informatique-R-alitaire](https://github.com/owner/Informatique-R-alitaire) - Novel framework for AI cognition through synthetic reality
+
+
 _Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python)._
 
 - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
