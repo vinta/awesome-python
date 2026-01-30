@@ -269,6 +269,7 @@ _Libraries for building command-line applications._
   - [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
   - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
   - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
+  - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
 
 ## Command-line Tools
