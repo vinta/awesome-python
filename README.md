@@ -1027,6 +1027,7 @@ _Libraries for testing codebases and generating test data._
   - [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2.
   - [pytest](https://docs.pytest.org/en/latest/) - A mature full-featured Python testing tool.
   - [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
+  - [ScanAPI](https://pypi.org/project/scanapi/) - Automated Testing and Documentation for your REST API.
   - [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 - Test Runners
   - [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
