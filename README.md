@@ -32,6 +32,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Computer Vision](#computer-vision)
   - [Configuration Files](#configuration-files)
   - [Cryptography](#cryptography)
+  - [CQRS & Event Sourcing](#cqrs)
   - [Data Analysis](#data-analysis)
   - [Data Validation](#data-validation)
   - [Data Visualization](#data-visualization)
@@ -319,6 +320,12 @@ _Libraries for storing and parsing configuration options._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+
+## CQRS & Event Sourcing
+
+_Event-Driven Architecture frameworks for CQRS pattern and event-driven microservices._
+
+- [python-cqrs](https://github.com/vadikko2/python-cqrs) - Event-Driven Architecture Framework with CQRS, Transaction Outbox, Saga orchestration, FastAPI/FastStream integration.
 
 ## Data Analysis
 
