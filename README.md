@@ -283,6 +283,7 @@ _Useful CLI-based tools for productivity._
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
   - [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
   - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
+  - [lastversion](https://github.com/dvershinin/lastversion) - A command-line utility to find the latest stable release version of any project.
   - [pathpicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
