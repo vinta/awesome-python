@@ -1132,6 +1132,7 @@ _Libraries for extracting web contents._
 
 _Libraries to automate web scraping._
 
+- [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
 - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
 - [grab](https://github.com/lorien/grab) - Site scraping framework.
 - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
