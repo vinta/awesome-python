@@ -129,7 +129,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 - Design Patterns
   - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
   - [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
-  - [python-cqrs](https://github.com/vadikko2/python-cqrs) - Event-Driven Architecture Framework with CQRS/CQS, Transaction Outbox, Saga orchestration, FastAPI/FastStream integration.
+  - [python-cqrs](https://github.com/vadikko2/python-cqrs) - Event-Driven Architecture Framework with CQRS/CQS, Transaction Outbox, Saga orchestration.
 
 ## ASGI Servers
 
