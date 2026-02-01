@@ -32,7 +32,6 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Computer Vision](#computer-vision)
   - [Configuration Files](#configuration-files)
   - [Cryptography](#cryptography)
-  - [CQRS & Event Sourcing](#cqrs)
   - [Data Analysis](#data-analysis)
   - [Data Validation](#data-validation)
   - [Data Visualization](#data-visualization)
