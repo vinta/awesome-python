@@ -565,7 +565,6 @@ _Functional Programming with Python._
 - [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
 - [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 
-
 ## GUI Development
 
 _Libraries for working with graphical user interface applications._
