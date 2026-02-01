@@ -130,6 +130,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 - Design Patterns
   - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
   - [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
+  - [python-cqrs](https://github.com/vadikko2/python-cqrs) - Event-Driven Architecture Framework with CQRS/CQS, Transaction Outbox, Saga orchestration, FastAPI/FastStream integration.
 
 ## ASGI Servers
 
@@ -320,12 +321,6 @@ _Libraries for storing and parsing configuration options._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
-
-## CQRS & Event Sourcing
-
-_Event-Driven Architecture frameworks for CQRS pattern and event-driven microservices._
-
-- [python-cqrs](https://github.com/vadikko2/python-cqrs) - Event-Driven Architecture Framework with CQRS, Transaction Outbox, Saga orchestration, FastAPI/FastStream integration.
 
 ## Data Analysis
 
