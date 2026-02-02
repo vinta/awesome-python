@@ -126,6 +126,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
   - [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structure and algorithms for coding interviews.
   - [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
   - [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
+  - [graph-algorithms](https://github.com/m15154178071-cmyk/graph-algorithms) - Pure-Python minimum cycle basis and chordless cycle enumeration with guided DFS.
 - Design Patterns
   - [python-cqrs](https://github.com/vadikko2/python-cqrs) - Event-Driven Architecture Framework with CQRS/CQS, Transaction Outbox, Saga orchestration.
   - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
