@@ -258,6 +258,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 _Libraries for building command-line applications._
 
 - Command-line Application Development
+  - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
   - [cliff](https://github.com/openstack/cliff) - A framework for creating command-line programs with multi-level commands.
