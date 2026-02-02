@@ -834,6 +834,7 @@ _Frameworks and tools for penetration testing._
 
 - [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
 - [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
+- [sherlock](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 
 ## Permissions
