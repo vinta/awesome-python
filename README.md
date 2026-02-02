@@ -233,6 +233,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 
 - Code Analysis
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+
   - [prospector](https://github.com/PyCQA/prospector) - A tool to analyze Python code.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
 - Code Linters
@@ -258,6 +259,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 _Libraries for building command-line applications._
 
 - Command-line Application Development
+  - [OpenVBS](https://github.com/robert19066/GNU-OpenVBS) - VBS integration in Python, with a superb CLI, support for OOP, plugins and more!
   - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
@@ -675,6 +677,7 @@ _Libraries for manipulating images._
 
 _Implementations of Python._
 
+ 
 - [clpython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
 - [cpython](https://github.com/python/cpython) - Default, most widely used implementation of the Python programming language written in C.
 - [cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
