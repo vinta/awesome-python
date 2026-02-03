@@ -1096,6 +1096,7 @@ _Libraries for manipulating video and GIFs._
 - [moviepy](https://zulko.github.io/moviepy/) - A module for script-based movie editing with many formats, including animated GIFs.
 - [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
+- [n01d-media](https://github.com/bad-antics/n01d-media) - All-in-one media suite with video/audio players, image editor, and FFmpeg-based encoder.
 
 ## Web Asset Management
 
