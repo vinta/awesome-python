@@ -612,6 +612,7 @@ _Awesome game development libraries._
 - [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 - [PySDL2](https://pysdl2.readthedocs.io) - A ctypes based wrapper for the SDL2 library.
 - [RenPy](https://www.renpy.org/) - A Visual Novel engine.
+- [Ursina](https://www.ursinaengine.org/) - Ursina Engine is a modern Python game engine that provides developers with powerful tools for creating 2D and 3D games.
 
 ## Geolocation
 
