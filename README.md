@@ -870,6 +870,7 @@ _Refactoring tools and libraries for Python._
 
 - [Bowler](https://pybowler.io/) - Safe code refactoring for modern Python.
 - [Rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
+- [py312-decompiler](https://github.com/biefg/py312-decompiler) - Python 3.12 bytecode decompiler.
 
 ## RESTful API
 
