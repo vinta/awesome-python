@@ -445,7 +445,7 @@ _Software and libraries for DevOps._
 
 - Cloud Providers
   - [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
-  - [boto3-refresh-session](https://github.com/michaelthomasletts/boto3-refresh-session) - Drop-in replacement for boto3.Session that automatically refreshes temporary AWS credentials (STS, IoT Core, custom providers) with client caching and native MFA support. 
+  - [boto3-refresh-session](https://github.com/michaelthomasletts/boto3-refresh-session) - Drop-in boto3.Session object that auto-refreshes temporary AWS credentials with client caching, MFA support, and STS/IoT/custom providers.
 - Configuration Management
   - [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
   - [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
