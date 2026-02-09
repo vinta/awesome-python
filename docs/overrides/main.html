@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* Orbitron for futuristic headings */
+    .md-typeset h1,
+    .md-header__title {
+      font-family: 'Orbitron', sans-serif !important;
+    }
+  </style>
+{% endblock %}
+
+{% block content %}
+  <div id="futuristic-canvas" aria-hidden="true"></div>
+  {{ super() }}
+{% endblock %}

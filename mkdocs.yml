@@ -6,21 +6,41 @@ repo_name: vinta/awesome-python
 repo_url: https://github.com/vinta/awesome-python
 theme:
   name: material
+  custom_dir: docs/overrides
   palette:
-    primary: red
-    accent: pink
+    scheme: slate
+    primary: black
+    accent: cyan
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - toc.follow
 extra:
   social:
-    - type: github
+    - icon: fontawesome/brands/github
       link: https://github.com/vinta
-    - type: twitter
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/vinta
-    - type: linkedin
+    - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/vinta
-google_analytics:
-  - UA-510626-7
-  - auto
 extra_css:
-    - css/extra.css
+  - css/extra.css
+extra_javascript:
+  - js/futuristic.js
 nav:
   - "Life is short, you need Python.": "index.md"
+markdown_extensions:
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
