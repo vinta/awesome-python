@@ -1,10 +1,11 @@
 name: Claude PR Review
 
 on:
-  pull_request:
-    types: [opened, synchronize, ready_for_review, reopened, labeled]
-    paths:
-      - "README.md"
+  workflow_dispatch:
+  # pull_request:
+  #   types: [opened, synchronize, ready_for_review, reopened, labeled]
+  #   paths:
+  #     - "README.md"
 
 jobs:
   claude-pr-review:
