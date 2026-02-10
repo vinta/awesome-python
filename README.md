@@ -1185,6 +1185,10 @@ _WSGI-compatible web servers._
 
 Where to discover learning resources or new Python libraries.
 
+## Books
+- [Python Workout, Second Edition](https://www.manning.com/books/python-workout-second-edition)
+- [The Quick Python Book, Fourth Edition](https://www.manning.com/books/the-quick-python-book-fourth-edition)
+
 ## Newsletters
 
 - [Awesome Python Newsletter](http://python.libhunt.com/newsletter)
