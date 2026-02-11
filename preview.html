@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" data-md-color-scheme="slate">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Awesome Python — Futuristic Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* === Reset & Base === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --neon-cyan: #00f0ff;
+      --neon-magenta: #ff00e5;
+      --neon-blue: #4d7cff;
+      --neon-purple: #b44dff;
+      --neon-green: #00ff88;
+      --dark-bg: #0a0a0f;
+      --dark-surface: #12121a;
+      --dark-card: #1a1a2e;
+      --dark-border: #2a2a3e;
+      --text-primary: #e0e0f0;
+      --text-secondary: #8888aa;
+      --gradient-neon: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue), var(--neon-purple), var(--neon-magenta));
+      --gradient-subtle: linear-gradient(135deg, rgba(0,240,255,0.05), rgba(255,0,229,0.05));
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* === Animated Background Grid === */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background:
+        linear-gradient(rgba(0,240,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,240,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+      animation: gridPulse 8s ease-in-out infinite;
+    }
+
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+
+    /* === Scanlines === */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.015) 2px, rgba(0,0,0,0.015) 4px);
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* === Header === */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,15,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0,240,255,0.15);
+      box-shadow: 0 2px 30px rgba(0,240,255,0.08);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+    }
+
+    .header:hover { border-bottom-color: rgba(0,240,255,0.3); }
+
+    .header-title {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: var(--gradient-neon);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .header-search {
+      background: rgba(26,26,46,0.8);
+      border: 1px solid var(--dark-border);
+      border-radius: 8px;
+      padding: 8px 16px;
+      color: var(--text-secondary);
+      font-size: 0.85em;
+      width: 220px;
+      outline: none;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .header-search:focus {
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(0,240,255,0.3), 0 0 40px rgba(0,240,255,0.1);
+      color: var(--text-primary);
+    }
+
+    .header-search::placeholder { color: var(--text-secondary); opacity: 0.6; }
+
+    /* === Layout === */
+    .layout {
+      display: flex;
+      max-width: 1300px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* === Sidebar === */
+    .sidebar {
+      width: 260px;
+      min-width: 260px;
+      padding: 24px 16px;
+      position: sticky;
+      top: 56px;
+      height: calc(100vh - 56px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: var(--neon-cyan) transparent;
+    }
+
+    .sidebar-label {
+      font-size: 0.65em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      padding-left: 14px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 6px 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82em;
+      border-left: 2px solid transparent;
+      transition: all 0.3s ease;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .sidebar a:hover {
+      color: var(--neon-cyan);
+      border-left-color: var(--neon-cyan);
+      text-shadow: 0 0 8px rgba(0,240,255,0.3);
+      background: rgba(0,240,255,0.03);
+    }
+
+    .sidebar a.active {
+      color: var(--neon-cyan);
+      border-left-color: var(--neon-cyan);
+      font-weight: 600;
+    }
+
+    /* === Main Content === */
+    .content {
+      flex: 1;
+      max-width: 860px;
+      padding: 40px 40px 80px;
+      animation: fadeInUp 0.4s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* === Headings === */
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-weight: 800;
+      font-size: 2.8em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      background: var(--gradient-neon);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5em;
+      animation: headingGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes headingGlow {
+      0%, 100% { filter: brightness(1) drop-shadow(0 0 5px rgba(0,240,255,0.2)); }
+      50% { filter: brightness(1.15) drop-shadow(0 0 15px rgba(0,240,255,0.4)); }
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 1.05em;
+      margin-bottom: 2em;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.5em;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 20px rgba(0,240,255,0.15);
+      padding-bottom: 0.5em;
+      margin-top: 2.5em;
+      margin-bottom: 0.3em;
+      border-bottom: 1px solid rgba(0,240,255,0.15);
+      position: relative;
+      letter-spacing: 1px;
+    }
+
+    h2::before {
+      content: '//';
+      margin-right: 10px;
+      color: var(--neon-magenta);
+      opacity: 0.6;
+      font-weight: 400;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 80px;
+      height: 2px;
+      background: var(--gradient-neon);
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(0,240,255,0.4);
+    }
+
+    .category-badge {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 2px 10px;
+      font-size: 0.55em;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500;
+      color: var(--neon-cyan);
+      background: rgba(0,240,255,0.08);
+      border: 1px solid rgba(0,240,255,0.2);
+      border-radius: 12px;
+      vertical-align: middle;
+      letter-spacing: 0;
+    }
+
+    .category-desc {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(0,240,255,0.06);
+      border: 1px solid rgba(0,240,255,0.15);
+      border-radius: 20px;
+      font-size: 0.85em;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 12px;
+      margin-top: 8px;
+    }
+
+    /* === Divider === */
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--neon-cyan), var(--neon-magenta), transparent);
+      margin: 2.5em 0;
+      opacity: 0.4;
+    }
+
+    /* === Links === */
+    a {
+      color: var(--neon-cyan);
+      text-decoration: none;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .content a:hover {
+      color: #fff;
+      text-shadow: 0 0 12px rgba(0,240,255,0.5);
+    }
+
+    /* === List Items === */
+    ul { list-style: none; padding: 0; }
+
+    ul > li {
+      position: relative;
+      padding: 10px 14px;
+      margin: 6px 0;
+      border-radius: 8px;
+      background: rgba(26,26,46,0.4);
+      border: 1px solid rgba(42,42,62,0.5);
+      transition: all 0.3s ease;
+      font-size: 0.92em;
+    }
+
+    ul > li::before {
+      content: '\25B8';
+      color: var(--neon-cyan);
+      margin-right: 8px;
+      font-size: 0.85em;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    ul > li:hover {
+      background: rgba(0,240,255,0.04);
+      border-color: rgba(0,240,255,0.2);
+      box-shadow: 0 0 20px rgba(0,240,255,0.05);
+      transform: translateX(4px);
+    }
+
+    ul > li:hover::before {
+      color: var(--neon-magenta);
+      opacity: 1;
+    }
+
+    /* Nested */
+    ul > li > ul { margin-top: 6px; }
+
+    ul > li > ul > li {
+      background: rgba(18,18,26,0.6);
+      border-color: rgba(42,42,62,0.3);
+      margin: 4px 0;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+
+    ul > li > ul > li::before {
+      content: '\25C8';
+      color: var(--neon-purple);
+      font-size: 0.7em;
+    }
+
+    /* === Inline Code === */
+    code {
+      background: rgba(0,240,255,0.08);
+      color: var(--neon-green);
+      border: 1px solid rgba(0,240,255,0.12);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 0.85em;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* === Sponsor Banner === */
+    .sponsor-banner {
+      background: var(--gradient-subtle);
+      border: 1px solid var(--dark-border);
+      border-radius: 12px;
+      padding: 1.2em 1.5em;
+      margin-bottom: 2em;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-size: 0.85em;
+      color: var(--text-secondary);
+    }
+
+    .sponsor-banner:hover {
+      border-color: rgba(0,240,255,0.2);
+      box-shadow: 0 0 30px rgba(0,240,255,0.05);
+    }
+
+    /* === Footer === */
+    .footer {
+      background: rgba(10,10,15,0.95);
+      border-top: 1px solid rgba(0,240,255,0.1);
+      padding: 24px 32px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.8em;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* === Scrollbar === */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--dark-bg); }
+    ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--neon-cyan), var(--neon-purple)); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--neon-cyan), var(--neon-magenta)); }
+
+    /* === Selection === */
+    ::selection { background: rgba(0,240,255,0.25); color: #fff; }
+
+    /* === Scroll Reveal === */
+    .scroll-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .scroll-reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* === Typing cursor === */
+    @keyframes cursorBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .cursor { color: var(--neon-cyan); animation: cursorBlink 1s step-end infinite; font-weight: 300; margin-left: 2px; }
+
+    /* === Responsive === */
+    @media (max-width: 960px) {
+      .sidebar { display: none; }
+      .content { padding: 24px 20px 60px; }
+      h1 { font-size: 2em; letter-spacing: 2px; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5em; letter-spacing: 1px; }
+      body::before { background-size: 40px 40px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Particle Container -->
+  <div id="futuristic-canvas" aria-hidden="true" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <span class="header-title">Awesome Python</span>
+    <input type="text" class="header-search" placeholder="Search libraries...">
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-label">Navigation</div>
+      <a href="#" class="active">Admin Panels</a>
+      <a href="#">Algorithms &amp; Design Patterns</a>
+      <a href="#">ASGI Servers</a>
+      <a href="#">Asynchronous Programming</a>
+      <a href="#">Audio</a>
+      <a href="#">Authentication</a>
+      <a href="#">Build Tools</a>
+      <a href="#">Caching</a>
+      <a href="#">CMS</a>
+      <a href="#">Code Analysis</a>
+      <a href="#">CLI Development</a>
+      <a href="#">Computer Vision</a>
+      <a href="#">Cryptography</a>
+      <a href="#">Data Analysis</a>
+      <a href="#">Data Visualization</a>
+      <a href="#">Database</a>
+      <a href="#">Date and Time</a>
+      <a href="#">Debugging Tools</a>
+      <a href="#">Deep Learning</a>
+      <a href="#">DevOps Tools</a>
+      <a href="#">Distributed Computing</a>
+      <a href="#">Documentation</a>
+      <a href="#">GUI Development</a>
+      <a href="#">Image Processing</a>
+      <a href="#">Machine Learning</a>
+      <a href="#">RESTful API</a>
+      <a href="#">Testing</a>
+      <a href="#">Web Frameworks</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="content">
+      <div class="sponsor-banner">
+        Special thanks to our sponsors
+      </div>
+
+      <h1 id="typed-heading"></h1>
+
+      <p class="subtitle">An opinionated list of awesome Python frameworks, libraries, software and resources.</p>
+
+      <hr>
+
+      <!-- Admin Panels -->
+      <h2 class="scroll-reveal">Admin Panels <span class="category-badge">7</span></h2>
+      <div class="category-desc">Libraries for administrative interfaces.</div>
+      <ul>
+        <li><a href="#">ajenti</a> - The admin panel your servers deserve.</li>
+        <li><a href="#">django-grappelli</a> - A jazzy skin for the Django Admin-Interface.</li>
+        <li><a href="#">flask-admin</a> - Simple and extensible administrative interface framework for Flask.</li>
+        <li><a href="#">flower</a> - Real-time monitor and web admin for Celery.</li>
+        <li><a href="#">jet-bridge</a> - Admin panel framework for any application with nice UI.</li>
+        <li><a href="#">wooey</a> - A Django app which creates automatic web UIs for Python scripts.</li>
+        <li><a href="#">streamlit</a> - A framework for building dashboards, reports, or chat apps in minutes.</li>
+      </ul>
+
+      <!-- ASGI Servers -->
+      <h2 class="scroll-reveal">ASGI Servers <span class="category-badge">3</span></h2>
+      <div class="category-desc">ASGI-compatible web servers.</div>
+      <ul>
+        <li><a href="#">daphne</a> - A HTTP, HTTP2 and WebSocket protocol server for ASGI.</li>
+        <li><a href="#">uvicorn</a> - A lightning-fast ASGI server implementation, using uvloop and httptools.</li>
+        <li><a href="#">hypercorn</a> - An ASGI and WSGI Server based on Hyper libraries.</li>
+      </ul>
+
+      <!-- Asynchronous Programming -->
+      <h2 class="scroll-reveal">Asynchronous Programming <span class="category-badge">8</span></h2>
+      <div class="category-desc">Libraries for asynchronous, concurrent and parallel execution.</div>
+      <ul>
+        <li><a href="#">asyncio</a> - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.</li>
+        <li><a href="#">concurrent.futures</a> - (Python standard library) A high-level interface for asynchronously executing callables.</li>
+        <li><a href="#">trio</a> - A friendly library for async concurrency and I/O.</li>
+        <li><a href="#">twisted</a> - An event-driven networking engine.</li>
+        <li><a href="#">uvloop</a> - Ultra fast asyncio event loop.</li>
+        <li><a href="#">eventlet</a> - Asynchronous framework with WSGI support.</li>
+        <li><a href="#">gevent</a> - A coroutine-based Python networking library that uses <code>greenlet</code>.</li>
+        <li><a href="#">multiprocessing</a> - (Python standard library) Process-based parallelism.</li>
+      </ul>
+
+      <!-- Authentication -->
+      <h2 class="scroll-reveal">Authentication <span class="category-badge">2</span></h2>
+      <div class="category-desc">Libraries for implementing authentication schemes.</div>
+      <ul>
+        <li>OAuth
+          <ul>
+            <li><a href="#">authlib</a> - JavaScript Object Signing and Encryption draft implementation.</li>
+            <li><a href="#">django-allauth</a> - Authentication app for Django that "just works."</li>
+            <li><a href="#">django-oauth-toolkit</a> - OAuth 2 goodies for Django.</li>
+            <li><a href="#">oauthlib</a> - A generic and thorough implementation of the OAuth request-signing logic.</li>
+          </ul>
+        </li>
+        <li>JWT
+          <ul>
+            <li><a href="#">pyjwt</a> - JSON Web Token implementation in Python.</li>
+            <li><a href="#">python-jose</a> - A JOSE implementation in Python.</li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Deep Learning -->
+      <h2 class="scroll-reveal">Deep Learning <span class="category-badge">6</span></h2>
+      <div class="category-desc">Frameworks for neural networks and deep learning.</div>
+      <ul>
+        <li><a href="#">pytorch</a> - Tensors and Dynamic neural networks in Python with strong GPU acceleration.</li>
+        <li><a href="#">tensorflow</a> - The most popular Deep Learning framework created by Google.</li>
+        <li><a href="#">keras</a> - A high-level neural networks library, running on top of TensorFlow.</li>
+        <li><a href="#">caffe2</a> - A lightweight, modular, and scalable deep learning framework.</li>
+        <li><a href="#">mxnet</a> - A deep learning framework designed for efficiency and flexibility.</li>
+        <li><a href="#">stable-baselines3</a> - PyTorch implementations of reinforcement learning algorithms.</li>
+      </ul>
+
+      <!-- Web Frameworks -->
+      <h2 class="scroll-reveal">Web Frameworks <span class="category-badge">5</span></h2>
+      <div class="category-desc">Traditional full stack web frameworks.</div>
+      <ul>
+        <li><a href="#">django</a> - The most popular web framework in Python.</li>
+        <li><a href="#">flask</a> - A microframework for Python.</li>
+        <li><a href="#">fastapi</a> - A modern, fast web framework for building APIs with Python 3.6+.</li>
+        <li><a href="#">pyramid</a> - A small, fast, down-to-earth, open source Python web framework.</li>
+        <li><a href="#">tornado</a> - A Python web framework and asynchronous networking library.</li>
+      </ul>
+
+      <hr>
+
+      <p style="color: var(--text-secondary); font-size: 0.85em; margin-top: 2em;">
+        ... and 55+ more categories. This is a preview of the futuristic theme applied to the full site.
+      </p>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    Made with neon by Awesome Python &middot; vinta/awesome-python
+  </footer>
+
+  <!-- Futuristic JavaScript -->
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Particles ---
+      var canvas = document.getElementById('futuristic-canvas');
+      var count = window.innerWidth < 768 ? 15 : 30;
+      var colors = ['rgba(0,240,255,0.4)','rgba(255,0,229,0.3)','rgba(77,124,255,0.35)','rgba(180,77,255,0.3)'];
+
+      // Inject keyframes
+      var style = document.createElement('style');
+      style.textContent = '@keyframes particleFloat {' +
+        '0%, 100% { transform: translate(0,0) scale(1); }' +
+        '25% { transform: translate(30px,-60px) scale(1.2); }' +
+        '50% { transform: translate(-20px,-120px) scale(0.8); }' +
+        '75% { transform: translate(40px,-40px) scale(1.1); }' +
+      '}';
+      document.head.appendChild(style);
+
+      for (var i = 0; i < count; i++) {
+        var p = document.createElement('div');
+        var size = Math.random() * 3 + 1;
+        var color = colors[Math.floor(Math.random() * colors.length)];
+        Object.assign(p.style, {
+          position: 'absolute',
+          width: size + 'px',
+          height: size + 'px',
+          background: color,
+          borderRadius: '50%',
+          boxShadow: '0 0 ' + (size*3) + 'px ' + color,
+          left: Math.random()*100 + '%',
+          top: Math.random()*100 + '%',
+          animation: 'particleFloat ' + (Math.random()*20+15) + 's ease-in-out ' + (Math.random()*-20) + 's infinite',
+          opacity: String(Math.random()*0.6+0.2)
+        });
+        canvas.appendChild(p);
+      }
+
+      // --- Typing Effect ---
+      var h1 = document.getElementById('typed-heading');
+      var text = 'Awesome Python';
+      var cursor = document.createElement('span');
+      cursor.className = 'cursor';
+      cursor.textContent = '|';
+      h1.appendChild(cursor);
+
+      var textNode = document.createTextNode('');
+      h1.insertBefore(textNode, cursor);
+      var idx = 0;
+
+      function typeChar() {
+        if (idx < text.length) {
+          textNode.textContent += text[idx];
+          idx++;
+          setTimeout(typeChar, 50 + Math.random() * 40);
+        } else {
+          setTimeout(function() {
+            cursor.style.transition = 'opacity 1s ease';
+            cursor.style.opacity = '0';
+          }, 2000);
+        }
+      }
+      setTimeout(typeChar, 400);
+
+      // --- Scroll Reveal ---
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('visible');
+              observer.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.scroll-reveal').forEach(function(el) {
+          observer.observe(el);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
