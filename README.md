@@ -345,6 +345,7 @@ _Libraries for validating data. Used for forms in many cases._
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 - [schematics](https://github.com/schematics/schematics) - Data Structure Validation.
+- [Timefence](https://github.com/gauthierpiarrette/timefence) - A library that detects and fixes temporal data leakage in ML training sets.
 - [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 
 ## Data Visualization
