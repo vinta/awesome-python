@@ -1141,6 +1141,7 @@ _Libraries to automate web scraping._
 
 - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
 - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
+- [flyto-core](https://github.com/flytohub/flyto-core) - Secure execution engine for AI agents with 300+ atomic modules and MCP support.
 - [grab](https://github.com/lorien/grab) - Site scraping framework.
 - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
