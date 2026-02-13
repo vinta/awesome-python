@@ -1,0 +1,59 @@
+name: Claude PR Review
+
+on:
+  workflow_dispatch:
+  # pull_request:
+  #   types: [opened, synchronize, ready_for_review, reopened, labeled]
+  #   paths:
+  #     - "README.md"
+
+jobs:
+  claude-pr-review:
+    if: |
+      github.event.label.name == 'claude review' ||
+      github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR' ||
+      github.event.pull_request.author_association == 'FIRST_TIMER' ||
+      github.event.pull_request.author_association == 'NONE'
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: read # Cannot merge PR
+      pull-requests: write
+      issues: read
+      actions: read # Required for Claude to read CI results on PRs
+      id-token: write # Required for Claude GitHub app to function
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - name: Run Claude Code Review
+        id: claude-review
+        uses: anthropics/claude-code-action@v1
+        with:
+          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          plugin_marketplaces: "https://github.com/anthropics/claude-code.git"
+          plugins: "code-review@claude-code-plugins"
+          prompt: |
+            Review this PR against the acceptance criteria in CONTRIBUTING.md.
+            Check for automatic rejection reasons (abandoned, duplicates, spam).
+
+            IMPORTANT: Only read README.md and CONTRIBUTING.md. Do not read or access any other files.
+
+            /code-review:code-review ${{ github.repository }}/pull/${{ github.event.pull_request.number }}
+
+            After your review, output your final decision on the LAST line in this exact format:
+            DECISION: REJECT or DECISION: PASS
+
+      - name: Close PR if rejected
+        if: "contains(steps.claude-review.outputs.response, 'DECISION: REJECT')"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr close ${{ github.event.pull_request.number }} \
+            --repo ${{ github.repository }} \
+            --comment "This PR has been automatically closed based on the review. Please address the feedback and re-open the PR."
