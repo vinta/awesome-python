@@ -161,6 +161,7 @@ _Libraries for manipulating audio and its metadata._
   - [audioFlux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
   - [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
   - [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
+  - [gTTS](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
