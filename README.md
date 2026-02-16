@@ -859,9 +859,6 @@ _Libraries for starting and communicating with OS processes._
 _Libraries for quantum computing._
 
 - [Qiskit](https://github.com/Qiskit/qiskit) — An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
-- [Cirq](https://github.com/quantumlib/Cirq) — A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
-- [PennyLane](https://github.com/PennyLaneAI/pennylane) — A hybrid quantum-classical machine learning library with automatic differentiation support.
-- [ProjectQ](https://github.com/ProjectQ-Framework/ProjectQ) — An open-source quantum compiler and simulation framework for low-level circuit experimentation.
 - [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 
 ## Recommender Systems
