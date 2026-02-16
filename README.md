@@ -287,6 +287,7 @@ _Useful CLI-based tools for productivity._
   - [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
   - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
   - [pathpicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
+  - [qbo-cli](https://github.com/alexph-dev/qbo-cli) - Command-line interface for QuickBooks Online API with OAuth2, queries, reports, and CRUD.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
