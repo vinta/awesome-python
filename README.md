@@ -862,6 +862,7 @@ _Libraries for quantum computing._
 - [Cirq](https://github.com/quantumlib/Cirq) — A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
 - [PennyLane](https://github.com/PennyLaneAI/pennylane) — A hybrid quantum-classical machine learning library with automatic differentiation support.
 - [ProjectQ](https://github.com/ProjectQ-Framework/ProjectQ) — An open-source quantum compiler and simulation framework for low-level circuit experimentation.
+- [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 
 ## Recommender Systems
 
@@ -935,7 +936,6 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [PathSim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
 - [PyDy](http://www.pydy.org/) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 - [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
-- [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 - [RDKit](http://www.rdkit.org/) - Cheminformatics and Machine Learning Software.
 - [SciPy](https://www.scipy.org/) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 - [shapely](https://github.com/shapely/shapely) - Manipulation and analysis of geometric objects in the Cartesian plane.
