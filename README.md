@@ -72,6 +72,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Penetration testing](#penetration-testing)
   - [Permissions](#permissions)
   - [Processes](#processes)
+  - [Quantum Computing](#quantum-computing)
   - [Recommender Systems](#recommender-systems)
   - [Refactoring](#refactoring)
   - [RESTful API](#restful-api)
@@ -852,6 +853,15 @@ _Libraries for starting and communicating with OS processes._
 - [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
 - [sarge](https://sarge.readthedocs.io/en/latest/) - Yet another wrapper for subprocess.
 - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+
+## Quantum Computing
+
+_Libraries for quantum computing._
+
+- [Qiskit](https://github.com/Qiskit/qiskit) — An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
+- [Cirq](https://github.com/quantumlib/Cirq) — A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
+- [PennyLane](https://github.com/PennyLaneAI/pennylane) — A hybrid quantum-classical machine learning library with automatic differentiation support.
+- [ProjectQ](https://github.com/ProjectQ-Framework/ProjectQ) — An open-source quantum compiler and simulation framework for low-level circuit experimentation.
 
 ## Recommender Systems
 
