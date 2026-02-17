@@ -858,6 +858,7 @@ _Libraries for starting and communicating with OS processes._
 
 _Libraries for quantum computing._
 
+- [PennyLane](https://github.com/PennyLaneAI/pennylane) — A hybrid quantum-classical machine learning library with automatic differentiation support.
 - [Qiskit](https://github.com/Qiskit/qiskit) — An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
 - [QuTiP](http://qutip.org/) - Quantum Toolbox in Python.
 
