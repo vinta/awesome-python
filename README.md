@@ -1101,6 +1101,7 @@ _Libraries for parsing and manipulating plain texts._
   - [pyparsing](https://github.com/pyparsing/pyparsing) - A general purpose framework for generating parsers.
   - [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
   - [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
+  - [Trestle](https://trestleiq.com) - Real-time global phone validation API with line type detection (VoIP vs. Cellular) and phone activity (connected/disconnected) scoring.
   - [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
   - [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
 
