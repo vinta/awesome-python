@@ -285,6 +285,7 @@ _Useful CLI-based tools for productivity._
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
+  - [frostbyte](https://github.com/VladislavTsytrikov/frostbyte) - A zero-config background daemon that auto-suspends inactive applications using SIGSTOP to reclaim RAM.
   - [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
   - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
   - [pathpicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
