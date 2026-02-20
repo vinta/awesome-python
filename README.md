@@ -279,6 +279,7 @@ _Libraries for building command-line applications._
 ## Command-line Tools
 
 _Useful CLI-based tools for productivity._
+  - [good-first-issue](https://github.com/yakub268/good-first-issue) - A CLI tool to find quality good first issues in open source projects based on your GitHub profile.
 
 - Productivity Tools
   - [ccb](https://github.com/bfly123/claude_code_bridge) - A CLI tool to orchestrate multiple LLMs (Claude, Gemini, etc.) in Tmux panes with cross-agent interaction.
