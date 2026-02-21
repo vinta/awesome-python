@@ -28,6 +28,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [CMS](#cms)
   - [Code Analysis](#code-analysis)
   - [Command-line Interface Development](#command-line-interface-development)
+- [changelog-gen](https://github.com/indoor47/changelog-gen) - AI-powered changelog generator that converts git commits into human-readable release notes using Claude
   - [Command-line Tools](#command-line-tools)
   - [Computer Vision](#computer-vision)
   - [Configuration Files](#configuration-files)
