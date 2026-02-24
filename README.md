@@ -333,7 +333,7 @@ _Libraries for data analysis._
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
-- [pandas](http://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+- [pandas](https://pandas.pydata.org/) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
 
@@ -591,7 +591,7 @@ _Libraries for working with graphical user interface applications._
 - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
 - [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
 - [Toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
-- [urwid](http://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
+- [urwid](https://urwid.org/) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 - [wxPython](https://wxpython.org/) - A blending of the wxWidgets C++ class library with the Python.
 
 ## GraphQL
@@ -609,7 +609,7 @@ _Awesome game development libraries._
 - [Cocos2d](https://www.cocos.com/en/cocos2d-x) - A framework for building 2D games, demos, and other graphical/interactive applications.
 - [Harfang3D](http://www.harfang3d.com) - Python framework for 3D, VR and game development.
 - [Panda3D](https://www.panda3d.org/) - 3D game engine developed by Disney.
-- [Pygame](http://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
+- [Pygame](https://www.pygame.org/news.html) - Pygame is a set of Python modules designed for writing games.
 - [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 - [PyOpenGL](http://pyopengl.sourceforge.net/) - Python ctypes bindings for OpenGL and it's related APIs.
 - [PySDL2](https://pysdl2.readthedocs.io) - A ctypes based wrapper for the SDL2 library.
@@ -633,11 +633,11 @@ _Libraries for working with HTML and XML._
 - [cssutils](https://pypi.org/project/cssutils/) - A CSS library for Python.
 - [html5lib](https://github.com/html5lib/html5lib-python) - A standards-compliant library for parsing and serializing HTML documents and fragments.
 - [JustHTML](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works.
-- [lxml](http://lxml.de/) - A very fast, easy-to-use and versatile library for handling HTML and XML.
+- [lxml](https://lxml.de/) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 - [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
 - [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access.
-- [WeasyPrint](http://weasyprint.org) - A visual rendering engine for HTML and CSS that can export to PDF.
+- [WeasyPrint](https://weasyprint.org) - A visual rendering engine for HTML and CSS that can export to PDF.
 - [xmldataset](https://xmldataset.readthedocs.io/en/latest/) - Simple XML Parsing.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
@@ -664,12 +664,12 @@ _Libraries for programming with hardware._
 _Libraries for manipulating images._
 
 - [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
-- [pymatting](http://github.com/pymatting/pymatting) - A library for alpha matting.
+- [pymatting](https://github.com/pymatting/pymatting) - A library for alpha matting.
 - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 - [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 - [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
 - [quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
-- [scikit-image](http://scikit-image.org/) - A Python library for (scientific) image processing.
+- [scikit-image](https://scikit-image.org/) - A Python library for (scientific) image processing.
 - [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 - [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
 
@@ -701,7 +701,7 @@ _Interactive Python interpreters (REPL)._
 
 _Libraries for working with i18n._
 
-- [Babel](http://babel.pocoo.org/en/latest/) - An internationalization library for Python.
+- [Babel](https://babel.pocoo.org/en/latest/) - An internationalization library for Python.
 
 ## Job Scheduler
 
@@ -774,7 +774,7 @@ _Libraries for working with human languages._
 - General
   - [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
   - [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
-  - [nltk](http://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
+  - [nltk](https://www.nltk.org/) - A leading platform for building Python programs to work with human language data.
   - [pattern](https://github.com/clips/pattern) - A web mining module.
   - [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
   - [spacy](https://spacy.io/) - A library for industrial-strength natural language processing in Python and Cython.
@@ -919,7 +919,7 @@ _RPC-compatible servers._
 
 _Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists)._
 
-- [astropy](http://www.astropy.org/) - A community Python library for Astronomy.
+- [astropy](https://www.astropy.org/) - A community Python library for Astronomy.
 - [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
 - [bcbb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
 - [Biopython](http://biopython.org/wiki/Main_Page) - Biopython is a set of freely available tools for biological computation.
