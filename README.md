@@ -281,6 +281,7 @@ _Libraries for building command-line applications._
 _Useful CLI-based tools for productivity._
 
 - Productivity Tools
+  - [PolySkill](https://polyskill.ai) - An open marketplace for LLM-agnostic AI skills. Works with Claude Code, Copilot, Cursor, and other assistants. `npm install -g @polyskill/cli`
   - [ccb](https://github.com/bfly123/claude_code_bridge) - A CLI tool to orchestrate multiple LLMs (Claude, Gemini, etc.) in Tmux panes with cross-agent interaction.
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
