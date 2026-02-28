@@ -732,7 +732,7 @@ _Libraries for generating and working with logs._
 
 _Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python)._
 
-- [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
+- [air-compliance-checker](https://github.com/airblackbox/air-blackbox-mcp) - CLI tool that scans Python AI agent code for EU AI Act technical compliance. Trust layers for LangChain, CrewAI, AutoGen, OpenAI, and Anthropic.- [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
 - [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 - [Feature-engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
