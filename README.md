@@ -237,6 +237,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
   - [prospector](https://github.com/PyCQA/prospector) - A tool to analyze Python code.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
+  - [skylos](https://github.com/duriantaco/skylos) - A tool for dead code detection, quality and security scanning for Python, TypeScript, and Go with framework-aware analysis. 
 - Code Linters
   - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
     - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
