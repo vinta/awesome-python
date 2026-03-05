@@ -313,6 +313,7 @@ _Libraries for storing and parsing configuration options._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+- [RustChain](https://github.com/Scottcjn/Rustchain) - Proof-of-Antiquity blockchain with hardware-attestation consensus, Ed25519 signatures, and vintage hardware mining rewards.
 
 ## Data Analysis
 
