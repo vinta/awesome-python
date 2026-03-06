@@ -225,6 +225,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 - Code Analysis
   - [code-graph-rag](https://github.com/vitali87/code-graph-rag) - Builds knowledge graphs from multi-language codebases using Tree-sitter and Memgraph, enabling natural language querying of code structure.
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+  - [git-graphable](https://github.com/TheTrueSCU/git-graphable) - Analyze and visualize Git history hygiene with interactive graphs, scoring, and CI/CD integration.
   - [prospector](https://github.com/PyCQA/prospector) - A tool to analyze Python code.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
 - Code Linters
