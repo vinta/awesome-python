@@ -348,6 +348,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
 - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
+- [graphable](https://github.com/TheTrueSCU/graphable) - Lightweight, type-safe dependency graph library with native support for Mermaid, D2, and interactive HTML.
 - [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 - [plotly](https://github.com/plotly/plotly.py) - Interactive graphing library for Python.
 - [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
