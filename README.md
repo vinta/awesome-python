@@ -943,6 +943,7 @@ _Libraries and software for indexing and performing search queries on data._
 - [elasticsearch-py](https://www.elastic.co/guide/en/elasticsearch/client/python-api/current/index.html) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 - [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
 - [whoosh](http://whoosh.readthedocs.io/en/latest/) - A fast, pure Python search engine library.
+- [traceflux](https://github.com/tracer-mohist/traceflux) - A text search engine with associative discovery. Discovers what you don't know to search for using co-occurrence graphs and PageRank.
 
 ## Serialization
 
