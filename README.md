@@ -313,6 +313,7 @@ _Libraries for storing and parsing configuration options._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+- [quantum-pulse](https://github.com/Naveenub/quantum-pulse) - Compress-then-encrypt vault. MsgPack + Zstd-L22 + AES-256-GCM + SHA3-256 Merkle for LLM training data.
 
 ## Data Analysis
 
