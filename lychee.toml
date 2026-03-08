@@ -1,0 +1,23 @@
+# Lychee link checker configuration
+# https://lychee.cli.rs/usage/config/
+
+# Treat 429 (rate-limited) responses as acceptable
+accept = ["100..=103", "200..=299", "429"]
+
+# Don't fail the check when a request times out
+timeout = 30
+accept_timeouts = true
+
+# Retry settings
+max_retries = 3
+retry_wait_time = 5
+
+# Be polite -- limit concurrent requests per host
+max_concurrency = 10
+
+# GitHub has the most links (528/708) -- throttle to avoid rate limits
+[host."github.com"]
+
+[host."pypi.org"]
+
+[host."docs.python.org"]

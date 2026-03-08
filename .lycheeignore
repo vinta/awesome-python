@@ -1,0 +1,12 @@
+# LinkedIn blocks automated requests (always returns 999)
+^https?://(www\.)?linkedin\.com
+
+# Social media sites with aggressive bot detection
+^https?://(www\.)?twitter\.com
+^https?://x\.com
+^https?://(www\.)?facebook\.com
+^https?://(www\.)?instagram\.com
+
+# Localhost / local development URLs
+^https?://localhost
+^https?://127\.0\.0\.1

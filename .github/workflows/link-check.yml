@@ -1,0 +1,62 @@
+name: Link Check
+
+on:
+  # Run on PRs that touch the list
+  pull_request:
+    paths:
+      - "README.md"
+
+  # Run on pushes to master
+  push:
+    branches:
+      - master
+    paths:
+      - "README.md"
+
+  # Weekly scan (Sunday 06:00 UTC)
+  schedule:
+    - cron: "0 6 * * 0"
+
+  # Manual trigger
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    name: Check Links
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Restore link cache
+        id: restore-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .lycheecache
+          key: lychee-cache-${{ github.sha }}
+          restore-keys: lychee-cache-
+
+      - name: Check links in README.md
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --verbose
+            --no-progress
+            --cache
+            --max-cache-age 3d
+            --max-retries 3
+            --retry-wait-time 5
+            --max-concurrency 10
+            --timeout 30
+            --user-agent "Mozilla/5.0 (compatible; awesome-python-link-checker)"
+            './README.md'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fail: true
+
+      - name: Save link cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: .lycheecache
+          key: ${{ steps.restore-cache.outputs.cache-primary-key }}
