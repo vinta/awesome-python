@@ -16,7 +16,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Caching](#caching)
   - [CMS](#cms)
   - [Code Analysis](#code-analysis)
-  - [Command-line Interface Development](#command-line-interface-development)
+  - [Command-line Interface Development](#command-line-interface-development)f
   - [Command-line Tools](#command-line-tools)
   - [Computer Vision](#computer-vision)
   - [Configuration Files](#configuration-files)
@@ -729,6 +729,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [Instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
 - [LangChain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
 - [LlamaIndex](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+- - [SignalBrain Evolver](https://github.com/whitestone1121-web/signalbrain-evolver) - A self-evolving Python code generator with self-critique scars, GPU proprioception, recursive deliberation, and Merkle audit chain.
 - [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 - [MindsDB](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [PraisonAI](https://github.com/MervinPraison/PraisonAI) - Production-ready Multi-AI Agents framework with self-reflection, 100+ LLM support, MCP integration, and agentic workflows.
