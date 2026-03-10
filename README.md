@@ -72,6 +72,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Serialization](#serialization)
   - [Serverless Frameworks](#serverless-frameworks)
   - [Shell](#shell)
+  - [slowql](https://github.com/makroumi/slowql) - SQL static analyzer with 171 rules covering security, performance, compliance, and more.
   - [Specific Formats Processing](#specific-formats-processing)
   - [Static Site Generator](#static-site-generator)
   - [Task Queues](#task-queues)
