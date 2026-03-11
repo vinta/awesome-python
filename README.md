@@ -652,7 +652,7 @@ _Libraries for programming with hardware._
 ## Image Processing
 
 _Libraries for manipulating images._
-
+- [imtile](https://github.com/omarkamelte/imtile) - Lightweight image tiling and seamless reconstruction for computer vision and deep learning pipelines.
 - [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](http://www.pythonware.com/products/pil/) fork.
 - [pymatting](https://github.com/pymatting/pymatting) - A library for alpha matting.
 - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
