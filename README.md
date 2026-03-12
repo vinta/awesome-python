@@ -415,6 +415,7 @@ _Libraries for debugging code._
 - Others
   - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
+  - [dttb](https://github.com/rocky-d/dttb) - Add timestamps to Python exception tracebacks with a single line of code. Useful for debugging long-running processes, async servers, and multi-threaded apps.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [memory-graph](https://github.com/bterwijn/memory_graph) - Visualize Python data at runtime to debug references, mutability, and aliasing.
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
