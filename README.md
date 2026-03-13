@@ -89,6 +89,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
 - [Resources](#resources)
   - [Newsletters](#newsletters)
   - [Podcasts](#podcasts)
+  - [Related lists](#related-lists)
 - [Contributing](#contributing)
 
 ---
@@ -1204,6 +1205,10 @@ Where to discover learning resources or new Python libraries.
 - [Python Test](https://podcast.pythontest.com/)
 - [Talk Python To Me](https://talkpython.fm/)
 - [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
+
+## Related lists
+
+- [awesome-python-project-templates](https://github.com/vldmrdev/awesome-python-project-templates) - A collection of popular ready-to-use open-source templates: FastAPI, Django, Litestar, FastStream, etc.
 
 # Contributing
 
