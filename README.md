@@ -313,6 +313,7 @@ _Libraries for storing and parsing configuration options._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+- [ultrafast-secp256k1](https://github.com/shrec/UltrafastSecp256k1/tree/dev/bindings/python) - Python bindings for the UltrafastSecp256k1 engine with a stable C ABI and CPU, embedded, WebAssembly, and GPU-capable targets.
 
 ## Data Analysis
 
