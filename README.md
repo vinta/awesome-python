@@ -739,6 +739,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [scikit-learn](http://scikit-learn.org/) - The most popular Python library for Machine Learning with extensive documentation and community support.
 - [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library for distributed computing.
 - [Transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pretrained transformer models for NLP, vision, and audio tasks.
+- [ai-bridge](https://github.com/Louis830903/AI-Bridge) - Bridge AI Assistants to GUI Applications - 让 AI 从聊天走向行动
 - [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 
 ## Microsoft Windows
