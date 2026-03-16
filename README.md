@@ -29,6 +29,7 @@ Inspired by [awesome-php](https://github.com/ziadoz/awesome-php).
   - [Date and Time](#date-and-time)
   - [Debugging Tools](#debugging-tools)
   - [Deep Learning](#deep-learning)
+  - [AI Agents](#ai-agents)
   - [DevOps Tools](#devops-tools)
   - [Distributed Computing](#distributed-computing)
   - [Distribution](#distribution)
@@ -429,6 +430,16 @@ _Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learni
 - [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
 - [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.
 - [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
+
+## AI Agents
+
+_Frameworks and tools for building AI agents and autonomous systems._
+
+- [langchain](https://github.com/langchain-ai/langchain) - Build context-aware reasoning applications with LLMs.
+- [open-webui](https://github.com/open-webui/open-webui) - User-friendly AI interface supporting Ollama, OpenAI, and more.
+- [langflow](https://github.com/langflow-ai/langflow) - Powerful UI for building and deploying AI agents with a visual builder.
+- [autogen](https://github.com/microsoft/autogen) - Multi-agent conversation framework from Microsoft.
+- [crewai](https://github.com/crewAIInc/crewAI) - Framework for orchestrating role-playing AI agents.
 - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
 
 ## DevOps Tools
