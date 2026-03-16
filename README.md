@@ -812,6 +812,7 @@ _Libraries for package and dependency management._
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 - [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project management.
 - [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
+- [ReleaseRun Python Package Health](https://releaserun.com/tools/requirements-txt-health/) - A web-based tool to analyze requirements.txt and pyproject.toml files for outdated, yanked, or abandoned packages.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python package and project manager, written in Rust.
 
 ## Package Repositories
