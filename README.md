@@ -731,7 +731,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [ragflow](https://github.com/infiniflow/ragflow) - An open-source RAG engine for document understanding and question answering with LLMs.
 - [rasa](https://github.com/RasaHQ/rasa) - An open-source machine learning framework for automated text and voice-based conversations.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
-- [Spark ML](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library for distributed computing.
+- [spark.ml](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library for distributed computing.
 - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pretrained transformer models for NLP, vision, and audio tasks.
 - [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 
