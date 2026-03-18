@@ -3,21 +3,21 @@ name = "awesome-python"
 version = "0.1.0"
 description = "An opinionated list of awesome Python frameworks, libraries, software and resources."
 requires-python = ">=3.13"
-dependencies = [
-    "httpx==0.28.1",
-    "jinja2==3.1.6",
-    "markdown-it-py==4.0.0",
-]
+dependencies = []
 
 [dependency-groups]
+build = ["httpx==0.28.1", "jinja2==3.1.6", "markdown-it-py==4.0.0"]
+lint = ["ruff==0.15.6"]
+test = ["pytest==9.0.2"]
 dev = [
-    "pytest==9.0.2",
-    "ruff==0.15.6",
+    { include-group = "build" },
+    { include-group = "lint" },
+    { include-group = "test" },
+    "watchdog==6.0.0",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["website/tests"]
 
 [tool.ruff]
-target-version = "py313"
-line-length = 100
+line-length = 200
