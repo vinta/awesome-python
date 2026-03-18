@@ -123,20 +123,6 @@ def _extract_description(nodes: list[SyntaxTreeNode]) -> str:
     return ""
 
 
-def _has_description(nodes: list[SyntaxTreeNode]) -> bool:
-    """Check if the first node is a description paragraph (_italic text_)."""
-    if not nodes:
-        return False
-    first = nodes[0]
-    if first.type != "paragraph":
-        return False
-    for child in first.children:
-        if child.type == "inline" and len(child.children) == 1:
-            if child.children[0].type == "em":
-                return True
-    return False
-
-
 def _nodes_to_raw_markdown(nodes: list[SyntaxTreeNode], source_lines: list[str]) -> str:
     """Extract raw markdown text for AST nodes using source line mappings."""
     if not nodes:
@@ -349,7 +335,7 @@ def _group_by_h2(
         if current_name is None:
             return
         desc = _extract_description(current_body)
-        content_nodes = current_body[1:] if _has_description(current_body) else current_body
+        content_nodes = current_body[1:] if desc else current_body
         content = _nodes_to_raw_markdown(content_nodes, source_lines)
         entries = _parse_section_entries(content_nodes)
         entry_count = len(entries) + sum(len(e["also_see"]) for e in entries)
@@ -391,25 +377,21 @@ def parse_readme(text: str) -> tuple[list[ParsedSection], list[ParsedSection]]:
     source_lines = text.split("\n")
     children = root.children
 
-    # Find thematic break (---)
+    # Find thematic break (---), # Resources, and # Contributing in one pass
     hr_idx = None
-    for i, node in enumerate(children):
-        if node.type == "hr":
-            hr_idx = i
-            break
-    if hr_idx is None:
-        return [], []
-
-    # Find # Resources and # Contributing boundaries
     resources_idx = None
     contributing_idx = None
     for i, node in enumerate(children):
-        if node.type == "heading" and node.tag == "h1":
+        if hr_idx is None and node.type == "hr":
+            hr_idx = i
+        elif node.type == "heading" and node.tag == "h1":
             text_content = _heading_text(node)
             if text_content == "Resources":
                 resources_idx = i
             elif text_content == "Contributing":
                 contributing_idx = i
+    if hr_idx is None:
+        return [], []
 
     # Slice into category and resource ranges
     cat_end = resources_idx or contributing_idx or len(children)

@@ -157,7 +157,6 @@ def sort_entries(entries: list[dict]) -> list[dict]:
 
 def extract_entries(
     categories: list[dict],
-    resources: list[dict],
     groups: list[dict],
 ) -> list[dict]:
     """Flatten categories into individual library entries for table display."""
@@ -202,7 +201,7 @@ def build(repo_root: str) -> None:
 
     total_entries = sum(c["entry_count"] for c in categories)
     groups = group_categories(categories, resources)
-    entries = extract_entries(categories, resources, groups)
+    entries = extract_entries(categories, groups)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
     for entry in entries:
