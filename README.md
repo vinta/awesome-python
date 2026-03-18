@@ -190,7 +190,7 @@ _Libraries for enhancing Python built-in classes._
 
 - [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
 - [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality.
-- [Box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
+- [box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 
 ## CMS
 
@@ -271,7 +271,7 @@ _Useful CLI-based tools for productivity._
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
   - [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
   - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
-  - [PathPicker](https://github.com/facebook/PathPicker) - Select files out of bash output.
+  - [fpp](https://github.com/facebook/PathPicker) - Select files out of bash output.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
