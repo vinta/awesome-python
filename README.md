@@ -7,6 +7,7 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 # Categories
 
 - [Admin Panels](#admin-panels)
+- [AI and Agents](#ai-and-agents)
 - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
 - [ASGI Servers](#asgi-servers)
 - [Asynchronous Programming](#asynchronous-programming)
@@ -102,6 +103,19 @@ _Libraries for administrative interfaces._
 - [func-to-web](https://github.com/offerrall/FuncToWeb) - Instantly create web UIs from Python functions using type hints. Zero frontend code required.
 - [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
 - [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
+
+## AI and Agents
+
+_Libraries for building AI applications, LLM integrations, and autonomous agents._
+
+- [agno](https://github.com/agno-agi/agno) - Open-source Python library for building AI agents and agentic systems.
+- [autoresearch](https://github.com/karpathy/autoresearch) - AI agents running autonomous research experiments on single-GPU LLM training.
+- [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
+- [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
+- [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+- [praisonai](https://github.com/MervinPraison/PraisonAI) - Production-ready Multi-AI Agents framework with self-reflection, 100+ LLM support, MCP integration, and agentic workflows.
+- [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
+- [ragflow](https://github.com/infiniflow/ragflow) - An open-source RAG engine for document understanding and question answering with LLMs.
 
 ## Algorithms and Design Patterns
 
@@ -714,20 +728,13 @@ _Libraries for generating and working with logs._
 
 _Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python)._
 
-- [agno](https://github.com/agno-agi/agno) - Open-source Python library for building AI agents and agentic systems.
 - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
-- [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
-- [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
-- [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
 - [metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
-- [praisonai](https://github.com/MervinPraison/PraisonAI) - Production-ready Multi-AI Agents framework with self-reflection, 100+ LLM support, MCP integration, and agentic workflows.
-- [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
-- [ragflow](https://github.com/infiniflow/ragflow) - An open-source RAG engine for document understanding and question answering with LLMs.
 - [rasa](https://github.com/RasaHQ/rasa) - An open-source machine learning framework for automated text and voice-based conversations.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
 - [spark.ml](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library for distributed computing.
