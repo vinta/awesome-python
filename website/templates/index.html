@@ -119,12 +119,15 @@
           <button class="tag" data-type="cat" data-value="{{ entry.category }}">
             {{ entry.category }}
           </button>
+          <button class="tag tag-group" data-type="group" data-value="{{ entry.group }}">
+            {{ entry.group }}
+          </button>
         </td>
         <td class="col-arrow"><span class="arrow">&rarr;</span></td>
       </tr>
       <tr class="expand-row" id="expand-{{ loop.index }}">
         <td></td>
-        <td colspan="3">
+        <td colspan="4">
           <div class="expand-content">
             {% if entry.description %}
             <div class="expand-desc">{{ entry.description | safe }}</div>
@@ -152,11 +155,6 @@
               >
             </div>
           </div>
-        </td>
-        <td class="col-cat">
-          <button class="tag" data-type="group" data-value="{{ entry.group }}">
-            {{ entry.group }}
-          </button>
         </td>
         <td></td>
       </tr>

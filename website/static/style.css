@@ -268,7 +268,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 }
 
 .col-name {
-  width: 35%;
+  width: 30%;
   overflow-wrap: anywhere;
 }
 
@@ -439,8 +439,11 @@ th[data-sort].sort-asc::after {
 }
 
 .col-cat {
-  width: 13%;
   white-space: nowrap;
+}
+
+.col-cat .tag + .tag {
+  margin-left: 0.35rem;
 }
 
 /* === Last Commit Column === */
@@ -528,6 +531,8 @@ th[data-sort].sort-asc::after {
 /* === Responsive === */
 @media (max-width: 900px) {
   .col-commit { display: none; }
+  .tag-group { display: none; }
+  .col-name { width: 50%; }
 }
 
 @media (max-width: 640px) {
