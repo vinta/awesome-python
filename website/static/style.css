@@ -535,10 +535,10 @@ th[data-sort].sort-asc::after {
   .controls { padding: 0 1.25rem 0.75rem; }
 
   .table thead th:first-child,
-  .table tbody td:first-child { padding-left: 1.25rem; }
+  .table tbody td:first-child { padding-left: 0.5rem; }
 
   .table thead th:last-child,
-  .table tbody td:last-child { padding-right: 1.25rem; }
+  .table tbody td:last-child { padding-right: 0.5rem; }
 
   .col-cat { display: none; }
   .col-name { white-space: normal; }
