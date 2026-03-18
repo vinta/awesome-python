@@ -5,7 +5,7 @@ import sys
 import textwrap
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from readme_parser import parse_readme, render_inline_html, render_inline_text
+from readme_parser import _parse_section_entries, parse_readme, render_inline_html, render_inline_text
 
 from markdown_it import MarkdownIt
 from markdown_it.tree import SyntaxTreeNode
@@ -200,3 +200,106 @@ class TestParseReadmeSections:
         """)
         cats, _ = parse_readme(readme)
         assert cats[0]["description"] == "Algorithms. Also see awesome-algos."
+
+
+def _content_nodes(md_text: str) -> list[SyntaxTreeNode]:
+    """Helper: parse markdown and return all block nodes."""
+    md = MarkdownIt("commonmark")
+    root = SyntaxTreeNode(md.parse(md_text))
+    return root.children
+
+
+class TestParseSectionEntries:
+    def test_flat_entries(self):
+        nodes = _content_nodes(
+            "- [django](https://example.com/d) - A web framework.\n"
+            "- [flask](https://example.com/f) - A micro framework.\n"
+        )
+        entries = _parse_section_entries(nodes)
+        assert len(entries) == 2
+        assert entries[0]["name"] == "django"
+        assert entries[0]["url"] == "https://example.com/d"
+        assert "web framework" in entries[0]["description"]
+        assert entries[0]["also_see"] == []
+        assert entries[1]["name"] == "flask"
+
+    def test_link_only_entry(self):
+        nodes = _content_nodes("- [tool](https://x.com)\n")
+        entries = _parse_section_entries(nodes)
+        assert len(entries) == 1
+        assert entries[0]["name"] == "tool"
+        assert entries[0]["description"] == ""
+
+    def test_subcategorized_entries(self):
+        nodes = _content_nodes(
+            "- Algorithms\n"
+            "  - [algos](https://x.com/a) - Algo lib.\n"
+            "  - [sorts](https://x.com/s) - Sort lib.\n"
+            "- Design Patterns\n"
+            "  - [patterns](https://x.com/p) - Pattern lib.\n"
+        )
+        entries = _parse_section_entries(nodes)
+        assert len(entries) == 3
+        assert entries[0]["name"] == "algos"
+        assert entries[2]["name"] == "patterns"
+
+    def test_also_see_sub_entries(self):
+        nodes = _content_nodes(
+            "- [asyncio](https://docs.python.org/3/library/asyncio.html) - Async I/O.\n"
+            "  - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)\n"
+            "- [trio](https://github.com/python-trio/trio) - Friendly async.\n"
+        )
+        entries = _parse_section_entries(nodes)
+        assert len(entries) == 2
+        assert entries[0]["name"] == "asyncio"
+        assert len(entries[0]["also_see"]) == 1
+        assert entries[0]["also_see"][0]["name"] == "awesome-asyncio"
+        assert entries[1]["name"] == "trio"
+        assert entries[1]["also_see"] == []
+
+    def test_entry_count_includes_also_see(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            ## Async
+
+            - [asyncio](https://x.com) - Async I/O.
+              - [awesome-asyncio](https://y.com)
+            - [trio](https://z.com) - Friendly async.
+
+            # Contributing
+
+            Done.
+        """)
+        cats, _ = parse_readme(readme)
+        # 2 main entries + 1 also_see = 3
+        assert cats[0]["entry_count"] == 3
+
+    def test_preview_first_four_names(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            ## Libs
+
+            - [alpha](https://x.com) - A.
+            - [beta](https://x.com) - B.
+            - [gamma](https://x.com) - C.
+            - [delta](https://x.com) - D.
+            - [epsilon](https://x.com) - E.
+
+            # Contributing
+
+            Done.
+        """)
+        cats, _ = parse_readme(readme)
+        assert cats[0]["preview"] == "alpha, beta, gamma, delta"
+
+    def test_description_html_escapes_xss(self):
+        nodes = _content_nodes('- [lib](https://x.com) - A <script>alert(1)</script> lib.\n')
+        entries = _parse_section_entries(nodes)
+        assert "<script>" not in entries[0]["description"]
+        assert "&lt;script&gt;" in entries[0]["description"]

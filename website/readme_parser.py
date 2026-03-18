@@ -155,11 +155,121 @@ def _nodes_to_raw_markdown(nodes: list[SyntaxTreeNode], source_lines: list[str])
     return "\n".join(source_lines[start_line:end_line]).strip()
 
 
-# --- Stubs for Tasks 3 & 4 (replace in later tasks) -------------------------
+# --- Entry extraction --------------------------------------------------------
+
+_DESC_SEP_RE = re.compile(r"^\s*[-\u2013\u2014]\s*")
+
+
+def _find_inline(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
+    """Find the inline node in a list_item's paragraph."""
+    for child in node.children:
+        if child.type == "paragraph":
+            for sub in child.children:
+                if sub.type == "inline":
+                    return sub
+    return None
+
+
+def _find_first_link(inline: SyntaxTreeNode) -> SyntaxTreeNode | None:
+    """Find the first link node among inline children."""
+    for child in inline.children:
+        if child.type == "link":
+            return child
+    return None
+
+
+def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
+    """Find first direct child of a given type."""
+    for child in node.children:
+        if child.type == child_type:
+            return child
+    return None
+
+
+def _extract_description_html(inline: SyntaxTreeNode, first_link: SyntaxTreeNode) -> str:
+    """Extract description HTML from inline content after the first link.
+
+    AST: [link("name"), text(" - Description.")]  ->  "Description."
+    The separator (- / en-dash / em-dash) is stripped.
+    """
+    link_idx = next((i for i, c in enumerate(inline.children) if c is first_link), None)
+    if link_idx is None:
+        return ""
+    desc_children = inline.children[link_idx + 1 :]
+    if not desc_children:
+        return ""
+    html = render_inline_html(desc_children)
+    return _DESC_SEP_RE.sub("", html)
+
+
+def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
+    """Extract entries from a bullet_list AST node.
+
+    Handles three patterns:
+    - Text-only list_item -> subcategory label -> recurse into nested list
+    - Link list_item with nested link-only items -> entry with also_see
+    - Link list_item without nesting -> simple entry
+    """
+    entries: list[ParsedEntry] = []
+
+    for list_item in bullet_list.children:
+        if list_item.type != "list_item":
+            continue
+
+        inline = _find_inline(list_item)
+        if inline is None:
+            continue
+
+        first_link = _find_first_link(inline)
+
+        if first_link is None:
+            # Subcategory label — recurse into nested bullet_list
+            nested = _find_child(list_item, "bullet_list")
+            if nested:
+                entries.extend(_parse_list_entries(nested))
+            continue
+
+        # Entry with a link
+        name = render_inline_text(first_link.children)
+        url = first_link.attrGet("href") or ""
+        desc_html = _extract_description_html(inline, first_link)
+
+        # Collect also_see from nested bullet_list
+        also_see: list[AlsoSee] = []
+        nested = _find_child(list_item, "bullet_list")
+        if nested:
+            for sub_item in nested.children:
+                if sub_item.type != "list_item":
+                    continue
+                sub_inline = _find_inline(sub_item)
+                if sub_inline:
+                    sub_link = _find_first_link(sub_inline)
+                    if sub_link:
+                        also_see.append(AlsoSee(
+                            name=render_inline_text(sub_link.children),
+                            url=sub_link.attrGet("href") or "",
+                        ))
+
+        entries.append(ParsedEntry(
+            name=name,
+            url=url,
+            description=desc_html,
+            also_see=also_see,
+        ))
+
+    return entries
 
 
 def _parse_section_entries(content_nodes: list[SyntaxTreeNode]) -> list[ParsedEntry]:
-    return []
+    """Extract all entries from a section's content nodes."""
+    entries: list[ParsedEntry] = []
+    for node in content_nodes:
+        if node.type == "bullet_list":
+            entries.extend(_parse_list_entries(node))
+    return entries
+
+
+# --- Content HTML rendering (stub for Task 4) --------------------------------
 
 
 def _render_section_html(content_nodes: list[SyntaxTreeNode]) -> str:
