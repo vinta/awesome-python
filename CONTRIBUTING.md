@@ -1,18 +1,5 @@
 # Contributing
 
-## Automatic Rejection
-
-PRs will be **closed** if:
-
-- Adding multiple projects in one PR
-- Duplicate of existing entry or recently-closed PR
-- Empty or placeholder PR descriptions
-- Placed under an inappropriate category
-- Project is archived or abandoned (no commits in 12+ months)
-- No documentation or unclear use case
-- Less than 100 GitHub stars without Hidden Gem justification
-- Repository less than 3 months old
-
 ## Quality Requirements
 
 All submissions must satisfy **ALL** of these:
@@ -51,6 +38,8 @@ Your submission must meet **ONE** of the following criteria:
 - Must include compelling justification in PR description
 
 ## Entry Format Reference
+
+**Use GitHub repository URLs** whenever possible. Projects linked to a GitHub repo are ranked higher on [awesome-python.com](https://awesome-python.com/).
 
 ### Standard Entry
 
@@ -101,3 +90,16 @@ PRs are reviewed by automated tools and maintainers:
 5. **Quality Check**: Meets acceptance criteria
 
 Search previous Pull Requests and Issues before submitting, as yours may be a duplicate.
+
+## Automatic Rejection
+
+PRs will be **closed** if:
+
+- Adding multiple projects in one PR
+- Duplicate of existing entry or recently-closed PR
+- Empty or placeholder PR descriptions
+- Placed under an inappropriate category
+- Project is archived or abandoned (no commits in 12+ months)
+- No documentation or unclear use case
+- Less than 100 GitHub stars without Hidden Gem justification
+- Repository less than 3 months old
