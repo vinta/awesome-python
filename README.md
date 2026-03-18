@@ -572,7 +572,7 @@ _Libraries for working with graphical user interface applications._
 - [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
 - [PySide](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
 - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
-- [Tkinter](https://wiki.python.org/moin/TkInter) - Tkinter is Python's de-facto standard GUI package.
+- [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) De-facto standard GUI package.
 - [toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
 - [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
@@ -593,9 +593,8 @@ _Awesome game development libraries._
 - [harfang3d](https://github.com/harfang3d/harfang3d) - Python framework for 3D, VR and game development.
 - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
 - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
-- [PyOgre](http://www.ogre3d.org/tikiwiki/PyOgre) - Python bindings for the Ogre 3D render engine, can be used for games, simulations, anything 3D.
 - [pyopengl](https://github.com/mcfletch/pyopengl) - Python ctypes bindings for OpenGL and it's related APIs.
-- [PySDL2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
+- [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
 - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
 ## Geolocation
