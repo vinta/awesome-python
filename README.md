@@ -786,7 +786,7 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 _Libraries that implement Object-Relational Mapping or data mapping techniques._
 
 - Relational Databases
-  - [Django Models](https://docs.djangoproject.com/en/dev/topics/db/models/) - The Django ORM.
+  - [django.db.models](https://docs.djangoproject.com/en/dev/topics/db/models/) - The Django ORM.
   - [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) - The Python SQL Toolkit and Object Relational Mapper.
     - [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
   - [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
@@ -987,7 +987,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - Pdfminer.six is a community maintained fork of the original PDFMiner.
   - [pikepdf](https://github.com/pikepdf/pikepdf) - A powerful library for reading and editing PDF files, based on qpdf.
   - [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
-  - [ReportLab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+  - [reportlab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
 - Markdown
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
   - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
