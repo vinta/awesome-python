@@ -26,10 +26,10 @@ jobs:
           enable-cache: true
 
       - name: Install dependencies
-        run: uv sync --no-dev
+        run: uv sync --group build
 
       - name: Build site
-        run: uv run python website/build.py
+        run: make build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
