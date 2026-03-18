@@ -519,7 +519,7 @@ _Libraries for downloading._
 - Visual Studio
   - [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
 - Visual Studio Code
-  - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
+  - [Python for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
 - IDE
   - [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
   - [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
