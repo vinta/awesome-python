@@ -12,6 +12,7 @@ import httpx
 
 from build import extract_github_repo, load_stars
 
+CACHE_MAX_AGE_HOURS = 12
 DATA_DIR = Path(__file__).parent / "data"
 CACHE_FILE = DATA_DIR / "github_stars.json"
 README_PATH = Path(__file__).parent.parent / "README.md"
@@ -113,8 +114,18 @@ def main() -> None:
         print(f"Pruned {len(cache) - len(pruned)} stale cache entries")
     cache = pruned
 
-    to_fetch = sorted(current_repos)
-    print(f"{len(to_fetch)} repos to fetch")
+    # Determine which repos need fetching (missing or stale)
+    to_fetch = []
+    for repo in sorted(current_repos):
+        entry = cache.get(repo)
+        if entry and "fetched_at" in entry:
+            fetched = datetime.fromisoformat(entry["fetched_at"])
+            age_hours = (now - fetched).total_seconds() / 3600
+            if age_hours < CACHE_MAX_AGE_HOURS:
+                continue
+        to_fetch.append(repo)
+
+    print(f"{len(to_fetch)} repos to fetch ({len(current_repos) - len(to_fetch)} cached)")
 
     if not to_fetch:
         save_cache(cache)

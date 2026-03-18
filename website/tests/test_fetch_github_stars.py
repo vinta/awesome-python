@@ -137,3 +137,95 @@ class TestParseGraphqlResponse:
         assert len(result) == 2
         assert result["a/x"]["stars"] == 100
         assert result["b/y"]["stars"] == 200
+
+
+class TestMainSkipsFreshCache:
+    """Verify that main() skips fetching when all cache entries are fresh."""
+
+    def test_skips_fetch_when_cache_is_fresh(self, tmp_path, monkeypatch, capsys):
+        from datetime import datetime, timedelta, timezone
+
+        from fetch_github_stars import main
+
+        # Set up a minimal README with one repo
+        readme = tmp_path / "README.md"
+        readme.write_text("* [req](https://github.com/psf/requests) - HTTP.\n")
+        monkeypatch.setattr("fetch_github_stars.README_PATH", readme)
+
+        # Pre-populate cache with a fresh entry (1 hour ago)
+        data_dir = tmp_path / "data"
+        data_dir.mkdir()
+        cache_file = data_dir / "github_stars.json"
+        now = datetime.now(timezone.utc)
+        fresh_cache = {
+            "psf/requests": {
+                "stars": 52000,
+                "owner": "psf",
+                "last_commit_at": "2025-01-01T00:00:00+00:00",
+                "fetched_at": (now - timedelta(hours=1)).isoformat(),
+            }
+        }
+        cache_file.write_text(json.dumps(fresh_cache), encoding="utf-8")
+        monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
+        monkeypatch.setattr("fetch_github_stars.DATA_DIR", data_dir)
+        monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
+
+        main()
+
+        output = capsys.readouterr().out
+        assert "0 repos to fetch" in output
+        assert "Cache is up to date" in output
+
+    def test_fetches_when_cache_is_stale(self, tmp_path, monkeypatch, capsys):
+        from datetime import datetime, timedelta, timezone
+        from unittest.mock import MagicMock
+
+        from fetch_github_stars import main
+
+        # Set up a minimal README with one repo
+        readme = tmp_path / "README.md"
+        readme.write_text("* [req](https://github.com/psf/requests) - HTTP.\n")
+        monkeypatch.setattr("fetch_github_stars.README_PATH", readme)
+
+        # Pre-populate cache with a stale entry (24 hours ago)
+        data_dir = tmp_path / "data"
+        data_dir.mkdir()
+        cache_file = data_dir / "github_stars.json"
+        now = datetime.now(timezone.utc)
+        stale_cache = {
+            "psf/requests": {
+                "stars": 52000,
+                "owner": "psf",
+                "last_commit_at": "2025-01-01T00:00:00+00:00",
+                "fetched_at": (now - timedelta(hours=24)).isoformat(),
+            }
+        }
+        cache_file.write_text(json.dumps(stale_cache), encoding="utf-8")
+        monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
+        monkeypatch.setattr("fetch_github_stars.DATA_DIR", data_dir)
+        monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
+
+        # Mock httpx.Client to avoid real API calls
+        mock_response = MagicMock()
+        mock_response.json.return_value = {
+            "data": {
+                "repo_0": {
+                    "stargazerCount": 53000,
+                    "owner": {"login": "psf"},
+                    "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
+                }
+            }
+        }
+        mock_response.raise_for_status = MagicMock()
+        mock_client = MagicMock()
+        mock_client.__enter__ = MagicMock(return_value=mock_client)
+        mock_client.__exit__ = MagicMock(return_value=False)
+        mock_client.post.return_value = mock_response
+        monkeypatch.setattr("fetch_github_stars.httpx.Client", lambda **kwargs: mock_client)
+
+        main()
+
+        output = capsys.readouterr().out
+        assert "1 repos to fetch" in output
+        assert "Done. Fetched 1 repos" in output
+        mock_client.post.assert_called_once()
