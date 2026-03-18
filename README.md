@@ -721,7 +721,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
-- [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
+- [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
 - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
 - [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
@@ -923,7 +923,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [openbabel](https://github.com/openbabel/openbabel) - A chemical toolbox designed to speak the many languages of chemical data.
 - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
 - [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
-- [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
+- [pymc](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
 - [rdkit](https://github.com/rdkit/rdkit) - Cheminformatics and Machine Learning Software.
 - [scipy](https://github.com/scipy/scipy) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 - [shapely](https://github.com/shapely/shapely) - Manipulation and analysis of geometric objects in the Cartesian plane.
