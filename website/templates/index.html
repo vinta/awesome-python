@@ -29,6 +29,7 @@
   </div>
 </header>
 
+<h2 class="sr-only">Search and filter</h2>
 <div class="controls">
   <div class="search-wrap">
     <svg
@@ -60,7 +61,8 @@
   </div>
 </div>
 
-<div class="table-wrap">
+<h2 class="sr-only">Results</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Libraries table">
   <table class="table">
     <thead>
       <tr>
@@ -69,13 +71,14 @@
         <th class="col-stars">GitHub Stars</th>
         <th class="col-cat">Category</th>
         <th class="col-group">Group</th>
-        <th class="col-arrow"></th>
+        <th class="col-arrow"><span class="sr-only">Details</span></th>
       </tr>
     </thead>
     <tbody>
       {% for entry in entries %}
       <tr
         class="row"
+        role="button"
         data-cat="{{ entry.category }}"
         data-group="{{ entry.group }}"
         tabindex="0"
@@ -108,6 +111,10 @@
         <td></td>
         <td colspan="5">
           <div class="expand-content">
+            <div class="expand-tags-mobile">
+              <span class="expand-tag">{{ entry.category }}</span>
+              <span class="expand-tag">{{ entry.group }}</span>
+            </div>
             {% if entry.description %}
             <div class="expand-desc">{{ entry.description | safe }}</div>
             {% endif %} {% if entry.also_see %}
