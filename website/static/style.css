@@ -264,7 +264,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   width: 3rem;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
-  text-align: right;
+  text-align: left;
 }
 
 .col-name {
@@ -534,18 +534,30 @@ th[data-sort].sort-asc::after {
   .hero { padding: 2rem 1.25rem 1rem; }
   .controls { padding: 0 1.25rem 0.75rem; }
 
-  .table { table-layout: fixed; }
+  .table { table-layout: auto; }
+
+  .table thead th,
+  .table tbody td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
 
   .table thead th:first-child,
-  .table tbody td:first-child { padding-left: 0.5rem; }
+  .table tbody td:first-child { padding-left: 0.25rem; }
 
   .table thead th:last-child,
-  .table tbody td:last-child { padding-right: 0.5rem; }
+  .table tbody td:last-child { padding-right: 0.25rem; }
 
-  .col-num { width: 2.5rem; }
-  .col-arrow { width: 2rem; }
+  .table thead th { font-size: var(--text-sm); }
+
+  .col-num { width: 2rem; }
+  .col-stars { width: 4.75rem; }
+  .col-arrow { width: 1.25rem; }
   .col-cat { display: none; }
-  .col-name { white-space: normal; }
+  .col-name {
+    width: auto;
+    white-space: normal;
+  }
   .footer { padding: 1.25rem; justify-content: center; flex-wrap: wrap; }
 }
 
