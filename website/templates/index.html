@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="hero">
+  <div class="hero-main">
+    <div>
+      <h1>Awesome Python</h1>
+      <p class="hero-sub">
+        {{ subtitle }}<br />Curated by
+        <a href="https://github.com/vinta" target="_blank" rel="noopener"
+          >@vinta</a
+        >
+        since 2014.
+      </p>
+      <a
+        href="https://github.com/vinta/awesome-python"
+        class="hero-gh"
+        target="_blank"
+        rel="noopener"
+        >awesome-python on GitHub &rarr;</a
+      >
+    </div>
+    <a
+      href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+      class="hero-submit"
+      target="_blank"
+      rel="noopener"
+      >Submit a Project</a
+    >
+  </div>
+</header>
+
+<div class="controls">
+  <div class="search-wrap">
+    <svg
+      class="search-icon"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+    <input
+      type="search"
+      class="search"
+      placeholder="Search {{ entries | length }} libraries across {{ total_categories }} categories..."
+      aria-label="Search libraries"
+    />
+  </div>
+  <div class="filter-bar" hidden>
+    <span>Showing <strong class="filter-value"></strong></span>
+    <button class="filter-clear" aria-label="Clear filter">
+      &times; Clear
+    </button>
+  </div>
+</div>
+
+<div class="table-wrap">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="col-num"><span class="sr-only">#</span></th>
+        <th class="col-name">Project Name</th>
+        <th class="col-stars">GitHub Stars</th>
+        <th class="col-cat">Category</th>
+        <th class="col-group">Group</th>
+        <th class="col-arrow"></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in entries %}
+      <tr
+        class="row"
+        data-cat="{{ entry.category }}"
+        data-group="{{ entry.group }}"
+        tabindex="0"
+        aria-expanded="false"
+        aria-controls="expand-{{ loop.index }}"
+      >
+        <td class="col-num">{{ loop.index }}</td>
+        <td class="col-name">
+          <a href="{{ entry.url }}" target="_blank" rel="noopener"
+            >{{ entry.name }}</a
+          >
+        </td>
+        <td class="col-stars">
+          {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
+          else %}&mdash;{% endif %}
+        </td>
+        <td class="col-cat">
+          <button class="tag" data-type="cat" data-value="{{ entry.category }}">
+            {{ entry.category }}
+          </button>
+        </td>
+        <td class="col-group">
+          <button class="tag" data-type="group" data-value="{{ entry.group }}">
+            {{ entry.group }}
+          </button>
+        </td>
+        <td class="col-arrow"><span class="arrow">&rarr;</span></td>
+      </tr>
+      <tr class="expand-row" id="expand-{{ loop.index }}">
+        <td></td>
+        <td colspan="5">
+          <div class="expand-content">
+            {% if entry.description %}
+            <div class="expand-desc">{{ entry.description | safe }}</div>
+            {% endif %} {% if entry.also_see %}
+            <div class="expand-also-see">
+              Also see: {% for see in entry.also_see %}<a
+                href="{{ see.url }}"
+                target="_blank"
+                rel="noopener"
+                >{{ see.name }}</a
+              >{% if not loop.last %}, {% endif %}{% endfor %}
+            </div>
+            {% endif %}
+            <div class="expand-meta">
+              {% if entry.owner %}<a
+                href="https://github.com/{{ entry.owner }}"
+                target="_blank"
+                rel="noopener"
+                >{{ entry.owner }}</a
+              ><span class="expand-sep">/</span>{% endif %}<a
+                href="{{ entry.url }}"
+                target="_blank"
+                rel="noopener"
+                >{{ entry.url | replace("https://", "") }}</a
+              >{% if entry.pushed_at %}<span class="expand-sep">&middot;</span
+              >Last pushed {{ entry.pushed_at[:10] }}{% endif %}
+            </div>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="no-results" hidden>No libraries match your search.</div>
+{% endblock %}
