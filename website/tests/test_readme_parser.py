@@ -4,6 +4,8 @@ import os
 import sys
 import textwrap
 
+import pytest
+
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from readme_parser import (
     _parse_section_entries,
@@ -354,3 +356,67 @@ class TestRenderSectionHtml:
         nodes = _content_nodes("- <script>alert(1)</script>\n")
         html = _render_section_html(nodes)
         assert "<script>" not in html
+
+
+class TestParseRealReadme:
+    @pytest.fixture(autouse=True)
+    def load_readme(self):
+        readme_path = os.path.join(os.path.dirname(__file__), "..", "..", "README.md")
+        with open(readme_path, encoding="utf-8") as f:
+            self.readme_text = f.read()
+        self.cats, self.resources = parse_readme(self.readme_text)
+
+    def test_at_least_83_categories(self):
+        assert len(self.cats) >= 83
+
+    def test_resources_has_newsletters_and_podcasts(self):
+        names = [r["name"] for r in self.resources]
+        assert "Newsletters" in names
+        assert "Podcasts" in names
+
+    def test_contributing_not_in_results(self):
+        all_names = [c["name"] for c in self.cats] + [r["name"] for r in self.resources]
+        assert "Contributing" not in all_names
+
+    def test_first_category_is_admin_panels(self):
+        assert self.cats[0]["name"] == "Admin Panels"
+        assert self.cats[0]["slug"] == "admin-panels"
+
+    def test_last_category_is_wsgi_servers(self):
+        assert self.cats[-1]["name"] == "WSGI Servers"
+        assert self.cats[-1]["slug"] == "wsgi-servers"
+
+    def test_restful_api_slug(self):
+        slugs = [c["slug"] for c in self.cats]
+        assert "restful-api" in slugs
+
+    def test_descriptions_extracted(self):
+        admin = self.cats[0]
+        assert admin["description"] == "Libraries for administrative interfaces."
+
+    def test_entry_counts_nonzero(self):
+        for cat in self.cats:
+            assert cat["entry_count"] > 0, f"{cat['name']} has 0 entries"
+
+    def test_previews_nonempty(self):
+        for cat in self.cats:
+            assert cat["preview"], f"{cat['name']} has empty preview"
+
+    def test_content_html_nonempty(self):
+        for cat in self.cats:
+            assert cat["content_html"], f"{cat['name']} has empty content_html"
+
+    def test_algorithms_has_subcategories(self):
+        algos = next(c for c in self.cats if c["name"] == "Algorithms and Design Patterns")
+        assert 'class="subcat"' in algos["content_html"]
+
+    def test_async_has_also_see(self):
+        async_cat = next(c for c in self.cats if c["name"] == "Asynchronous Programming")
+        asyncio_entry = next(e for e in async_cat["entries"] if e["name"] == "asyncio")
+        assert len(asyncio_entry["also_see"]) >= 1
+        assert asyncio_entry["also_see"][0]["name"] == "awesome-asyncio"
+
+    def test_description_links_stripped_to_text(self):
+        algos = next(c for c in self.cats if c["name"] == "Algorithms and Design Patterns")
+        assert "awesome-algorithms" in algos["description"]
+        assert "https://" not in algos["description"]
