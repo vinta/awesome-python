@@ -38,9 +38,10 @@ body {
   display: flex;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: var(--accent); text-decoration: none; }
+a { color: var(--accent); text-decoration: none; text-underline-offset: 0.15em; }
 a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 /* === Skip Link === */
@@ -92,6 +93,10 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   text-decoration: none;
 }
 
+.hero-submit:active {
+  transform: scale(0.97);
+}
+
 .hero-submit:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -103,6 +108,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.1;
+  text-wrap: balance;
   color: var(--accent);
   margin-bottom: 0.75rem;
 }
@@ -112,6 +118,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
+  text-wrap: pretty;
 }
 
 .hero-sub a { color: var(--text-secondary); font-weight: 600; }
@@ -192,6 +199,10 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--text-muted);
   cursor: pointer;
   transition: border-color 0.15s, color 0.15s;
+}
+
+.filter-clear:active {
+  transform: scale(0.97);
 }
 
 .filter-clear:hover {
@@ -342,6 +353,7 @@ th[data-sort].sort-asc::after {
 
 /* === Row Click === */
 .row { cursor: pointer; }
+.row:active td { background: var(--bg-hover); }
 
 .row:focus-visible td {
   outline: none;
@@ -385,6 +397,7 @@ th[data-sort].sort-asc::after {
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.6;
+  text-wrap: pretty;
   animation: expand-in 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -473,6 +486,10 @@ th[data-sort].sort-asc::after {
   content: "";
   position: absolute;
   inset: -0.5rem -0.25rem;
+}
+
+.tag:active {
+  transform: scale(0.95);
 }
 
 .tag:hover {
