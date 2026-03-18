@@ -2119,11 +2119,6 @@
     "owner": "pytransitions",
     "fetched_at": "2026-03-17T20:08:08.973003+00:00"
   },
-  "quantopian/zipline": {
-    "stars": 19514,
-    "owner": "quantopian",
-    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
-  },
   "quantumlib/Cirq": {
     "stars": 4890,
     "owner": "quantumlib",
