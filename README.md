@@ -391,10 +391,10 @@ _Libraries for connecting and operating databases._
 
 _Libraries for working with dates and times._
 
+- [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 - [arrow](https://github.com/arrow-py/arrow) - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.
 - [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
-- [pytz](https://github.com/stub42/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 
 ## Debugging Tools
 
