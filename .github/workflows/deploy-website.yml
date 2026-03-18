@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: "0 0 * * *"
 
 permissions:
   contents: read
@@ -26,10 +28,40 @@ jobs:
           enable-cache: true
 
       - name: Install dependencies
-        run: uv sync --no-dev
+        run: uv sync --group build
+
+      - name: Restore star data cache
+        id: cache-stars
+        uses: actions/cache/restore@v4
+        with:
+          path: website/data/github_stars.json
+          key: github-stars-${{ github.run_id }}
+          restore-keys: github-stars-
+
+      - name: Fetch GitHub stars
+        id: fetch-stars
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: make fetch_github_stars
+
+      - name: Save star data cache
+        if: steps.fetch-stars.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: website/data/github_stars.json
+          key: github-stars-${{ github.run_id }}
+
+      - name: Verify star data exists
+        run: |
+          if [ ! -f website/data/github_stars.json ]; then
+            echo "::error::github_stars.json not found. No cache and fetch failed or was skipped."
+            exit 1
+          fi
+          echo "Star data found: $(wc -l < website/data/github_stars.json) lines"
 
       - name: Build site
-        run: uv run python website/build.py
+        run: make build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4

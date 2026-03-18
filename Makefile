@@ -4,7 +4,7 @@ export
 install:
 	uv sync
 
-fetch_stats:
+fetch_github_stars:
 	uv run python website/fetch_github_stars.py
 
 test:
