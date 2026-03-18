@@ -39,7 +39,6 @@ jobs:
           restore-keys: github-stars-
 
       - name: Fetch GitHub stars
-        if: github.event_name == 'schedule'
         id: fetch-stars
         continue-on-error: true
         env:
