@@ -220,9 +220,7 @@ def build(repo_root: str) -> None:
     )
 
     site_dir = website / "output"
-    if site_dir.exists():
-        shutil.rmtree(site_dir)
-    site_dir.mkdir(parents=True)
+    site_dir.mkdir(parents=True, exist_ok=True)
 
     tpl_index = env.get_template("index.html")
     (site_dir / "index.html").write_text(
@@ -241,7 +239,7 @@ def build(repo_root: str) -> None:
     static_src = website / "static"
     static_dst = site_dir / "static"
     if static_src.exists():
-        shutil.copytree(static_src, static_dst)
+        shutil.copytree(static_src, static_dst, dirs_exist_ok=True)
     (site_dir / "CNAME").write_text("awesome-python.com\n", encoding="utf-8")
 
     print(f"Built single page with {len(categories)} categories + {len(resources)} resources")
