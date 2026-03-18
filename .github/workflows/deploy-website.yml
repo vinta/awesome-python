@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - master
+  workflow_run:
+    workflows: ["Fetch GitHub Stars"]
+    types: [completed]
+    branches: [master]
 
 permissions:
   contents: read
@@ -16,6 +20,7 @@ concurrency:
 
 jobs:
   build:
+    if: github.event_name == 'push' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
