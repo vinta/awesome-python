@@ -934,7 +934,6 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [SimPy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
 - [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 - [SymPy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
-- [Zipline](https://github.com/quantopian/zipline) - A Pythonic algorithmic trading library.
 
 ## Search
 
