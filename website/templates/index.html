@@ -29,6 +29,7 @@
   </div>
 </header>
 
+<h2 class="sr-only">Search and filter</h2>
 <div class="controls">
   <div class="search-wrap">
     <svg
@@ -60,22 +61,24 @@
   </div>
 </div>
 
-<div class="table-wrap">
+<h2 class="sr-only">Results</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Libraries table">
   <table class="table">
     <thead>
       <tr>
         <th class="col-num"><span class="sr-only">#</span></th>
-        <th class="col-name">Project Name</th>
-        <th class="col-stars">GitHub Stars</th>
+        <th class="col-name" data-sort="name">Project Name</th>
+        <th class="col-stars" data-sort="stars">GitHub Stars</th>
+        <th class="col-commit" data-sort="commit-time">Last Commit</th>
         <th class="col-cat">Category</th>
-        <th class="col-group">Group</th>
-        <th class="col-arrow"></th>
+        <th class="col-arrow"><span class="sr-only">Details</span></th>
       </tr>
     </thead>
     <tbody>
       {% for entry in entries %}
       <tr
         class="row"
+        role="button"
         data-cat="{{ entry.category }}"
         data-group="{{ entry.group }}"
         tabindex="0"
@@ -92,25 +95,24 @@
           {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
           else %}&mdash;{% endif %}
         </td>
+        <td class="col-commit"
+          {% if entry.last_commit_at %}data-commit="{{ entry.last_commit_at }}"{% endif %}
+        >{% if entry.last_commit_at %}<time datetime="{{ entry.last_commit_at }}">{{ entry.last_commit_at[:10] }}</time>{% else %}&mdash;{% endif %}</td>
         <td class="col-cat">
           <button class="tag" data-type="cat" data-value="{{ entry.category }}">
             {{ entry.category }}
-          </button>
-        </td>
-        <td class="col-group">
-          <button class="tag" data-type="group" data-value="{{ entry.group }}">
-            {{ entry.group }}
           </button>
         </td>
         <td class="col-arrow"><span class="arrow">&rarr;</span></td>
       </tr>
       <tr class="expand-row" id="expand-{{ loop.index }}">
         <td></td>
-        <td colspan="5">
+        <td colspan="3">
           <div class="expand-content">
             {% if entry.description %}
             <div class="expand-desc">{{ entry.description | safe }}</div>
-            {% endif %} {% if entry.also_see %}
+            {% endif %}
+            {% if entry.also_see %}
             <div class="expand-also-see">
               Also see: {% for see in entry.also_see %}<a
                 href="{{ see.url }}"
@@ -131,11 +133,16 @@
                 target="_blank"
                 rel="noopener"
                 >{{ entry.url | replace("https://", "") }}</a
-              >{% if entry.pushed_at %}<span class="expand-sep">&middot;</span
-              >Last pushed {{ entry.pushed_at[:10] }}{% endif %}
+              >
             </div>
           </div>
         </td>
+        <td class="col-cat">
+          <button class="tag" data-type="group" data-value="{{ entry.group }}">
+            {{ entry.group }}
+          </button>
+        </td>
+        <td></td>
       </tr>
       {% endfor %}
     </tbody>

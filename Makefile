@@ -1,17 +1,24 @@
 -include .env
 export
 
-site_install:
-	uv sync --no-dev
+install:
+	uv sync
 
-site_fetch_stats:
+fetch_stats:
 	uv run python website/fetch_github_stars.py
 
-site_build:
+test:
+	uv run pytest website/tests/ -v
+
+build:
 	uv run python website/build.py
 
-site_preview: site_build
-	python -m http.server -d website/output/ 8000
-
-site_deploy: site_build
-	@echo "Deploy via GitHub Actions (push to master)"
+preview: build
+	@echo "Check the website on http://localhost:8000"
+	uv run watchmedo shell-command \
+		--patterns='*.md;*.html;*.css;*.js;*.py' \
+		--recursive \
+		--wait --drop \
+		--command='uv run python website/build.py' \
+		README.md website/templates website/static website/data & \
+	python -m http.server -b 127.0.0.1 -d website/output/ 8000

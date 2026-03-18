@@ -8,7 +8,6 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from fetch_github_stars import (
     build_graphql_query,
     extract_github_repos,
-    load_cache,
     parse_graphql_response,
     save_cache,
 )
@@ -63,27 +62,6 @@ class TestExtractGithubRepos:
         readme = "* [lib](https://github.com/org/repo#section) - Lib."
         result = extract_github_repos(readme)
         assert result == {"org/repo"}
-
-
-class TestLoadCache:
-    def test_returns_empty_when_missing(self, tmp_path, monkeypatch):
-        monkeypatch.setattr("fetch_github_stars.CACHE_FILE", tmp_path / "nonexistent.json")
-        result = load_cache()
-        assert result == {}
-
-    def test_loads_valid_cache(self, tmp_path, monkeypatch):
-        cache_file = tmp_path / "stars.json"
-        cache_file.write_text('{"a/b": {"stars": 1}}', encoding="utf-8")
-        monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
-        result = load_cache()
-        assert result == {"a/b": {"stars": 1}}
-
-    def test_returns_empty_on_corrupt_json(self, tmp_path, monkeypatch):
-        cache_file = tmp_path / "stars.json"
-        cache_file.write_text("not json", encoding="utf-8")
-        monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
-        result = load_cache()
-        assert result == {}
 
 
 class TestSaveCache:

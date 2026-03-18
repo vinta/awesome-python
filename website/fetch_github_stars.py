@@ -10,14 +10,14 @@ from pathlib import Path
 
 import httpx
 
-from build import extract_github_repo
+from build import extract_github_repo, load_stars
 
 CACHE_MAX_AGE_DAYS = 7
 DATA_DIR = Path(__file__).parent / "data"
 CACHE_FILE = DATA_DIR / "github_stars.json"
 README_PATH = Path(__file__).parent.parent / "README.md"
 GRAPHQL_URL = "https://api.github.com/graphql"
-BATCH_SIZE = 100
+BATCH_SIZE = 50
 
 
 def extract_github_repos(text: str) -> set[str]:
@@ -28,17 +28,6 @@ def extract_github_repos(text: str) -> set[str]:
         if repo:
             repos.add(repo)
     return repos
-
-
-def load_cache() -> dict:
-    """Load the star cache from disk. Returns empty dict if missing or corrupt."""
-    if CACHE_FILE.exists():
-        try:
-            return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            print(f"Warning: corrupt cache at {CACHE_FILE}, starting fresh.", file=sys.stderr)
-            return {}
-    return {}
 
 
 def save_cache(cache: dict) -> None:
@@ -61,7 +50,7 @@ def build_graphql_query(repos: list[str]) -> str:
             continue
         parts.append(
             f'repo_{i}: repository(owner: "{owner}", name: "{name}") '
-            f"{{ stargazerCount pushedAt owner {{ login }} }}"
+            f"{{ stargazerCount owner {{ login }} defaultBranchRef {{ target {{ ... on Commit {{ committedDate }} }} }} }}"
         )
     if not parts:
         return ""
@@ -78,10 +67,12 @@ def parse_graphql_response(
         node = data.get(f"repo_{i}")
         if node is None:
             continue
+        default_branch = node.get("defaultBranchRef") or {}
+        target = default_branch.get("target") or {}
         result[repo] = {
             "stars": node.get("stargazerCount", 0),
             "owner": node.get("owner", {}).get("login", ""),
-            "pushed_at": node.get("pushedAt", ""),
+            "last_commit_at": target.get("committedDate", ""),
         }
     return result
 
@@ -114,7 +105,7 @@ def main() -> None:
     current_repos = extract_github_repos(readme_text)
     print(f"Found {len(current_repos)} GitHub repos in README.md")
 
-    cache = load_cache()
+    cache = load_stars(CACHE_FILE)
     now = datetime.now(timezone.utc)
 
     # Prune entries not in current README
@@ -173,7 +164,7 @@ def main() -> None:
                     cache[repo] = {
                         "stars": results[repo]["stars"],
                         "owner": results[repo]["owner"],
-                        "pushed_at": results[repo]["pushed_at"],
+                        "last_commit_at": results[repo]["last_commit_at"],
                         "fetched_at": now_iso,
                     }
                     fetched_count += 1

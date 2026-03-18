@@ -1,14 +1,43 @@
 // State
 var activeFilter = null; // { type: "cat"|"group", value: "..." }
+var activeSort = { col: 'stars', order: 'desc' };
 var searchInput = document.querySelector('.search');
 var filterBar = document.querySelector('.filter-bar');
 var filterValue = document.querySelector('.filter-value');
 var filterClear = document.querySelector('.filter-clear');
 var noResults = document.querySelector('.no-results');
-var countEl = document.querySelector('.count');
 var rows = document.querySelectorAll('.table tbody tr.row');
 var tags = document.querySelectorAll('.tag');
 var tbody = document.querySelector('.table tbody');
+
+// Relative time formatting
+function relativeTime(isoStr) {
+  var date = new Date(isoStr);
+  var now = new Date();
+  var diffMs = now - date;
+  var diffHours = Math.floor(diffMs / 3600000);
+  var diffDays = Math.floor(diffMs / 86400000);
+  if (diffHours < 1) return 'just now';
+  if (diffHours < 24) return diffHours === 1 ? '1 hour ago' : diffHours + ' hours ago';
+  if (diffDays === 1) return 'yesterday';
+  if (diffDays < 30) return diffDays + ' days ago';
+  var diffMonths = Math.floor(diffDays / 30);
+  if (diffMonths < 12) return diffMonths === 1 ? '1 month ago' : diffMonths + ' months ago';
+  var diffYears = Math.floor(diffDays / 365);
+  return diffYears === 1 ? '1 year ago' : diffYears + ' years ago';
+}
+
+// Format all commit date cells
+document.querySelectorAll('.col-commit[data-commit]').forEach(function (td) {
+  var time = td.querySelector('time');
+  if (time) time.textContent = relativeTime(td.dataset.commit);
+});
+
+// Store original row order for sort reset
+rows.forEach(function (row, i) {
+  row._origIndex = i;
+  row._expandRow = row.nextElementSibling;
+});
 
 function collapseAll() {
   var openRows = document.querySelectorAll('.table tbody tr.row.open');
@@ -46,16 +75,18 @@ function applyFilters() {
       show = row._searchText.includes(query);
     }
 
-    row.hidden = !show;
+    if (row.hidden !== !show) row.hidden = !show;
 
     if (show) {
       visibleCount++;
-      row.querySelector('.col-num').textContent = String(visibleCount);
+      var numCell = row.cells[0];
+      if (numCell.textContent !== String(visibleCount)) {
+        numCell.textContent = String(visibleCount);
+      }
     }
   });
 
   if (noResults) noResults.hidden = visibleCount > 0;
-  if (countEl) countEl.textContent = visibleCount;
 
   // Update tag highlights
   tags.forEach(function (tag) {
@@ -74,6 +105,76 @@ function applyFilters() {
       filterBar.hidden = true;
     }
   }
+
+  updateURL();
+}
+
+function updateURL() {
+  var params = new URLSearchParams();
+  var query = searchInput ? searchInput.value.trim() : '';
+  if (query) params.set('q', query);
+  if (activeFilter) {
+    params.set(activeFilter.type === 'cat' ? 'category' : 'group', activeFilter.value);
+  }
+  if (activeSort.col !== 'stars' || activeSort.order !== 'desc') {
+    params.set('sort', activeSort.col);
+    params.set('order', activeSort.order);
+  }
+  var qs = params.toString();
+  history.replaceState(null, '', qs ? '?' + qs : location.pathname);
+}
+
+function getSortValue(row, col) {
+  if (col === 'name') {
+    return row.querySelector('.col-name a').textContent.trim().toLowerCase();
+  }
+  if (col === 'stars') {
+    var text = row.querySelector('.col-stars').textContent.trim().replace(/,/g, '');
+    var num = parseInt(text, 10);
+    return isNaN(num) ? -1 : num;
+  }
+  if (col === 'commit-time') {
+    var attr = row.querySelector('.col-commit').getAttribute('data-commit');
+    return attr ? new Date(attr).getTime() : 0;
+  }
+  return 0;
+}
+
+function sortRows() {
+  var arr = Array.prototype.slice.call(rows);
+  if (activeSort) {
+    arr.sort(function (a, b) {
+      var aVal = getSortValue(a, activeSort.col);
+      var bVal = getSortValue(b, activeSort.col);
+      if (activeSort.col === 'name') {
+        var cmp = aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
+        if (cmp === 0) return a._origIndex - b._origIndex;
+        return activeSort.order === 'desc' ? -cmp : cmp;
+      }
+      if (aVal <= 0 && bVal <= 0) return a._origIndex - b._origIndex;
+      if (aVal <= 0) return 1;
+      if (bVal <= 0) return -1;
+      var cmp = aVal - bVal;
+      if (cmp === 0) return a._origIndex - b._origIndex;
+      return activeSort.order === 'desc' ? -cmp : cmp;
+    });
+  } else {
+    arr.sort(function (a, b) { return a._origIndex - b._origIndex; });
+  }
+  arr.forEach(function (row) {
+    tbody.appendChild(row);
+    tbody.appendChild(row._expandRow);
+  });
+  applyFilters();
+}
+
+function updateSortIndicators() {
+  document.querySelectorAll('th[data-sort]').forEach(function (th) {
+    th.classList.remove('sort-asc', 'sort-desc');
+    if (activeSort && th.dataset.sort === activeSort.col) {
+      th.classList.add('sort-' + activeSort.order);
+    }
+  });
 }
 
 // Expand/collapse: event delegation on tbody
@@ -130,6 +231,23 @@ if (filterClear) {
   });
 }
 
+// Column sorting
+document.querySelectorAll('th[data-sort]').forEach(function (th) {
+  th.addEventListener('click', function () {
+    var col = th.dataset.sort;
+    var defaultOrder = col === 'name' ? 'asc' : 'desc';
+    var altOrder = defaultOrder === 'asc' ? 'desc' : 'asc';
+    if (activeSort && activeSort.col === col) {
+      if (activeSort.order === defaultOrder) activeSort = { col: col, order: altOrder };
+      else activeSort = { col: 'stars', order: 'desc' };
+    } else {
+      activeSort = { col: col, order: defaultOrder };
+    }
+    sortRows();
+    updateSortIndicators();
+  });
+});
+
 // Search input
 if (searchInput) {
   var searchTimer;
@@ -152,3 +270,23 @@ if (searchInput) {
     }
   });
 }
+
+// Restore state from URL
+(function () {
+  var params = new URLSearchParams(location.search);
+  var q = params.get('q');
+  var cat = params.get('category');
+  var group = params.get('group');
+  var sort = params.get('sort');
+  var order = params.get('order');
+  if (q && searchInput) searchInput.value = q;
+  if (cat) activeFilter = { type: 'cat', value: cat };
+  else if (group) activeFilter = { type: 'group', value: group };
+  if ((sort === 'name' || sort === 'stars' || sort === 'commit-time') && (order === 'desc' || order === 'asc')) {
+    activeSort = { col: sort, order: order };
+  }
+  if (q || cat || group || sort) {
+    sortRows();
+  }
+  updateSortIndicators();
+})();

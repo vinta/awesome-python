@@ -17,10 +17,7 @@
     />
     <meta property="og:url" content="https://awesome-python.com/" />
     <meta name="twitter:card" content="summary" />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐍</text></svg>"
-    />
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/static/style.css" />
     <script
       async
@@ -41,24 +38,24 @@
     <main id="content">{% block content %}{% endblock %}</main>
 
     <footer class="footer">
-      <div class="footer-links">
-        <a href="https://github.com/vinta" target="_blank" rel="noopener"
-          >GitHub</a
-        >
-        <a href="https://twitter.com/vinta" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </div>
       <span
-        >Curated by
-        <a href="https://github.com/vinta" target="_blank" rel="noopener"
+        >Made by
+        <a href="https://vinta.ws/" target="_blank" rel="noopener"
           >Vinta</a
         ></span
+      >
+      <span class="footer-sep">/</span>
+      <a href="https://github.com/vinta" target="_blank" rel="noopener"
+        >GitHub</a
+      >
+      <span class="footer-sep">/</span>
+      <a href="https://twitter.com/vinta" target="_blank" rel="noopener"
+        >Twitter</a
       >
     </footer>
 
     <noscript
-      ><p style="text-align: center; padding: 1rem; color: #666">
+      ><p class="noscript-msg">
         JavaScript is needed for search and filtering.
       </p></noscript
     >
