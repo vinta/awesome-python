@@ -1,7 +1,10 @@
+-include .env
+export
+
 site_install:
 	uv sync --no-dev
 
-fetch_stars:
+site_fetch_stats:
 	uv run python website/fetch_github_stars.py
 
 site_build:
