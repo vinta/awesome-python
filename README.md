@@ -385,7 +385,6 @@ _Libraries for connecting and operating databases._
   - [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
-  - [Beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
 
 ## Date and Time
 
@@ -795,6 +794,7 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
   - [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
   - [SQLModel](https://github.com/fastapi/sqlmodel) - SQLModel is based on Python type annotations, and powered by Pydantic and SQLAlchemy.
 - NoSQL Databases
+  - [Beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
   - [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
   - [ODMantic](https://github.com/art049/odmantic) - Sync and Async ODM for MongoDB built on top of Pydantic for model definition and validation.
   - [PynamoDB](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
