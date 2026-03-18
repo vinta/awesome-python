@@ -101,7 +101,6 @@ _Libraries for administrative interfaces._
 - [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 - [func-to-web](https://github.com/offerrall/FuncToWeb) - Instantly create web UIs from Python functions using type hints. Zero frontend code required.
 - [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
-- [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 - [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## Algorithms and Design Patterns
@@ -318,7 +317,6 @@ _Libraries for data analysis._
 - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
-- [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
@@ -348,6 +346,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 - [plotly](https://github.com/plotly/plotly.py) - Interactive graphing library for Python.
 - [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
+- [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 - [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
 - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
 - [pyqtgraph](https://github.com/pyqtgraph/pyqtgraph) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
@@ -385,16 +384,15 @@ _Libraries for connecting and operating databases._
   - [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
-  - [Beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
 
 ## Date and Time
 
 _Libraries for working with dates and times._
 
+- [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 - [arrow](https://github.com/arrow-py/arrow) - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.
 - [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
-- [pytz](https://github.com/stub42/pytz) - World timezone definitions, modern and historical. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 
 ## Debugging Tools
 
@@ -489,12 +487,14 @@ _Libraries for generating project documentation._
 
 _Libraries for downloading._
 
-- [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
-- [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
-- [OpenBB](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
-- [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
-- [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
-- [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
+- General
+  - [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
+  - [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
+- Financial Data
+  - [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
+  - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
+  - [OpenBB](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
+  - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
 
 ## Editor Plugins and IDEs
 
@@ -537,7 +537,6 @@ _Libraries for Python version and virtual environment management._
 
 _Libraries for file manipulation._
 
-- [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
 - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
 - [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 - [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) A cross-platform, object-oriented path library.
@@ -796,6 +795,7 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
   - [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
   - [SQLModel](https://github.com/fastapi/sqlmodel) - SQLModel is based on Python type annotations, and powered by Pydantic and SQLAlchemy.
 - NoSQL Databases
+  - [Beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
   - [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
   - [ODMantic](https://github.com/art049/odmantic) - Sync and Async ODM for MongoDB built on top of Pydantic for model definition and validation.
   - [PynamoDB](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
@@ -970,8 +970,10 @@ _Shells built with Python._
 _Libraries for parsing and manipulating specific text formats._
 
 - General
+  - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
   - [kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+  - [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 - Office
   - [docxtpl](https://github.com/elapouya/python-docx-template) - Editing a docx document by jinja2 template
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
@@ -987,11 +989,14 @@ _Libraries for parsing and manipulating specific text formats._
   - [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
   - [ReportLab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
 - Markdown
-  - [Jimmy](https://github.com/marph91/jimmy) - Convert your notes to Markdown.
-  - [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
-  - [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
+  - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - YAML
   - [PyYAML](https://github.com/yaml/pyyaml) - YAML implementations for Python.
+- TOML
+  - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
 - CSV
   - [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 - Archive
@@ -1132,7 +1137,6 @@ _Libraries for extracting web contents._
 - [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 - [requests-html](https://github.com/psf/requests-html) - Pythonic HTML Parsing for Humans.
 - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
-- [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 - [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 
 ## Web Crawling
