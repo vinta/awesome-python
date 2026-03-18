@@ -540,6 +540,8 @@ th[data-sort].sort-asc::after {
   .table thead th:last-child,
   .table tbody td:last-child { padding-right: 0.5rem; }
 
+  .col-num { width: 1.75rem; }
+  .col-arrow { width: 1.75rem; }
   .col-cat { display: none; }
   .col-name { white-space: normal; }
   .footer { padding: 1.25rem; justify-content: center; flex-wrap: wrap; }
