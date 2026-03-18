@@ -1,13 +1,10 @@
 """Tests for the build module."""
 
 import json
-import os
 import shutil
-import sys
 import textwrap
 from pathlib import Path
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from build import (
     build,
     extract_github_repo,
@@ -148,27 +145,6 @@ class TestBuild:
         assert (site / "index.html").exists()
         # No category sub-pages
         assert not (site / "categories").exists()
-
-    def test_build_creates_cname(self, tmp_path):
-        readme = textwrap.dedent("""\
-            # T
-
-            ---
-
-            ## Only
-
-            - [x](https://x.com) - X.
-
-            # Contributing
-
-            Done.
-        """)
-        self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
-
-        cname = tmp_path / "website" / "output" / "CNAME"
-        assert cname.exists()
-        assert "awesome-python.com" in cname.read_text()
 
     def test_build_cleans_stale_output(self, tmp_path):
         readme = textwrap.dedent("""\

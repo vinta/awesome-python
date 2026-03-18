@@ -1,12 +1,10 @@
 """Tests for the readme_parser module."""
 
 import os
-import sys
 import textwrap
 
 import pytest
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from readme_parser import (
     _parse_section_entries,
     _render_section_html,
@@ -141,20 +139,10 @@ class TestParseReadmeSections:
         assert cats[0]["description"] == "Libraries for alpha stuff."
         assert cats[1]["description"] == "Tools for beta."
 
-    def test_category_content_has_entries(self):
-        cats, _ = parse_readme(MINIMAL_README)
-        assert "lib-a" in cats[0]["content"]
-        assert "lib-b" in cats[0]["content"]
-
     def test_resource_names(self):
         _, resources = parse_readme(MINIMAL_README)
         assert resources[0]["name"] == "Newsletters"
         assert resources[1]["name"] == "Podcasts"
-
-    def test_resource_content(self):
-        _, resources = parse_readme(MINIMAL_README)
-        assert "News One" in resources[0]["content"]
-        assert "Pod One" in resources[1]["content"]
 
     def test_contributing_skipped(self):
         cats, resources = parse_readme(MINIMAL_README)
@@ -188,7 +176,7 @@ class TestParseReadmeSections:
         """)
         cats, resources = parse_readme(readme)
         assert cats[0]["description"] == ""
-        assert "item" in cats[0]["content"]
+        assert cats[0]["entries"][0]["name"] == "item"
 
     def test_description_with_link_stripped(self):
         readme = textwrap.dedent("""\
@@ -250,6 +238,20 @@ class TestParseSectionEntries:
         assert len(entries) == 3
         assert entries[0]["name"] == "algos"
         assert entries[2]["name"] == "patterns"
+
+    def test_text_before_link_is_subcategory(self):
+        nodes = _content_nodes(
+            "- MySQL - [awesome-mysql](http://example.com/awesome-mysql/)\n"
+            "  - [mysqlclient](https://example.com/mysqlclient) - MySQL connector.\n"
+            "  - [pymysql](https://example.com/pymysql) - Pure Python MySQL driver.\n"
+        )
+        entries = _parse_section_entries(nodes)
+        # awesome-mysql is a subcategory label, not an entry
+        assert len(entries) == 2
+        names = [e["name"] for e in entries]
+        assert "awesome-mysql" not in names
+        assert "mysqlclient" in names
+        assert "pymysql" in names
 
     def test_also_see_sub_entries(self):
         nodes = _content_nodes(

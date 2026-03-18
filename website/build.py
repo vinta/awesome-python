@@ -75,10 +75,11 @@ def group_categories(
     """Organize categories and resources into thematic section groups."""
     cat_by_name = {c["name"]: c for c in categories}
     groups = []
+    grouped_names: set[str] = set()
 
     for group_name, cat_names in SECTION_GROUPS:
+        grouped_names.update(cat_names)
         if group_name == "Resources":
-            # Resources group uses parsed resources directly
             group_cats = list(resources)
         else:
             group_cats = [cat_by_name[n] for n in cat_names if n in cat_by_name]
@@ -91,9 +92,6 @@ def group_categories(
             })
 
     # Any categories not in a group go into "Other"
-    grouped_names = set()
-    for _, cat_names in SECTION_GROUPS:
-        grouped_names.update(cat_names)
     ungrouped = [c for c in categories if c["name"] not in grouped_names]
     if ungrouped:
         groups.append({
@@ -113,13 +111,13 @@ class Entry(TypedDict):
     group: str
     stars: int | None
     owner: str | None
-    pushed_at: str | None
+    last_commit_at: str | None
 
 
 class StarData(TypedDict):
     stars: int
     owner: str
-    pushed_at: str
+    last_commit_at: str
     fetched_at: str
 
 
@@ -177,7 +175,7 @@ def extract_entries(
                 "group": group_name,
                 "stars": None,
                 "owner": None,
-                "pushed_at": None,
+                "last_commit_at": None,
                 "also_see": entry["also_see"],
             })
     return entries
@@ -210,7 +208,7 @@ def build(repo_root: str) -> None:
             sd = stars_data[repo_key]
             entry["stars"] = sd["stars"]
             entry["owner"] = sd["owner"]
-            entry["pushed_at"] = sd.get("pushed_at", "")
+            entry["last_commit_at"] = sd.get("last_commit_at", "")
 
     entries = sort_entries(entries)
 
@@ -220,7 +218,9 @@ def build(repo_root: str) -> None:
     )
 
     site_dir = website / "output"
-    site_dir.mkdir(parents=True, exist_ok=True)
+    if site_dir.exists():
+        shutil.rmtree(site_dir)
+    site_dir.mkdir(parents=True)
 
     tpl_index = env.get_template("index.html")
     (site_dir / "index.html").write_text(
@@ -240,7 +240,6 @@ def build(repo_root: str) -> None:
     static_dst = site_dir / "static"
     if static_src.exists():
         shutil.copytree(static_src, static_dst, dirs_exist_ok=True)
-    (site_dir / "CNAME").write_text("awesome-python.com\n", encoding="utf-8")
 
     print(f"Built single page with {len(categories)} categories + {len(resources)} resources")
     print(f"Total entries: {total_entries}")

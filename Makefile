@@ -7,6 +7,9 @@ install:
 fetch_stats:
 	uv run python website/fetch_github_stars.py
 
+test:
+	uv run pytest website/tests/ -v
+
 build:
 	uv run python website/build.py
 

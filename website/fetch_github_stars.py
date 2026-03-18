@@ -17,7 +17,7 @@ DATA_DIR = Path(__file__).parent / "data"
 CACHE_FILE = DATA_DIR / "github_stars.json"
 README_PATH = Path(__file__).parent.parent / "README.md"
 GRAPHQL_URL = "https://api.github.com/graphql"
-BATCH_SIZE = 100
+BATCH_SIZE = 50
 
 
 def extract_github_repos(text: str) -> set[str]:
@@ -50,7 +50,7 @@ def build_graphql_query(repos: list[str]) -> str:
             continue
         parts.append(
             f'repo_{i}: repository(owner: "{owner}", name: "{name}") '
-            f"{{ stargazerCount pushedAt owner {{ login }} }}"
+            f"{{ stargazerCount owner {{ login }} defaultBranchRef {{ target {{ ... on Commit {{ committedDate }} }} }} }}"
         )
     if not parts:
         return ""
@@ -67,10 +67,12 @@ def parse_graphql_response(
         node = data.get(f"repo_{i}")
         if node is None:
             continue
+        default_branch = node.get("defaultBranchRef") or {}
+        target = default_branch.get("target") or {}
         result[repo] = {
             "stars": node.get("stargazerCount", 0),
             "owner": node.get("owner", {}).get("login", ""),
-            "pushed_at": node.get("pushedAt", ""),
+            "last_commit_at": target.get("committedDate", ""),
         }
     return result
 
@@ -162,7 +164,7 @@ def main() -> None:
                     cache[repo] = {
                         "stars": results[repo]["stars"],
                         "owner": results[repo]["owner"],
-                        "pushed_at": results[repo]["pushed_at"],
+                        "last_commit_at": results[repo]["last_commit_at"],
                         "fetched_at": now_iso,
                     }
                     fetched_count += 1

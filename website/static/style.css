@@ -23,6 +23,8 @@
   --accent-light: oklch(97% 0.015 240);
   --highlight: oklch(93% 0.10 90);
   --highlight-text: oklch(35% 0.10 90);
+  --tag-text: oklch(45% 0.06 240);
+  --tag-hover-bg: oklch(93% 0.025 240);
 }
 
 html { font-size: 16px; }
@@ -65,8 +67,10 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 .hero-main {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 1rem;
 }
 
 .hero-submit {
@@ -78,12 +82,19 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--text);
   text-decoration: none;
   white-space: nowrap;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 
 .hero-submit:hover {
   border-color: var(--accent);
+  background: var(--accent-light);
   color: var(--accent);
   text-decoration: none;
+}
+
+.hero-submit:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .hero h1 {
@@ -144,6 +155,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   font-family: var(--font-body);
   font-size: var(--text-sm);
   color: var(--text);
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .search::placeholder { color: var(--text-muted); }
@@ -174,11 +186,12 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   background: none;
   border: 1px solid var(--border);
   border-radius: 4px;
-  padding: 0.15rem 0.5rem;
+  padding: 0.35rem 0.65rem;
   font-family: inherit;
   font-size: var(--text-xs);
   color: var(--text-muted);
   cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
 }
 
 .filter-clear:hover {
@@ -186,13 +199,10 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--text);
 }
 
-.stats {
-  font-size: var(--text-sm);
-  color: var(--text-muted);
-  font-variant-numeric: tabular-nums;
+.filter-clear:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
-
-.stats strong { color: var(--text-secondary); }
 
 /* === Table === */
 .table-wrap {
@@ -241,6 +251,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   padding: 0.7rem 0.75rem;
   border-bottom: 1px solid var(--border);
   vertical-align: top;
+  transition: background 0.15s;
 }
 
 .table tbody tr.row:not(.open):hover td {
@@ -258,9 +269,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 .col-name {
   width: 35%;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .col-name > a {
@@ -271,12 +280,47 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 .col-name > a:hover { text-decoration: underline; color: var(--accent-hover); }
 
+/* === Sortable Headers === */
+th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+}
+
+th[data-sort]:hover {
+  color: var(--accent);
+}
+
+th[data-sort]::after {
+  content: " ▼";
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+th[data-sort="name"]::after {
+  content: " ▲";
+}
+
+th[data-sort]:hover::after {
+  opacity: 1;
+}
+
+th[data-sort].sort-desc::after {
+  content: " ▼";
+  opacity: 1;
+}
+
+th[data-sort].sort-asc::after {
+  content: " ▲";
+  opacity: 1;
+}
+
 /* === Stars Column === */
 .col-stars {
   width: 5rem;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
   color: var(--text-secondary);
+  text-align: right;
 }
 
 /* === Arrow Column === */
@@ -299,6 +343,12 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 /* === Row Click === */
 .row { cursor: pointer; }
 
+.row:focus-visible td {
+  outline: none;
+  background: var(--bg-hover);
+  box-shadow: inset 2px 0 0 var(--accent);
+}
+
 /* === Expand Row === */
 .expand-row {
   display: none;
@@ -320,21 +370,33 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   border-bottom: 1px solid var(--border);
 }
 
+@keyframes expand-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .expand-content {
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: 1.6;
+  animation: expand-in 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.expand-tags-mobile {
-  display: none;
+.expand-tags {
+  display: flex;
   gap: 0.4rem;
   margin-bottom: 0.4rem;
 }
 
 .expand-tag {
   font-size: var(--text-xs);
-  color: oklch(45% 0.06 240);
+  color: var(--tag-text);
   background: var(--bg);
   padding: 0.15rem 0.4rem;
   border-radius: 3px;
@@ -376,33 +438,61 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--border);
 }
 
-.col-cat, .col-group {
+.col-cat {
   width: 13%;
   white-space: nowrap;
 }
 
+/* === Last Commit Column === */
+.col-commit {
+  width: 9rem;
+  white-space: nowrap;
+  color: var(--text-muted);
+}
+
 /* === Tags === */
 .tag {
+  position: relative;
   background: var(--accent-light);
   border: none;
   font-family: inherit;
   font-size: var(--text-xs);
-  color: oklch(45% 0.06 240);
+  color: var(--tag-text);
   cursor: pointer;
-  padding: 0.15rem 0.35rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 3px;
   white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+/* Expand touch target to 44x44px minimum */
+.tag::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem -0.25rem;
 }
 
 .tag:hover {
-  background: var(--accent-light);
+  background: var(--tag-hover-bg);
   color: var(--accent);
+}
+
+.tag:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
 }
 
 .tag.active {
   background: var(--highlight);
   color: var(--highlight-text);
   font-weight: 600;
+}
+
+/* === Noscript === */
+.noscript-msg {
+  text-align: center;
+  padding: 1rem;
+  color: var(--text-muted);
 }
 
 /* === No Results === */
@@ -437,8 +527,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
 /* === Responsive === */
 @media (max-width: 900px) {
-  .col-group { display: none; }
-  .expand-tags-mobile { display: flex; }
+  .col-commit { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -453,7 +542,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 
   .col-cat { display: none; }
   .col-name { white-space: normal; }
-  .footer { padding: 1.25rem; flex-direction: column; gap: 0.5rem; }
+  .footer { padding: 1.25rem; justify-content: center; flex-wrap: wrap; }
 }
 
 /* === Screen Reader Only === */
@@ -472,6 +561,8 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 /* === Reduced Motion === */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }

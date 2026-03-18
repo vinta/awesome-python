@@ -25,6 +25,7 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = ["website/tests"]
+pythonpath = ["website"]
 
 [tool.ruff]
 line-length = 200

@@ -26,7 +26,6 @@ class ParsedSection(TypedDict):
     name: str
     slug: str
     description: str  # plain text, links resolved to text
-    content: str  # raw markdown (backward compat)
     entries: list[ParsedEntry]
     entry_count: int
     preview: str
@@ -123,37 +122,25 @@ def _extract_description(nodes: list[SyntaxTreeNode]) -> str:
     return ""
 
 
-def _nodes_to_raw_markdown(nodes: list[SyntaxTreeNode], source_lines: list[str]) -> str:
-    """Extract raw markdown text for AST nodes using source line mappings."""
-    if not nodes:
-        return ""
-    start_line = None
-    end_line = None
-    for node in nodes:
-        node_map = node.map
-        if node_map is not None:
-            if start_line is None or node_map[0] < start_line:
-                start_line = node_map[0]
-            if end_line is None or node_map[1] > end_line:
-                end_line = node_map[1]
-    if start_line is None:
-        return ""
-    return "\n".join(source_lines[start_line:end_line]).strip()
-
-
 # --- Entry extraction --------------------------------------------------------
 
 _DESC_SEP_RE = re.compile(r"^\s*[-\u2013\u2014]\s*")
 
 
+def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
+    """Find first direct child of a given type."""
+    for child in node.children:
+        if child.type == child_type:
+            return child
+    return None
+
+
 def _find_inline(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
     """Find the inline node in a list_item's paragraph."""
-    for child in node.children:
-        if child.type == "paragraph":
-            for sub in child.children:
-                if sub.type == "inline":
-                    return sub
-    return None
+    para = _find_child(node, "paragraph")
+    if para is None:
+        return None
+    return _find_child(para, "inline")
 
 
 def _find_first_link(inline: SyntaxTreeNode) -> SyntaxTreeNode | None:
@@ -164,12 +151,9 @@ def _find_first_link(inline: SyntaxTreeNode) -> SyntaxTreeNode | None:
     return None
 
 
-def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
-    """Find first direct child of a given type."""
-    for child in node.children:
-        if child.type == child_type:
-            return child
-    return None
+def _is_leading_link(inline: SyntaxTreeNode, link: SyntaxTreeNode) -> bool:
+    """Check if the link is the first child of inline (a real entry, not a subcategory label)."""
+    return bool(inline.children) and inline.children[0] is link
 
 
 def _extract_description_html(inline: SyntaxTreeNode, first_link: SyntaxTreeNode) -> str:
@@ -208,8 +192,8 @@ def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
 
         first_link = _find_first_link(inline)
 
-        if first_link is None:
-            # Subcategory label — recurse into nested bullet_list
+        if first_link is None or not _is_leading_link(inline, first_link):
+            # Subcategory label (plain text or text-before-link) — recurse into nested list
             nested = _find_child(list_item, "bullet_list")
             if nested:
                 entries.extend(_parse_list_entries(nested))
@@ -276,8 +260,8 @@ def _render_bullet_list_html(
 
         first_link = _find_first_link(inline)
 
-        if first_link is None:
-            # Subcategory label
+        if first_link is None or not _is_leading_link(inline, first_link):
+            # Subcategory label (plain text or text-before-link)
             label = str(escape(render_inline_text(inline.children)))
             out.append(f'<div class="subcat">{label}</div>')
             nested = _find_child(list_item, "bullet_list")
@@ -323,7 +307,6 @@ def _render_section_html(content_nodes: list[SyntaxTreeNode]) -> str:
 
 def _group_by_h2(
     nodes: list[SyntaxTreeNode],
-    source_lines: list[str],
 ) -> list[ParsedSection]:
     """Group AST nodes into sections by h2 headings."""
     sections: list[ParsedSection] = []
@@ -336,7 +319,6 @@ def _group_by_h2(
             return
         desc = _extract_description(current_body)
         content_nodes = current_body[1:] if desc else current_body
-        content = _nodes_to_raw_markdown(content_nodes, source_lines)
         entries = _parse_section_entries(content_nodes)
         entry_count = len(entries) + sum(len(e["also_see"]) for e in entries)
         preview = ", ".join(e["name"] for e in entries[:4])
@@ -346,7 +328,6 @@ def _group_by_h2(
             name=current_name,
             slug=slugify(current_name),
             description=desc,
-            content=content,
             entries=entries,
             entry_count=entry_count,
             preview=preview,
@@ -374,7 +355,6 @@ def parse_readme(text: str) -> tuple[list[ParsedSection], list[ParsedSection]]:
     md = MarkdownIt("commonmark")
     tokens = md.parse(text)
     root = SyntaxTreeNode(tokens)
-    source_lines = text.split("\n")
     children = root.children
 
     # Find thematic break (---), # Resources, and # Contributing in one pass
@@ -402,7 +382,7 @@ def parse_readme(text: str) -> tuple[list[ParsedSection], list[ParsedSection]]:
         res_end = contributing_idx or len(children)
         res_nodes = children[resources_idx + 1 : res_end]
 
-    categories = _group_by_h2(cat_nodes, source_lines)
-    resources = _group_by_h2(res_nodes, source_lines)
+    categories = _group_by_h2(cat_nodes)
+    resources = _group_by_h2(res_nodes)
 
     return categories, resources
