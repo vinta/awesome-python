@@ -1,6 +1,6 @@
 # Awesome Python
 
-An opinionated list of awesome Python frameworks, libraries, software and resources.
+An opinionated list of awesome Python frameworks, libraries, tools, software and resources.
 
 > The **#10 most-starred repo on GitHub**. Put your product where Python developers discover tools. [Become a sponsor](SPONSORSHIP.md).
 
@@ -87,9 +87,6 @@ An opinionated list of awesome Python frameworks, libraries, software and resour
 - [Web Frameworks](#web-frameworks)
 - [WebSocket](#websocket)
 - [WSGI Servers](#wsgi-servers)
-- [Resources](#resources)
-  - [Newsletters](#newsletters)
-  - [Podcasts](#podcasts)
 
 ---
 
@@ -534,7 +531,6 @@ _Libraries for Python version and virtual environment management._
 
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 - [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
-- [uv](https://github.com/astral-sh/uv) - An extremely fast Python package and project manager, written in Rust.
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
 ## File Manipulation
