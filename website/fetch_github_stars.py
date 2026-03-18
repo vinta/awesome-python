@@ -10,7 +10,7 @@ from pathlib import Path
 
 import httpx
 
-from build import extract_github_repo
+from build import extract_github_repo, load_stars
 
 CACHE_MAX_AGE_DAYS = 7
 DATA_DIR = Path(__file__).parent / "data"
@@ -28,17 +28,6 @@ def extract_github_repos(text: str) -> set[str]:
         if repo:
             repos.add(repo)
     return repos
-
-
-def load_cache() -> dict:
-    """Load the star cache from disk. Returns empty dict if missing or corrupt."""
-    if CACHE_FILE.exists():
-        try:
-            return json.loads(CACHE_FILE.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            print(f"Warning: corrupt cache at {CACHE_FILE}, starting fresh.", file=sys.stderr)
-            return {}
-    return {}
 
 
 def save_cache(cache: dict) -> None:
@@ -114,7 +103,7 @@ def main() -> None:
     current_repos = extract_github_repos(readme_text)
     print(f"Found {len(current_repos)} GitHub repos in README.md")
 
-    cache = load_cache()
+    cache = load_stars(CACHE_FILE)
     now = datetime.now(timezone.utc)
 
     # Prune entries not in current README
