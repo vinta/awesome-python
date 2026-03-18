@@ -7,6 +7,7 @@ dependencies = [
     "httpx==0.28.1",
     "jinja2==3.1.6",
     "markdown==3.10.2",
+    "markdown-it-py==4.0.0",
 ]
 
 [dependency-groups]
