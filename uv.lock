@@ -18,32 +18,46 @@ wheels = [
 name = "awesome-python"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
+
+[package.dev-dependencies]
+build = [
     { name = "httpx" },
     { name = "jinja2" },
     { name = "markdown-it-py" },
 ]
-
-[package.dev-dependencies]
 dev = [
+    { name = "httpx" },
+    { name = "jinja2" },
+    { name = "markdown-it-py" },
     { name = "pytest" },
     { name = "ruff" },
     { name = "watchdog" },
 ]
+lint = [
+    { name = "ruff" },
+]
+test = [
+    { name = "pytest" },
+]
 
 [package.metadata]
-requires-dist = [
+
+[package.metadata.requires-dev]
+build = [
     { name = "httpx", specifier = "==0.28.1" },
     { name = "jinja2", specifier = "==3.1.6" },
     { name = "markdown-it-py", specifier = "==4.0.0" },
 ]
-
-[package.metadata.requires-dev]
 dev = [
+    { name = "httpx", specifier = "==0.28.1" },
+    { name = "jinja2", specifier = "==3.1.6" },
+    { name = "markdown-it-py", specifier = "==4.0.0" },
     { name = "pytest", specifier = "==9.0.2" },
     { name = "ruff", specifier = "==0.15.6" },
     { name = "watchdog", specifier = "==6.0.0" },
 ]
+lint = [{ name = "ruff", specifier = "==0.15.6" }]
+test = [{ name = "pytest", specifier = "==9.0.2" }]
 
 [[package]]
 name = "certifi"

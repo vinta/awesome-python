@@ -2,8 +2,15 @@
 name = "awesome-python"
 version = "0.1.0"
 description = "An opinionated list of awesome Python frameworks, libraries, software and resources."
+authors = [{ name = "Vinta Chen", email = "vinta.chen@gmail.com" }]
+readme = "README.md"
+license = "MIT"
 requires-python = ">=3.13"
 dependencies = []
+
+[project.urls]
+Homepage = "https://awesome-python.com/"
+Repository = "https://github.com/vinta/awesome-python"
 
 [dependency-groups]
 build = ["httpx==0.28.1", "jinja2==3.1.6", "markdown-it-py==4.0.0"]
