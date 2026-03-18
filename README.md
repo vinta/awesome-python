@@ -1036,6 +1036,7 @@ _Libraries for testing codebases and generating test data._
 
 - Testing Frameworks
   - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
+  - [llmtest](https://github.com/sazed5055/llmtest) - pytest for LLM apps. Test for grounding failures, prompt injection, safety violations, and regressions.
   - [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2`.
   - [pytest](https://github.com/pytest-dev/pytest) - A mature full-featured Python testing tool.
   - [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
