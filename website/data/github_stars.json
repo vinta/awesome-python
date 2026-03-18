@@ -1,0 +1,2622 @@
+{
+  "0rpc/zerorpc-python": {
+    "stars": 3237,
+    "owner": "0rpc",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "567-labs/instructor": {
+    "stars": 12554,
+    "owner": "567-labs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Alir3z4/html2text": {
+    "stars": 2135,
+    "owner": "Alir3z4",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "AnswerDotAI/fasthtml": {
+    "stars": 6883,
+    "owner": "AnswerDotAI",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "AtsushiSakai/PythonRobotics": {
+    "stars": 28887,
+    "owner": "AtsushiSakai",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "BeanieODM/beanie": {
+    "stars": 2661,
+    "owner": "BeanieODM",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Bogdanp/dramatiq": {
+    "stars": 5172,
+    "owner": "Bogdanp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ChristosChristofidis/awesome-deep-learning": {
+    "stars": 27712,
+    "owner": "ChristosChristofidis",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "CleanCut/green": {
+    "stars": 806,
+    "owner": "CleanCut",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Cornices/cornice": {
+    "stars": 390,
+    "owner": "Cornices",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "DLR-RM/stable-baselines3": {
+    "stars": 12908,
+    "owner": "DLR-RM",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Delgan/loguru": {
+    "stars": 23690,
+    "owner": "Delgan",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "DiffSK/configobj": {
+    "stars": 337,
+    "owner": "DiffSK",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "DmytroLitvinov/awesome-flake8-extensions": {
+    "stars": 1276,
+    "owner": "DmytroLitvinov",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "EmilStenstrom/justhtml": {
+    "stars": 1116,
+    "owner": "EmilStenstrom",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "FactoryBoy/factory_boy": {
+    "stars": 3781,
+    "owner": "FactoryBoy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "HBNetwork/python-decouple": {
+    "stars": 3017,
+    "owner": "HBNetwork",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "HypothesisWorks/hypothesis": {
+    "stars": 8498,
+    "owner": "HypothesisWorks",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Instagram/MonkeyType": {
+    "stars": 4996,
+    "owner": "Instagram",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "IronLanguages/ironpython3": {
+    "stars": 2735,
+    "owner": "IronLanguages",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "JaidedAI/EasyOCR": {
+    "stars": 29096,
+    "owner": "JaidedAI",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Kozea/pygal": {
+    "stars": 2752,
+    "owner": "Kozea",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Lightning-AI/pytorch-lightning": {
+    "stars": 30934,
+    "owner": "Lightning-AI",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "LuminosoInsight/python-ftfy": {
+    "stars": 4015,
+    "owner": "rspeer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "MagicStack/uvloop": {
+    "stars": 11687,
+    "owner": "MagicStack",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ManimCommunity/manim": {
+    "stars": 37253,
+    "owner": "ManimCommunity",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Manisso/fsociety": {
+    "stars": 11925,
+    "owner": "Manisso",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Maratyszcza/PeachPy": {
+    "stars": 2048,
+    "owner": "Maratyszcza",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "MasoniteFramework/masonite": {
+    "stars": 2365,
+    "owner": "MasoniteFramework",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "MechanicalSoup/MechanicalSoup": {
+    "stars": 4850,
+    "owner": "MechanicalSoup",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "MervinPraison/PraisonAI": {
+    "stars": 5677,
+    "owner": "MervinPraison",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Microsoft/PTVS": {
+    "stars": 2567,
+    "owner": "microsoft",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "MongoEngine/mongoengine": {
+    "stars": 4349,
+    "owner": "MongoEngine",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "NicolasHug/Surprise": {
+    "stars": 6772,
+    "owner": "NicolasHug",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Nuitka/Nuitka": {
+    "stars": 14642,
+    "owner": "Nuitka",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "OpenBB-finance/OpenBB": {
+    "stars": 63238,
+    "owner": "OpenBB-finance",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Parisson/TimeSide": {
+    "stars": 394,
+    "owner": "Parisson",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Parsely/streamparse": {
+    "stars": 1504,
+    "owner": "pystorm",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "PennyLaneAI/pennylane": {
+    "stars": 3111,
+    "owner": "PennyLaneAI",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "PrefectHQ/prefect": {
+    "stars": 21889,
+    "owner": "PrefectHQ",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "PyCQA/flake8": {
+    "stars": 3770,
+    "owner": "PyCQA",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "PyCQA/prospector": {
+    "stars": 2074,
+    "owner": "prospector-dev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "PyMySQL/PyMySQL": {
+    "stars": 7838,
+    "owner": "PyMySQL",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "PyMySQL/mysqlclient": {
+    "stars": 2525,
+    "owner": "PyMySQL",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Pylons/colander": {
+    "stars": 464,
+    "owner": "Pylons",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Pylons/waitress": {
+    "stars": 1572,
+    "owner": "Pylons",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Qiskit/qiskit": {
+    "stars": 7137,
+    "owner": "Qiskit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "RaRe-Technologies/gensim": {
+    "stars": 16375,
+    "owner": "piskvorky",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "RasaHQ/rasa": {
+    "stars": 21086,
+    "owner": "RasaHQ",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "RaylockLLC/DearPyGui": {
+    "stars": 15279,
+    "owner": "hoffstadt",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "SCons/scons": {
+    "stars": 2357,
+    "owner": "SCons",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "SciTools/cartopy": {
+    "stars": 1589,
+    "owner": "SciTools",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ScrapeGraphAI/toonify": {
+    "stars": 323,
+    "owner": "ScrapeGraphAI",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "SmileyChris/django-countries": {
+    "stars": 1521,
+    "owner": "SmileyChris",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Suor/django-cacheops": {
+    "stars": 2263,
+    "owner": "Suor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Suor/funcy": {
+    "stars": 3501,
+    "owner": "Suor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Supervisor/supervisor": {
+    "stars": 9007,
+    "owner": "Supervisor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Tencent/rapidjson": {
+    "stars": 15007,
+    "owner": "Tencent",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Textualize/rich": {
+    "stars": 55801,
+    "owner": "Textualize",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Textualize/textual": {
+    "stars": 34878,
+    "owner": "Textualize",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "TheAlgorithms/Python": {
+    "stars": 218785,
+    "owner": "TheAlgorithms",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "TkTech/pysimdjson": {
+    "stars": 761,
+    "owner": "TkTech",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "TomNicholas/Python-for-Scientists": {
+    "stars": 357,
+    "owner": "TomNicholas",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "Valloric/YouCompleteMe": {
+    "stars": 26276,
+    "owner": "ycm-core",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "WhyNotHugo/python-barcode": {
+    "stars": 649,
+    "owner": "WhyNotHugo",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ZoomerAnalytics/xlwings": {
+    "stars": 6,
+    "owner": "ZoomerAnalytics",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "aaugustin/websockets": {
+    "stars": 5643,
+    "owner": "python-websockets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "abhiTronix/vidgear": {
+    "stars": 3684,
+    "owner": "abhiTronix",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "aboSamoor/polyglot": {
+    "stars": 2368,
+    "owner": "aboSamoor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "agno-agi/agno": {
+    "stars": 38754,
+    "owner": "agno-agi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ahupp/python-magic": {
+    "stars": 2896,
+    "owner": "ahupp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "aizvorski/scikit-video": {
+    "stars": 152,
+    "owner": "aizvorski",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ajenti/ajenti": {
+    "stars": 7908,
+    "owner": "ajenti",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "alecthomas/voluptuous": {
+    "stars": 1847,
+    "owner": "alecthomas",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "altair-viz/altair": {
+    "stars": 10301,
+    "owner": "vega",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "amitt001/delegator.py": {
+    "stars": 1746,
+    "owner": "amitt001",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "amoffat/sh": {
+    "stars": 7241,
+    "owner": "amoffat",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "amosgyamfi/awesome-fasthtml": {
+    "stars": 79,
+    "owner": "amosgyamfi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "andialbrecht/sqlparse": {
+    "stars": 3999,
+    "owner": "andialbrecht",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ansible/ansible": {
+    "stars": 68310,
+    "owner": "ansible",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "apache/spark": {
+    "stars": 42992,
+    "owner": "apache",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "arrow-py/arrow": {
+    "stars": 9035,
+    "owner": "arrow-py",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "art049/odmantic": {
+    "stars": 1168,
+    "owner": "art049",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "astral-sh/ruff": {
+    "stars": 46329,
+    "owner": "astral-sh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "astral-sh/ty": {
+    "stars": 17739,
+    "owner": "astral-sh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "astral-sh/uv": {
+    "stars": 81192,
+    "owner": "astral-sh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "asweigart/pyautogui": {
+    "stars": 12363,
+    "owner": "asweigart",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "aws/aws-sdk-pandas": {
+    "stars": 4106,
+    "owner": "aws",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "bbangert/beaker": {
+    "stars": 545,
+    "owner": "bbangert",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "beetbox/audioread": {
+    "stars": 536,
+    "owner": "beetbox",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "beetbox/beets": {
+    "stars": 14856,
+    "owner": "beetbox",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "benedekrozemberczki/karateclub": {
+    "stars": 2276,
+    "owner": "benedekrozemberczki",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "benfred/implicit": {
+    "stars": 3773,
+    "owner": "benfred",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "benfred/py-spy": {
+    "stars": 15031,
+    "owner": "benfred",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "benhamner/Metrics": {
+    "stars": 1654,
+    "owner": "benhamner",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "benoitc/gunicorn": {
+    "stars": 10481,
+    "owner": "benoitc",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "bfly123/claude_code_bridge": {
+    "stars": 1642,
+    "owner": "bfly123",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "bloomberg/bqplot": {
+    "stars": 3684,
+    "owner": "bqplot",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "bokeh/bokeh": {
+    "stars": 20365,
+    "owner": "bokeh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "boppreh/mouse": {
+    "stars": 961,
+    "owner": "boppreh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "borgbackup/borg": {
+    "stars": 13081,
+    "owner": "borgbackup",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "boto/boto3": {
+    "stars": 9736,
+    "owner": "boto",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "bpython/bpython": {
+    "stars": 2771,
+    "owner": "bpython",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "browser-use/browser-use": {
+    "stars": 81099,
+    "owner": "browser-use",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "bterwijn/memory_graph": {
+    "stars": 771,
+    "owner": "bterwijn",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "buildout/buildout": {
+    "stars": 613,
+    "owner": "buildout",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "buriy/python-readability": {
+    "stars": 2894,
+    "owner": "buriy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "canonical/cloud-init": {
+    "stars": 3627,
+    "owner": "canonical",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "carlosescri/DottedDict": {
+    "stars": 222,
+    "owner": "carlosescri",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "cdgriffith/Box": {
+    "stars": 2822,
+    "owner": "cdgriffith",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "chaostoolkit/chaostoolkit": {
+    "stars": 2001,
+    "owner": "chaostoolkit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "chapmanb/bcbb": {
+    "stars": 645,
+    "owner": "chapmanb",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "chapmanb/bcbio-nextgen": {
+    "stars": 1027,
+    "owner": "bcbio",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "chardet/chardet": {
+    "stars": 2486,
+    "owner": "chardet",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "chriskiehl/Gooey": {
+    "stars": 22025,
+    "owner": "chriskiehl",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "clips/pattern": {
+    "stars": 8856,
+    "owner": "clips",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "cobrateam/splinter": {
+    "stars": 2767,
+    "owner": "cobrateam",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "codeinthehole/purl": {
+    "stars": 303,
+    "owner": "codeinthehole",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "codelucas/newspaper": {
+    "stars": 15009,
+    "owner": "codelucas",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "coleifer/huey": {
+    "stars": 5940,
+    "owner": "coleifer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "coleifer/micawber": {
+    "stars": 674,
+    "owner": "coleifer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "coleifer/peewee": {
+    "stars": 11952,
+    "owner": "coleifer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "conda/conda": {
+    "stars": 7342,
+    "owner": "conda",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "cookiecutter/cookiecutter": {
+    "stars": 24744,
+    "owner": "cookiecutter",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "copier-org/copier": {
+    "stars": 3214,
+    "owner": "copier-org",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "crossbario/autobahn-python": {
+    "stars": 2534,
+    "owner": "crossbario",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "cython/cython": {
+    "stars": 10654,
+    "owner": "cython",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dahlia/awesome-sqlalchemy": {
+    "stars": 3031,
+    "owner": "dahlia",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dashingsoft/pyarmor": {
+    "stars": 4989,
+    "owner": "dashingsoft",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dask/dask": {
+    "stars": 13768,
+    "owner": "dask",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "datafolklabs/cement": {
+    "stars": 1341,
+    "owner": "datafolklabs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "datastax/python-driver": {
+    "stars": 1426,
+    "owner": "apache",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dateutil/dateutil": {
+    "stars": 2604,
+    "owner": "dateutil",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "davidaurelio/hashids-python": {
+    "stars": 1423,
+    "owner": "davidaurelio",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "daviddrysdale/python-phonenumbers": {
+    "stars": 3720,
+    "owner": "daviddrysdale",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "davidhalter/jedi": {
+    "stars": 6123,
+    "owner": "davidhalter",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "davidhalter/jedi-vim": {
+    "stars": 5319,
+    "owner": "davidhalter",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dbader/schedule": {
+    "stars": 12246,
+    "owner": "dbader",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dbcli/litecli": {
+    "stars": 3214,
+    "owner": "dbcli",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dbcli/mycli": {
+    "stars": 11886,
+    "owner": "dbcli",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dbcli/pgcli": {
+    "stars": 13073,
+    "owner": "dbcli",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "deanmalmgren/textract": {
+    "stars": 4482,
+    "owner": "deanmalmgren",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "derek73/python-nameparser": {
+    "stars": 702,
+    "owner": "derek73",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "desbordante/desbordante-core": {
+    "stars": 469,
+    "owner": "Desbordante",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "devpi/devpi": {
+    "stars": 1146,
+    "owner": "devpi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "devsnd/tinytag": {
+    "stars": 805,
+    "owner": "tinytag",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dfunckt/django-rules": {
+    "stars": 1970,
+    "owner": "dfunckt",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dgunning/edgartools": {
+    "stars": 1859,
+    "owner": "dgunning",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dhamaniasad/awesome-postgres": {
+    "stars": 11767,
+    "owner": "dhamaniasad",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dimka665/awesome-slugify": {
+    "stars": 491,
+    "owner": "voronind",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django-cache-machine/django-cache-machine": {
+    "stars": 885,
+    "owner": "django-cache-machine",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django-compressor/django-compressor": {
+    "stars": 2871,
+    "owner": "django-compressor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django-guardian/django-guardian": {
+    "stars": 3893,
+    "owner": "django-guardian",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django-haystack/django-haystack": {
+    "stars": 3800,
+    "owner": "django-haystack",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django-haystack/pysolr": {
+    "stars": 697,
+    "owner": "django-haystack",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django-tastypie/django-tastypie": {
+    "stars": 3955,
+    "owner": "django-tastypie",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django/channels": {
+    "stars": 6336,
+    "owner": "django",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django/daphne": {
+    "stars": 2651,
+    "owner": "django",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "django/django": {
+    "stars": 87081,
+    "owner": "django",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dmlc/xgboost": {
+    "stars": 28138,
+    "owner": "dmlc",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "docling-project/docling": {
+    "stars": 55968,
+    "owner": "docling-project",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dpkp/kafka-python": {
+    "stars": 5887,
+    "owner": "dpkp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dry-python/returns": {
+    "stars": 4238,
+    "owner": "dry-python",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "dynaconf/dynaconf": {
+    "stars": 4272,
+    "owner": "dynaconf",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "elapouya/python-docx-template": {
+    "stars": 2588,
+    "owner": "elapouya",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "elastic/elasticsearch-dsl-py": {
+    "stars": 3883,
+    "owner": "elastic",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "eliben/pyelftools": {
+    "stars": 2217,
+    "owner": "eliben",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "emcconville/wand": {
+    "stars": 1479,
+    "owner": "emcconville",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "emmett-framework/granian": {
+    "stars": 5173,
+    "owner": "emmett-framework",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "encode/django-rest-framework": {
+    "stars": 29928,
+    "owner": "encode",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "encode/httpx": {
+    "stars": 15163,
+    "owner": "encode",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "encode/uvicorn": {
+    "stars": 10496,
+    "owner": "Kludex",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "erikrose/more-itertools": {
+    "stars": 4043,
+    "owner": "more-itertools",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "esnme/ultrajson": {
+    "stars": 4474,
+    "owner": "ultrajson",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "evhub/coconut": {
+    "stars": 4313,
+    "owner": "evhub",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "fabric/fabric": {
+    "stars": 15406,
+    "owner": "fabric",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "facebook/PathPicker": {
+    "stars": 5232,
+    "owner": "facebook",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "facebook/pyre-check": {
+    "stars": 7153,
+    "owner": "facebook",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "facebookresearch/hydra": {
+    "stars": 10258,
+    "owner": "facebookresearch",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "faif/python-patterns": {
+    "stars": 42795,
+    "owner": "faif",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "falconry/falcon": {
+    "stars": 9805,
+    "owner": "falconry",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "feature-engine/feature_engine": {
+    "stars": 2214,
+    "owner": "feature-engine",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "feincms/feincms": {
+    "stars": 1077,
+    "owner": "feincms",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "fengsp/plan": {
+    "stars": 1182,
+    "owner": "fengsp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "fighting41love/funNLP": {
+    "stars": 79457,
+    "owner": "fighting41love",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "flask-admin/flask-admin": {
+    "stars": 6057,
+    "owner": "pallets-eco",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "flask-api/flask-api": {
+    "stars": 1468,
+    "owner": "flask-api",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "flask-restful/flask-restful": {
+    "stars": 6924,
+    "owner": "flask-restful",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "fogleman/Quads": {
+    "stars": 1223,
+    "owner": "fogleman",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "fxsjy/jieba": {
+    "stars": 34802,
+    "owner": "fxsjy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gabrielfalcao/HTTPretty": {
+    "stars": 2209,
+    "owner": "gabrielfalcao",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gaojiuli/toapi": {
+    "stars": 3555,
+    "owner": "elliotgao2",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gawel/pyquery": {
+    "stars": 2379,
+    "owner": "gawel",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "geopandas/geopandas": {
+    "stars": 5067,
+    "owner": "geopandas",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "geopy/geopy": {
+    "stars": 4783,
+    "owner": "geopy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "getnikola/nikola": {
+    "stars": 2722,
+    "owner": "getnikola",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "getpelican/pelican": {
+    "stars": 13249,
+    "owner": "getpelican",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "getsentry/responses": {
+    "stars": 4330,
+    "owner": "getsentry",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "getsentry/sentry-python": {
+    "stars": 2156,
+    "owner": "getsentry",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gevent/gevent": {
+    "stars": 6443,
+    "owner": "gevent",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "giampaolo/psutil": {
+    "stars": 11108,
+    "owner": "giampaolo",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "glamp/bashplotlib": {
+    "stars": 1917,
+    "owner": "glamp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gleitz/howdoi": {
+    "stars": 10831,
+    "owner": "gleitz",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "google/jax": {
+    "stars": 35125,
+    "owner": "jax-ml",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "google/python-fire": {
+    "stars": 28155,
+    "owner": "google",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "google/pytype": {
+    "stars": 5029,
+    "owner": "google",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "google/yapf": {
+    "stars": 13991,
+    "owner": "google",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gorakhargosh/watchdog": {
+    "stars": 7283,
+    "owner": "gorakhargosh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gotcha/ipdb": {
+    "stars": 1968,
+    "owner": "gotcha",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "grantjenks/python-diskcache": {
+    "stars": 2846,
+    "owner": "grantjenks",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "grantjenks/python-sortedcontainers": {
+    "stars": 3935,
+    "owner": "grantjenks",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "graphql-python/graphene": {
+    "stars": 8252,
+    "owner": "graphql-python",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gruns/furl": {
+    "stars": 2797,
+    "owner": "gruns",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "gruns/icecream": {
+    "stars": 10032,
+    "owner": "gruns",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "h2oai/h2o-3": {
+    "stars": 7511,
+    "owner": "h2oai",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "has2k1/plotnine": {
+    "stars": 4521,
+    "owner": "has2k1",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "hbldh/bleak": {
+    "stars": 2351,
+    "owner": "hbldh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "hi-primus/optimus": {
+    "stars": 1539,
+    "owner": "hi-primus",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "html5lib/html5lib-python": {
+    "stars": 1218,
+    "owner": "html5lib",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "httpie/cli": {
+    "stars": 37725,
+    "owner": "httpie",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "hugapi/hug": {
+    "stars": 6905,
+    "owner": "hugapi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "huggingface/diffusers": {
+    "stars": 33076,
+    "owner": "huggingface",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "huggingface/transformers": {
+    "stars": 157984,
+    "owner": "huggingface",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "humiaozuzu/awesome-flask": {
+    "stars": 12696,
+    "owner": "humiaozuzu",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ibayer/fastFM": {
+    "stars": 1090,
+    "owner": "ibayer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ijl/orjson": {
+    "stars": 7961,
+    "owner": "ijl",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "indico/indico": {
+    "stars": 2031,
+    "owner": "indico",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "inducer/pudb": {
+    "stars": 3218,
+    "owner": "inducer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "infiniflow/ragflow": {
+    "stars": 75265,
+    "owner": "infiniflow",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ionelmc/python-hunter": {
+    "stars": 866,
+    "owner": "ionelmc",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ionelmc/python-manhole": {
+    "stars": 400,
+    "owner": "ionelmc",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "isnowfy/snownlp": {
+    "stars": 6614,
+    "owner": "isnowfy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jab/bidict": {
+    "stars": 1578,
+    "owner": "jab",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jaraco/path.py": {
+    "stars": 1124,
+    "owner": "jaraco",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jazzband/django-debug-toolbar": {
+    "stars": 8351,
+    "owner": "django-commons",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jazzband/django-oauth-toolkit": {
+    "stars": 3310,
+    "owner": "django-oauth",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jazzband/django-pipeline": {
+    "stars": 1543,
+    "owner": "jazzband",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jazzband/geojson": {
+    "stars": 984,
+    "owner": "jazzband",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jazzband/pip-tools": {
+    "stars": 7993,
+    "owner": "jazzband",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jazzband/tablib": {
+    "stars": 4751,
+    "owner": "jazzband",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jeffknupp/sandman2": {
+    "stars": 2044,
+    "owner": "jeffknupp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jek/blinker": {
+    "stars": 2034,
+    "owner": "pallets-eco",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jendrikseipp/vulture": {
+    "stars": 4379,
+    "owner": "jendrikseipp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jet-admin/jet-bridge": {
+    "stars": 1794,
+    "owner": "jet-admin",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jfkirk/tensorrec": {
+    "stars": 1302,
+    "owner": "jfkirk",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jiaaro/pydub": {
+    "stars": 9743,
+    "owner": "jiaaro",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jindaxiang/akshare": {
+    "stars": 17394,
+    "owner": "akfamily",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jmcnamara/XlsxWriter": {
+    "stars": 3920,
+    "owner": "jmcnamara",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "joke2k/faker": {
+    "stars": 19220,
+    "owner": "joke2k",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jonathanslenders/ptpython": {
+    "stars": 5410,
+    "owner": "prompt-toolkit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jonathanslenders/python-prompt-toolkit": {
+    "stars": 10329,
+    "owner": "prompt-toolkit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jorgenschaefer/elpy": {
+    "stars": 1940,
+    "owner": "jorgenschaefer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jpadilla/pyjwt": {
+    "stars": 5622,
+    "owner": "jpadilla",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "jschneier/django-storages": {
+    "stars": 2939,
+    "owner": "jschneier",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "keleshev/schema": {
+    "stars": 2944,
+    "owner": "keleshev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "keon/algorithms": {
+    "stars": 25390,
+    "owner": "keon",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "keras-team/keras": {
+    "stars": 63928,
+    "owner": "keras-team",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "keunwoochoi/kapre": {
+    "stars": 946,
+    "owner": "keunwoochoi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "kevin1024/vcrpy": {
+    "stars": 2951,
+    "owner": "kevin1024",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "kiwicom/schemathesis": {
+    "stars": 3114,
+    "owner": "schemathesis",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "klen/mixer": {
+    "stars": 954,
+    "owner": "klen",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "knipknap/SpiffWorkflow": {
+    "stars": 1864,
+    "owner": "sartography",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "kootenpv/yagmail": {
+    "stars": 2725,
+    "owner": "kootenpv",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "kornia/kornia": {
+    "stars": 11119,
+    "owner": "kornia",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "kreuzberg-dev/kreuzberg": {
+    "stars": 6736,
+    "owner": "kreuzberg-dev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "kurtmckee/feedparser": {
+    "stars": 2327,
+    "owner": "kurtmckee",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "laixintao/iredis": {
+    "stars": 2728,
+    "owner": "laixintao",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lancopku/pkuseg-python": {
+    "stars": 6702,
+    "owner": "lancopku",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "langchain-ai/langchain": {
+    "stars": 129943,
+    "owner": "langchain-ai",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lektor/lektor": {
+    "stars": 3926,
+    "owner": "lektor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lemire/simdjson": {
+    "stars": 23448,
+    "owner": "simdjson",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lepture/authlib": {
+    "stars": 5244,
+    "owner": "authlib",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lepture/mistune": {
+    "stars": 2998,
+    "owner": "lepture",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lericson/pylibmc": {
+    "stars": 493,
+    "owner": "lericson",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "libAudioFlux/audioFlux": {
+    "stars": 3281,
+    "owner": "libAudioFlux",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "librosa/librosa": {
+    "stars": 8263,
+    "owner": "librosa",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "libvips/pyvips": {
+    "stars": 789,
+    "owner": "libvips",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lincolnloop/python-qrcode": {
+    "stars": 4864,
+    "owner": "lincolnloop",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "linkedin/shiv": {
+    "stars": 1918,
+    "owner": "linkedin",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "litestar-org/litestar": {
+    "stars": 8099,
+    "owner": "litestar-org",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "litestar-org/polyfactory": {
+    "stars": 1428,
+    "owner": "litestar-org",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lk-geimfari/mimesis": {
+    "stars": 4799,
+    "owner": "lk-geimfari",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "locustio/locust": {
+    "stars": 27608,
+    "owner": "locustio",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lorien/grab": {
+    "stars": 2458,
+    "owner": "lorien",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "lyst/lightfm": {
+    "stars": 5066,
+    "owner": "lyst",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "maciejkula/spotlight": {
+    "stars": 3042,
+    "owner": "maciejkula",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "madmaze/pytesseract": {
+    "stars": 6321,
+    "owner": "madmaze",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mahmoud/boltons": {
+    "stars": 6856,
+    "owner": "mahmoud",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mailgun/flanker": {
+    "stars": 1650,
+    "owner": "mailgun",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "marcelotduarte/cx_Freeze": {
+    "stars": 1532,
+    "owner": "marcelotduarte",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "marimo-team/marimo": {
+    "stars": 19725,
+    "owner": "marimo-team",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "markusschanta/awesome-jupyter": {
+    "stars": 4569,
+    "owner": "markusschanta",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "marph91/jimmy": {
+    "stars": 400,
+    "owner": "marph91",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "marrow/mailer": {
+    "stars": 293,
+    "owner": "marrow",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "marshmallow-code/marshmallow": {
+    "stars": 7228,
+    "owner": "marshmallow-code",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "marshmallow-code/webargs": {
+    "stars": 1405,
+    "owner": "marshmallow-code",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "martinblech/xmltodict": {
+    "stars": 5726,
+    "owner": "martinblech",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "martinrusev/imbox": {
+    "stars": 1211,
+    "owner": "martinrusev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "matplotlib/matplotlib": {
+    "stars": 22585,
+    "owner": "matplotlib",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "metawilm/cl-python": {
+    "stars": 394,
+    "owner": "metawilm",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mhammond/pywin32": {
+    "stars": 5531,
+    "owner": "mhammond",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mher/flower": {
+    "stars": 7130,
+    "owner": "mher",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "michaelhelmick/lassie": {
+    "stars": 630,
+    "owner": "michaelhelmick",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "micropython/micropython": {
+    "stars": 21553,
+    "owner": "micropython",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "microsoft/markitdown": {
+    "stars": 90875,
+    "owner": "microsoft",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "miguelgrinberg/microdot": {
+    "stars": 2093,
+    "owner": "miguelgrinberg",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mindflayer/python-mocket": {
+    "stars": 309,
+    "owner": "mindflayer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mindsdb/mindsdb": {
+    "stars": 38775,
+    "owner": "mindsdb",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mingrammer/diagrams": {
+    "stars": 42078,
+    "owner": "mingrammer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mininet/mininet": {
+    "stars": 5788,
+    "owner": "mininet",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "miracle2k/flask-assets": {
+    "stars": 459,
+    "owner": "miracle2k",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "miracle2k/webassets": {
+    "stars": 935,
+    "owner": "miracle2k",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "miso-belica/sumy": {
+    "stars": 3664,
+    "owner": "miso-belica",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mitmproxy/pdoc": {
+    "stars": 2474,
+    "owner": "mitmproxy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mitsuhiko/pluginbase": {
+    "stars": 1141,
+    "owner": "mitsuhiko",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mitsuhiko/unp": {
+    "stars": 455,
+    "owner": "mitsuhiko",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mkdocs/mkdocs": {
+    "stars": 21860,
+    "owner": "mkdocs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "modoboa/modoboa": {
+    "stars": 3468,
+    "owner": "modoboa",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mongodb/django-mongodb-backend": {
+    "stars": 218,
+    "owner": "mongodb",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mongodb/mongo-python-driver": {
+    "stars": 4338,
+    "owner": "mongodb",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "moses-palmer/pynput": {
+    "stars": 2125,
+    "owner": "moses-palmer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mozilla/unicode-slugify": {
+    "stars": 328,
+    "owner": "mozilla",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mozillazg/python-pinyin": {
+    "stars": 5271,
+    "owner": "mozillazg",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mpdavis/python-jose": {
+    "stars": 1743,
+    "owner": "mpdavis",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mpi4py/mpi4py": {
+    "stars": 902,
+    "owner": "mpi4py",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mre/awesome-static-analysis": {
+    "stars": 14439,
+    "owner": "analysis-tools-dev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "msiemens/tinydb": {
+    "stars": 7487,
+    "owner": "msiemens",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mstamy2/PyPDF2": {
+    "stars": 9878,
+    "owner": "py-pdf",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mwaskom/seaborn": {
+    "stars": 13770,
+    "owner": "mwaskom",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "mymarilyn/clickhouse-driver": {
+    "stars": 1293,
+    "owner": "mymarilyn",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "napalm-automation/napalm": {
+    "stars": 2438,
+    "owner": "napalm-automation",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "nficano/python-lambda": {
+    "stars": 1521,
+    "owner": "nficano",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "nicfit/eyeD3": {
+    "stars": 631,
+    "owner": "nicfit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "nose-devs/nose2": {
+    "stars": 822,
+    "owner": "nose-devs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "noxrepo/pox": {
+    "stars": 652,
+    "owner": "noxrepo",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "nucleic/enaml": {
+    "stars": 1574,
+    "owner": "nucleic",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "numba/numba": {
+    "stars": 10935,
+    "owner": "numba",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "nvbn/thefuck": {
+    "stars": 95714,
+    "owner": "nvbn",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "nvdv/vprof": {
+    "stars": 3982,
+    "owner": "nvdv",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "oauthlib/oauthlib": {
+    "stars": 2958,
+    "owner": "oauthlib",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "offerrall/FuncToWeb": {
+    "stars": 389,
+    "owner": "offerrall",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "openai/gym": {
+    "stars": 37100,
+    "owner": "openai",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "openembedded/bitbake": {
+    "stars": 509,
+    "owner": "openembedded",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "openstack/cliff": {
+    "stars": 260,
+    "owner": "openstack",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "orsinium/textdistance": {
+    "stars": 3524,
+    "owner": "life4",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets-eco/flask-debugtoolbar": {
+    "stars": 980,
+    "owner": "pallets-eco",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets/click": {
+    "stars": 17367,
+    "owner": "pallets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets/flask": {
+    "stars": 71376,
+    "owner": "pallets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets/itsdangerous": {
+    "stars": 3102,
+    "owner": "pallets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets/jinja": {
+    "stars": 11513,
+    "owner": "pallets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets/markupsafe": {
+    "stars": 685,
+    "owner": "pallets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pallets/werkzeug": {
+    "stars": 6849,
+    "owner": "pallets",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "paramiko/paramiko": {
+    "stars": 9712,
+    "owner": "paramiko",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pathsim/pathsim": {
+    "stars": 334,
+    "owner": "pathsim",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pathwaycom/pathway": {
+    "stars": 60281,
+    "owner": "pathwaycom",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "patrys/httmock": {
+    "stars": 472,
+    "owner": "patrys",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "patx/pickledb": {
+    "stars": 1069,
+    "owner": "patx",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pdfminer/pdfminer.six": {
+    "stars": 6933,
+    "owner": "pdfminer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pennersr/django-allauth": {
+    "stars": 10307,
+    "owner": "pennersr",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "peterbrittain/asciimatics": {
+    "stars": 4271,
+    "owner": "peterbrittain",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pgjones/hypercorn": {
+    "stars": 1536,
+    "owner": "pgjones",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pgmpy/pgmpy": {
+    "stars": 3213,
+    "owner": "pgmpy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pikepdf/pikepdf": {
+    "stars": 2667,
+    "owner": "pikepdf",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "planetopendata/awesome-sqlite": {
+    "stars": 388,
+    "owner": "planetopendata",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "platformio/platformio-core": {
+    "stars": 8931,
+    "owner": "platformio",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "plotly/plotly.py": {
+    "stars": 18354,
+    "owner": "plotly",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pndurette/gTTS": {
+    "stars": 2595,
+    "owner": "pndurette",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pola-rs/polars": {
+    "stars": 37775,
+    "owner": "pola-rs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ponyorm/pony": {
+    "stars": 3826,
+    "owner": "ponyorm",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "prabhupant/python-ds": {
+    "stars": 3074,
+    "owner": "prabhupant",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pricingassistant/mrq": {
+    "stars": 896,
+    "owner": "pricingassistant",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "prompt-toolkit/python-prompt-toolkit": {
+    "stars": 10329,
+    "owner": "prompt-toolkit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "psf/black": {
+    "stars": 41430,
+    "owner": "psf",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "psf/requests": {
+    "stars": 53881,
+    "owner": "psf",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "psf/requests-html": {
+    "stars": 13869,
+    "owner": "psf",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "psycopg/psycopg": {
+    "stars": 2322,
+    "owner": "psycopg",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pudo/dataset": {
+    "stars": 4853,
+    "owner": "pudo",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pwaller/pyfiglet": {
+    "stars": 1545,
+    "owner": "pwaller",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "py2exe/py2exe": {
+    "stars": 995,
+    "owner": "py2exe",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pybee/toga": {
+    "stars": 5323,
+    "owner": "beeware",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pybuilder/pybuilder": {
+    "stars": 1956,
+    "owner": "pybuilder",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyca/cryptography": {
+    "stars": 7515,
+    "owner": "pyca",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyca/pynacl": {
+    "stars": 1185,
+    "owner": "pyca",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pydantic/pydantic": {
+    "stars": 27237,
+    "owner": "pydantic",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pydantic/pydantic-ai": {
+    "stars": 15531,
+    "owner": "pydantic",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyenv-win/pyenv-win": {
+    "stars": 7064,
+    "owner": "pyenv-win",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyenv/pyenv": {
+    "stars": 44440,
+    "owner": "pyenv",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyeve/cerberus": {
+    "stars": 3270,
+    "owner": "pyeve",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyeve/eve": {
+    "stars": 6746,
+    "owner": "pyeve",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyexcel/pyexcel": {
+    "stars": 1284,
+    "owner": "pyexcel",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyglet/pyglet": {
+    "stars": 2172,
+    "owner": "pyglet",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pygraphviz/pygraphviz": {
+    "stars": 834,
+    "owner": "pygraphviz",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyinfra-dev/pyinfra": {
+    "stars": 4869,
+    "owner": "pyinfra-dev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyinstaller/pyinstaller": {
+    "stars": 12924,
+    "owner": "pyinstaller",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyinvoke/invoke": {
+    "stars": 4722,
+    "owner": "pyinvoke",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pylint-dev/pylint": {
+    "stars": 5661,
+    "owner": "pylint-dev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pymatting/pymatting": {
+    "stars": 1891,
+    "owner": "pymatting",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pymc-devs/pymc3": {
+    "stars": 9527,
+    "owner": "pymc-devs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pymssql/pymssql": {
+    "stars": 880,
+    "owner": "pymssql",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pynamodb/PynamoDB": {
+    "stars": 2647,
+    "owner": "pynamodb",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pypa/bandersnatch": {
+    "stars": 528,
+    "owner": "pypa",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pypa/hatch": {
+    "stars": 7145,
+    "owner": "pypa",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pypa/virtualenv": {
+    "stars": 5017,
+    "owner": "pypa",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pypa/warehouse": {
+    "stars": 3978,
+    "owner": "pypi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyparsing/pyparsing": {
+    "stars": 2465,
+    "owner": "pyparsing",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyqtgraph/pyqtgraph": {
+    "stars": 4311,
+    "owner": "pyqtgraph",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pyston/pyston": {
+    "stars": 2507,
+    "owner": "pyston",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-attrs/attrs": {
+    "stars": 5746,
+    "owner": "python-attrs",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-greenlet/greenlet": {
+    "stars": 1814,
+    "owner": "python-greenlet",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-jsonschema/jsonschema": {
+    "stars": 4935,
+    "owner": "python-jsonschema",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-mode/python-mode": {
+    "stars": 5478,
+    "owner": "python-mode",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-openxml/python-docx": {
+    "stars": 5486,
+    "owner": "python-openxml",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-pillow/Pillow": {
+    "stars": 13437,
+    "owner": "python-pillow",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-rapidjson/python-rapidjson": {
+    "stars": 532,
+    "owner": "python-rapidjson",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-rope/rope": {
+    "stars": 2183,
+    "owner": "python-rope",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python-trio/trio": {
+    "stars": 7204,
+    "owner": "python-trio",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python/cpython": {
+    "stars": 72015,
+    "owner": "python",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python/mypy": {
+    "stars": 20302,
+    "owner": "python",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "python/typeshed": {
+    "stars": 5021,
+    "owner": "python",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pythonnet/pythonnet": {
+    "stars": 5418,
+    "owner": "pythonnet",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pytoolz/cytoolz": {
+    "stars": 1103,
+    "owner": "pytoolz",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pytoolz/toolz": {
+    "stars": 5125,
+    "owner": "pytoolz",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pytorch/pytorch": {
+    "stars": 98355,
+    "owner": "pytorch",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "pytransitions/transitions": {
+    "stars": 6459,
+    "owner": "pytransitions",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "quantumlib/Cirq": {
+    "stars": 4890,
+    "owner": "quantumlib",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "quodlibet/mutagen": {
+    "stars": 1867,
+    "owner": "quodlibet",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "r0x0r/pywebview": {
+    "stars": 5803,
+    "owner": "r0x0r",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ranaroussi/yfinance": {
+    "stars": 22172,
+    "owner": "ranaroussi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ray-project/ray": {
+    "stars": 41786,
+    "owner": "ray-project",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "redis/redis-py": {
+    "stars": 13505,
+    "owner": "redis",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "reflex-dev/reflex": {
+    "stars": 28234,
+    "owner": "reflex-dev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "robotframework/robotframework": {
+    "stars": 11478,
+    "owner": "robotframework",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ronaldoussoren/py2app": {
+    "stars": 421,
+    "owner": "ronaldoussoren",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "rq/rq": {
+    "stars": 10605,
+    "owner": "rq",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "rsalmei/alive-progress": {
+    "stars": 6256,
+    "owner": "rsalmei",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "run-llama/llama_index": {
+    "stars": 47740,
+    "owner": "run-llama",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "s3tools/s3cmd": {
+    "stars": 4869,
+    "owner": "s3tools",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "saffsd/langid.py": {
+    "stars": 2455,
+    "owner": "saffsd",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "saltstack/salt": {
+    "stars": 15281,
+    "owner": "saltstack",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "samuelcolvin/watchfiles": {
+    "stars": 2444,
+    "owner": "samuelcolvin",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sanic-org/sanic": {
+    "stars": 18639,
+    "owner": "sanic-org",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "scanny/python-pptx": {
+    "stars": 3233,
+    "owner": "scanny",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "schematics/schematics": {
+    "stars": 2591,
+    "owner": "schematics",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "scottrogowski/code2flow": {
+    "stars": 4545,
+    "owner": "scottrogowski",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "scrapy/scrapy": {
+    "stars": 60855,
+    "owner": "scrapy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sdispater/pendulum": {
+    "stars": 6628,
+    "owner": "python-pendulum",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sdispater/poetry": {
+    "stars": 34316,
+    "owner": "python-poetry",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sebastien/cuisine": {
+    "stars": 1270,
+    "owner": "sebastien",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "secdev/scapy": {
+    "stars": 12108,
+    "owner": "secdev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sehmaschine/django-grappelli": {
+    "stars": 3927,
+    "owner": "sehmaschine",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "selwin/python-user-agents": {
+    "stars": 1520,
+    "owner": "selwin",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sergree/matchering": {
+    "stars": 2446,
+    "owner": "sergree",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "shahraizali/awesome-django": {
+    "stars": 1901,
+    "owner": "shahraizali",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "shapely/shapely": {
+    "stars": 4395,
+    "owner": "shapely",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sherlock-project/sherlock": {
+    "stars": 73803,
+    "owner": "sherlock-project",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "simonw/datasette": {
+    "stars": 10835,
+    "owner": "simonw",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "simonw/sqlite-utils": {
+    "stars": 2019,
+    "owner": "simonw",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sirfz/tesserocr": {
+    "stars": 2160,
+    "owner": "sirfz",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "skorokithakis/shortuuid": {
+    "stars": 2178,
+    "owner": "skorokithakis",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sloria/doitlive": {
+    "stars": 3566,
+    "owner": "sloria",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sphinx-doc/sphinx": {
+    "stars": 7721,
+    "owner": "sphinx-doc",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "spotify/annoy": {
+    "stars": 14181,
+    "owner": "spotify",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "spotify/luigi": {
+    "stars": 18694,
+    "owner": "spotify",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "spulec/freezegun": {
+    "stars": 4498,
+    "owner": "spulec",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "spyder-ide/spyder": {
+    "stars": 9163,
+    "owner": "spyder-ide",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sqlalchemy/dogpile.cache": {
+    "stars": 291,
+    "owner": "sqlalchemy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sqlmapproject/sqlmap": {
+    "stars": 36853,
+    "owner": "sqlmapproject",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "stanfordnlp/stanza": {
+    "stars": 7739,
+    "owner": "stanfordnlp",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "statsmodels/statsmodels": {
+    "stars": 11298,
+    "owner": "statsmodels",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "stchris/untangle": {
+    "stars": 631,
+    "owner": "stchris",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "strawberry-graphql/strawberry-django": {
+    "stars": 488,
+    "owner": "strawberry-graphql",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "streamlit/streamlit": {
+    "stars": 43924,
+    "owner": "streamlit",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sunainapai/makesite": {
+    "stars": 1872,
+    "owner": "sunainapai",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "sympy/sympy": {
+    "stars": 14495,
+    "owner": "sympy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tartley/colorama": {
+    "stars": 3770,
+    "owner": "tartley",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tayllan/awesome-algorithms": {
+    "stars": 24835,
+    "owner": "tayllan",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tensorflow/tensorflow": {
+    "stars": 194201,
+    "owner": "tensorflow",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "thauber/django-schedule": {
+    "stars": 850,
+    "owner": "thauber",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "thumbor/thumbor": {
+    "stars": 10465,
+    "owner": "thumbor",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tiangolo/fastapi": {
+    "stars": 96302,
+    "owner": "fastapi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tiangolo/typer": {
+    "stars": 19041,
+    "owner": "fastapi",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "timofurrer/awesome-asyncio": {
+    "stars": 5030,
+    "owner": "timofurrer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "timofurrer/try": {
+    "stars": 751,
+    "owner": "timofurrer",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "timothycrosley/isort": {
+    "stars": 6916,
+    "owner": "PyCQA",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tmux-python/tmuxp": {
+    "stars": 4451,
+    "owner": "tmux-python",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tmux/tmux": {
+    "stars": 43165,
+    "owner": "tmux",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tomerfiliba/rpyc": {
+    "stars": 1693,
+    "owner": "tomerfiliba-org",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tomschimansky/customtkinter": {
+    "stars": 13223,
+    "owner": "TomSchimansky",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tornadoweb/tornado": {
+    "stars": 22406,
+    "owner": "tornadoweb",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tqdm/tqdm": {
+    "stars": 31040,
+    "owner": "tqdm",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "trustedsec/social-engineer-toolkit": {
+    "stars": 14671,
+    "owner": "trustedsec",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "twisted/treq": {
+    "stars": 606,
+    "owner": "twisted",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "twisted/twisted": {
+    "stars": 5951,
+    "owner": "twisted",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "tyiannak/pyAudioAnalysis": {
+    "stars": 6234,
+    "owner": "tyiannak",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "typeddjango/awesome-python-typing": {
+    "stars": 1950,
+    "owner": "typeddjango",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ultraplot/UltraPlot": {
+    "stars": 279,
+    "owner": "Ultraplot",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "un33k/python-slugify": {
+    "stars": 1599,
+    "owner": "un33k",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "unclecode/crawl4ai": {
+    "stars": 62122,
+    "owner": "unclecode",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "unfoldadmin/django-unfold": {
+    "stars": 3369,
+    "owner": "unfoldadmin",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "uralbash/awesome-pyramid": {
+    "stars": 570,
+    "owner": "uralbash",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "urllib3/urllib3": {
+    "stars": 4012,
+    "owner": "urllib3",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "vadikko2/python-cqrs": {
+    "stars": 44,
+    "owner": "pypatterns",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "vinta/pangu.py": {
+    "stars": 276,
+    "owner": "vinta",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "vispy/vispy": {
+    "stars": 3558,
+    "owner": "vispy",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "vitali87/code-graph-rag": {
+    "stars": 2131,
+    "owner": "vitali87",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "vllm-project/vllm": {
+    "stars": 73457,
+    "owner": "vllm-project",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "wagtail/wagtail": {
+    "stars": 20240,
+    "owner": "wagtail",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "waylan/Python-Markdown": {
+    "stars": 4186,
+    "owner": "Python-Markdown",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "web2py/pydal": {
+    "stars": 531,
+    "owner": "web2py",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "wireservice/csvkit": {
+    "stars": 6360,
+    "owner": "wireservice",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "wooey/wooey": {
+    "stars": 2218,
+    "owner": "wooey",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "worldveil/dejavu": {
+    "stars": 6736,
+    "owner": "worldveil",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "xonsh/xonsh": {
+    "stars": 9252,
+    "owner": "xonsh",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "yfedoseev/pdf_oxide": {
+    "stars": 431,
+    "owner": "yfedoseev",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "yoloseem/awesome-sphinxdoc": {
+    "stars": 973,
+    "owner": "ygzgxyz",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ytdl-org/youtube-dl": {
+    "stars": 139894,
+    "owner": "ytdl-org",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "zappa/Zappa": {
+    "stars": 3676,
+    "owner": "zappa",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "zauberzeug/nicegui": {
+    "stars": 15518,
+    "owner": "zauberzeug",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "zoofIO/flexx": {
+    "stars": 3343,
+    "owner": "flexxui",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "zopefoundation/ZODB": {
+    "stars": 752,
+    "owner": "zopefoundation",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "ztane/python-Levenshtein": {
+    "stars": 1278,
+    "owner": "ztane",
+    "fetched_at": "2026-03-17T20:08:08.973003+00:00"
+  },
+  "josephmisiti/awesome-machine-learning": {
+    "stars": 72017,
+    "owner": "josephmisiti",
+    "fetched_at": "2026-03-17T20:12:03.066921+00:00"
+  },
+  "sorrycc/awesome-javascript": {
+    "stars": 34931,
+    "owner": "sorrycc",
+    "fetched_at": "2026-03-17T20:12:03.066921+00:00"
+  },
+  "vinta/awesome-python": {
+    "stars": 287640,
+    "owner": "vinta",
+    "fetched_at": "2026-03-17T20:12:03.066921+00:00"
+  }
+}

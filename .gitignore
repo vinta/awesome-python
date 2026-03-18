@@ -1,9 +1,15 @@
+# macOS
 .DS_Store
 
+# python
+.venv/
 *.py[co]
 
-docs/index.md
-site/
+# website
+website/output/
 
-# PyCharm IDE
-.idea
+# claude code
+.claude/skills/
+.superpowers/
+.gstack/
+skills-lock.json
