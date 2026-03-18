@@ -7,7 +7,7 @@
 
 # website
 website/output/
-website/data/github_stars.json
+website/data/
 
 # claude code
 .claude/skills/
