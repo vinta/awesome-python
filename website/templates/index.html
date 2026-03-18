@@ -1,15 +1,20 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <header class="hero">
   <div class="hero-main">
     <div>
       <h1>Awesome Python</h1>
       <p class="hero-sub">
-        {{ subtitle }}<br />Curated by
+        {{ subtitle }}<br />Maintained by
         <a href="https://github.com/vinta" target="_blank" rel="noopener"
           >@vinta</a
         >
-        since 2014.
+        and
+        <a
+          href="https://github.com/JinyangWang27"
+          target="_blank"
+          rel="noopener"
+          >@JinyangWang27</a
+        >.
       </p>
       <a
         href="https://github.com/vinta/awesome-python"
@@ -95,9 +100,21 @@
           {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
           else %}&mdash;{% endif %}
         </td>
-        <td class="col-commit"
-          {% if entry.last_commit_at %}data-commit="{{ entry.last_commit_at }}"{% endif %}
-        >{% if entry.last_commit_at %}<time datetime="{{ entry.last_commit_at }}">{{ entry.last_commit_at[:10] }}</time>{% else %}&mdash;{% endif %}</td>
+        <td
+          class="col-commit"
+          {%
+          if
+          entry.last_commit_at
+          %}data-commit="{{ entry.last_commit_at }}"
+          {%
+          endif
+          %}
+        >
+          {% if entry.last_commit_at %}<time
+            datetime="{{ entry.last_commit_at }}"
+            >{{ entry.last_commit_at[:10] }}</time
+          >{% else %}&mdash;{% endif %}
+        </td>
         <td class="col-cat">
           <button class="tag" data-type="cat" data-value="{{ entry.category }}">
             {{ entry.category }}
@@ -111,8 +128,7 @@
           <div class="expand-content">
             {% if entry.description %}
             <div class="expand-desc">{{ entry.description | safe }}</div>
-            {% endif %}
-            {% if entry.also_see %}
+            {% endif %} {% if entry.also_see %}
             <div class="expand-also-see">
               Also see: {% for see in entry.also_see %}<a
                 href="{{ see.url }}"

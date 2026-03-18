@@ -108,7 +108,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 }
 
 .hero-sub {
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
