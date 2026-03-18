@@ -317,7 +317,6 @@ _Libraries for data analysis._
 - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
-- [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
@@ -971,8 +970,10 @@ _Shells built with Python._
 _Libraries for parsing and manipulating specific text formats._
 
 - General
+  - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
   - [kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
+  - [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 - Office
   - [docxtpl](https://github.com/elapouya/python-docx-template) - Editing a docx document by jinja2 template
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
@@ -1136,7 +1137,6 @@ _Libraries for extracting web contents._
 - [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
 - [requests-html](https://github.com/psf/requests-html) - Pythonic HTML Parsing for Humans.
 - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
-- [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 - [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 
 ## Web Crawling
