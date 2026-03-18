@@ -534,14 +534,16 @@ th[data-sort].sort-asc::after {
   .hero { padding: 2rem 1.25rem 1rem; }
   .controls { padding: 0 1.25rem 0.75rem; }
 
+  .table { table-layout: fixed; }
+
   .table thead th:first-child,
   .table tbody td:first-child { padding-left: 0.5rem; }
 
   .table thead th:last-child,
   .table tbody td:last-child { padding-right: 0.5rem; }
 
-  .col-num { width: 1.75rem; }
-  .col-arrow { width: 1.75rem; }
+  .col-num { width: 2.5rem; }
+  .col-arrow { width: 2rem; }
   .col-cat { display: none; }
   .col-name { white-space: normal; }
   .footer { padding: 1.25rem; justify-content: center; flex-wrap: wrap; }
