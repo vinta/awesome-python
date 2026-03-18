@@ -18,7 +18,7 @@ Your submission must meet **ONE** of the following criteria:
 ### 1. Industry Standard
 
 - The go-to tool that almost everyone uses for a specific use case
-- Examples: Requests, Flask, Pandas, NumPy
+- Examples: requests, flask, pandas, numpy
 - Limit: 1-3 tools per category
 
 ### 2. Rising Star
@@ -26,7 +26,7 @@ Your submission must meet **ONE** of the following criteria:
 - Rapid growth: 5,000+ GitHub stars in less than 2 years
 - Significant community buzz and adoption
 - Solving problems in new or better ways
-- Examples: FastAPI, Ruff, uv
+- Examples: fastapi, ruff, uv
 
 ### 3. Hidden Gem
 
@@ -41,10 +41,14 @@ Your submission must meet **ONE** of the following criteria:
 
 **Use GitHub repository URLs** whenever possible. Projects linked to a GitHub repo are ranked higher on [awesome-python.com](https://awesome-python.com/).
 
+### Naming Convention
+
+Use the **PyPI package name** as the display name so developers can copy it directly to `pip install`. Check the canonical name at `https://pypi.org/pypi/{package}/json`. If the project is not on PyPI, use the GitHub repository name instead.
+
 ### Standard Entry
 
 ```markdown
-- [project-name](https://github.com/owner/repo) - Description ending with period.
+- [pypi-name](https://github.com/owner/repo) - Description ending with period.
 ```
 
 ### Standard Library Module
