@@ -5,7 +5,13 @@ import sys
 import textwrap
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
-from readme_parser import _parse_section_entries, parse_readme, render_inline_html, render_inline_text
+from readme_parser import (
+    _parse_section_entries,
+    _render_section_html,
+    parse_readme,
+    render_inline_html,
+    render_inline_text,
+)
 
 from markdown_it import MarkdownIt
 from markdown_it.tree import SyntaxTreeNode
@@ -303,3 +309,48 @@ class TestParseSectionEntries:
         entries = _parse_section_entries(nodes)
         assert "<script>" not in entries[0]["description"]
         assert "&lt;script&gt;" in entries[0]["description"]
+
+
+class TestRenderSectionHtml:
+    def test_basic_entry(self):
+        nodes = _content_nodes("- [django](https://example.com) - A web framework.\n")
+        html = _render_section_html(nodes)
+        assert 'class="entry"' in html
+        assert 'href="https://example.com"' in html
+        assert "django" in html
+        assert "A web framework." in html
+
+    def test_subcategory_label(self):
+        nodes = _content_nodes(
+            "- Synchronous\n  - [django](https://x.com) - Framework.\n"
+        )
+        html = _render_section_html(nodes)
+        assert 'class="subcat"' in html
+        assert "Synchronous" in html
+        assert 'class="entry"' in html
+
+    def test_sub_entry(self):
+        nodes = _content_nodes(
+            "- [django](https://x.com) - Framework.\n"
+            "  - [awesome-django](https://y.com)\n"
+        )
+        html = _render_section_html(nodes)
+        assert 'class="entry-sub"' in html
+        assert "awesome-django" in html
+
+    def test_link_only_entry(self):
+        nodes = _content_nodes("- [tool](https://x.com)\n")
+        html = _render_section_html(nodes)
+        assert 'class="entry"' in html
+        assert 'href="https://x.com"' in html
+        assert "tool" in html
+
+    def test_xss_escaped_in_name(self):
+        nodes = _content_nodes('- [<img onerror=alert(1)>](https://x.com) - Bad.\n')
+        html = _render_section_html(nodes)
+        assert "onerror" not in html or "&" in html
+
+    def test_xss_escaped_in_subcat(self):
+        nodes = _content_nodes("- <script>alert(1)</script>\n")
+        html = _render_section_html(nodes)
+        assert "<script>" not in html

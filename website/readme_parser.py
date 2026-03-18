@@ -269,11 +269,67 @@ def _parse_section_entries(content_nodes: list[SyntaxTreeNode]) -> list[ParsedEn
     return entries
 
 
-# --- Content HTML rendering (stub for Task 4) --------------------------------
+# --- Content HTML rendering --------------------------------------------------
+
+
+def _render_bullet_list_html(
+    bullet_list: SyntaxTreeNode,
+    *,
+    is_sub: bool = False,
+) -> str:
+    """Render a bullet_list node to HTML with entry/entry-sub/subcat classes."""
+    out: list[str] = []
+
+    for list_item in bullet_list.children:
+        if list_item.type != "list_item":
+            continue
+
+        inline = _find_inline(list_item)
+        if inline is None:
+            continue
+
+        first_link = _find_first_link(inline)
+
+        if first_link is None:
+            # Subcategory label
+            label = str(escape(render_inline_text(inline.children)))
+            out.append(f'<div class="subcat">{label}</div>')
+            nested = _find_child(list_item, "bullet_list")
+            if nested:
+                out.append(_render_bullet_list_html(nested, is_sub=False))
+            continue
+
+        # Entry with a link
+        name = str(escape(render_inline_text(first_link.children)))
+        url = str(escape(first_link.attrGet("href") or ""))
+
+        if is_sub:
+            out.append(f'<div class="entry-sub"><a href="{url}">{name}</a></div>')
+        else:
+            desc = _extract_description_html(inline, first_link)
+            if desc:
+                out.append(
+                    f'<div class="entry"><a href="{url}">{name}</a>'
+                    f'<span class="sep">&mdash;</span>{desc}</div>'
+                )
+            else:
+                out.append(f'<div class="entry"><a href="{url}">{name}</a></div>')
+
+        # Nested items under an entry with a link are sub-entries
+        nested = _find_child(list_item, "bullet_list")
+        if nested:
+            out.append(_render_bullet_list_html(nested, is_sub=True))
+
+    return "\n".join(out)
 
 
 def _render_section_html(content_nodes: list[SyntaxTreeNode]) -> str:
-    return ""
+    """Render a section's content nodes to HTML."""
+    parts: list[str] = []
+    for node in content_nodes:
+        if node.type == "bullet_list":
+            parts.append(_render_bullet_list_html(node))
+    return "\n".join(parts)
 
 
 # --- Section splitting -------------------------------------------------------
