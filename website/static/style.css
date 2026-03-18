@@ -407,16 +407,14 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   background: var(--bg-input);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
+  gap: 0.5rem;
 }
 
-.footer a { color: var(--text-muted); text-decoration: none; }
-.footer a:hover { color: var(--accent); }
+.footer a { color: var(--accent); text-decoration: none; }
+.footer a:hover { color: var(--accent-hover); text-decoration: underline; }
 
-.footer-links {
-  display: flex;
-  gap: 1rem;
-}
+.footer-sep { color: var(--border-strong); }
 
 /* === Responsive === */
 @media (max-width: 900px) {
