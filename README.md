@@ -380,7 +380,7 @@ _Libraries for connecting and operating databases._
   - [pymssql](https://github.com/pymssql/pymssql) - A simple database interface to Microsoft SQL Server.
 - NoSQL Databases
   - [cassandra-driver](https://github.com/datastax/python-driver) - The Python Driver for Apache Cassandra.
-  - [Django MongoDB Backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
+  - [django-mongodb-backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
   - [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
@@ -411,7 +411,7 @@ _Libraries for debugging code._
   - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
-  - [memory-graph](https://github.com/bterwijn/memory_graph) - Visualize Python data at runtime to debug references, mutability, and aliasing.
+  - [memory_graph](https://github.com/bterwijn/memory_graph) - Visualize Python data at runtime to debug references, mutability, and aliasing.
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
 
 ## Deep Learning
@@ -591,7 +591,7 @@ _Libraries for working with GraphQL._
 _Awesome game development libraries._
 
 - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
-- [Cocos2d](https://github.com/los-cocos/cocos) - A framework for building 2D games, demos, and other graphical/interactive applications.
+- [cocos](https://github.com/los-cocos/cocos) - A framework for building 2D games, demos, and other graphical/interactive applications.
 - [harfang3d](https://github.com/harfang3d/harfang3d) - Python framework for 3D, VR and game development.
 - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
 - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
@@ -700,7 +700,7 @@ _Libraries for scheduling jobs._
 - [plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 - [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
-- [Spiff](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
+- [SpiffWorkflow](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
 - [TaskFlow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
 
 ## Logging
@@ -719,12 +719,12 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 
 - [agno](https://github.com/agno-agi/agno) - Open-source Python library for building AI agents and agentic systems.
 - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
-- [Feature-engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
+- [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 - [H2O](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
 - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
-- [LlamaIndex](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+- [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
 - [Metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
@@ -914,13 +914,13 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
 - [cclib](https://github.com/cclib/cclib) - A library for parsing and interpreting the results of computational chemistry packages.
 - [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
-- [Karate Club](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
+- [karateclub](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
 - [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
 - [networkx](https://github.com/networkx/networkx) - A high-productivity software for complex networks.
 - [nipy](https://github.com/nipy/nipy) - A collection of neuroimaging toolkits.
 - [numpy](https://github.com/numpy/numpy) - A fundamental package for scientific computing with Python.
 - [obspy](https://github.com/obspy/obspy) - A Python toolbox for seismology.
-- [Open Babel](https://github.com/openbabel/openbabel) - A chemical toolbox designed to speak the many languages of chemical data.
+- [openbabel](https://github.com/openbabel/openbabel) - A chemical toolbox designed to speak the many languages of chemical data.
 - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
 - [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 - [PyMC](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
@@ -1027,7 +1027,7 @@ _Libraries for working with task queues._
 _Libraries and tools for templating and lexing._
 
 - [genshi](https://github.com/edgewall/genshi) - Python templating toolkit for generation of web-aware output.
-- [Jinja2](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
+- [jinja](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
 - [mako](https://github.com/sqlalchemy/mako) - Hyperfast and lightweight templating for the Python platform.
 
 ## Testing
@@ -1038,7 +1038,7 @@ _Libraries for testing codebases and generating test data._
   - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
   - [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2`.
   - [pytest](https://github.com/pytest-dev/pytest) - A mature full-featured Python testing tool.
-  - [Robot Framework](https://github.com/robotframework/robotframework) - A generic test automation framework.
+  - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
   - [scanapi](https://github.com/scanapi/scanapi) - Automated Testing and Documentation for your REST API.
   - [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 - Test Runners
@@ -1059,7 +1059,7 @@ _Libraries for testing codebases and generating test data._
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
-  - [VCR.py](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
+  - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 - Object Factories
   - [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
   - [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supports Django, Flask, SQLAlchemy, Peewee and etc.
