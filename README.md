@@ -986,11 +986,14 @@ _Libraries for parsing and manipulating specific text formats._
   - [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
   - [ReportLab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
 - Markdown
-  - [Jimmy](https://github.com/marph91/jimmy) - Convert your notes to Markdown.
-  - [Mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
-  - [Python-Markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
+  - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - YAML
   - [PyYAML](https://github.com/yaml/pyyaml) - YAML implementations for Python.
+- TOML
+  - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
 - CSV
   - [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
 - Archive
