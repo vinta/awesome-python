@@ -919,6 +919,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [cclib](https://github.com/cclib/cclib) - A library for parsing and interpreting the results of computational chemistry packages.
 - [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
 - [karateclub](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
+- [lfm-physics](https://github.com/gpartin/lfm-physics) - Lattice Field Medium physics simulation library with GPU acceleration.
 - [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
 - [networkx](https://github.com/networkx/networkx) - A high-productivity software for complex networks.
 - [nipy](https://github.com/nipy/nipy) - A collection of neuroimaging toolkits.
