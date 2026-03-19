@@ -914,7 +914,6 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 
 - [astropy](https://github.com/astropy/astropy) - A community Python library for Astronomy.
 - [bcbb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
-- [bcbio-nextgen](https://github.com/chapmanb/bcbio-nextgen) - Providing best-practice pipelines for fully automated high throughput sequencing analysis.
 - [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
 - [cclib](https://github.com/cclib/cclib) - A library for parsing and interpreting the results of computational chemistry packages.
 - [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
