@@ -84,8 +84,8 @@
       <tr
         class="row"
         role="button"
-        data-cat="{{ entry.category }}"
-        data-group="{{ entry.group }}"
+        data-cats="{{ entry.categories | join('||') }}"
+        data-groups="{{ entry.groups | join('||') }}"
         tabindex="0"
         aria-expanded="false"
         aria-controls="expand-{{ loop.index }}"
@@ -116,11 +116,13 @@
           >{% else %}&mdash;{% endif %}
         </td>
         <td class="col-cat">
-          <button class="tag" data-type="cat" data-value="{{ entry.category }}">
-            {{ entry.category }}
+          {% for cat in entry.categories %}
+          <button class="tag" data-type="cat" data-value="{{ cat }}">
+            {{ cat }}
           </button>
-          <button class="tag tag-group" data-type="group" data-value="{{ entry.group }}">
-            {{ entry.group }}
+          {% endfor %}
+          <button class="tag tag-group" data-type="group" data-value="{{ entry.groups[0] }}">
+            {{ entry.groups[0] }}
           </button>
         </td>
         <td class="col-arrow"><span class="arrow">&rarr;</span></td>

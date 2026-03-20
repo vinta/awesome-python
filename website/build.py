@@ -243,29 +243,42 @@ def extract_entries(
     categories: list[dict],
     groups: list[dict],
 ) -> list[dict]:
-    """Flatten categories into individual library entries for table display."""
+    """Flatten categories into individual library entries for table display.
+
+    Entries appearing in multiple categories are merged into a single entry
+    with lists of categories and groups.
+    """
     cat_to_group: dict[str, str] = {}
     for group in groups:
         for cat in group["categories"]:
             cat_to_group[cat["name"]] = group["name"]
 
+    seen: dict[str, dict] = {}  # url -> entry
     entries: list[dict] = []
     for cat in categories:
         group_name = cat_to_group.get(cat["name"], "Other")
         for entry in cat["entries"]:
-            entries.append(
-                {
+            url = entry["url"]
+            if url in seen:
+                existing = seen[url]
+                if cat["name"] not in existing["categories"]:
+                    existing["categories"].append(cat["name"])
+                if group_name not in existing["groups"]:
+                    existing["groups"].append(group_name)
+            else:
+                merged = {
                     "name": entry["name"],
-                    "url": entry["url"],
+                    "url": url,
                     "description": entry["description"],
-                    "category": cat["name"],
-                    "group": group_name,
+                    "categories": [cat["name"]],
+                    "groups": [group_name],
                     "stars": None,
                     "owner": None,
                     "last_commit_at": None,
                     "also_see": entry["also_see"],
                 }
-            )
+                seen[url] = merged
+                entries.append(merged)
     return entries
 
 

@@ -59,7 +59,8 @@ function applyFilters() {
 
     // Category/group filter
     if (activeFilter) {
-      show = row.dataset[activeFilter.type] === activeFilter.value;
+      var attr = activeFilter.type === 'cat' ? row.dataset.cats : row.dataset.groups;
+      show = attr ? attr.split('||').indexOf(activeFilter.value) !== -1 : false;
     }
 
     // Text search
