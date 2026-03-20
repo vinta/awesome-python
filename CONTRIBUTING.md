@@ -80,8 +80,9 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 ## Adding a New Section
 
 1. Add section description in italics: `*Libraries for doing X.*`
-2. Add the section title to the Table of Contents
-3. Keep sections in alphabetical order
+2. Add the section under the appropriate thematic group (e.g., **AI & ML**, **Web & API**)
+3. Add the section title to the Table of Contents under its group
+4. Keep entries in alphabetical order within each category
 
 ## Review Process
 
