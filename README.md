@@ -722,6 +722,7 @@ _Libraries for scheduling jobs._
 
 _Libraries for generating and working with logs._
 
+- [logfmter](https://github.com/josheppinette/python-logfmter) - A standard library compatible logfmt formatter.
 - [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
