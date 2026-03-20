@@ -160,7 +160,6 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 
 - [catboost](https://github.com/catboost/catboost) - A fast, scalable, high performance gradient boosting on decision trees library.
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
-- [karateclub](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [lightgbm](https://github.com/microsoft/LightGBM) - A fast, distributed, high performance gradient boosting framework.
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
