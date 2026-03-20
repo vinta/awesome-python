@@ -294,6 +294,7 @@ _Useful CLI-based tools for productivity._
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
   - [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
   - [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
+  - [nless](https://github.com/mpryor/nothing-less) - A TUI pager for exploring and analyzing tabular data with vi keybindings.
   - [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
 
 ## Computer Vision
