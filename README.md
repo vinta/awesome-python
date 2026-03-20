@@ -100,24 +100,18 @@ _Libraries for administrative interfaces._
 
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
-- [agno](https://github.com/agno-agi/agno) - Open-source Python library for building AI agents and agentic systems.
-- [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
-- [autoresearch](https://github.com/karpathy/autoresearch) - AI agents running autonomous research experiments on single-GPU LLM training.
-- [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
-- [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
-- [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
-- [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
-- [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
-- [praisonai](https://github.com/MervinPraison/PraisonAI) - Production-ready Multi-AI Agents framework with self-reflection, 100+ LLM support, MCP integration, and agentic workflows.
-- [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
-- [ragflow](https://github.com/infiniflow/ragflow) - An open-source RAG engine for document understanding and question answering with LLMs.
-- [ccb](https://github.com/bfly123/claude_code_bridge) - A CLI tool to orchestrate multiple LLMs (Claude, Gemini, etc.) in Tmux panes with cross-agent interaction.
-- [code-graph-rag](https://github.com/vitali87/code-graph-rag) - Builds knowledge graphs from multi-language codebases using Tree-sitter and Memgraph, enabling natural language querying of code structure.
-- [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
-- [rasa](https://github.com/RasaHQ/rasa) - An open-source machine learning framework for automated text and voice-based conversations.
-- [smolagents](https://github.com/huggingface/smolagents) - A lightweight library for building agents that reason and act through code.
-- [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pretrained transformer models for NLP, vision, and audio tasks.
-- [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
+- Frameworks
+  - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
+  - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
+  - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
+  - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
+  - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
+  - [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+  - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
+- Pretrained Models and Inference
+  - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
+  - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pretrained transformer models for NLP, vision, and audio tasks.
+  - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
 
 ## Algorithms and Design Patterns
 
@@ -368,21 +362,24 @@ _Libraries for validating data. Used for forms in many cases._
 
 _Libraries for visualizing data. Also see [awesome-javascript](https://github.com/sorrycc/awesome-javascript#data-visualization)._
 
-- [altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
-- [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
-- [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
-- [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
-- [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
-- [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
-- [plotly](https://github.com/plotly/plotly.py) - Interactive graphing library for Python.
-- [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
-- [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
-- [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
-- [pyqtgraph](https://github.com/pyqtgraph/pyqtgraph) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
-- [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
-- [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
-- [ultraplot](https://github.com/ultraplot/UltraPlot) - Matplotlib wrapper for publication-ready scientific figures with minimal code. Includes advanced subplot management, panel layouts, and batteries-included geoscience plotting.
-- [vispy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+- Plotting
+  - [altair](https://github.com/altair-viz/altair) - Declarative statistical visualization library for Python.
+  - [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
+  - [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
+  - [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
+  - [plotly](https://github.com/plotly/plotly.py) - Interactive graphing library for Python.
+  - [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
+  - [pygal](https://github.com/Kozea/pygal) - A Python SVG Charts Creator.
+  - [pyqtgraph](https://github.com/pyqtgraph/pyqtgraph) - Interactive and realtime 2D/3D/Image plotting and science/engineering widgets.
+  - [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
+  - [ultraplot](https://github.com/ultraplot/UltraPlot) - Matplotlib wrapper for publication-ready scientific figures with minimal code. Includes advanced subplot management, panel layouts, and batteries-included geoscience plotting.
+  - [vispy](https://github.com/vispy/vispy) - High-performance scientific visualization based on OpenGL.
+- Specialized
+  - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
+  - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](http://www.graphviz.org/).
+- Dashboards and Apps
+  - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
+  - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 
 ## Database
 
@@ -584,24 +581,27 @@ _Functional Programming with Python._
 
 _Libraries for working with graphical user interface applications._
 
-- [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
-- [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
-- [dearpygui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
-- [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
-- [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
-- [flexx](https://github.com/zoofIO/flexx) - Flexx is a pure Python toolkit for creating GUI's, that uses web technology for its rendering.
-- [gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
-- [kivy](https://github.com/kivy/kivy) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
-- [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
-- [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
-- [pygobject](https://github.com/GNOME/pygobject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
-- [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
-- [pyside](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
-- [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
-- [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
-- [toga](https://github.com/pybee/toga) - A Python native, OS native GUI toolkit.
-- [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
-- [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
+- Desktop
+  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
+  - [dearpygui](https://github.com/RaylockLLC/DearPyGui/) - A Simple GPU accelerated Python GUI framework
+  - [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
+  - [kivy](https://github.com/kivy/kivy) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
+  - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
+  - [pygobject](https://github.com/GNOME/pygobject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
+  - [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
+  - [pyside](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
+  - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
+  - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
+  - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
+- Web-based
+  - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
+  - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
+  - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
+- Terminal
+  - [curses](https://docs.python.org/3/library/curses.html) - Built-in wrapper for [ncurses](http://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
+  - [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
+- Wrappers
+  - [gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
 
 ## Game Development
 
@@ -885,28 +885,31 @@ _RPC-compatible servers._
 
 _Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists)._
 
-- [astropy](https://github.com/astropy/astropy) - A community Python library for Astronomy.
-- [bcbb](https://github.com/chapmanb/bcbb) - Collection of useful code related to biological analysis.
-- [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
-- [cclib](https://github.com/cclib/cclib) - A library for parsing and interpreting the results of computational chemistry packages.
-- [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
-- [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
-- [networkx](https://github.com/networkx/networkx) - A high-productivity software for complex networks.
-- [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
-- [nipy](https://github.com/nipy/nipy) - A collection of neuroimaging toolkits.
-- [numpy](https://github.com/numpy/numpy) - A fundamental package for scientific computing with Python.
-- [obspy](https://github.com/obspy/obspy) - A Python toolbox for seismology.
-- [openbabel](https://github.com/openbabel/openbabel) - A chemical toolbox designed to speak the many languages of chemical data.
-- [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
-- [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
-- [pymc](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
-- [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
-- [rdkit](https://github.com/rdkit/rdkit) - Cheminformatics and Machine Learning Software.
-- [scipy](https://github.com/scipy/scipy) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
-- [shapely](https://github.com/shapely/shapely) - Manipulation and analysis of geometric objects in the Cartesian plane.
-- [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
-- [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
-- [sympy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
+- Core
+  - [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
+  - [numpy](https://github.com/numpy/numpy) - A fundamental package for scientific computing with Python.
+  - [scipy](https://github.com/scipy/scipy) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
+  - [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
+  - [sympy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
+- Biology and Chemistry
+  - [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
+  - [cclib](https://github.com/cclib/cclib) - A library for parsing and interpreting the results of computational chemistry packages.
+  - [openbabel](https://github.com/openbabel/openbabel) - A chemical toolbox designed to speak the many languages of chemical data.
+  - [rdkit](https://github.com/rdkit/rdkit) - Cheminformatics and Machine Learning Software.
+- Physics and Engineering
+  - [astropy](https://github.com/astropy/astropy) - A community Python library for Astronomy.
+  - [obspy](https://github.com/obspy/obspy) - A Python toolbox for seismology.
+  - [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
+  - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
+- Simulation and Modeling
+  - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
+  - [pymc](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
+  - [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
+- Other
+  - [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
+  - [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
+  - [networkx](https://github.com/networkx/networkx) - A high-productivity software for complex networks.
+  - [shapely](https://github.com/shapely/shapely) - Manipulation and analysis of geometric objects in the Cartesian plane.
 
 ## Search
 
