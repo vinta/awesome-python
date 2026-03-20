@@ -9,7 +9,7 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Admin Panels](#admin-panels)
 - [AI and Agents](#ai-and-agents)
 - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-- [ASGI Servers](#asgi-servers)
+- [Web Servers](#web-servers)
 - [Asynchronous Programming](#asynchronous-programming)
 - [Audio](#audio)
 - [Authentication](#authentication)
@@ -50,7 +50,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Image Processing](#image-processing)
 - [Implementations](#implementations)
 - [Interactive Interpreter](#interactive-interpreter)
-- [Internationalization](#internationalization)
 - [Job Scheduler](#job-scheduler)
 - [Logging](#logging)
 - [Machine Learning](#machine-learning)
@@ -60,20 +59,15 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [ORM](#orm)
 - [Package Management](#package-management)
 - [Package Repositories](#package-repositories)
-- [Penetration testing](#penetration-testing)
-- [Permissions](#permissions)
+- [Penetration Testing](#penetration-testing)
 - [Processes](#processes)
 - [Quantum Computing](#quantum-computing)
 - [Recommender Systems](#recommender-systems)
-- [Refactoring](#refactoring)
-- [RESTful API](#restful-api)
-- [Robotics](#robotics)
+- [Web APIs](#web-apis)
 - [RPC Servers](#rpc-servers)
 - [Science](#science)
 - [Search](#search)
 - [Serialization](#serialization)
-- [Serverless Frameworks](#serverless-frameworks)
-- [Shell](#shell)
 - [Specific Formats Processing](#specific-formats-processing)
 - [Static Site Generator](#static-site-generator)
 - [Task Queues](#task-queues)
@@ -87,7 +81,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Web Crawling](#web-crawling)
 - [Web Frameworks](#web-frameworks)
 - [WebSocket](#websocket)
-- [WSGI Servers](#wsgi-servers)
 
 ---
 
@@ -135,14 +128,20 @@ _Python implementation of data structures, algorithms and design patterns. Also 
   - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
   - [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
 
-## ASGI Servers
+## Web Servers
 
-_[ASGI](https://asgi.readthedocs.io/en/latest/)-compatible web servers._
+_ASGI and WSGI compatible web servers._
 
-- [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
-- [granian](https://github.com/emmett-framework/granian) - A Rust HTTP server for Python applications built on top of Hyper and Tokio, supporting WSGI/ASGI/RSGI.
-- [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
-- [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+- ASGI
+  - [daphne](https://github.com/django/daphne) - A HTTP, HTTP2 and WebSocket protocol server for ASGI and ASGI-HTTP.
+  - [granian](https://github.com/emmett-framework/granian) - A Rust HTTP server for Python applications built on top of Hyper and Tokio, supporting WSGI/ASGI/RSGI.
+  - [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
+  - [uvicorn](https://github.com/encode/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
+- WSGI
+  - [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, ported from Ruby's Unicorn project.
+  - [uwsgi](https://github.com/unbit/uwsgi) - A project aims at developing a full stack for building hosting services, written in C.
+  - [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
+  - [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
 ## Asynchronous Programming
 
@@ -191,6 +190,9 @@ _Libraries for implementing authentication schemes._
 - JWT
   - [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
   - [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
+- Permissions
+  - [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
+  - [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
 
 ## Build Tools
 
@@ -256,6 +258,9 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
+- Refactoring
+  - [bowler](https://github.com/facebookincubator/Bowler) - Safe code refactoring for modern Python.
+  - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
 - Static Type Annotations Generators
   - [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
   - [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
@@ -293,6 +298,7 @@ _Useful CLI-based tools for productivity._
   - [fpp](https://github.com/facebook/PathPicker) - Select files out of bash output.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
+  - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
 - CLI Enhancements
   - [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
@@ -466,6 +472,9 @@ _Software and libraries for DevOps._
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 - Backup
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+- Serverless
+  - [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
+  - [zappa](https://github.com/zappa/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
 - Chaos Engineering
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
 
@@ -599,13 +608,6 @@ _Libraries for working with graphical user interface applications._
 - [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
 - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
 
-## GraphQL
-
-_Libraries for working with GraphQL._
-
-- [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
-- [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
-
 ## Game Development
 
 _Awesome game development libraries._
@@ -701,12 +703,6 @@ _Interactive Python interpreters (REPL)._
   - [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
 - [marimo](https://github.com/marimo-team/marimo) - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
 - [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
-
-## Internationalization
-
-_Libraries for working with i18n._
-
-- [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
 
 ## Job Scheduler
 
@@ -840,13 +836,6 @@ _Frameworks and tools for penetration testing._
 - [sherlock](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 
-## Permissions
-
-_Libraries that allow or deny users access to data or functionality._
-
-- [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
-- [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
-
 ## Processes
 
 _Libraries for starting and communicating with OS processes._
@@ -874,38 +863,27 @@ _Libraries for building recommender systems._
 - [scikit-surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 - [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 
-## Refactoring
+## Web APIs
 
-_Refactoring tools and libraries for Python._
-
-- [bowler](https://github.com/facebookincubator/Bowler) - Safe code refactoring for modern Python.
-- [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
-
-## RESTful API
-
-_Libraries for building RESTful APIs._
+_Libraries for building RESTful and GraphQL APIs._
 
 - Django
   - [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
   - [django-tastypie](https://github.com/django-tastypie/django-tastypie) - Creating delicious APIs for Django apps.
+  - [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
 - Flask
   - [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
   - [flask-api](https://github.com/flask-api/flask-api) - Browsable Web APIs for Flask.
   - [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
 - Pyramid
   - [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
-- Framework agnostic
+- Framework Agnostic
   - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
   - [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
+  - [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
   - [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
   - [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
   - [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
-
-## Robotics
-
-_Libraries for robotics._
-
-- [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 
 ## RPC Servers
 
@@ -933,6 +911,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
 - [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
 - [pymc](https://github.com/pymc-devs/pymc3) - Markov Chain Monte Carlo sampling toolkit.
+- [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 - [rdkit](https://github.com/rdkit/rdkit) - Cheminformatics and Machine Learning Software.
 - [scipy](https://github.com/scipy/scipy) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
 - [shapely](https://github.com/shapely/shapely) - Manipulation and analysis of geometric objects in the Cartesian plane.
@@ -960,19 +939,6 @@ _Libraries for serializing complex data types._
 - [pysimdjson](https://github.com/TkTech/pysimdjson) - A Python bindings for [simdjson](https://github.com/lemire/simdjson).
 - [python-rapidjson](https://github.com/python-rapidjson/python-rapidjson) - A Python wrapper around [RapidJSON](https://github.com/Tencent/rapidjson).
 - [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
-
-## Serverless Frameworks
-
-_Frameworks for developing serverless Python code._
-
-- [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
-- [zappa](https://github.com/zappa/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
-
-## Shell
-
-_Shells built with Python._
-
-- [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
 
 ## Specific Formats Processing
 
@@ -1085,6 +1051,7 @@ _Libraries for testing codebases and generating test data._
 _Libraries for parsing and manipulating plain texts._
 
 - General
+  - [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
   - [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
   - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
@@ -1187,15 +1154,6 @@ _Libraries for working with WebSocket._
 - [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 - [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 - [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
-
-## WSGI Servers
-
-_WSGI-compatible web servers._
-
-- [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, ported from Ruby's Unicorn project.
-- [uwsgi](https://github.com/unbit/uwsgi) - A project aims at developing a full stack for building hosting services, written in C.
-- [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
-- [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
 # Resources
 
