@@ -9,7 +9,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Admin Panels](#admin-panels)
 - [AI and Agents](#ai-and-agents)
 - [Algorithms and Design Patterns](#algorithms-and-design-patterns)
-- [Web Servers](#web-servers)
 - [Asynchronous Programming](#asynchronous-programming)
 - [Audio](#audio)
 - [Authentication](#authentication)
@@ -26,8 +25,8 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Data Analysis](#data-analysis)
 - [Data Validation](#data-validation)
 - [Data Visualization](#data-visualization)
-- [Database Drivers](#database-drivers)
 - [Database](#database)
+- [Database Drivers](#database-drivers)
 - [Date and Time](#date-and-time)
 - [Debugging Tools](#debugging-tools)
 - [Deep Learning](#deep-learning)
@@ -35,10 +34,11 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Distributed Computing](#distributed-computing)
 - [Distribution](#distribution)
 - [Documentation](#documentation)
-- [Downloader](#downloader)
+- [Downloaders](#downloaders)
 - [Editor Plugins and IDEs](#editor-plugins-and-ides)
 - [Email](#email)
 - [Environment Management](#environment-management)
+- [File Format Processing](#file-format-processing)
 - [File Manipulation](#file-manipulation)
 - [Functional Programming](#functional-programming)
 - [Game Development](#game-development)
@@ -50,7 +50,7 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Image Processing](#image-processing)
 - [Implementations](#implementations)
 - [Interactive Interpreter](#interactive-interpreter)
-- [Job Scheduler](#job-scheduler)
+- [Job Schedulers](#job-schedulers)
 - [Logging](#logging)
 - [Machine Learning](#machine-learning)
 - [Miscellaneous](#miscellaneous)
@@ -63,23 +63,23 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Processes](#processes)
 - [Quantum Computing](#quantum-computing)
 - [Recommender Systems](#recommender-systems)
-- [Web APIs](#web-apis)
 - [RPC Servers](#rpc-servers)
 - [Science](#science)
 - [Search](#search)
 - [Serialization](#serialization)
-- [Specific Formats Processing](#specific-formats-processing)
-- [Static Site Generator](#static-site-generator)
+- [Static Site Generators](#static-site-generators)
 - [Task Queues](#task-queues)
-- [Template Engine](#template-engine)
+- [Template Engines](#template-engines)
 - [Testing](#testing)
 - [Text Processing](#text-processing)
 - [URL Manipulation](#url-manipulation)
 - [Video](#video)
+- [Web APIs](#web-apis)
 - [Web Asset Management](#web-asset-management)
-- [Web Content Extracting](#web-content-extracting)
+- [Web Content Extraction](#web-content-extraction)
 - [Web Crawling](#web-crawling)
 - [Web Frameworks](#web-frameworks)
+- [Web Servers](#web-servers)
 - [WebSocket](#websocket)
 
 ---
@@ -346,7 +346,11 @@ _Libraries for data analysis._
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
+- [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
+- [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
+- [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
+- [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
 
 ## Data Validation
 
@@ -516,47 +520,33 @@ _Libraries for generating project documentation._
 - [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 - [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 
-## Downloader
+## Downloaders
 
 _Libraries for downloading._
 
-- General
-  - [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
-  - [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
-- Financial Data
-  - [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
-  - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
-  - [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
-  - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
+- [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
+- [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
 
 ## Editor Plugins and IDEs
 
-- Emacs
-  - [elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
-- Vim
-  - [jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
-  - [python-mode](https://github.com/python-mode/python-mode) - An all in one plugin for turning Vim into a Python IDE.
-  - [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
-- Visual Studio
-  - [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
-- Visual Studio Code
-  - [Python for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
-- IDE
-  - [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
-  - [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+- [elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
+- [jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
+- [PTVS](https://github.com/Microsoft/PTVS) - Python Tools for Visual Studio.
+- [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
+- [Python for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
+- [python-mode](https://github.com/python-mode/python-mode) - An all in one plugin for turning Vim into a Python IDE.
+- [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
+- [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
 
 ## Email
 
 _Libraries for sending and parsing email._
 
-- Mail Servers
-  - [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
-- Clients
-  - [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
-  - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
-- Others
-  - [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
-  - [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
+- [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
+- [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
+- [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
+- [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
+- [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
 ## Environment Management
 
@@ -706,7 +696,7 @@ _Interactive Python interpreters (REPL)._
 - [marimo](https://github.com/marimo-team/marimo) - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
 - [ptpython](https://github.com/jonathanslenders/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/jonathanslenders/python-prompt-toolkit).
 
-## Job Scheduler
+## Job Schedulers
 
 _Libraries for scheduling jobs._
 
@@ -939,7 +929,7 @@ _Libraries for serializing complex data types._
 - [python-rapidjson](https://github.com/python-rapidjson/python-rapidjson) - A Python wrapper around [RapidJSON](https://github.com/Tencent/rapidjson).
 - [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
 
-## Specific Formats Processing
+## File Format Processing
 
 _Libraries for parsing and manipulating specific text formats._
 
@@ -978,7 +968,7 @@ _Libraries for parsing and manipulating specific text formats._
 - Archive
   - [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
-## Static Site Generator
+## Static Site Generators
 
 _Static site generator is a software that takes some text + templates as input and produces HTML files on the output._
 
@@ -998,7 +988,7 @@ _Libraries for working with task queues._
 - [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 
-## Template Engine
+## Template Engines
 
 _Libraries and tools for templating and lexing._
 
@@ -1103,7 +1093,7 @@ _Tools for managing, compressing and minifying website assets._
 - [flask-assets](https://github.com/miracle2k/flask-assets) - Helps you integrate webassets into your Flask app.
 - [webassets](https://github.com/miracle2k/webassets) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
 
-## Web Content Extracting
+## Web Content Extraction
 
 _Libraries for extracting web contents._
 
