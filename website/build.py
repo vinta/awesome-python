@@ -10,179 +10,20 @@ from typing import TypedDict
 from jinja2 import Environment, FileSystemLoader
 from readme_parser import parse_readme, slugify
 
-# Thematic grouping of categories. Each category name must match exactly
-# as it appears in README.md (the ## heading text).
-SECTION_GROUPS: list[tuple[str, list[str]]] = [
-    (
-        "Web & API",
-        [
-            "Admin Panels",
-            "CMS",
-            "Email",
-            "Static Site Generator",
-            "URL Manipulation",
-            "Web Frameworks",
-            "RESTful API",
-            "GraphQL",
-            "WebSocket",
-            "ASGI Servers",
-            "WSGI Servers",
-            "HTTP Clients",
-            "Template Engine",
-            "Web Asset Management",
-            "Web Content Extracting",
-            "Web Crawling",
-        ],
-    ),
-    (
-        "AI & ML",
-        [
-            "AI and Agents",
-            "Machine Learning",
-            "Deep Learning",
-            "Computer Vision",
-            "Natural Language Processing",
-            "Recommender Systems",
-            "Robotics",
-        ],
-    ),
-    (
-        "Data & Science",
-        [
-            "Data Analysis",
-            "Data Validation",
-            "Data Visualization",
-            "Geolocation",
-            "Science",
-            "Quantum Computing",
-        ],
-    ),
-    (
-        "DevOps & Infrastructure",
-        [
-            "DevOps Tools",
-            "Distributed Computing",
-            "Task Queues",
-            "Job Scheduler",
-            "Serverless Frameworks",
-            "Logging",
-            "Processes",
-            "Shell",
-            "Network Virtualization",
-            "RPC Servers",
-        ],
-    ),
-    (
-        "Database & Storage",
-        [
-            "Database",
-            "Database Drivers",
-            "ORM",
-            "Caching",
-            "Search",
-            "Serialization",
-        ],
-    ),
-    (
-        "Development Tools",
-        [
-            "Testing",
-            "Debugging Tools",
-            "Code Analysis",
-            "Build Tools",
-            "Algorithms and Design Patterns",
-            "Refactoring",
-            "Documentation",
-            "Editor Plugins and IDEs",
-            "Interactive Interpreter",
-        ],
-    ),
-    (
-        "CLI & GUI",
-        [
-            "Command-line Interface Development",
-            "Command-line Tools",
-            "GUI Development",
-        ],
-    ),
-    (
-        "Content & Media",
-        [
-            "Audio",
-            "Video",
-            "Game Development",
-            "Image Processing",
-            "Internationalization",
-            "HTML Manipulation",
-            "Text Processing",
-            "Specific Formats Processing",
-            "File Manipulation",
-            "Downloader",
-        ],
-    ),
-    (
-        "System & Runtime",
-        [
-            "Asynchronous Programming",
-            "Environment Management",
-            "Package Management",
-            "Package Repositories",
-            "Date and Time",
-            "Distribution",
-            "Hardware",
-            "Implementations",
-            "Microsoft Windows",
-            "Built-in Classes Enhancement",
-            "Functional Programming",
-            "Configuration Files",
-        ],
-    ),
-    (
-        "Security & Auth",
-        [
-            "Authentication",
-            "Cryptography",
-            "Penetration Testing",
-            "Permissions",
-        ],
-    ),
-    ("Resources", []),  # Filled dynamically from parsed resources
-]
-
 
 def group_categories(
-    categories: list[dict],
+    parsed_groups: list[dict],
     resources: list[dict],
 ) -> list[dict]:
-    """Organize categories and resources into thematic section groups."""
-    cat_by_name = {c["name"]: c for c in categories}
-    groups = []
-    grouped_names: set[str] = set()
+    """Combine parsed groups with resources for template rendering."""
+    groups = list(parsed_groups)
 
-    for group_name, cat_names in SECTION_GROUPS:
-        grouped_names.update(cat_names)
-        if group_name == "Resources":
-            group_cats = list(resources)
-        else:
-            group_cats = [cat_by_name[n] for n in cat_names if n in cat_by_name]
-
-        if group_cats:
-            groups.append(
-                {
-                    "name": group_name,
-                    "slug": slugify(group_name),
-                    "categories": group_cats,
-                }
-            )
-
-    # Any categories not in a group go into "Other"
-    ungrouped = [c for c in categories if c["name"] not in grouped_names]
-    if ungrouped:
+    if resources:
         groups.append(
             {
-                "name": "Other",
-                "slug": "other",
-                "categories": ungrouped,
+                "name": "Resources",
+                "slug": slugify("Resources"),
+                "categories": list(resources),
             }
         )
 
@@ -295,11 +136,11 @@ def build(repo_root: str) -> None:
             subtitle = stripped
             break
 
-    categories, resources = parse_readme(readme_text)
-    # All fields pre-computed: entry_count, content_html, preview, description
+    parsed_groups, resources = parse_readme(readme_text)
 
+    categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
-    groups = group_categories(categories, resources)
+    groups = group_categories(parsed_groups, resources)
     entries = extract_entries(categories, groups)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
@@ -344,7 +185,7 @@ def build(repo_root: str) -> None:
 
     shutil.copy(repo / "README.md", site_dir / "llms.txt")
 
-    print(f"Built single page with {len(categories)} categories + {len(resources)} resources")
+    print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories + {len(resources)} resources")
     print(f"Total entries: {total_entries}")
     print(f"Output: {site_dir}")
 

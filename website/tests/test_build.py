@@ -48,27 +48,32 @@ class TestSlugify:
 
 
 class TestGroupCategories:
-    def test_groups_known_categories(self):
-        cats = [
-            {"name": "Web Frameworks", "slug": "web-frameworks"},
-            {"name": "Testing", "slug": "testing"},
+    def test_appends_resources(self):
+        parsed_groups = [
+            {"name": "G1", "slug": "g1", "categories": [{"name": "Cat1"}]},
         ]
-        groups = group_categories(cats, [])
-        group_names = [g["name"] for g in groups]
-        assert "Web & API" in group_names
-        assert "Development Tools" in group_names
-
-    def test_ungrouped_go_to_other(self):
-        cats = [{"name": "Unknown Category", "slug": "unknown-category"}]
-        groups = group_categories(cats, [])
-        group_names = [g["name"] for g in groups]
-        assert "Other" in group_names
-
-    def test_resources_grouped(self):
         resources = [{"name": "Newsletters", "slug": "newsletters"}]
-        groups = group_categories([], resources)
+        groups = group_categories(parsed_groups, resources)
         group_names = [g["name"] for g in groups]
+        assert "G1" in group_names
         assert "Resources" in group_names
+
+    def test_no_resources_no_extra_group(self):
+        parsed_groups = [
+            {"name": "G1", "slug": "g1", "categories": [{"name": "Cat1"}]},
+        ]
+        groups = group_categories(parsed_groups, [])
+        assert len(groups) == 1
+        assert groups[0]["name"] == "G1"
+
+    def test_preserves_group_order(self):
+        parsed_groups = [
+            {"name": "Second", "slug": "second", "categories": [{"name": "C2"}]},
+            {"name": "First", "slug": "first", "categories": [{"name": "C1"}]},
+        ]
+        groups = group_categories(parsed_groups, [])
+        assert groups[0]["name"] == "Second"
+        assert groups[1]["name"] == "First"
 
 
 # ---------------------------------------------------------------------------
@@ -113,6 +118,8 @@ class TestBuild:
             Intro.
 
             ---
+
+            **Tools**
 
             ## Widgets
 
@@ -176,9 +183,13 @@ class TestBuild:
 
             ---
 
+            **Group A**
+
             ## Alpha
 
             - [a](https://x.com) - A.
+
+            **Group B**
 
             ## Beta
 
@@ -194,6 +205,8 @@ class TestBuild:
         index_html = (tmp_path / "website" / "output" / "index.html").read_text()
         assert "Alpha" in index_html
         assert "Beta" in index_html
+        assert "Group A" in index_html
+        assert "Group B" in index_html
 
     def test_index_contains_preview_text(self, tmp_path):
         readme = textwrap.dedent("""\

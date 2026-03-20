@@ -115,27 +115,74 @@ MINIMAL_README = textwrap.dedent("""\
 """)
 
 
+GROUPED_README = textwrap.dedent("""\
+    # Awesome Python
+
+    Some intro text.
+
+    ---
+
+    **Group One**
+
+    ## Alpha
+
+    _Libraries for alpha stuff._
+
+    - [lib-a](https://example.com/a) - Does A.
+    - [lib-b](https://example.com/b) - Does B.
+
+    **Group Two**
+
+    ## Beta
+
+    _Tools for beta._
+
+    - [lib-c](https://example.com/c) - Does C.
+
+    ## Gamma
+
+    - [lib-d](https://example.com/d) - Does D.
+
+    # Resources
+
+    Where to discover resources.
+
+    ## Newsletters
+
+    - [News One](https://example.com/n1)
+
+    # Contributing
+
+    Please contribute!
+""")
+
+
 class TestParseReadmeSections:
-    def test_category_count(self):
-        cats, resources = parse_readme(MINIMAL_README)
-        assert len(cats) == 2
+    def test_ungrouped_categories_go_to_other(self):
+        groups, resources = parse_readme(MINIMAL_README)
+        assert len(groups) == 1
+        assert groups[0]["name"] == "Other"
+        assert len(groups[0]["categories"]) == 2
 
-    def test_resource_count(self):
-        cats, resources = parse_readme(MINIMAL_README)
-        assert len(resources) == 2
-
-    def test_category_names(self):
-        cats, _ = parse_readme(MINIMAL_README)
+    def test_ungrouped_category_names(self):
+        groups, _ = parse_readme(MINIMAL_README)
+        cats = groups[0]["categories"]
         assert cats[0]["name"] == "Alpha"
         assert cats[1]["name"] == "Beta"
 
+    def test_resource_count(self):
+        _, resources = parse_readme(MINIMAL_README)
+        assert len(resources) == 2
+
     def test_category_slugs(self):
-        cats, _ = parse_readme(MINIMAL_README)
+        groups, _ = parse_readme(MINIMAL_README)
+        cats = groups[0]["categories"]
         assert cats[0]["slug"] == "alpha"
         assert cats[1]["slug"] == "beta"
 
     def test_category_description(self):
-        cats, _ = parse_readme(MINIMAL_README)
+        groups, _ = parse_readme(MINIMAL_README)
+        cats = groups[0]["categories"]
         assert cats[0]["description"] == "Libraries for alpha stuff."
         assert cats[1]["description"] == "Tools for beta."
 
@@ -145,13 +192,16 @@ class TestParseReadmeSections:
         assert resources[1]["name"] == "Podcasts"
 
     def test_contributing_skipped(self):
-        cats, resources = parse_readme(MINIMAL_README)
-        all_names = [c["name"] for c in cats] + [r["name"] for r in resources]
+        groups, resources = parse_readme(MINIMAL_README)
+        all_names = []
+        for g in groups:
+            all_names.extend(c["name"] for c in g["categories"])
+        all_names.extend(r["name"] for r in resources)
         assert "Contributing" not in all_names
 
     def test_no_separator(self):
-        cats, resources = parse_readme("# Just a heading\n\nSome text.\n")
-        assert cats == []
+        groups, resources = parse_readme("# Just a heading\n\nSome text.\n")
+        assert groups == []
         assert resources == []
 
     def test_no_description(self):
@@ -174,7 +224,8 @@ class TestParseReadmeSections:
 
             Done.
         """)
-        cats, resources = parse_readme(readme)
+        groups, resources = parse_readme(readme)
+        cats = groups[0]["categories"]
         assert cats[0]["description"] == ""
         assert cats[0]["entries"][0]["name"] == "item"
 
@@ -194,8 +245,112 @@ class TestParseReadmeSections:
 
             Done.
         """)
-        cats, _ = parse_readme(readme)
+        groups, _ = parse_readme(readme)
+        cats = groups[0]["categories"]
         assert cats[0]["description"] == "Algorithms. Also see awesome-algos."
+
+
+class TestParseGroupedReadme:
+    def test_group_count(self):
+        groups, _ = parse_readme(GROUPED_README)
+        assert len(groups) == 2
+
+    def test_group_names(self):
+        groups, _ = parse_readme(GROUPED_README)
+        assert groups[0]["name"] == "Group One"
+        assert groups[1]["name"] == "Group Two"
+
+    def test_group_slugs(self):
+        groups, _ = parse_readme(GROUPED_README)
+        assert groups[0]["slug"] == "group-one"
+        assert groups[1]["slug"] == "group-two"
+
+    def test_group_one_has_one_category(self):
+        groups, _ = parse_readme(GROUPED_README)
+        assert len(groups[0]["categories"]) == 1
+        assert groups[0]["categories"][0]["name"] == "Alpha"
+
+    def test_group_two_has_two_categories(self):
+        groups, _ = parse_readme(GROUPED_README)
+        assert len(groups[1]["categories"]) == 2
+        assert groups[1]["categories"][0]["name"] == "Beta"
+        assert groups[1]["categories"][1]["name"] == "Gamma"
+
+    def test_resources_still_parsed(self):
+        _, resources = parse_readme(GROUPED_README)
+        assert len(resources) == 1
+        assert resources[0]["name"] == "Newsletters"
+
+    def test_empty_group_skipped(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            **Empty**
+
+            **HasCats**
+
+            ## Cat
+
+            - [x](https://x.com) - X.
+
+            # Contributing
+
+            Done.
+        """)
+        groups, _ = parse_readme(readme)
+        assert len(groups) == 1
+        assert groups[0]["name"] == "HasCats"
+
+    def test_bold_with_extra_text_not_group_marker(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            **Note:** This is not a group marker.
+
+            ## Cat
+
+            - [x](https://x.com) - X.
+
+            # Contributing
+
+            Done.
+        """)
+        groups, _ = parse_readme(readme)
+        # "Note:" has text after the strong node, so it's not a group marker
+        # Category goes into "Other"
+        assert len(groups) == 1
+        assert groups[0]["name"] == "Other"
+
+    def test_categories_before_any_group_marker(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            ## Orphan
+
+            - [x](https://x.com) - X.
+
+            **A Group**
+
+            ## Grouped
+
+            - [y](https://x.com) - Y.
+
+            # Contributing
+
+            Done.
+        """)
+        groups, _ = parse_readme(readme)
+        assert len(groups) == 2
+        assert groups[0]["name"] == "Other"
+        assert groups[0]["categories"][0]["name"] == "Orphan"
+        assert groups[1]["name"] == "A Group"
+        assert groups[1]["categories"][0]["name"] == "Grouped"
 
 
 def _content_nodes(md_text: str) -> list[SyntaxTreeNode]:
@@ -283,7 +438,8 @@ class TestParseSectionEntries:
 
             Done.
         """)
-        cats, _ = parse_readme(readme)
+        groups, _ = parse_readme(readme)
+        cats = groups[0]["categories"]
         # 2 main entries + 1 also_see = 3
         assert cats[0]["entry_count"] == 3
 
@@ -305,7 +461,8 @@ class TestParseSectionEntries:
 
             Done.
         """)
-        cats, _ = parse_readme(readme)
+        groups, _ = parse_readme(readme)
+        cats = groups[0]["categories"]
         assert cats[0]["preview"] == "alpha, beta, gamma, delta"
 
     def test_description_html_escapes_xss(self):
@@ -366,10 +523,17 @@ class TestParseRealReadme:
         readme_path = os.path.join(os.path.dirname(__file__), "..", "..", "README.md")
         with open(readme_path, encoding="utf-8") as f:
             self.readme_text = f.read()
-        self.cats, self.resources = parse_readme(self.readme_text)
+        self.groups, self.resources = parse_readme(self.readme_text)
+        self.cats = [c for g in self.groups for c in g["categories"]]
 
-    def test_at_least_83_categories(self):
-        assert len(self.cats) >= 83
+    def test_at_least_11_groups(self):
+        assert len(self.groups) >= 11
+
+    def test_first_group_is_ai_ml(self):
+        assert self.groups[0]["name"] == "AI & ML"
+
+    def test_at_least_76_categories(self):
+        assert len(self.cats) >= 76
 
     def test_resources_has_newsletters_and_podcasts(self):
         names = [r["name"] for r in self.resources]
@@ -380,21 +544,17 @@ class TestParseRealReadme:
         all_names = [c["name"] for c in self.cats] + [r["name"] for r in self.resources]
         assert "Contributing" not in all_names
 
-    def test_first_category_is_admin_panels(self):
-        assert self.cats[0]["name"] == "Admin Panels"
-        assert self.cats[0]["slug"] == "admin-panels"
+    def test_first_category_is_ai_and_agents(self):
+        assert self.cats[0]["name"] == "AI and Agents"
+        assert self.cats[0]["slug"] == "ai-and-agents"
 
-    def test_last_category_is_wsgi_servers(self):
-        assert self.cats[-1]["name"] == "WSGI Servers"
-        assert self.cats[-1]["slug"] == "wsgi-servers"
-
-    def test_restful_api_slug(self):
+    def test_web_apis_slug(self):
         slugs = [c["slug"] for c in self.cats]
-        assert "restful-api" in slugs
+        assert "web-apis" in slugs
 
     def test_descriptions_extracted(self):
-        admin = self.cats[0]
-        assert admin["description"] == "Libraries for administrative interfaces."
+        ai = next(c for c in self.cats if c["name"] == "AI and Agents")
+        assert "AI applications" in ai["description"]
 
     def test_entry_counts_nonzero(self):
         for cat in self.cats:
@@ -422,3 +582,8 @@ class TestParseRealReadme:
         algos = next(c for c in self.cats if c["name"] == "Algorithms and Design Patterns")
         assert "awesome-algorithms" in algos["description"]
         assert "https://" not in algos["description"]
+
+    def test_miscellaneous_in_own_group(self):
+        misc_group = next((g for g in self.groups if g["name"] == "Miscellaneous"), None)
+        assert misc_group is not None
+        assert any(c["name"] == "Miscellaneous" for c in misc_group["categories"])

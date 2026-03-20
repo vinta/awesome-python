@@ -32,6 +32,12 @@ class ParsedSection(TypedDict):
     content_html: str  # rendered HTML, properly escaped
 
 
+class ParsedGroup(TypedDict):
+    name: str
+    slug: str
+    categories: list[ParsedSection]
+
+
 # --- Slugify ----------------------------------------------------------------
 
 _SLUG_NON_ALNUM_RE = re.compile(r"[^a-z0-9\s-]")
@@ -305,6 +311,25 @@ def _render_section_html(content_nodes: list[SyntaxTreeNode]) -> str:
 # --- Section splitting -------------------------------------------------------
 
 
+def _build_section(name: str, body: list[SyntaxTreeNode]) -> ParsedSection:
+    """Build a ParsedSection from a heading name and its body nodes."""
+    desc = _extract_description(body)
+    content_nodes = body[1:] if desc else body
+    entries = _parse_section_entries(content_nodes)
+    entry_count = len(entries) + sum(len(e["also_see"]) for e in entries)
+    preview = ", ".join(e["name"] for e in entries[:4])
+    content_html = _render_section_html(content_nodes)
+    return ParsedSection(
+        name=name,
+        slug=slugify(name),
+        description=desc,
+        entries=entries,
+        entry_count=entry_count,
+        preview=preview,
+        content_html=content_html,
+    )
+
+
 def _group_by_h2(
     nodes: list[SyntaxTreeNode],
 ) -> list[ParsedSection]:
@@ -317,22 +342,7 @@ def _group_by_h2(
         nonlocal current_name
         if current_name is None:
             return
-        desc = _extract_description(current_body)
-        content_nodes = current_body[1:] if desc else current_body
-        entries = _parse_section_entries(content_nodes)
-        entry_count = len(entries) + sum(len(e["also_see"]) for e in entries)
-        preview = ", ".join(e["name"] for e in entries[:4])
-        content_html = _render_section_html(content_nodes)
-
-        sections.append(ParsedSection(
-            name=current_name,
-            slug=slugify(current_name),
-            description=desc,
-            entries=entries,
-            entry_count=entry_count,
-            preview=preview,
-            content_html=content_html,
-        ))
+        sections.append(_build_section(current_name, current_body))
         current_name = None
 
     for node in nodes:
@@ -347,10 +357,86 @@ def _group_by_h2(
     return sections
 
 
-def parse_readme(text: str) -> tuple[list[ParsedSection], list[ParsedSection]]:
-    """Parse README.md text into categories and resources.
+def _is_bold_marker(node: SyntaxTreeNode) -> str | None:
+    """Detect a bold-only paragraph used as a group marker.
 
-    Returns (categories, resources) where each is a list of ParsedSection dicts.
+    Pattern: a paragraph whose only content is **Group Name** (possibly
+    surrounded by empty text nodes in the AST).
+    Returns the group name text, or None if not a group marker.
+    """
+    if node.type != "paragraph":
+        return None
+    for child in node.children:
+        if child.type != "inline":
+            continue
+        # Filter out empty text nodes that markdown-it inserts around strong
+        meaningful = [c for c in child.children if not (c.type == "text" and c.content == "")]
+        if len(meaningful) == 1 and meaningful[0].type == "strong":
+            return render_inline_text(meaningful[0].children)
+    return None
+
+
+def _parse_grouped_sections(
+    nodes: list[SyntaxTreeNode],
+) -> list[ParsedGroup]:
+    """Parse nodes into groups of categories using bold markers as group boundaries.
+
+    Bold-only paragraphs (**Group Name**) delimit groups. H2 headings under each
+    bold marker become categories within that group. Categories appearing before
+    any bold marker go into an "Other" group.
+    """
+    groups: list[ParsedGroup] = []
+    current_group_name: str | None = None
+    current_group_cats: list[ParsedSection] = []
+    current_cat_name: str | None = None
+    current_cat_body: list[SyntaxTreeNode] = []
+
+    def flush_cat() -> None:
+        nonlocal current_cat_name
+        if current_cat_name is None:
+            return
+        current_group_cats.append(_build_section(current_cat_name, current_cat_body))
+        current_cat_name = None
+
+    def flush_group() -> None:
+        nonlocal current_group_name, current_group_cats
+        if not current_group_cats:
+            current_group_name = None
+            current_group_cats = []
+            return
+        name = current_group_name or "Other"
+        groups.append(ParsedGroup(
+            name=name,
+            slug=slugify(name),
+            categories=list(current_group_cats),
+        ))
+        current_group_name = None
+        current_group_cats = []
+
+    for node in nodes:
+        bold_name = _is_bold_marker(node)
+        if bold_name is not None:
+            flush_cat()
+            flush_group()
+            current_group_name = bold_name
+            current_cat_body = []
+        elif node.type == "heading" and node.tag == "h2":
+            flush_cat()
+            current_cat_name = _heading_text(node)
+            current_cat_body = []
+        elif current_cat_name is not None:
+            current_cat_body.append(node)
+
+    flush_cat()
+    flush_group()
+    return groups
+
+
+def parse_readme(text: str) -> tuple[list[ParsedGroup], list[ParsedSection]]:
+    """Parse README.md text into grouped categories and resources.
+
+    Returns (groups, resources) where groups is a list of ParsedGroup dicts
+    containing nested categories, and resources is a flat list of ParsedSection.
     """
     md = MarkdownIt("commonmark")
     tokens = md.parse(text)
@@ -382,7 +468,7 @@ def parse_readme(text: str) -> tuple[list[ParsedSection], list[ParsedSection]]:
         res_end = contributing_idx or len(children)
         res_nodes = children[resources_idx + 1 : res_end]
 
-    categories = _group_by_h2(cat_nodes)
+    groups = _parse_grouped_sections(cat_nodes)
     resources = _group_by_h2(res_nodes)
 
-    return categories, resources
+    return groups, resources
