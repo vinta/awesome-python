@@ -541,9 +541,10 @@ _Libraries for sending and parsing email._
 
 _Libraries for Python version and virtual environment management._
 
-- [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
+  - [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
+- [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 
 ## File Manipulation
 
@@ -809,11 +810,11 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
 _Libraries for package and dependency management._
 
 - [pip](https://github.com/pypa/pip) - The package installer for Python.
-  - [pip-tools](https://github.com/jazzband/pip-tools) - A set of tools to keep your pinned Python dependencies fresh.
+- [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-- [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project management.
+- [mamba](https://github.com/mamba-org/mamba) - A reimplementation of the `conda` package manager in C++.
 - [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
-- [uv](https://github.com/astral-sh/uv) - An extremely fast Python package and project manager, written in Rust.
+- [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 
 ## Package Repositories
 
