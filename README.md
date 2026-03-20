@@ -109,13 +109,17 @@ _Libraries for administrative interfaces._
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
 - [agno](https://github.com/agno-agi/agno) - Open-source Python library for building AI agents and agentic systems.
+- [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
 - [autoresearch](https://github.com/karpathy/autoresearch) - AI agents running autonomous research experiments on single-GPU LLM training.
+- [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
+- [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
 - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
 - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
 - [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
 - [praisonai](https://github.com/MervinPraison/PraisonAI) - Production-ready Multi-AI Agents framework with self-reflection, 100+ LLM support, MCP integration, and agentic workflows.
 - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
 - [ragflow](https://github.com/infiniflow/ragflow) - An open-source RAG engine for document understanding and question answering with LLMs.
+- [smolagents](https://github.com/huggingface/smolagents) - A lightweight library for building agents that reason and act through code.
 
 ## Algorithms and Design Patterns
 
@@ -194,6 +198,7 @@ _Compile software from source code._
 
 - [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
 - [buildout](https://github.com/buildout/buildout) - A build system for creating, assembling and deploying applications from multiple parts.
+- [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
 - [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 - [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 - [scons](https://github.com/SCons/scons) - A software construction tool.
@@ -210,6 +215,7 @@ _Libraries for enhancing Python built-in classes._
 
 _Content Management Systems._
 
+- [django-cms](https://github.com/django-cms/django-cms) - The easy-to-use and developer-friendly enterprise CMS powered by Django.
 - [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
 - [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 - [wagtail](https://github.com/wagtail/wagtail) - A Django content management system.
@@ -236,6 +242,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [prospector](https://github.com/PyCQA/prospector) - A tool to analyze Python code.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
 - Code Linters
+  - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
   - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
     - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
   - [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
@@ -283,12 +290,9 @@ _Useful CLI-based tools for productivity._
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
-  - [howdoi](https://github.com/gleitz/howdoi) - Instant coding answers via the command line.
-  - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
   - [fpp](https://github.com/facebook/PathPicker) - Select files out of bash output.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
-  - [try](https://github.com/timofurrer/try) - A dead simple CLI to try out python packages - it's never been easier.
 - CLI Enhancements
   - [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
@@ -355,6 +359,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - [bqplot](https://github.com/bloomberg/bqplot) - Interactive Plotting Library for the Jupyter Notebook.
 - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
+- [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
 - [matplotlib](https://github.com/matplotlib/matplotlib) - A Python 2D plotting library.
 - [plotly](https://github.com/plotly/plotly.py) - Interactive graphing library for Python.
 - [plotnine](https://github.com/has2k1/plotnine) - A grammar of graphics for Python based on ggplot2.
@@ -370,6 +375,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 
 _Databases implemented in Python._
 
+- [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with embeddings and semantic search.
 - [duckdb](https://github.com/duckdb/duckdb) - An in-process SQL OLAP database management system; optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
 - [pickledb](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 - [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
@@ -451,12 +457,13 @@ _Software and libraries for DevOps._
   - [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
   - [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 - SSH-style Deployment
-  - [cuisine](https://github.com/sebastien/cuisine) - Chef-like functionality for Fabric.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
 - Process Management
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
 - Monitoring
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
+- Git Hooks
+  - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 - Backup
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
 - Chaos Engineering
@@ -543,8 +550,8 @@ _Libraries for Python version and virtual environment management._
 
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
   - [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
-- [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
+- [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
 ## File Manipulation
 
@@ -607,9 +614,9 @@ _Awesome game development libraries._
 - [cocos](https://github.com/los-cocos/cocos) - A framework for building 2D games, demos, and other graphical/interactive applications.
 - [harfang3d](https://github.com/harfang3d/harfang3d) - Python framework for 3D, VR and game development.
 - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
+- [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
 - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
 - [pyopengl](https://github.com/mcfletch/pyopengl) - Python ctypes bindings for OpenGL and it's related APIs.
-- [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
 - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
 ## Geolocation
@@ -642,6 +649,7 @@ _Libraries for working with HTML and XML._
 
 _Libraries for working with HTTP._
 
+- [aiohttp](https://github.com/aio-libs/aiohttp) - Asynchronous HTTP client/server framework for asyncio and Python.
 - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 - [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
@@ -706,10 +714,9 @@ _Libraries for scheduling jobs._
 
 - [airflow](https://github.com/apache/airflow) - Airflow is a platform to programmatically author, schedule and monitor workflows.
 - [apscheduler](https://github.com/agronholm/apscheduler) - A light but powerful in-process task scheduler that lets you schedule functions.
-- [django-schedule](https://github.com/thauber/django-schedule) - A calendaring app for Django.
+- [dagster](https://github.com/dagster-io/dagster) - An orchestration platform for the development, production, and observation of data assets.
 - [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 - [joblib](https://github.com/joblib/joblib) - A set of tools to provide lightweight pipelining in Python.
-- [plan](https://github.com/fengsp/plan) - Writing crontab file in Python like a charm.
 - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 - [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 - [SpiffWorkflow](https://github.com/knipknap/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
@@ -729,11 +736,11 @@ _Libraries for generating and working with logs._
 
 _Libraries for Machine Learning. Also see [awesome-machine-learning](https://github.com/josephmisiti/awesome-machine-learning#python)._
 
+- [catboost](https://github.com/catboost/catboost) - A fast, scalable, high performance gradient boosting on decision trees library.
 - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
-- [gym](https://github.com/openai/gym) - A toolkit for developing and comparing reinforcement learning algorithms.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
-- [metrics](https://github.com/benhamner/Metrics) - Machine learning evaluation metrics.
+- [lightgbm](https://github.com/microsoft/LightGBM) - A fast, distributed, high performance gradient boosting framework.
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
 - [rasa](https://github.com/RasaHQ/rasa) - An open-source machine learning framework for automated text and voice-based conversations.
@@ -797,8 +804,8 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
   - [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
   - [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
   - [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
-  - [pydal](https://github.com/web2py/pydal/) - A pure Python Database Abstraction Layer.
   - [sqlmodel](https://github.com/fastapi/sqlmodel) - SQLModel is based on Python type annotations, and powered by Pydantic and SQLAlchemy.
+  - [tortoise-orm](https://github.com/tortoise/tortoise-orm) - An easy-to-use asyncio ORM inspired by Django, with relations support.
 - NoSQL Databases
   - [beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
   - [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
@@ -809,10 +816,10 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
 
 _Libraries for package and dependency management._
 
-- [pip](https://github.com/pypa/pip) - The package installer for Python.
-- [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 - [mamba](https://github.com/mamba-org/mamba) - A reimplementation of the `conda` package manager in C++.
+- [pip](https://github.com/pypa/pip) - The package installer for Python.
+- [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
 - [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 
@@ -862,12 +869,10 @@ _Libraries for quantum computing._
 _Libraries for building recommender systems._
 
 - [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
-- [fastFM](https://github.com/ibayer/fastFM) - A library for Factorization Machines.
 - [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
 - [lightfm](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
-- [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 - [scikit-surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
-- [tensorrec](https://github.com/jfkirk/tensorrec) - A Recommendation Engine Framework in TensorFlow.
+- [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 
 ## Refactoring
 
@@ -950,10 +955,10 @@ _Libraries and software for indexing and performing search queries on data._
 _Libraries for serializing complex data types._
 
 - [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
+- [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
 - [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
 - [pysimdjson](https://github.com/TkTech/pysimdjson) - A Python bindings for [simdjson](https://github.com/lemire/simdjson).
 - [python-rapidjson](https://github.com/python-rapidjson/python-rapidjson) - A Python wrapper around [RapidJSON](https://github.com/Tencent/rapidjson).
-- [toonify](https://github.com/ScrapeGraphAI/toonify) - A compact, human-readable serialization format that reduces LLM token usage by 30-60% compared to JSON.
 - [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
 
 ## Serverless Frameworks
@@ -1047,10 +1052,11 @@ _Libraries for testing codebases and generating test data._
   - [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 - Test Runners
   - [green](https://github.com/CleanCut/green) - A clean, colorful test runner.
-  - [mamba](https://github.com/nestorsalceda/mamba) - The definitive testing tool for Python. Born under the banner of BDD.
+  - [nox](https://github.com/wntrblm/nox) - Flexible test automation for Python.
   - [tox](https://github.com/tox-dev/tox) - Auto builds and tests distributions in multiple Python versions
 - GUI / Web Testing
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+  - [playwright](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
   - [pyautogui](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
   - [schemathesis](https://github.com/kiwicom/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
