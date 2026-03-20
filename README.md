@@ -211,7 +211,7 @@ _Libraries for building recommender systems._
 
 ## Web Frameworks
 
-_Traditional full stack web frameworks. Also see [RESTful API](https://github.com/vinta/awesome-python#restful-api)._
+_Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 
 - Synchronous
   - [django](https://github.com/django/django) - The most popular web framework in Python.
