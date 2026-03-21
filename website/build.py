@@ -80,14 +80,15 @@ def sort_entries(entries: list[dict]) -> list[dict]:
     Three tiers: starred entries first, stdlib second, other non-starred last.
     """
 
-    def sort_key(entry: dict) -> tuple[int, int, str]:
+    def sort_key(entry: dict) -> tuple[int, int, int, str]:
         stars = entry["stars"]
         name = entry["name"].lower()
         if stars is not None:
-            return (0, -stars, name)
+            builtin = 1 if entry.get("source_type") == "Built-in" else 0
+            return (0, -stars, builtin, name)
         if entry.get("source_type") == "Built-in":
-            return (1, 0, name)
-        return (2, 0, name)
+            return (1, 0, 0, name)
+        return (2, 0, 0, name)
 
     return sorted(entries, key=sort_key)
 
