@@ -307,7 +307,6 @@ _Libraries for administrative interfaces._
 - [flask-admin](https://github.com/flask-admin/flask-admin) - Simple and extensible administrative interface framework for Flask.
 - [func-to-web](https://github.com/offerrall/FuncToWeb) - Instantly create web UIs from Python functions using type hints. Zero frontend code required.
 - [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
-- [wooey](https://github.com/wooey/wooey) - A Django app which creates automatic web UIs for Python scripts.
 
 ## CMS
 
@@ -362,7 +361,6 @@ _Libraries for sending and parsing email._
 
 - [flanker](https://github.com/mailgun/flanker) - An email address and Mime parsing library.
 - [imbox](https://github.com/martinrusev/imbox) - Python IMAP for Humans.
-- [mailer](https://github.com/marrow/mailer) - High-performance extensible mail delivery framework.
 - [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
