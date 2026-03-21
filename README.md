@@ -160,7 +160,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
-- [spark.ml](http://spark.apache.org/docs/latest/ml-guide.html) - [Apache Spark](http://spark.apache.org/)'s scalable Machine Learning library for distributed computing.
+- [spark.ml](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/)'s scalable [Machine Learning library](https://spark.apache.org/docs/latest/ml-guide.html) for distributed computing.
 - [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
 
 ## Natural Language Processing
@@ -360,7 +360,7 @@ _Libraries for sending and parsing email, and mail server management._
 _Libraries that implement Object-Relational Mapping or data mapping techniques._
 
 - Relational Databases
-  - [django.db.models](https://docs.djangoproject.com/en/dev/topics/db/models/) - The Django ORM.
+  - [django.db.models](https://github.com/django/django) - The Django [ORM](https://docs.djangoproject.com/en/dev/topics/db/models/).
   - [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) - The Python SQL Toolkit and Object Relational Mapper.
     - [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
   - [dataset](https://github.com/pudo/dataset) - Store Python dicts in a database - works with SQLite, MySQL, and PostgreSQL.
@@ -487,7 +487,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 _Libraries for geocoding addresses and working with latitudes and longitudes._
 
 - [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
-- [geodjango](https://docs.djangoproject.com/en/dev/ref/contrib/gis/) - A world-class geographic web framework.
+- [geodjango](https://github.com/django/django) - A world-class geographic web framework that is part of [Django](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
 - [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 - [geopandas](https://github.com/geopandas/geopandas) - Python tools for geographic data (GeoSeries/GeoDataFrame) built on pandas.
 - [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
