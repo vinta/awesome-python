@@ -332,7 +332,6 @@ _Content Management Systems._
 _Static site generator is a software that takes some text + templates as input and produces HTML files on the output._
 
 - [lektor](https://github.com/lektor/lektor) - An easy to use static CMS and blog engine.
-- [makesite](https://github.com/sunainapai/makesite) - Simple, lightweight, and magic-free static site/blog generator (< 130 lines).
 - [nikola](https://github.com/getnikola/nikola) - A static website and blog generator.
 - [pelican](https://github.com/getpelican/pelican) - Static site generator that supports Markdown and reST syntax.
 
@@ -460,8 +459,6 @@ _Libraries for serializing complex data types._
 - [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 - [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
 - [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
-- [pysimdjson](https://github.com/TkTech/pysimdjson) - A Python bindings for [simdjson](https://github.com/lemire/simdjson).
-- [python-rapidjson](https://github.com/python-rapidjson/python-rapidjson) - A Python wrapper around [RapidJSON](https://github.com/Tencent/rapidjson).
 - [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
 
 **Data & Science**
@@ -579,7 +576,6 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 
 - Algorithms
   - [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
-  - [python-ds](https://github.com/prabhupant/python-ds) - A collection of data structure and algorithms for coding interviews.
   - [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
   - [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
 - Design Patterns
@@ -691,7 +687,6 @@ _Libraries for debugging code._
 _Compile software from source code._
 
 - [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
-- [buildout](https://github.com/buildout/buildout) - A build system for creating, assembling and deploying applications from multiple parts.
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
 - [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 - [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
@@ -891,7 +886,6 @@ _Libraries for parsing and manipulating plain texts._
   - [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
   - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [ftfy](https://github.com/LuminosoInsight/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
-  - [Levenshtein](https://github.com/ztane/python-Levenshtein/) - Fast computation of Levenshtein distance and string similarity.
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
   - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
   - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
@@ -1049,12 +1043,11 @@ _Libraries for enhancing Python built-in classes._
 _Functional Programming with Python._
 
 - [coconut](https://github.com/evhub/coconut) - A variant of Python built for simple, elegant, Pythonic functional programming.
-- [cytoolz](https://github.com/pytoolz/cytoolz/) - Cython implementation of `Toolz`: High performance functional utilities.
 - [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 - [more-itertools](https://github.com/erikrose/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 - [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
-- [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries.
+- [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz/) for Cython-accelerated performance.
 
 ## Asynchronous Programming
 
@@ -1074,7 +1067,6 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
 
 _Libraries for working with dates and times._
 
-- [arrow](https://github.com/arrow-py/arrow) - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.
 - [dateparser](https://github.com/scrapinghub/dateparser) - A Python parser for human-readable dates in dozens of languages.
 - [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
