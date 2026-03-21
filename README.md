@@ -214,6 +214,7 @@ _Libraries for building recommender systems._
 _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 
 - Synchronous
+  - [bottle](https://github.com/bottlepy/bottle) - A fast and simple micro-framework distributed as a single file with no dependencies.
   - [django](https://github.com/django/django) - The most popular web framework in Python.
     - [awesome-django](https://github.com/shahraizali/awesome-django)
   - [flask](https://github.com/pallets/flask) - A microframework for Python.
@@ -227,6 +228,8 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
   - [litestar](https://github.com/litestar-org/litestar) - Production-ready, capable and extensible ASGI Web framework.
   - [microdot](https://github.com/miguelgrinberg/microdot) - The impossibly small web framework for Python and MicroPython.
   - [reflex](https://github.com/reflex-dev/reflex) – A framework for building reactive, full-stack web applications entirely with python .
+  - [robyn](https://github.com/sparckles/Robyn) - A high-performance async Python web framework with a Rust runtime.
+  - [starlette](https://github.com/Kludex/starlette) - A lightweight ASGI framework and toolkit for building high-performance async services.
   - [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
 ## Web APIs
@@ -244,12 +247,13 @@ _Libraries for building RESTful and GraphQL APIs._
 - Pyramid
   - [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 - Framework Agnostic
+  - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
   - [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
-  - [graphene](https://github.com/graphql-python/graphene/) - GraphQL framework for Python.
   - [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
   - [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
   - [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
+  - [strawberry](https://github.com/strawberry-graphql/strawberry) - A GraphQL library that leverages Python type annotations for schema definition.
   - [webargs](https://github.com/marshmallow-code/webargs) - A friendly library for parsing HTTP request arguments with built-in support for popular web frameworks.
 
 ## Web Servers
@@ -273,6 +277,7 @@ _Libraries for working with WebSocket._
 
 - [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 - [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
+- [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
 - [websockets](https://github.com/aaugustin/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
 
 ## Template Engines
@@ -370,6 +375,7 @@ _Libraries to automate web scraping and extract web content._
 - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 - [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
+- [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
 
 ## URL Manipulation
 
@@ -445,6 +451,7 @@ _Databases implemented in Python._
 _Libraries for caching data._
 
 - [beaker](https://github.com/bbangert/beaker) - A WSGI middleware for sessions and caching.
+- [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
 - [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 - [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
@@ -482,6 +489,8 @@ _Libraries for data analysis._
 - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
+- [ibis](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
+- [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
 - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
@@ -498,6 +507,7 @@ _Libraries for validating data. Used for forms in many cases._
 - [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 - [colander](https://github.com/Pylons/colander) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
+- [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
 - [schematics](https://github.com/schematics/schematics) - Data Structure Validation.
@@ -751,8 +761,8 @@ _Software and libraries for DevOps._
 - Backup
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
 - Serverless
+  - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
-  - [zappa](https://github.com/zappa/Zappa) - A tool for deploying WSGI applications on AWS Lambda and API Gateway.
 - Chaos Engineering
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
 
@@ -824,6 +834,7 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 
 _RPC-compatible servers._
 
+- [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
 - [rpyc](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
 - [zerorpc](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
 
@@ -1091,6 +1102,7 @@ _Functional Programming with Python._
 
 _Libraries for asynchronous, concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)._
 
+- [anyio](https://github.com/agronholm/anyio) - A high-level async concurrency and networking framework that works on top of asyncio or trio.
 - [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
   - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
 - [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
@@ -1105,6 +1117,7 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
 _Libraries for working with dates and times._
 
 - [arrow](https://github.com/arrow-py/arrow) - A Python library that offers a sensible and human-friendly approach to creating, manipulating, formatting and converting dates, times and timestamps.
+- [dateparser](https://github.com/scrapinghub/dateparser) - A Python parser for human-readable dates in dozens of languages.
 - [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [pendulum](https://github.com/sdispater/pendulum) - Python datetimes made easy.
 - [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
@@ -1160,6 +1173,7 @@ _Libraries for storing and parsing configuration options._
 - [dynaconf](https://github.com/dynaconf/dynaconf) - Dynaconf is a configuration manager with plugins for Django, Flask and FastAPI.
 - [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 - [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
+- [python-dotenv](https://github.com/theskumar/python-dotenv) - Reads key-value pairs from a `.env` file and sets them as environment variables.
 
 **Security**
 
@@ -1174,6 +1188,7 @@ _Libraries for storing and parsing configuration options._
 _Frameworks and tools for penetration testing._
 
 - [fsociety](https://github.com/Manisso/fsociety) - A Penetration testing framework.
+- [mitmproxy](https://github.com/mitmproxy/mitmproxy) - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
 - [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 - [sherlock](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
