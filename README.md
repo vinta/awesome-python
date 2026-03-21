@@ -173,14 +173,11 @@ _Libraries for working with human languages._
 - General
   - [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
   - [nltk](https://github.com/nltk/nltk) - A leading platform for building Python programs to work with human language data.
-  - [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
   - [spacy](https://github.com/explosion/spaCy) - A library for industrial-strength natural language processing in Python and Cython.
   - [stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
   - [funnlp](https://github.com/fighting41love/funNLP) - A collection of tools and datasets for Chinese NLP.
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
-  - [pkuseg-python](https://github.com/lancopku/pkuseg-python) - A toolkit for Chinese word segmentation in various domains.
-  - [snownlp](https://github.com/isnowfy/snownlp) - A library for processing Chinese text.
 
 ## Computer Vision
 
@@ -197,7 +194,6 @@ _Libraries for building recommender systems._
 
 - [annoy](https://github.com/spotify/annoy) - Approximate Nearest Neighbors in C++/Python optimized for memory usage.
 - [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
-- [lightfm](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 - [scikit-surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 
 **Web**
@@ -274,7 +270,6 @@ _Libraries for working with WebSocket._
 
 _Libraries and tools for templating and lexing._
 
-- [genshi](https://github.com/edgewall/genshi) - Python templating toolkit for generation of web-aware output.
 - [jinja](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
 - [mako](https://github.com/sqlalchemy/mako) - Hyperfast and lightweight templating for the Python platform.
 
@@ -285,8 +280,6 @@ _Tools for managing, compressing and minifying website assets._
 - [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline JavaScript or CSS into a single cached file.
 - [django-pipeline](https://github.com/jazzband/django-pipeline) - An asset packaging library for Django.
 - [django-storages](https://github.com/jschneier/django-storages) - A collection of custom storage back ends for Django.
-- [flask-assets](https://github.com/miracle2k/flask-assets) - Helps you integrate webassets into your Flask app.
-- [webassets](https://github.com/miracle2k/webassets) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
 
 ## Authentication
 
@@ -430,7 +423,6 @@ _Databases implemented in Python._
 _Libraries for caching data._
 
 - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
-- [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 - [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
 - [hermescache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
@@ -452,7 +444,6 @@ _Libraries for serializing complex data types._
 - [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 - [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
 - [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
-- [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
 
 **Data & Science**
 
@@ -608,7 +599,6 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 - Refactoring
-  - [bowler](https://github.com/facebookincubator/Bowler) - Safe code refactoring for modern Python.
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
 - Static Type Annotations Generators
   - [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
@@ -636,16 +626,13 @@ _Libraries for testing codebases and generating test data._
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
   - [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
 - Mock
-  - [doublex](https://pypi.org/project/doublex/) - Powerful test doubles framework for Python.
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
-  - [httpretty](https://github.com/gabrielfalcao/HTTPretty) - HTTP request mock tool for Python.
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 - Object Factories
   - [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
-  - [mixer](https://github.com/klen/mixer) - Another fixtures replacement. Supports Django, Flask, SQLAlchemy, Peewee and etc.
   - [polyfactory](https://github.com/litestar-org/polyfactory) - mock data generation library with support to classes (continuation of `pydantic-factories`)
 - Code Coverage
   - [coverage](https://github.com/coveragepy/coveragepy) - Code coverage measurement.
@@ -773,7 +760,6 @@ _Libraries for scheduling jobs._
 
 _Libraries for generating and working with logs._
 
-- [logbook](https://github.com/getlogbook/logbook) - Logging replacement for Python.
 - [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
@@ -925,7 +911,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [pdf_oxide](https://github.com/yfedoseev/pdf_oxide) - A fast PDF library for text extraction, image extraction, and markdown conversion, powered by Rust.
   - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - Pdfminer.six is a community maintained fork of the original PDFMiner.
   - [pikepdf](https://github.com/pikepdf/pikepdf) - A powerful library for reading and editing PDF files, based on qpdf.
-  - [PyPDF2](https://github.com/mstamy2/PyPDF2) - A library capable of splitting, merging and transforming PDF pages.
+  - [pypdf](https://github.com/py-pdf/pypdf) - A library capable of splitting, merging, cropping, and transforming PDF pages.
   - [reportlab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
 - Markdown
@@ -943,7 +929,6 @@ _Libraries for parsing and manipulating specific text formats._
 _Libraries for file manipulation._
 
 - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
-- [path.py](https://github.com/jaraco/path.py) - A module wrapper for [os.path](https://docs.python.org/3/library/os.path.html).
 - [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) A cross-platform, object-oriented path library.
 - [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
 - [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
@@ -971,7 +956,6 @@ _Libraries for manipulating audio, video, and their metadata._
 
 - Audio
   - [audioflux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
-  - [audioread](https://github.com/beetbox/audioread) - Cross-library (GStreamer + Core Audio + MAD + FFmpeg) audio decoding.
   - [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
   - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
@@ -979,7 +963,6 @@ _Libraries for manipulating audio, video, and their metadata._
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
   - [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
-  - [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
 - Video
   - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
   - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
@@ -994,7 +977,6 @@ _Libraries for manipulating audio, video, and their metadata._
 _Awesome game development libraries._
 
 - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
-- [cocos](https://github.com/los-cocos/cocos) - A framework for building 2D games, demos, and other graphical/interactive applications.
 - [harfang3d](https://github.com/harfang3d/harfang3d) - Python framework for 3D, VR and game development.
 - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
 - [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
@@ -1008,14 +990,11 @@ _Awesome game development libraries._
 
 _Implementations of Python._
 
-- [clpython](https://github.com/metawilm/cl-python) - Implementation of the Python programming language written in Common Lisp.
 - [cpython](https://github.com/python/cpython) - Default, most widely used implementation of the Python programming language written in C.
 - [cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
 - [ironpython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C#.
 - [micropython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
-- [PeachPy](https://github.com/Maratyszcza/PeachPy) - x86-64 assembler embedded in Python.
 - [pypy](https://github.com/pypy/pypy) - A very fast and compliant implementation of the Python language.
-- [pyston](https://github.com/pyston/pyston/) - A Python implementation using JIT techniques.
 
 ## Built-in Classes Enhancement
 
@@ -1154,7 +1133,6 @@ _Useful libraries or tools that don't fit in the categories above._
 - [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
-- [pluginbase](https://github.com/mitsuhiko/pluginbase) - A simple but flexible plugin system for Python.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
 # Resources
