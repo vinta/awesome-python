@@ -172,7 +172,6 @@ _Libraries for working with human languages._
 
 - General
   - [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
-  - [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
   - [nltk](https://github.com/nltk/nltk) - A leading platform for building Python programs to work with human language data.
   - [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
   - [spacy](https://github.com/explosion/spaCy) - A library for industrial-strength natural language processing in Python and Cython.
@@ -357,9 +356,7 @@ _Libraries to automate web scraping and extract web content._
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
   - [grab](https://github.com/lorien/grab) - Site scraping framework.
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
-  - [requests-html](https://github.com/psf/requests-html) - Pythonic HTML Parsing for Humans.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
-  - [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 - Content Extraction
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
@@ -448,7 +445,6 @@ _Libraries for caching data._
 _Libraries and software for indexing and performing search queries on data._
 
 - [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
-- [elasticsearch-dsl-py](https://github.com/elastic/elasticsearch-dsl-py) - The official high-level Python client for Elasticsearch.
 - [elasticsearch-py](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 - [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
 
@@ -732,9 +728,7 @@ _Software and libraries for DevOps._
 - Deployment
   - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
-  - [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
 - Monitoring and Processes
-  - [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
   - [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
@@ -914,7 +908,6 @@ _Libraries for working with HTML and XML._
 - [lxml](https://github.com/lxml/lxml) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 - [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
-- [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
 ## File Format Processing
