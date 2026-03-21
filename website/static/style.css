@@ -527,6 +527,51 @@ th[data-sort].sort-asc::after {
   font-weight: 600;
 }
 
+/* === Back to Top === */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: max(1.5rem, calc(50vw - 700px + 0.5rem));
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 0.4rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.15s, color 0.15s;
+  z-index: 50;
+}
+
+.back-to-top[hidden] { display: none; }
+
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.back-to-top:active {
+  transform: scale(0.95);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .back-to-top { right: 1.25rem; bottom: 1.25rem; }
+}
+
 /* === Noscript === */
 .noscript-msg {
   text-align: center;

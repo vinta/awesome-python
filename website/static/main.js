@@ -279,6 +279,25 @@ if (searchInput) {
   });
 }
 
+// Back to top
+var backToTop = document.querySelector('.back-to-top');
+if (backToTop) {
+  backToTop.hidden = false;
+  var scrollTicking = false;
+  window.addEventListener('scroll', function () {
+    if (!scrollTicking) {
+      requestAnimationFrame(function () {
+        backToTop.classList.toggle('visible', window.scrollY > 600);
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  });
+  backToTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 // Restore state from URL
 (function () {
   var params = new URLSearchParams(location.search);
