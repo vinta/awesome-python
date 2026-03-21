@@ -347,6 +347,12 @@ th[data-sort].sort-asc::after {
   white-space: nowrap;
 }
 
+.tag-source {
+  background: var(--bg-input);
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
 /* === Arrow Column === */
 .col-arrow {
   width: 2.5rem;

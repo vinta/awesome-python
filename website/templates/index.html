@@ -84,7 +84,7 @@
       <tr
         class="row"
         role="button"
-        data-cats="{{ entry.categories | join('||') }}"
+        data-cats="{{ entry.categories | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
         data-groups="{{ entry.groups | join('||') }}"
         tabindex="0"
         aria-expanded="false"
@@ -122,6 +122,11 @@
             {{ cat }}
           </button>
           {% endfor %}
+          {% if entry.source_type == 'Built-in' %}
+          <button class="tag tag-source" data-type="cat" data-value="Built-in">
+            Built-in
+          </button>
+          {% endif %}
           <button class="tag tag-group" data-type="group" data-value="{{ entry.groups[0] }}">
             {{ entry.groups[0] }}
           </button>
