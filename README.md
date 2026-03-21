@@ -231,9 +231,6 @@ _Libraries for building RESTful and GraphQL APIs._
   - [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
 - Flask
   - [apiflask](https://github.com/apiflask/apiflask) - A lightweight Python web API framework based on Flask and Marshmallow.
-  - [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
-- Pyramid
-  - [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 - Framework Agnostic
   - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
@@ -292,7 +289,6 @@ _Libraries for implementing authentication schemes._
   - [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
 - JWT
   - [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
-  - [python-jose](https://github.com/mpdavis/python-jose/) - A JOSE implementation in Python.
 - Permissions
   - [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per object permissions for Django 1.2+
   - [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app providing object-level permissions to Django, without requiring a database.
@@ -351,7 +347,6 @@ _Libraries to automate web scraping and extract web content._
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
   - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
-  - [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
   - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
 
@@ -591,7 +586,6 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 - Code Formatters
   - [black](https://github.com/psf/black) - The uncompromising Python code formatter.
   - [isort](https://github.com/timothycrosley/isort) - A Python utility / library to sort imports.
-  - [yapf](https://github.com/google/yapf) - Yet another Python code formatter from Google.
 - Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
   - [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
@@ -814,7 +808,7 @@ _Useful CLI-based tools for productivity._
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
-  - [youtube-dl](https://github.com/ytdl-org/youtube-dl/) - A command-line program to download videos from YouTube and other video sites.
+  - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A command-line program to download videos from YouTube and other video sites, a fork of youtube-dl.
 - CLI Enhancements
   - [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
@@ -1072,8 +1066,6 @@ _Libraries to create packaged executables for release distribution._
 
 - [cx-Freeze](https://github.com/marcelotduarte/cx_Freeze) - It is a Python tool that converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
 - [Nuitka](https://github.com/Nuitka/Nuitka) - Compiles Python programs into high-performance standalone executables (cross-platform, supports all Python versions).
-- [py2app](https://github.com/ronaldoussoren/py2app) - Freezes Python scripts (Mac OS X).
-- [py2exe](https://github.com/py2exe/py2exe) - Freezes Python scripts (Windows).
 - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
 - [pyinstaller](https://github.com/pyinstaller/pyinstaller) - Converts Python programs into stand-alone executables (cross-platform).
 - [shiv](https://github.com/linkedin/shiv) - A command line utility for building fully self-contained zipapps (PEP 441), but with all their dependencies included.
