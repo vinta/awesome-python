@@ -136,6 +136,9 @@ def main() -> None:
     fetched_count = 0
     skipped_repos: list[str] = []
 
+    now_iso = now.isoformat()
+    total_batches = (len(to_fetch) + BATCH_SIZE - 1) // BATCH_SIZE
+
     with httpx.Client(
         headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
         transport=httpx.HTTPTransport(retries=2),
@@ -144,7 +147,6 @@ def main() -> None:
         for i in range(0, len(to_fetch), BATCH_SIZE):
             batch = to_fetch[i : i + BATCH_SIZE]
             batch_num = i // BATCH_SIZE + 1
-            total_batches = (len(to_fetch) + BATCH_SIZE - 1) // BATCH_SIZE
             print(f"Fetching batch {batch_num}/{total_batches} ({len(batch)} repos)...")
 
             try:
@@ -158,15 +160,9 @@ def main() -> None:
                 save_cache(cache)
                 sys.exit(1)
 
-            now_iso = now.isoformat()
             for repo in batch:
                 if repo in results:
-                    cache[repo] = {
-                        "stars": results[repo]["stars"],
-                        "owner": results[repo]["owner"],
-                        "last_commit_at": results[repo]["last_commit_at"],
-                        "fetched_at": now_iso,
-                    }
+                    cache[repo] = {**results[repo], "fetched_at": now_iso}
                     fetched_count += 1
                 else:
                     skipped_repos.append(repo)
