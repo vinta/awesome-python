@@ -143,29 +143,36 @@ function getSortValue(row, col) {
 
 function sortRows() {
   var arr = Array.prototype.slice.call(rows);
-  if (activeSort) {
-    arr.sort(function (a, b) {
-      var aVal = getSortValue(a, activeSort.col);
-      var bVal = getSortValue(b, activeSort.col);
-      if (activeSort.col === 'name') {
-        var cmp = aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
-        if (cmp === 0) return a._origIndex - b._origIndex;
-        return activeSort.order === 'desc' ? -cmp : cmp;
-      }
-      if (aVal <= 0 && bVal <= 0) return a._origIndex - b._origIndex;
-      if (aVal <= 0) return 1;
-      if (bVal <= 0) return -1;
-      var cmp = aVal - bVal;
-      if (cmp === 0) return a._origIndex - b._origIndex;
-      return activeSort.order === 'desc' ? -cmp : cmp;
-    });
-  } else {
-    arr.sort(function (a, b) { return a._origIndex - b._origIndex; });
-  }
+  var col = activeSort.col;
+  var order = activeSort.order;
+
+  // Cache sort values once to avoid DOM queries per comparison
   arr.forEach(function (row) {
-    tbody.appendChild(row);
-    tbody.appendChild(row._expandRow);
+    row._sortVal = getSortValue(row, col);
   });
+
+  arr.sort(function (a, b) {
+    var aVal = a._sortVal;
+    var bVal = b._sortVal;
+    if (col === 'name') {
+      var cmp = aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
+      if (cmp === 0) return a._origIndex - b._origIndex;
+      return order === 'desc' ? -cmp : cmp;
+    }
+    if (aVal <= 0 && bVal <= 0) return a._origIndex - b._origIndex;
+    if (aVal <= 0) return 1;
+    if (bVal <= 0) return -1;
+    var cmp = aVal - bVal;
+    if (cmp === 0) return a._origIndex - b._origIndex;
+    return order === 'desc' ? -cmp : cmp;
+  });
+
+  var frag = document.createDocumentFragment();
+  arr.forEach(function (row) {
+    frag.appendChild(row);
+    frag.appendChild(row._expandRow);
+  });
+  tbody.appendChild(frag);
   applyFilters();
 }
 
