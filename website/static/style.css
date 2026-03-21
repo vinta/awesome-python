@@ -60,21 +60,11 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .skip-link:focus { left: 0; }
 
 /* === Hero === */
-@keyframes hero-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 .hero {
   max-width: 1400px;
   margin: 0 auto;
   padding: 3.5rem 2rem 1.5rem;
 }
-
-.hero h1 { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) both; }
-.hero-sub { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.08s both; }
-.hero-gh { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.16s both; }
-.hero-submit { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.16s both; }
 
 .hero-main {
   display: flex;
@@ -152,7 +142,6 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .search-wrap {
   position: relative;
   margin-bottom: 0.75rem;
-  animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.24s both;
 }
 
 .search-icon {
