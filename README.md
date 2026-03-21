@@ -252,7 +252,6 @@ _ASGI and WSGI compatible web servers._
   - [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, ported from Ruby's Unicorn project.
   - [uwsgi](https://github.com/unbit/uwsgi) - A project aims at developing a full stack for building hosting services, written in C.
   - [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
-  - [werkzeug](https://github.com/pallets/werkzeug) - A WSGI utility library for Python that powers Flask and can easily be embedded into your own projects.
 
 ## WebSocket
 
@@ -309,7 +308,6 @@ _Libraries for administrative interfaces._
 _Content Management Systems._
 
 - [django-cms](https://github.com/django-cms/django-cms) - The easy-to-use and developer-friendly enterprise CMS powered by Django.
-- [feincms](https://github.com/feincms/feincms) - One of the most advanced Content Management Systems built on Django.
 - [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 - [wagtail](https://github.com/wagtail/wagtail) - A Django content management system.
 
@@ -437,7 +435,6 @@ _Libraries for serializing complex data types._
 - [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 - [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
 - [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
-- [ultrajson](https://github.com/esnme/ultrajson) - A fast JSON decoder and encoder written in C with Python bindings.
 
 **Data & Science**
 
@@ -469,8 +466,6 @@ _Libraries for validating data. Used for forms in many cases._
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
-- [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
-- [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 
 ## Data Visualization
 
@@ -563,7 +558,6 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 
 _Interactive Python interpreters (REPL)._
 
-- [bpython](https://github.com/bpython/bpython) - A fancy interface to the Python interpreter.
 - [jupyter](https://github.com/jupyter/notebook) - A rich toolkit to help you make the most out of using Python interactively.
   - [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
 - [marimo](https://github.com/marimo-team/marimo) - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
@@ -617,7 +611,6 @@ _Libraries for testing codebases and generating test data._
   - [pyautogui](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
   - [schemathesis](https://github.com/kiwicom/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
-  - [splinter](https://github.com/cobrateam/splinter) - Open source tool for testing web applications.
 - Mock
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
@@ -691,8 +684,8 @@ _Libraries for generating project documentation._
 _Software and libraries for DevOps._
 
 - Cloud Providers
+  - [awscli](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services.
   - [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
-  - [s3cmd](https://github.com/s3tools/s3cmd) - A command line tool for managing Amazon S3 and CloudFront.
 - Configuration Management
   - [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
   - [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
@@ -723,9 +716,6 @@ _Frameworks and libraries for Distributed Computing._
   - [pyspark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
   - [joblib](https://github.com/joblib/joblib) - A set of tools to provide lightweight pipelining in Python.
   - [ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
-- Stream Processing
-  - [kafka-python](https://github.com/dpkp/kafka-python) - The Python client for Apache Kafka.
-  - [streamparse](https://github.com/Parsely/streamparse) - Run Python code against real-time streams of data via [Apache Storm](http://storm.apache.org/).
 
 ## Task Queues
 
@@ -771,7 +761,6 @@ _RPC-compatible servers._
 
 - [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
 - [rpyc](https://github.com/tomerfiliba/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
-- [zerorpc](https://github.com/0rpc/zerorpc-python) - zerorpc is a flexible RPC implementation based on [ZeroMQ](http://zeromq.org/) and [MessagePack](http://msgpack.org/).
 
 **CLI & GUI**
 
@@ -790,7 +779,6 @@ _Libraries for building command-line applications._
 - Terminal Rendering
   - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
   - [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
-  - [bashplotlib](https://github.com/glamp/bashplotlib) - Making basic plots in the terminal.
   - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
   - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
   - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
@@ -938,7 +926,6 @@ _Libraries for manipulating images._
 - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 - [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
 - [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
-- [quads](https://github.com/fogleman/Quads) - Computer art based on quadtrees.
 - [scikit-image](https://github.com/scikit-image/scikit-image) - A Python library for (scientific) image processing.
 - [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 - [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
@@ -949,12 +936,9 @@ _Libraries for manipulating audio, video, and their metadata._
 
 - Audio
   - [audioflux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
-  - [dejavu](https://github.com/worldveil/dejavu) - Audio fingerprinting and recognition.
   - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
-  - [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
-  - [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 - Video
   - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
@@ -970,7 +954,6 @@ _Libraries for manipulating audio, video, and their metadata._
 _Awesome game development libraries._
 
 - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
-- [harfang3d](https://github.com/harfang3d/harfang3d) - Python framework for 3D, VR and game development.
 - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
 - [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
 - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
@@ -1074,7 +1057,6 @@ _Libraries to create packaged executables for release distribution._
 
 _Libraries for storing and parsing configuration options._
 
-- [configobj](https://github.com/DiffSK/configobj) - INI file parser with validation.
 - [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
 - [dynaconf](https://github.com/dynaconf/dynaconf) - Dynaconf is a configuration manager with plugins for Django, Flask and FastAPI.
 - [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
