@@ -544,7 +544,7 @@ th[data-sort].sort-asc::after {
   cursor: pointer;
   opacity: 0;
   transform: translateY(0.5rem);
-  transition: opacity 0.25s ease, transform 0.25s ease, border-color 0.15s, color 0.15s;
+  transition: opacity 0.15s ease, transform 0.15s ease, border-color 0.15s, color 0.15s;
   z-index: 50;
 }
 
