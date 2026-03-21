@@ -60,11 +60,21 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .skip-link:focus { left: 0; }
 
 /* === Hero === */
+@keyframes hero-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .hero {
   max-width: 1400px;
   margin: 0 auto;
   padding: 3.5rem 2rem 1.5rem;
 }
+
+.hero h1 { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) both; }
+.hero-sub { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.08s both; }
+.hero-gh { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.16s both; }
+.hero-submit { animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.16s both; }
 
 .hero-main {
   display: flex;
@@ -142,6 +152,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .search-wrap {
   position: relative;
   margin-bottom: 0.75rem;
+  animation: hero-in 0.5s cubic-bezier(0.25, 1, 0.5, 1) 0.24s both;
 }
 
 .search-icon {
@@ -174,8 +185,6 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   background: var(--bg);
 }
 
-.filter-bar[hidden] { display: none; }
-
 .filter-bar {
   display: flex;
   align-items: center;
@@ -183,6 +192,16 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   padding: 0.5rem 0;
   font-size: var(--text-sm);
   color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.filter-bar.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .filter-bar strong {
@@ -297,8 +316,16 @@ th[data-sort] {
   user-select: none;
 }
 
+th[data-sort] {
+  transition: color 0.15s ease;
+}
+
 th[data-sort]:hover {
   color: var(--accent);
+}
+
+th[data-sort]:active {
+  color: var(--accent-hover);
 }
 
 th[data-sort]::after {

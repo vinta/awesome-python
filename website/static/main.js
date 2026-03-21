@@ -100,10 +100,10 @@ function applyFilters() {
   // Filter bar
   if (filterBar) {
     if (activeFilter) {
-      filterBar.hidden = false;
+      filterBar.classList.add('visible');
       if (filterValue) filterValue.textContent = activeFilter.value;
     } else {
-      filterBar.hidden = true;
+      filterBar.classList.remove('visible');
     }
   }
 
