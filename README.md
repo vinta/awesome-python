@@ -157,7 +157,6 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 
 - [catboost](https://github.com/catboost/catboost) - A fast, scalable, high performance gradient boosting on decision trees library.
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
-- [karateclub](https://github.com/benedekrozemberczki/karateclub) - Unsupervised machine learning toolbox for graph structured data.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high performance gradient boosting framework.
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
@@ -274,7 +273,6 @@ _Libraries and tools for templating and lexing._
 _Tools for managing, compressing and minifying website assets._
 
 - [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline JavaScript or CSS into a single cached file.
-- [django-pipeline](https://github.com/jazzband/django-pipeline) - An asset packaging library for Django.
 - [django-storages](https://github.com/jschneier/django-storages) - A collection of custom storage back ends for Django.
 
 ## Authentication
@@ -412,8 +410,6 @@ _Libraries for caching data._
 - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 - [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
-- [hermescache](https://pypi.org/project/HermesCache/) - Python caching library with tag-based invalidation and dogpile effect prevention.
-- [pylibmc](https://github.com/lericson/pylibmc) - A Python wrapper around the [libmemcached](https://libmemcached.org/libMemcached.html) interface.
 - [python-diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 
 ## Search
@@ -662,11 +658,8 @@ _Libraries for generating project documentation._
 
 ## Editor Plugins and IDEs
 
-- [elpy](https://github.com/jorgenschaefer/elpy) - Emacs Python Development Environment.
-- [jedi-vim](https://github.com/davidhalter/jedi-vim) - Vim bindings for the Jedi auto-completion library for Python.
 - [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
 - [Python for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
-- [python-mode](https://github.com/python-mode/python-mode) - An all in one plugin for turning Vim into a Python IDE.
 - [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
 - [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
 
@@ -730,7 +723,6 @@ _Libraries for scheduling jobs._
 - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 - [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 - [SpiffWorkflow](https://github.com/sartography/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
-- [taskflow](https://docs.openstack.org/developer/taskflow/) - A Python library that helps to make task execution easy, consistent and reliable.
 
 ## Logging
 
@@ -784,7 +776,6 @@ _Useful CLI-based tools for productivity._
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
-  - [fpp](https://github.com/facebook/PathPicker) - Select files out of bash output.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
@@ -840,7 +831,7 @@ _Libraries for parsing and manipulating plain texts._
   - [textdistance](https://github.com/life4/textdistance) - Compute distance between sequences with 30+ algorithms.
   - [unidecode](https://github.com/avian2/unidecode) - ASCII transliterations of Unicode text.
 - Unique identifiers
-  - [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
+  - [sqids](https://github.com/sqids/sqids-python) - A library for generating short unique IDs from numbers.
   - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
 - Parser
   - [pygments](https://github.com/pygments/pygments) - A generic syntax highlighter.
@@ -1076,7 +1067,6 @@ _Frameworks and tools for penetration testing._
 _Libraries for programming with hardware._
 
 - [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
-- [mouse](https://github.com/boppreh/mouse) - Hook and simulate global mouse events on Windows and Linux.
 - [pynput](https://github.com/moses-palmer/pynput) - A library to control and monitor input devices.
 
 ## Microsoft Windows
