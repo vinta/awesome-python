@@ -299,6 +299,7 @@ _Libraries for administrative interfaces._
 - [django-grappelli](https://github.com/sehmaschine/django-grappelli) - A jazzy skin for the Django Admin-Interface.
 - [django-unfold](https://github.com/unfoldadmin/django-unfold) - Elevate your Django admin with a stunning modern interface, powerful features, and seamless user experience.
 - [flask-admin](https://github.com/pallets-eco/flask-admin) - Simple and extensible administrative interface framework for Flask.
+- [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 - [func-to-web](https://github.com/offerrall/FuncToWeb) - Instantly create web UIs from Python functions using type hints. Zero frontend code required.
 - [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
 
@@ -702,7 +703,6 @@ _Frameworks and libraries for Distributed Computing._
 _Libraries for working with task queues._
 
 - [celery](https://github.com/celery/celery) - An asynchronous task queue/job queue based on distributed message passing.
-  - [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 - [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
 - [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
@@ -988,7 +988,7 @@ _Libraries for working with dates and times._
 _Libraries for Python version and virtual environment management._
 
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
-  - [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows, Simple Python version management.
+- [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 
