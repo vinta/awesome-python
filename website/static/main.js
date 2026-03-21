@@ -282,7 +282,6 @@ if (searchInput) {
 // Back to top
 var backToTop = document.querySelector('.back-to-top');
 if (backToTop) {
-  backToTop.hidden = false;
   var scrollTicking = false;
   window.addEventListener('scroll', function () {
     if (!scrollTicking) {
