@@ -227,7 +227,6 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .table-wrap {
   width: 100%;
   padding: 0;
-  overflow-x: auto;
 }
 
 .table-wrap:focus {
@@ -254,6 +253,7 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   background: var(--bg);
   z-index: 10;
   white-space: nowrap;
+  box-shadow: 0 1px 0 var(--border);
 }
 
 .table thead th:first-child,
@@ -634,6 +634,8 @@ th[data-sort].sort-asc::after {
 }
 
 @media (max-width: 640px) {
+  .table-wrap { overflow-x: auto; }
+  .table thead th { position: static; }
   .hero { padding: 2rem 1.25rem 1rem; }
   .controls { padding: 0 1.25rem 0.75rem; }
 
