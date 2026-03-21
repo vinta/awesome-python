@@ -32,7 +32,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 
 - [HTTP Clients](#http-clients)
 - [Web Scraping](#web-scraping)
-- [URL Manipulation](#url-manipulation)
 - [Email](#email)
 
 **Database & Storage**
@@ -351,6 +350,7 @@ _Static site generator is a software that takes some text + templates as input a
 _Libraries for working with HTTP._
 
 - [aiohttp](https://github.com/aio-libs/aiohttp) - Asynchronous HTTP client/server framework for asyncio and Python.
+- [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
 - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 - [treq](https://github.com/twisted/treq) - Python requests like API built on top of Twisted's HTTP client.
@@ -374,12 +374,6 @@ _Libraries to automate web scraping and extract web content._
 - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
 - [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
 - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
-
-## URL Manipulation
-
-_Libraries for parsing URLs._
-
-- [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
 
 ## Email
 
@@ -482,19 +476,21 @@ _Libraries for serializing complex data types._
 
 _Libraries for data analysis._
 
-- [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
-- [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
-- [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
-- [ibis](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
-- [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
-- [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
-- [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
-- [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
-- [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
-- [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
-- [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
-- [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
-- [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
+- General
+  - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
+  - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
+  - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
+  - [ibis](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
+  - [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
+  - [optimus](https://github.com/hi-primus/optimus) - Agile Data Science Workflows made easy with PySpark.
+  - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
+  - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
+  - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
+- Financial Data
+  - [akshare](https://github.com/jindaxiang/akshare) - A financial data interface library, built for human beings!
+  - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
+  - [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
+  - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
 
 ## Data Validation
 
@@ -914,10 +910,9 @@ _Libraries for parsing and manipulating plain texts._
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
   - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
   - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
+  - [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
   - [textdistance](https://github.com/orsinium/textdistance) - Compute distance between sequences with 30+ algorithms.
   - [unidecode](https://github.com/avian2/unidecode) - ASCII transliterations of Unicode text.
-- Slugify
-  - [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
 - Unique identifiers
   - [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
   - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
@@ -973,12 +968,10 @@ _Libraries for parsing and manipulating specific text formats._
   - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
-- YAML
-  - [pyyaml](https://github.com/yaml/pyyaml) - YAML implementations for Python.
-- TOML
-  - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
-- CSV
+- Data Formats
   - [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
+  - [pyyaml](https://github.com/yaml/pyyaml) - YAML implementations for Python.
+  - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
 
 ## File Manipulation
 
