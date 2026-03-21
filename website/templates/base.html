@@ -18,6 +18,12 @@
     <meta property="og:url" content="https://awesome-python.com/" />
     <meta name="twitter:card" content="summary" />
     <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/static/style.css" />
     <script
       async
@@ -38,20 +44,30 @@
     <main id="content">{% block content %}{% endblock %}</main>
 
     <footer class="footer">
-      <span
-        >Made by
-        <a href="https://vinta.ws/" target="_blank" rel="noopener"
-          >Vinta</a
-        ></span
-      >
-      <span class="footer-sep">/</span>
-      <a href="https://github.com/vinta" target="_blank" rel="noopener"
-        >GitHub</a
-      >
-      <span class="footer-sep">/</span>
-      <a href="https://twitter.com/vinta" target="_blank" rel="noopener"
-        >Twitter</a
-      >
+      <div class="footer-copy">
+        Maintained by
+        <a href="https://vinta.ws/" target="_blank" rel="noopener">Vinta</a>
+        for the Python community.
+      </div>
+      <div class="footer-links">
+        <a
+          href="https://github.com/vinta/awesome-python"
+          target="_blank"
+          rel="noopener"
+          >Repository</a
+        >
+        <span class="footer-sep">/</span>
+        <a
+          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+          target="_blank"
+          rel="noopener"
+          >Contribute</a
+        >
+        <span class="footer-sep">/</span>
+        <a href="https://github.com/vinta" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+      </div>
     </footer>
 
     <noscript
