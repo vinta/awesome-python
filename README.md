@@ -230,19 +230,18 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 _Libraries for building RESTful and GraphQL APIs._
 
 - Django
+  - [django-ninja](https://github.com/vitalik/django-ninja) - Fast, Django REST framework based on type hints and Pydantic.
   - [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
-  - [django-tastypie](https://github.com/django-tastypie/django-tastypie) - Creating delicious APIs for Django apps.
   - [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
 - Flask
+  - [apiflask](https://github.com/apiflask/apiflask) - A lightweight Python web API framework based on Flask and Marshmallow.
   - [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
-  - [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
 - Pyramid
   - [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
 - Framework Agnostic
   - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
   - [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
-  - [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
   - [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
   - [strawberry](https://github.com/strawberry-graphql/strawberry) - A GraphQL library that leverages Python type annotations for schema definition.
   - [webargs](https://github.com/marshmallow-code/webargs) - A friendly library for parsing HTTP request arguments with built-in support for popular web frameworks.
@@ -354,14 +353,12 @@ _Libraries to automate web scraping and extract web content._
 - Frameworks
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
-  - [grab](https://github.com/lorien/grab) - Site scraping framework.
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 - Content Extraction
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
   - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
-  - [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
   - [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
   - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
@@ -484,12 +481,10 @@ _Libraries for data analysis._
 _Libraries for validating data. Used for forms in many cases._
 
 - [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
-- [colander](https://github.com/Pylons/colander) - Validating and deserializing data obtained via XML, JSON, an HTML form post.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [schema](https://github.com/keleshev/schema) - A library for validating Python data structures.
-- [schematics](https://github.com/schematics/schematics) - Data Structure Validation.
 - [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library.
 
 ## Data Visualization
@@ -625,7 +620,6 @@ _Libraries for testing codebases and generating test data._
 
 - Testing Frameworks
   - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
-  - [nose2](https://github.com/nose-devs/nose2) - The successor to `nose`, based on `unittest2`.
   - [pytest](https://github.com/pytest-dev/pytest) - A mature full-featured Python testing tool.
   - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
   - [scanapi](https://github.com/scanapi/scanapi) - Automated Testing and Documentation for your REST API.
@@ -671,7 +665,7 @@ _Libraries for debugging code._
   - [python-hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
 - Profiler
   - [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
-  - [vprof](https://github.com/nvdv/vprof) - Visual Python profiler.
+  - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
 - Others
   - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) - Display various debug information for Django.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
@@ -1081,7 +1075,6 @@ _Libraries for Python version and virtual environment management._
 _Libraries for package and dependency management._
 
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-- [mamba](https://github.com/mamba-org/mamba) - A reimplementation of the `conda` package manager in C++.
 - [pip](https://github.com/pypa/pip) - The package installer for Python.
 - [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
 - [poetry](https://github.com/sdispater/poetry) - Python dependency management and packaging made easy.
