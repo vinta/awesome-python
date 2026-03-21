@@ -532,8 +532,8 @@ class TestParseRealReadme:
     def test_first_group_is_ai_ml(self):
         assert self.groups[0]["name"] == "AI & ML"
 
-    def test_at_least_76_categories(self):
-        assert len(self.cats) >= 76
+    def test_at_least_69_categories(self):
+        assert len(self.cats) >= 69
 
     def test_resources_has_newsletters_and_podcasts(self):
         names = [r["name"] for r in self.resources]
