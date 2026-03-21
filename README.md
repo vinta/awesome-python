@@ -295,7 +295,6 @@ _Tools for managing, compressing and minifying website assets._
 - [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline JavaScript or CSS into a single cached file.
 - [django-pipeline](https://github.com/jazzband/django-pipeline) - An asset packaging library for Django.
 - [django-storages](https://github.com/jschneier/django-storages) - A collection of custom storage back ends for Django.
-- [fanstatic](https://github.com/zopefoundation/fanstatic) - Packages, optimizes, and serves static file dependencies as Python packages.
 - [flask-assets](https://github.com/miracle2k/flask-assets) - Helps you integrate webassets into your Flask app.
 - [webassets](https://github.com/miracle2k/webassets) - Bundles, optimizes, and manages unique cache-busting URLs for static resources.
 
@@ -366,7 +365,6 @@ _Libraries to automate web scraping and extract web content._
 - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
 - [grab](https://github.com/lorien/grab) - Site scraping framework.
 - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
-- [lassie](https://github.com/michaelhelmick/lassie) - Web Content Retrieval for Humans.
 - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
 - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
 - [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
@@ -382,7 +380,6 @@ _Libraries to automate web scraping and extract web content._
 _Libraries for parsing URLs._
 
 - [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
-- [purl](https://github.com/codeinthehole/purl) - A simple, immutable URL class with a clean API for interrogation and manipulation.
 
 ## Email
 
@@ -467,7 +464,6 @@ _Libraries and software for indexing and performing search queries on data._
 - [elasticsearch-dsl-py](https://github.com/elastic/elasticsearch-dsl-py) - The official high-level Python client for Elasticsearch.
 - [elasticsearch-py](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 - [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
-- [whoosh](https://github.com/mchaput/whoosh) - A fast, pure Python search engine library.
 
 ## Serialization
 
@@ -666,7 +662,6 @@ _Libraries for testing codebases and generating test data._
 - Mock
   - [doublex](https://pypi.org/project/doublex/) - Powerful test doubles framework for Python.
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
-  - [httmock](https://github.com/patrys/httmock) - A mocking library for requests for Python 2.6+ and 3.2+.
   - [httpretty](https://github.com/gabrielfalcao/HTTPretty) - HTTP request mock tool for Python.
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support.
@@ -789,7 +784,6 @@ _Libraries for working with task queues._
   - [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 - [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
 - [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
-- [mrq](https://github.com/pricingassistant/mrq) - A distributed worker task queue in Python using Redis & gevent.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 
 ## Job Schedulers
@@ -818,7 +812,6 @@ _Libraries for generating and working with logs._
 _Libraries for starting and communicating with OS processes._
 
 - [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
-- [sarge](https://github.com/vsajip/sarge) - Yet another wrapper for subprocess.
 - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 
 ## Network Virtualization
@@ -827,7 +820,6 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 
 - [mininet](https://github.com/mininet/mininet) - A popular network emulator and API written in Python.
 - [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
-- [pox](https://github.com/noxrepo/pox) - A Python-based SDN control applications, such as OpenFlow SDN controllers.
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 
 ## RPC Servers
@@ -925,9 +917,7 @@ _Libraries for parsing and manipulating plain texts._
   - [textdistance](https://github.com/orsinium/textdistance) - Compute distance between sequences with 30+ algorithms.
   - [unidecode](https://github.com/avian2/unidecode) - ASCII transliterations of Unicode text.
 - Slugify
-  - [awesome-slugify](https://github.com/dimka665/awesome-slugify) - A Python slugify library that can preserve unicode.
   - [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
-  - [unicode-slugify](https://github.com/mozilla/unicode-slugify) - A slugifier that generates unicode slugs with Django as a dependency.
 - Unique identifiers
   - [hashids](https://github.com/davidaurelio/hashids-python) - Implementation of [hashids](http://hashids.org) in Python.
   - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
@@ -951,7 +941,6 @@ _Libraries for working with HTML and XML._
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 - [pyquery](https://github.com/gawel/pyquery) - A jQuery-like library for parsing HTML.
 - [untangle](https://github.com/stchris/untangle) - Converts XML documents to Python objects for easy access.
-- [xmldataset](https://github.com/spurin/xmldataset) - Simple XML Parsing.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 
 ## File Format Processing
@@ -990,8 +979,6 @@ _Libraries for parsing and manipulating specific text formats._
   - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
 - CSV
   - [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
-- Archive
-  - [unp](https://github.com/mitsuhiko/unp) - A command line tool that can unpack archives easily.
 
 ## File Manipulation
 
@@ -1032,7 +1019,6 @@ _Libraries for manipulating audio and its metadata._
   - [kapre](https://github.com/keunwoochoi/kapre) - Keras Audio Preprocessors.
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
-  - [mingus](https://github.com/bspaans/python-mingus) - An advanced music theory and notation package with MIDI file and playback support.
   - [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
   - [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
@@ -1047,7 +1033,6 @@ _Libraries for manipulating audio and its metadata._
 _Libraries for manipulating video and GIFs._
 
 - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
-- [scikit-video](https://github.com/aizvorski/scikit-video) - Video processing routines for SciPy.
 - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 
 ## Game Development
