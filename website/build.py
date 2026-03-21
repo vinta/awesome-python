@@ -106,14 +106,15 @@ def extract_entries(
         for cat in group["categories"]:
             cat_to_group[cat["name"]] = group["name"]
 
-    seen: dict[str, dict] = {}  # url -> entry
+    seen: dict[tuple[str, str], dict] = {}  # (url, name) -> entry
     entries: list[dict] = []
     for cat in categories:
         group_name = cat_to_group.get(cat["name"], "Other")
         for entry in cat["entries"]:
             url = entry["url"]
-            if url in seen:
-                existing = seen[url]
+            key = (url, entry["name"])
+            if key in seen:
+                existing = seen[key]
                 if cat["name"] not in existing["categories"]:
                     existing["categories"].append(cat["name"])
                 if group_name not in existing["groups"]:
@@ -131,7 +132,7 @@ def extract_entries(
                     "source_type": detect_source_type(url),
                     "also_see": entry["also_see"],
                 }
-                seen[url] = merged
+                seen[key] = merged
                 entries.append(merged)
     return entries
 
