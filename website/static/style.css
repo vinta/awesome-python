@@ -531,7 +531,8 @@ th[data-sort].sort-asc::after {
 .back-to-top {
   position: fixed;
   bottom: 2rem;
-  right: max(1.5rem, calc(50vw - 700px + 0.5rem));
+  left: 50%;
+  margin-left: -2rem;
   background: var(--bg);
   border: 1px solid var(--border-strong);
   border-radius: 4px;
@@ -569,7 +570,7 @@ th[data-sort].sort-asc::after {
 }
 
 @media (max-width: 640px) {
-  .back-to-top { right: 1.25rem; bottom: 1.25rem; }
+  .back-to-top { bottom: 1.25rem; }
 }
 
 /* === Noscript === */
