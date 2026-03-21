@@ -70,7 +70,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Task Queues](#task-queues)
 - [Job Schedulers](#job-schedulers)
 - [Logging](#logging)
-- [Processes](#processes)
 - [Network Virtualization](#network-virtualization)
 - [RPC Servers](#rpc-servers)
 
@@ -90,8 +89,7 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 **Media**
 
 - [Image Processing](#image-processing)
-- [Audio Processing](#audio-processing)
-- [Video Processing](#video-processing)
+- [Audio & Video Processing](#audio--video-processing)
 - [Game Development](#game-development)
 
 **Python Language**
@@ -360,20 +358,22 @@ _Libraries for working with HTTP._
 
 _Libraries to automate web scraping and extract web content._
 
-- [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
-- [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
-- [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
-- [grab](https://github.com/lorien/grab) - Site scraping framework.
-- [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
-- [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
-- [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
-- [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
-- [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
-- [requests-html](https://github.com/psf/requests-html) - Pythonic HTML Parsing for Humans.
-- [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
-- [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
-- [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
-- [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
+- Frameworks
+  - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
+  - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
+  - [grab](https://github.com/lorien/grab) - Site scraping framework.
+  - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
+  - [requests-html](https://github.com/psf/requests-html) - Pythonic HTML Parsing for Humans.
+  - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
+  - [toapi](https://github.com/gaojiuli/toapi) - Every web site provides APIs.
+- Content Extraction
+  - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
+  - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
+  - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
+  - [newspaper](https://github.com/codelucas/newspaper) - News extraction, article extraction and content curation in Python.
+  - [python-readability](https://github.com/buriy/python-readability) - Fast Python port of arc90's readability tool.
+  - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
+  - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
 
 ## Email
 
@@ -740,22 +740,20 @@ _Software and libraries for DevOps._
   - [openstack](https://www.openstack.org/) - Open source software for building private and public clouds.
   - [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
   - [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
-- SSH-style Deployment
+- Deployment
+  - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
-- Process Management
-  - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
-- Monitoring
+  - [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
+- Monitoring and Processes
+  - [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
   - [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
-- Git Hooks
-  - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
-- Backup
+  - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+  - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+- Other
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
-- Serverless
-  - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
-  - [python-lambda](https://github.com/nficano/python-lambda) - A toolkit for developing and deploying Python code in AWS Lambda.
-- Chaos Engineering
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
+  - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 
 ## Distributed Computing
 
@@ -802,13 +800,6 @@ _Libraries for generating and working with logs._
 - [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
-
-## Processes
-
-_Libraries for starting and communicating with OS processes._
-
-- [delegator.py](https://github.com/amitt001/delegator.py) - [Subprocesses](https://docs.python.org/3/library/subprocess.html) for Humans 2.0.
-- [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 
 ## Network Virtualization
 
@@ -1000,9 +991,9 @@ _Libraries for manipulating images._
 - [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 - [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](http://www.imagemagick.org/script/magick-wand.php), C API for ImageMagick.
 
-## Audio Processing
+## Audio & Video Processing
 
-_Libraries for manipulating audio and its metadata._
+_Libraries for manipulating audio, video, and their metadata._
 
 - Audio
   - [audioflux](https://github.com/libAudioFlux/audioFlux) - A library for audio and music analysis, feature extraction.
@@ -1015,18 +1006,14 @@ _Libraries for manipulating audio and its metadata._
   - [pyAudioAnalysis](https://github.com/tyiannak/pyAudioAnalysis) - Audio feature extraction, classification, segmentation and applications.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
   - [TimeSide](https://github.com/Parisson/TimeSide) - Open web audio processing framework.
+- Video
+  - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
+  - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 - Metadata
   - [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
   - [eyed3](https://github.com/nicfit/eyeD3) - A tool for working with audio files, specifically MP3 files containing ID3 metadata.
   - [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
   - [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
-
-## Video Processing
-
-_Libraries for manipulating video and GIFs._
-
-- [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
-- [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 
 ## Game Development
 
