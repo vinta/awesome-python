@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: uv sync --group build
 
+      - name: Run tests
+        run: make test
+
       - name: Restore star data cache
         id: cache-stars
         uses: actions/cache/restore@v4
