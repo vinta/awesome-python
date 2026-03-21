@@ -30,17 +30,6 @@ def group_categories(
     return groups
 
 
-class Entry(TypedDict):
-    name: str
-    url: str
-    description: str
-    category: str
-    group: str
-    stars: int | None
-    owner: str | None
-    last_commit_at: str | None
-
-
 class StarData(TypedDict):
     stars: int
     owner: str
@@ -183,7 +172,7 @@ def build(repo_root: str) -> None:
     if static_src.exists():
         shutil.copytree(static_src, static_dst, dirs_exist_ok=True)
 
-    shutil.copy(repo / "README.md", site_dir / "llms.txt")
+    (site_dir / "llms.txt").write_text(readme_text, encoding="utf-8")
 
     print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories + {len(resources)} resources")
     print(f"Total entries: {total_entries}")
