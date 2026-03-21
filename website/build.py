@@ -39,6 +39,24 @@ class StarData(TypedDict):
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 
+SOURCE_TYPE_DOMAINS = {
+    "docs.python.org": "stdlib",
+    "gitlab.com": "GitLab",
+    "bitbucket.org": "Bitbucket",
+}
+
+
+def detect_source_type(url: str) -> str | None:
+    """Detect source type from URL domain. Returns None for GitHub URLs."""
+    if GITHUB_REPO_URL_RE.match(url):
+        return None
+    for domain, source_type in SOURCE_TYPE_DOMAINS.items():
+        if domain in url:
+            return source_type
+    if "github.com" not in url:
+        return "External"
+    return None
+
 
 def extract_github_repo(url: str) -> str | None:
     """Extract owner/repo from a GitHub repo URL. Returns None for non-GitHub URLs."""
@@ -57,14 +75,19 @@ def load_stars(path: Path) -> dict[str, StarData]:
 
 
 def sort_entries(entries: list[dict]) -> list[dict]:
-    """Sort entries by stars descending, then name ascending. No-star entries go last."""
+    """Sort entries by stars descending, then name ascending.
+
+    Three tiers: starred entries first, stdlib second, other non-starred last.
+    """
 
     def sort_key(entry: dict) -> tuple[int, int, str]:
         stars = entry["stars"]
         name = entry["name"].lower()
-        if stars is None:
+        if stars is not None:
+            return (0, -stars, name)
+        if entry.get("source_type") == "stdlib":
             return (1, 0, name)
-        return (0, -stars, name)
+        return (2, 0, name)
 
     return sorted(entries, key=sort_key)
 
@@ -105,6 +128,7 @@ def extract_entries(
                     "stars": None,
                     "owner": None,
                     "last_commit_at": None,
+                    "source_type": detect_source_type(url),
                     "also_see": entry["also_see"],
                 }
                 seen[url] = merged

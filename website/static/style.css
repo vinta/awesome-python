@@ -334,6 +334,19 @@ th[data-sort].sort-asc::after {
   text-align: right;
 }
 
+/* === Source Badges === */
+.source-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  background: var(--bg-input);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
 /* === Arrow Column === */
 .col-arrow {
   width: 2.5rem;

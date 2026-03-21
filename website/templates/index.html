@@ -98,6 +98,7 @@
         </td>
         <td class="col-stars">
           {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
+          elif entry.source_type %}<span class="source-badge">{{ entry.source_type }}</span>{%
           else %}&mdash;{% endif %}
         </td>
         <td
