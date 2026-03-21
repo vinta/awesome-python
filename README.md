@@ -61,7 +61,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Debugging Tools](#debugging-tools)
 - [Build Tools](#build-tools)
 - [Documentation](#documentation)
-- [Editor Plugins and IDEs](#editor-plugins-and-ides)
 
 **DevOps**
 
@@ -71,7 +70,6 @@ An opinionated list of awesome Python frameworks, libraries, tools, software and
 - [Job Schedulers](#job-schedulers)
 - [Logging](#logging)
 - [Network Virtualization](#network-virtualization)
-- [RPC Servers](#rpc-servers)
 
 **CLI & GUI**
 
@@ -251,6 +249,9 @@ _ASGI and WSGI compatible web servers._
   - [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, ported from Ruby's Unicorn project.
   - [uwsgi](https://github.com/unbit/uwsgi) - A project aims at developing a full stack for building hosting services, written in C.
   - [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
+- RPC
+  - [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
+  - [rpyc](https://github.com/tomerfiliba-org/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python.
 
 ## WebSocket
 
@@ -656,13 +657,6 @@ _Libraries for generating project documentation._
 - [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 - [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 
-## Editor Plugins and IDEs
-
-- [PyCharm](https://www.jetbrains.com/pycharm/) - Commercial Python IDE by JetBrains. Has free community edition available.
-- [Python for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-python.python) - The official VSCode extension with rich support for Python.
-- [spyder](https://github.com/spyder-ide/spyder) - Open Source Python IDE.
-- [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe) - Includes [Jedi](https://github.com/davidhalter/jedi)-based completion engine for Python.
-
 **DevOps**
 
 ## DevOps Tools
@@ -739,13 +733,6 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 - [mininet](https://github.com/mininet/mininet) - A popular network emulator and API written in Python.
 - [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
-
-## RPC Servers
-
-_RPC-compatible servers._
-
-- [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
-- [rpyc](https://github.com/tomerfiliba-org/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python
 
 **CLI & GUI**
 
