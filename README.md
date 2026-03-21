@@ -174,7 +174,6 @@ _Libraries for working with human languages._
   - [gensim](https://github.com/RaRe-Technologies/gensim) - Topic Modeling for Humans.
   - [langid.py](https://github.com/saffsd/langid.py) - Stand-alone language identification system.
   - [nltk](https://github.com/nltk/nltk) - A leading platform for building Python programs to work with human language data.
-  - [pattern](https://github.com/clips/pattern) - A web mining module.
   - [polyglot](https://github.com/aboSamoor/polyglot) - Natural language pipeline supporting hundreds of languages.
   - [spacy](https://github.com/explosion/spaCy) - A library for industrial-strength natural language processing in Python and Cython.
   - [stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
@@ -192,7 +191,6 @@ _Libraries for Computer Vision._
 - [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
 - [opencv](https://github.com/opencv/opencv-python) - Open Source Computer Vision Library.
 - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
-- [tesserocr](https://github.com/sirfz/tesserocr) - Another simple, Pillow-friendly, wrapper around the `tesseract-ocr` API for OCR.
 
 ## Recommender Systems
 
@@ -202,7 +200,6 @@ _Libraries for building recommender systems._
 - [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
 - [lightfm](https://github.com/lyst/lightfm) - A Python implementation of a number of popular recommendation algorithms.
 - [scikit-surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
-- [spotlight](https://github.com/maciejkula/spotlight) - Deep recommender models using PyTorch.
 
 **Web**
 
@@ -239,7 +236,6 @@ _Libraries for building RESTful and GraphQL APIs._
   - [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
 - Flask
   - [eve](https://github.com/pyeve/eve) - REST API framework powered by Flask, MongoDB and good intentions.
-  - [flask-api](https://github.com/flask-api/flask-api) - Browsable Web APIs for Flask.
   - [flask-restful](https://github.com/flask-restful/flask-restful) - Quickly building REST APIs for Flask.
 - Pyramid
   - [cornice](https://github.com/Cornices/cornice) - A RESTful framework for Pyramid.
@@ -247,7 +243,6 @@ _Libraries for building RESTful and GraphQL APIs._
   - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
   - [fastapi](https://github.com/tiangolo/fastapi) - A modern, fast, web framework for building APIs with Python 3.6+ based on standard Python type hints.
-  - [hug](https://github.com/hugapi/hug) - A Python 3 framework for cleanly exposing APIs.
   - [sandman2](https://github.com/jeffknupp/sandman2) - Automated REST APIs for existing database-driven systems.
   - [sanic](https://github.com/sanic-org/sanic) - A Python 3.6+ web server and web framework that's written to go fast.
   - [strawberry](https://github.com/strawberry-graphql/strawberry) - A GraphQL library that leverages Python type annotations for schema definition.
@@ -441,7 +436,6 @@ _Databases implemented in Python._
 
 _Libraries for caching data._
 
-- [beaker](https://github.com/bbangert/beaker) - A WSGI middleware for sessions and caching.
 - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
 - [django-cache-machine](https://github.com/django-cache-machine/django-cache-machine) - Automatic caching and invalidation for Django models.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
@@ -938,7 +932,6 @@ _Libraries for parsing and manipulating specific text formats._
   - [kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
-  - [textract](https://github.com/deanmalmgren/textract) - Extract text from any document, Word, PowerPoint, PDFs, etc.
 - Office
   - [docxtpl](https://github.com/elapouya/python-docx-template) - Editing a docx document by jinja2 template
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
