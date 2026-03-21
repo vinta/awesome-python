@@ -160,6 +160,8 @@ def build(repo_root: str) -> None:
     stars_data = load_stars(website / "data" / "github_stars.json")
     for entry in entries:
         repo_key = extract_github_repo(entry["url"])
+        if not repo_key and entry.get("source_type") == "Built-in":
+            repo_key = "python/cpython"
         if repo_key and repo_key in stars_data:
             sd = stars_data[repo_key]
             entry["stars"] = sd["stars"]
