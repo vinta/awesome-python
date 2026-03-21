@@ -347,7 +347,7 @@ _Libraries to automate web scraping and extract web content._
 
 ## Email
 
-_Libraries for sending and parsing email._
+_Libraries for sending and parsing email, and mail server management._
 
 - [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
@@ -386,7 +386,7 @@ _Libraries for connecting and operating databases._
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0.
 - Other Relational Databases
   - [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
-  - [pymssql](https://github.com/pymssql/pymssql) - A simple database interface to Microsoft SQL Server.
+  - [mssql-python](https://github.com/microsoft/mssql-python) - Official Microsoft driver for SQL Server and Azure SQL, built on ODBC for high performance and low memory usage.
 - NoSQL Databases
   - [cassandra-driver](https://github.com/apache/cassandra-python-driver) - The Python Driver for Apache Cassandra.
   - [django-mongodb-backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
