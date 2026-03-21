@@ -40,7 +40,7 @@ class StarData(TypedDict):
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 
 SOURCE_TYPE_DOMAINS = {
-    "docs.python.org": "stdlib",
+    "docs.python.org": "Built-in",
     "gitlab.com": "GitLab",
     "bitbucket.org": "Bitbucket",
 }
@@ -85,7 +85,7 @@ def sort_entries(entries: list[dict]) -> list[dict]:
         name = entry["name"].lower()
         if stars is not None:
             return (0, -stars, name)
-        if entry.get("source_type") == "stdlib":
+        if entry.get("source_type") == "Built-in":
             return (1, 0, name)
         return (2, 0, name)
 
