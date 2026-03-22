@@ -351,8 +351,10 @@ if (backToTop) {
   window.addEventListener('resize', updateBackToTopVisibility);
 
   backToTop.addEventListener('click', function () {
-    if (!resultsSection) return;
-    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    var target = searchInput || resultsSection;
+    if (!target) return;
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (searchInput) searchInput.focus();
   });
 
   updateBackToTopVisibility();
