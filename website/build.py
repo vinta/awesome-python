@@ -152,11 +152,11 @@ def build(repo_root: str) -> None:
             subtitle = stripped
             break
 
-    parsed_groups, resources = parse_readme(readme_text)
+    parsed_groups, _resources = parse_readme(readme_text)
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
-    groups = group_categories(parsed_groups, resources)
+    groups = group_categories(parsed_groups, [])
     entries = extract_entries(categories, groups)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
@@ -186,7 +186,7 @@ def build(repo_root: str) -> None:
     (site_dir / "index.html").write_text(
         tpl_index.render(
             categories=categories,
-            resources=resources,
+            resources=[],
             groups=groups,
             subtitle=subtitle,
             entries=entries,
@@ -204,7 +204,7 @@ def build(repo_root: str) -> None:
 
     (site_dir / "llms.txt").write_text(readme_text, encoding="utf-8")
 
-    print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories + {len(resources)} resources")
+    print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories")
     print(f"Total entries: {total_entries}")
     print(f"Output: {site_dir}")
 
