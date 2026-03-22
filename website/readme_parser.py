@@ -132,6 +132,7 @@ def _extract_description(nodes: list[SyntaxTreeNode]) -> str:
 # --- Entry extraction --------------------------------------------------------
 
 _DESC_SEP_RE = re.compile(r"^\s*[-\u2013\u2014]\s*")
+_SUBCAT_TRAILING_RE = re.compile(r"[\s,\-\u2013\u2014]+(also\s+see\s*)?$", re.IGNORECASE)
 
 
 def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
@@ -204,8 +205,13 @@ def _parse_list_entries(
         first_link = _find_first_link(inline)
 
         if first_link is None or not _is_leading_link(inline, first_link):
-            # Subcategory label (plain text or text-before-link) — recurse into nested list
-            label = render_inline_text(inline.children)
+            # Subcategory label: take text before the first link, strip trailing separators
+            pre_link = []
+            for child in inline.children:
+                if child.type == "link":
+                    break
+                pre_link.append(child)
+            label = _SUBCAT_TRAILING_RE.sub("", render_inline_text(pre_link)) if pre_link else render_inline_text(inline.children)
             nested = _find_child(list_item, "bullet_list")
             if nested:
                 entries.extend(_parse_list_entries(nested, subcategory=label))
