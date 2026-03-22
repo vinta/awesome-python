@@ -576,14 +576,15 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 - Code Formatters
   - [black](https://github.com/psf/black) - The uncompromising Python code formatter.
   - [isort](https://github.com/PyCQA/isort) - A Python utility / library to sort imports.
-- Static Type Checkers, also see [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
+  - [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
+- Refactoring
+  - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
+- Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
   - [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
-- Refactoring
-  - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
-- Static Type Annotations Generators
+- Type Annotations Generators
   - [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
   - [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
@@ -739,7 +740,7 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 
 **CLI & GUI**
 
-## Command-line Interface Development
+## CLI Development
 
 _Libraries for building command-line applications._
 
@@ -758,7 +759,7 @@ _Libraries for building command-line applications._
   - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
 
-## Command-line Tools
+## CLI Tools
 
 _Useful CLI-based tools for productivity._
 
@@ -852,7 +853,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
-- Office
+- MS Office
   - [docxtpl](https://github.com/elapouya/python-docx-template) - Editing a docx document by jinja2 template
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
   - [pyexcel](https://github.com/pyexcel/pyexcel) - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
