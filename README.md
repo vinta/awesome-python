@@ -15,7 +15,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 - [Computer Vision](#computer-vision)
 - [Recommender Systems](#recommender-systems)
 
-**Web**
+**Web Development**
 
 - [Web Frameworks](#web-frameworks)
 - [Web APIs](#web-apis)
@@ -197,7 +197,7 @@ _Libraries for building recommender systems._
 - [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
 - [scikit-surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 
-**Web**
+**Web Development**
 
 ## Web Frameworks
 
