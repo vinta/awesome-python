@@ -599,7 +599,7 @@ _Libraries for testing codebases and generating test data._
   - [tox](https://github.com/tox-dev/tox) - Auto builds and tests distributions in multiple Python versions
 - GUI / Web Testing
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
-  - [playwright](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
+  - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
   - [pyautogui](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
