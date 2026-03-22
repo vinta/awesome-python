@@ -1111,7 +1111,9 @@ th[data-sort].sort-asc::after {
     padding-right: 0.8rem;
   }
 
-  .col-cat {
+  .col-num,
+  .col-cat,
+  .expand-row td:first-child {
     display: none;
   }
 
