@@ -773,6 +773,15 @@ th[data-sort].sort-asc::after {
   color: var(--ink-muted);
 }
 
+.expand-meta a {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
 .expand-sep {
   margin-inline: 0.25rem;
   color: var(--line-strong);
@@ -1131,6 +1140,11 @@ th[data-sort].sort-asc::after {
     font-size: var(--text-xs);
     font-weight: 600;
     color: var(--ink-muted);
+  }
+
+  .expand-row td[colspan] {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
 
   .col-stars {
