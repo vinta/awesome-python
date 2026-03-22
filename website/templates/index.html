@@ -51,21 +51,21 @@
         <dl class="hero-metrics" aria-label="Site overview">
           <div>
             <dt>{{ "{:,}".format(entries | length) }}</dt>
-            <dd>unique projects indexed</dd>
+            <dd>projects</dd>
           </div>
           <div>
             <dt>{{ total_categories }}</dt>
-            <dd>categories to search</dd>
+            <dd>categories</dd>
           </div>
           <div>
             <dt>{{ groups | length }}</dt>
-            <dd>editorial groupings</dd>
+            <dd>topic groups</dd>
           </div>
         </dl>
       </div>
     </div>
 
-    <a href="#library-index" class="hero-scrollcue">Scroll into the index</a>
+    <a href="#library-index" class="hero-scrollcue">Jump to the list</a>
   </div>
 </header>
 
@@ -73,11 +73,11 @@
   <div class="results-intro section-shell" data-reveal>
     <div>
       <p class="section-label">Library index</p>
-      <h2>One searchable surface for the ecosystem</h2>
+      <h2>Search every project in one place</h2>
     </div>
     <p class="results-note">
-      Use <kbd>/</kbd> to focus search, tap a tag to filter, and open a row for
-      descriptions, related projects, and source details.
+      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      details.
     </p>
   </div>
 
@@ -127,7 +127,7 @@
           <th class="col-name" data-sort="name">Project Name</th>
           <th class="col-stars" data-sort="stars">GitHub Stars</th>
           <th class="col-commit" data-sort="commit-time">Last Commit</th>
-          <th class="col-cat">Category</th>
+          <th class="col-cat">Tags</th>
           <th class="col-arrow">
             <button class="back-to-top" aria-label="Back to library index">
               Top
@@ -235,17 +235,13 @@
     </table>
   </div>
 
-  <div class="no-results" hidden>
-    No libraries match your current search or filter.
-  </div>
+  <div class="no-results" hidden>No libraries match your search or filter.</div>
 </section>
 
 <section class="final-cta section-shell" data-reveal>
-  <p class="section-label">Keep it sharp</p>
-  <h2>Know a project that belongs in the canon?</h2>
-  <p>
-    Submit it with enough context to make the list more useful, not just longer.
-  </p>
+  <p class="section-label">Contribute</p>
+  <h2>Know a project that belongs here?</h2>
+  <p>Tell us what it does and why it stands out.</p>
   <div class="final-cta-actions">
     <a
       href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
