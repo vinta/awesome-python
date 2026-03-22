@@ -8,7 +8,6 @@ from pathlib import Path
 from build import (
     build,
     extract_github_repo,
-    group_categories,
     load_stars,
     sort_entries,
 )
@@ -40,40 +39,6 @@ class TestSlugify:
 
     def test_extra_spaces(self):
         assert slugify("  Date  and  Time  ") == "date-and-time"
-
-
-# ---------------------------------------------------------------------------
-# group_categories
-# ---------------------------------------------------------------------------
-
-
-class TestGroupCategories:
-    def test_appends_resources(self):
-        parsed_groups = [
-            {"name": "G1", "slug": "g1", "categories": [{"name": "Cat1"}]},
-        ]
-        resources = [{"name": "Newsletters", "slug": "newsletters"}]
-        groups = group_categories(parsed_groups, resources)
-        group_names = [g["name"] for g in groups]
-        assert "G1" in group_names
-        assert "Resources" in group_names
-
-    def test_no_resources_no_extra_group(self):
-        parsed_groups = [
-            {"name": "G1", "slug": "g1", "categories": [{"name": "Cat1"}]},
-        ]
-        groups = group_categories(parsed_groups, [])
-        assert len(groups) == 1
-        assert groups[0]["name"] == "G1"
-
-    def test_preserves_group_order(self):
-        parsed_groups = [
-            {"name": "Second", "slug": "second", "categories": [{"name": "C2"}]},
-            {"name": "First", "slug": "first", "categories": [{"name": "C1"}]},
-        ]
-        groups = group_categories(parsed_groups, [])
-        assert groups[0]["name"] == "Second"
-        assert groups[1]["name"] == "First"
 
 
 # ---------------------------------------------------------------------------

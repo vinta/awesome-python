@@ -9,26 +9,7 @@ from pathlib import Path
 from typing import TypedDict
 
 from jinja2 import Environment, FileSystemLoader
-from readme_parser import parse_readme, slugify
-
-
-def group_categories(
-    parsed_groups: list[dict],
-    resources: list[dict],
-) -> list[dict]:
-    """Combine parsed groups with resources for template rendering."""
-    groups = list(parsed_groups)
-
-    if resources:
-        groups.append(
-            {
-                "name": "Resources",
-                "slug": slugify("Resources"),
-                "categories": list(resources),
-            }
-        )
-
-    return groups
+from readme_parser import parse_readme
 
 
 class StarData(TypedDict):
@@ -152,12 +133,11 @@ def build(repo_root: str) -> None:
             subtitle = stripped
             break
 
-    parsed_groups, _resources = parse_readme(readme_text)
+    parsed_groups, _ = parse_readme(readme_text)
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
-    groups = group_categories(parsed_groups, [])
-    entries = extract_entries(categories, groups)
+    entries = extract_entries(categories, parsed_groups)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
     for entry in entries:
@@ -186,8 +166,7 @@ def build(repo_root: str) -> None:
     (site_dir / "index.html").write_text(
         tpl_index.render(
             categories=categories,
-            resources=[],
-            groups=groups,
+            groups=parsed_groups,
             subtitle=subtitle,
             entries=entries,
             total_entries=total_entries,
