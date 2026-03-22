@@ -1075,7 +1075,8 @@ th[data-sort].sort-asc::after {
 
   .col-num,
   .col-cat,
-  .expand-row td:first-child {
+  .expand-row td:first-child,
+  .expand-row td:last-child {
     display: none;
   }
 
