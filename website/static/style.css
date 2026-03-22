@@ -567,7 +567,7 @@ kbd {
 .table tbody td {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  vertical-align: top;
+  vertical-align: middle;
   border-bottom: 1px solid var(--line);
   transition:
     background-color 180ms ease,
