@@ -998,6 +998,10 @@ th[data-sort].sort-asc::after {
   .tag {
     padding: 0.5rem 0.85rem;
   }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
 }
 
 @media (max-width: 680px) {
@@ -1045,10 +1049,6 @@ th[data-sort].sort-asc::after {
   .search {
     min-height: 3.5rem;
     border-radius: 1.25rem;
-  }
-
-  .table-wrap {
-    overflow-x: auto;
   }
 
   .table thead th {
