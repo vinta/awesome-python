@@ -121,7 +121,7 @@
         {% for entry in entries %}
         <tr
           class="row"
-          data-cats="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | join('||') }}{% endif %}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
+          data-cats="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
           data-groups="{{ entry.groups | join('||') }}"
           tabindex="0"
           aria-expanded="false"
@@ -132,7 +132,7 @@
             <a href="{{ entry.url }}" target="_blank" rel="noopener"
               >{{ entry.name }}</a
             >
-            <span class="mobile-cat">{{ entry.categories[0] }}</span>
+            <span class="mobile-cat">{% if entry.subcategories %}{{ entry.subcategories[0].name }}{% else %}{{ entry.categories[0] }}{% endif %}</span>
           </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
@@ -156,17 +156,17 @@
             >{% else %}&mdash;{% endif %}
           </td>
           <td class="col-cat">
-            {% for cat in entry.categories %}
-            <button class="tag" data-type="cat" data-value="{{ cat }}">
-              {{ cat }}
-            </button>
-            {% endfor %} {% for subcat in entry.subcategories %}
+            {% for subcat in entry.subcategories %}
             <button
               class="tag tag-subcat"
               data-type="cat"
-              data-value="{{ subcat }}"
+              data-value="{{ subcat.value }}"
             >
-              {{ subcat }}
+              {{ subcat.name }}
+            </button>
+            {% endfor %} {% for cat in entry.categories %}
+            <button class="tag" data-type="cat" data-value="{{ cat }}">
+              {{ cat }}
             </button>
             {% endfor %}
             <button
