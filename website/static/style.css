@@ -33,6 +33,13 @@
   --text-sm: 0.95rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
+
+  --footer-bg: oklch(16% 0.025 35);
+  --footer-text: oklch(72% 0.02 75);
+  --footer-link: oklch(82% 0.02 75);
+  --footer-link-hover: oklch(95% 0.01 80);
+  --footer-muted: oklch(50% 0.02 55);
+  --footer-sep: oklch(55% 0.02 55);
 }
 
 html {
@@ -909,22 +916,22 @@ th[data-sort].sort-asc::after {
 
 .footer {
   margin-top: auto;
-  background: oklch(16% 0.025 35);
+  background: var(--footer-bg);
   padding: 3rem var(--shell-pad);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   font-size: var(--text-xs);
-  color: oklch(72% 0.02 75);
+  color: var(--footer-text);
 }
 
 .footer a {
-  color: oklch(82% 0.02 75);
+  color: var(--footer-link);
 }
 
 .footer a:hover {
-  color: oklch(95% 0.01 80);
+  color: var(--footer-link-hover);
   text-decoration: underline;
   text-decoration-color: oklch(95% 0.01 80 / 0.4);
   text-underline-offset: 0.2em;
@@ -939,12 +946,12 @@ th[data-sort].sort-asc::after {
 .footer-brand {
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: oklch(82% 0.02 75);
+  color: var(--footer-link);
 }
 
 .footer-date {
   font-size: var(--text-xs);
-  color: oklch(50% 0.02 55);
+  color: var(--footer-muted);
 }
 
 .footer-links {
@@ -953,7 +960,7 @@ th[data-sort].sort-asc::after {
 }
 
 .footer-sep {
-  color: oklch(55% 0.02 55);
+  color: var(--footer-sep);
 }
 
 .noscript-msg {
