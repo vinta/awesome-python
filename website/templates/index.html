@@ -157,11 +157,7 @@
           </td>
           <td class="col-cat">
             {% for subcat in entry.subcategories %}
-            <button
-              class="tag tag-subcat"
-              data-type="cat"
-              data-value="{{ subcat.value }}"
-            >
+            <button class="tag" data-type="cat" data-value="{{ subcat.value }}">
               {{ subcat.name }}
             </button>
             {% endfor %} {% for cat in entry.categories %}
