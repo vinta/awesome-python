@@ -11,6 +11,10 @@ website/data/
 
 # claude code
 .claude/skills/
-.superpowers/
 .gstack/
+.playwright-cli/
+.superpowers/
 skills-lock.json
+
+# codex
+.agents/
