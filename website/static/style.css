@@ -1004,7 +1004,6 @@ th[data-sort].sort-asc::after {
 
   .hero-metrics {
     gap: 1rem;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .hero-metrics div {
