@@ -1095,7 +1095,6 @@ Where to discover learning resources or new Python libraries.
 - [Django Chat](https://djangochat.com/)
 - [PyPodcats](https://pypodcats.live)
 - [Python Bytes](https://pythonbytes.fm)
-- [Python Test](https://podcast.pythontest.com/)
 - [Talk Python To Me](https://talkpython.fm/)
 - [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
 
