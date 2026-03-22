@@ -190,9 +190,13 @@ kbd {
 }
 
 .hero-topbar-link:hover,
-.hero-sub a:hover,
 .hero-scrollcue:hover {
   color: var(--hero-text);
+}
+
+.hero-sub a:hover {
+  color: var(--hero-text);
+  text-decoration-color: oklch(100% 0 0 / 0.6);
 }
 
 .hero-topbar-actions {
@@ -615,6 +619,9 @@ kbd {
 
 .col-name > a:hover {
   color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-color: oklch(58% 0.16 45 / 0.4);
+  text-underline-offset: 0.2em;
 }
 
 th[data-sort] {
@@ -737,9 +744,11 @@ th[data-sort].sort-asc::after {
 
 .expand-desc a:hover,
 .expand-also-see a:hover,
-.expand-meta a:hover,
-.footer a:hover {
+.expand-meta a:hover {
   color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: oklch(58% 0.16 45 / 0.4);
+  text-underline-offset: 0.2em;
 }
 
 .expand-also-see,
@@ -869,6 +878,9 @@ th[data-sort].sort-asc::after {
 
 .footer a:hover {
   color: oklch(95% 0.01 80);
+  text-decoration: underline;
+  text-decoration-color: oklch(95% 0.01 80 / 0.4);
+  text-underline-offset: 0.2em;
 }
 
 .footer-brand {
