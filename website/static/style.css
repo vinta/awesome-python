@@ -888,7 +888,7 @@ th[data-sort].sort-asc::after {
 .footer {
   margin-top: auto;
   background: oklch(16% 0.025 35);
-  padding: 2rem var(--shell-pad);
+  padding: 3rem var(--shell-pad);
   display: flex;
   align-items: center;
   justify-content: space-between;
