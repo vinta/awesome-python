@@ -7,11 +7,14 @@ from pathlib import Path
 
 from build import (
     build,
+    detect_source_type,
+    extract_entries,
     extract_github_repo,
+    format_stars_short,
     load_stars,
     sort_entries,
 )
-from readme_parser import slugify
+from readme_parser import parse_readme, slugify
 
 # ---------------------------------------------------------------------------
 # slugify
@@ -324,3 +327,133 @@ class TestSortEntries:
         ]
         result = sort_entries(entries)
         assert [e["name"] for e in result] == ["apple", "zebra"]
+
+    def test_builtin_between_starred_and_unstarred(self):
+        entries = [
+            {"name": "builtin", "stars": None, "source_type": "Built-in"},
+            {"name": "starred", "stars": 100, "source_type": None},
+            {"name": "unstarred", "stars": None, "source_type": None},
+        ]
+        result = sort_entries(entries)
+        assert [e["name"] for e in result] == ["starred", "builtin", "unstarred"]
+
+
+# ---------------------------------------------------------------------------
+# detect_source_type
+# ---------------------------------------------------------------------------
+
+
+class TestDetectSourceType:
+    def test_github_repo_returns_none(self):
+        assert detect_source_type("https://github.com/psf/requests") is None
+
+    def test_stdlib_url(self):
+        assert detect_source_type("https://docs.python.org/3/library/asyncio.html") == "Built-in"
+
+    def test_gitlab_url(self):
+        assert detect_source_type("https://gitlab.com/org/repo") == "GitLab"
+
+    def test_bitbucket_url(self):
+        assert detect_source_type("https://bitbucket.org/org/repo") == "Bitbucket"
+
+    def test_non_github_external(self):
+        assert detect_source_type("https://example.com/tool") == "External"
+
+    def test_github_non_repo_returns_none(self):
+        assert detect_source_type("https://github.com/org/repo/wiki") is None
+
+
+# ---------------------------------------------------------------------------
+# format_stars_short
+# ---------------------------------------------------------------------------
+
+
+class TestFormatStarsShort:
+    def test_under_1000(self):
+        assert format_stars_short(500) == "500"
+
+    def test_exactly_1000(self):
+        assert format_stars_short(1000) == "1k"
+
+    def test_large_number(self):
+        assert format_stars_short(52000) == "52k"
+
+    def test_zero(self):
+        assert format_stars_short(0) == "0"
+
+
+# ---------------------------------------------------------------------------
+# extract_entries
+# ---------------------------------------------------------------------------
+
+
+class TestExtractEntries:
+    def test_basic_extraction(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            **Tools**
+
+            ## Widgets
+
+            - [widget](https://example.com) - A widget.
+
+            # Contributing
+
+            Done.
+        """)
+        groups = parse_readme(readme)
+        categories = [c for g in groups for c in g["categories"]]
+        entries = extract_entries(categories, groups)
+        assert len(entries) == 1
+        assert entries[0]["name"] == "widget"
+        assert entries[0]["categories"] == ["Widgets"]
+        assert entries[0]["groups"] == ["Tools"]
+
+    def test_duplicate_entry_merged(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            **Tools**
+
+            ## Alpha
+
+            - [shared](https://example.com/shared) - Shared lib.
+
+            ## Beta
+
+            - [shared](https://example.com/shared) - Shared lib.
+
+            # Contributing
+
+            Done.
+        """)
+        groups = parse_readme(readme)
+        categories = [c for g in groups for c in g["categories"]]
+        entries = extract_entries(categories, groups)
+        shared = [e for e in entries if e["name"] == "shared"]
+        assert len(shared) == 1
+        assert sorted(shared[0]["categories"]) == ["Alpha", "Beta"]
+
+    def test_source_type_detected(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            ## Stdlib
+
+            - [asyncio](https://docs.python.org/3/library/asyncio.html) - Async I/O.
+
+            # Contributing
+
+            Done.
+        """)
+        groups = parse_readme(readme)
+        categories = [c for g in groups for c in g["categories"]]
+        entries = extract_entries(categories, groups)
+        assert entries[0]["source_type"] == "Built-in"

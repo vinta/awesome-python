@@ -135,6 +135,24 @@ class TestParseGraphqlResponse:
         assert result["a/x"]["stars"] == 100
         assert result["b/y"]["stars"] == 200
 
+    def test_extracts_last_commit_at(self):
+        data = {
+            "repo_0": {
+                "stargazerCount": 100,
+                "owner": {"login": "org"},
+                "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
+            }
+        }
+        repos = ["org/repo"]
+        result = parse_graphql_response(data, repos)
+        assert result["org/repo"]["last_commit_at"] == "2025-06-01T00:00:00Z"
+
+    def test_missing_default_branch_ref(self):
+        data = {"repo_0": {"stargazerCount": 50, "owner": {"login": "org"}}}
+        repos = ["org/repo"]
+        result = parse_graphql_response(data, repos)
+        assert result["org/repo"]["last_commit_at"] == ""
+
 
 class TestMainSkipsFreshCache:
     """Verify that main() skips fetching when all cache entries are fresh."""
