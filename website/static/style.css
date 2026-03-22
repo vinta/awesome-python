@@ -856,16 +856,28 @@ th[data-sort].sort-asc::after {
 
 .footer {
   margin-top: auto;
-  border-top: 1px solid var(--line);
-  background: oklch(98.4% 0.01 80 / 0.88);
-  backdrop-filter: blur(14px);
-  padding: 1.2rem var(--shell-pad);
+  background: oklch(16% 0.025 35);
+  padding: 2rem var(--shell-pad);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 1rem;
   font-size: var(--text-xs);
-  color: var(--ink-muted);
+  color: oklch(72% 0.02 75);
+}
+
+.footer a {
+  color: oklch(82% 0.02 75);
+}
+
+.footer a:hover {
+  color: oklch(95% 0.01 80);
+}
+
+.footer-brand {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: oklch(82% 0.02 75);
 }
 
 .footer-links {
@@ -874,7 +886,7 @@ th[data-sort].sort-asc::after {
 }
 
 .footer-sep {
-  color: var(--line-strong);
+  color: oklch(40% 0.02 55);
 }
 
 .noscript-msg {
