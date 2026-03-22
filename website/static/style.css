@@ -38,7 +38,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 100%;
   scroll-behavior: smooth;
 }
 
@@ -523,8 +523,9 @@ kbd {
   scroll-margin-top: 1rem;
 }
 
-.table-wrap:focus {
-  outline: none;
+.table-wrap:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 
 .table {
@@ -617,6 +618,8 @@ kbd {
   color: var(--ink);
   font-size: clamp(1rem, 1.5vw, 1.08rem);
   font-weight: 700;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .col-name > a:hover {
@@ -734,6 +737,8 @@ th[data-sort].sort-asc::after {
   color: var(--ink-soft);
   line-height: 1.7;
   text-wrap: pretty;
+  overflow-wrap: break-word;
+  word-break: break-word;
   animation: expand-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 

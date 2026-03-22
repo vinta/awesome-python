@@ -1,10 +1,10 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block header %}
 <header class="hero">
   <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="hero-shell">
-    <div class="hero-topbar">
+    <nav class="hero-topbar" aria-label="Site">
       <span class="hero-brand-mini">Awesome Python</span>
       <div class="hero-topbar-actions">
         <a
@@ -15,7 +15,7 @@
           >Submit a project</a
         >
       </div>
-    </div>
+    </nav>
 
     <div class="hero-grid">
       <div class="hero-copy">
@@ -68,7 +68,7 @@
     <a href="#library-index" class="hero-scrollcue">Jump to the list</a>
   </div>
 </header>
-
+{% endblock %} {% block content %}
 <section class="results-section" id="library-index">
   <div class="results-intro section-shell" data-reveal>
     <div>
@@ -129,8 +129,8 @@
           <th class="col-commit" data-sort="commit-time">Last Commit</th>
           <th class="col-cat">Tags</th>
           <th class="col-arrow">
-            <button class="back-to-top" aria-label="Back to search">
-              Search
+            <button class="back-to-top" aria-label="Back to top">
+              Top &uarr;
             </button>
           </th>
         </tr>
@@ -139,7 +139,6 @@
         {% for entry in entries %}
         <tr
           class="row"
-          role="button"
           data-cats="{{ entry.categories | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
           data-groups="{{ entry.groups | join('||') }}"
           tabindex="0"

@@ -41,7 +41,15 @@
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
 
-    <main id="content">{% block content %}{% endblock %}</main>
+    {% block header %}{% endblock %}
+    <main id="content">
+      <noscript
+        ><p class="noscript-msg">
+          Search and filtering require JavaScript.
+        </p></noscript
+      >
+      {% block content %}{% endblock %}
+    </main>
 
     <footer class="footer">
       <div class="footer-left">
@@ -69,11 +77,6 @@
       </div>
     </footer>
 
-    <noscript
-      ><p class="noscript-msg">
-        Search and filtering require JavaScript.
-      </p></noscript
-    >
     <script src="/static/main.js"></script>
   </body>
 </html>

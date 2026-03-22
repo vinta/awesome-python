@@ -212,6 +212,9 @@ function updateSortIndicators() {
     th.classList.remove('sort-asc', 'sort-desc');
     if (activeSort && th.dataset.sort === activeSort.col) {
       th.classList.add('sort-' + activeSort.order);
+      th.setAttribute('aria-sort', activeSort.order === 'asc' ? 'ascending' : 'descending');
+    } else {
+      th.removeAttribute('aria-sort');
     }
   });
 }
