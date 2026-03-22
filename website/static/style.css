@@ -306,11 +306,6 @@ kbd {
   margin-top: 1.75rem;
 }
 
-.hero-actions,
-.hero-metrics {
-  width: 100%;
-}
-
 .hero-action {
   display: inline-flex;
   align-items: center;
@@ -362,33 +357,6 @@ kbd {
 .footer a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-}
-
-.hero-metrics {
-  margin-top: clamp(1.8rem, 4vw, 2.8rem);
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  max-width: none;
-}
-
-.hero-metrics div {
-  padding-top: 0.9rem;
-  border-top: 1px solid var(--hero-line);
-}
-
-.hero-metrics dt {
-  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-  font-weight: 800;
-  line-height: 1;
-  color: var(--hero-text);
-}
-
-.hero-metrics dd {
-  margin-top: 0.3rem;
-  color: var(--hero-muted);
-  font-size: var(--text-xs);
-  letter-spacing: 0.02em;
 }
 
 .hero-scrollcue {
@@ -1092,14 +1060,6 @@ th[data-sort].sort-asc::after {
 
   .hero h1 {
     font-size: clamp(3.6rem, 18vw, 5.2rem);
-  }
-
-  .hero-metrics {
-    gap: 1rem;
-  }
-
-  .hero-metrics div {
-    min-width: 0;
   }
 
   .search {
