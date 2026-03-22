@@ -312,20 +312,40 @@ if (searchInput) {
 
 // Back to top
 var backToTop = document.querySelector('.back-to-top');
+var resultsSection = document.querySelector('#library-index');
+var tableWrap = document.querySelector('.table-wrap');
+var stickyHeaderCell = backToTop ? backToTop.closest('th') : null;
+
+function updateBackToTopVisibility() {
+  if (!backToTop || !tableWrap || !stickyHeaderCell) return;
+
+  var tableRect = tableWrap.getBoundingClientRect();
+  var headRect = stickyHeaderCell.getBoundingClientRect();
+  var hasPassedHeader = tableRect.top <= 0 && headRect.bottom > 0;
+
+  backToTop.classList.toggle('visible', hasPassedHeader);
+}
+
 if (backToTop) {
   var scrollTicking = false;
   window.addEventListener('scroll', function () {
     if (!scrollTicking) {
       requestAnimationFrame(function () {
-        backToTop.classList.toggle('visible', window.scrollY > 600);
+        updateBackToTopVisibility();
         scrollTicking = false;
       });
       scrollTicking = true;
     }
   });
+
+  window.addEventListener('resize', updateBackToTopVisibility);
+
   backToTop.addEventListener('click', function () {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!resultsSection) return;
+    resultsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  updateBackToTopVisibility();
 }
 
 // Restore state from URL
