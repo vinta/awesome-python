@@ -884,7 +884,7 @@ th[data-sort].sort-asc::after {
 }
 
 .footer-sep {
-  color: oklch(40% 0.02 55);
+  color: oklch(55% 0.02 55);
 }
 
 .noscript-msg {
