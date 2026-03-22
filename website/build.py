@@ -139,7 +139,7 @@ def build(repo_root: str) -> None:
             subtitle = stripped
             break
 
-    parsed_groups, _ = parse_readme(readme_text)
+    parsed_groups = parse_readme(readme_text)
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
@@ -172,7 +172,6 @@ def build(repo_root: str) -> None:
     (site_dir / "index.html").write_text(
         tpl_index.render(
             categories=categories,
-            groups=parsed_groups,
             subtitle=subtitle,
             entries=entries,
             total_entries=total_entries,

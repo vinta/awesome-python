@@ -59,18 +59,12 @@ class TestBuild:
         )
         (tpl_dir / "index.html").write_text(
             '{% extends "base.html" %}{% block content %}'
-            "{% for group in groups %}"
-            '<section class="group">'
-            "<h2>{{ group.name }}</h2>"
-            "{% for cat in group.categories %}"
-            '<div class="row" id="{{ cat.slug }}">'
-            "<span>{{ cat.name }}</span>"
-            "<span>{{ cat.preview }}</span>"
-            "<span>{{ cat.entry_count }}</span>"
-            '<div class="row-content" hidden>{{ cat.content_html | safe }}</div>'
+            "{% for entry in entries %}"
+            '<div class="row">'
+            "<span>{{ entry.name }}</span>"
+            "<span>{{ entry.categories | join(', ') }}</span>"
+            "<span>{{ entry.groups | join(', ') }}</span>"
             "</div>"
-            "{% endfor %}"
-            "</section>"
             "{% endfor %}"
             "{% endblock %}",
             encoding="utf-8",
