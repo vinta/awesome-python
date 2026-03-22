@@ -591,7 +591,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 
 _Libraries for testing codebases and generating test data._
 
-- Testing Frameworks
+- Frameworks
   - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
   - [pytest](https://github.com/pytest-dev/pytest) - A mature full-featured Python testing tool.
   - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
