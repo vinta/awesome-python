@@ -352,7 +352,9 @@ kbd {
 .search:focus-visible,
 .filter-clear:focus-visible,
 .tag:focus-visible,
-.back-to-top:focus-visible {
+.back-to-top:focus-visible,
+.no-results-clear:focus-visible,
+.footer a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
