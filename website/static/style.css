@@ -722,6 +722,7 @@ th[data-sort].sort-asc::after {
 }
 
 .expand-content {
+  font-size: var(--text-base);
   color: var(--ink-soft);
   line-height: 1.7;
   text-wrap: pretty;
