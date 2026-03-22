@@ -402,10 +402,9 @@ kbd {
 .results-intro h2,
 .final-cta h2 {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
   line-height: 0.94;
   letter-spacing: -0.03em;
-  text-wrap: balance;
 }
 
 .results-section {
@@ -874,18 +873,15 @@ th[data-sort].sort-asc::after {
   padding: 1.2rem var(--shell-pad);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
   font-size: var(--text-xs);
   color: var(--ink-muted);
 }
 
-.footer-copy,
 .footer-links {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  flex-wrap: wrap;
+  display: block;
+  text-align: right;
 }
 
 .footer-sep {
@@ -1009,6 +1005,10 @@ th[data-sort].sort-asc::after {
   .hero-topbar-link,
   .hero-action {
     width: 100%;
+  }
+
+  .footer {
+    align-items: flex-end;
   }
 
   .hero h1 {
