@@ -743,7 +743,7 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 
 _Libraries for building command-line applications._
 
-- Command-line Application Development
+- CLI Development
   - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
