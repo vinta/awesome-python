@@ -128,7 +128,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Agent Skills
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
-  - [trailofbits](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
+  - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
 - Frameworks
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
