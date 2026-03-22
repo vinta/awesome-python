@@ -178,7 +178,15 @@
             <button class="tag" data-type="cat" data-value="{{ cat }}">
               {{ cat }}
             </button>
-            {% endfor %} {% if entry.source_type == 'Built-in' %}
+            {% endfor %}
+            <button
+              class="tag tag-group"
+              data-type="group"
+              data-value="{{ entry.groups[0] }}"
+            >
+              {{ entry.groups[0] }}
+            </button>
+            {% if entry.source_type == 'Built-in' %}
             <button
               class="tag tag-source"
               data-type="cat"
@@ -187,13 +195,6 @@
               Built-in
             </button>
             {% endif %}
-            <button
-              class="tag tag-group"
-              data-type="group"
-              data-value="{{ entry.groups[0] }}"
-            >
-              {{ entry.groups[0] }}
-            </button>
           </td>
           <td class="col-arrow"><span class="arrow">&rarr;</span></td>
         </tr>
