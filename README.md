@@ -1,6 +1,6 @@
 # Awesome Python
 
-A curated list of Python frameworks, libraries, tools, and resources.
+An opinionated list of Python frameworks, libraries, tools, and resources.
 
 > The **#10 most-starred repo on GitHub**. Put your product where Python developers discover tools. [Become a sponsor](SPONSORSHIP.md).
 
