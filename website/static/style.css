@@ -908,10 +908,21 @@ th[data-sort].sort-asc::after {
   text-underline-offset: 0.2em;
 }
 
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
 .footer-brand {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: oklch(82% 0.02 75);
+}
+
+.footer-date {
+  font-size: 0.7rem;
+  color: oklch(50% 0.02 55);
 }
 
 .footer-links {

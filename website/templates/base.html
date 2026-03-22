@@ -44,7 +44,10 @@
     <main id="content">{% block content %}{% endblock %}</main>
 
     <footer class="footer">
-      <span class="footer-brand">Awesome Python</span>
+      <div class="footer-left">
+        <span class="footer-brand">Awesome Python</span>
+        {% if build_date %}<span class="footer-date">Data refreshed {{ build_date }}</span>{% endif %}
+      </div>
       <div class="footer-links">
         <span
           >Made by
