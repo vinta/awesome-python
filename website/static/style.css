@@ -604,8 +604,7 @@ kbd {
 }
 
 .col-name {
-  width: 28%;
-  overflow-wrap: anywhere;
+  white-space: nowrap;
 }
 
 .col-name > a {
