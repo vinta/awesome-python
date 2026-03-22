@@ -261,7 +261,7 @@ kbd {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(4rem, 10vw, 7.5rem);
+  font-size: clamp(4.5rem, 11vw, 8.5rem);
   line-height: 0.9;
   font-weight: 600;
   letter-spacing: -0.03em;
@@ -998,7 +998,7 @@ th[data-sort].sort-asc::after {
   }
 
   .hero h1 {
-    font-size: clamp(3.2rem, 18vw, 4.8rem);
+    font-size: clamp(3.6rem, 18vw, 5.2rem);
   }
 
   .hero-metrics {
