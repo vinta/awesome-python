@@ -597,7 +597,6 @@ kbd {
 }
 
 .row:focus-visible td {
-  outline: none;
   background: oklch(95.7% 0.026 68);
   box-shadow: inset 3px 0 0 var(--accent);
 }
