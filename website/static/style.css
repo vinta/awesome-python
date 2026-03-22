@@ -827,6 +827,8 @@ th[data-sort].sort-asc::after {
 
 .final-cta {
   padding-block: clamp(3rem, 7vw, 5.5rem);
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+  border-top: 1px solid var(--line);
   display: grid;
   gap: 1rem;
 }
