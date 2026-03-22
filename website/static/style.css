@@ -28,7 +28,7 @@
   --hero-ink: oklch(15% 0.02 40);
   --hero-shadow: oklch(8% 0.02 35 / 0.5);
   --hero-text: oklch(97% 0.012 85);
-  --hero-muted: oklch(84% 0.02 82);
+  --hero-muted: oklch(88% 0.02 82);
   --hero-line: oklch(100% 0 0 / 0.16);
 
   --text-xs: 0.8rem;
