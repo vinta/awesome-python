@@ -158,8 +158,7 @@ kbd {
 }
 
 .hero.offscreen .hero-sheen,
-.hero.offscreen .hero-noise,
-.hero.offscreen .hero-scrollcue::after {
+.hero.offscreen .hero-noise {
   animation-play-state: paused;
 }
 
@@ -198,8 +197,7 @@ kbd {
   color: var(--hero-muted);
 }
 
-.hero-topbar-link:hover,
-.hero-scrollcue:hover {
+.hero-topbar-link:hover {
   color: var(--hero-text);
 }
 
@@ -348,7 +346,6 @@ kbd {
 
 .hero-action:focus-visible,
 .hero-topbar-link:focus-visible,
-.hero-scrollcue:focus-visible,
 .search:focus-visible,
 .filter-clear:focus-visible,
 .tag:focus-visible,
@@ -357,24 +354,6 @@ kbd {
 .footer a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
-}
-
-.hero-scrollcue {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  color: var(--hero-muted);
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-}
-
-.hero-scrollcue::after {
-  content: "";
-  width: 3rem;
-  height: 1px;
-  background: var(--hero-line);
-  animation: scroll-line 1.6s ease-in-out infinite;
 }
 
 .results-intro h2,
@@ -981,17 +960,6 @@ th[data-sort].sort-asc::after {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes scroll-line {
-  0%, 100% {
-    transform: scaleX(0.4);
-    transform-origin: left;
-  }
-  50% {
-    transform: scaleX(1);
-    transform-origin: left;
   }
 }
 
