@@ -2,7 +2,7 @@
 
 An opinionated list of Python frameworks, libraries, tools, and resources.
 
-> The **#10 most-starred repo on GitHub**. Put your product where Python developers discover tools. [Become a sponsor](SPONSORSHIP.md).
+> The **#10 most-starred repo on GitHub**. Put your product in front of Python developers. [Become a sponsor](SPONSORSHIP.md).
 
 # Categories
 
