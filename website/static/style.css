@@ -152,6 +152,12 @@ kbd {
   animation: sheen-drift 18s linear infinite;
 }
 
+.hero.offscreen .hero-sheen,
+.hero.offscreen .hero-noise,
+.hero.offscreen .hero-scrollcue::after {
+  animation-play-state: paused;
+}
+
 .hero-noise {
   opacity: 0.1;
   background-image:

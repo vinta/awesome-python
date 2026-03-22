@@ -41,6 +41,16 @@ function initRevealSections() {
 
 initRevealSections();
 
+// Pause hero animations when scrolled out of view
+(function () {
+  var hero = document.querySelector('.hero');
+  if (!hero || !('IntersectionObserver' in window)) return;
+  var observer = new IntersectionObserver(function (entries) {
+    hero.classList.toggle('offscreen', !entries[0].isIntersecting);
+  });
+  observer.observe(hero);
+})();
+
 // Relative time formatting
 function relativeTime(isoStr) {
   var date = new Date(isoStr);
