@@ -126,6 +126,13 @@ def extract_entries(
     return entries
 
 
+def format_stars_short(stars: int) -> str:
+    """Format star count as compact string like '230k'."""
+    if stars >= 1000:
+        return f"{stars // 1000}k"
+    return str(stars)
+
+
 def build(repo_root: str) -> None:
     """Main build: parse README, render single-page HTML via Jinja2 templates."""
     repo = Path(repo_root)
@@ -146,6 +153,10 @@ def build(repo_root: str) -> None:
     entries = extract_entries(categories, parsed_groups)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
+
+    repo_self = stars_data.get("vinta/awesome-python", {})
+    repo_stars = format_stars_short(repo_self["stars"]) if "stars" in repo_self else None
+
     for entry in entries:
         repo_key = extract_github_repo(entry["url"])
         if not repo_key and entry.get("source_type") == "Built-in":
@@ -176,6 +187,7 @@ def build(repo_root: str) -> None:
             entries=entries,
             total_entries=total_entries,
             total_categories=len(categories),
+            repo_stars=repo_stars,
             build_date=datetime.now(timezone.utc).strftime("%B %d, %Y"),
         ),
         encoding="utf-8",

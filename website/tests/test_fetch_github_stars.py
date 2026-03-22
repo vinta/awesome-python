@@ -160,7 +160,13 @@ class TestMainSkipsFreshCache:
                 "owner": "psf",
                 "last_commit_at": "2025-01-01T00:00:00+00:00",
                 "fetched_at": (now - timedelta(hours=1)).isoformat(),
-            }
+            },
+            "vinta/awesome-python": {
+                "stars": 230000,
+                "owner": "vinta",
+                "last_commit_at": "2025-01-01T00:00:00+00:00",
+                "fetched_at": (now - timedelta(hours=1)).isoformat(),
+            },
         }
         cache_file.write_text(json.dumps(fresh_cache), encoding="utf-8")
         monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
@@ -195,7 +201,13 @@ class TestMainSkipsFreshCache:
                 "owner": "psf",
                 "last_commit_at": "2025-01-01T00:00:00+00:00",
                 "fetched_at": (now - timedelta(hours=24)).isoformat(),
-            }
+            },
+            "vinta/awesome-python": {
+                "stars": 230000,
+                "owner": "vinta",
+                "last_commit_at": "2025-01-01T00:00:00+00:00",
+                "fetched_at": (now - timedelta(hours=24)).isoformat(),
+            },
         }
         cache_file.write_text(json.dumps(stale_cache), encoding="utf-8")
         monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
@@ -210,7 +222,12 @@ class TestMainSkipsFreshCache:
                     "stargazerCount": 53000,
                     "owner": {"login": "psf"},
                     "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
-                }
+                },
+                "repo_1": {
+                    "stargazerCount": 231000,
+                    "owner": {"login": "vinta"},
+                    "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
+                },
             }
         }
         mock_response.raise_for_status = MagicMock()
@@ -223,6 +240,6 @@ class TestMainSkipsFreshCache:
         main()
 
         output = capsys.readouterr().out
-        assert "1 repos to fetch" in output
-        assert "Done. Fetched 1 repos" in output
+        assert "2 repos to fetch" in output
+        assert "Done. Fetched 2 repos" in output
         mock_client.post.assert_called_once()

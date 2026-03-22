@@ -47,6 +47,14 @@
             >View on GitHub</a
           >
         </div>
+
+        {% if repo_stars or build_date %}
+        <p class="hero-proof">
+          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %}
+          {% if repo_stars and build_date %}/{% endif %}
+          {% if build_date %}Updated {{ build_date }}{% endif %}
+        </p>
+        {% endif %}
       </div>
     </div>
   </div>

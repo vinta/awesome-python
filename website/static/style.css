@@ -38,7 +38,7 @@
   --footer-text: oklch(72% 0.02 75);
   --footer-link: oklch(82% 0.02 75);
   --footer-link-hover: oklch(95% 0.01 80);
-  --footer-muted: oklch(50% 0.02 55);
+
   --footer-sep: oklch(55% 0.02 55);
 }
 
@@ -302,6 +302,13 @@ kbd {
 
 .hero-actions {
   margin-top: 1.75rem;
+}
+
+.hero-proof {
+  margin-top: 1.5rem;
+  color: oklch(68% 0.02 72);
+  font-size: var(--text-sm);
+  letter-spacing: 0.02em;
 }
 
 .hero-action {
@@ -894,11 +901,6 @@ th[data-sort].sort-asc::after {
   font-weight: 700;
   letter-spacing: 0.03em;
   color: var(--footer-link);
-}
-
-.footer-date {
-  font-size: var(--text-xs);
-  color: var(--footer-muted);
 }
 
 .footer-links {
