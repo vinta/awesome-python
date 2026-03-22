@@ -1005,19 +1005,34 @@ th[data-sort].sort-asc::after {
     min-height: auto;
   }
 
-  .hero-topbar,
+  .hero-topbar {
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
   .footer {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  .hero-topbar-actions,
   .hero-actions,
   .final-cta-actions {
     width: 100%;
   }
 
-  .hero-topbar-link,
+  .hero-topbar-actions {
+    width: auto;
+    flex: 0 0 auto;
+  }
+
+  .hero-topbar-link {
+    width: auto;
+    white-space: nowrap;
+  }
+
   .hero-action {
     width: 100%;
   }
