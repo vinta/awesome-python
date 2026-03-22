@@ -15,7 +15,6 @@
   --bg-page: oklch(96.8% 0.018 80);
   --bg-paper: oklch(98.6% 0.01 80);
   --bg-paper-strong: oklch(95.7% 0.016 76);
-  --bg-hover: oklch(93.8% 0.026 72);
   --ink: oklch(22% 0.02 55);
   --ink-soft: oklch(38% 0.018 55);
   --ink-muted: oklch(52% 0.02 55);
@@ -26,7 +25,6 @@
   --accent-soft: oklch(92% 0.045 55);
   --highlight: oklch(87% 0.08 78);
   --hero-ink: oklch(15% 0.02 40);
-  --hero-shadow: oklch(8% 0.02 35 / 0.5);
   --hero-text: oklch(97% 0.012 85);
   --hero-muted: oklch(88% 0.02 82);
   --hero-line: oklch(100% 0 0 / 0.16);
