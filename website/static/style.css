@@ -1014,8 +1014,9 @@ th[data-sort].sort-asc::after {
   }
 
   .footer {
-    align-items: flex-start;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-actions,
@@ -1035,10 +1036,6 @@ th[data-sort].sort-asc::after {
 
   .hero-action {
     width: 100%;
-  }
-
-  .footer {
-    align-items: flex-end;
   }
 
   .hero h1 {
