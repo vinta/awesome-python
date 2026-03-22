@@ -35,6 +35,8 @@
   --text-sm: 0.95rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
+  --text-label: 0.78rem;
+  --text-tag: 0.76rem;
 }
 
 html {
@@ -181,7 +183,7 @@ kbd {
 }
 
 .hero-brand-mini {
-  font-size: 0.78rem;
+  font-size: var(--text-label);
   font-weight: 800;
   letter-spacing: 0.04em;
   color: var(--hero-muted);
@@ -244,7 +246,7 @@ kbd {
 .hero-kicker,
 .section-label {
   margin-bottom: 0.9rem;
-  font-size: 0.78rem;
+  font-size: var(--text-label);
   font-weight: 800;
   letter-spacing: 0.04em;
 }
@@ -759,7 +761,7 @@ th[data-sort].sort-asc::after {
   background: var(--accent-soft);
   color: var(--accent-deep);
   padding: 0.34rem 0.68rem;
-  font-size: 0.76rem;
+  font-size: var(--text-tag);
   font-weight: 700;
   letter-spacing: 0.02em;
   cursor: pointer;
