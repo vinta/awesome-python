@@ -571,8 +571,7 @@ kbd {
   letter-spacing: 0.03em;
   white-space: nowrap;
   border-bottom: 1px solid var(--line);
-  background: oklch(98.2% 0.012 80 / 0.92);
-  backdrop-filter: blur(14px);
+  background: oklch(98.2% 0.012 80 / 0.97);
 }
 
 .table tbody td {
