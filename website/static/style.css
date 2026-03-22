@@ -256,8 +256,8 @@ kbd {
 
 .hero-kicker,
 .section-label {
-  margin-bottom: 0.9rem;
-  font-size: var(--text-xs);
+  margin-bottom: 1.5rem;
+  font-size: var(--text-sm);
   font-weight: 800;
   letter-spacing: 0.04em;
 }
