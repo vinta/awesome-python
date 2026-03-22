@@ -121,7 +121,7 @@
         {% for entry in entries %}
         <tr
           class="row"
-          data-cats="{{ entry.categories | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
+          data-cats="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | join('||') }}{% endif %}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
           data-groups="{{ entry.groups | join('||') }}"
           tabindex="0"
           aria-expanded="false"
@@ -159,6 +159,14 @@
             {% for cat in entry.categories %}
             <button class="tag" data-type="cat" data-value="{{ cat }}">
               {{ cat }}
+            </button>
+            {% endfor %} {% for subcat in entry.subcategories %}
+            <button
+              class="tag tag-subcat"
+              data-type="cat"
+              data-value="{{ subcat }}"
+            >
+              {{ subcat }}
             </button>
             {% endfor %}
             <button

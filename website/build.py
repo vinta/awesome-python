@@ -102,6 +102,9 @@ def extract_entries(
                     existing["categories"].append(cat["name"])
                 if group_name not in existing["groups"]:
                     existing["groups"].append(group_name)
+                subcat = entry["subcategory"]
+                if subcat and subcat not in existing["subcategories"]:
+                    existing["subcategories"].append(subcat)
             else:
                 merged = {
                     "name": entry["name"],
@@ -109,6 +112,7 @@ def extract_entries(
                     "description": entry["description"],
                     "categories": [cat["name"]],
                     "groups": [group_name],
+                    "subcategories": [entry["subcategory"]] if entry["subcategory"] else [],
                     "stars": None,
                     "owner": None,
                     "last_commit_at": None,

@@ -779,6 +779,12 @@ th[data-sort].sort-asc::after {
   color: var(--hero-ink);
 }
 
+.tag-subcat {
+  background: var(--bg-paper-strong);
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
 .back-to-top {
   border: 0;
   background: none;
@@ -991,7 +997,8 @@ th[data-sort].sort-asc::after {
     display: none;
   }
 
-  .tag-group {
+  .tag-group,
+  .tag-subcat {
     display: none;
   }
 

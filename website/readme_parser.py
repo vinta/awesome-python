@@ -20,6 +20,7 @@ class ParsedEntry(TypedDict):
     url: str
     description: str  # inline HTML, properly escaped
     also_see: list[AlsoSee]
+    subcategory: str  # sub-category label, empty if none
 
 
 class ParsedSection(TypedDict):
@@ -178,7 +179,11 @@ def _extract_description_html(inline: SyntaxTreeNode, first_link: SyntaxTreeNode
     return _DESC_SEP_RE.sub("", html)
 
 
-def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
+def _parse_list_entries(
+    bullet_list: SyntaxTreeNode,
+    *,
+    subcategory: str = "",
+) -> list[ParsedEntry]:
     """Extract entries from a bullet_list AST node.
 
     Handles three patterns:
@@ -200,9 +205,10 @@ def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
 
         if first_link is None or not _is_leading_link(inline, first_link):
             # Subcategory label (plain text or text-before-link) — recurse into nested list
+            label = render_inline_text(inline.children)
             nested = _find_child(list_item, "bullet_list")
             if nested:
-                entries.extend(_parse_list_entries(nested))
+                entries.extend(_parse_list_entries(nested, subcategory=label))
             continue
 
         # Entry with a link
@@ -231,6 +237,7 @@ def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
             url=url,
             description=desc_html,
             also_see=also_see,
+            subcategory=subcategory,
         ))
 
     return entries
