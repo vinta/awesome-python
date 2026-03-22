@@ -400,6 +400,7 @@ kbd {
 .final-cta h2 {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.03em;
 }
