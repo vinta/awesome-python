@@ -2,7 +2,7 @@
 
 ## Repository Overview
 
-A curated list of awesome Python frameworks, libraries, software and resources. Published at [awesome-python.com](https://awesome-python.com/).
+An opinionated list of Python frameworks, libraries, tools, and resources. Published at [awesome-python.com](https://awesome-python.com/).
 
 ## PR Review Guidelines
 
@@ -24,10 +24,10 @@ A curated list of awesome Python frameworks, libraries, software and resources. 
 ## Entry Format
 
 ```markdown
-- [pypi-name](https://github.com/owner/repo) - Description ending with period.
+- [project-name](https://github.com/owner/repo) - Description ending with period.
 ```
 
-Use PyPI package name as display name. Use GitHub URLs when available.
+Use PyPI package name as display name. If not on PyPI, use the GitHub repo name. Use GitHub URLs when available.
 
 ## Key Rules
 
