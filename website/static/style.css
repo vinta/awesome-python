@@ -746,8 +746,8 @@ th[data-sort].sort-asc::after {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--accent-deep);
-  padding: 0.34rem 0.68rem;
-  font-size: var(--text-xs);
+  padding: 0.14rem 0.48rem;
+  font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   cursor: pointer;
@@ -759,13 +759,13 @@ th[data-sort].sort-asc::after {
 }
 
 .tag + .tag {
-  margin-left: 0.4rem;
+  margin-left: 0.2rem;
 }
 
 .tag::after {
   content: "";
   position: absolute;
-  inset: -0.45rem -0.2rem;
+  inset: -0.35rem -0.15rem;
 }
 
 .tag:hover {
@@ -996,7 +996,7 @@ th[data-sort].sort-asc::after {
   }
 
   .tag {
-    padding: 0.5rem 0.85rem;
+    padding: 0.32rem 0.6rem;
   }
 
   .table-wrap {
