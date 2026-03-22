@@ -151,6 +151,7 @@
             <a href="{{ entry.url }}" target="_blank" rel="noopener"
               >{{ entry.name }}</a
             >
+            <span class="mobile-cat">{{ entry.categories[0] }}</span>
           </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%

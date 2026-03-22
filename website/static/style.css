@@ -611,6 +611,10 @@ kbd {
   white-space: nowrap;
 }
 
+.mobile-cat {
+  display: none;
+}
+
 .col-name > a {
   color: var(--ink);
   font-size: clamp(1rem, 1.5vw, 1.08rem);
@@ -1064,6 +1068,18 @@ th[data-sort].sort-asc::after {
 
   .col-cat {
     display: none;
+  }
+
+  .col-name {
+    white-space: normal;
+  }
+
+  .mobile-cat {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: var(--text-tag);
+    font-weight: 600;
+    color: var(--ink-muted);
   }
 
   .col-stars {
