@@ -270,6 +270,16 @@ if (filterClear) {
   });
 }
 
+// No-results clear
+var noResultsClear = document.querySelector('.no-results-clear');
+if (noResultsClear) {
+  noResultsClear.addEventListener('click', function () {
+    if (searchInput) searchInput.value = '';
+    activeFilter = null;
+    applyFilters();
+  });
+}
+
 // Column sorting
 document.querySelectorAll('th[data-sort]').forEach(function (th) {
   th.addEventListener('click', function () {

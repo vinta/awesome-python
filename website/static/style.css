@@ -837,6 +837,26 @@ th[data-sort].sort-asc::after {
   font-size: var(--text-lg);
 }
 
+.no-results-hint {
+  margin-top: 0.5rem;
+  font-size: var(--text-sm);
+}
+
+.no-results-clear {
+  background: none;
+  border: none;
+  color: var(--accent-deep);
+  font: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: oklch(58% 0.16 45 / 0.4);
+  text-underline-offset: 0.2em;
+}
+
+.no-results-clear:hover {
+  color: var(--accent);
+}
+
 .final-cta {
   padding-block: clamp(3rem, 7vw, 5.5rem);
   background: oklch(94% 0.025 72);
