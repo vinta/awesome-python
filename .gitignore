@@ -3,6 +3,7 @@
 
 # python
 .venv/
+__pycache__/
 *.py[co]
 
 # website
