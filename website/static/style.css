@@ -183,12 +183,10 @@ kbd {
 .hero-brand-mini {
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
   color: var(--hero-muted);
 }
 
-.hero-brand-mini:hover,
 .hero-topbar-link:hover,
 .hero-sub a:hover,
 .hero-scrollcue:hover {
@@ -208,8 +206,7 @@ kbd {
   color: var(--hero-muted);
   font-size: var(--text-xs);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   transition:
     color 180ms ease,
     border-color 180ms ease,
@@ -249,8 +246,7 @@ kbd {
   margin-bottom: 0.9rem;
   font-size: 0.78rem;
   font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .hero-kicker {
@@ -310,8 +306,7 @@ kbd {
   border: 1px solid transparent;
   font-size: var(--text-sm);
   font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
   transition:
     transform 180ms ease,
     color 180ms ease,
@@ -376,8 +371,7 @@ kbd {
   margin-top: 0.3rem;
   color: var(--hero-muted);
   font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
 }
 
 .hero-scrollcue {
@@ -387,8 +381,7 @@ kbd {
   gap: 0.65rem;
   color: var(--hero-muted);
   font-size: var(--text-xs);
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .hero-scrollcue::after {
@@ -521,7 +514,6 @@ kbd {
 
 .table-wrap {
   width: 100%;
-  overflow-x: auto;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   scroll-margin-top: 1rem;
@@ -563,8 +555,7 @@ kbd {
   color: var(--ink);
   font-size: var(--text-xs);
   font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   white-space: nowrap;
   border-bottom: 1px solid var(--line);
   background: oklch(98.2% 0.012 80 / 0.92);
@@ -677,8 +668,7 @@ th[data-sort].sort-asc::after {
   color: var(--ink-soft);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .col-commit {
@@ -796,11 +786,6 @@ th[data-sort].sort-asc::after {
   color: var(--ink);
 }
 
-.tag-source {
-  background: var(--bg-paper-strong);
-  color: var(--ink-soft);
-}
-
 .tag.active {
   background: linear-gradient(135deg, oklch(82% 0.08 75), oklch(74% 0.11 58));
   color: var(--hero-ink);
@@ -812,8 +797,7 @@ th[data-sort].sort-asc::after {
   color: var(--accent-deep);
   font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  letter-spacing: 0.03em;
   cursor: pointer;
   opacity: 0;
   pointer-events: none;
@@ -1027,6 +1011,10 @@ th[data-sort].sort-asc::after {
   .search {
     min-height: 3.5rem;
     border-radius: 1.25rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
   }
 
   .table thead th {
