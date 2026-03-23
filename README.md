@@ -455,6 +455,7 @@ _Libraries for data analysis._
   - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
   - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
   - [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
+  - [TradeSight](https://github.com/rmbell09-lang/tradesight) - Algorithmic trading backtester with Alpaca paper trading integration, confluence strategies, and circuit breaker protection.
   - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
 
 ## Data Validation
