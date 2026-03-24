@@ -1110,8 +1110,8 @@ th[data-sort].sort-asc::after {
     border-radius: 1.25rem;
   }
 
-  .table thead th {
-    position: static;
+  .table-wrap {
+    overflow-x: clip;
   }
 
   .table thead th,
