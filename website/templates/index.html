@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block header %}
+{% extends "base.html" %}
+{% block header %}
 <header class="hero">
   <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
@@ -62,7 +63,8 @@
     </div>
   </div>
 </header>
-{% endblock %} {% block content %}
+{% endblock %}
+{% block content %}
 <section class="results-section" id="library-index">
   <div class="results-intro section-shell" data-reveal>
     <div>
@@ -180,21 +182,13 @@
               {{ subcat.name }}
             </button>
             {% endfor %} {% for cat in entry.categories %}
-            <button class="tag" data-value="{{ cat }}">
-              {{ cat }}
-            </button>
+            <button class="tag" data-value="{{ cat }}">{{ cat }}</button>
             {% endfor %}
-            <button
-              class="tag tag-group"
-              data-value="{{ entry.groups[0] }}"
-            >
+            <button class="tag tag-group" data-value="{{ entry.groups[0] }}">
               {{ entry.groups[0] }}
             </button>
             {% if entry.source_type == 'Built-in' %}
-            <button
-              class="tag tag-source"
-              data-value="Built-in"
-            >
+            <button class="tag tag-source" data-value="Built-in">
               Built-in
             </button>
             {% endif %}
