@@ -386,7 +386,8 @@ kbd {
 .tag:focus-visible,
 .back-to-top:focus-visible,
 .no-results-clear:focus-visible,
-.footer a:focus-visible {
+.footer a:focus-visible,
+.sort-btn:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -641,11 +642,6 @@ th[data-sort]:hover {
   color: inherit;
   font: inherit;
   cursor: inherit;
-}
-
-.sort-btn:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
 }
 
 th[data-sort]::after {
