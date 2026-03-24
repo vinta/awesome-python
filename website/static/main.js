@@ -5,7 +5,7 @@ function getScrollBehavior() {
 }
 
 // State
-let activeFilter = null; // { type: "cat"|"group", value: "..." }
+let activeFilter = null; // string value or null
 let activeSort = { col: "stars", order: "desc" };
 const searchInput = document.querySelector(".search");
 const filterBar = document.querySelector(".filter-bar");
@@ -125,11 +125,9 @@ function applyFilters() {
   rows.forEach(function (row) {
     let show = true;
 
-    // Category/group filter
     if (activeFilter) {
-      const attr =
-        activeFilter.type === "cat" ? row.dataset.cats : row.dataset.groups;
-      show = attr ? attr.split("||").indexOf(activeFilter.value) !== -1 : false;
+      const tags = row.dataset.tags;
+      show = tags ? tags.split("||").indexOf(activeFilter) !== -1 : false;
     }
 
     // Text search
@@ -160,18 +158,14 @@ function applyFilters() {
 
   // Update tag highlights
   tags.forEach(function (tag) {
-    const isActive =
-      activeFilter &&
-      tag.dataset.type === activeFilter.type &&
-      tag.dataset.value === activeFilter.value;
-    tag.classList.toggle("active", isActive);
+    tag.classList.toggle("active", activeFilter === tag.dataset.value);
   });
 
   // Filter bar
   if (filterBar) {
     if (activeFilter) {
       filterBar.classList.add("visible");
-      if (filterValue) filterValue.textContent = activeFilter.value;
+      if (filterValue) filterValue.textContent = activeFilter;
     } else {
       filterBar.classList.remove("visible");
     }
@@ -185,10 +179,7 @@ function updateURL() {
   const query = searchInput ? searchInput.value.trim() : "";
   if (query) params.set("q", query);
   if (activeFilter) {
-    params.set(
-      activeFilter.type === "cat" ? "category" : "group",
-      activeFilter.value,
-    );
+    params.set("filter", activeFilter);
   }
   if (activeSort.col !== "stars" || activeSort.order !== "desc") {
     params.set("sort", activeSort.col);
@@ -296,23 +287,12 @@ if (tbody) {
   });
 }
 
-// Tag click: filter by category or group
+// Tag click: filter
 tags.forEach(function (tag) {
   tag.addEventListener("click", function (e) {
     e.preventDefault();
-    const type = tag.dataset.type;
     const value = tag.dataset.value;
-
-    // Toggle: click same filter again to clear
-    if (
-      activeFilter &&
-      activeFilter.type === type &&
-      activeFilter.value === value
-    ) {
-      activeFilter = null;
-    } else {
-      activeFilter = { type: type, value: value };
-    }
+    activeFilter = activeFilter === value ? null : value;
     applyFilters();
   });
 });
@@ -427,20 +407,18 @@ if (backToTop) {
 (function () {
   const params = new URLSearchParams(location.search);
   const q = params.get("q");
-  const cat = params.get("category");
-  const group = params.get("group");
+  const filter = params.get("filter") || params.get("category") || params.get("group");
   const sort = params.get("sort");
   const order = params.get("order");
   if (q && searchInput) searchInput.value = q;
-  if (cat) activeFilter = { type: "cat", value: cat };
-  else if (group) activeFilter = { type: "group", value: group };
+  if (filter) activeFilter = filter;
   if (
     (sort === "name" || sort === "stars" || sort === "commit-time") &&
     (order === "desc" || order === "asc")
   ) {
     activeSort = { col: sort, order: order };
   }
-  if (q || cat || group || sort) {
+  if (q || filter || sort) {
     sortRows();
   }
   updateSortIndicators();

@@ -138,8 +138,7 @@
         {% for entry in entries %}
         <tr
           class="row"
-          data-cats="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
-          data-groups="{{ entry.groups | join('||') }}"
+          data-tags="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}||{{ entry.groups | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
           tabindex="0"
           aria-expanded="false"
           aria-controls="expand-{{ loop.index }}"
@@ -177,17 +176,16 @@
           </td>
           <td class="col-cat">
             {% for subcat in entry.subcategories %}
-            <button class="tag" data-type="cat" data-value="{{ subcat.value }}">
+            <button class="tag" data-value="{{ subcat.value }}">
               {{ subcat.name }}
             </button>
             {% endfor %} {% for cat in entry.categories %}
-            <button class="tag" data-type="cat" data-value="{{ cat }}">
+            <button class="tag" data-value="{{ cat }}">
               {{ cat }}
             </button>
             {% endfor %}
             <button
               class="tag tag-group"
-              data-type="group"
               data-value="{{ entry.groups[0] }}"
             >
               {{ entry.groups[0] }}
@@ -195,7 +193,6 @@
             {% if entry.source_type == 'Built-in' %}
             <button
               class="tag tag-source"
-              data-type="cat"
               data-value="Built-in"
             >
               Built-in
