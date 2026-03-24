@@ -1,11 +1,10 @@
+var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
 function getScrollBehavior() {
-  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    ? "auto"
-    : "smooth";
+  return reducedMotion.matches ? "auto" : "smooth";
 }
 
-// State
-let activeFilter = null; // string value or null
+let activeFilter = null;
 let activeSort = { col: "stars", order: "desc" };
 const searchInput = document.querySelector(".search");
 const filterBar = document.querySelector(".filter-bar");
@@ -70,7 +69,6 @@ document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
   observer.observe(hero);
 })();
 
-// Relative time formatting
 function relativeTime(isoStr) {
   const date = new Date(isoStr);
   const now = new Date();
@@ -89,7 +87,6 @@ function relativeTime(isoStr) {
   return diffYears === 1 ? "1 year ago" : diffYears + " years ago";
 }
 
-// Format all commit date cells
 document.querySelectorAll(".col-commit[data-commit]").forEach(function (td) {
   const time = td.querySelector("time");
   if (time) time.textContent = relativeTime(td.dataset.commit);
@@ -101,14 +98,14 @@ document
     time.textContent = relativeTime(time.getAttribute("datetime"));
   });
 
-// Store original row order for sort reset
 rows.forEach(function (row, i) {
   row._origIndex = i;
   row._expandRow = row.nextElementSibling;
 });
 
 function collapseAll() {
-  const openRows = document.querySelectorAll(".table tbody tr.row.open");
+  if (!tbody) return;
+  var openRows = tbody.querySelectorAll("tr.row.open");
   openRows.forEach(function (row) {
     row.classList.remove("open");
     row.setAttribute("aria-expanded", "false");
@@ -119,18 +116,16 @@ function applyFilters() {
   const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
   let visibleCount = 0;
 
-  // Collapse all expanded rows on filter/search change
   collapseAll();
 
   rows.forEach(function (row) {
     let show = true;
 
     if (activeFilter) {
-      const tags = row.dataset.tags;
-      show = tags ? tags.split("||").indexOf(activeFilter) !== -1 : false;
+      var rowTags = row.dataset.tags;
+      show = rowTags ? rowTags.split("||").includes(activeFilter) : false;
     }
 
-    // Text search
     if (show && query) {
       if (!row._searchText) {
         let text = row.textContent.toLowerCase();
@@ -156,12 +151,10 @@ function applyFilters() {
 
   if (noResults) noResults.hidden = visibleCount > 0;
 
-  // Update tag highlights
   tags.forEach(function (tag) {
     tag.classList.toggle("active", activeFilter === tag.dataset.value);
   });
 
-  // Filter bar
   if (filterBar) {
     if (activeFilter) {
       filterBar.classList.add("visible");
@@ -243,10 +236,12 @@ function sortRows() {
   applyFilters();
 }
 
+var sortHeaders = document.querySelectorAll("th[data-sort]");
+
 function updateSortIndicators() {
-  document.querySelectorAll("th[data-sort]").forEach(function (th) {
+  sortHeaders.forEach(function (th) {
     th.classList.remove("sort-asc", "sort-desc");
-    if (activeSort && th.dataset.sort === activeSort.col) {
+    if (th.dataset.sort === activeSort.col) {
       th.classList.add("sort-" + activeSort.order);
       th.setAttribute(
         "aria-sort",
@@ -287,7 +282,6 @@ if (tbody) {
   });
 }
 
-// Tag click: filter
 tags.forEach(function (tag) {
   tag.addEventListener("click", function (e) {
     e.preventDefault();
@@ -297,7 +291,6 @@ tags.forEach(function (tag) {
   });
 });
 
-// Clear filter
 if (filterClear) {
   filterClear.addEventListener("click", function () {
     activeFilter = null;
@@ -305,7 +298,6 @@ if (filterClear) {
   });
 }
 
-// No-results clear
 const noResultsClear = document.querySelector(".no-results-clear");
 if (noResultsClear) {
   noResultsClear.addEventListener("click", function () {
@@ -315,13 +307,12 @@ if (noResultsClear) {
   });
 }
 
-// Column sorting
-document.querySelectorAll("th[data-sort]").forEach(function (th) {
+sortHeaders.forEach(function (th) {
   th.addEventListener("click", function () {
     const col = th.dataset.sort;
     const defaultOrder = col === "name" ? "asc" : "desc";
     const altOrder = defaultOrder === "asc" ? "desc" : "asc";
-    if (activeSort && activeSort.col === col) {
+    if (activeSort.col === col) {
       if (activeSort.order === defaultOrder)
         activeSort = { col: col, order: altOrder };
       else activeSort = { col: "stars", order: "desc" };
@@ -333,7 +324,6 @@ document.querySelectorAll("th[data-sort]").forEach(function (th) {
   });
 });
 
-// Search input
 if (searchInput) {
   let searchTimer;
   searchInput.addEventListener("input", function () {
@@ -341,7 +331,6 @@ if (searchInput) {
     searchTimer = setTimeout(applyFilters, 150);
   });
 
-  // Keyboard shortcuts
   document.addEventListener("keydown", function (e) {
     if (
       e.key === "/" &&
@@ -363,7 +352,6 @@ if (searchInput) {
   });
 }
 
-// Back to top
 const backToTop = document.querySelector(".back-to-top");
 const resultsSection = document.querySelector("#library-index");
 const tableWrap = document.querySelector(".table-wrap");
@@ -403,7 +391,6 @@ if (backToTop) {
   updateBackToTopVisibility();
 }
 
-// Restore state from URL
 (function () {
   const params = new URLSearchParams(location.search);
   const q = params.get("q");
