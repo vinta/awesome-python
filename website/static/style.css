@@ -789,6 +789,16 @@ th[data-sort].sort-asc::after {
   color: var(--line-strong);
 }
 
+.expand-commit {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .expand-commit {
+    display: inline;
+  }
+}
+
 .tag {
   position: relative;
   border: 1px solid transparent;

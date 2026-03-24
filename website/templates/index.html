@@ -220,6 +220,7 @@
                   rel="noopener"
                   >{{ entry.url | replace("https://", "") }}</a
                 >
+                {% if entry.last_commit_at %}<span class="expand-commit"><span class="expand-sep">/</span>Last commit <time datetime="{{ entry.last_commit_at }}">{{ entry.last_commit_at[:10] }}</time></span>{% endif %}
               </div>
             </div>
           </td>

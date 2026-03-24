@@ -79,6 +79,10 @@ document.querySelectorAll(".col-commit[data-commit]").forEach(function (td) {
   if (time) time.textContent = relativeTime(td.dataset.commit);
 });
 
+document.querySelectorAll(".expand-commit time[datetime]").forEach(function (time) {
+  time.textContent = relativeTime(time.getAttribute("datetime"));
+});
+
 // Store original row order for sort reset
 rows.forEach(function (row, i) {
   row._origIndex = i;
