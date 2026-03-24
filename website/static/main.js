@@ -1,4 +1,4 @@
-var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function getScrollBehavior() {
   return reducedMotion.matches ? "auto" : "smooth";
@@ -105,7 +105,7 @@ rows.forEach(function (row, i) {
 
 function collapseAll() {
   if (!tbody) return;
-  var openRows = tbody.querySelectorAll("tr.row.open");
+  const openRows = tbody.querySelectorAll("tr.row.open");
   openRows.forEach(function (row) {
     row.classList.remove("open");
     row.setAttribute("aria-expanded", "false");
@@ -122,7 +122,7 @@ function applyFilters() {
     let show = true;
 
     if (activeFilter) {
-      var rowTags = row.dataset.tags;
+      const rowTags = row.dataset.tags;
       show = rowTags ? rowTags.split("||").includes(activeFilter) : false;
     }
 
@@ -236,7 +236,7 @@ function sortRows() {
   applyFilters();
 }
 
-var sortHeaders = document.querySelectorAll("th[data-sort]");
+const sortHeaders = document.querySelectorAll("th[data-sort]");
 
 function updateSortIndicators() {
   sortHeaders.forEach(function (th) {
