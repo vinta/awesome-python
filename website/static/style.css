@@ -930,7 +930,7 @@ th[data-sort].sort-asc::after {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--footer-text);
 }
 
