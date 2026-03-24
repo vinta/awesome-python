@@ -966,18 +966,6 @@ th[data-sort].sort-asc::after {
   color: var(--footer-sep);
 }
 
-/* External link indicator for inline text links */
-.hero-sub a[target="_blank"]::after,
-.expand-desc a[target="_blank"]::after,
-.expand-also-see a[target="_blank"]::after,
-.footer a[target="_blank"]::after {
-  content: " \2197";
-  font-size: 0.7em;
-  opacity: 0.55;
-  text-decoration: none;
-  display: inline-block;
-}
-
 .noscript-msg {
   padding: 1rem var(--shell-pad) 0;
   text-align: center;
