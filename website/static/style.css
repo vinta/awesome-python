@@ -1061,10 +1061,6 @@ th[data-sort].sort-asc::after {
   }
 
   .hero-topbar {
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
     gap: 0.75rem;
   }
 
