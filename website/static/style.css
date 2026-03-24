@@ -1110,10 +1110,15 @@ th[data-sort].sort-asc::after {
   }
 
   .col-num,
-  .col-cat,
+  .col-cat {
+    display: none;
+  }
+
   .expand-row td:first-child,
   .expand-row td:last-child {
-    display: none;
+    width: 0;
+    padding: 0;
+    overflow: hidden;
   }
 
   .col-name {
