@@ -645,7 +645,7 @@ th[data-sort]:hover {
 
 .sort-btn:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
 
 th[data-sort]::after {
