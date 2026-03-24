@@ -44,6 +44,17 @@ function initRevealSections() {
 
 initRevealSections();
 
+// Smooth scroll without hash in URL
+document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
+  link.addEventListener("click", function (e) {
+    var target = document.getElementById(link.dataset.scrollTo);
+    if (!target) return;
+    e.preventDefault();
+    var motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    target.scrollIntoView({ behavior: motion });
+  });
+});
+
 // Pause hero animations when scrolled out of view
 (function () {
   const hero = document.querySelector(".hero");
