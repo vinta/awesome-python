@@ -1,3 +1,9 @@
+function getScrollBehavior() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ? "auto"
+    : "smooth";
+}
+
 // State
 let activeFilter = null; // { type: "cat"|"group", value: "..." }
 let activeSort = { col: "stars", order: "desc" };
@@ -47,11 +53,10 @@ initRevealSections();
 // Smooth scroll without hash in URL
 document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
   link.addEventListener("click", function (e) {
-    var target = document.getElementById(link.dataset.scrollTo);
-    if (!target) return;
+    const el = document.getElementById(link.dataset.scrollTo);
+    if (!el) return;
     e.preventDefault();
-    var motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
-    target.scrollIntoView({ behavior: motion });
+    el.scrollIntoView({ behavior: getScrollBehavior() });
   });
 });
 
@@ -90,9 +95,11 @@ document.querySelectorAll(".col-commit[data-commit]").forEach(function (td) {
   if (time) time.textContent = relativeTime(td.dataset.commit);
 });
 
-document.querySelectorAll(".expand-commit time[datetime]").forEach(function (time) {
-  time.textContent = relativeTime(time.getAttribute("datetime"));
-});
+document
+  .querySelectorAll(".expand-commit time[datetime]")
+  .forEach(function (time) {
+    time.textContent = relativeTime(time.getAttribute("datetime"));
+  });
 
 // Store original row order for sort reset
 rows.forEach(function (row, i) {
@@ -409,8 +416,7 @@ if (backToTop) {
   backToTop.addEventListener("click", function () {
     const target = searchInput || resultsSection;
     if (!target) return;
-    var motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
-    target.scrollIntoView({ behavior: motion, block: "center" });
+    target.scrollIntoView({ behavior: getScrollBehavior(), block: "center" });
     if (searchInput) searchInput.focus();
   });
 
