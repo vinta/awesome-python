@@ -624,18 +624,23 @@ kbd {
   text-underline-offset: 0.2em;
 }
 
+th[data-sort] {
+  cursor: pointer;
+  user-select: none;
+  transition: color 180ms ease;
+}
+
+th[data-sort]:hover {
+  color: var(--accent-deep);
+}
+
 .sort-btn {
   background: none;
   border: 0;
   padding: 0;
   color: inherit;
   font: inherit;
-  cursor: pointer;
-  user-select: none;
-}
-
-.sort-btn:hover {
-  color: var(--accent-deep);
+  cursor: inherit;
 }
 
 .sort-btn:focus-visible {
