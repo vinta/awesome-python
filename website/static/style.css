@@ -13,6 +13,8 @@
   --shell-pad: clamp(1.25rem, 3vw, 2.5rem);
 
   --bg-page: oklch(96.8% 0.018 80);
+  --bg-page-top: oklch(95.2% 0.018 78);
+  --bg-page-end: oklch(98.4% 0.01 80);
   --bg-paper: oklch(98.6% 0.01 80);
   --bg-paper-strong: oklch(95.7% 0.016 76);
   --ink: oklch(22% 0.02 55);
@@ -23,11 +25,37 @@
   --accent: oklch(58% 0.16 45);
   --accent-deep: oklch(44% 0.15 42);
   --accent-soft: oklch(92% 0.045 55);
+  --accent-underline: oklch(58% 0.16 45 / 0.4);
   --highlight: oklch(87% 0.08 78);
+
   --hero-ink: oklch(15% 0.02 40);
   --hero-text: oklch(97% 0.012 85);
   --hero-muted: oklch(88% 0.02 82);
   --hero-line: oklch(100% 0 0 / 0.16);
+  --hero-kicker: oklch(82% 0.04 72);
+  --hero-proof: oklch(68% 0.02 72);
+  --hero-bg-start: oklch(14% 0.03 32);
+  --hero-bg-mid: oklch(19% 0.035 35);
+  --hero-bg-end: oklch(28% 0.05 42);
+  --hero-btn-start: oklch(83% 0.08 72);
+  --hero-btn-end: oklch(73% 0.14 58);
+
+  --row-hover: oklch(96.2% 0.02 76);
+  --row-focus: oklch(95.7% 0.026 68);
+  --row-open-start: oklch(96.2% 0.03 76);
+  --row-open-end: oklch(95.4% 0.026 74);
+  --thead-bg: oklch(98.2% 0.012 80 / 0.97);
+
+  --search-inset: oklch(100% 0 0 / 0.75);
+  --search-shadow: oklch(18% 0.03 45 / 0.24);
+  --search-focus-ring: oklch(61% 0.14 48 / 0.45);
+  --search-focus-shadow: oklch(34% 0.08 42 / 0.28);
+
+  --tag-hover-border: oklch(71% 0.09 62 / 0.45);
+  --tag-active-start: oklch(82% 0.08 75);
+  --tag-active-end: oklch(74% 0.11 58);
+
+  --cta-bg: oklch(94% 0.025 72);
 
   --text-xs: 0.8rem;
   --text-sm: 0.95rem;
@@ -56,7 +84,7 @@ body {
   color: var(--ink);
   background:
     radial-gradient(circle at top left, oklch(100% 0 0 / 0.72), transparent 28rem),
-    linear-gradient(180deg, oklch(95.2% 0.018 78), var(--bg-page) 24rem, oklch(98.4% 0.01 80));
+    linear-gradient(180deg, var(--bg-page-top), var(--bg-page) 24rem, var(--bg-page-end));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -127,7 +155,7 @@ kbd {
   background:
     radial-gradient(circle at 18% 18%, oklch(55% 0.14 45 / 0.34), transparent 22rem),
     radial-gradient(circle at 78% 32%, oklch(62% 0.17 70 / 0.17), transparent 24rem),
-    linear-gradient(140deg, oklch(14% 0.03 32) 0%, oklch(19% 0.035 35) 52%, oklch(28% 0.05 42) 100%);
+    linear-gradient(140deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 52%, var(--hero-bg-end) 100%);
   color: var(--hero-text);
 }
 
@@ -263,7 +291,7 @@ kbd {
 }
 
 .hero-kicker {
-  color: oklch(82% 0.04 72);
+  color: var(--hero-kicker);
 }
 
 .section-label {
@@ -306,7 +334,7 @@ kbd {
 
 .hero-proof {
   margin-top: 1.5rem;
-  color: oklch(68% 0.02 72);
+  color: var(--hero-proof);
   font-size: var(--text-sm);
   letter-spacing: 0.02em;
 }
@@ -332,7 +360,7 @@ kbd {
 
 .hero-action-primary {
   color: var(--hero-ink);
-  background: linear-gradient(135deg, oklch(83% 0.08 72), oklch(73% 0.14 58));
+  background: linear-gradient(135deg, var(--hero-btn-start), var(--hero-btn-end));
   box-shadow: 0 1.2rem 2.5rem -1.5rem oklch(0% 0 0 / 0.65);
 }
 
@@ -417,12 +445,12 @@ kbd {
   padding: 1rem 1.15rem 1rem 3.2rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  background: linear-gradient(180deg, oklch(100% 0 0 / 0.82), oklch(98.6% 0.01 80));
+  background: linear-gradient(180deg, oklch(100% 0 0 / 0.82), var(--bg-paper));
   color: var(--ink);
   font-size: clamp(1rem, 1.4vw, 1.06rem);
   box-shadow:
-    inset 0 1px 0 oklch(100% 0 0 / 0.75),
-    0 1.4rem 2.6rem -2.1rem oklch(18% 0.03 45 / 0.24);
+    inset 0 1px 0 var(--search-inset),
+    0 1.4rem 2.6rem -2.1rem var(--search-shadow);
   transition:
     border-color 180ms ease,
     box-shadow 180ms ease,
@@ -434,10 +462,10 @@ kbd {
 }
 
 .search:focus {
-  border-color: oklch(61% 0.14 48 / 0.45);
+  border-color: var(--search-focus-ring);
   box-shadow:
-    inset 0 1px 0 oklch(100% 0 0 / 0.75),
-    0 1.6rem 3rem -2rem oklch(34% 0.08 42 / 0.28);
+    inset 0 1px 0 var(--search-inset),
+    0 1.6rem 3rem -2rem var(--search-focus-shadow);
 }
 
 .filter-bar {
@@ -532,7 +560,7 @@ kbd {
   letter-spacing: 0.03em;
   white-space: nowrap;
   border-bottom: 1px solid var(--line);
-  background: oklch(98.2% 0.012 80 / 0.97);
+  background: var(--thead-bg);
 }
 
 .table tbody td {
@@ -554,16 +582,16 @@ kbd {
 }
 
 .row:not(.open):hover td {
-  background: oklch(96.2% 0.02 76);
+  background: var(--row-hover);
 }
 
 .row:focus-visible td {
-  background: oklch(95.7% 0.026 68);
+  background: var(--row-focus);
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .row.open td {
-  background: linear-gradient(180deg, oklch(96.2% 0.03 76), oklch(95.4% 0.026 74));
+  background: linear-gradient(180deg, var(--row-open-start), var(--row-open-end));
   border-bottom-color: transparent;
 }
 
@@ -592,7 +620,7 @@ kbd {
 .col-name > a:hover {
   color: var(--accent-deep);
   text-decoration: underline;
-  text-decoration-color: oklch(58% 0.16 45 / 0.4);
+  text-decoration-color: var(--accent-underline);
   text-underline-offset: 0.2em;
 }
 
@@ -695,7 +723,7 @@ th[data-sort].sort-asc::after {
 .expand-row td {
   padding-top: 0.1rem;
   padding-bottom: 1.15rem;
-  background: linear-gradient(180deg, oklch(96.2% 0.03 76), oklch(95.4% 0.026 74));
+  background: linear-gradient(180deg, var(--row-open-start), var(--row-open-end));
   border-bottom: 1px solid var(--line);
 }
 
@@ -722,7 +750,7 @@ th[data-sort].sort-asc::after {
 .expand-meta a:hover {
   color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: oklch(58% 0.16 45 / 0.4);
+  text-decoration-color: var(--accent-underline);
   text-underline-offset: 0.2em;
 }
 
@@ -777,12 +805,12 @@ th[data-sort].sort-asc::after {
 
 .tag:hover {
   background: var(--highlight);
-  border-color: oklch(71% 0.09 62 / 0.45);
+  border-color: var(--tag-hover-border);
   color: var(--ink);
 }
 
 .tag.active {
-  background: linear-gradient(135deg, oklch(82% 0.08 75), oklch(74% 0.11 58));
+  background: linear-gradient(135deg, var(--tag-active-start), var(--tag-active-end));
   color: var(--hero-ink);
 }
 
@@ -829,7 +857,7 @@ th[data-sort].sort-asc::after {
   font: inherit;
   cursor: pointer;
   text-decoration: underline;
-  text-decoration-color: oklch(58% 0.16 45 / 0.4);
+  text-decoration-color: var(--accent-underline);
   text-underline-offset: 0.2em;
 }
 
@@ -839,7 +867,7 @@ th[data-sort].sort-asc::after {
 
 .final-cta {
   padding-block: clamp(3rem, 7vw, 5.5rem);
-  background: oklch(94% 0.025 72);
+  background: var(--cta-bg);
 }
 
 .final-cta > .section-shell {
