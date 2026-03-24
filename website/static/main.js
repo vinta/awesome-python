@@ -407,7 +407,7 @@ if (backToTop) {
 (function () {
   const params = new URLSearchParams(location.search);
   const q = params.get("q");
-  const filter = params.get("filter") || params.get("category") || params.get("group");
+  const filter = params.get("filter");
   const sort = params.get("sort");
   const order = params.get("order");
   if (q && searchInput) searchInput.value = q;
