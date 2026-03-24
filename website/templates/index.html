@@ -50,9 +50,9 @@
 
         {% if repo_stars or build_date %}
         <p class="hero-proof">
-          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %}
-          {% if repo_stars and build_date %}/{% endif %}
-          {% if build_date %}Updated {{ build_date }}{% endif %}
+          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if
+          repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{
+          build_date }}{% endif %}
         </p>
         {% endif %}
       </div>
@@ -114,9 +114,15 @@
       <thead>
         <tr>
           <th class="col-num"><span class="sr-only">Row number</span></th>
-          <th class="col-name" data-sort="name"><button type="button" class="sort-btn">Project Name</button></th>
-          <th class="col-stars" data-sort="stars"><button type="button" class="sort-btn">GitHub Stars</button></th>
-          <th class="col-commit" data-sort="commit-time"><button type="button" class="sort-btn">Last Commit</button></th>
+          <th class="col-name" data-sort="name">
+            <button type="button" class="sort-btn">Project Name</button>
+          </th>
+          <th class="col-stars" data-sort="stars">
+            <button type="button" class="sort-btn">GitHub Stars</button>
+          </th>
+          <th class="col-commit" data-sort="commit-time">
+            <button type="button" class="sort-btn">Last Commit</button>
+          </th>
           <th class="col-cat">Tags</th>
           <th class="col-arrow">
             <button class="back-to-top" aria-label="Back to top">
@@ -140,7 +146,10 @@
             <a href="{{ entry.url }}" target="_blank" rel="noopener"
               >{{ entry.name }}</a
             >
-            <span class="mobile-cat">{% if entry.subcategories %}{{ entry.subcategories[0].name }}{% else %}{{ entry.categories[0] }}{% endif %}</span>
+            <span class="mobile-cat"
+              >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
+              else %}{{ entry.categories[0] }}{% endif %}</span
+            >
           </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
@@ -220,7 +229,12 @@
                   rel="noopener"
                   >{{ entry.url | replace("https://", "") }}</a
                 >
-                {% if entry.last_commit_at %}<span class="expand-commit"><span class="expand-sep">/</span>Last commit <time datetime="{{ entry.last_commit_at }}">{{ entry.last_commit_at[:10] }}</time></span>{% endif %}
+                {% if entry.last_commit_at %}<span class="expand-commit"
+                  ><span class="expand-sep">/</span
+                  ><time datetime="{{ entry.last_commit_at }}"
+                    >{{ entry.last_commit_at[:10] }}</time
+                  ></span
+                >{% endif %}
               </div>
             </div>
           </td>
@@ -233,31 +247,34 @@
 
   <div class="no-results" hidden>
     <p>No projects match your search or filter.</p>
-    <p class="no-results-hint">Try a broader term, or <button class="no-results-clear">browse all projects</button>.</p>
+    <p class="no-results-hint">
+      Try a broader term, or
+      <button class="no-results-clear">browse all projects</button>.
+    </p>
   </div>
 </section>
 
 <section class="final-cta" data-reveal>
-<div class="section-shell">
-  <p class="section-label">Contribute</p>
-  <h2>Know a project that belongs here?</h2>
-  <p>Tell us what it does and why it stands out.</p>
-  <div class="final-cta-actions">
-    <a
-      href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
-      class="hero-action hero-action-primary"
-      target="_blank"
-      rel="noopener"
-      >Submit a project</a
-    >
-    <a
-      href="https://github.com/vinta/awesome-python"
-      class="hero-action hero-action-secondary"
-      target="_blank"
-      rel="noopener"
-      >Star the repository</a
-    >
+  <div class="section-shell">
+    <p class="section-label">Contribute</p>
+    <h2>Know a project that belongs here?</h2>
+    <p>Tell us what it does and why it stands out.</p>
+    <div class="final-cta-actions">
+      <a
+        href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+        class="hero-action hero-action-primary"
+        target="_blank"
+        rel="noopener"
+        >Submit a project</a
+      >
+      <a
+        href="https://github.com/vinta/awesome-python"
+        class="hero-action hero-action-secondary"
+        target="_blank"
+        rel="noopener"
+        >Star the repository</a
+      >
+    </div>
   </div>
-</div>
 </section>
 {% endblock %}
