@@ -182,7 +182,7 @@ kbd {
   background:
     linear-gradient(118deg, transparent 35%, oklch(100% 0 0 / 0.09) 49%, transparent 63%);
   transform: translateX(-30%);
-  animation: sheen-drift 18s linear infinite;
+  animation: sheen-drift 18s linear 3;
 }
 
 .hero.offscreen .hero-sheen,
