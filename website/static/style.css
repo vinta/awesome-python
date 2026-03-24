@@ -814,7 +814,9 @@ th[data-sort].sort-asc::after {
 .tag::after {
   content: "";
   position: absolute;
-  inset: -0.35rem -0.15rem;
+  inset: -0.5rem -0.25rem;
+  min-height: 44px;
+  min-width: 44px;
 }
 
 .tag:hover {
@@ -1052,7 +1054,8 @@ th[data-sort].sort-asc::after {
   }
 
   .tag {
-    padding: 0.32rem 0.6rem;
+    padding: 0.38rem 0.65rem;
+    font-size: 0.65rem;
   }
 
   .table-wrap {
