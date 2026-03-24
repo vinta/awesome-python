@@ -1134,9 +1134,7 @@ th[data-sort].sort-asc::after {
 
   .expand-row td:first-child,
   .expand-row td:last-child {
-    width: 0;
-    padding: 0;
-    overflow: hidden;
+    display: none;
   }
 
   .col-name {
