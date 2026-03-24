@@ -394,7 +394,8 @@ if (backToTop) {
   backToTop.addEventListener("click", function () {
     const target = searchInput || resultsSection;
     if (!target) return;
-    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    var motion = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    target.scrollIntoView({ behavior: motion, block: "center" });
     if (searchInput) searchInput.focus();
   });
 
