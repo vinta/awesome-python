@@ -1057,7 +1057,7 @@ th[data-sort].sort-asc::after {
   }
 
   .table-wrap {
-    overflow-x: auto;
+    overflow-x: clip;
   }
 }
 
@@ -1106,10 +1106,6 @@ th[data-sort].sort-asc::after {
   .search {
     min-height: 3.5rem;
     border-radius: 1.25rem;
-  }
-
-  .table-wrap {
-    overflow-x: clip;
   }
 
   .table thead th,
