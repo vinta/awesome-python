@@ -793,12 +793,6 @@ th[data-sort].sort-asc::after {
   display: none;
 }
 
-@media (max-width: 960px) {
-  .expand-commit {
-    display: inline;
-  }
-}
-
 .tag {
   position: relative;
   border: 1px solid transparent;
@@ -1045,6 +1039,10 @@ th[data-sort].sort-asc::after {
 
   .col-commit {
     display: none;
+  }
+
+  .expand-commit {
+    display: inline;
   }
 
   .tag-group {
