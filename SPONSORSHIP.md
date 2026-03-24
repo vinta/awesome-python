@@ -23,7 +23,7 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 ### Logo Sponsor - $500/month
 
-Your logo and a one-line description pinned to the top of the README, above all 680+ project entries. Every visitor to the repo or awesome-python.com sees it first.
+Your logo and a one-line description pinned to the top of the README, above all project entries. Every visitor to the repo or awesome-python.com sees it first.
 
 **What you get:**
 - Logo + one-line description in the README header
