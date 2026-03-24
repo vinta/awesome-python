@@ -751,6 +751,7 @@ _Libraries for building command-line applications._
   - [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
   - [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
+  - [optfunc2](https://github.com/yjloong/optfunc2) - Auto-generate CLI commands from Python functions using type annotations and docstrings. Zero boilerplate alternative to argparse.
   - [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click and Pydantic.
 - Terminal Rendering
