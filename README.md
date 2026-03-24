@@ -131,17 +131,19 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
-- Frameworks
+- Orchestration
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
-  - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
-  - [llama_index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
-- Pretrained Models and Inference
-  - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pretrained diffusion models for generating and editing images, audio, and video.
-  - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pretrained transformer models for NLP, vision, and audio tasks.
+- Data Layer
+  - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
+  - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+  - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
+- Pre-trained Models and Inference
+  - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
+  - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
 
 ## Deep Learning
