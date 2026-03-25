@@ -352,6 +352,7 @@ _Libraries to automate web scraping and extract web content._
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
   - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
+  - [plasmate](https://github.com/plasmate-labs/plasmate) - Browser engine for AI agents that outputs semantic content instead of raw HTML.
   - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
 
