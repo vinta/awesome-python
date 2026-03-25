@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a1310"/>
+      <stop offset="52%" stop-color="#221a14"/>
+      <stop offset="100%" stop-color="#352a1e"/>
+    </linearGradient>
+    <radialGradient id="w1" cx="0.18" cy="0.18" r="0.45">
+      <stop offset="0%" stop-color="#8b5a2b" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#8b5a2b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="w2" cx="0.78" cy="0.35" r="0.50">
+      <stop offset="0%" stop-color="#9a7a3a" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#9a7a3a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4b882"/>
+      <stop offset="100%" stop-color="#c08a40"/>
+    </linearGradient>
+    <pattern id="grid" width="112" height="112" patternUnits="userSpaceOnUse">
+      <path d="M0 112V0h112" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#w1)"/>
+  <rect width="1200" height="630" fill="url(#w2)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top accent bar -->
+  <rect width="1200" height="4" fill="url(#gold)"/>
+
+  <!-- Python logo watermark -->
+  <g transform="translate(896, 190) scale(7)" opacity="0.10">
+    <path d="M8 2h16a6 6 0 0 1 6 6v8H2V8a6 6 0 0 1 6-6z" fill="#f0c73e"/>
+    <path d="M2 16h28v8a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6z" fill="#6b93c4"/>
+    <circle cx="11.5" cy="9.5" r="2.2" fill="#6b93c4"/>
+    <circle cx="20.5" cy="22.5" r="2.2" fill="#f0c73e"/>
+  </g>
+
+  <!-- Kicker -->
+  <text x="80" y="200" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#c9ba9e" letter-spacing="2">THE FIELD GUIDE TO THE PYTHON ECOSYSTEM</text>
+
+  <!-- Title -->
+  <text x="80" y="326" font-family="Georgia, 'Times New Roman', 'Palatino Linotype', serif" font-size="96" fill="#f5f0e8" letter-spacing="-2">Awesome Python</text>
+
+  <!-- Subtitle -->
+  <text x="80" y="394" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#b5a890">An opinionated list of awesome Python frameworks,</text>
+  <text x="80" y="430" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#b5a890">libraries, tools, and resources.</text>
+
+  <!-- URL -->
+  <text x="80" y="556" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#c08a40" letter-spacing="0.5">awesome-python.com</text>
+</svg>

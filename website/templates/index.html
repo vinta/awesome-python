@@ -1,177 +1,274 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block header %}
 <header class="hero">
-  <div class="hero-main">
-    <div>
-      <h1>Awesome Python</h1>
-      <p class="hero-sub">
-        {{ subtitle }}<br />Maintained by
-        <a href="https://github.com/vinta" target="_blank" rel="noopener"
-          >@vinta</a
-        >
-        and
+  <div class="hero-sheen" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="hero-shell">
+    <nav class="hero-topbar" aria-label="Site">
+      <span class="hero-brand-mini">Awesome Python</span>
+      <div class="hero-topbar-actions">
         <a
-          href="https://github.com/JinyangWang27"
+          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+          class="hero-topbar-link hero-topbar-link-strong"
           target="_blank"
           rel="noopener"
-          >@JinyangWang27</a
-        >.
-      </p>
-      <a
-        href="https://github.com/vinta/awesome-python"
-        class="hero-gh"
-        target="_blank"
-        rel="noopener"
-        >awesome-python on GitHub &rarr;</a
-      >
+          >Submit a project</a
+        >
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-kicker">The field guide to the Python ecosystem</p>
+        <h1>Awesome Python</h1>
+        <p class="hero-sub">
+          {{ subtitle }}<br />Maintained by
+          <a href="https://github.com/vinta" target="_blank" rel="noopener"
+            >@vinta</a
+          >
+          and
+          <a
+            href="https://github.com/JinyangWang27"
+            target="_blank"
+            rel="noopener"
+            >@JinyangWang27</a
+          >.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            href="#library-index"
+            class="hero-action hero-action-primary"
+            data-scroll-to="library-index"
+            >Browse the List</a
+          >
+          <a
+            href="https://github.com/vinta/awesome-python"
+            class="hero-action hero-action-secondary"
+            target="_blank"
+            rel="noopener"
+            >View on GitHub</a
+          >
+        </div>
+
+        {% if repo_stars or build_date %}
+        <p class="hero-proof">
+          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if
+          repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{
+          build_date }}{% endif %}
+        </p>
+        {% endif %}
+      </div>
     </div>
-    <a
-      href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
-      class="hero-submit"
-      target="_blank"
-      rel="noopener"
-      >Submit a Project</a
-    >
   </div>
 </header>
-
-<h2 class="sr-only">Search and filter</h2>
-<div class="controls">
-  <div class="search-wrap">
-    <svg
-      class="search-icon"
-      width="16"
-      height="16"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <circle cx="11" cy="11" r="8" />
-      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-    </svg>
-    <input
-      type="search"
-      class="search"
-      placeholder="Search {{ entries | length }} libraries across {{ total_categories }} categories..."
-      aria-label="Search libraries"
-    />
+{% endblock %}
+{% block content %}
+<section class="results-section" id="library-index">
+  <div class="results-intro section-shell" data-reveal>
+    <div>
+      <h2>Search every project in one place</h2>
+    </div>
+    <p class="results-note">
+      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      details.
+    </p>
   </div>
-  <div class="filter-bar">
-    <span>Showing <strong class="filter-value"></strong></span>
-    <button class="filter-clear" aria-label="Clear filter">
-      &times; Clear
-    </button>
-  </div>
-</div>
 
-<h2 class="sr-only">Results</h2>
-<div class="table-wrap" tabindex="0" role="region" aria-label="Libraries table">
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="col-num"><span class="sr-only">#</span></th>
-        <th class="col-name" data-sort="name">Project Name</th>
-        <th class="col-stars" data-sort="stars">GitHub Stars</th>
-        <th class="col-commit" data-sort="commit-time">Last Commit</th>
-        <th class="col-cat">Category</th>
-        <th class="col-arrow">
-          <button class="back-to-top" aria-label="Back to top">&uarr;</button>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for entry in entries %}
-      <tr
-        class="row"
-        role="button"
-        data-cats="{{ entry.categories | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
-        data-groups="{{ entry.groups | join('||') }}"
-        tabindex="0"
-        aria-expanded="false"
-        aria-controls="expand-{{ loop.index }}"
+  <div class="controls section-shell" data-reveal>
+    <h2 class="sr-only">Search and filter</h2>
+    <div class="search-wrap">
+      <svg
+        class="search-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
       >
-        <td class="col-num">{{ loop.index }}</td>
-        <td class="col-name">
-          <a href="{{ entry.url }}" target="_blank" rel="noopener"
-            >{{ entry.name }}</a
-          >
-        </td>
-        <td class="col-stars">
-          {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
-          elif entry.source_type %}<span class="source-badge">{{ entry.source_type }}</span>{%
-          else %}&mdash;{% endif %}
-        </td>
-        <td
-          class="col-commit"
-          {%
-          if
-          entry.last_commit_at
-          %}data-commit="{{ entry.last_commit_at }}"
-          {%
-          endif
-          %}
-        >
-          {% if entry.last_commit_at %}<time
-            datetime="{{ entry.last_commit_at }}"
-            >{{ entry.last_commit_at[:10] }}</time
-          >{% else %}&mdash;{% endif %}
-        </td>
-        <td class="col-cat">
-          {% for cat in entry.categories %}
-          <button class="tag" data-type="cat" data-value="{{ cat }}">
-            {{ cat }}
-          </button>
-          {% endfor %}
-          {% if entry.source_type == 'Built-in' %}
-          <button class="tag tag-source" data-type="cat" data-value="Built-in">
-            Built-in
-          </button>
-          {% endif %}
-          <button class="tag tag-group" data-type="group" data-value="{{ entry.groups[0] }}">
-            {{ entry.groups[0] }}
-          </button>
-        </td>
-        <td class="col-arrow"><span class="arrow">&rarr;</span></td>
-      </tr>
-      <tr class="expand-row" id="expand-{{ loop.index }}">
-        <td></td>
-        <td colspan="4">
-          <div class="expand-content">
-            {% if entry.description %}
-            <div class="expand-desc">{{ entry.description | safe }}</div>
-            {% endif %} {% if entry.also_see %}
-            <div class="expand-also-see">
-              Also see: {% for see in entry.also_see %}<a
-                href="{{ see.url }}"
-                target="_blank"
-                rel="noopener"
-                >{{ see.name }}</a
-              >{% if not loop.last %}, {% endif %}{% endfor %}
-            </div>
-            {% endif %}
-            <div class="expand-meta">
-              {% if entry.owner %}<a
-                href="https://github.com/{{ entry.owner }}"
-                target="_blank"
-                rel="noopener"
-                >{{ entry.owner }}</a
-              ><span class="expand-sep">/</span>{% endif %}<a
-                href="{{ entry.url }}"
-                target="_blank"
-                rel="noopener"
-                >{{ entry.url | replace("https://", "") }}</a
-              >
-            </div>
-          </div>
-        </td>
-        <td></td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input
+        type="search"
+        class="search"
+        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories..."
+        aria-label="Search projects"
+      />
+    </div>
+    <div class="filter-bar" aria-live="polite">
+      <span>Filtering for <strong class="filter-value"></strong></span>
+      <button class="filter-clear" aria-label="Clear filter">
+        Clear filter
+      </button>
+    </div>
+  </div>
 
-<div class="no-results" hidden>No libraries match your search.</div>
+  <h2 class="sr-only">Results</h2>
+  <div
+    class="table-wrap"
+    tabindex="0"
+    role="region"
+    aria-label="Libraries table"
+  >
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="col-num"><span class="sr-only">Row number</span></th>
+          <th class="col-name" data-sort="name">
+            <button type="button" class="sort-btn">Project Name</button>
+          </th>
+          <th class="col-stars" data-sort="stars">
+            <button type="button" class="sort-btn">GitHub Stars</button>
+          </th>
+          <th class="col-commit" data-sort="commit-time">
+            <button type="button" class="sort-btn">Last Commit</button>
+          </th>
+          <th class="col-cat">Tags</th>
+          <th class="col-arrow">
+            <button class="back-to-top" aria-label="Back to top">
+              Top &uarr;
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+        <tr
+          class="row"
+          data-tags="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}||{{ entry.groups | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="expand-{{ loop.index }}"
+        >
+          <td class="col-num">{{ loop.index }}</td>
+          <td class="col-name">
+            <a href="{{ entry.url }}" target="_blank" rel="noopener"
+              >{{ entry.name }}</a
+            >
+            <span class="mobile-cat"
+              >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
+              else %}{{ entry.categories[0] }}{% endif %}</span
+            >
+          </td>
+          <td class="col-stars">
+            {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
+            elif entry.source_type %}<span class="source-badge"
+              >{{ entry.source_type }}</span
+            >{% else %}&mdash;{% endif %}
+          </td>
+          <td
+            class="col-commit"
+            {%
+            if
+            entry.last_commit_at
+            %}data-commit="{{ entry.last_commit_at }}"
+            {%
+            endif
+            %}
+          >
+            {% if entry.last_commit_at %}<time
+              datetime="{{ entry.last_commit_at }}"
+              >{{ entry.last_commit_at[:10] }}</time
+            >{% else %}&mdash;{% endif %}
+          </td>
+          <td class="col-cat">
+            {% for subcat in entry.subcategories %}
+            <button class="tag" data-value="{{ subcat.value }}">
+              {{ subcat.name }}
+            </button>
+            {% endfor %} {% for cat in entry.categories %}
+            <button class="tag" data-value="{{ cat }}">{{ cat }}</button>
+            {% endfor %}
+            <button class="tag tag-group" data-value="{{ entry.groups[0] }}">
+              {{ entry.groups[0] }}
+            </button>
+            {% if entry.source_type == 'Built-in' %}
+            <button class="tag tag-source" data-value="Built-in">
+              Built-in
+            </button>
+            {% endif %}
+          </td>
+          <td class="col-arrow"><span class="arrow">&rarr;</span></td>
+        </tr>
+        <tr class="expand-row" id="expand-{{ loop.index }}">
+          <td></td>
+          <td colspan="4">
+            <div class="expand-content">
+              {% if entry.description %}
+              <div class="expand-desc">{{ entry.description | safe }}</div>
+              {% endif %} {% if entry.also_see %}
+              <div class="expand-also-see">
+                Also see: {% for see in entry.also_see %}<a
+                  href="{{ see.url }}"
+                  target="_blank"
+                  rel="noopener"
+                  >{{ see.name }}</a
+                >{% if not loop.last %}, {% endif %}{% endfor %}
+              </div>
+              {% endif %}
+              <div class="expand-meta">
+                {% if entry.owner %}<a
+                  href="https://github.com/{{ entry.owner }}"
+                  target="_blank"
+                  rel="noopener"
+                  >{{ entry.owner }}</a
+                ><span class="expand-sep">/</span>{% endif %}<a
+                  href="{{ entry.url }}"
+                  target="_blank"
+                  rel="noopener"
+                  >{{ entry.url | replace("https://", "") }}</a
+                >
+                {% if entry.last_commit_at %}<span class="expand-commit"
+                  ><span class="expand-sep">/</span
+                  ><time datetime="{{ entry.last_commit_at }}"
+                    >{{ entry.last_commit_at[:10] }}</time
+                  ></span
+                >{% endif %}
+              </div>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="no-results" hidden>
+    <p>No projects match your search or filter.</p>
+    <p class="no-results-hint">
+      Try a broader term, or
+      <button class="no-results-clear">browse all projects</button>.
+    </p>
+  </div>
+</section>
+
+<section class="final-cta" data-reveal>
+  <div class="section-shell">
+    <p class="section-label">Contribute</p>
+    <h2>Know a project that belongs here?</h2>
+    <p>Tell us what it does and why it stands out.</p>
+    <div class="final-cta-actions">
+      <a
+        href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+        class="hero-action hero-action-primary"
+        target="_blank"
+        rel="noopener"
+        >Submit a project</a
+      >
+      <a
+        href="https://github.com/vinta/awesome-python"
+        class="hero-action hero-action-secondary"
+        target="_blank"
+        rel="noopener"
+        >Star the repository</a
+      >
+    </div>
+  </div>
+</section>
 {% endblock %}

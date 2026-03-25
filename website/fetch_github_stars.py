@@ -103,6 +103,7 @@ def main() -> None:
 
     readme_text = README_PATH.read_text(encoding="utf-8")
     current_repos = extract_github_repos(readme_text)
+    current_repos.add("vinta/awesome-python")
     print(f"Found {len(current_repos)} GitHub repos in README.md")
 
     cache = load_stars(CACHE_FILE)

@@ -6,18 +6,36 @@
     <title>{% block title %}Awesome Python{% endblock %}</title>
     <meta
       name="description"
-      content="{% block description %}An opinionated list of awesome Python frameworks, libraries, software and resources. {{ total_entries }} libraries across {{ categories | length }} categories.{% endblock %}"
+      content="{% block description %}An opinionated list of Python frameworks, libraries, tools, and resources. {{ total_entries }} projects across {{ categories | length }} categories.{% endblock %}"
     />
     <link rel="canonical" href="https://awesome-python.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Awesome Python" />
     <meta
       property="og:description"
-      content="An opinionated list of awesome Python frameworks, libraries, software and resources."
+      content="An opinionated list of Python frameworks, libraries, tools, and resources."
+    />
+    <meta
+      property="og:image"
+      content="https://awesome-python.com/static/og-image.png"
     />
     <meta property="og:url" content="https://awesome-python.com/" />
     <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#1c1410" />
     <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    /></noscript>
     <link rel="stylesheet" href="/static/style.css" />
     <script
       async
@@ -35,30 +53,38 @@
   <body>
     <a href="#content" class="skip-link">Skip to content</a>
 
-    <main id="content">{% block content %}{% endblock %}</main>
+    {% block header %}{% endblock %}
+    <main id="content">
+      <noscript
+        ><p class="noscript-msg">
+          Search and filtering require JavaScript.
+        </p></noscript
+      >
+      {% block content %}{% endblock %}
+    </main>
 
     <footer class="footer">
-      <span
-        >Made by
-        <a href="https://vinta.ws/" target="_blank" rel="noopener"
-          >Vinta</a
-        ></span
-      >
-      <span class="footer-sep">/</span>
-      <a href="https://github.com/vinta" target="_blank" rel="noopener"
-        >GitHub</a
-      >
-      <span class="footer-sep">/</span>
-      <a href="https://twitter.com/vinta" target="_blank" rel="noopener"
-        >Twitter</a
-      >
+      <div class="footer-left">
+        <span class="footer-brand">Awesome Python</span>
+      </div>
+      <div class="footer-links">
+        <span
+          >Made by
+          <a href="https://vinta.ws/" target="_blank" rel="noopener"
+            >Vinta</a
+          ></span
+        >
+        <span class="footer-sep">/</span>
+        <a href="https://github.com/vinta" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        <span class="footer-sep">/</span>
+        <a href="https://x.com/vinta" target="_blank" rel="noopener"
+          >X (Twitter)</a
+        >
+      </div>
     </footer>
 
-    <noscript
-      ><p class="noscript-msg">
-        JavaScript is needed for search and filtering.
-      </p></noscript
-    >
     <script src="/static/main.js"></script>
   </body>
 </html>

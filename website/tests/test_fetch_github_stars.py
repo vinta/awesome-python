@@ -1,10 +1,7 @@
 """Tests for fetch_github_stars module."""
 
 import json
-import os
-import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from fetch_github_stars import (
     build_graphql_query,
     extract_github_repos,
@@ -138,6 +135,24 @@ class TestParseGraphqlResponse:
         assert result["a/x"]["stars"] == 100
         assert result["b/y"]["stars"] == 200
 
+    def test_extracts_last_commit_at(self):
+        data = {
+            "repo_0": {
+                "stargazerCount": 100,
+                "owner": {"login": "org"},
+                "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
+            }
+        }
+        repos = ["org/repo"]
+        result = parse_graphql_response(data, repos)
+        assert result["org/repo"]["last_commit_at"] == "2025-06-01T00:00:00Z"
+
+    def test_missing_default_branch_ref(self):
+        data = {"repo_0": {"stargazerCount": 50, "owner": {"login": "org"}}}
+        repos = ["org/repo"]
+        result = parse_graphql_response(data, repos)
+        assert result["org/repo"]["last_commit_at"] == ""
+
 
 class TestMainSkipsFreshCache:
     """Verify that main() skips fetching when all cache entries are fresh."""
@@ -163,7 +178,13 @@ class TestMainSkipsFreshCache:
                 "owner": "psf",
                 "last_commit_at": "2025-01-01T00:00:00+00:00",
                 "fetched_at": (now - timedelta(hours=1)).isoformat(),
-            }
+            },
+            "vinta/awesome-python": {
+                "stars": 230000,
+                "owner": "vinta",
+                "last_commit_at": "2025-01-01T00:00:00+00:00",
+                "fetched_at": (now - timedelta(hours=1)).isoformat(),
+            },
         }
         cache_file.write_text(json.dumps(fresh_cache), encoding="utf-8")
         monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
@@ -198,7 +219,13 @@ class TestMainSkipsFreshCache:
                 "owner": "psf",
                 "last_commit_at": "2025-01-01T00:00:00+00:00",
                 "fetched_at": (now - timedelta(hours=24)).isoformat(),
-            }
+            },
+            "vinta/awesome-python": {
+                "stars": 230000,
+                "owner": "vinta",
+                "last_commit_at": "2025-01-01T00:00:00+00:00",
+                "fetched_at": (now - timedelta(hours=24)).isoformat(),
+            },
         }
         cache_file.write_text(json.dumps(stale_cache), encoding="utf-8")
         monkeypatch.setattr("fetch_github_stars.CACHE_FILE", cache_file)
@@ -213,7 +240,12 @@ class TestMainSkipsFreshCache:
                     "stargazerCount": 53000,
                     "owner": {"login": "psf"},
                     "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
-                }
+                },
+                "repo_1": {
+                    "stargazerCount": 231000,
+                    "owner": {"login": "vinta"},
+                    "defaultBranchRef": {"target": {"committedDate": "2025-06-01T00:00:00Z"}},
+                },
             }
         }
         mock_response.raise_for_status = MagicMock()
@@ -226,6 +258,6 @@ class TestMainSkipsFreshCache:
         main()
 
         output = capsys.readouterr().out
-        assert "1 repos to fetch" in output
-        assert "Done. Fetched 1 repos" in output
+        assert "2 repos to fetch" in output
+        assert "Done. Fetched 2 repos" in output
         mock_client.post.assert_called_once()

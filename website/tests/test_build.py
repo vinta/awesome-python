@@ -7,12 +7,14 @@ from pathlib import Path
 
 from build import (
     build,
+    detect_source_type,
+    extract_entries,
     extract_github_repo,
-    group_categories,
+    format_stars_short,
     load_stars,
     sort_entries,
 )
-from readme_parser import slugify
+from readme_parser import parse_readme, slugify
 
 # ---------------------------------------------------------------------------
 # slugify
@@ -43,40 +45,6 @@ class TestSlugify:
 
 
 # ---------------------------------------------------------------------------
-# group_categories
-# ---------------------------------------------------------------------------
-
-
-class TestGroupCategories:
-    def test_appends_resources(self):
-        parsed_groups = [
-            {"name": "G1", "slug": "g1", "categories": [{"name": "Cat1"}]},
-        ]
-        resources = [{"name": "Newsletters", "slug": "newsletters"}]
-        groups = group_categories(parsed_groups, resources)
-        group_names = [g["name"] for g in groups]
-        assert "G1" in group_names
-        assert "Resources" in group_names
-
-    def test_no_resources_no_extra_group(self):
-        parsed_groups = [
-            {"name": "G1", "slug": "g1", "categories": [{"name": "Cat1"}]},
-        ]
-        groups = group_categories(parsed_groups, [])
-        assert len(groups) == 1
-        assert groups[0]["name"] == "G1"
-
-    def test_preserves_group_order(self):
-        parsed_groups = [
-            {"name": "Second", "slug": "second", "categories": [{"name": "C2"}]},
-            {"name": "First", "slug": "first", "categories": [{"name": "C1"}]},
-        ]
-        groups = group_categories(parsed_groups, [])
-        assert groups[0]["name"] == "Second"
-        assert groups[1]["name"] == "First"
-
-
-# ---------------------------------------------------------------------------
 # build (integration)
 # ---------------------------------------------------------------------------
 
@@ -94,18 +62,12 @@ class TestBuild:
         )
         (tpl_dir / "index.html").write_text(
             '{% extends "base.html" %}{% block content %}'
-            "{% for group in groups %}"
-            '<section class="group">'
-            "<h2>{{ group.name }}</h2>"
-            "{% for cat in group.categories %}"
-            '<div class="row" id="{{ cat.slug }}">'
-            "<span>{{ cat.name }}</span>"
-            "<span>{{ cat.preview }}</span>"
-            "<span>{{ cat.entry_count }}</span>"
-            '<div class="row-content" hidden>{{ cat.content_html | safe }}</div>'
+            "{% for entry in entries %}"
+            '<div class="row">'
+            "<span>{{ entry.name }}</span>"
+            "<span>{{ entry.categories | join(', ') }}</span>"
+            "<span>{{ entry.groups | join(', ') }}</span>"
             "</div>"
-            "{% endfor %}"
-            "</section>"
             "{% endfor %}"
             "{% endblock %}",
             encoding="utf-8",
@@ -365,3 +327,133 @@ class TestSortEntries:
         ]
         result = sort_entries(entries)
         assert [e["name"] for e in result] == ["apple", "zebra"]
+
+    def test_builtin_between_starred_and_unstarred(self):
+        entries = [
+            {"name": "builtin", "stars": None, "source_type": "Built-in"},
+            {"name": "starred", "stars": 100, "source_type": None},
+            {"name": "unstarred", "stars": None, "source_type": None},
+        ]
+        result = sort_entries(entries)
+        assert [e["name"] for e in result] == ["starred", "builtin", "unstarred"]
+
+
+# ---------------------------------------------------------------------------
+# detect_source_type
+# ---------------------------------------------------------------------------
+
+
+class TestDetectSourceType:
+    def test_github_repo_returns_none(self):
+        assert detect_source_type("https://github.com/psf/requests") is None
+
+    def test_stdlib_url(self):
+        assert detect_source_type("https://docs.python.org/3/library/asyncio.html") == "Built-in"
+
+    def test_gitlab_url(self):
+        assert detect_source_type("https://gitlab.com/org/repo") == "GitLab"
+
+    def test_bitbucket_url(self):
+        assert detect_source_type("https://bitbucket.org/org/repo") == "Bitbucket"
+
+    def test_non_github_external(self):
+        assert detect_source_type("https://example.com/tool") == "External"
+
+    def test_github_non_repo_returns_none(self):
+        assert detect_source_type("https://github.com/org/repo/wiki") is None
+
+
+# ---------------------------------------------------------------------------
+# format_stars_short
+# ---------------------------------------------------------------------------
+
+
+class TestFormatStarsShort:
+    def test_under_1000(self):
+        assert format_stars_short(500) == "500"
+
+    def test_exactly_1000(self):
+        assert format_stars_short(1000) == "1k"
+
+    def test_large_number(self):
+        assert format_stars_short(52000) == "52k"
+
+    def test_zero(self):
+        assert format_stars_short(0) == "0"
+
+
+# ---------------------------------------------------------------------------
+# extract_entries
+# ---------------------------------------------------------------------------
+
+
+class TestExtractEntries:
+    def test_basic_extraction(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            **Tools**
+
+            ## Widgets
+
+            - [widget](https://example.com) - A widget.
+
+            # Contributing
+
+            Done.
+        """)
+        groups = parse_readme(readme)
+        categories = [c for g in groups for c in g["categories"]]
+        entries = extract_entries(categories, groups)
+        assert len(entries) == 1
+        assert entries[0]["name"] == "widget"
+        assert entries[0]["categories"] == ["Widgets"]
+        assert entries[0]["groups"] == ["Tools"]
+
+    def test_duplicate_entry_merged(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            **Tools**
+
+            ## Alpha
+
+            - [shared](https://example.com/shared) - Shared lib.
+
+            ## Beta
+
+            - [shared](https://example.com/shared) - Shared lib.
+
+            # Contributing
+
+            Done.
+        """)
+        groups = parse_readme(readme)
+        categories = [c for g in groups for c in g["categories"]]
+        entries = extract_entries(categories, groups)
+        shared = [e for e in entries if e["name"] == "shared"]
+        assert len(shared) == 1
+        assert sorted(shared[0]["categories"]) == ["Alpha", "Beta"]
+
+    def test_source_type_detected(self):
+        readme = textwrap.dedent("""\
+            # T
+
+            ---
+
+            ## Stdlib
+
+            - [asyncio](https://docs.python.org/3/library/asyncio.html) - Async I/O.
+
+            # Contributing
+
+            Done.
+        """)
+        groups = parse_readme(readme)
+        categories = [c for g in groups for c in g["categories"]]
+        entries = extract_entries(categories, groups)
+        assert entries[0]["source_type"] == "Built-in"

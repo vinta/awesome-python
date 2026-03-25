@@ -4,30 +4,12 @@
 import json
 import re
 import shutil
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import TypedDict
 
 from jinja2 import Environment, FileSystemLoader
-from readme_parser import parse_readme, slugify
-
-
-def group_categories(
-    parsed_groups: list[dict],
-    resources: list[dict],
-) -> list[dict]:
-    """Combine parsed groups with resources for template rendering."""
-    groups = list(parsed_groups)
-
-    if resources:
-        groups.append(
-            {
-                "name": "Resources",
-                "slug": slugify("Resources"),
-                "categories": list(resources),
-            }
-        )
-
-    return groups
+from readme_parser import parse_readme
 
 
 class StarData(TypedDict):
@@ -120,6 +102,11 @@ def extract_entries(
                     existing["categories"].append(cat["name"])
                 if group_name not in existing["groups"]:
                     existing["groups"].append(group_name)
+                subcat = entry["subcategory"]
+                if subcat:
+                    scoped = f"{cat['name']} > {subcat}"
+                    if not any(s["value"] == scoped for s in existing["subcategories"]):
+                        existing["subcategories"].append({"name": subcat, "value": scoped})
             else:
                 merged = {
                     "name": entry["name"],
@@ -127,6 +114,7 @@ def extract_entries(
                     "description": entry["description"],
                     "categories": [cat["name"]],
                     "groups": [group_name],
+                    "subcategories": [{"name": entry["subcategory"], "value": f"{cat['name']} > {entry['subcategory']}"}] if entry["subcategory"] else [],
                     "stars": None,
                     "owner": None,
                     "last_commit_at": None,
@@ -136,6 +124,13 @@ def extract_entries(
                 seen[key] = merged
                 entries.append(merged)
     return entries
+
+
+def format_stars_short(stars: int) -> str:
+    """Format star count as compact string like '230k'."""
+    if stars >= 1000:
+        return f"{stars // 1000}k"
+    return str(stars)
 
 
 def build(repo_root: str) -> None:
@@ -151,14 +146,17 @@ def build(repo_root: str) -> None:
             subtitle = stripped
             break
 
-    parsed_groups, resources = parse_readme(readme_text)
+    parsed_groups = parse_readme(readme_text)
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
-    groups = group_categories(parsed_groups, resources)
-    entries = extract_entries(categories, groups)
+    entries = extract_entries(categories, parsed_groups)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
+
+    repo_self = stars_data.get("vinta/awesome-python", {})
+    repo_stars = format_stars_short(repo_self["stars"]) if "stars" in repo_self else None
+
     for entry in entries:
         repo_key = extract_github_repo(entry["url"])
         if not repo_key and entry.get("source_type") == "Built-in":
@@ -185,12 +183,12 @@ def build(repo_root: str) -> None:
     (site_dir / "index.html").write_text(
         tpl_index.render(
             categories=categories,
-            resources=resources,
-            groups=groups,
             subtitle=subtitle,
             entries=entries,
             total_entries=total_entries,
             total_categories=len(categories),
+            repo_stars=repo_stars,
+            build_date=datetime.now(timezone.utc).strftime("%B %d, %Y"),
         ),
         encoding="utf-8",
     )
@@ -202,7 +200,7 @@ def build(repo_root: str) -> None:
 
     (site_dir / "llms.txt").write_text(readme_text, encoding="utf-8")
 
-    print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories + {len(resources)} resources")
+    print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories")
     print(f"Total entries: {total_entries}")
     print(f"Output: {site_dir}")
 

@@ -3,6 +3,7 @@
 
 # python
 .venv/
+__pycache__/
 *.py[co]
 
 # website
@@ -11,6 +12,10 @@ website/data/
 
 # claude code
 .claude/skills/
-.superpowers/
 .gstack/
+.playwright-cli/
+.superpowers/
 skills-lock.json
+
+# codex
+.agents/

@@ -2,11 +2,11 @@
 
 **The #10 most-starred repository on all of GitHub.**
 
-awesome-python is where Python developers go to discover tools. When someone searches Google for "best Python libraries," they land here. When ChatGPT recommends Python tools, it references this list. When developers evaluate frameworks, this is the list they check.
+awesome-python is where Python developers go to discover tools. It ranks on the first page of Google for "best Python libraries," is referenced by ChatGPT and other LLMs when recommending Python tools, and is the list developers check when evaluating frameworks.
 
 Your sponsorship puts your product in front of developers at the exact moment they're choosing what to use.
 
-## By the Numbers
+## Audience
 
 | Metric       | Value                                                                                                |
 | ------------ | ---------------------------------------------------------------------------------------------------- |
@@ -15,22 +15,35 @@ Your sponsorship puts your product in front of developers at the exact moment th
 | Watchers     | ![Watchers](https://img.shields.io/github/watchers/vinta/awesome-python?style=for-the-badge)         |
 | Contributors | ![Contributors](https://img.shields.io/github/contributors/vinta/awesome-python?style=for-the-badge) |
 
-Top referrers: GitHub, Google Search, YouTube, Reddit, ChatGPT — developers actively searching for and evaluating Python tools.
+**Who visits:** Professional Python developers evaluating libraries and tools for production use. Not beginners browsing tutorials. People making adoption decisions.
+
+**Top referrers:** Google Search, GitHub, ChatGPT/LLMs, YouTube, Reddit, Hacker News.
 
 ## Sponsorship Tiers
 
-### Logo Sponsor — $500/month (2 slots)
+### Logo Sponsor - $500/month
 
-Your logo and a one-line description at the top of the README, seen by every visitor.
+Your logo and a one-line description pinned to the top of the README, above all project entries. Every visitor to the repo or awesome-python.com sees it first.
 
-### Link Sponsor — $150/month (5 slots)
+**What you get:**
+- Logo + one-line description in the README header
+- Logo on awesome-python.com sponsor section
+- Permanent placement for the duration of your sponsorship
 
-A text link with your product name at the top of the README, right below logo sponsors.
+### Link Sponsor - $150/month
+
+A text link with your product name at the top of the README, directly below logo sponsors.
+
+**What you get:**
+- Text link in the README header
+- Link on awesome-python.com sponsor section
 
 ## Past Sponsors
 
-- [Warp](https://www.warp.dev/) - https://github.com/vinta/awesome-python/pull/2766
+- [Warp](https://www.warp.dev/) - The terminal for modern developers.
 
 ## Get Started
 
-Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with your company name and preferred tier. Most sponsors are set up within 24 hours.
+Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with your company name and preferred tier.
+
+Setup takes less than 24 hours. Month-to-month billing, cancel anytime.

@@ -2,31 +2,36 @@
 
 ## Repository Overview
 
-This is the awesome-python repository - a curated list of Python frameworks, libraries, software and resources. The repository serves as a comprehensive directory about Python ecosystem.
+An opinionated list of Python frameworks, libraries, tools, and resources. Published at [awesome-python.com](https://awesome-python.com/).
 
 ## PR Review Guidelines
 
-**For all PR review tasks, refer to [CONTRIBUTING.md](CONTRIBUTING.md)** which contains:
+**Refer to [CONTRIBUTING.md](CONTRIBUTING.md)** for acceptance criteria, quality requirements, rejection rules, and entry format.
 
-- Acceptance criteria (Industry Standard, Rising Star, Hidden Gem)
-- Quality requirements
-- Automatic rejection criteria
-- Entry format reference
-- PR description template
+## Structure
 
-## Architecture & Structure
+- **README.md**: Source of truth. Hierarchical categories with alphabetically ordered entries.
+- **CONTRIBUTING.md**: Submission guidelines and review criteria.
+- **website/**: Static site generator that builds awesome-python.com from README.md.
+  - `build.py`: Parses README.md and renders HTML via Jinja2 templates.
+  - `fetch_github_stars.py`: Fetches star counts into `website/data/`.
+  - `readme_parser.py`: Markdown-to-structured-data parser.
+  - `templates/`, `static/`: Jinja2 templates and CSS/JS assets.
+  - `tests/`: Pytest tests for the build pipeline.
+- **Makefile**: `make install`, `make build`, `make preview`, `make test`, `make fetch_github_stars`.
+- **pyproject.toml**: Uses `uv` for dependency management. Python >=3.13.
 
-The repository follows a single-file architecture:
+## Entry Format
 
-- **README.md**: All content in hierarchical structure (categories, subcategories, entries)
-- **CONTRIBUTING.md**: Submission guidelines and review criteria
-- **sort.py**: Script to enforce alphabetical ordering
+```markdown
+- [project-name](https://github.com/owner/repo) - Description ending with period.
+```
 
-Entry format: `* [project-name](url) - Concise description ending with period.`
+Use PyPI package name as display name. If not on PyPI, use the GitHub repo name. Use GitHub URLs when available.
 
-## Key Considerations
+## Key Rules
 
-- This is a curated list, not a code project
-- Quality over quantity - only "awesome" projects
-- Alphabetical ordering within categories is mandatory
-- README.md is the source of truth for all content
+- Alphabetical ordering within categories is mandatory.
+- Quality over quantity. Only "awesome" projects.
+- One project per PR.
+- README.md is the single source of content truth.

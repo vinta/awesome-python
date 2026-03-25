@@ -20,6 +20,7 @@ class ParsedEntry(TypedDict):
     url: str
     description: str  # inline HTML, properly escaped
     also_see: list[AlsoSee]
+    subcategory: str  # sub-category label, empty if none
 
 
 class ParsedSection(TypedDict):
@@ -28,8 +29,6 @@ class ParsedSection(TypedDict):
     description: str  # plain text, links resolved to text
     entries: list[ParsedEntry]
     entry_count: int
-    preview: str
-    content_html: str  # rendered HTML, properly escaped
 
 
 class ParsedGroup(TypedDict):
@@ -131,6 +130,7 @@ def _extract_description(nodes: list[SyntaxTreeNode]) -> str:
 # --- Entry extraction --------------------------------------------------------
 
 _DESC_SEP_RE = re.compile(r"^\s*[-\u2013\u2014]\s*")
+_SUBCAT_TRAILING_RE = re.compile(r"[\s,\-\u2013\u2014]+(also\s+see\s*)?$", re.IGNORECASE)
 
 
 def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
@@ -178,7 +178,11 @@ def _extract_description_html(inline: SyntaxTreeNode, first_link: SyntaxTreeNode
     return _DESC_SEP_RE.sub("", html)
 
 
-def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
+def _parse_list_entries(
+    bullet_list: SyntaxTreeNode,
+    *,
+    subcategory: str = "",
+) -> list[ParsedEntry]:
     """Extract entries from a bullet_list AST node.
 
     Handles three patterns:
@@ -199,10 +203,16 @@ def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
         first_link = _find_first_link(inline)
 
         if first_link is None or not _is_leading_link(inline, first_link):
-            # Subcategory label (plain text or text-before-link) — recurse into nested list
+            # Subcategory label: take text before the first link, strip trailing separators
+            pre_link = []
+            for child in inline.children:
+                if child.type == "link":
+                    break
+                pre_link.append(child)
+            label = _SUBCAT_TRAILING_RE.sub("", render_inline_text(pre_link)) if pre_link else render_inline_text(inline.children)
             nested = _find_child(list_item, "bullet_list")
             if nested:
-                entries.extend(_parse_list_entries(nested))
+                entries.extend(_parse_list_entries(nested, subcategory=label))
             continue
 
         # Entry with a link
@@ -231,6 +241,7 @@ def _parse_list_entries(bullet_list: SyntaxTreeNode) -> list[ParsedEntry]:
             url=url,
             description=desc_html,
             also_see=also_see,
+            subcategory=subcategory,
         ))
 
     return entries
@@ -245,69 +256,6 @@ def _parse_section_entries(content_nodes: list[SyntaxTreeNode]) -> list[ParsedEn
     return entries
 
 
-# --- Content HTML rendering --------------------------------------------------
-
-
-def _render_bullet_list_html(
-    bullet_list: SyntaxTreeNode,
-    *,
-    is_sub: bool = False,
-) -> str:
-    """Render a bullet_list node to HTML with entry/entry-sub/subcat classes."""
-    out: list[str] = []
-
-    for list_item in bullet_list.children:
-        if list_item.type != "list_item":
-            continue
-
-        inline = _find_inline(list_item)
-        if inline is None:
-            continue
-
-        first_link = _find_first_link(inline)
-
-        if first_link is None or not _is_leading_link(inline, first_link):
-            # Subcategory label (plain text or text-before-link)
-            label = str(escape(render_inline_text(inline.children)))
-            out.append(f'<div class="subcat">{label}</div>')
-            nested = _find_child(list_item, "bullet_list")
-            if nested:
-                out.append(_render_bullet_list_html(nested, is_sub=False))
-            continue
-
-        # Entry with a link
-        name = str(escape(render_inline_text(first_link.children)))
-        url = str(escape(first_link.attrGet("href") or ""))
-
-        if is_sub:
-            out.append(f'<div class="entry-sub"><a href="{url}">{name}</a></div>')
-        else:
-            desc = _extract_description_html(inline, first_link)
-            if desc:
-                out.append(
-                    f'<div class="entry"><a href="{url}">{name}</a>'
-                    f'<span class="sep">&mdash;</span>{desc}</div>'
-                )
-            else:
-                out.append(f'<div class="entry"><a href="{url}">{name}</a></div>')
-
-        # Nested items under an entry with a link are sub-entries
-        nested = _find_child(list_item, "bullet_list")
-        if nested:
-            out.append(_render_bullet_list_html(nested, is_sub=True))
-
-    return "\n".join(out)
-
-
-def _render_section_html(content_nodes: list[SyntaxTreeNode]) -> str:
-    """Render a section's content nodes to HTML."""
-    parts: list[str] = []
-    for node in content_nodes:
-        if node.type == "bullet_list":
-            parts.append(_render_bullet_list_html(node))
-    return "\n".join(parts)
-
-
 # --- Section splitting -------------------------------------------------------
 
 
@@ -317,44 +265,14 @@ def _build_section(name: str, body: list[SyntaxTreeNode]) -> ParsedSection:
     content_nodes = body[1:] if desc else body
     entries = _parse_section_entries(content_nodes)
     entry_count = len(entries) + sum(len(e["also_see"]) for e in entries)
-    preview = ", ".join(e["name"] for e in entries[:4])
-    content_html = _render_section_html(content_nodes)
     return ParsedSection(
         name=name,
         slug=slugify(name),
         description=desc,
         entries=entries,
         entry_count=entry_count,
-        preview=preview,
-        content_html=content_html,
     )
 
-
-def _group_by_h2(
-    nodes: list[SyntaxTreeNode],
-) -> list[ParsedSection]:
-    """Group AST nodes into sections by h2 headings."""
-    sections: list[ParsedSection] = []
-    current_name: str | None = None
-    current_body: list[SyntaxTreeNode] = []
-
-    def flush() -> None:
-        nonlocal current_name
-        if current_name is None:
-            return
-        sections.append(_build_section(current_name, current_body))
-        current_name = None
-
-    for node in nodes:
-        if node.type == "heading" and node.tag == "h2":
-            flush()
-            current_name = _heading_text(node)
-            current_body = []
-        elif current_name is not None:
-            current_body.append(node)
-
-    flush()
-    return sections
 
 
 def _is_bold_marker(node: SyntaxTreeNode) -> str | None:
@@ -432,43 +350,30 @@ def _parse_grouped_sections(
     return groups
 
 
-def parse_readme(text: str) -> tuple[list[ParsedGroup], list[ParsedSection]]:
-    """Parse README.md text into grouped categories and resources.
+def parse_readme(text: str) -> list[ParsedGroup]:
+    """Parse README.md text into grouped categories.
 
-    Returns (groups, resources) where groups is a list of ParsedGroup dicts
-    containing nested categories, and resources is a flat list of ParsedSection.
+    Returns a list of ParsedGroup dicts containing nested categories.
+    Content between the thematic break (---) and # Resources or # Contributing
+    is parsed as categories grouped by bold markers (**Group Name**).
     """
     md = MarkdownIt("commonmark")
     tokens = md.parse(text)
     root = SyntaxTreeNode(tokens)
     children = root.children
 
-    # Find thematic break (---), # Resources, and # Contributing in one pass
+    # Find thematic break (---) and section boundaries in one pass
     hr_idx = None
-    resources_idx = None
-    contributing_idx = None
+    cat_end_idx = None
     for i, node in enumerate(children):
         if hr_idx is None and node.type == "hr":
             hr_idx = i
         elif node.type == "heading" and node.tag == "h1":
             text_content = _heading_text(node)
-            if text_content == "Resources":
-                resources_idx = i
-            elif text_content == "Contributing":
-                contributing_idx = i
+            if cat_end_idx is None and text_content in ("Resources", "Contributing"):
+                cat_end_idx = i
     if hr_idx is None:
-        return [], []
+        return []
 
-    # Slice into category and resource ranges
-    cat_end = resources_idx or contributing_idx or len(children)
-    cat_nodes = children[hr_idx + 1 : cat_end]
-
-    res_nodes: list[SyntaxTreeNode] = []
-    if resources_idx is not None:
-        res_end = contributing_idx or len(children)
-        res_nodes = children[resources_idx + 1 : res_end]
-
-    groups = _parse_grouped_sections(cat_nodes)
-    resources = _group_by_h2(res_nodes)
-
-    return groups, resources
+    cat_nodes = children[hr_idx + 1 : cat_end_idx or len(children)]
+    return _parse_grouped_sections(cat_nodes)

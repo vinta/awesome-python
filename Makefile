@@ -14,7 +14,6 @@ build:
 	uv run python website/build.py
 
 preview: build
-	@echo "Check the website on http://localhost:8000"
 	uv run watchmedo shell-command \
 		--patterns='*.md;*.html;*.css;*.js;*.py' \
 		--recursive \
