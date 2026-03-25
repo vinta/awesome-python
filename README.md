@@ -132,6 +132,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
 - Orchestration
+  - [arsenal](https://github.com/darshjme/arsenal) - 100 zero-dependency Python libraries for LLM agent failure modes in production. Each library solves one specific failure class. 4375 tests. MIT license.
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
