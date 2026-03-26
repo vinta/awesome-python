@@ -226,6 +226,8 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
   - [starlette](https://github.com/Kludex/starlette) - A lightweight ASGI framework and toolkit for building high-performance async services.
   - [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
+ - [Project-Nebula](https://github.com/amogus-gggy/Project-Nebula) - Fast async ASGI framework, written in Python 3.10+ and Cython from scratch, with amazing performance, and support of WebSockets.
+
 ## Web APIs
 
 _Libraries for building RESTful and GraphQL APIs._
