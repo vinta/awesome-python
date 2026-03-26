@@ -183,7 +183,6 @@ _Libraries for working with human languages._
   - [stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
   - [funnlp](https://github.com/fighting41love/funNLP) - A collection of tools and datasets for Chinese NLP.
-  - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
 
 ## Computer Vision
 
