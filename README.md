@@ -75,8 +75,8 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 
 **CLI & GUI**
 
-- [Command-line Interface Development](#command-line-interface-development)
-- [Command-line Tools](#command-line-tools)
+- [Command-line Interface Development](#cli-development)
+- [Command-line Tools](#cli-tools)
 - [GUI Development](#gui-development)
 
 **Text & Documents**
