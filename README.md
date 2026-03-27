@@ -946,6 +946,7 @@ _Implementations of Python._
 - [cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
 - [ironpython](https://github.com/IronLanguages/ironpython3) - Implementation of the Python programming language written in C#.
 - [micropython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
+- [pyodide](https://github.com/pyodide/pyodide) - Python distribution for the browser and Node.js based on WebAssembly.
 - [pypy](https://github.com/pypy/pypy) - A very fast and compliant implementation of the Python language.
 
 ## Built-in Classes Enhancement
