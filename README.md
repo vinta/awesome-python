@@ -338,7 +338,6 @@ _Libraries for working with HTTP._
 - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 - [urllib3](https://github.com/urllib3/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
-
 ## Web Scraping
 
 _Libraries to automate web scraping and extract web content._
