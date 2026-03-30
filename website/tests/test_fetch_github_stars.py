@@ -98,6 +98,38 @@ class TestBuildGraphqlQuery:
         assert "good" in query
         assert "bad" not in query
 
+    def test_skips_graphql_injection_in_owner(self):
+        query = build_graphql_query(['org"){evil}/repo'])
+        assert query == ""
+
+    def test_skips_graphql_injection_in_name(self):
+        query = build_graphql_query(['org/repo"){evil}'])
+        assert query == ""
+
+    def test_skips_owner_starting_with_hyphen(self):
+        query = build_graphql_query(["-bad/repo"])
+        assert query == ""
+
+    def test_skips_owner_starting_with_dot(self):
+        query = build_graphql_query([".bad/repo"])
+        assert query == ""
+
+    def test_skips_repo_starting_with_dot(self):
+        query = build_graphql_query(["org/.hidden"])
+        assert query == ""
+
+    def test_allows_repo_with_dots_and_underscores(self):
+        query = build_graphql_query(["org/my_repo.py"])
+        assert 'name: "my_repo.py"' in query
+
+    def test_allows_hyphenated_owner(self):
+        query = build_graphql_query(["my-org/repo"])
+        assert 'owner: "my-org"' in query
+
+    def test_skips_owner_with_underscore(self):
+        query = build_graphql_query(["bad_owner/repo"])
+        assert query == ""
+
 
 class TestParseGraphqlResponse:
     def test_parses_star_count_and_owner(self):
