@@ -20,9 +20,9 @@ GRAPHQL_URL = "https://api.github.com/graphql"
 BATCH_SIZE = 50
 
 # GitHub usernames: alphanumeric and hyphens, must start/end with alphanumeric.
-_GITHUB_OWNER_RE = re.compile(r"^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$")
+GITHUB_OWNER_RE = re.compile(r"^[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$")
 # GitHub repo names: alphanumeric, hyphens, underscores, dots, must start with alphanumeric.
-_GITHUB_NAME_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9._-]*$")
+GITHUB_NAME_RE = re.compile(r"^[a-zA-Z0-9][a-zA-Z0-9._-]*$")
 
 
 def extract_github_repos(text: str) -> set[str]:
@@ -51,7 +51,7 @@ def build_graphql_query(repos: list[str]) -> str:
     parts = []
     for i, repo in enumerate(repos):
         owner, name = repo.split("/", 1)
-        if not _GITHUB_OWNER_RE.match(owner) or not _GITHUB_NAME_RE.match(name):
+        if not GITHUB_OWNER_RE.match(owner) or not GITHUB_NAME_RE.match(name):
             continue
         parts.append(
             f'repo_{i}: repository(owner: "{owner}", name: "{name}") '
