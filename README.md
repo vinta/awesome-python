@@ -571,6 +571,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 
 - Code Analysis
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+  - [Jctx](https://github.com/Shashwat-Gupta57/Jctx) - Instantly converts Python projects into an AI-ready codebase context file with token metrics and dependency graphs.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
 - Code Linters
