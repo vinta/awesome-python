@@ -466,6 +466,7 @@ _Libraries for data analysis._
 _Libraries for validating data. Used for forms in many cases._
 
 - [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
+- [datascreeniq-python](https://github.com/AppDevIQ/datascreeniq-python) - Python SDK for DataScreenIQ, a real-time data quality firewall that detects schema drift, null spikes, type mismatches, and anomalies with PASS / WARN / BLOCK decisions.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](http://json-schema.org/) for Python.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
