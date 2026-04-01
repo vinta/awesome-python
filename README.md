@@ -393,9 +393,9 @@ _Libraries for connecting and operating databases._
   - [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   - [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
-- SQlite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
+- SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
   - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
-  - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQlite interface compliant with DB-API 2.0.
+  - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
 - Other Relational Databases
   - [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
   - [mssql-python](https://github.com/microsoft/mssql-python) - Official Microsoft driver for SQL Server and Azure SQL, built on ODBC for high performance and low memory usage.
