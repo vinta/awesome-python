@@ -728,6 +728,7 @@ _Libraries for scheduling jobs._
 - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 - [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 - [SpiffWorkflow](https://github.com/sartography/SpiffWorkflow) - A powerful workflow engine implemented in pure Python.
+- [Jobify](https://github.com/theseriff/jobify) - Modern asyncio-native job scheduler. Lightweight, intuitive and built for high-performance background tasks.
 
 ## Logging
 
