@@ -17,8 +17,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://awesome-python.com/
     steps:
       - uses: actions/checkout@v6
 
@@ -31,14 +34,19 @@ jobs:
         run: uv sync --group build
 
       - name: Run tests
+        if: github.event_name != 'schedule'
         run: make test
+
+      - name: Get date
+        id: date
+        run: echo "today=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
       - name: Restore star data cache
         id: cache-stars
         uses: actions/cache/restore@v4
         with:
           path: website/data/github_stars.json
-          key: github-stars-${{ github.run_id }}
+          key: github-stars-${{ steps.date.outputs.today }}
           restore-keys: github-stars-
 
       - name: Fetch GitHub stars
@@ -53,7 +61,7 @@ jobs:
         uses: actions/cache/save@v4
         with:
           path: website/data/github_stars.json
-          key: github-stars-${{ github.run_id }}
+          key: github-stars-${{ steps.date.outputs.today }}
 
       - name: Verify star data exists
         run: |
@@ -61,9 +69,9 @@ jobs:
             echo "::error::github_stars.json not found. No cache and fetch failed or was skipped."
             exit 1
           fi
-          echo "Star data found: $(wc -l < website/data/github_stars.json) lines"
+          python -m json.tool website/data/github_stars.json > /dev/null
 
-      - name: Build site
+      - name: Build website
         run: make build
 
       - name: Upload artifact
@@ -71,13 +79,5 @@ jobs:
         with:
           path: website/output/
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: https://awesome-python.com/
-    steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
