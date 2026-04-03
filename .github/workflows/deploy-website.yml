@@ -17,6 +17,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: github.repository == 'vinta/awesome-python'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
