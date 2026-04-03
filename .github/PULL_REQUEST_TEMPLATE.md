@@ -6,7 +6,7 @@
 
 - [ ] One project per PR
 - [ ] PR title format: `Add project-name`
-- [ ] Entry format: `* [project-name](url) - Description ending with period.`
+- [ ] Entry format: `- [project-name](url) - Description ending with period.`
 - [ ] Description is concise and short
 
 ## Why This Project Is Awesome
