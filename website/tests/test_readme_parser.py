@@ -6,6 +6,7 @@ import textwrap
 import pytest
 
 from readme_parser import (
+    _find_inline,
     _parse_section_entries,
     parse_readme,
     render_inline_html,
@@ -486,3 +487,72 @@ class TestParseRealReadme:
         misc_group = next((g for g in self.groups if g["name"] == "Miscellaneous"), None)
         assert misc_group is not None
         assert any(c["name"] == "Miscellaneous" for c in misc_group["categories"])
+
+    def test_all_entries_have_nonempty_names(self):
+        bad = []
+        for cat in self.cats:
+            for entry in cat["entries"]:
+                if not entry["name"].strip():
+                    bad.append(f"{cat['name']}: empty entry name (url={entry['url']})")
+        assert bad == [], "Entries with empty names:\n" + "\n".join(bad)
+
+    def test_all_entries_have_valid_urls(self):
+        bad = []
+        for cat in self.cats:
+            for entry in cat["entries"]:
+                if not entry["url"].startswith(("https://", "http://")):
+                    bad.append(f"{cat['name']}: [{entry['name']}] has invalid url: {entry['url']!r}")
+                for see in entry["also_see"]:
+                    if not see["url"].startswith(("https://", "http://")):
+                        bad.append(f"{cat['name']}: [{see['name']}] (also_see) has invalid url: {see['url']!r}")
+        assert bad == [], "Entries with invalid URLs:\n" + "\n".join(bad)
+
+    def test_no_malformed_entry_lines(self):
+        """Detect list items that look like entries but have broken link syntax.
+
+        Walks the markdown-it AST for list items whose inline text starts
+        with '[' but contain no link node. This catches broken markdown
+        like '- [name(url)' where the closing '](' is missing.
+        """
+        md = MarkdownIt("commonmark")
+        root = SyntaxTreeNode(md.parse(self.readme_text))
+
+        # Find category section boundaries (between --- and # Resources/Contributing)
+        hr_idx = None
+        end_idx = None
+        for i, node in enumerate(root.children):
+            if hr_idx is None and node.type == "hr":
+                hr_idx = i
+            elif node.type == "heading" and node.tag == "h1":
+                text = render_inline_text(node.children[0].children) if node.children else ""
+                if end_idx is None and text in ("Resources", "Contributing"):
+                    end_idx = i
+        if hr_idx is None:
+            return
+
+        bad = []
+        cat_nodes = root.children[hr_idx + 1 : end_idx or len(root.children)]
+        for node in cat_nodes:
+            if node.type != "bullet_list":
+                continue
+            self._check_list_for_broken_links(node, bad)
+
+        assert bad == [], "List items with broken link syntax:\n" + "\n".join(bad)
+
+    def _check_list_for_broken_links(self, bullet_list, bad):
+        for list_item in bullet_list.children:
+            if list_item.type != "list_item":
+                continue
+            inline = _find_inline(list_item)
+            if inline is None:
+                continue
+            # Check if inline text starts with '[' but has no link node
+            has_link = any(c.type == "link" for c in inline.children)
+            text = render_inline_text(inline.children)
+            if not has_link and text.startswith("["):
+                line = list_item.map[0] + 1 if list_item.map else "?"
+                bad.append(f"  line {line}: {text}")
+            # Recurse into nested lists
+            for child in list_item.children:
+                if child.type == "bullet_list":
+                    self._check_list_for_broken_links(child, bad)
