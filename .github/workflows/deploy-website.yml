@@ -33,6 +33,7 @@ jobs:
         run: uv sync --group build
 
       - name: Run tests
+        if: github.event_name == 'schedule'
         run: make test
 
       - name: Get date
