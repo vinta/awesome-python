@@ -725,6 +725,7 @@ _Libraries for scheduling jobs._
 
 - [airflow](https://github.com/apache/airflow) - Airflow is a platform to programmatically author, schedule and monitor workflows.
 - [apscheduler](https://github.com/agronholm/apscheduler) - A light but powerful in-process task scheduler that lets you schedule functions.
+- [cueapi](https://github.com/cueapi/cueapi-core) - Scheduling API for AI agents with delivery confirmation, outcome tracking, and automatic retries.
 - [dagster](https://github.com/dagster-io/dagster) - An orchestration platform for the development, production, and observation of data assets.
 - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
 - [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
