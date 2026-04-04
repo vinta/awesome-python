@@ -1081,7 +1081,7 @@ _Python programming on Microsoft Windows._
 
 _Resources and tools for learning Python interactively._
 
-- [LearnAI](https://uselearnai.com) - AI-powered conversational Python tutor that builds a personalized curriculum based on your level and goal, teaching one module at a time with active recall.
+- [LearnAI](https://uselearnai.com/chat?topic=python) - AI-powered conversational Python tutor that builds a personalized curriculum based on your level and goal, teaching one module at a time with active recall.
 
 ## Miscellaneous
 
