@@ -1077,6 +1077,12 @@ _Python programming on Microsoft Windows._
 - [pywin32](https://github.com/mhammond/pywin32) - Python Extensions for Windows.
 - [winpython](https://github.com/winpython/winpython) - Portable development environment for Windows 10/11.
 
+## Learning
+
+_Resources and tools for learning Python interactively._
+
+- [LearnAI](https://uselearnai.com) - AI-powered conversational Python tutor that builds a personalized curriculum based on your level and goal, teaching one module at a time with active recall.
+
 ## Miscellaneous
 
 _Useful libraries or tools that don't fit in the categories above._
