@@ -271,8 +271,8 @@ _Libraries for working with WebSocket._
 - [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 - [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 - [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
+- [picows](https://github.com/tarasko/picows) - Fastest WebSocket clients and servers with a frame level interface for the most demanding use-cases.
 - [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
-- [picows](https://github.com/python-websockets/websockets) - Fastest WebSocket clients and servers for asyncio
 
 ## Template Engines
 
