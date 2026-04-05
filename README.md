@@ -529,6 +529,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
   - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
   - [pymc](https://github.com/pymc-devs/pymc) - Probabilistic programming and Bayesian modeling in Python.
   - [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
+  - [awesome-ai-cae](https://github.com/kimimgo/awesome-ai-cae) - AI-ready tools for Computer-Aided Engineering: CFD, FEA, SPH, surrogate models, PINNs.
 - Other
   - [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
   - [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
