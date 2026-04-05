@@ -272,6 +272,7 @@ _Libraries for working with WebSocket._
 - [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
 - [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
 - [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
+- [picows](https://github.com/python-websockets/websockets) - Fastest WebSocket clients and servers for asyncio
 
 ## Template Engines
 
