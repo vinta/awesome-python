@@ -352,6 +352,7 @@ _Libraries to automate web scraping and extract web content._
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 - Content Extraction
+  - [Argus](https://github.com/Khamel83/argus) - Multi-provider search broker that routes queries across SearXNG, Brave, Serper, Tavily, and Exa with automatic fallback and RRF ranking.
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
   - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
