@@ -233,6 +233,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 
 _Libraries for building RESTful and GraphQL APIs._
 
+* [idliappam](https://github.com/Ankitajainkuniya/chutney-python) - WhatsApp Business API SDK with messaging, invoicing, inventory, loyalty, and AI chatbot. By Meta Official TSP.
 - Django
   - [django-ninja](https://github.com/vitalik/django-ninja) - Fast, Django REST framework based on type hints and Pydantic.
   - [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
