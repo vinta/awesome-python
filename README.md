@@ -347,6 +347,7 @@ _Libraries for working with HTTP._
 _Libraries to automate web scraping and extract web content._
 
 - Frameworks
+  - [babelwrap-mcp](https://github.com/babelwrap/babelwrap-mcp) - An HTTP API and MCP server that lets AI agents interact with websites through natural language.
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
