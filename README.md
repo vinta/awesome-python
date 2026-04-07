@@ -774,6 +774,7 @@ _Libraries for building command-line applications._
 _Useful CLI-based tools for productivity._
 
 - Productivity Tools
+  - [better-fullstack](https://github.com/Marve10s/Better-Fullstack) - End-to-end fullstack scaffolding across TypeScript, Rust, Python & Go — code ready for you or your AI agent.
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
