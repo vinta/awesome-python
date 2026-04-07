@@ -1114,3 +1114,38 @@ Your contributions are always welcome! Please take a look at the [contribution g
 ---
 
 If you have any question about this opinionated list, do not hesitate to contact [@vinta](https://x.com/vinta) on X (Twitter).
+
+---
+
+## 🚀 Project Overview
+Enhanced README documentation for clarity, badges, and contribution guidance.
+
+## ✨ Features
+- Improved documentation structure
+- Repository metadata and badges
+- Automated activity insights
+- Contribution guidance
+
+## 🤝 Contributing
+Contributions are welcome.  
+Feel free to open issues or submit pull requests.
+
+## 📊 Repository Statistics
+![Stars](https://img.shields.io/github/stars/vinta/awesome-python)
+![Forks](https://img.shields.io/github/forks/vinta/awesome-python)
+![Issues](https://img.shields.io/github/issues/vinta/awesome-python)
+![License](https://img.shields.io/github/license/vinta/awesome-python)
+
+## 📜 Recent Repository Activity
+- 7a34849 Merge pull request #3027 from tarasko/master (Jinyang, 2026-04-07)
+- f63c9f8 Update 'picows' entry in README (Taras Kozlov, 2026-04-05)
+- e078d5b Add picows library to WebSocket section (Taras Kozlov, 2026-04-05)
+- 3c6429a Merge pull request #3015 from torinsong/master (Jinyang, 2026-04-04)
+- a2303c9 ci: skip deploy job on forks (Vinta Chen, 2026-04-03)
+
+## 🕒 Last Updated
+Wed Apr  8 02:47:56 +04 2026
+
+---
+
+### 🤖 Automated Documentation Update
