@@ -135,6 +135,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
+  - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
