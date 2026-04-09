@@ -628,7 +628,7 @@ _Libraries for testing codebases and generating test data._
   - [polyfactory](https://github.com/litestar-org/polyfactory) - mock data generation library with support to classes (continuation of `pydantic-factories`)
 - Code Coverage
   - [coverage](https://github.com/coveragepy/coveragepy) - Code coverage measurement.
-  - [bough](https://github.com/CodeEnPlace/bough) - Bough is a polyglot incremental mutation tester
+  - [bough](https://github.com/CodeEnPlace/bough) - Bough is a polyglot incremental mutation tester.
 - Fake Data
   - [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
   - [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
