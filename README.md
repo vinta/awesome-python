@@ -142,6 +142,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Data Layer
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+  - [agent-brain](https://github.com/kaderosio/agent-brain) - A 7-layer cognitive memory system for AI agents with perception gating, forgetting curves, and predictive alerts.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
 - Pre-trained Models and Inference
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
