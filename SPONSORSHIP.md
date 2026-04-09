@@ -17,7 +17,7 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 **Who visits:** Professional Python developers evaluating libraries and tools for production use. Not beginners browsing tutorials. People making adoption decisions.
 
-**Top referrers:** Google Search, GitHub, ChatGPT/LLMs, YouTube, Reddit, Hacker News.
+**Where they come from:** Google Search, GitHub, Reddit, YouTube, ChatGPT/LLMs, Hacker News.
 
 ## Sponsorship Tiers
 
@@ -38,7 +38,7 @@ A text link with your product name at the top of the README, directly below logo
 - Text link in the README header
 - Link on awesome-python.com sponsor section
 
-## Past Sponsors
+## Previously Sponsored By
 
 - [Warp](https://www.warp.dev/) - The terminal for modern developers.
 
@@ -46,4 +46,8 @@ A text link with your product name at the top of the README, directly below logo
 
 Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with your company name and preferred tier.
 
-Setup takes less than 24 hours. Month-to-month billing, cancel anytime.
+Setup takes less than 24 hours. Month-to-month, cancel anytime.
+
+## Editorial Independence
+
+Sponsorship is logo/link placement in the README header. It does not influence which projects are listed. Listings are curated on merit through the normal [contribution process](CONTRIBUTING.md).
