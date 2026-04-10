@@ -143,6 +143,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
+- Governance
+  - [asqav](https://github.com/jagmarques/asqav-sdk) - A governance SDK for AI agents with tamper-evident audit trails, tool scanning, and policy enforcement.
 - Pre-trained Models and Inference
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
