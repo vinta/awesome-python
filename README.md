@@ -676,6 +676,7 @@ _Libraries for generating project documentation._
 
 ## DevOps Tools
 
+- [cronviz](https://github.com/clementslowik/cronviz) - Unified cron and systemd timer observability CLI. Stdlib only, zero dependencies.
 _Software and libraries for DevOps._
 
 - Cloud Providers
