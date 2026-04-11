@@ -124,6 +124,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 **AI & ML**
 
 ## AI and Agents
+Add to Data Layer subcategory. Format: `- [meridian-context-compression](https://github.com/meridianmindx/meridian-context-compression) - Token optimization agent for CrewAI workflows (22x reduction).`
 
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
