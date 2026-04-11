@@ -826,6 +826,7 @@ _Libraries for parsing and manipulating plain texts._
   - [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
   - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
+  - [lmscan](https://github.com/stef41/lmscan) - Detect AI-generated text and fingerprint which LLM wrote it using statistical analysis.
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
   - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
   - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
