@@ -124,6 +124,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 **AI & ML**
 
 ## AI and Agents
+Add to Orchestration subcategory alongside crewai. Format: `- [meridian-crewai-deploy-orchestrator](https://github.com/meridianmindx/meridian-crewai-deploy-orchestrator) - Deployment orchestration framework for CrewAI multi-agent systems.`
 
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
