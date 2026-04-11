@@ -676,6 +676,7 @@ _Libraries for generating project documentation._
 **DevOps**
 
 ## DevOps Tools
+Add entry under DevOps Tools section. Format: `- [meridian-mcp-deploy](https://github.com/meridianmindx/meridian-mcp-deploy) - MCP server deployment framework with automated provisioning and configuration.`
 
 _Software and libraries for DevOps._
 
