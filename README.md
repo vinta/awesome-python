@@ -139,6 +139,10 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
+  - [meridian-mcp-deploy](https://github.com/meridianmindx/meridian-mcp-deploy) - One-click deploy AI agents to any cloud via MCP, handling infrastructure, secrets, and scaling.
+  - [meridian-crewai-deploy-orchestrator](https://github.com/meridianmindx/meridian-crewai-deploy-orchestrator) - Orchestrate and deploy CrewAI crews to production with auto-scaling and monitoring.
+  - [meridian-context-compression](https://github.com/meridianmindx/meridian-context-compression) - Context compression agent reducing token usage by up to 22x while preserving semantic meaning.
+
 - Data Layer
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
