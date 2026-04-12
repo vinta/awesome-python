@@ -646,6 +646,8 @@ _Libraries for debugging code._
 - Profiler
   - [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
+- Network
+  - [httptap](https://github.com/ozeranskii/httptap) - Dissects an HTTP request into DNS, TCP, TLS, wait, and transfer phases and renders the timings as a waterfall.
 - Others
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
