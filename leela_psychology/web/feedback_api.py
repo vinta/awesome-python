@@ -21,6 +21,7 @@ try:
 except ImportError:
     Blueprint = None  # type: ignore
 
+from monitoring.metrics_collector import metrics
 from storage.vector_storage import vector_storage
 
 _feedback_queue: List[Dict[str, Any]] = []
@@ -92,6 +93,17 @@ if Blueprint is not None:
     def get_insight_feedback(insight_id: str):
         entries = [e for e in _feedback_queue if e["insight_id"] == insight_id]
         return jsonify({"insight_id": insight_id, "count": len(entries), "items": entries})
+
+    @feedback_bp.route("/health", methods=["GET"])
+    def health():
+        from agents.devops.health_agent import HealthAgent
+        report = HealthAgent().run_health_check()
+        status_code = 200 if report["status"] == "healthy" else 503
+        return jsonify(report), status_code
+
+    @feedback_bp.route("/metrics", methods=["GET"])
+    def get_metrics():
+        return jsonify(metrics.snapshot())
 
 
 def create_app() -> "Flask":  # type: ignore[name-defined]

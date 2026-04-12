@@ -45,6 +45,7 @@ from models.unified_insight import (
     PsychologicalLayer,
     UnifiedInsight,
 )
+from monitoring.metrics_collector import metrics
 from storage.vector_storage import vector_storage
 
 
@@ -132,6 +133,15 @@ class LeelaPsychologicalEngine:
                 processing_time_ms=elapsed_ms,
             ),
         )
+
+        # Record per-school latencies and throughput
+        metrics.record_ms("analyze_turn_total_ms", elapsed_ms)
+        for layer_name in active_layers:
+            metrics.increment(f"school.{layer_name}.calls")
+        if user_consent:
+            metrics.increment("consent_granted")
+        else:
+            metrics.increment("consent_denied")
 
         # 4. Anonymised vector storage (consent-gated)
         session_hash: Optional[str] = None
