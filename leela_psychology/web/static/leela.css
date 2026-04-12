@@ -1,0 +1,176 @@
+/* Leela Quest+Psychology AI — shared stylesheet */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Tokens ──────────────────────────────────────────────────────────────── */
+:root {
+  --bg-base:        #0f172a;
+  --bg-surface:     #1e293b;
+  --bg-input:       #0f172a;
+  --border:         #334155;
+  --text-primary:   #e2e8f0;
+  --text-muted:     #94a3b8;
+  --accent:         #3b82f6;
+  --accent-hover:   #2563eb;
+  --accent-title:   #60a5fa;
+  --star-off:       #334155;
+  --star-on:        #facc15;
+  --ok:             #4ade80;
+  --err:            #f87171;
+  --radius-card:    12px;
+  --radius-input:   6px;
+  --radius-btn:     8px;
+}
+
+/* ── Layout ──────────────────────────────────────────────────────────────── */
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ── Typography ──────────────────────────────────────────────────────────── */
+h1 {
+  font-size: 1.4rem;
+  color: var(--accent-title);
+  margin-bottom: 0.25rem;
+}
+
+p.sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+/* ── Star rating ─────────────────────────────────────────────────────────── */
+.stars {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.star {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--star-off);
+  transition: color 0.15s;
+  user-select: none;
+}
+
+.star.on {
+  color: var(--star-on);
+}
+
+.star:hover {
+  color: var(--star-on);
+  opacity: 0.8;
+}
+
+/* ── Form controls ───────────────────────────────────────────────────────── */
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-input);
+  color: var(--text-primary);
+  resize: vertical;
+  min-height: 80px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.8rem 0 1.2rem;
+}
+
+.check-row input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
+.check-row label {
+  margin: 0;
+}
+
+/* ── Button ──────────────────────────────────────────────────────────────── */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-btn);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: var(--accent-hover);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.99);
+}
+
+/* ── Status message ──────────────────────────────────────────────────────── */
+#msg {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.ok  { color: var(--ok); }
+.err { color: var(--err); }
+
+/* ── Stats panel ─────────────────────────────────────────────────────────── */
+.stats {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--bg-input);
+  border-radius: var(--radius-input);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+.stats b {
+  color: var(--accent-title);
+}
+
+/* ── Health indicator (used by /api/health response page) ───────────────── */
+.health-ok      { color: var(--ok); }
+.health-degraded { color: var(--err); }
