@@ -63,5 +63,11 @@ jobs:
           python-version: "3.11"
       - name: pip-audit
         run: |
-          pip install pip-audit
-          pip-audit -r requirements.txt --ignore-vuln PYSEC-2022-42969 || true
+          pip install pip-audit flask flask-cors cryptography anyio numpy
+          # Fail the build on any NEW vulnerability.
+          # Only suppress CVEs that are tracked and accepted via explicit allowlist.
+          # To add an exception: pip-audit --ignore-vuln <ID> and document the reason below.
+          #
+          # Current allowlist:
+          #   (none — all CVEs must be resolved or explicitly waived with justification)
+          pip-audit -r requirements.txt

@@ -24,13 +24,16 @@ except ImportError:
 from storage.vector_storage import vector_storage
 
 _feedback_queue: List[Dict[str, Any]] = []
+_MAX_COMMENT_LENGTH = 2000
 
 if Blueprint is not None:
     feedback_bp = Blueprint("feedback", __name__)
 
     @feedback_bp.route("/feedback", methods=["POST"])
     def submit_feedback():
-        data = request.get_json(silent=True) or {}
+        data = request.get_json(silent=True)
+        if data is None:
+            return jsonify({"error": "Invalid or missing JSON body"}), 400
         for field in ("insight_id", "rating"):
             if field not in data:
                 return jsonify({"error": f"Missing field: {field}"}), 400
@@ -39,11 +42,15 @@ if Blueprint is not None:
         if not 1 <= rating <= 5:
             return jsonify({"error": "rating must be 1–5"}), 400
 
+        comment = data.get("comment", "")
+        if len(comment) > _MAX_COMMENT_LENGTH:
+            return jsonify({"error": f"comment exceeds {_MAX_COMMENT_LENGTH} characters"}), 400
+
         entry: Dict[str, Any] = {
             "feedback_id": str(uuid.uuid4()),
             "insight_id": data["insight_id"],
             "rating": rating,
-            "comment": data.get("comment", ""),
+            "comment": comment,
             "helpful": bool(data.get("helpful", True)),
             "timestamp": datetime.utcnow().isoformat() + "Z",
         }
