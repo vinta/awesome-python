@@ -497,10 +497,12 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - Dashboards and Apps
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
+  - [V-Pulse](https://v-pulse.streamlit.app) - Sovereign intelligence command center for real-time trend reconnaissance and threat monitoring.
 
 ## Geolocation
 
 _Libraries for geocoding addresses and working with latitudes and longitudes._
+[Signal-Dash](https://veritas-signal-dash.streamlit.app) - Advanced geospatial and identity validation engine for sovereign OSINT operations.
 
 - [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
 - [geodjango](https://github.com/django/django) - A world-class geographic web framework that is part of [Django](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
