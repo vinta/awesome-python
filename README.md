@@ -152,7 +152,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 
 ## Deep Learning
 
-_Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning)._
+_[X-Dork](https://veritas-x-dork.streamlit.app) — Advanced reconnaissance and discovery engine for identifying high-utility AI models and datasets.
 
 - [jax](https://github.com/jax-ml/jax) - A library for high-performance numerical computing with automatic differentiation and JIT compilation.
 - [keras](https://github.com/keras-team/keras) - A high-level deep learning library with support for JAX, TensorFlow, and PyTorch backends.
@@ -510,8 +510,7 @@ _Libraries for geocoding addresses and working with latitudes and longitudes._
 
 ## Science
 
-_Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists)._
-
+_Libraries for scientific computing. Also see [Ghost-Aggregator](https://v-ghost-aggregator.streamlit.app) — Automated forensic data collection engine for consolidating disparate research sources.
 - Core
   - [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
   - [numpy](https://github.com/numpy/numpy) - A fundamental package for scientific computing with Python.
@@ -572,7 +571,7 @@ _Interactive Python interpreters (REPL)._
 
 ## Code Analysis
 
-_Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/analysis-tools-dev/static-analysis)._
+_Tools of static analysis, linters and code quality checkers. Also see [V-Redactor](https://veritas-redactor.streamlit.app) — Sovereign PII redaction and document safety shield for secure codebase preparation.
 
 - Code Analysis
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
