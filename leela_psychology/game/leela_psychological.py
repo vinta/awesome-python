@@ -38,6 +38,7 @@ from agents.qa.gestalt_analyzer import GestaltAnalyzer
 from agents.qa.jungian_analyzer import JungianAnalyzer
 from agents.qa.transactional_analyzer import TransactionalAnalyzer
 from ai.embedding_client import EmbeddingClient
+from ai.embedding_synthesizer import EmbeddingSynthesizer
 from ai.synthesizer import ConflictSynthesizer
 from models.unified_insight import (
     GameEvent,
@@ -45,6 +46,7 @@ from models.unified_insight import (
     PsychologicalLayer,
     UnifiedInsight,
 )
+from journals.journal_manager import JournalManager
 from monitoring.metrics_collector import metrics
 from storage.vector_storage import vector_storage
 
@@ -61,10 +63,14 @@ _ANALYZERS: Dict[str, BasePsychAnalyzer] = {
 class LeelaPsychologicalEngine:
     """Parallel multi-school analysis engine with privacy-preserving storage."""
 
-    def __init__(self) -> None:
-        self.synthesizer = ConflictSynthesizer()
+    def __init__(self, journal: Optional[JournalManager] = None) -> None:
         self.emb_client = EmbeddingClient()
+        # v2.0: embedding-based dynamic synthesizer (primary)
+        # v1.x: static POLARITY_MAP synthesizer (fallback for single-layer)
+        self._emb_synthesizer = EmbeddingSynthesizer(client=self.emb_client)
+        self._static_synthesizer = ConflictSynthesizer()
         self.storage = vector_storage
+        self.journal = journal  # optional — set to JournalManager() to enable
 
     # ── Public API ────────────────────────────────────────────────────────────
 
@@ -107,7 +113,12 @@ class LeelaPsychologicalEngine:
         layers_dict = {active_layers[i]: contexts[i] for i in range(len(contexts))}
 
         # 2. Conflict synthesis
-        synthesis = self.synthesizer.synthesize(layers_dict)
+        # Use embedding-based v2.0 synthesizer when 2+ layers are active;
+        # fall back to static map for single-layer sessions.
+        if len(layers_dict) >= 2:
+            synthesis = await self._emb_synthesizer.synthesize(layers_dict)
+        else:
+            synthesis = self._static_synthesizer.synthesize(layers_dict)
 
         # 3. Build UnifiedInsight
         layers_objs = [
@@ -167,13 +178,19 @@ class LeelaPsychologicalEngine:
                 self.storage,
             )
 
-        return {
+        result: Dict[str, Any] = {
             "unified_insight": insight.to_dict(),
             "synthesis": synthesis,
             "active_layers": active_layers,
             "session_hash": session_hash,
             "status": "ok",
         }
+
+        # 5. Optional journal recording (privacy-safe snippet only)
+        if self.journal is not None:
+            self.journal.record(session_id, result)
+
+        return result
 
 
 # Module-level singleton

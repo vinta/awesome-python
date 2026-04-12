@@ -68,6 +68,48 @@ class TestLeelaPsychologicalEngine:
         assert schools == {"jung", "freud", "cbt", "gestalt", "transactional"}
 
     @pytest.mark.asyncio
+    async def test_multi_layer_uses_embedding_synthesizer(self, tmp_path: Path) -> None:
+        """2+ layers must route through EmbeddingSynthesizer (v2.0 output markers)."""
+        eng = LeelaPsychologicalEngine()
+        eng.storage = _fresh_storage(tmp_path)
+
+        result = await eng.analyze_turn(
+            session_id="synth_test",
+            cell_id=15,
+            cell_name="Bridge",
+            cell_type="arrow",
+            state_id="st_albedo",
+            active_layers=["jung", "freud"],
+        )
+
+        synthesis = result["synthesis"]
+        # EmbeddingSynthesizer always produces one of these markers
+        v2_markers = ("polarity", "alignment", "tension", "Insufficient", "coherent")
+        assert any(m in synthesis for m in v2_markers), (
+            f"Expected v2.0 synthesis output, got: {synthesis[:120]}"
+        )
+
+    @pytest.mark.asyncio
+    async def test_journal_records_turns(self, tmp_path: Path) -> None:
+        """When a JournalManager is attached, each turn is recorded."""
+        from journals.journal_manager import JournalManager
+
+        journal = JournalManager(output_dir=str(tmp_path / "journal"))
+        eng = LeelaPsychologicalEngine(journal=journal)
+        eng.storage = _fresh_storage(tmp_path)
+
+        for _ in range(3):
+            await eng.analyze_turn(
+                session_id="journal_sess",
+                cell_id=5,
+                active_layers=["jung"],
+            )
+
+        entries = journal.load_session("journal_sess")
+        assert len(entries) == 3
+        assert [e.turn for e in entries] == [1, 2, 3]
+
+    @pytest.mark.asyncio
     async def test_consent_gates_vector_storage(self, tmp_path: Path) -> None:
         storage = _fresh_storage(tmp_path)
         eng = LeelaPsychologicalEngine()
