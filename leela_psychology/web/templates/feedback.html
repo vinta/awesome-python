@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leela — Feedback</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:system-ui,sans-serif;background:#0f172a;color:#e2e8f0;min-height:100vh;display:flex;align-items:center;justify-content:center}
+    .card{background:#1e293b;border:1px solid #334155;border-radius:12px;padding:2rem;width:100%;max-width:480px}
+    h1{font-size:1.4rem;color:#60a5fa;margin-bottom:.25rem}
+    p.sub{color:#94a3b8;font-size:.9rem;margin-bottom:1.5rem}
+    label{display:block;font-size:.85rem;color:#94a3b8;margin-bottom:.3rem}
+    .stars{display:flex;gap:.3rem;margin-bottom:1rem}
+    .star{font-size:2rem;cursor:pointer;color:#334155;transition:color .15s}
+    .star.on{color:#facc15}
+    textarea{width:100%;padding:.6rem;background:#0f172a;border:1px solid #334155;border-radius:6px;color:#e2e8f0;resize:vertical;min-height:80px;font-size:.9rem}
+    .check-row{display:flex;align-items:center;gap:.5rem;margin:.8rem 0 1.2rem}
+    .check-row input{width:16px;height:16px;accent-color:#3b82f6}
+    button{width:100%;padding:.75rem;background:#3b82f6;border:none;border-radius:8px;color:#fff;font-size:1rem;cursor:pointer;transition:background .2s}
+    button:hover{background:#2563eb}
+    #msg{margin-top:1rem;font-size:.9rem;min-height:1.2rem}
+    .ok{color:#4ade80} .err{color:#f87171}
+    .stats{margin-top:1.5rem;padding:1rem;background:#0f172a;border-radius:8px;border:1px solid #334155;font-size:.85rem}
+    .stats b{color:#60a5fa}
+  </style>
+</head>
+<body>
+<div class="card">
+  <h1>Поділитися враженнями</h1>
+  <p class="sub">Ваш відгук допоможе системі глибше розуміти ваш психологічний профіль.</p>
+
+  <form id="form">
+    <input type="hidden" id="insightId" value="demo_insight_001">
+
+    <label>Оцініть інсайт</label>
+    <div class="stars" id="stars">
+      <span class="star" data-v="1">★</span>
+      <span class="star" data-v="2">★</span>
+      <span class="star" data-v="3">★</span>
+      <span class="star" data-v="4">★</span>
+      <span class="star" data-v="5">★</span>
+    </div>
+    <input type="hidden" id="rating" value="0">
+
+    <label for="comment">Коментар (необов'язково)</label>
+    <textarea id="comment" placeholder="Що допомогло? Що можна покращити?"></textarea>
+
+    <div class="check-row">
+      <input type="checkbox" id="helpful" checked>
+      <label for="helpful" style="margin:0">Цей інсайт був корисним</label>
+    </div>
+
+    <button type="submit">Надіслати відгук</button>
+  </form>
+
+  <div id="msg"></div>
+
+  <div class="stats" id="statsBox">
+    <b>Статистика</b>
+    <div id="statsBody">Завантаження…</div>
+  </div>
+</div>
+
+<script>
+  const stars = [...document.querySelectorAll('.star')];
+  const ratingInput = document.getElementById('rating');
+
+  stars.forEach(s => s.addEventListener('click', () => {
+    const v = +s.dataset.v;
+    ratingInput.value = v;
+    stars.forEach((x, i) => x.classList.toggle('on', i < v));
+  }));
+
+  document.getElementById('form').addEventListener('submit', async e => {
+    e.preventDefault();
+    const rating = +ratingInput.value;
+    if (!rating) { setMsg('Оберіть оцінку (1–5)', 'err'); return; }
+
+    try {
+      const r = await fetch('/api/feedback', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          insight_id: document.getElementById('insightId').value,
+          rating,
+          comment: document.getElementById('comment').value,
+          helpful: document.getElementById('helpful').checked
+        })
+      });
+      const j = await r.json();
+      if (r.ok) {
+        setMsg('✓ Дякуємо! Ваш відгук збережено.', 'ok');
+        document.getElementById('form').reset();
+        stars.forEach(x => x.classList.remove('on'));
+        ratingInput.value = 0;
+        loadStats();
+      } else {
+        setMsg(j.error || 'Помилка', 'err');
+      }
+    } catch(err) {
+      setMsg('Мережева помилка: ' + err.message, 'err');
+    }
+  });
+
+  function setMsg(text, cls) {
+    const el = document.getElementById('msg');
+    el.textContent = text;
+    el.className = cls;
+  }
+
+  async function loadStats() {
+    try {
+      const r = await fetch('/api/feedback/stats');
+      const j = await r.json();
+      document.getElementById('statsBody').innerHTML =
+        `Всього: <b>${j.total_feedback}</b> | `+
+        `Середня оцінка: <b>${j.avg_rating}/5</b> | `+
+        `Корисних: <b>${j.helpful_percent}%</b>`;
+    } catch {
+      document.getElementById('statsBody').textContent = 'Недоступно';
+    }
+  }
+
+  loadStats();
+</script>
+</body>
+</html>

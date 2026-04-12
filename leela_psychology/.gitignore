@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets — NEVER commit
+.env
+*.key
+*.pem
+
+# Runtime data — encrypted vectors and cache are environment-specific
+data/vectors/
+data/emb_cache/
+data/exports/
+
+# IDE
+.idea/
+.vscode/
+*.swp

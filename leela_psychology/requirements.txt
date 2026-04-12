@@ -1,0 +1,29 @@
+# Leela Quest+Psychology AI — Python dependencies
+# ─────────────────────────────────────────────────────────────────────────────
+# Core framework
+flask>=3.0,<4.0
+flask-cors>=4.0,<5.0
+
+# Cryptography (privacy layer)
+cryptography>=42.0,<44.0
+
+# Async support
+anyio>=4.0,<5.0
+
+# Numerical / vector
+numpy>=1.26,<3.0
+
+# Embeddings (optional — required only for LEE_EMB_PROVIDER=local)
+# sentence-transformers>=2.7,<4.0
+# torch>=2.2  # pulled in by sentence-transformers
+
+# FAISS vector index (optional — graceful degradation if absent)
+# faiss-cpu>=1.8,<2.0
+
+# Clinical export PDF (optional — falls back to markdown if absent)
+# reportlab>=4.0,<5.0
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Development / test
+pytest>=8.0,<9.0
+pytest-asyncio>=0.23,<1.0

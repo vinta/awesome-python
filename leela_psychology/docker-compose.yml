@@ -1,0 +1,42 @@
+version: "3.9"
+
+# ─── Leela Quest+Psychology AI ────────────────────────────────────────────────
+#
+# Usage:
+#   cp .env.example .env          # fill in real secrets
+#   docker compose up -d
+#
+# Secrets are loaded from .env — NEVER commit that file.
+# ─────────────────────────────────────────────────────────────────────────────
+
+services:
+  leela:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: leela-psychology:latest
+    container_name: leela_app
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      LEE_HMAC_KEY: ${LEE_HMAC_KEY}
+      LEE_FERNET_KEY: ${LEE_FERNET_KEY}
+      LEE_EMB_PROVIDER: ${LEE_EMB_PROVIDER:-mock}
+    volumes:
+      # Persistent encrypted storage — never bind-mount raw source in prod
+      - leela_vectors:/app/data/vectors
+      - leela_cache:/app/data/emb_cache
+      - leela_exports:/app/data/exports
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:5000/api/feedback/stats')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  leela_vectors:
+  leela_cache:
+  leela_exports:
