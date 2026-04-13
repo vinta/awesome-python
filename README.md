@@ -534,6 +534,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
   - [pymc](https://github.com/pymc-devs/pymc) - Probabilistic programming and Bayesian modeling in Python.
   - [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
 - Other
+  - [chszlablib](https://github.com/CHSZLab/CHSZLabLib) - A unified Python interface to 20 high-performance C++ graph algorithm libraries for partitioning, clustering, cuts, and independent sets.
   - [colour](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
   - [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
   - [networkx](https://github.com/networkx/networkx) - A high-productivity software for complex networks.
