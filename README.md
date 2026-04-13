@@ -340,6 +340,7 @@ _Libraries for working with HTTP._
 
 - [aiohttp](https://github.com/aio-libs/aiohttp) - Asynchronous HTTP client/server framework for asyncio and Python.
 - [furl](https://github.com/gruns/furl) - A small Python library that makes parsing and manipulating URLs easy.
+- [httptap](https://github.com/ozeranskii/httptap) - Dissects an HTTP request into DNS, TCP, TLS, wait, and transfer phases and renders the timings as a waterfall.
 - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 - [urllib3](https://github.com/urllib3/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
