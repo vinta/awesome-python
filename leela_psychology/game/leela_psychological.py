@@ -46,9 +46,12 @@ from models.unified_insight import (
     PsychologicalLayer,
     UnifiedInsight,
 )
+from core.logging_config import get_logger
 from journals.journal_manager import JournalManager
 from monitoring.metrics_collector import metrics
 from storage.vector_storage import vector_storage
+
+log = get_logger(__name__)
 
 
 _ANALYZERS: Dict[str, BasePsychAnalyzer] = {
@@ -98,6 +101,11 @@ class LeelaPsychologicalEngine:
             active_layers = ["jung"]
 
         cell_name = cell_name or f"Cell {cell_id}"
+        log.info(
+            "analyze_turn started",
+            extra={"session_id": session_id, "cell_id": cell_id,
+                   "layers": active_layers, "consent": user_consent},
+        )
         t0 = time.perf_counter()
 
         # 1. Parallel context build
@@ -178,6 +186,7 @@ class LeelaPsychologicalEngine:
                 self.storage,
             )
 
+        log.debug("analyze_turn complete", extra={"elapsed_ms": elapsed_ms})
         result: Dict[str, Any] = {
             "unified_insight": insight.to_dict(),
             "synthesis": synthesis,

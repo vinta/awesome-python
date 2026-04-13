@@ -14,22 +14,35 @@ from __future__ import annotations
 import json
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Dict
+from typing import Any, Dict, Optional
 
+from core.logging_config import get_logger
 from storage.vector_storage import vector_storage
+
+log = get_logger(__name__)
 
 
 class ClinicalExporter:
-    """Generates de-identified clinical reports from anonymised vector data."""
+    """Generates de-identified clinical reports from anonymised vector data.
 
-    def __init__(self, output_dir: str = "exports/clinical") -> None:
+    Optionally accepts a ``JournalManager`` to enrich reports with the
+    session's narrative arc (synthesis snippets per turn).
+    """
+
+    def __init__(
+        self,
+        output_dir: str = "exports/clinical",
+        journal=None,           # Optional[JournalManager] — avoid circular import
+    ) -> None:
         self.output_dir = Path(output_dir)
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        self._journal = journal
 
     # ── Public API ────────────────────────────────────────────────────────────
 
     def export_session_report(self, session_id: str, fmt: str = "markdown") -> str:
         """Export a report for *session_id* in the requested *fmt*."""
+        log.info("exporting clinical report", extra={"session_id": session_id, "fmt": fmt})
         data = self._build_report_data(session_id)
         if fmt == "pdf":
             return self._pdf(data, session_id)
@@ -45,13 +58,21 @@ class ClinicalExporter:
             m for m in vector_storage.metadata_list
             if m.get("session_id") == session_id
         ]
-        return {
+        data: Dict[str, Any] = {
             "session_id": session_id,
             "created_at": datetime.utcnow().isoformat() + "Z",
             "insights_count": len(session_insights),
             "statistics": stats,
             "session_insights": session_insights,
         }
+        # Enrich with journal narrative arc if a JournalManager is attached
+        if self._journal is not None:
+            entries = self._journal.load_session(session_id)
+            if entries:
+                data["journal_turns"] = len(entries)
+                data["journal_narrative"] = self._journal.export_narrative(session_id)
+                data["journal_entries"] = [e.to_dict() for e in entries]
+        return data
 
     def _json(self, data: Dict[str, Any], session_id: str) -> str:
         ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
@@ -95,6 +116,11 @@ class ClinicalExporter:
                     f"{m.get('phase', '?')} | "
                     f"{m.get('move_type', '?')}"
                 )
+
+        # Journal narrative arc (only when JournalManager is attached)
+        if data.get("journal_narrative"):
+            lines += ["", "---", "", "## Narrative Arc (Session Journal)", ""]
+            lines.append(data["journal_narrative"])
 
         lines += [
             "",
