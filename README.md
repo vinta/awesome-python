@@ -652,7 +652,7 @@ _Libraries for debugging code._
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [memory_graph](https://github.com/bterwijn/memory_graph) - Visualize Python data at runtime to debug references, mutability, and aliasing.
-
+  - [error-translator-cli-v2](https://github.com/gourabanandad/error-translator-cli-v2) - About Error Translator converts Python tracebacks into clear, actionable explanations using a fast, offline rule-based engine, with CLI, auto-hook, and API support.
 ## Build Tools
 
 _Compile software from source code._
