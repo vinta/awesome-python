@@ -133,6 +133,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
 - Orchestration
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
+  - [clawra-engine](https://github.com/wu-xiaochen/clawra-engine) - A framework for building AI agents with autonomous evolution, knowledge graphs, and neuro-symbolic reasoning.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
