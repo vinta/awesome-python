@@ -16,7 +16,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 - [Natural Language Processing](#natural-language-processing)
 - [Computer Vision](#computer-vision)
 - [Recommender Systems](#recommender-systems)
-
+- [ydata-profiling](https://github.com/ydataai/ydata-profiling)
 **Web Development**
 
 - [Web Frameworks](#web-frameworks)
