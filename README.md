@@ -416,6 +416,7 @@ _Databases implemented in Python._
 - [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with embeddings and semantic search.
 - [duckdb](https://github.com/duckdb/duckdb) - An in-process SQL OLAP database management system; optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
 - [pickledb](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
+- [slothdb](https://github.com/SouravRoy-ETL/slothdb) - An embedded analytical database engine with GPU acceleration. Query CSV, Parquet, JSON, Excel with SQL. Zero dependencies.
 - [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 - [ZODB](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
 
