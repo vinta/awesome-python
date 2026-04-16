@@ -625,6 +625,7 @@ _Libraries for testing codebases and generating test data._
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
+  - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
 - Object Factories
   - [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
