@@ -21,22 +21,22 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 ## Sponsorship Tiers
 
-### Logo Sponsor - $500/month
+### Headline Sponsor - $500/month
 
 Your logo and a one-line description pinned to the top of the README, above all project entries. Every visitor to the repo or [awesome-python.com](https://awesome-python.com/) sees it first.
 
 **What you get:**
 
-- Logo + one-line description in the README header (description max 120 characters)
+- A big logo + one-line description in very top of the README header (description max 120 characters)
 - Logo link on [awesome-python.com](https://awesome-python.com/) sponsor section
 
-### Link Sponsor - $150/month
+### Featured Sponsor - $150/month
 
-A text entry at the top of the README, directly below logo sponsors, in the same format as regular list entries: `[Name](URL) - Description.`
+A text entry at the top of the README, directly below Headline sponsors, in the same format as regular list entries: `[Name](URL) - Description.`
 
 **What you get:**
 
-- Entry in the README header (description max 120 characters)
+- A text entry in the README header (description max 120 characters)
 - Text link on [awesome-python.com](https://awesome-python.com/) sponsor section
 
 ## Previously Sponsored By
@@ -47,8 +47,8 @@ A text entry at the top of the README, directly below logo sponsors, in the same
 
 Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with:
 
-- **Tier:** Logo Sponsor ($500/mo) or Link Sponsor ($150/mo)
-- **Content:** logo + description (Logo tier) or `[Name](URL) - Description.` entry (Link tier)
+- **Tier:** Headline Sponsor ($500/mo) or Featured Sponsor ($150/mo)
+- **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured tier)
 - **Duration:** 1, 3, 6 months, or longer
 - **Payment method:** US bank transfer (ACH/wire) or PayPal
 
