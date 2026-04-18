@@ -1089,7 +1089,7 @@ _Python programming on Microsoft Windows._
 _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
-- [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+- [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.\n  - [guarddog](https://github.com/DataDog/guarddog) - A CLI tool to identify malicious PyPI and npm packages.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
