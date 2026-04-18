@@ -23,21 +23,13 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 ### Headline Sponsor - $500/month
 
-Your logo and a one-line description pinned to the top of the README, above all project entries. Every visitor to the repo or [awesome-python.com](https://awesome-python.com/) sees it first.
-
-**What you get:**
-
-- A big logo + one-line description in very top of the README header (description max 120 characters)
-- Logo link on [awesome-python.com](https://awesome-python.com/) sponsor section
+- Large logo and one-line description (max 120 characters) pinned at the very top of the README, above all project entries
+- Logo link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
 ### Featured Sponsor - $150/month
 
-A text entry at the top of the README, directly below Headline sponsors, in the same format as regular list entries: `[Name](URL) - Description.`
-
-**What you get:**
-
-- A text entry in the README header (description max 120 characters)
-- Text link on [awesome-python.com](https://awesome-python.com/) sponsor section
+- Text entry (`[Name](URL) - Description.`, max 120 characters) pinned at the top of the README, directly below Headline sponsors
+- Text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
 ## Previously Sponsored By
 
