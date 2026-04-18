@@ -45,11 +45,14 @@ A text entry at the top of the README, directly below logo sponsors, in the same
 
 ## Get Started
 
-Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with your company name and preferred tier.
+Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with:
 
-**Payment:** One upfront payment per term via US bank transfer (ACH/wire) or PayPal.
+- **Tier:** Logo Sponsor ($500/mo) or Link Sponsor ($150/mo)
+- **Content:** logo + description (Logo tier) or `[Name](URL) - Description.` entry (Link tier)
+- **Duration:** 1, 3, 6 months, or longer
+- **Payment method:** US bank transfer (ACH/wire) or PayPal
 
-Setup takes less than 24 hours. Choose any term (minimum 1 month).
+One upfront payment per term. Setup takes less than 24 hours.
 
 ## Editorial Independence
 
