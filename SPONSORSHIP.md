@@ -21,22 +21,15 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 ## Sponsorship Tiers
 
-### Logo Sponsor - $500/month
+### Headline Sponsor - $500/month
 
-Your logo and a one-line description pinned to the top of the README, above all project entries. Every visitor to the repo or awesome-python.com sees it first.
+- Large logo and one-line description (max 120 characters) pinned at the very top of the README, above all project entries
+- Logo link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
-**What you get:**
-- Logo + one-line description in the README header
-- Logo on awesome-python.com sponsor section
-- Permanent placement for the duration of your sponsorship
+### Featured Sponsor - $150/month
 
-### Link Sponsor - $150/month
-
-A text link with your product name at the top of the README, directly below logo sponsors.
-
-**What you get:**
-- Text link in the README header
-- Link on awesome-python.com sponsor section
+- Text entry (`[Name](URL) - Description.`, max 120 characters) pinned at the top of the README, directly below Headline sponsors
+- Text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
 ## Previously Sponsored By
 
@@ -44,10 +37,17 @@ A text link with your product name at the top of the README, directly below logo
 
 ## Get Started
 
-Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with your company name and preferred tier.
+Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with:
 
-Setup takes less than 24 hours. Month-to-month, cancel anytime.
+- **Tier:** Headline Sponsor ($500/mo) or Featured Sponsor ($150/mo)
+- **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured tier)
+- **Duration:** 1, 3, 6 months, or longer
+- **Payment method:** US bank transfer (ACH/wire) or PayPal
+
+One upfront payment per term. Setup takes less than 24 hours.
 
 ## Editorial Independence
 
 Sponsorship is logo/link placement in the README header. It does not influence which projects are listed. Listings are curated on merit through the normal [contribution process](CONTRIBUTING.md).
+
+We reserve the right to request changes to sponsor text, logos, or links that are misleading, off-topic, or incompatible with the README formatting.
