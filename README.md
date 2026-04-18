@@ -746,6 +746,7 @@ _Libraries for generating and working with logs._
 - [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
+- [logust](https://github.com/logust/logust) - A fast, Rust-powered Python logging library inspired by loguru.
 
 ## Network Virtualization
 
