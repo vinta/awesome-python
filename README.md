@@ -1008,6 +1008,7 @@ _Libraries for working with dates and times._
 
 _Libraries for Python version and virtual environment management._
 
+- [KillPy](https://github.com/Tlaloc-Es/killpy) - Analyze, detect, and clean unused Python environments and pipx packages.
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
 - [pyenv-win](https://github.com/pyenv-win/pyenv-win) - Pyenv for Windows.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
