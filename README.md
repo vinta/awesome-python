@@ -1,4 +1,4 @@
-﻿# Awesome Python
+# Awesome Python
 
 An opinionated list of Python frameworks, libraries, tools, and resources.
 
@@ -890,7 +890,8 @@ _Libraries for parsing and manipulating specific text formats._
 - Markdown
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
   - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
-  - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.\n  - [mistletoe](https://github.com/miyuchina/mistletoe) - A fast, extensible and spec-compliant Markdown parser in pure Python.
+  - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [mistletoe](https://github.com/miyuchina/mistletoe) - A fast, extensible and spec-compliant Markdown parser in pure Python.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
   - [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
@@ -1093,7 +1094,8 @@ _Python programming on Microsoft Windows._
 _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
-- [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.\n  - [guarddog](https://github.com/DataDog/guarddog) - A CLI tool to identify malicious PyPI and npm packages.
+- [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+  - [guarddog](https://github.com/DataDog/guarddog) - A CLI tool to identify malicious PyPI and npm packages.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
