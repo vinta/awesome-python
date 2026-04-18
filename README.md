@@ -1,4 +1,4 @@
-# Awesome Python
+﻿# Awesome Python
 
 An opinionated list of Python frameworks, libraries, tools, and resources.
 
@@ -475,6 +475,7 @@ _Libraries for validating data. Used for forms in many cases._
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library primarily intended for validating data from untrusted sources.
+- [validators](https://github.com/python-validators/validators) - Python Data Validation for Humans, a simple validation library without requiring schemas.
 
 ## Data Visualization
 
