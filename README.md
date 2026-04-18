@@ -344,6 +344,7 @@ _Libraries for working with HTTP._
 - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
 - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
 - [urllib3](https://github.com/urllib3/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
+- [divine-typed-requests](https://github.com/divine/typed-requests) - A modern, type-safe HTTP client built on httpx with runtime validation.
 
 ## Web Scraping
 
@@ -475,6 +476,7 @@ _Libraries for validating data. Used for forms in many cases._
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library primarily intended for validating data from untrusted sources.
+- [validators](https://github.com/python-validators/validators) - Python Data Validation for Humans, a simple validation library without requiring schemas.
 
 ## Data Visualization
 
@@ -744,6 +746,7 @@ _Libraries for generating and working with logs._
 - [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
+- [logust](https://github.com/logust/logust) - A fast, Rust-powered Python logging library inspired by loguru.
 
 ## Network Virtualization
 
@@ -766,6 +769,7 @@ _Libraries for building command-line applications._
   - [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
   - [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click and Pydantic.
+  - [cli-standard-kit](https://github.com/c3nk/cli-standard-kit) - A complete framework for standardized, professional Python CLI tools.
 - Terminal Rendering
   - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
   - [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
@@ -887,6 +891,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
   - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [mistletoe](https://github.com/miyuchina/mistletoe) - A fast, extensible and spec-compliant Markdown parser in pure Python.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
   - [csvkit](https://github.com/wireservice/csvkit) - Utilities for converting to and working with CSV.
@@ -1090,6 +1095,7 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+- [guarddog](https://github.com/DataDog/guarddog) - A CLI tool to identify malicious PyPI and npm packages.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
