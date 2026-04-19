@@ -10,7 +10,6 @@ from build import (
     detect_source_type,
     extract_entries,
     extract_github_repo,
-    format_stars_short,
     load_stars,
     sort_entries,
 )
@@ -361,25 +360,6 @@ class TestDetectSourceType:
 
     def test_github_non_repo_returns_none(self):
         assert detect_source_type("https://github.com/org/repo/wiki") is None
-
-
-# ---------------------------------------------------------------------------
-# format_stars_short
-# ---------------------------------------------------------------------------
-
-
-class TestFormatStarsShort:
-    def test_under_1000(self):
-        assert format_stars_short(500) == "500"
-
-    def test_exactly_1000(self):
-        assert format_stars_short(1000) == "1k"
-
-    def test_large_number(self):
-        assert format_stars_short(52000) == "52k"
-
-    def test_zero(self):
-        assert format_stars_short(0) == "0"
 
 
 # ---------------------------------------------------------------------------

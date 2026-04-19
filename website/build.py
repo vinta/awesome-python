@@ -117,13 +117,6 @@ def extract_entries(
     return entries
 
 
-def format_stars_short(stars: int) -> str:
-    """Format star count as compact string like '230k'."""
-    if stars >= 1000:
-        return f"{stars // 1000}k"
-    return str(stars)
-
-
 def build(repo_root: Path) -> None:
     """Main build: parse README, render single-page HTML via Jinja2 templates."""
     website = repo_root / "website"
@@ -146,7 +139,10 @@ def build(repo_root: Path) -> None:
     stars_data = load_stars(website / "data" / "github_stars.json")
 
     repo_self = stars_data.get("vinta/awesome-python", {})
-    repo_stars = format_stars_short(repo_self["stars"]) if "stars" in repo_self else None
+    repo_stars = None
+    if "stars" in repo_self:
+        stars_val = repo_self["stars"]
+        repo_stars = f"{stars_val // 1000}k" if stars_val >= 1000 else str(stars_val)
 
     for entry in entries:
         repo_key = extract_github_repo(entry["url"])
