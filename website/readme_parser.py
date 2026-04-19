@@ -360,22 +360,17 @@ def _find_link_deep(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
 
 def _parse_sponsor_item(inline: SyntaxTreeNode) -> ParsedSponsor | None:
     """Parse `**[name](url)**: description` (or `[name](url) - description`)."""
-    link = _find_link_deep(inline)
-    if link is None:
-        return None
-    name = render_inline_text(link.children)
-    url = _href(link)
-
-    split_idx = None
-    for i, child in enumerate(inline.children):
-        if child is link or _find_link_deep(child) is link:
-            split_idx = i
-            break
-    if split_idx is None:
-        return None
-    desc_html = render_inline_html(inline.children[split_idx + 1 :])
-    desc_html = _SPONSOR_SEP_RE.sub("", desc_html)
-    return ParsedSponsor(name=name, url=url, description=desc_html)
+    for split_idx, child in enumerate(inline.children):
+        link = child if child.type == "link" else _find_link_deep(child)
+        if link is None:
+            continue
+        desc_html = render_inline_html(inline.children[split_idx + 1 :])
+        return ParsedSponsor(
+            name=render_inline_text(link.children),
+            url=_href(link),
+            description=_SPONSOR_SEP_RE.sub("", desc_html),
+        )
+    return None
 
 
 def parse_sponsors(text: str) -> list[ParsedSponsor]:
