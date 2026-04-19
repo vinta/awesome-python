@@ -215,7 +215,7 @@ function sortRows() {
     const aVal = a._sortVal;
     const bVal = b._sortVal;
     if (col === "name") {
-      const cmp = aVal < bVal ? -1 : aVal > bVal ? 1 : 0;
+      const cmp = Math.sign(aVal.localeCompare(bVal));
       if (cmp === 0) return a._origIndex - b._origIndex;
       return order === "desc" ? -cmp : cmp;
     }

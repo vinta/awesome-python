@@ -127,7 +127,9 @@ def extract_entries(
 
 
 def format_stars_short(stars: int) -> str:
-    """Format star count as compact string like '230k'."""
+    """Format star count as compact string like '230k' or '1.2M'."""
+    if stars >= 1_000_000:
+        return f"{stars / 1_000_000:.1f}M".rstrip("0").rstrip(".")
     if stars >= 1000:
         return f"{stars // 1000}k"
     return str(stars)

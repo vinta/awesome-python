@@ -95,6 +95,8 @@ def render_inline_text(children: list[SyntaxTreeNode]) -> str:
                 parts.append(child.content)
             case "em" | "strong" | "link":
                 parts.append(render_inline_text(child.children))
+            case "html_inline":
+                parts.append(child.content)
     return "".join(parts)
 
 
@@ -130,7 +132,7 @@ def _extract_description(nodes: list[SyntaxTreeNode]) -> str:
 # --- Entry extraction --------------------------------------------------------
 
 _DESC_SEP_RE = re.compile(r"^\s*[-\u2013\u2014]\s*")
-_SUBCAT_TRAILING_RE = re.compile(r"[\s,\-\u2013\u2014]+(also\s+see\s*)?$", re.IGNORECASE)
+_SUBCAT_TRAILING_RE = re.compile(r"[\s,\-\u2013\u2014]+(also\s+see\s*)?$")
 
 
 def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
@@ -288,7 +290,7 @@ def _is_bold_marker(node: SyntaxTreeNode) -> str | None:
         if child.type != "inline":
             continue
         # Filter out empty text nodes that markdown-it inserts around strong
-        meaningful = [c for c in child.children if not (c.type == "text" and c.content == "")]
+        meaningful = [c for c in child.children if c.type != "text" or c.content]
         if len(meaningful) == 1 and meaningful[0].type == "strong":
             return render_inline_text(meaningful[0].children)
     return None
