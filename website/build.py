@@ -133,11 +133,10 @@ def format_stars_short(stars: int) -> str:
     return str(stars)
 
 
-def build(repo_root: str) -> None:
+def build(repo_root: Path) -> None:
     """Main build: parse README, render single-page HTML via Jinja2 templates."""
-    repo = Path(repo_root)
-    website = repo / "website"
-    readme_text = (repo / "README.md").read_text(encoding="utf-8")
+    website = repo_root / "website"
+    readme_text = (repo_root / "README.md").read_text(encoding="utf-8")
 
     subtitle = ""
     for line in readme_text.split("\n"):
@@ -208,4 +207,4 @@ def build(repo_root: str) -> None:
 
 
 if __name__ == "__main__":
-    build(str(Path(__file__).parent.parent))
+    build(Path(__file__).parent.parent)

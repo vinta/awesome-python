@@ -108,7 +108,7 @@ class TestBuild:
             Help!
         """)
         self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
+        build(tmp_path)
 
         site = tmp_path / "website" / "output"
         assert (site / "index.html").exists()
@@ -135,7 +135,7 @@ class TestBuild:
         stale.mkdir(parents=True)
         (stale / "index.html").write_text("old", encoding="utf-8")
 
-        build(str(tmp_path))
+        build(tmp_path)
 
         assert not (tmp_path / "website" / "output" / "categories" / "stale").exists()
 
@@ -162,7 +162,7 @@ class TestBuild:
             Done.
         """)
         self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
+        build(tmp_path)
 
         index_html = (tmp_path / "website" / "output" / "index.html").read_text()
         assert "Alpha" in index_html
@@ -186,7 +186,7 @@ class TestBuild:
             Done.
         """)
         self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
+        build(tmp_path)
 
         index_html = (tmp_path / "website" / "output" / "index.html").read_text()
         assert "django" in index_html
@@ -224,7 +224,7 @@ class TestBuild:
         }
         (data_dir / "github_stars.json").write_text(json.dumps(stars), encoding="utf-8")
 
-        build(str(tmp_path))
+        build(tmp_path)
 
         html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
         # Star-sorted: high-stars (5000) before low-stars (100) before no-stars (None)
