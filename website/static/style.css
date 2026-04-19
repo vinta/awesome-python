@@ -424,7 +424,7 @@ kbd {
   font-weight: 700;
   letter-spacing: 0.01em;
   text-decoration: underline;
-  text-decoration-color: var(--line-strong);
+  text-decoration-color: var(--accent-underline);
   text-underline-offset: 0.2em;
   transition:
     color 180ms ease,
