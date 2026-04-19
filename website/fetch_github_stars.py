@@ -6,7 +6,7 @@ import os
 import re
 import sys
 from collections.abc import Sequence
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from itertools import batched
 from pathlib import Path
 
@@ -119,13 +119,13 @@ def main() -> None:
     cache = pruned
 
     # Determine which repos need fetching (missing or stale)
+    max_age = timedelta(hours=CACHE_MAX_AGE_HOURS)
     to_fetch = []
     for repo in sorted(current_repos):
         entry = cache.get(repo)
         if entry and "fetched_at" in entry:
             fetched = datetime.fromisoformat(entry["fetched_at"])
-            age_hours = (now - fetched).total_seconds() / 3600
-            if age_hours < CACHE_MAX_AGE_HOURS:
+            if now - fetched < max_age:
                 continue
         to_fetch.append(repo)
 
