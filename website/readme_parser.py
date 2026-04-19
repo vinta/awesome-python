@@ -324,16 +324,13 @@ def _parse_grouped_sections(
 
     def flush_group() -> None:
         nonlocal current_group_name, current_group_cats
-        if not current_group_cats:
-            current_group_name = None
-            current_group_cats = []
-            return
-        name = current_group_name or "Other"
-        groups.append(ParsedGroup(
-            name=name,
-            slug=slugify(name),
-            categories=list(current_group_cats),
-        ))
+        if current_group_cats:
+            name = current_group_name or "Other"
+            groups.append(ParsedGroup(
+                name=name,
+                slug=slugify(name),
+                categories=list(current_group_cats),
+            ))
         current_group_name = None
         current_group_cats = []
 
