@@ -4,7 +4,7 @@
 import json
 import re
 import shutil
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
 
@@ -189,7 +189,7 @@ def build(repo_root: str) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=datetime.now(timezone.utc).strftime("%B %d, %Y"),
+            build_date=datetime.now(UTC).strftime("%B %d, %Y"),
             sponsors=sponsors,
         ),
         encoding="utf-8",

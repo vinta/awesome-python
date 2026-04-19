@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
@@ -110,7 +110,7 @@ def main() -> None:
     print(f"Found {len(current_repos)} GitHub repos in README.md")
 
     cache = load_stars(CACHE_FILE)
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
 
     # Prune entries not in current README
     pruned = {k: v for k, v in cache.items() if k in current_repos}
