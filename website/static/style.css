@@ -414,6 +414,7 @@ kbd {
 
 .sponsor-meta .section-label {
   margin-bottom: 0;
+  font-size: var(--text-lg);
 }
 
 .sponsor-become {
