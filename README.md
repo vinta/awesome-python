@@ -133,6 +133,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
 - Orchestration
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
+  - [bub](https://github.com/bubbuild/bub) - A lightweight, hook-first Python framework for channel-native agents that live alongside people.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
@@ -1114,6 +1115,10 @@ Where to discover learning resources or new Python libraries.
 - [Python Bytes](https://pythonbytes.fm)
 - [Talk Python To Me](https://talkpython.fm/)
 - [The Real Python Podcast](https://realpython.com/podcasts/rpp/)
+
+## Websites
+
+- [Python Developer Tooling Handbook](https://pydevtools.com/) - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
 
 # Contributing
 
