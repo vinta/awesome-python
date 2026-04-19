@@ -46,8 +46,6 @@ def save_cache(cache: dict) -> None:
 
 def build_graphql_query(repos: list[str]) -> str:
     """Build a GraphQL query with aliases for up to 100 repos."""
-    if not repos:
-        return ""
     parts = []
     for i, repo in enumerate(repos):
         owner, name = repo.split("/", 1)
