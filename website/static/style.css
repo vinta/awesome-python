@@ -438,14 +438,6 @@ kbd {
   border-bottom-color: var(--accent);
 }
 
-.sponsor-become-arrow {
-  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.sponsor-become:hover .sponsor-become-arrow {
-  transform: translateX(0.3rem);
-}
-
 .sponsor-list {
   list-style: none;
   padding: 0;
