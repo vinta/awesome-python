@@ -462,6 +462,7 @@ kbd {
   display: inline-flex;
   align-items: baseline;
   gap: 0.5rem;
+  margin-block-start: -1rem;
   color: var(--ink);
   transition: color 180ms ease;
 }
