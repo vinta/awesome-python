@@ -4,20 +4,12 @@
 import json
 import re
 import shutil
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import TypedDict
+from typing import Any
 
 from jinja2 import Environment, FileSystemLoader
-from readme_parser import parse_readme, parse_sponsors
-
-
-class StarData(TypedDict):
-    stars: int
-    owner: str
-    last_commit_at: str
-    fetched_at: str
-
+from readme_parser import ParsedGroup, ParsedSection, parse_readme, parse_sponsors
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 
@@ -46,7 +38,7 @@ def extract_github_repo(url: str) -> str | None:
     return m.group(1) if m else None
 
 
-def load_stars(path: Path) -> dict[str, StarData]:
+def load_stars(path: Path) -> dict[str, dict]:
     """Load star data from JSON. Returns empty dict if file doesn't exist or is corrupt."""
     if path.exists():
         try:
@@ -76,68 +68,55 @@ def sort_entries(entries: list[dict]) -> list[dict]:
 
 
 def extract_entries(
-    categories: list[dict],
-    groups: list[dict],
+    categories: list[ParsedSection],
+    groups: list[ParsedGroup],
 ) -> list[dict]:
     """Flatten categories into individual library entries for table display.
 
     Entries appearing in multiple categories are merged into a single entry
     with lists of categories and groups.
     """
-    cat_to_group: dict[str, str] = {}
-    for group in groups:
-        for cat in group["categories"]:
-            cat_to_group[cat["name"]] = group["name"]
+    cat_to_group = {cat["name"]: group["name"] for group in groups for cat in group["categories"]}
 
-    seen: dict[tuple[str, str], dict] = {}  # (url, name) -> entry
-    entries: list[dict] = []
+    seen: dict[tuple[str, str], dict[str, Any]] = {}  # (url, name) -> entry
+    entries: list[dict[str, Any]] = []
     for cat in categories:
         group_name = cat_to_group.get(cat["name"], "Other")
         for entry in cat["entries"]:
-            url = entry["url"]
-            key = (url, entry["name"])
-            if key in seen:
-                existing = seen[key]
-                if cat["name"] not in existing["categories"]:
-                    existing["categories"].append(cat["name"])
-                if group_name not in existing["groups"]:
-                    existing["groups"].append(group_name)
-                subcat = entry["subcategory"]
-                if subcat:
-                    scoped = f"{cat['name']} > {subcat}"
-                    if not any(s["value"] == scoped for s in existing["subcategories"]):
-                        existing["subcategories"].append({"name": subcat, "value": scoped})
-            else:
-                merged = {
+            key = (entry["url"], entry["name"])
+            existing: dict[str, Any] | None = seen.get(key)
+            if existing is None:
+                existing = {
                     "name": entry["name"],
-                    "url": url,
+                    "url": entry["url"],
                     "description": entry["description"],
-                    "categories": [cat["name"]],
-                    "groups": [group_name],
-                    "subcategories": [{"name": entry["subcategory"], "value": f"{cat['name']} > {entry['subcategory']}"}] if entry["subcategory"] else [],
+                    "categories": [],
+                    "groups": [],
+                    "subcategories": [],
                     "stars": None,
                     "owner": None,
                     "last_commit_at": None,
-                    "source_type": detect_source_type(url),
+                    "source_type": detect_source_type(entry["url"]),
                     "also_see": entry["also_see"],
                 }
-                seen[key] = merged
-                entries.append(merged)
+                seen[key] = existing
+                entries.append(existing)
+            if cat["name"] not in existing["categories"]:
+                existing["categories"].append(cat["name"])
+            if group_name not in existing["groups"]:
+                existing["groups"].append(group_name)
+            subcat = entry["subcategory"]
+            if subcat:
+                scoped = f"{cat['name']} > {subcat}"
+                if not any(s["value"] == scoped for s in existing["subcategories"]):
+                    existing["subcategories"].append({"name": subcat, "value": scoped})
     return entries
 
 
-def format_stars_short(stars: int) -> str:
-    """Format star count as compact string like '230k'."""
-    if stars >= 1000:
-        return f"{stars // 1000}k"
-    return str(stars)
-
-
-def build(repo_root: str) -> None:
+def build(repo_root: Path) -> None:
     """Main build: parse README, render single-page HTML via Jinja2 templates."""
-    repo = Path(repo_root)
-    website = repo / "website"
-    readme_text = (repo / "README.md").read_text(encoding="utf-8")
+    website = repo_root / "website"
+    readme_text = (repo_root / "README.md").read_text(encoding="utf-8")
 
     subtitle = ""
     for line in readme_text.split("\n"):
@@ -156,7 +135,10 @@ def build(repo_root: str) -> None:
     stars_data = load_stars(website / "data" / "github_stars.json")
 
     repo_self = stars_data.get("vinta/awesome-python", {})
-    repo_stars = format_stars_short(repo_self["stars"]) if "stars" in repo_self else None
+    repo_stars = None
+    if "stars" in repo_self:
+        stars_val = repo_self["stars"]
+        repo_stars = f"{stars_val // 1000}k" if stars_val >= 1000 else str(stars_val)
 
     for entry in entries:
         repo_key = extract_github_repo(entry["url"])
@@ -189,7 +171,7 @@ def build(repo_root: str) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=datetime.now(timezone.utc).strftime("%B %d, %Y"),
+            build_date=datetime.now(UTC).strftime("%B %d, %Y"),
             sponsors=sponsors,
         ),
         encoding="utf-8",
@@ -208,4 +190,4 @@ def build(repo_root: str) -> None:
 
 
 if __name__ == "__main__":
-    build(str(Path(__file__).parent.parent))
+    build(Path(__file__).parent.parent)

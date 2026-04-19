@@ -5,7 +5,9 @@ import json
 import os
 import re
 import sys
-from datetime import datetime, timezone
+from collections.abc import Sequence
+from datetime import UTC, datetime, timedelta
+from itertools import batched
 from pathlib import Path
 
 import httpx
@@ -44,10 +46,8 @@ def save_cache(cache: dict) -> None:
     )
 
 
-def build_graphql_query(repos: list[str]) -> str:
+def build_graphql_query(repos: Sequence[str]) -> str:
     """Build a GraphQL query with aliases for up to 100 repos."""
-    if not repos:
-        return ""
     parts = []
     for i, repo in enumerate(repos):
         owner, name = repo.split("/", 1)
@@ -64,7 +64,7 @@ def build_graphql_query(repos: list[str]) -> str:
 
 def parse_graphql_response(
     data: dict,
-    repos: list[str],
+    repos: Sequence[str],
 ) -> dict[str, dict]:
     """Parse GraphQL response into {owner/repo: {stars, owner}} dict."""
     result = {}
@@ -82,9 +82,7 @@ def parse_graphql_response(
     return result
 
 
-def fetch_batch(
-    repos: list[str], *, client: httpx.Client,
-) -> dict[str, dict]:
+def fetch_batch(repos: Sequence[str], client: httpx.Client) -> dict[str, dict]:
     """Fetch star data for a batch of repos via GitHub GraphQL API."""
     query = build_graphql_query(repos)
     if not query:
@@ -112,7 +110,7 @@ def main() -> None:
     print(f"Found {len(current_repos)} GitHub repos in README.md")
 
     cache = load_stars(CACHE_FILE)
-    now = datetime.now(timezone.utc)
+    now = datetime.now(UTC)
 
     # Prune entries not in current README
     pruned = {k: v for k, v in cache.items() if k in current_repos}
@@ -121,13 +119,13 @@ def main() -> None:
     cache = pruned
 
     # Determine which repos need fetching (missing or stale)
+    max_age = timedelta(hours=CACHE_MAX_AGE_HOURS)
     to_fetch = []
     for repo in sorted(current_repos):
         entry = cache.get(repo)
         if entry and "fetched_at" in entry:
             fetched = datetime.fromisoformat(entry["fetched_at"])
-            age_hours = (now - fetched).total_seconds() / 3600
-            if age_hours < CACHE_MAX_AGE_HOURS:
+            if now - fetched < max_age:
                 continue
         to_fetch.append(repo)
 
@@ -150,13 +148,11 @@ def main() -> None:
         transport=httpx.HTTPTransport(retries=2),
         timeout=30,
     ) as client:
-        for i in range(0, len(to_fetch), BATCH_SIZE):
-            batch = to_fetch[i : i + BATCH_SIZE]
-            batch_num = i // BATCH_SIZE + 1
+        for batch_num, batch in enumerate(batched(to_fetch, BATCH_SIZE), 1):
             print(f"Fetching batch {batch_num}/{total_batches} ({len(batch)} repos)...")
 
             try:
-                results = fetch_batch(batch, client=client)
+                results = fetch_batch(batch, client)
             except httpx.HTTPStatusError as e:
                 print(f"HTTP error {e.response.status_code}", file=sys.stderr)
                 if e.response.status_code == 401:
