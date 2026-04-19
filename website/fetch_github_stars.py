@@ -125,7 +125,10 @@ def main() -> None:
     for repo in sorted(current_repos):
         entry = cache.get(repo)
         if entry and "fetched_at" in entry:
-            fetched = datetime.fromisoformat(entry["fetched_at"])
+            try:
+                fetched = datetime.fromisoformat(entry["fetched_at"])
+            except (ValueError, TypeError):
+                continue
             age_hours = (now - fetched).total_seconds() / 3600
             if age_hours < CACHE_MAX_AGE_HOURS:
                 continue
