@@ -161,14 +161,6 @@ def _find_inline(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
     return _find_child(para, "inline")
 
 
-def _find_first_link(inline: SyntaxTreeNode) -> SyntaxTreeNode | None:
-    """Find the first link node among inline children."""
-    for child in inline.children:
-        if child.type == "link":
-            return child
-    return None
-
-
 def _is_leading_link(inline: SyntaxTreeNode, link: SyntaxTreeNode) -> bool:
     """Check if the link is the first child of inline (a real entry, not a subcategory label)."""
     return bool(inline.children) and inline.children[0] is link
@@ -212,7 +204,7 @@ def _parse_list_entries(
         if inline is None:
             continue
 
-        first_link = _find_first_link(inline)
+        first_link = _find_child(inline, "link")
 
         if first_link is None or not _is_leading_link(inline, first_link):
             # Subcategory label: take text before the first link, strip trailing separators
@@ -241,7 +233,7 @@ def _parse_list_entries(
                     continue
                 sub_inline = _find_inline(sub_item)
                 if sub_inline:
-                    sub_link = _find_first_link(sub_inline)
+                    sub_link = _find_child(sub_inline, "link")
                     if sub_link:
                         also_see.append(AlsoSee(
                             name=render_inline_text(sub_link.children),
