@@ -5,7 +5,9 @@ import json
 import os
 import re
 import sys
+from collections.abc import Sequence
 from datetime import UTC, datetime
+from itertools import batched
 from pathlib import Path
 
 import httpx
@@ -44,7 +46,7 @@ def save_cache(cache: dict) -> None:
     )
 
 
-def build_graphql_query(repos: list[str]) -> str:
+def build_graphql_query(repos: Sequence[str]) -> str:
     """Build a GraphQL query with aliases for up to 100 repos."""
     parts = []
     for i, repo in enumerate(repos):
@@ -62,7 +64,7 @@ def build_graphql_query(repos: list[str]) -> str:
 
 def parse_graphql_response(
     data: dict,
-    repos: list[str],
+    repos: Sequence[str],
 ) -> dict[str, dict]:
     """Parse GraphQL response into {owner/repo: {stars, owner}} dict."""
     result = {}
@@ -80,7 +82,7 @@ def parse_graphql_response(
     return result
 
 
-def fetch_batch(repos: list[str], client: httpx.Client) -> dict[str, dict]:
+def fetch_batch(repos: Sequence[str], client: httpx.Client) -> dict[str, dict]:
     """Fetch star data for a batch of repos via GitHub GraphQL API."""
     query = build_graphql_query(repos)
     if not query:
@@ -146,9 +148,7 @@ def main() -> None:
         transport=httpx.HTTPTransport(retries=2),
         timeout=30,
     ) as client:
-        for i in range(0, len(to_fetch), BATCH_SIZE):
-            batch = to_fetch[i : i + BATCH_SIZE]
-            batch_num = i // BATCH_SIZE + 1
+        for batch_num, batch in enumerate(batched(to_fetch, BATCH_SIZE), 1):
             print(f"Fetching batch {batch_num}/{total_batches} ({len(batch)} repos)...")
 
             try:
