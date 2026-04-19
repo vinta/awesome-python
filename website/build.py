@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import TypedDict
 
 from jinja2 import Environment, FileSystemLoader
-from readme_parser import parse_readme, parse_sponsors
+from readme_parser import ParsedGroup, ParsedSection, parse_readme, parse_sponsors
 
 
 class StarData(TypedDict):
@@ -76,8 +76,8 @@ def sort_entries(entries: list[dict]) -> list[dict]:
 
 
 def extract_entries(
-    categories: list[dict],
-    groups: list[dict],
+    categories: list[ParsedSection],
+    groups: list[ParsedGroup],
 ) -> list[dict]:
     """Flatten categories into individual library entries for table display.
 
