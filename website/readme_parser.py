@@ -161,11 +161,6 @@ def _find_inline(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
     return _find_child(para, "inline")
 
 
-def _is_leading_link(inline: SyntaxTreeNode, link: SyntaxTreeNode) -> bool:
-    """Check if the link is the first child of inline (a real entry, not a subcategory label)."""
-    return bool(inline.children) and inline.children[0] is link
-
-
 def _extract_description_html(inline: SyntaxTreeNode, first_link: SyntaxTreeNode) -> str:
     """Extract description HTML from inline content after the first link.
 
@@ -206,7 +201,7 @@ def _parse_list_entries(
 
         first_link = _find_child(inline, "link")
 
-        if first_link is None or not _is_leading_link(inline, first_link):
+        if first_link is None or inline.children[0] is not first_link:
             # Subcategory label: take text before the first link, strip trailing separators
             pre_link = []
             for child in inline.children:
