@@ -6,18 +6,9 @@ import re
 import shutil
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import TypedDict
 
 from jinja2 import Environment, FileSystemLoader
 from readme_parser import ParsedGroup, ParsedSection, parse_readme, parse_sponsors
-
-
-class StarData(TypedDict):
-    stars: int
-    owner: str
-    last_commit_at: str
-    fetched_at: str
-
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 
@@ -46,7 +37,7 @@ def extract_github_repo(url: str) -> str | None:
     return m.group(1) if m else None
 
 
-def load_stars(path: Path) -> dict[str, StarData]:
+def load_stars(path: Path) -> dict[str, dict]:
     """Load star data from JSON. Returns empty dict if file doesn't exist or is corrupt."""
     if path.exists():
         try:
