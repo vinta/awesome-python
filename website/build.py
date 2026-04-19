@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import TypedDict
 
 from jinja2 import Environment, FileSystemLoader
-from readme_parser import parse_readme
+from readme_parser import parse_readme, parse_sponsors
 
 
 class StarData(TypedDict):
@@ -147,6 +147,7 @@ def build(repo_root: str) -> None:
             break
 
     parsed_groups = parse_readme(readme_text)
+    sponsors = parse_sponsors(readme_text)
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
@@ -189,6 +190,7 @@ def build(repo_root: str) -> None:
             total_categories=len(categories),
             repo_stars=repo_stars,
             build_date=datetime.now(timezone.utc).strftime("%B %d, %Y"),
+            sponsors=sponsors,
         ),
         encoding="utf-8",
     )
