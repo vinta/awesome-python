@@ -10,7 +10,6 @@ from build import (
     detect_source_type,
     extract_entries,
     extract_github_repo,
-    format_stars_short,
     load_stars,
     sort_entries,
 )
@@ -108,7 +107,7 @@ class TestBuild:
             Help!
         """)
         self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
+        build(tmp_path)
 
         site = tmp_path / "website" / "output"
         assert (site / "index.html").exists()
@@ -135,7 +134,7 @@ class TestBuild:
         stale.mkdir(parents=True)
         (stale / "index.html").write_text("old", encoding="utf-8")
 
-        build(str(tmp_path))
+        build(tmp_path)
 
         assert not (tmp_path / "website" / "output" / "categories" / "stale").exists()
 
@@ -162,7 +161,7 @@ class TestBuild:
             Done.
         """)
         self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
+        build(tmp_path)
 
         index_html = (tmp_path / "website" / "output" / "index.html").read_text()
         assert "Alpha" in index_html
@@ -186,7 +185,7 @@ class TestBuild:
             Done.
         """)
         self._make_repo(tmp_path, readme)
-        build(str(tmp_path))
+        build(tmp_path)
 
         index_html = (tmp_path / "website" / "output" / "index.html").read_text()
         assert "django" in index_html
@@ -224,7 +223,7 @@ class TestBuild:
         }
         (data_dir / "github_stars.json").write_text(json.dumps(stars), encoding="utf-8")
 
-        build(str(tmp_path))
+        build(tmp_path)
 
         html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
         # Star-sorted: high-stars (5000) before low-stars (100) before no-stars (None)
@@ -361,25 +360,6 @@ class TestDetectSourceType:
 
     def test_github_non_repo_returns_none(self):
         assert detect_source_type("https://github.com/org/repo/wiki") is None
-
-
-# ---------------------------------------------------------------------------
-# format_stars_short
-# ---------------------------------------------------------------------------
-
-
-class TestFormatStarsShort:
-    def test_under_1000(self):
-        assert format_stars_short(500) == "500"
-
-    def test_exactly_1000(self):
-        assert format_stars_short(1000) == "1k"
-
-    def test_large_number(self):
-        assert format_stars_short(52000) == "52k"
-
-    def test_zero(self):
-        assert format_stars_short(0) == "0"
 
 
 # ---------------------------------------------------------------------------

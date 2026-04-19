@@ -62,46 +62,44 @@ def slugify(name: str) -> str:
 # --- Inline renderers -------------------------------------------------------
 
 
-def render_inline_html(children: list[SyntaxTreeNode]) -> str:
-    """Render inline AST nodes to HTML with proper escaping."""
+def _render_inline(children: list[SyntaxTreeNode], *, html: bool) -> str:
+    """Render inline AST nodes to HTML or plain text."""
     parts: list[str] = []
     for child in children:
         match child.type:
             case "text":
-                parts.append(str(escape(child.content)))
+                parts.append(str(escape(child.content)) if html else child.content)
+            case "html_inline":
+                if html:
+                    parts.append(str(escape(child.content)))
             case "softbreak":
                 parts.append(" ")
-            case "link":
-                href = str(escape(child.attrGet("href") or ""))
-                inner = render_inline_html(child.children)
-                parts.append(
-                    f'<a href="{href}" target="_blank" rel="noopener">{inner}</a>'
-                )
-            case "em":
-                parts.append(f"<em>{render_inline_html(child.children)}</em>")
-            case "strong":
-                parts.append(f"<strong>{render_inline_html(child.children)}</strong>")
             case "code_inline":
-                parts.append(f"<code>{escape(child.content)}</code>")
-            case "html_inline":
-                parts.append(str(escape(child.content)))
+                parts.append(f"<code>{escape(child.content)}</code>" if html else child.content)
+            case "link":
+                inner = _render_inline(child.children, html=html)
+                if html:
+                    href = str(escape(_href(child)))
+                    parts.append(f'<a href="{href}" target="_blank" rel="noopener">{inner}</a>')
+                else:
+                    parts.append(inner)
+            case "em":
+                inner = _render_inline(child.children, html=html)
+                parts.append(f"<em>{inner}</em>" if html else inner)
+            case "strong":
+                inner = _render_inline(child.children, html=html)
+                parts.append(f"<strong>{inner}</strong>" if html else inner)
     return "".join(parts)
+
+
+def render_inline_html(children: list[SyntaxTreeNode]) -> str:
+    """Render inline AST nodes to HTML with proper escaping."""
+    return _render_inline(children, html=True)
 
 
 def render_inline_text(children: list[SyntaxTreeNode]) -> str:
     """Render inline AST nodes to plain text (links become their text)."""
-    parts: list[str] = []
-    for child in children:
-        match child.type:
-            case "text":
-                parts.append(child.content)
-            case "softbreak":
-                parts.append(" ")
-            case "code_inline":
-                parts.append(child.content)
-            case "em" | "strong" | "link":
-                parts.append(render_inline_text(child.children))
-    return "".join(parts)
+    return _render_inline(children, html=False)
 
 
 # --- AST helpers -------------------------------------------------------------
@@ -147,25 +145,18 @@ def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
     return None
 
 
+def _href(link: SyntaxTreeNode) -> str:
+    """Return the link's href attribute as a string, or '' if missing."""
+    href = link.attrGet("href")
+    return href if isinstance(href, str) else ""
+
+
 def _find_inline(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
     """Find the inline node in a list_item's paragraph."""
     para = _find_child(node, "paragraph")
     if para is None:
         return None
     return _find_child(para, "inline")
-
-
-def _find_first_link(inline: SyntaxTreeNode) -> SyntaxTreeNode | None:
-    """Find the first link node among inline children."""
-    for child in inline.children:
-        if child.type == "link":
-            return child
-    return None
-
-
-def _is_leading_link(inline: SyntaxTreeNode, link: SyntaxTreeNode) -> bool:
-    """Check if the link is the first child of inline (a real entry, not a subcategory label)."""
-    return bool(inline.children) and inline.children[0] is link
 
 
 def _extract_description_html(inline: SyntaxTreeNode, first_link: SyntaxTreeNode) -> str:
@@ -206,9 +197,9 @@ def _parse_list_entries(
         if inline is None:
             continue
 
-        first_link = _find_first_link(inline)
+        first_link = _find_child(inline, "link")
 
-        if first_link is None or not _is_leading_link(inline, first_link):
+        if first_link is None or inline.children[0] is not first_link:
             # Subcategory label: take text before the first link, strip trailing separators
             pre_link = []
             for child in inline.children:
@@ -223,7 +214,7 @@ def _parse_list_entries(
 
         # Entry with a link
         name = render_inline_text(first_link.children)
-        url = first_link.attrGet("href") or ""
+        url = _href(first_link)
         desc_html = _extract_description_html(inline, first_link)
 
         # Collect also_see from nested bullet_list
@@ -235,11 +226,11 @@ def _parse_list_entries(
                     continue
                 sub_inline = _find_inline(sub_item)
                 if sub_inline:
-                    sub_link = _find_first_link(sub_inline)
+                    sub_link = _find_child(sub_inline, "link")
                     if sub_link:
                         also_see.append(AlsoSee(
                             name=render_inline_text(sub_link.children),
-                            url=sub_link.attrGet("href") or "",
+                            url=_href(sub_link),
                         ))
 
         entries.append(ParsedEntry(
@@ -324,16 +315,13 @@ def _parse_grouped_sections(
 
     def flush_group() -> None:
         nonlocal current_group_name, current_group_cats
-        if not current_group_cats:
-            current_group_name = None
-            current_group_cats = []
-            return
-        name = current_group_name or "Other"
-        groups.append(ParsedGroup(
-            name=name,
-            slug=slugify(name),
-            categories=list(current_group_cats),
-        ))
+        if current_group_cats:
+            name = current_group_name or "Other"
+            groups.append(ParsedGroup(
+                name=name,
+                slug=slugify(name),
+                categories=list(current_group_cats),
+            ))
         current_group_name = None
         current_group_cats = []
 
@@ -372,22 +360,17 @@ def _find_link_deep(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
 
 def _parse_sponsor_item(inline: SyntaxTreeNode) -> ParsedSponsor | None:
     """Parse `**[name](url)**: description` (or `[name](url) - description`)."""
-    link = _find_link_deep(inline)
-    if link is None:
-        return None
-    name = render_inline_text(link.children)
-    url = link.attrGet("href") or ""
-
-    split_idx = None
-    for i, child in enumerate(inline.children):
-        if child is link or _find_link_deep(child) is link:
-            split_idx = i
-            break
-    if split_idx is None:
-        return None
-    desc_html = render_inline_html(inline.children[split_idx + 1 :])
-    desc_html = _SPONSOR_SEP_RE.sub("", desc_html)
-    return ParsedSponsor(name=name, url=url, description=desc_html)
+    for split_idx, child in enumerate(inline.children):
+        link = child if child.type == "link" else _find_link_deep(child)
+        if link is None:
+            continue
+        desc_html = render_inline_html(inline.children[split_idx + 1 :])
+        return ParsedSponsor(
+            name=render_inline_text(link.children),
+            url=_href(link),
+            description=_SPONSOR_SEP_RE.sub("", desc_html),
+        )
+    return None
 
 
 def parse_sponsors(text: str) -> list[ParsedSponsor]:
