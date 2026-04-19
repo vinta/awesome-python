@@ -418,24 +418,22 @@ kbd {
 }
 
 .sponsor-become {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
   align-self: start;
   color: var(--ink-soft);
   font-size: var(--text-sm);
   font-weight: 700;
   letter-spacing: 0.01em;
-  border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 0.2rem;
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 0.2em;
   transition:
     color 180ms ease,
-    border-color 180ms ease;
+    text-decoration-color 180ms ease;
 }
 
 .sponsor-become:hover {
   color: var(--accent-deep);
-  border-bottom-color: var(--accent);
+  text-decoration-color: var(--accent);
 }
 
 .sponsor-list {
