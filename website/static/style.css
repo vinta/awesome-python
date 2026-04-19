@@ -294,10 +294,6 @@ kbd {
   color: var(--hero-kicker);
 }
 
-.section-label {
-  color: var(--accent-deep);
-}
-
 .hero h1 {
   font-family: var(--font-display);
   font-size: clamp(4.5rem, 11vw, 8.5rem);
