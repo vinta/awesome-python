@@ -706,6 +706,7 @@ _Software and libraries for DevOps._
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
+  - [issue-dash](https://github.com/GiulioSavini/issue-dash) - A self-hosted GitHub Issues dashboard with AI triage suggestions and CI failure analysis.
 
 ## Distributed Computing
 
