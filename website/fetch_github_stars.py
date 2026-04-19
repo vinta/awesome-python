@@ -80,9 +80,7 @@ def parse_graphql_response(
     return result
 
 
-def fetch_batch(
-    repos: list[str], *, client: httpx.Client,
-) -> dict[str, dict]:
+def fetch_batch(repos: list[str], client: httpx.Client) -> dict[str, dict]:
     """Fetch star data for a batch of repos via GitHub GraphQL API."""
     query = build_graphql_query(repos)
     if not query:
@@ -154,7 +152,7 @@ def main() -> None:
             print(f"Fetching batch {batch_num}/{total_batches} ({len(batch)} repos)...")
 
             try:
-                results = fetch_batch(batch, client=client)
+                results = fetch_batch(batch, client)
             except httpx.HTTPStatusError as e:
                 print(f"HTTP error {e.response.status_code}", file=sys.stderr)
                 if e.response.status_code == 401:
