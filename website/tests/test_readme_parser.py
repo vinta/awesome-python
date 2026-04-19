@@ -1,7 +1,7 @@
 """Tests for the readme_parser module."""
 
-import os
 import textwrap
+from pathlib import Path
 
 import pytest
 
@@ -437,9 +437,8 @@ class TestParseSectionEntries:
 class TestParseRealReadme:
     @pytest.fixture(autouse=True)
     def load_readme(self):
-        readme_path = os.path.join(os.path.dirname(__file__), "..", "..", "README.md")
-        with open(readme_path, encoding="utf-8") as f:
-            self.readme_text = f.read()
+        readme_path = Path(__file__).resolve().parents[2] / "README.md"
+        self.readme_text = readme_path.read_text(encoding="utf-8")
         self.groups = parse_readme(self.readme_text)
         self.cats = [c for g in self.groups for c in g["categories"]]
 
