@@ -72,7 +72,7 @@ def render_inline_html(children: list[SyntaxTreeNode]) -> str:
             case "softbreak":
                 parts.append(" ")
             case "link":
-                href = str(escape(child.attrGet("href") or ""))
+                href = str(escape(_href(child)))
                 inner = render_inline_html(child.children)
                 parts.append(
                     f'<a href="{href}" target="_blank" rel="noopener">{inner}</a>'
@@ -145,6 +145,12 @@ def _find_child(node: SyntaxTreeNode, child_type: str) -> SyntaxTreeNode | None:
         if child.type == child_type:
             return child
     return None
+
+
+def _href(link: SyntaxTreeNode) -> str:
+    """Return the link's href attribute as a string, or '' if missing."""
+    href = link.attrGet("href")
+    return href if isinstance(href, str) else ""
 
 
 def _find_inline(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
@@ -223,7 +229,7 @@ def _parse_list_entries(
 
         # Entry with a link
         name = render_inline_text(first_link.children)
-        url = first_link.attrGet("href") or ""
+        url = _href(first_link)
         desc_html = _extract_description_html(inline, first_link)
 
         # Collect also_see from nested bullet_list
@@ -239,7 +245,7 @@ def _parse_list_entries(
                     if sub_link:
                         also_see.append(AlsoSee(
                             name=render_inline_text(sub_link.children),
-                            url=sub_link.attrGet("href") or "",
+                            url=_href(sub_link),
                         ))
 
         entries.append(ParsedEntry(
@@ -373,7 +379,7 @@ def _parse_sponsor_item(inline: SyntaxTreeNode) -> ParsedSponsor | None:
     if link is None:
         return None
     name = render_inline_text(link.children)
-    url = link.attrGet("href") or ""
+    url = _href(link)
 
     split_idx = None
     for i, child in enumerate(inline.children):
