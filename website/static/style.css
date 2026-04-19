@@ -392,6 +392,109 @@ kbd {
   outline-offset: 3px;
 }
 
+.sponsor-band {
+  padding-block: clamp(2.5rem, 5.5vw, 4rem);
+  background:
+    linear-gradient(180deg, var(--bg-paper-strong), var(--bg-paper));
+  border-bottom: 1px solid var(--line);
+}
+
+.sponsor-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.sponsor-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sponsor-meta .section-label {
+  margin-bottom: 0;
+}
+
+.sponsor-become {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  align-self: start;
+  color: var(--ink-soft);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-bottom: 1px solid var(--line-strong);
+  padding-bottom: 0.2rem;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.sponsor-become:hover {
+  color: var(--accent-deep);
+  border-bottom-color: var(--accent);
+}
+
+.sponsor-become-arrow {
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sponsor-become:hover .sponsor-become-arrow {
+  transform: translateX(0.3rem);
+}
+
+.sponsor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.sponsor {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.sponsor-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+
+.sponsor-link:hover {
+  color: var(--accent-deep);
+}
+
+.sponsor-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+  font-weight: 600;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+}
+
+.sponsor-desc {
+  color: var(--ink-soft);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.55;
+}
+
+.sponsor-desc a {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-underline);
+  text-underline-offset: 0.18em;
+}
+
+.sponsor-desc a:hover {
+  color: var(--accent);
+}
+
 .results-intro h2,
 .final-cta h2 {
   font-family: var(--font-display);
@@ -1025,7 +1128,8 @@ th[data-sort].sort-asc::after {
   }
 
   .hero-grid,
-  .results-intro {
+  .results-intro,
+  .sponsor-shell {
     grid-template-columns: 1fr;
   }
 

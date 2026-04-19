@@ -65,6 +65,40 @@
 </header>
 {% endblock %}
 {% block content %}
+{% if sponsors %}
+<section class="sponsor-band" aria-labelledby="sponsor-heading" data-reveal>
+  <div class="section-shell sponsor-shell">
+    <header class="sponsor-meta">
+      <p class="section-label" id="sponsor-heading">Sponsors</p>
+      <a
+        class="sponsor-become"
+        href="https://github.com/vinta/awesome-python/blob/master/SPONSORSHIP.md"
+        target="_blank"
+        rel="noopener"
+      >
+        Become a sponsor
+        <span class="sponsor-become-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </header>
+    <ul class="sponsor-list">
+      {% for sponsor in sponsors %}
+      <li class="sponsor">
+        <a
+          class="sponsor-link"
+          href="{{ sponsor.url }}"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="sponsor-name">{{ sponsor.name }}</span>
+        </a>
+        <p class="sponsor-desc">{{ sponsor.description | safe }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}
+
 <section class="results-section" id="library-index">
   <div class="results-intro section-shell" data-reveal>
     <div>

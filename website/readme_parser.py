@@ -37,6 +37,12 @@ class ParsedGroup(TypedDict):
     categories: list[ParsedSection]
 
 
+class ParsedSponsor(TypedDict):
+    name: str
+    url: str
+    description: str  # inline HTML, properly escaped
+
+
 # --- Slugify ----------------------------------------------------------------
 
 _SLUG_NON_ALNUM_RE = re.compile(r"[^a-z0-9\s-]")
@@ -348,6 +354,80 @@ def _parse_grouped_sections(
     flush_cat()
     flush_group()
     return groups
+
+
+_SPONSOR_SEP_RE = re.compile(r"^\s*[:\-\u2013\u2014]\s*")
+
+
+def _find_link_deep(node: SyntaxTreeNode) -> SyntaxTreeNode | None:
+    """Find the first link anywhere in the subtree (including nested in strong/em)."""
+    for child in node.children:
+        if child.type == "link":
+            return child
+        found = _find_link_deep(child)
+        if found:
+            return found
+    return None
+
+
+def _parse_sponsor_item(inline: SyntaxTreeNode) -> ParsedSponsor | None:
+    """Parse `**[name](url)**: description` (or `[name](url) - description`)."""
+    link = _find_link_deep(inline)
+    if link is None:
+        return None
+    name = render_inline_text(link.children)
+    url = link.attrGet("href") or ""
+
+    split_idx = None
+    for i, child in enumerate(inline.children):
+        if child is link or _find_link_deep(child) is link:
+            split_idx = i
+            break
+    if split_idx is None:
+        return None
+    desc_html = render_inline_html(inline.children[split_idx + 1 :])
+    desc_html = _SPONSOR_SEP_RE.sub("", desc_html)
+    return ParsedSponsor(name=name, url=url, description=desc_html)
+
+
+def parse_sponsors(text: str) -> list[ParsedSponsor]:
+    """Parse the `# Sponsors` section of README.md into a list of sponsors.
+
+    Expects bullets in the form `**[name](url)**: description`.
+    Returns [] if no Sponsors section exists.
+    """
+    md = MarkdownIt("commonmark")
+    tokens = md.parse(text)
+    root = SyntaxTreeNode(tokens)
+    children = root.children
+
+    start_idx = None
+    end_idx = len(children)
+    for i, node in enumerate(children):
+        if node.type == "heading" and node.tag == "h1":
+            title = _heading_text(node).strip().lower()
+            if start_idx is None and title == "sponsors":
+                start_idx = i + 1
+            elif start_idx is not None:
+                end_idx = i
+                break
+    if start_idx is None:
+        return []
+
+    sponsors: list[ParsedSponsor] = []
+    for node in children[start_idx:end_idx]:
+        if node.type != "bullet_list":
+            continue
+        for list_item in node.children:
+            if list_item.type != "list_item":
+                continue
+            inline = _find_inline(list_item)
+            if inline is None:
+                continue
+            sponsor = _parse_sponsor_item(inline)
+            if sponsor:
+                sponsors.append(sponsor)
+    return sponsors
 
 
 def parse_readme(text: str) -> list[ParsedGroup]:
