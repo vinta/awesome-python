@@ -12,6 +12,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources. Publi
 
 - **README.md**: Source of truth. Hierarchical categories with alphabetically ordered entries.
 - **CONTRIBUTING.md**: Submission guidelines and review criteria.
+- **SPONSORSHIP.md**: Sponsor tiers, placement rules, and the editorial-independence policy. Sponsor content sits in the README header and must never influence which projects get listed.
 - **website/**: Static site generator that builds awesome-python.com from README.md.
   - `build.py`: Parses README.md and renders HTML via Jinja2 templates.
   - `fetch_github_stars.py`: Fetches star counts into `website/data/`.
