@@ -23,7 +23,7 @@ Your submission must meet **ONE** of the following criteria:
 
 ### 2. Rising Star
 
-- Rapid growth: 5,000+ GitHub stars in less than 2 years
+- Rapid growth: 5,000+ GitHub stars in less than 1 year
 - Significant community buzz and adoption
 - Solving problems in new or better ways
 - Examples: fastapi, ruff, uv
@@ -34,7 +34,7 @@ Your submission must meet **ONE** of the following criteria:
 - Solves niche problems elegantly
 - Strong recommendation from experienced developers
 - **Must demonstrate real-world usage** (not a project published last week)
-- Repository must be at least 6 months old with consistent activity
+- Repository must be at least 3 months old with consistent activity
 - Must include compelling justification in PR description
 
 ## Entry Format Reference
@@ -107,4 +107,4 @@ PRs will be **closed** if:
 - Project is archived or abandoned (no commits in 12+ months)
 - No documentation or unclear use case
 - Less than 100 GitHub stars without Hidden Gem justification
-- Repository less than 3 months old
+- Repository less than 1 months old
