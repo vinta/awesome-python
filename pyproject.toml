@@ -29,3 +29,10 @@ pythonpath = ["website"]
 
 [tool.ruff]
 line-length = 200
+
+[tool.uv]
+exclude-newer = "3 days"
+no-build = true
+
+[tool.uv.pip]
+only-binary = [":all:"]

@@ -2,6 +2,10 @@ version = 1
 revision = 3
 requires-python = ">=3.13"
 
+[options]
+exclude-newer = "2026-04-18T18:21:23.412234Z"
+exclude-newer-span = "P3D"
+
 [[package]]
 name = "anyio"
 version = "4.12.1"
