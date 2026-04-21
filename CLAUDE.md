@@ -4,9 +4,9 @@
 
 An opinionated list of Python frameworks, libraries, tools, and resources. Published at [awesome-python.com](https://awesome-python.com/).
 
-## PR Review Guidelines
+## Entry Guidelines
 
-**Refer to [CONTRIBUTING.md](CONTRIBUTING.md)** for acceptance criteria, quality requirements, rejection rules, and entry format.
+**Refer to [CONTRIBUTING.md](CONTRIBUTING.md)** for acceptance criteria, quality requirements, rejection rules, and entry format. Apply these rules whenever adding or removing an entry, whether reviewing a PR or committing directly.
 
 ## Structure
 
