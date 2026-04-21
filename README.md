@@ -141,6 +141,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
+  - [switchplane](https://github.com/salesforce-misc/switchplane) - A LangGraph-native runtime control plane that turns agent task graphs into standalone CLIs with per-app daemons, subprocess isolation, and bidirectional IPC.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
 - Data Layer
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
