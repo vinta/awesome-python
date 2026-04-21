@@ -21,14 +21,6 @@ An opinionated list of Python frameworks, libraries, tools, and resources. Publi
 - **Makefile**: `make install`, `make build`, `make preview`, `make test`, `make fetch_github_stars`.
 - **pyproject.toml**: Uses `uv` for dependency management. Python >=3.13.
 
-## Entry Format
-
-```markdown
-- [project-name](https://github.com/owner/repo) - Description ending with period.
-```
-
-Use PyPI package name as display name. If not on PyPI, use the GitHub repo name. Use GitHub URLs when available.
-
 ## Key Rules
 
 - Alphabetical ordering within categories is mandatory.
