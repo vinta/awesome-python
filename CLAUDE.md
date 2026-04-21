@@ -34,4 +34,5 @@ Use PyPI package name as display name. If not on PyPI, use the GitHub repo name.
 - Alphabetical ordering within categories is mandatory.
 - Quality over quantity. Only "awesome" projects.
 - One project per PR.
+- One entry per commit when adding or deleting entries. Format, wording, or categorization changes across multiple entries may be bundled in a single commit.
 - README.md is the single source of content truth.
