@@ -31,7 +31,7 @@ jobs:
           enable-cache: true
 
       - name: Install dependencies
-        run: uv sync --group build
+        run: uv sync --group build --locked
 
       - name: Run tests
         if: github.event_name == 'schedule'

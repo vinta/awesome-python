@@ -135,6 +135,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development. Also [skills-curated](https://github.com/trailofbits/skills-curated).
 - Orchestration
+  - [ag2](https://github.com/ag2ai/ag2) - An open-source AgentOS for multi-agent orchestration and building agentic AI systems.
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
   - [bub](https://github.com/bubbuild/bub) - A lightweight, hook-first Python framework for channel-native agents that live alongside people.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
@@ -607,7 +608,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
-  - [pyre-check](https://github.com/facebook/pyre-check) - Performant type checking.
+  - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 - Type Annotations Generators
