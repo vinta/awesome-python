@@ -1066,6 +1066,7 @@ _Libraries for storing and parsing configuration options._
 **Security**
 
 ## Cryptography
+- [RustChain](https://github.com/Scottcjn/Rustchain) - Proof-of-Antiquity blockchain with a novel Python-based node implementation and P2P gossip layer.
 
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
