@@ -52,6 +52,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 - [Data Analysis](#data-analysis)
 - [Data Validation](#data-validation)
 - [Data Visualization](#data-visualization)
+  - [Nutrition](#nutrition)
 - [Geolocation](#geolocation)
 - [Science](#science)
 - [Quantum Computing](#quantum-computing)
@@ -512,6 +513,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 
+## Nutrition\\n\\n_Libraries for nutrition data.\\n\\n- [openfoodfacts-python](https://github.com/openfoodfacts/openfoodfacts-python) - Open Food Facts database client.
 ## Geolocation
 
 _Libraries for geocoding addresses and working with latitudes and longitudes._
