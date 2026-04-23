@@ -543,6 +543,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
   - [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
   - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 - Simulation and Modeling
+  - [mesa](https://github.com/projectmesa/mesa) - An agent-based modeling framework for building, analyzing, and visualizing complex system simulations.
   - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
   - [pymc](https://github.com/pymc-devs/pymc) - Probabilistic programming and Bayesian modeling in Python.
   - [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
