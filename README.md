@@ -71,7 +71,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 - [DevOps Tools](#devops-tools)
 - [Distributed Computing](#distributed-computing)
 - [Task Queues](#task-queues)
-- [Message Brokers](#message-brokers)
+- [Messaging](#messaging)
 - [Job Schedulers](#job-schedulers)
 - [Logging](#logging)
 - [Network Virtualization](#network-virtualization)
@@ -739,11 +739,11 @@ _Libraries for working with task queues._
 - [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 
-## Message Brokers
+## Messaging
 
 _Libraries for working with message brokers and event streaming._
 
-- [faststream](https://github.com/ag2ai/faststream) - A framework for building asynchronous services over Apache Kafka, RabbitMQ, NATS, and Redis.
+- [faststream](https://github.com/ag2ai/faststream) - A framework for building asynchronous services over Apache Kafka, RabbitMQ, NATS, MQTT and Redis.
 
 ## Job Schedulers
 
