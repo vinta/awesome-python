@@ -131,6 +131,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
 - Agent Skills
+  - [agchk](https://github.com/huangrichao2020/agchk) - Audit the architecture and health of any AI agent system or LLM-integrated project. Scans for hardcoded secrets, tool enforcement gaps, hidden LLM calls, unrestricted code execution, unbounded memory growth, output mutation, and missing observability.
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development. Also [skills-curated](https://github.com/trailofbits/skills-curated).
