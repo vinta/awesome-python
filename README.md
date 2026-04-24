@@ -114,6 +114,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 
 - [Cryptography](#cryptography)
 - [Penetration Testing](#penetration-testing)
+- [Web Security](#web-security)
 
 **Miscellaneous**
 
@@ -1079,6 +1080,12 @@ _Frameworks and tools for penetration testing._
 - [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 - [sherlock](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
+
+## Web Security
+
+_Libraries for application-layer web security._
+
+- [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Miscellaneous**
 
