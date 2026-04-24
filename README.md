@@ -141,6 +141,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
+  - [promptise](https://github.com/promptise-com/foundry) - A framework for building MCP-native agents with an autonomous runtime, governance, memory, and guardrails.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
 - Data Layer
