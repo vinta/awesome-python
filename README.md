@@ -71,6 +71,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 - [DevOps Tools](#devops-tools)
 - [Distributed Computing](#distributed-computing)
 - [Task Queues](#task-queues)
+- [Messaging](#messaging)
 - [Job Schedulers](#job-schedulers)
 - [Logging](#logging)
 - [Network Virtualization](#network-virtualization)
@@ -114,6 +115,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 
 - [Cryptography](#cryptography)
 - [Penetration Testing](#penetration-testing)
+- [Web Security](#web-security)
 
 **Miscellaneous**
 
@@ -141,6 +143,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
+  - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
 - Data Layer
@@ -738,6 +741,12 @@ _Libraries for working with task queues._
 - [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 
+## Messaging
+
+_Libraries for working with message brokers and event streaming._
+
+- [faststream](https://github.com/ag2ai/faststream) - A framework for building asynchronous services over Apache Kafka, RabbitMQ, NATS, MQTT and Redis.
+
 ## Job Schedulers
 
 _Libraries for scheduling jobs._
@@ -1080,6 +1089,12 @@ _Frameworks and tools for penetration testing._
 - [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 - [sherlock](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
+
+## Web Security
+
+_Libraries for application-layer web security._
+
+- [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Miscellaneous**
 
