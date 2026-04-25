@@ -737,6 +737,7 @@ _Frameworks and libraries for Distributed Computing._
 _Libraries for working with task queues._
 
 - [celery](https://github.com/celery/celery) - An asynchronous task queue/job queue based on distributed message passing.
+- [Distributed Task Scheduler](https://github.com/Khanrukku/Distributed-Task-Scheduler-System) - Production-ready distributed system handling 1,000+ concurrent tasks with Redis, rate limiting, and automatic failure recovery.
 - [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
 - [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
