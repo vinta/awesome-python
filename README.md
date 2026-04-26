@@ -138,6 +138,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Orchestration
   - [ag2](https://github.com/ag2ai/ag2) - An open-source AgentOS for multi-agent orchestration and building agentic AI systems.
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
+  - [arachne](https://github.com/Strategic-Automation/arachne) - DSPy-native autonomous agent runtime with graph weaving, parallel wave execution, self-healing, and MCP client integration.
   - [bub](https://github.com/bubbuild/bub) - A lightweight, hook-first Python framework for channel-native agents that live alongside people.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
