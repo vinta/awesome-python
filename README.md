@@ -635,6 +635,7 @@ _Libraries for testing codebases and generating test data._
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
   - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
   - [pyautogui](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
+  - [pytest-cloudreport](https://github.com/ahmad212o/pytest-cloudreport) - A pytest plugin for automatic flaky test detection and CI analytics, with local HTML reports and an optional cloud dashboard.
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
 - Mock
