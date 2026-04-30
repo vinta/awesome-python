@@ -129,6 +129,16 @@ An opinionated list of Python frameworks, libraries, tools, and resources.
 
 ## AI and Agents
 
+## OpenClaw Monitor
+
+> Real-time AI Agent Monitoring Dashboard for OpenClaw
+
+**GitHub:** [flik2002/openclaw-monitor](https://github.com/flik2002/openclaw-monitor) ⭐
+
+![Dashboard](https://raw.githubusercontent.com/flik2002/openclaw-monitor/main/Openclaw%20Monitor.jpg)
+
+
+
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
 - Agent Skills
