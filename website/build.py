@@ -155,6 +155,8 @@ def build(repo_root: Path) -> None:
     env = Environment(
         loader=FileSystemLoader(website / "templates"),
         autoescape=True,
+        trim_blocks=True,
+        lstrip_blocks=True,
     )
 
     site_dir = website / "output"

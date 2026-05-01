@@ -307,6 +307,7 @@ class TestBuild:
         assert parser.meta_by_name["twitter:title"] == expected_title
         assert parser.meta_by_name["twitter:description"] == expected_description
         assert parser.meta_by_name["twitter:image"] == expected_image
+        assert "<head>\n    <meta charset" in html
 
 
 # ---------------------------------------------------------------------------
