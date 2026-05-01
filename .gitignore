@@ -10,12 +10,12 @@ __pycache__/
 website/output/
 website/data/
 
-# claude code
-.claude/skills/
-.gstack/
-.playwright-cli/
-.superpowers/
-skills-lock.json
+# planning docs
+docs/
 
-# codex
+# agents
 .agents/
+.claude/skills/
+.superpowers/
+.playwright-cli/
+skills-lock.json
