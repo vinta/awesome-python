@@ -146,6 +146,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
   - [OpenChronicle](https://github.com/Einsia/OpenChronicle) - Open-source, local-first memory for any tool-capable LLM agent.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
+  - [soma-wisdom](https://github.com/sunyan999999/soma) - Cognitive architecture for AI agents with thinking laws, memory activation, and meta-evolution.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
 - Data Layer
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
