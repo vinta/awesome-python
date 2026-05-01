@@ -76,13 +76,15 @@ def build_robots_txt() -> str:
     return f"User-agent: *\nAllow: /\n\nSitemap: {SITEMAP_URL}\n"
 
 
-def write_sitemap_xml(path: Path, urls: Sequence[str]) -> None:
+def write_sitemap_xml(path: Path, urls: Sequence[tuple[str, str]]) -> None:
     ET.register_namespace("", SITEMAP_NS)
     urlset = ET.Element(f"{{{SITEMAP_NS}}}urlset")
-    for url in urls:
+    for url, lastmod in urls:
         url_el = ET.SubElement(urlset, f"{{{SITEMAP_NS}}}url")
         loc_el = ET.SubElement(url_el, f"{{{SITEMAP_NS}}}loc")
         loc_el.text = url
+        lastmod_el = ET.SubElement(url_el, f"{{{SITEMAP_NS}}}lastmod")
+        lastmod_el.text = lastmod
 
     ET.ElementTree(urlset).write(path, encoding="utf-8", xml_declaration=True)
     with path.open("ab") as f:
@@ -181,6 +183,7 @@ def build(repo_root: Path) -> None:
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     total_entries = sum(c["entry_count"] for c in categories)
     entries = extract_entries(categories, parsed_groups)
+    build_date = datetime.now(UTC)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
 
@@ -223,7 +226,7 @@ def build(repo_root: Path) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=datetime.now(UTC).strftime("%B %d, %Y"),
+            build_date=build_date.strftime("%B %d, %Y"),
             sponsors=sponsors,
         ),
         encoding="utf-8",
@@ -236,7 +239,7 @@ def build(repo_root: Path) -> None:
 
     markdown_index = remove_sponsors_section(readme_text)
     (site_dir / "robots.txt").write_text(build_robots_txt(), encoding="utf-8")
-    write_sitemap_xml(site_dir / "sitemap.xml", [SITE_URL])
+    write_sitemap_xml(site_dir / "sitemap.xml", [(SITE_URL, build_date.date().isoformat())])
     (site_dir / "index.md").write_text(markdown_index, encoding="utf-8")
     (site_dir / "llms.txt").write_text(markdown_index, encoding="utf-8")
 

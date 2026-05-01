@@ -4,6 +4,7 @@ import json
 import shutil
 import textwrap
 import xml.etree.ElementTree as ET
+from datetime import UTC, date, datetime
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -172,7 +173,9 @@ class TestBuild:
             Help!
         """)
         self._make_repo(tmp_path, readme)
+        start_date = datetime.now(UTC).date()
         build(tmp_path)
+        end_date = datetime.now(UTC).date()
 
         site = tmp_path / "website" / "output"
         robots = (site / "robots.txt").read_text(encoding="utf-8")
@@ -182,9 +185,12 @@ class TestBuild:
         root = sitemap.getroot()
         ns = {"sitemap": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         locs = [loc.text for loc in root.findall("sitemap:url/sitemap:loc", ns)]
+        lastmods = [lastmod.text for lastmod in root.findall("sitemap:url/sitemap:lastmod", ns)]
 
         assert root.tag == "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset"
         assert locs == ["https://awesome-python.com/"]
+        assert len(lastmods) == 1
+        assert start_date <= date.fromisoformat(lastmods[0]) <= end_date
         assert all(loc.startswith("https://awesome-python.com/") for loc in locs)
         assert all("?" not in loc for loc in locs)
 
