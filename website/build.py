@@ -73,7 +73,13 @@ def sort_entries(entries: list[dict]) -> list[dict]:
 
 
 def build_robots_txt() -> str:
-    return f"User-agent: *\nAllow: /\n\nSitemap: {SITEMAP_URL}\n"
+    return (
+        "User-agent: *\n"
+        "Content-Signal: search=yes, ai-input=yes, ai-train=yes\n"
+        "Allow: /\n"
+        "\n"
+        f"Sitemap: {SITEMAP_URL}\n"
+    )
 
 
 def write_sitemap_xml(path: Path, urls: Sequence[tuple[str, str]]) -> None:

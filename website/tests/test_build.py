@@ -179,7 +179,13 @@ class TestBuild:
 
         site = tmp_path / "website" / "output"
         robots = (site / "robots.txt").read_text(encoding="utf-8")
-        assert robots == "User-agent: *\nAllow: /\n\nSitemap: https://awesome-python.com/sitemap.xml\n"
+        assert robots == (
+            "User-agent: *\n"
+            "Content-Signal: search=yes, ai-input=yes, ai-train=yes\n"
+            "Allow: /\n"
+            "\n"
+            "Sitemap: https://awesome-python.com/sitemap.xml\n"
+        )
 
         sitemap = ET.parse(site / "sitemap.xml")
         root = sitemap.getroot()
