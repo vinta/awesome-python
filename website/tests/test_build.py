@@ -3,6 +3,7 @@
 import json
 import shutil
 import textwrap
+from html.parser import HTMLParser
 from pathlib import Path
 
 from build import (
@@ -14,6 +15,40 @@ from build import (
     sort_entries,
 )
 from readme_parser import parse_readme, slugify
+
+
+class HeadMetadataParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.title_count = 0
+        self.title = ""
+        self.meta_by_name = {}
+        self.meta_by_property = {}
+        self.links_by_rel = {}
+        self._in_title = False
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == "title":
+            self.title_count += 1
+            self._in_title = True
+        elif tag == "meta":
+            if "name" in attrs:
+                self.meta_by_name[attrs["name"]] = attrs.get("content", "")
+            if "property" in attrs:
+                self.meta_by_property[attrs["property"]] = attrs.get("content", "")
+        elif tag == "link" and attrs.get("rel"):
+            for rel in attrs["rel"].split():
+                self.links_by_rel[rel] = attrs.get("href", "")
+
+    def handle_endtag(self, tag):
+        if tag == "title":
+            self._in_title = False
+
+    def handle_data(self, data):
+        if self._in_title:
+            self.title += data
+
 
 # ---------------------------------------------------------------------------
 # slugify
@@ -71,6 +106,11 @@ class TestBuild:
             "{% endblock %}",
             encoding="utf-8",
         )
+
+    def _copy_real_templates(self, tmp_path):
+        real_tpl = Path(__file__).parent / ".." / "templates"
+        tpl_dir = tmp_path / "website" / "templates"
+        shutil.copytree(real_tpl, tpl_dir)
 
     def test_build_creates_single_page(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -234,6 +274,39 @@ class TestBuild:
         assert "100" in html
         # Expand content present
         assert "expand-content" in html
+
+    def test_index_contains_aligned_homepage_metadata(self, tmp_path):
+        readme = (Path(__file__).parents[2] / "README.md").read_text(encoding="utf-8")
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        parsed_groups = parse_readme(readme)
+        categories = [cat for group in parsed_groups for cat in group["categories"]]
+        entries = extract_entries(categories, parsed_groups)
+        html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
+        parser = HeadMetadataParser()
+        parser.feed(html)
+
+        expected_title = "Awesome Python"
+        expected_description = f"An opinionated guide to the best Python frameworks, libraries, and tools. Explore {len(entries)} curated projects across {len(categories)} categories, from AI and agents to data science and web development."
+        expected_url = "https://awesome-python.com/"
+        expected_image = "https://awesome-python.com/static/og-image.png"
+
+        assert parser.title_count == 1
+        assert parser.title.strip() == expected_title
+        assert parser.meta_by_name["description"] == expected_description
+        assert parser.links_by_rel["canonical"] == expected_url
+        assert parser.meta_by_property["og:type"] == "website"
+        assert parser.meta_by_property["og:title"] == expected_title
+        assert parser.meta_by_property["og:description"] == expected_description
+        assert parser.meta_by_property["og:image"] == expected_image
+        assert parser.meta_by_property["og:url"] == expected_url
+        assert parser.meta_by_name["twitter:card"] == "summary_large_image"
+        assert parser.meta_by_name["twitter:title"] == expected_title
+        assert parser.meta_by_name["twitter:description"] == expected_description
+        assert parser.meta_by_name["twitter:image"] == expected_image
 
 
 # ---------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 # Awesome Python
 
-An opinionated list of Python frameworks, libraries, tools, and resources.
+An opinionated guide to the best Python frameworks, libraries, tools, and resources.
 
 # **Sponsors**
 

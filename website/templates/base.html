@@ -1,26 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% set default_meta_title = "Awesome Python" %}
+    {% set default_meta_description = "An opinionated guide to the best Python frameworks, libraries, and tools. Explore " ~ (entries | length) ~ " curated projects across " ~ total_categories ~ " categories, from AI and agents to data science and web development." %}
+    {% set canonical_url = "https://awesome-python.com/" %}
+    {% set social_image_url = "https://awesome-python.com/static/og-image.png" %}
+    {% set meta_title %}{% block title %}{{ default_meta_title }}{% endblock %}{% endset %}
+    {% set meta_description %}{% block description %}{{ default_meta_description }}{% endblock %}{% endset %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}Awesome Python{% endblock %}</title>
-    <meta
-      name="description"
-      content="{% block description %}An opinionated list of Python frameworks, libraries, tools, and resources. {{ total_entries }} projects across {{ categories | length }} categories.{% endblock %}"
-    />
-    <link rel="canonical" href="https://awesome-python.com/" />
+    <title>{{ meta_title | trim }}</title>
+    <meta name="description" content="{{ meta_description | trim }}" />
+    <link rel="canonical" href="{{ canonical_url }}" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Awesome Python" />
-    <meta
-      property="og:description"
-      content="An opinionated list of Python frameworks, libraries, tools, and resources."
-    />
-    <meta
-      property="og:image"
-      content="https://awesome-python.com/static/og-image.png"
-    />
-    <meta property="og:url" content="https://awesome-python.com/" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:title" content="{{ meta_title | trim }}" />
+    <meta property="og:description" content="{{ meta_description | trim }}" />
+    <meta property="og:image" content="{{ social_image_url }}" />
+    <meta property="og:url" content="{{ canonical_url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ meta_title | trim }}" />
+    <meta name="twitter:description" content="{{ meta_description | trim }}" />
+    <meta name="twitter:image" content="{{ social_image_url }}" />
     <meta name="theme-color" content="#1c1410" />
     <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
