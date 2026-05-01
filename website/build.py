@@ -4,6 +4,8 @@
 import json
 import re
 import shutil
+import xml.etree.ElementTree as ET
+from collections.abc import Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -12,6 +14,9 @@ from jinja2 import Environment, FileSystemLoader
 from readme_parser import ParsedGroup, ParsedSection, parse_readme, parse_sponsors
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
+SITE_URL = "https://awesome-python.com/"
+SITEMAP_URL = f"{SITE_URL}sitemap.xml"
+SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 
 SOURCE_TYPE_DOMAINS = {
     "docs.python.org": "Built-in",
@@ -65,6 +70,51 @@ def sort_entries(entries: list[dict]) -> list[dict]:
         return (2, 0, 0, name)
 
     return sorted(entries, key=sort_key)
+
+
+def build_robots_txt() -> str:
+    return f"User-agent: *\nAllow: /\n\nSitemap: {SITEMAP_URL}\n"
+
+
+def write_sitemap_xml(path: Path, urls: Sequence[str]) -> None:
+    ET.register_namespace("", SITEMAP_NS)
+    urlset = ET.Element(f"{{{SITEMAP_NS}}}urlset")
+    for url in urls:
+        url_el = ET.SubElement(urlset, f"{{{SITEMAP_NS}}}url")
+        loc_el = ET.SubElement(url_el, f"{{{SITEMAP_NS}}}loc")
+        loc_el.text = url
+
+    ET.ElementTree(urlset).write(path, encoding="utf-8", xml_declaration=True)
+    with path.open("ab") as f:
+        f.write(b"\n")
+
+
+def top_level_heading_text(line: str) -> str | None:
+    stripped = line.strip()
+    if not stripped.startswith("# "):
+        return None
+    return stripped.removeprefix("#").strip().strip("#").strip().strip("*").strip()
+
+
+def remove_sponsors_section(markdown: str) -> str:
+    lines = markdown.splitlines(keepends=True)
+    start_idx = None
+    for i, line in enumerate(lines):
+        heading = top_level_heading_text(line)
+        if heading and heading.lower() == "sponsors":
+            start_idx = i
+            break
+
+    if start_idx is None:
+        return markdown
+
+    end_idx = len(lines)
+    for i, line in enumerate(lines[start_idx + 1 :], start=start_idx + 1):
+        if top_level_heading_text(line):
+            end_idx = i
+            break
+
+    return "".join(lines[:start_idx] + lines[end_idx:])
 
 
 def extract_entries(
@@ -184,7 +234,11 @@ def build(repo_root: Path) -> None:
     if static_src.exists():
         shutil.copytree(static_src, static_dst, dirs_exist_ok=True)
 
-    (site_dir / "llms.txt").write_text(readme_text, encoding="utf-8")
+    markdown_index = remove_sponsors_section(readme_text)
+    (site_dir / "robots.txt").write_text(build_robots_txt(), encoding="utf-8")
+    write_sitemap_xml(site_dir / "sitemap.xml", [SITE_URL])
+    (site_dir / "index.md").write_text(markdown_index, encoding="utf-8")
+    (site_dir / "llms.txt").write_text(markdown_index, encoding="utf-8")
 
     print(f"Built single page with {len(parsed_groups)} groups, {len(categories)} categories")
     print(f"Total entries: {total_entries}")

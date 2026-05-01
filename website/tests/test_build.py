@@ -3,6 +3,7 @@
 import json
 import shutil
 import textwrap
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -153,6 +154,86 @@ class TestBuild:
         assert (site / "index.html").exists()
         # No category sub-pages
         assert not (site / "categories").exists()
+
+    def test_build_creates_root_discovery_files(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ---
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        self._make_repo(tmp_path, readme)
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output"
+        robots = (site / "robots.txt").read_text(encoding="utf-8")
+        assert robots == "User-agent: *\nAllow: /\n\nSitemap: https://awesome-python.com/sitemap.xml\n"
+
+        sitemap = ET.parse(site / "sitemap.xml")
+        root = sitemap.getroot()
+        ns = {"sitemap": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+        locs = [loc.text for loc in root.findall("sitemap:url/sitemap:loc", ns)]
+
+        assert root.tag == "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset"
+        assert locs == ["https://awesome-python.com/"]
+        assert all(loc.startswith("https://awesome-python.com/") for loc in locs)
+        assert all("?" not in loc for loc in locs)
+
+    def test_build_creates_markdown_alternate_without_sponsors(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            # **Sponsors**
+
+            - **[Sponsor](https://sponsor.example.com)**: Sponsored tool.
+
+            > Become a sponsor: [Sponsor us](SPONSORSHIP.md).
+
+            # Categories
+
+            **Tools**
+
+            - [Widgets](#widgets)
+
+            ---
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output"
+        index_html = (site / "index.html").read_text(encoding="utf-8")
+        index_md = (site / "index.md").read_text(encoding="utf-8")
+        llms_txt = (site / "llms.txt").read_text(encoding="utf-8")
+
+        assert '<link rel="alternate" type="text/markdown" href="/index.md" />' in index_html
+        assert index_md == llms_txt
+        assert index_md.startswith("# Awesome Python\n\nIntro.\n\n# Categories")
+        assert "# **Sponsors**" not in index_md
+        assert "Sponsor" not in index_md
+        assert "SPONSORSHIP.md" not in index_md
+        assert "## Widgets" in index_md
+        assert "- [w1](https://example.com) - A widget." in index_md
 
     def test_build_cleans_stale_output(self, tmp_path):
         readme = textwrap.dedent("""\
