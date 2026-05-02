@@ -638,6 +638,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [pyautogui](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
+  - [HMNextAuto](https://github.com/ziguiway/hmnextauto) - Python-based UI automation framework for HarmonyOS NEXT, API compatible with uiautomator2.
 - Mock
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
