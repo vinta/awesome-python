@@ -593,6 +593,7 @@ _Interactive Python interpreters (REPL)._
 _Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/analysis-tools-dev/static-analysis)._
 
 - Code Analysis
+  - [atomadic-forge](https://github.com/atomadictech/atomadic-forge) - Architecture compiler enforcing 5-tier monadic dependency rules on Python codebases. Classifies files, detects tier violations, and certifies 0-100.
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
