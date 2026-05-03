@@ -152,6 +152,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
 - Pre-trained Models and Inference
+  - [CAJAL-4B-P2PCLAW](https://github.com/Agnuxo1/CAJAL) - A 4B-parameter local LLM specialized in scientific paper generation with IMRAD structure, LaTeX, and citation support.
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
