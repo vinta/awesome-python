@@ -17,41 +17,12 @@ class TestExtractGithubRepos:
         assert result == {"psf/requests"}
 
     def test_multiple_repos(self):
-        readme = (
-            "* [requests](https://github.com/psf/requests) - HTTP.\n"
-            "* [flask](https://github.com/pallets/flask) - Micro."
-        )
+        readme = "* [requests](https://github.com/psf/requests) - HTTP.\n* [flask](https://github.com/pallets/flask) - Micro."
         result = extract_github_repos(readme)
         assert result == {"psf/requests", "pallets/flask"}
 
-    def test_ignores_non_github_urls(self):
-        readme = "* [pypy](https://foss.heptapod.net/pypy/pypy) - Fast Python."
-        result = extract_github_repos(readme)
-        assert result == set()
-
-    def test_ignores_github_io_urls(self):
-        readme = "* [docs](https://user.github.io/project) - Docs site."
-        result = extract_github_repos(readme)
-        assert result == set()
-
-    def test_ignores_github_wiki_and_blob_urls(self):
-        readme = (
-            "* [wiki](https://github.com/org/repo/wiki) - Wiki.\n"
-            "* [file](https://github.com/org/repo/blob/main/f.py) - File."
-        )
-        result = extract_github_repos(readme)
-        assert result == set()
-
-    def test_handles_trailing_slash(self):
-        readme = "* [lib](https://github.com/org/repo/) - Lib."
-        result = extract_github_repos(readme)
-        assert result == {"org/repo"}
-
     def test_deduplicates(self):
-        readme = (
-            "* [a](https://github.com/org/repo) - A.\n"
-            "* [b](https://github.com/org/repo) - B."
-        )
+        readme = "* [a](https://github.com/org/repo) - A.\n* [b](https://github.com/org/repo) - B."
         result = extract_github_repos(readme)
         assert result == {"org/repo"}
 

@@ -37,7 +37,7 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 ## Get Started
 
-Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=awesome-python%20Sponsorship) with:
+Email [vinta.chen@gmail.com](mailto:vinta.chen@gmail.com?subject=Awesome%20Python%20Sponsorship) with:
 
 - **Tier:** Headline Sponsor ($500/mo) or Featured Sponsor ($150/mo)
 - **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured tier)

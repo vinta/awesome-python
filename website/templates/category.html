@@ -1,16 +1,21 @@
 {% extends "base.html" %}
+{% block title %}{{ category.name }} Python Libraries - Awesome Python{% endblock %}
+{% block description %}{{ category_description }}{% endblock %}
+{% block canonical_url %}{{ category_url }}{% endblock %}
+{% block alternate_links %}{% endblock %}
 {% block extra_head %}
-<script type="application/ld+json">{{ homepage_json_ld | safe }}</script>
+<script type="application/ld+json">{{ category_json_ld | safe }}</script>
 {% endblock %}
 {% block header %}
-<header class="hero">
+<header class="category-hero">
   <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
 
-  <div class="hero-shell">
-    <nav class="hero-topbar" aria-label="Site">
-      <span class="hero-brand-mini">Awesome Python</span>
+  <div class="category-hero-shell">
+    <nav class="hero-topbar category-topbar" aria-label="Site">
+      <a href="/" class="hero-brand-mini">Awesome Python</a>
       <div class="hero-topbar-actions">
+        <a href="/#library-index" class="hero-topbar-link">All projects</a>
         <a
           href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
           class="hero-topbar-link hero-topbar-link-strong"
@@ -21,94 +26,38 @@
       </div>
     </nav>
 
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="hero-kicker">The field guide to the Python ecosystem</p>
-        <h1>Awesome Python</h1>
-        <p class="hero-sub">
-          {{ subtitle }}<br />Maintained by
-          <a href="https://github.com/vinta" target="_blank" rel="noopener"
-            >@vinta</a
-          >
-          and
-          <a
-            href="https://github.com/JinyangWang27"
-            target="_blank"
-            rel="noopener"
-            >@JinyangWang27</a
-          >.
-        </p>
-
-        <div class="hero-actions">
-          <a
-            href="#library-index"
-            class="hero-action hero-action-primary"
-            data-scroll-to="library-index"
-            >Browse the List</a
-          >
-          <a
-            href="https://github.com/vinta/awesome-python"
-            class="hero-action hero-action-secondary"
-            target="_blank"
-            rel="noopener"
-            >View on GitHub</a
-          >
-        </div>
-
-        {% if repo_stars or build_date %}
-        <p class="hero-proof">
-          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if
-          repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{
-          build_date }}{% endif %}
-        </p>
-        {% endif %}
-      </div>
+    <div class="category-hero-copy">
+      {% if parent_category %}
+      <p class="category-breadcrumb">
+        <a href="/categories/{{ parent_category.slug }}/">{{ parent_category.name }}</a>
+      </p>
+      {% endif %}
+      <h1>{{ category.name }}</h1>
+      {% if category.description_html %}
+      <p class="category-subtitle">{{ category.description_html | safe }}</p>
+      {% endif %}
     </div>
 
+    {% if group_categories %}
     <nav class="hero-category-nav" aria-labelledby="hero-category-heading">
       <div class="hero-category-meta">
         <h2 id="hero-category-heading">Browse by category</h2>
       </div>
       <ul class="hero-category-links">
-        {% for category in categories %}
+        {% for sub in group_categories %}
         <li>
-          <a class="hero-category-link" href="{{ category_urls[category.name] }}"
-            >{{ category.name }}</a
+          <a class="hero-category-link" href="{{ category_urls[sub.name] }}"
+            >{{ sub.name }}</a
           >
         </li>
         {% endfor %}
       </ul>
     </nav>
+    {% endif %}
   </div>
 </header>
 {% endblock %}
 {% block content %}
-{% if sponsors %}
-<section class="sponsor-band" aria-labelledby="sponsor-heading" data-reveal>
-  <div class="section-shell sponsor-shell">
-    <header class="sponsor-meta">
-      <p class="section-label" id="sponsor-heading">Sponsors</p>
-      <a class="sponsor-become" href="/sponsorship/"> Become a sponsor </a>
-    </header>
-    <ul class="sponsor-list">
-      {% for sponsor in sponsors %}
-      <li class="sponsor">
-        <a
-          class="sponsor-link"
-          href="{{ sponsor.url }}"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="sponsor-name">{{ sponsor.name }}</span>
-        </a>
-        <p class="sponsor-desc">{{ sponsor.description | safe }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-{% endif %}
-
 <script type="application/json" id="filter-urls">{{ filter_urls_json | safe }}</script>
 <section class="results-section" id="library-index">
   <div class="results-intro section-shell" data-reveal>
@@ -141,7 +90,7 @@
       <input
         type="search"
         class="search"
-        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories..."
+        placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
         aria-label="Search projects"
       />
     </div>
@@ -197,7 +146,7 @@
             >
             <span class="mobile-cat"
               >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
-              else %}{{ entry.categories[0] }}{% endif %}</span
+              else %}{{ category.name }}{% endif %}</span
             >
           </td>
           <td class="col-stars">
@@ -223,29 +172,33 @@
           </td>
           <td class="col-cat">
             {% for subcat in entry.subcategories %}
-            <a class="tag" href="{{ subcat.url }}" data-value="{{ subcat.value }}" data-url="{{ subcat.url }}">
+            <a class="tag{% if subcat.url == current_path %} active{% endif %}" href="{{ subcat.url }}" data-value="{{ subcat.value }}" data-url="{{ subcat.url }}">
               {{ subcat.name }}
             </a>
-            {% endfor %} {% for cat in entry.categories %}
+            {% endfor %}
+            {% for cat in entry.categories %}
             <a
-              class="tag"
+              class="tag{% if category_urls[cat] == current_path %} active{% endif %}"
               href="{{ category_urls[cat] }}"
               data-value="{{ cat }}"
               data-url="{{ category_urls[cat] }}"
               >{{ cat }}</a
             >
             {% endfor %}
+            {% if entry.groups %}
+            {% set group_url = filter_urls[entry.groups[0]] %}
             <a
-              class="tag tag-group"
-              href="{{ filter_urls[entry.groups[0]] }}"
+              class="tag tag-group{% if group_url == current_path %} active{% endif %}"
+              href="{{ group_url }}"
               data-value="{{ entry.groups[0] }}"
-              data-url="{{ filter_urls[entry.groups[0]] }}"
+              data-url="{{ group_url }}"
             >
               {{ entry.groups[0] }}
             </a>
+            {% endif %}
             {% if entry.source_type == 'Built-in' %}
             <a
-              class="tag tag-source"
+              class="tag tag-source{% if '/categories/built-in/' == current_path %} active{% endif %}"
               href="/categories/built-in/"
               data-value="Built-in"
               data-url="/categories/built-in/"
@@ -257,7 +210,7 @@
           <td class="col-arrow"><span class="arrow">&rarr;</span></td>
         </tr>
         {% if entry.description %}
-        <tr class="desc-row" aria-hidden="true" hidden>
+        <tr class="desc-row" aria-hidden="true">
           <td class="col-num"></td>
           <td colspan="5">
             <div class="desc-text">{{ entry.description | safe }}</div>
@@ -268,9 +221,7 @@
           <td></td>
           <td colspan="4">
             <div class="expand-content">
-              {% if entry.description %}
-              <div class="expand-desc">{{ entry.description | safe }}</div>
-              {% endif %} {% if entry.also_see %}
+              {% if entry.also_see %}
               <div class="expand-also-see">
                 Also see: {% for see in entry.also_see %}<a
                   href="{{ see.url }}"

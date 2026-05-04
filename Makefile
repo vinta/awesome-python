@@ -10,6 +10,15 @@ fetch_github_stars:
 test:
 	uv run pytest website/tests/ -v
 
+lint:
+	uv run ruff check .
+
+format:
+	uv run ruff format .
+
+typecheck:
+	uv run ty check website
+
 build:
 	uv run python website/build.py
 

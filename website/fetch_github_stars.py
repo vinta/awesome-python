@@ -11,7 +11,6 @@ from itertools import batched
 from pathlib import Path
 
 import httpx
-
 from build import extract_github_repo, load_stars
 
 CACHE_MAX_AGE_HOURS = 12
@@ -53,10 +52,7 @@ def build_graphql_query(repos: Sequence[str]) -> str:
         owner, name = repo.split("/", 1)
         if not GITHUB_OWNER_RE.match(owner) or not GITHUB_NAME_RE.match(name):
             continue
-        parts.append(
-            f'repo_{i}: repository(owner: "{owner}", name: "{name}") '
-            f"{{ stargazerCount owner {{ login }} defaultBranchRef {{ target {{ ... on Commit {{ committedDate }} }} }} }}"
-        )
+        parts.append(f'repo_{i}: repository(owner: "{owner}", name: "{name}") {{ stargazerCount owner {{ login }} defaultBranchRef {{ target {{ ... on Commit {{ committedDate }} }} }} }}')
     if not parts:
         return ""
     return "query { " + " ".join(parts) + " }"

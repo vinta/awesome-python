@@ -27,6 +27,7 @@ class ParsedSection(TypedDict):
     name: str
     slug: str
     description: str  # plain text, links resolved to text
+    description_html: str  # inline HTML, properly escaped
     entries: list[ParsedEntry]
     entry_count: int
 
@@ -113,22 +114,29 @@ def _heading_text(node: SyntaxTreeNode) -> str:
     return ""
 
 
-def _extract_description(nodes: list[SyntaxTreeNode]) -> str:
-    """Extract description from the first paragraph if it's a single <em> block.
+def _heading_level(node: SyntaxTreeNode) -> int | None:
+    """Return the numeric level for a heading node."""
+    if node.type != "heading" or not node.tag.startswith("h"):
+        return None
+    return int(node.tag[1:])
+
+
+def _extract_description_children(nodes: list[SyntaxTreeNode]) -> list[SyntaxTreeNode]:
+    """Extract description children from the first paragraph if it's a single <em> block.
 
     Pattern: _Libraries for foo._ -> "Libraries for foo."
     """
     if not nodes:
-        return ""
+        return []
     first = nodes[0]
     if first.type != "paragraph":
-        return ""
+        return []
     for child in first.children:
         if child.type == "inline" and len(child.children) == 1:
             em = child.children[0]
             if em.type == "em":
-                return render_inline_text(em.children)
-    return ""
+                return em.children
+    return []
 
 
 # --- Entry extraction --------------------------------------------------------
@@ -228,18 +236,22 @@ def _parse_list_entries(
                 if sub_inline:
                     sub_link = _find_child(sub_inline, "link")
                     if sub_link:
-                        also_see.append(AlsoSee(
-                            name=render_inline_text(sub_link.children),
-                            url=_href(sub_link),
-                        ))
+                        also_see.append(
+                            AlsoSee(
+                                name=render_inline_text(sub_link.children),
+                                url=_href(sub_link),
+                            )
+                        )
 
-        entries.append(ParsedEntry(
-            name=name,
-            url=url,
-            description=desc_html,
-            also_see=also_see,
-            subcategory=subcategory,
-        ))
+        entries.append(
+            ParsedEntry(
+                name=name,
+                url=url,
+                description=desc_html,
+                also_see=also_see,
+                subcategory=subcategory,
+            )
+        )
 
     return entries
 
@@ -258,18 +270,20 @@ def _parse_section_entries(content_nodes: list[SyntaxTreeNode]) -> list[ParsedEn
 
 def _build_section(name: str, body: list[SyntaxTreeNode]) -> ParsedSection:
     """Build a ParsedSection from a heading name and its body nodes."""
-    desc = _extract_description(body)
-    content_nodes = body[1:] if desc else body
+    desc_children = _extract_description_children(body)
+    desc = render_inline_text(desc_children) if desc_children else ""
+    desc_html = render_inline_html(desc_children) if desc_children else ""
+    content_nodes = body[1:] if desc_children else body
     entries = _parse_section_entries(content_nodes)
     entry_count = len(entries) + sum(len(e["also_see"]) for e in entries)
     return ParsedSection(
         name=name,
         slug=slugify(name),
         description=desc,
+        description_html=desc_html,
         entries=entries,
         entry_count=entry_count,
     )
-
 
 
 def _is_bold_marker(node: SyntaxTreeNode) -> str | None:
@@ -296,7 +310,7 @@ def _parse_grouped_sections(
 ) -> list[ParsedGroup]:
     """Parse nodes into groups of categories using bold markers as group boundaries.
 
-    Bold-only paragraphs (**Group Name**) delimit groups. H2 headings under each
+    Bold-only paragraphs (**Group Name**) delimit groups. H3 headings under each
     bold marker become categories within that group. Categories appearing before
     any bold marker go into an "Other" group.
     """
@@ -317,11 +331,13 @@ def _parse_grouped_sections(
         nonlocal current_group_name, current_group_cats
         if current_group_cats:
             name = current_group_name or "Other"
-            groups.append(ParsedGroup(
-                name=name,
-                slug=slugify(name),
-                categories=list(current_group_cats),
-            ))
+            groups.append(
+                ParsedGroup(
+                    name=name,
+                    slug=slugify(name),
+                    categories=list(current_group_cats),
+                )
+            )
         current_group_name = None
         current_group_cats = []
 
@@ -332,7 +348,7 @@ def _parse_grouped_sections(
             flush_group()
             current_group_name = bold_name
             current_cat_body = []
-        elif node.type == "heading" and node.tag == "h2":
+        elif node.type == "heading" and node.tag in ("h2", "h3"):
             flush_cat()
             current_cat_name = _heading_text(node)
             current_cat_body = []
@@ -374,7 +390,7 @@ def _parse_sponsor_item(inline: SyntaxTreeNode) -> ParsedSponsor | None:
 
 
 def parse_sponsors(text: str) -> list[ParsedSponsor]:
-    """Parse the `# Sponsors` section of README.md into a list of sponsors.
+    """Parse the `Sponsors` section of README.md into a list of sponsors.
 
     Expects bullets in the form `**[name](url)**: description`.
     Returns [] if no Sponsors section exists.
@@ -386,14 +402,18 @@ def parse_sponsors(text: str) -> list[ParsedSponsor]:
 
     start_idx = None
     end_idx = len(children)
+    start_level = None
     for i, node in enumerate(children):
-        if node.type == "heading" and node.tag == "h1":
-            title = _heading_text(node).strip().lower()
-            if start_idx is None and title == "sponsors":
-                start_idx = i + 1
-            elif start_idx is not None:
-                end_idx = i
-                break
+        level = _heading_level(node)
+        if level is None:
+            continue
+        title = _heading_text(node).strip().lower()
+        if start_idx is None and title == "sponsors":
+            start_idx = i + 1
+            start_level = level
+        elif start_idx is not None and start_level is not None and level <= start_level:
+            end_idx = i
+            break
     if start_idx is None:
         return []
 
@@ -417,26 +437,26 @@ def parse_readme(text: str) -> list[ParsedGroup]:
     """Parse README.md text into grouped categories.
 
     Returns a list of ParsedGroup dicts containing nested categories.
-    Content between the thematic break (---) and # Resources or # Contributing
-    is parsed as categories grouped by bold markers (**Group Name**).
+    Content between the Projects heading and Resources or Contributing is parsed
+    as categories grouped by bold markers (**Group Name**).
     """
     md = MarkdownIt("commonmark")
     tokens = md.parse(text)
     root = SyntaxTreeNode(tokens)
     children = root.children
 
-    # Find thematic break (---) and section boundaries in one pass
-    hr_idx = None
+    # Find Projects and section boundaries in one pass.
+    projects_idx = None
     cat_end_idx = None
     for i, node in enumerate(children):
-        if hr_idx is None and node.type == "hr":
-            hr_idx = i
-        elif node.type == "heading" and node.tag == "h1":
+        if _heading_level(node) in (1, 2):
             text_content = _heading_text(node)
-            if cat_end_idx is None and text_content in ("Resources", "Contributing"):
+            if projects_idx is None and text_content == "Projects":
+                projects_idx = i
+            elif cat_end_idx is None and text_content in ("Resources", "Contributing"):
                 cat_end_idx = i
-    if hr_idx is None:
+    if projects_idx is None:
         return []
 
-    cat_nodes = children[hr_idx + 1 : cat_end_idx or len(children)]
+    cat_nodes = children[projects_idx + 1 : cat_end_idx or len(children)]
     return _parse_grouped_sections(cat_nodes)

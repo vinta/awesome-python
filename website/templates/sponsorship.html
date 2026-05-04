@@ -1,0 +1,250 @@
+{% extends "base.html" %}
+{% block title %}Sponsor Awesome Python{% endblock %}
+{% block description %}Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use.{% endblock %}
+{% block canonical_url %}https://awesome-python.com/sponsorship/{% endblock %}
+{% block alternate_links %}{% endblock %}
+{% block header %}
+<header class="category-hero sponsorship-hero">
+  <div class="hero-sheen" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="category-hero-shell">
+    <nav class="hero-topbar category-topbar" aria-label="Site">
+      <a href="/" class="hero-brand-mini">Awesome Python</a>
+      <div class="hero-topbar-actions">
+        <a
+          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+          class="hero-topbar-link hero-topbar-link-strong"
+          target="_blank"
+          rel="noopener"
+          >Submit a project</a
+        >
+      </div>
+    </nav>
+
+    <div class="category-hero-copy sponsorship-hero-copy">
+      <p class="hero-kicker">Sponsorship</p>
+      <h1>Sponsor Awesome Python</h1>
+      <p class="category-subtitle">
+        The #10 most-starred repository on GitHub, and the list Python
+        developers check when choosing what to use. Your sponsorship puts your
+        product in front of them at the moment of decision.
+      </p>
+
+      {% if hero_stats %}
+      <p class="hero-proof sponsorship-proof">
+        {% for stat in hero_stats %}{{ stat }}{% if not loop.last %}
+        <span class="proof-sep">/</span> {% endif %}{% endfor %}
+      </p>
+      {% endif %}
+
+      <div class="hero-actions">
+        <a
+          href="mailto:vinta.chen@gmail.com?subject=Awesome%20Python%20Sponsorship"
+          class="hero-action hero-action-primary"
+          >Email vinta.chen@gmail.com</a
+        >
+        <a
+          href="https://github.com/vinta/awesome-python"
+          class="hero-action hero-action-secondary"
+          target="_blank"
+          rel="noopener"
+          >View on GitHub</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %} {% block content %}
+<section class="sponsorship-section sponsorship-audience" data-reveal>
+  <div class="section-shell sponsorship-shell">
+    <header class="sponsorship-meta">
+      <p class="section-label">Audience</p>
+    </header>
+    <div class="sponsorship-body">
+      <p class="sponsorship-lede">
+        Professional Python developers evaluating libraries and tools for
+        production use. Not beginners browsing tutorials. People making adoption
+        decisions.
+      </p>
+      <dl class="sponsorship-facts">
+        <div>
+          <dt>Who visits</dt>
+          <dd>
+            Mid to senior Python developers arriving with a specific question:
+            a maintained ORM, a fast HTTP client, a task queue worth running in
+            production.
+          </dd>
+        </div>
+        <div>
+          <dt>Where they come from</dt>
+          <dd>
+            Google Search, GitHub, Reddit, YouTube, ChatGPT and other LLMs,
+            Hacker News.
+          </dd>
+        </div>
+        <div>
+          <dt>Why it works</dt>
+          <dd>
+            Ranks on the first page of Google for "best Python libraries".
+            ChatGPT and other LLMs cite it when recommending Python tools.
+            Developers send it to each other.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sponsorship-section sponsorship-tiers" data-reveal>
+  <div class="section-shell sponsorship-shell">
+    <header class="sponsorship-meta">
+      <p class="section-label">Tiers</p>
+      <p class="sponsorship-meta-note">
+        One upfront payment per term. Setup takes less than 24 hours.
+      </p>
+    </header>
+    <div class="sponsorship-body">
+      <ol class="tier-list">
+        <li class="tier">
+          <p class="tier-eyebrow">Headline Sponsor</p>
+          <p class="tier-price">
+            <span class="tier-amount">$500</span>
+            <span class="tier-cadence">/ month</span>
+          </p>
+          <p class="tier-summary">
+            Logo pinned at the top of the README. Logo on the website.
+          </p>
+          <ul class="tier-includes">
+            <li>
+              Large logo and one-line description (max 120 characters) pinned at
+              the very top of the README, above all project entries.
+            </li>
+            <li>Logo link in the sponsor section of awesome-python.com.</li>
+          </ul>
+          <a
+            href="mailto:vinta.chen@gmail.com?subject=Awesome%20Python%20Sponsorship%20-%20Headline"
+            class="tier-cta"
+            >Email about Headline tier</a
+          >
+        </li>
+        <li class="tier">
+          <p class="tier-eyebrow">Featured Sponsor</p>
+          <p class="tier-price">
+            <span class="tier-amount">$150</span>
+            <span class="tier-cadence">/ month</span>
+          </p>
+          <p class="tier-summary">
+            Text link pinned at the top of the README. Text link on the website.
+          </p>
+          <ul class="tier-includes">
+            <li>
+              Text entry (<code>[Name](URL) - Description.</code>, max 120
+              characters) pinned at the top of the README, directly below
+              Headline sponsors.
+            </li>
+            <li>Text link in the sponsor section of awesome-python.com.</li>
+          </ul>
+          <a
+            href="mailto:vinta.chen@gmail.com?subject=Awesome%20Python%20Sponsorship%20-%20Featured"
+            class="tier-cta"
+            >Email about Featured tier</a
+          >
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sponsorship-section sponsorship-past" data-reveal>
+  <div class="section-shell sponsorship-shell">
+    <header class="sponsorship-meta">
+      <p class="section-label">Previously sponsored by</p>
+    </header>
+    <div class="sponsorship-body">
+      <ul class="past-sponsors">
+        <li>
+          <a href="https://www.warp.dev/" target="_blank" rel="noopener"
+            >Warp</a
+          >
+          <span class="past-sponsor-desc"
+            >The terminal for modern developers.</span
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sponsorship-section sponsorship-getstarted" data-reveal>
+  <div class="section-shell sponsorship-shell">
+    <header class="sponsorship-meta">
+      <p class="section-label">Get started</p>
+    </header>
+    <div class="sponsorship-body">
+      <p class="sponsorship-lede">
+        Email
+        <a
+          href="mailto:vinta.chen@gmail.com?subject=Awesome%20Python%20Sponsorship"
+          >vinta.chen@gmail.com</a
+        >
+        with the four items below.
+      </p>
+      <dl class="sponsorship-facts">
+        <div>
+          <dt>Tier</dt>
+          <dd>Headline Sponsor ($500/mo) or Featured Sponsor ($150/mo).</dd>
+        </div>
+        <div>
+          <dt>Content</dt>
+          <dd>
+            Product name, URL, logo, and description (Headline tier), or
+            <code>[Name](URL) - Description.</code> entry (Featured tier).
+          </dd>
+        </div>
+        <div>
+          <dt>Duration</dt>
+          <dd>1, 3, 6 months, or longer.</dd>
+        </div>
+        <div>
+          <dt>Payment method</dt>
+          <dd>US bank transfer (ACH/wire) or PayPal.</dd>
+        </div>
+      </dl>
+      <div class="sponsorship-cta-row">
+        <a
+          href="mailto:vinta.chen@gmail.com?subject=Awesome%20Python%20Sponsorship"
+          class="hero-action hero-action-primary"
+          >Email vinta.chen@gmail.com</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sponsorship-section sponsorship-independence" data-reveal>
+  <div class="section-shell sponsorship-shell">
+    <header class="sponsorship-meta">
+      <p class="section-label">Editorial independence</p>
+    </header>
+    <div class="sponsorship-body">
+      <p>
+        Sponsorship is logo and link placement in the README header. It does not
+        influence which projects are listed. We curate listings on merit through
+        the normal
+        <a
+          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+          target="_blank"
+          rel="noopener"
+          >contribution process</a
+        >.
+      </p>
+      <p class="sponsorship-fineprint">
+        We reserve the right to request changes to sponsor text, logos, or links
+        that are misleading, off-topic, or incompatible with the README
+        formatting.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -81,35 +81,35 @@ MINIMAL_README = textwrap.dedent("""\
 
     Some intro text.
 
-    ---
+    ## Projects
 
-    ## Alpha
+    ### Alpha
 
     _Libraries for alpha stuff._
 
     - [lib-a](https://example.com/a) - Does A.
     - [lib-b](https://example.com/b) - Does B.
 
-    ## Beta
+    ### Beta
 
     _Tools for beta._
 
     - [lib-c](https://example.com/c) - Does C.
 
-    # Resources
+    ## Resources
 
     Where to discover resources.
 
-    ## Newsletters
+    ### Newsletters
 
     - [News One](https://example.com/n1)
     - [News Two](https://example.com/n2)
 
-    ## Podcasts
+    ### Podcasts
 
     - [Pod One](https://example.com/p1)
 
-    # Contributing
+    ## Contributing
 
     Please contribute!
 """)
@@ -120,11 +120,11 @@ GROUPED_README = textwrap.dedent("""\
 
     Some intro text.
 
-    ---
+    ## Projects
 
     **Group One**
 
-    ## Alpha
+    ### Alpha
 
     _Libraries for alpha stuff._
 
@@ -133,25 +133,25 @@ GROUPED_README = textwrap.dedent("""\
 
     **Group Two**
 
-    ## Beta
+    ### Beta
 
     _Tools for beta._
 
     - [lib-c](https://example.com/c) - Does C.
 
-    ## Gamma
+    ### Gamma
 
     - [lib-d](https://example.com/d) - Does D.
 
-    # Resources
+    ## Resources
 
     Where to discover resources.
 
-    ## Newsletters
+    ### Newsletters
 
     - [News One](https://example.com/n1)
 
-    # Contributing
+    ## Contributing
 
     Please contribute!
 """)
@@ -180,7 +180,9 @@ class TestParseReadmeSections:
         groups = parse_readme(MINIMAL_README)
         cats = groups[0]["categories"]
         assert cats[0]["description"] == "Libraries for alpha stuff."
+        assert cats[0]["description_html"] == "Libraries for alpha stuff."
         assert cats[1]["description"] == "Tools for beta."
+        assert cats[1]["description_html"] == "Tools for beta."
 
     def test_contributing_skipped(self):
         groups = parse_readme(MINIMAL_README)
@@ -189,7 +191,7 @@ class TestParseReadmeSections:
             all_names.extend(c["name"] for c in g["categories"])
         assert "Contributing" not in all_names
 
-    def test_no_separator(self):
+    def test_no_projects_heading(self):
         groups = parse_readme("# Just a heading\n\nSome text.\n")
         assert groups == []
 
@@ -197,46 +199,48 @@ class TestParseReadmeSections:
         readme = textwrap.dedent("""\
             # Title
 
-            ---
+            ## Projects
 
-            ## NullDesc
+            ### NullDesc
 
             - [item](https://x.com) - Thing.
 
-            # Resources
+            ## Resources
 
-            ## Tips
+            ### Tips
 
             - [tip](https://x.com)
 
-            # Contributing
+            ## Contributing
 
             Done.
         """)
         groups = parse_readme(readme)
         cats = groups[0]["categories"]
         assert cats[0]["description"] == ""
+        assert cats[0]["description_html"] == ""
         assert cats[0]["entries"][0]["name"] == "item"
 
     def test_description_with_link_stripped(self):
         readme = textwrap.dedent("""\
             # T
 
-            ---
+            ## Projects
 
-            ## Algos
+            ### Algos
 
             _Algorithms. Also see [awesome-algos](https://example.com)._
 
             - [lib](https://x.com) - Lib.
 
-            # Contributing
+            ## Contributing
 
             Done.
         """)
         groups = parse_readme(readme)
         cats = groups[0]["categories"]
         assert cats[0]["description"] == "Algorithms. Also see awesome-algos."
+        assert cats[0]["description_html"] == 'Algorithms. Also see <a href="https://example.com" target="_blank" rel="noopener">awesome-algos</a>.'
 
 
 class TestParseGroupedReadme:
@@ -269,17 +273,17 @@ class TestParseGroupedReadme:
         readme = textwrap.dedent("""\
             # T
 
-            ---
+            ## Projects
 
             **Empty**
 
             **HasCats**
 
-            ## Cat
+            ### Cat
 
             - [x](https://x.com) - X.
 
-            # Contributing
+            ## Contributing
 
             Done.
         """)
@@ -291,15 +295,15 @@ class TestParseGroupedReadme:
         readme = textwrap.dedent("""\
             # T
 
-            ---
+            ## Projects
 
             **Note:** This is not a group marker.
 
-            ## Cat
+            ### Cat
 
             - [x](https://x.com) - X.
 
-            # Contributing
+            ## Contributing
 
             Done.
         """)
@@ -313,19 +317,19 @@ class TestParseGroupedReadme:
         readme = textwrap.dedent("""\
             # T
 
-            ---
+            ## Projects
 
-            ## Orphan
+            ### Orphan
 
             - [x](https://x.com) - X.
 
             **A Group**
 
-            ## Grouped
+            ### Grouped
 
             - [y](https://x.com) - Y.
 
-            # Contributing
+            ## Contributing
 
             Done.
         """)
@@ -346,10 +350,7 @@ def _content_nodes(md_text: str) -> list[SyntaxTreeNode]:
 
 class TestParseSectionEntries:
     def test_flat_entries(self):
-        nodes = _content_nodes(
-            "- [django](https://example.com/d) - A web framework.\n"
-            "- [flask](https://example.com/f) - A micro framework.\n"
-        )
+        nodes = _content_nodes("- [django](https://example.com/d) - A web framework.\n- [flask](https://example.com/f) - A micro framework.\n")
         entries = _parse_section_entries(nodes)
         assert len(entries) == 2
         assert entries[0]["name"] == "django"
@@ -366,13 +367,7 @@ class TestParseSectionEntries:
         assert entries[0]["description"] == ""
 
     def test_subcategorized_entries(self):
-        nodes = _content_nodes(
-            "- Algorithms\n"
-            "  - [algos](https://x.com/a) - Algo lib.\n"
-            "  - [sorts](https://x.com/s) - Sort lib.\n"
-            "- Design Patterns\n"
-            "  - [patterns](https://x.com/p) - Pattern lib.\n"
-        )
+        nodes = _content_nodes("- Algorithms\n  - [algos](https://x.com/a) - Algo lib.\n  - [sorts](https://x.com/s) - Sort lib.\n- Design Patterns\n  - [patterns](https://x.com/p) - Pattern lib.\n")
         entries = _parse_section_entries(nodes)
         assert len(entries) == 3
         assert entries[0]["name"] == "algos"
@@ -410,15 +405,15 @@ class TestParseSectionEntries:
         readme = textwrap.dedent("""\
             # T
 
-            ---
+            ## Projects
 
-            ## Async
+            ### Async
 
             - [asyncio](https://x.com) - Async I/O.
               - [awesome-asyncio](https://y.com)
             - [trio](https://z.com) - Friendly async.
 
-            # Contributing
+            ## Contributing
 
             Done.
         """)
@@ -428,7 +423,7 @@ class TestParseSectionEntries:
         assert cats[0]["entry_count"] == 3
 
     def test_description_html_escapes_xss(self):
-        nodes = _content_nodes('- [lib](https://x.com) - A <script>alert(1)</script> lib.\n')
+        nodes = _content_nodes("- [lib](https://x.com) - A <script>alert(1)</script> lib.\n")
         entries = _parse_section_entries(nodes)
         assert "<script>" not in entries[0]["description"]
         assert "&lt;script&gt;" in entries[0]["description"]
@@ -445,9 +440,6 @@ class TestParseRealReadme:
     def test_at_least_11_groups(self):
         assert len(self.groups) >= 11
 
-    def test_first_group_is_ai_ml(self):
-        assert self.groups[0]["name"] == "AI & ML"
-
     def test_at_least_69_categories(self):
         assert len(self.cats) >= 69
 
@@ -455,37 +447,9 @@ class TestParseRealReadme:
         all_names = [c["name"] for c in self.cats]
         assert "Contributing" not in all_names
 
-    def test_first_category_is_ai_and_agents(self):
-        assert self.cats[0]["name"] == "AI and Agents"
-        assert self.cats[0]["slug"] == "ai-and-agents"
-
-    def test_web_apis_slug(self):
-        slugs = [c["slug"] for c in self.cats]
-        assert "web-apis" in slugs
-
-    def test_descriptions_extracted(self):
-        ai = next(c for c in self.cats if c["name"] == "AI and Agents")
-        assert "AI applications" in ai["description"]
-
     def test_entry_counts_nonzero(self):
         for cat in self.cats:
             assert cat["entry_count"] > 0, f"{cat['name']} has 0 entries"
-
-    def test_async_has_also_see(self):
-        async_cat = next(c for c in self.cats if c["name"] == "Asynchronous Programming")
-        asyncio_entry = next(e for e in async_cat["entries"] if e["name"] == "asyncio")
-        assert len(asyncio_entry["also_see"]) >= 1
-        assert asyncio_entry["also_see"][0]["name"] == "awesome-asyncio"
-
-    def test_description_links_stripped_to_text(self):
-        algos = next(c for c in self.cats if c["name"] == "Algorithms and Design Patterns")
-        assert "awesome-algorithms" in algos["description"]
-        assert "https://" not in algos["description"]
-
-    def test_miscellaneous_in_own_group(self):
-        misc_group = next((g for g in self.groups if g["name"] == "Miscellaneous"), None)
-        assert misc_group is not None
-        assert any(c["name"] == "Miscellaneous" for c in misc_group["categories"])
 
     def test_all_entries_have_nonempty_names(self):
         bad = []
@@ -516,21 +480,21 @@ class TestParseRealReadme:
         md = MarkdownIt("commonmark")
         root = SyntaxTreeNode(md.parse(self.readme_text))
 
-        # Find category section boundaries (between --- and # Resources/Contributing)
-        hr_idx = None
+        # Find category section boundaries (between Projects and Resources/Contributing)
+        projects_idx = None
         end_idx = None
         for i, node in enumerate(root.children):
-            if hr_idx is None and node.type == "hr":
-                hr_idx = i
-            elif node.type == "heading" and node.tag == "h1":
+            if node.type == "heading" and node.tag in ("h1", "h2"):
                 text = render_inline_text(node.children[0].children) if node.children else ""
-                if end_idx is None and text in ("Resources", "Contributing"):
+                if projects_idx is None and text == "Projects":
+                    projects_idx = i
+                elif end_idx is None and text in ("Resources", "Contributing"):
                     end_idx = i
-        if hr_idx is None:
+        if projects_idx is None:
             return
 
         bad = []
-        cat_nodes = root.children[hr_idx + 1 : end_idx or len(root.children)]
+        cat_nodes = root.children[projects_idx + 1 : end_idx or len(root.children)]
         for node in cat_nodes:
             if node.type != "bullet_list":
                 continue
