@@ -383,6 +383,7 @@ _Libraries for sending and parsing email, and mail server management._
 
 - [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+- [burner-bouncer](https://github.com/grocerysushi/burner-bouncer) - Zero-dependency disposable email detector
 
 **Database & Storage**
 
