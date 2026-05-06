@@ -133,6 +133,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 
 - Agent Skills
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
+- Tool APIs
+  - [x711](https://x711.io) - Universal pay-per-call tool API for AI agents with shared hive memory, web search, and price feeds. Supports USDC micropayments on Base and Solana.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development. Also [skills-curated](https://github.com/trailofbits/skills-curated).
 - Orchestration
