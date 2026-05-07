@@ -949,6 +949,7 @@ _Libraries for manipulating images._
 _Libraries for manipulating audio, video, and their metadata._
 
 - Audio
+  - [birdnet](https://github.com/kahst/BirdNET-Analyzer) - Deep learning framework for acoustic species detection; identifies bird species from audio recordings using TensorFlow.
   - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
