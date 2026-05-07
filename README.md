@@ -955,6 +955,7 @@ _Libraries for manipulating audio, video, and their metadata._
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
+  - [sonic-gate](https://github.com/Codinglone/sonic-gate) - CLI-first deterministic audio/video quality gate. Catches corrupted, invalid, or low-quality media before it reaches humans. Optional Whisper-based AI probe.
 - Video
   - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
   - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
