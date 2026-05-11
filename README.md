@@ -603,10 +603,11 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
   - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
     - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
-  - [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
-  
+ - [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
+- Code Formatters
   - [black](https://github.com/psf/black) - The uncompromising Python code formatter.
   - [isort](https://github.com/PyCQA/isort) - A Python utility / library to sort imports.
+  - [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
   
 - Refactoring
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
