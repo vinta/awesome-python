@@ -497,6 +497,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 _Libraries for validating data. Used for forms in many cases._
 
+- [aegis-dq](https://github.com/aegis-dq/aegis-dq) - An agentic data quality framework with LLM-powered diagnosis, root-cause analysis, and SQL auto-fix — 31 rule types, pluggable LLMs, DuckDB/BigQuery/Databricks adapters.
 - [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
