@@ -149,9 +149,9 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
 - Data Layer
+  - [dakera-py](https://github.com/dakera-ai/dakera-py) - Official Python SDK for the Dakera self-hosted agent memory server, with async store/recall, session management, decay config, and full MCP integration.
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
-  - [dakera-py](https://github.com/dakera-ai/dakera-py) - Official Python SDK for the Dakera self-hosted agent memory server, with async store/recall, session management, decay config, and full MCP integration.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
 - Pre-trained Models and Inference
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
