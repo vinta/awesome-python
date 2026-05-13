@@ -492,6 +492,8 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
   - [lumibot](https://github.com/Lumiwealth/lumibot) - Algorithmic trading framework for backtesting and live deployment across stocks, options, crypto, futures, and forex.
   - [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
   - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
+- Real-time
+  - [beava](https://github.com/beava-dev/beava) - Real-time feature server for fraud detection, recommender systems, and LLM guardrails; define pipelines in Python and query live per-entity aggregates over HTTP or TCP.
 
 ### Data Validation
 
