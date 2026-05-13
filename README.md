@@ -661,6 +661,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - Code Coverage
   - [coverage](https://github.com/coveragepy/coveragepy) - Code coverage measurement.
 - Fake Data
+  - [eventum](https://github.com/eventum-generator/eventum) - Data generation platform for producing synthetic event streams based on Jinja templates.
   - [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
   - [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
 
