@@ -255,6 +255,7 @@ _Libraries for building RESTful and GraphQL APIs._
 - Django
   - [django-modern-rest](https://github.com/wemake-services/django-modern-rest) - Modern REST with speed, types, async, `msgspec`, `pydantic` and other goodies!
   - [django-ninja](https://github.com/vitalik/django-ninja) - Fast, Django REST framework based on type hints and Pydantic.
+- [Django Ninja](https://github.com/vitalik/django-ninja) - Fast, AsyncCapable, Django-based API framework with automatic OpenAPI documentation.
   - [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
   - [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
 - Flask
