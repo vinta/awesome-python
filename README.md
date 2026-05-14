@@ -1110,6 +1110,7 @@ _Libraries for application-layer web security._
 
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
+* [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) - Runtime defense against memory poisoning attacks in AI agents (OWASP ASI06).
 **Other**
 
 ### Hardware
