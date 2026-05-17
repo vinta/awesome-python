@@ -822,6 +822,7 @@ _Useful CLI-based tools for productivity._
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
   - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A command-line program to download videos from YouTube and other video sites, a fork of youtube-dl.
+  - [github-to-human](https://github.com/nonlinearHuman/github-to-human) - AI-powered tool that translates GitHub repos into plain-language 3-step guides.
 - CLI Enhancements
   - [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
