@@ -488,6 +488,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 - General
   - [dlt](https://github.com/dlt-hub/dlt) - A Python library for building data pipelines with automatic schema inference, incremental loading, and support for multiple sources and destinations.
+  - [json2sql-cli](https://github.com/coding-dev-tools/json2sql) - Convert JSON files and APIs to SQL schemas, inserts, and queries with auto schema inference.
 - Financial Data
   - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
   - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
