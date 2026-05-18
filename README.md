@@ -610,6 +610,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
+  - [deadcode](https://github.com/Coding-Dev-Tools/deadcode) - Static analysis tool to detect and remove dead code across multiple languages.
 - Code Linters
   - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
   - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
@@ -720,10 +721,12 @@ _Software and libraries for DevOps._
   - [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
   - [openstack](https://github.com/openstack/openstack) - Open source software for building private and public clouds.
   - [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
+  - [configdrift](https://github.com/Coding-Dev-Tools/configdrift) - Detect and track configuration drift across infrastructure environments.
   - [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 - Deployment
   - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
+  - [deploydiff](https://github.com/Coding-Dev-Tools/deploydiff) - Preview infrastructure cost and diff changes before deploying to cloud.
 - Monitoring and Processes
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
   - [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
@@ -823,6 +826,7 @@ _Useful CLI-based tools for productivity._
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
   - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A command-line program to download videos from YouTube and other video sites, a fork of youtube-dl.
+  - [click-to-mcp](https://github.com/Coding-Dev-Tools/click-to-mcp) - Auto-wrap any Click/Typer CLI as an MCP server for AI agent integration.
 - CLI Enhancements
   - [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
@@ -1088,6 +1092,7 @@ _Libraries for storing and parsing configuration options._
 - [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 - [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
 - [python-dotenv](https://github.com/theskumar/python-dotenv) - Reads key-value pairs from a `.env` file and sets them as environment variables.
+  - [envault](https://github.com/Coding-Dev-Tools/envault) - Encrypted .env file management with team sharing, version control, and secret rotation.
 
 **Security**
 
