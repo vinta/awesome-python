@@ -1088,6 +1088,7 @@ _Libraries for storing and parsing configuration options._
 - [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
 - [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
 - [python-dotenv](https://github.com/theskumar/python-dotenv) - Reads key-value pairs from a `.env` file and sets them as environment variables.
+- [configdrift](https://github.com/coding-dev-tools/configdrift) - Detect configuration drift across environments before it causes incidents.
 
 **Security**
 
