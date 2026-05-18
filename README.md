@@ -130,7 +130,9 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 
 **AI & ML**
 
-### AI and Agents
+### AI
+- [RustChain](https://github.com/Scottcjn/Rustchain) - Proof-of-Activity blockchain that rewards vintage hardware.
+ and Agents
 
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
