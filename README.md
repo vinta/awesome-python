@@ -724,6 +724,7 @@ _Software and libraries for DevOps._
 - Deployment
   - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
+  - [deploydiff](https://github.com/coding-dev-tools/deploydiff) - Preview infrastructure cost and configuration changes before deploying.
 - Monitoring and Processes
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
   - [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
