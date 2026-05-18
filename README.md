@@ -640,6 +640,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
     - [awesome-pytest](https://github.com/augustogoulart/awesome-pytest)
   - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
   - [scanapi](https://github.com/scanapi/scanapi) - Automated Testing and Documentation for your REST API.
+  - [api-contract-guardian](https://github.com/coding-dev-tools/api-contract-guardian) - Catch breaking OpenAPI/REST API changes in CI before they reach production.
   - [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 - Test Runners
   - [nox](https://github.com/wntrblm/nox) - Flexible test automation for Python.
