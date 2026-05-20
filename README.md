@@ -1143,6 +1143,7 @@ Where to discover learning resources or new Python libraries.
 
 ### Newsletters
 
+- [OWASP Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard) - Official OWASP reference implementation for defending AI agents against memory poisoning (ASI06) and indirect prompt injection attacks.
 - [Awesome Python Newsletter](https://python.libhunt.com/newsletter)
 - [Pycoder's Weekly](https://pycoders.com/)
 - [Python Tricks](https://realpython.com/python-tricks/)
