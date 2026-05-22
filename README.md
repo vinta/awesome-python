@@ -1111,6 +1111,7 @@ _Frameworks and tools for penetration testing._
 
 _Libraries for application-layer web security._
 
+- [mcp-safeguard](https://github.com/SyedAnas01/mcp-safeguard) - A security scanner for MCP (Model Context Protocol) servers. Detects prompt injection in tool descriptions, hardcoded credentials, exposed endpoints, and tool poisoning with CVSS scoring.
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Other**
