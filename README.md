@@ -767,6 +767,7 @@ _Libraries for working with message brokers and event streaming._
 
 _Libraries for scheduling jobs._
 
+- [agent-collab](https://github.com/JianFeiGan/agent-collab) - A multi-agent orchestration engine for coordinating AI coding agents with YAML workflows, checkpoint recovery, and plugin system.
 - [airflow](https://github.com/apache/airflow) - Airflow is a platform to programmatically author, schedule and monitor workflows.
 - [apscheduler](https://github.com/agronholm/apscheduler) - A light but powerful in-process task scheduler that lets you schedule functions.
 - [dagster](https://github.com/dagster-io/dagster) - An orchestration platform for the development, production, and observation of data assets.
