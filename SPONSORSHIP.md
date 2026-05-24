@@ -34,6 +34,7 @@ Your sponsorship puts your product in front of developers at the exact moment th
 ## Previously Sponsored By
 
 - [Warp](https://www.warp.dev/) - The terminal for modern developers.
+- [pyr](https://pyrun.dev) - Zero-config Python project manager.
 
 ## Get Started
 
