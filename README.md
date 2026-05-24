@@ -607,6 +607,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 
 - Code Analysis
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+  - [codeguard](https://github.com/mohameden19961/codeguard) - A Python code quality analyzer with 9 checks (complexity, security, style, performance, docs, naming, imports, duplication, typing), auto-fix, and CI-ready SARIF/HTML output.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
