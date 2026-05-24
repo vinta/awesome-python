@@ -817,6 +817,7 @@ _Useful CLI-based tools for productivity._
 
 - Productivity Tools
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
+  - [perseus-ctx](https://github.com/tcconnally/perseus) - A Python CLI that pre-resolves live workspace state (git, services, memory, coordination) into a markdown briefing for AI assistants at session start. Eliminates the AI cold-start tax. MIT, single dependency.
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
