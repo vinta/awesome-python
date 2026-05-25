@@ -202,6 +202,7 @@ _Libraries for working with human languages._
 - General
   - [gensim](https://github.com/piskvorky/gensim) - Topic Modeling for Humans.
   - [nltk](https://github.com/nltk/nltk) - A leading platform for building Python programs to work with human language data.
+  - [llm-token-surgeon](https://github.com/ashishjsharda/llm-token-surgeon) - A CLI and Python library that reduces LLM API token usage by 30-70% through prompt optimization, redundancy removal, and semantic compression.
   - [spacy](https://github.com/explosion/spaCy) - A library for industrial-strength natural language processing in Python and Cython.
   - [stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
