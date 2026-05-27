@@ -732,6 +732,7 @@ _Software and libraries for DevOps._
 - Other
   - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
+  - [kubesdk](https://github.com/puzl-cloud/kubesdk) - A modern async-first Kubernetes client and API model generator.
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 
 ### Distributed Computing
