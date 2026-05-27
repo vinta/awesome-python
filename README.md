@@ -152,6 +152,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [promptise](https://github.com/promptise-com/foundry) - A framework for building end-to-end production-ready agentic systems, scalable & secure MCP's and autonomous agents.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
+  - [synaptoroute](https://github.com/sitanshukr08/SynaptoRoute) - A local semantic routing engine designed to replace slow LLM API routing calls.
 - Data Layer
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
