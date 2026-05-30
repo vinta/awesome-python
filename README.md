@@ -949,6 +949,7 @@ _Libraries for file manipulation._
 _Libraries for manipulating images._
 
 - [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](https://www.pythonware.com/products/pil/) fork.
+- [placepix](https://github.com/riadvice/placepix) - Self-hosted placeholder image server with on-the-fly resizing, filtering, and format conversion.
 - [pymatting](https://github.com/pymatting/pymatting) - A library for alpha matting.
 - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 - [python-qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
