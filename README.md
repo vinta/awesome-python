@@ -384,6 +384,7 @@ _Libraries to automate web scraping and extract web content._
   - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
   - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
+- [humanbrowser](https://humanbrowser.cloud) - Pay-as-you-go browser automation with residential proxies, captcha solving, and AI tasks; unused balance never expires.
 
 ### Email
 
