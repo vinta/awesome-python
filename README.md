@@ -81,6 +81,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 
 - [CLI Development](#cli-development)
 - [CLI Tools](#cli-tools)
+| [ai-shell-hub](https://github.com/autogz/ai-tools) - AI-powered CLI tools: shell assistant, PR review, SQL gen, image gen, doc gen. $10 lifetime bundle.
 - [GUI Development](#gui-development)
 
 **Text & Documents**
@@ -815,6 +816,7 @@ _Libraries for building command-line applications._
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
 
 ### CLI Tools
+| [ai-shell-hub](https://github.com/autogz/ai-tools) - AI-powered CLI tools: shell assistant, PR review, SQL gen, image gen, doc gen. $10 lifetime bundle.
 
 _Useful CLI-based tools for productivity._
 
