@@ -81,7 +81,6 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 
 - [CLI Development](#cli-development)
 - [CLI Tools](#cli-tools)
-| [ai-shell-hub](https://github.com/autogz/ai-tools) - AI-powered CLI tools: shell assistant, PR review, SQL gen, image gen, doc gen. $10 lifetime bundle.
 - [GUI Development](#gui-development)
 
 **Text & Documents**
@@ -816,7 +815,6 @@ _Libraries for building command-line applications._
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
 
 ### CLI Tools
-| [ai-shell-hub](https://github.com/autogz/ai-tools) - AI-powered CLI tools: shell assistant, PR review, SQL gen, image gen, doc gen. $10 lifetime bundle.
 
 _Useful CLI-based tools for productivity._
 
@@ -894,6 +892,7 @@ _Libraries for parsing and manipulating plain texts._
 _Libraries for working with HTML and XML._
 
 - [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
+- [ai-shell-hub](https://github.com/autogz/ai-tools) - Natural language to shell commands with safety classification and error diagnosis.
 - [justhtml](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works.
 - [lxml](https://github.com/lxml/lxml) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
