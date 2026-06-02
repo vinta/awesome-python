@@ -188,7 +188,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high performance gradient boosting framework.
-- [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+- [mindsdb](https://github.com/mindsdb/minds-platform) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
 - * [scikit-lego](https://github.com/koaning/scikit-lego) - A collection of lego bricks for scikit-learn pipelines.
@@ -477,7 +477,7 @@ _Libraries for data analysis._
 
 - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
 - [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
-- [data-profiling](https://github.com/Data-Centric-AI-Community/data-profiling) - Generate detailed data profiling reports for pandas DataFrames.
+- [data-profiling](https://github.com/Data-Centric-AI-Community/fg-data-profiling) - Generate detailed data profiling reports for pandas DataFrames.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 - [ibis](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
 - [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
@@ -562,7 +562,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
   - [pydy](https://github.com/pydy/pydy) - Short for Python Dynamics, used to assist with workflow in the modeling of dynamic motion.
   - [PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics) - This is a compilation of various robotics algorithms with visualizations.
 - Simulation and Modeling
-  - [mesa](https://github.com/projectmesa/mesa) - An agent-based modeling framework for building, analyzing, and visualizing complex system simulations.
+  - [mesa](https://github.com/mesa/mesa) - An agent-based modeling framework for building, analyzing, and visualizing complex system simulations.
   - [pathsim](https://github.com/pathsim/pathsim) - A block-based system modeling and simulation framework with a browser-based visual editor.
   - [pymc](https://github.com/pymc-devs/pymc) - Probabilistic programming and Bayesian modeling in Python.
   - [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
@@ -925,7 +925,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
 - Markdown
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
-  - [markdown](https://github.com/waylan/Python-Markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
@@ -963,7 +963,7 @@ _Libraries for manipulating images._
 _Libraries for manipulating audio, video, and their metadata._
 
 - Audio
-  - [birdnet](https://github.com/kahst/BirdNET-Analyzer) - Deep learning framework for acoustic species detection; identifies bird species from audio recordings using TensorFlow.
+  - [birdnet](https://github.com/birdnet-team/BirdNET-Analyzer) - Deep learning framework for acoustic species detection; identifies bird species from audio recordings using TensorFlow.
   - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [KittenTTS](https://github.com/KittenML/KittenTTS) - Lightweight ONNX text-to-speech library with small CPU-friendly models.
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
@@ -975,7 +975,7 @@ _Libraries for manipulating audio, video, and their metadata._
 - Metadata
   - [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
   - [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
-  - [tinytag](https://github.com/devsnd/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
+  - [tinytag](https://github.com/tinytag/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
 
 ### Game Development
 
@@ -1016,7 +1016,7 @@ _Functional Programming with Python._
 - [coconut](https://github.com/evhub/coconut) - A variant of Python built for simple, elegant, Pythonic functional programming.
 - [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
-- [more-itertools](https://github.com/erikrose/more-itertools) - More routines for operating on iterables, beyond `itertools`.
+- [more-itertools](https://github.com/more-itertools/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 - [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 - [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz/) for Cython-accelerated performance.
 
@@ -1071,7 +1071,7 @@ _Local PyPI repository server and proxies._
 
 - [bandersnatch](https://github.com/pypa/bandersnatch/) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 - [devpi](https://github.com/devpi/devpi) - PyPI server and packaging/testing/release tool.
-- [warehouse](https://github.com/pypa/warehouse) - Next generation Python Package Repository (PyPI).
+- [warehouse](https://github.com/pypi/warehouse) - Next generation Python Package Repository (PyPI).
 
 ### Distribution
 
@@ -1137,7 +1137,7 @@ _Python programming on Microsoft Windows._
 
 _Useful libraries or tools that don't fit in the categories above._
 
-- [blinker](https://github.com/jek/blinker) - A fast Python in-process signal/event dispatching system.
+- [blinker](https://github.com/pallets-eco/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
