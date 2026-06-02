@@ -165,6 +165,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
 - Speech
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
+  - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
   - [voxcpm](https://github.com/OpenBMB/VoxCPM) - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.
 
@@ -190,6 +191,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [mindsdb](https://github.com/mindsdb/mindsdb) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
+- * [scikit-lego](https://github.com/koaning/scikit-lego) - A collection of lego bricks for scikit-learn pipelines.
 - [spark.ml](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/)'s scalable [Machine Learning library](https://spark.apache.org/docs/latest/ml-guide.html) for distributed computing.
 - [TabGAN](https://github.com/Diyago/Tabular-data-generation) - Synthetic tabular data generation using GANs, Diffusion Models, and LLMs.
 - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting.
@@ -435,6 +437,7 @@ _Libraries for connecting and operating databases._
 
 _Databases implemented in Python._
 
+- [chdb](https://github.com/chdb-io/chdb) - In-process OLAP SQL engine with the full ClickHouse dialect, zero-copy pandas/Arrow interop, and federation to remote ClickHouse clusters via `remoteSecure()`.
 - [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with embeddings and semantic search.
 - [duckdb](https://github.com/duckdb/duckdb) - An in-process SQL OLAP database management system; optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
 - [pickledb](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
@@ -1122,6 +1125,7 @@ _Libraries for programming with hardware._
 - [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
 - [jumpstarter](https://github.com/jumpstarter-dev/jumpstarter) - A hardware-in-the-loop testing framework with a Python client library for automated testing on real and virtual hardware.
 - [pynput](https://github.com/moses-palmer/pynput) - A library to control and monitor input devices.
+- [synology-api](https://github.com/N4S4/synology-api) - Python wrapper for Synology NAS APIs: Surveillance Station, File Station, Download Station, Docker, and 50+ other endpoints.
 
 ### Microsoft Windows
 
