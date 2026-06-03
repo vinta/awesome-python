@@ -527,6 +527,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - Specialized
   - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
   - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](https://www.graphviz.org/).
+  - [statanim](https://github.com/rishabhbhartiya/statanim) - A Manim extension for animated statistical visualisations including distributions, regression, probability, inference, and physical props.
 - Dashboards and Apps
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
