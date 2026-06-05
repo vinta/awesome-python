@@ -140,6 +140,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development. Also [skills-curated](https://github.com/trailofbits/skills-curated).
 - Orchestration
   - [ag2](https://github.com/ag2ai/ag2) - An open-source AgentOS for multi-agent orchestration and building agentic AI systems.
+  - [agent-collab](https://github.com/JianFeiGan/agent-collab) - Orchestrate multiple AI coding assistants (Claude Code, Codex, Aider) with YAML workflows, DAG scheduling, and file locking.
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
   - [bernstein](https://github.com/sipyourdrink-ltd/bernstein) - A deterministic Python orchestrator for CLI coding agents (Claude Code, Codex, Gemini CLI, and 40+ more) with parallel git worktrees and an HMAC-signed audit chain.
   - [bindu](https://github.com/getbindu/Bindu) - A framework that wraps any agent handler with DID-based cryptographic identity, A2A JSON-RPC over HTTP, OAuth2 auth, x402 (USDC) payments, and a built-in operator inbox.
