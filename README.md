@@ -869,7 +869,7 @@ _Libraries for parsing and manipulating plain texts._
 
 - General
   - [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
-  - [chardet](https://github.com/chardet/chardet) - Python 2/3 compatible character encoding detector.
+  - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
   - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
