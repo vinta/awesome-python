@@ -28,6 +28,7 @@ BUILTIN_PUBLIC_URL = f"{SITE_URL}categories/{BUILTIN_SLUG}/"
 
 SPONSORSHIP_PATH = "/sponsorship/"
 SPONSORSHIP_PUBLIC_URL = f"{SITE_URL}sponsorship/"
+SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
 
 SOURCE_TYPE_DOMAINS = {
     "docs.python.org": "Built-in",
@@ -128,6 +129,8 @@ def _website_node() -> dict:
         "@id": WEBSITE_ID,
         "name": "Awesome Python",
         "url": SITE_URL,
+        "inLanguage": "en",
+        "sameAs": "https://github.com/vinta/awesome-python",
     }
 
 
@@ -164,21 +167,59 @@ def build_homepage_json_ld(entries: Sequence[TemplateEntry], total_categories: i
                 "url": SITE_URL,
                 "description": description,
                 "isPartOf": ISPARTOF_WEBSITE,
+                "inLanguage": "en",
                 "mainEntity": _item_list_payload(entries),
             },
         ],
     }
 
 
-def category_meta_description(name: str, entry_count: int, description: str) -> str:
-    count_sentence = f"Explore {entry_count} curated Python projects in {name}."
+def category_meta_title(name: str, parent_name: str | None = None) -> str:
+    if parent_name:
+        title = f"{name} for {parent_name} - Awesome Python"
+        if len(title) <= 60:
+            return title
+        title = f"{parent_name}: {name} - Awesome Python"
+        if len(title) <= 60:
+            return title
+        return f"{name} - Awesome Python"
+    title = f"{name} Python Libraries - Awesome Python"
+    if len(title) <= 60:
+        return title
+    return f"{name} - Awesome Python"
+
+
+def category_meta_description(name: str, entry_count: int, description: str, parent_name: str | None = None) -> str:
+    target = f"{name} for {parent_name}" if parent_name else name
+    count_sentence = f"Explore {entry_count} curated Python projects in {target}."
     if description:
         lead = description if description.endswith((".", "!", "?")) else f"{description}."
         return f"{lead} {count_sentence}"
     return f"{count_sentence} Part of the Awesome Python catalog."
 
 
-def build_category_json_ld(name: str, url: str, description: str, entries: Sequence[TemplateEntry]) -> dict:
+def build_breadcrumb_json_ld(items: Sequence[tuple[str, str]]) -> dict:
+    return {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": i,
+                "name": name,
+                "item": url,
+            }
+            for i, (name, url) in enumerate(items, start=1)
+        ],
+    }
+
+
+def build_category_json_ld(
+    name: str,
+    url: str,
+    description: str,
+    entries: Sequence[TemplateEntry],
+    breadcrumbs: Sequence[tuple[str, str]],
+) -> dict:
     return {
         "@context": "https://schema.org",
         "@graph": [
@@ -186,12 +227,38 @@ def build_category_json_ld(name: str, url: str, description: str, entries: Seque
             {
                 "@type": "CollectionPage",
                 "@id": url,
-                "name": f"{name} Python Libraries",
+                "name": name,
                 "url": url,
                 "description": description,
                 "isPartOf": ISPARTOF_WEBSITE,
+                "inLanguage": "en",
                 "mainEntity": _item_list_payload(entries),
             },
+            build_breadcrumb_json_ld(breadcrumbs),
+        ],
+    }
+
+
+def build_sponsorship_json_ld() -> dict:
+    return {
+        "@context": "https://schema.org",
+        "@graph": [
+            _website_node(),
+            {
+                "@type": "WebPage",
+                "@id": SPONSORSHIP_PUBLIC_URL,
+                "name": "Sponsor Awesome Python",
+                "url": SPONSORSHIP_PUBLIC_URL,
+                "description": SPONSORSHIP_DESCRIPTION,
+                "isPartOf": ISPARTOF_WEBSITE,
+                "inLanguage": "en",
+            },
+            build_breadcrumb_json_ld(
+                [
+                    ("Awesome Python", SITE_URL),
+                    ("Sponsorship", SPONSORSHIP_PUBLIC_URL),
+                ]
+            ),
         ],
     }
 
@@ -548,14 +615,21 @@ def build(repo_root: Path) -> None:
         group_categories: Sequence[ParsedSection] | None = None,
     ) -> None:
         page_dir.mkdir(parents=True, exist_ok=True)
-        category_description = category_meta_description(category["name"], len(entries), category["description"])
+        parent_name = parent_category["name"] if parent_category else None
+        category_title = category_meta_title(category["name"], parent_name)
+        category_description = category_meta_description(category["name"], len(entries), category["description"], parent_name)
+        breadcrumbs = [("Awesome Python", SITE_URL)]
+        if parent_category:
+            breadcrumbs.append((parent_category["name"], category_public_url(parent_category)))
+        breadcrumbs.append((category["name"], category_url))
         category_json_ld = json.dumps(
-            build_category_json_ld(category["name"], category_url, category_description, entries),
+            build_category_json_ld(category_title.removesuffix(" - Awesome Python"), category_url, category_description, entries, breadcrumbs),
             ensure_ascii=False,
         ).replace("</", "<\\/")
         (page_dir / "index.html").write_text(
             tpl_category.render(
                 category=category,
+                category_title=category_title,
                 category_url=category_url,
                 category_description=category_description,
                 entries=entries,
@@ -607,7 +681,11 @@ def build(repo_root: Path) -> None:
         hero_stats.append(f"{repo_stars}+ stars on GitHub")
     hero_stats.append(f"Updated {build_date.strftime('%B %d, %Y')}")
     (sponsorship_dir / "index.html").write_text(
-        tpl_sponsorship.render(hero_stats=hero_stats),
+        tpl_sponsorship.render(
+            hero_stats=hero_stats,
+            sponsorship_description=SPONSORSHIP_DESCRIPTION,
+            sponsorship_json_ld=json.dumps(build_sponsorship_json_ld(), ensure_ascii=False).replace("</", "<\\/"),
+        ),
         encoding="utf-8",
     )
 

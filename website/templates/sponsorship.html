@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Sponsor Awesome Python{% endblock %}
-{% block description %}Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use.{% endblock %}
+{% block description %}{{ sponsorship_description }}{% endblock %}
 {% block canonical_url %}https://awesome-python.com/sponsorship/{% endblock %}
 {% block alternate_links %}{% endblock %}
+{% block extra_head %}
+<script type="application/ld+json">{{ sponsorship_json_ld | safe }}</script>
+{% endblock %}
 {% block header %}
 <header class="category-hero sponsorship-hero">
   <div class="hero-sheen" aria-hidden="true"></div>
