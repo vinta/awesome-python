@@ -138,6 +138,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [nuwa-skill](https://github.com/alchaincyf/nuwa-skill/blob/main/README_EN.md) - Nuwa distills the thinking of anyone — let Musk, Naval, Munger, and Feynman work for you.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
+- MCP Servers
+  - [twzrd-agent-intel](https://intel.twzrd.xyz) - Solana-native x402 MCP for agent trust scoring. 4 free preflight tools score any Solana wallet (on-chain activity, transaction patterns, network age, recurring behavior); paid tools return signed trust tokens via HTTP 402 + USDC (<1s settlement). Install: `pip install twzrd-agent-intel`.
 - Orchestration
   - [ag2](https://github.com/ag2ai/ag2) - An open-source AgentOS for multi-agent orchestration and building agentic AI systems.
   - [autogen](https://github.com/microsoft/autogen) - A programming framework for building agentic AI applications.
