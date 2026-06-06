@@ -56,6 +56,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 - [Geolocation](#geolocation)
 - [Science](#science)
 - [Quantum Computing](#quantum-computing)
+- [Blockchain & Web3](#blockchain--web3)
 
 **Developer Tools**
 
@@ -581,6 +582,12 @@ _Libraries for quantum computing._
 - [pennylane](https://github.com/PennyLaneAI/pennylane) — A hybrid quantum-classical machine learning library with automatic differentiation support.
 - [qiskit](https://github.com/Qiskit/qiskit) — An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
 - [qutip](https://github.com/qutip/qutip) - Quantum Toolbox in Python.
+
+### Blockchain & Web3
+
+_Libraries for blockchain development, Web3 integration, and decentralized applications._
+
+- [web3-agent-kit](https://github.com/ulsreall/web3-agent-kit) - Open-source Python SDK for building autonomous blockchain AI agents. 565 tests, 25+ modules, 7+ chains, LLM integration. [PyPI](https://pypi.org/project/web3-agent-kit/)
 
 **Developer Tools**
 
