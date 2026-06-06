@@ -1,3 +1,6 @@
+# secrets
+.env*
+
 # macOS
 .DS_Store
 
@@ -10,7 +13,7 @@ __pycache__/
 website/output/
 website/data/
 
-# planning docs
+# docs
 docs/
 
 # agents
