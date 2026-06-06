@@ -236,7 +236,9 @@ kbd {
 
 .hero-topbar-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: flex-end;
   gap: 0.75rem;
 }
 

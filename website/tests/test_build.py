@@ -283,6 +283,7 @@ class TestBuild:
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/categories/widgets/"
         assert parser.meta_by_property["og:url"] == "https://awesome-python.com/categories/widgets/"
         assert '<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs text entry point" />' not in category_html
+        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in category_html
         assert "<h1>Widgets</h1>" in category_html
         assert 'Widget libraries. Also see <a href="https://example.com/widgets" target="_blank" rel="noopener">awesome-widgets</a>.' in category_html
         assert 'href="https://example.com/w1"' in category_html
@@ -481,6 +482,7 @@ class TestBuild:
         assert parser.meta_by_name["twitter:description"] == expected_description
         assert parser.meta_by_name["twitter:image"] == expected_image
         assert "<head>\n    <meta charset" in html
+        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
         assert 'id="hero-category-heading">Browse by category</h2>' in html
         assert 'class="hero-category-link" href="/categories/ai-and-agents/"' in html
 
@@ -750,6 +752,7 @@ class TestBuild:
             "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
         )
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/sponsorship/"
+        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
 
         marker = '<script type="application/ld+json">'
         start = html.index(marker) + len(marker)
