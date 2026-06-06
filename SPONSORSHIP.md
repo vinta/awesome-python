@@ -37,12 +37,7 @@ Your sponsorship puts your product in front of developers at the exact moment th
 - Text entry (`[Name](URL) - Description.`, max 120 characters) in the README sponsor section, directly below Featured sponsors
 - Text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
-Indie Dev Sponsor is available only to founder-led products (one-person company). Funded startups, agencies, recruiters, larger companies, and products with enterprise sales teams should use Featured or Headline Sponsor.
-
-## Previously Sponsored By
-
-- [Warp](https://www.warp.dev/) - The terminal for modern developers.
-- [pyr](https://pyrun.dev) - Zero-config Python project manager.
+Indie Dev Sponsor is available only to founder-led (one-person company) products. Funded startups, larger companies, and products with enterprise sales teams should use Featured or Headline Sponsor.
 
 ## Get Started
 
@@ -54,6 +49,11 @@ Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?sub
 - **Payment method:** US bank transfer (ACH/wire) or PayPal
 
 One upfront payment per term. Setup takes less than 24 hours.
+
+## Previously Sponsored By
+
+- [Warp](https://www.warp.dev/) - The terminal for modern developers.
+- [pyr](https://pyrun.dev) - Zero-config Python project manager.
 
 ## Editorial Independence
 
