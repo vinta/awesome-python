@@ -229,6 +229,8 @@ _Libraries for building recommender systems._
 - [implicit](https://github.com/benfred/implicit) - A fast Python implementation of collaborative filtering for implicit datasets.
 - [scikit-surprise](https://github.com/NicolasHug/Surprise) - A scikit for building and analyzing recommender systems.
 
+*** [ClarityDesk](https://github.com/aksingh570/client-desk) - AI-powered support ticket triage and classification tool built with Python and Streamlit.
+**
 **Web Development**
 
 ### Web Frameworks
