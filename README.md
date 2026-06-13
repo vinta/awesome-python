@@ -189,6 +189,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 
 - [catboost](https://github.com/catboost/catboost) - A fast, scalable, high performance gradient boosting on decision trees library.
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
+- [Genesis 2](https://github.com/larionovavi-stack/genesis2-cascade-moe) - Cascade MoE neural network. CPU-only, no GPU required, zero catastrophic forgetting, 18ms inference.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high performance gradient boosting framework.
 - [mindsdb](https://github.com/mindsdb/minds-platform) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
