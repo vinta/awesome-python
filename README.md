@@ -342,6 +342,7 @@ _Libraries for administrative interfaces._
 - [flower](https://github.com/mher/flower) - Real-time monitor and web admin for Celery.
 - [func-to-web](https://github.com/offerrall/FuncToWeb) - Instantly create web UIs from Python functions using type hints. Zero frontend code required.
 - [jet-bridge](https://github.com/jet-admin/jet-bridge) - Admin panel framework for any application with nice UI (ex Jet Django).
+- [celerp](https://github.com/celerp/celerp) - Self-hosted ERP with inventory, invoicing, manufacturing, and accounting. Web-based admin interface with click-to-edit data entry.
 
 ### CMS
 
