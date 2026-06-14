@@ -915,6 +915,7 @@ _Libraries for parsing and manipulating specific text formats._
 - MS Office
   - [docxtpl](https://github.com/elapouya/python-docx-template) - Editing a docx document by jinja2 template
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
+  - [streamxl](https://github.com/Mullassery/StreamXL) - High-performance streaming XLSX reader powered by a Rust engine (PyO3). Reads large Excel files row-by-row without loading into memory; 4-5x faster than openpyxl.
   - [pyexcel](https://github.com/pyexcel/pyexcel) - Providing one API for reading, manipulating and writing csv, ods, xls, xlsx and xlsm files.
   - [python-docx](https://github.com/python-openxml/python-docx) - Reads, queries and modifies Microsoft Word 2007/2008 docx files.
   - [python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint (.pptx) files.
