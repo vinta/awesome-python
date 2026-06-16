@@ -494,6 +494,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 - General
   - [dlt](https://github.com/dlt-hub/dlt) - A Python library for building data pipelines with automatic schema inference, incremental loading, and support for multiple sources and destinations.
+  - [enrich-companies](https://github.com/Alessandro114/enrich-companies-python) - A CLI tool to enrich CSV files with company data (revenue, employees, credit score) from 250M+ business records.
 - Financial Data
   - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
   - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
