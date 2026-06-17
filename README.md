@@ -731,6 +731,7 @@ _Software and libraries for DevOps._
   - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
 - Monitoring and Processes
+  - [docktui](https://github.com/strmax195-hue/docktui) - A lightweight, zero-dependency TUI dashboard for managing Docker containers and images.
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
   - [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
