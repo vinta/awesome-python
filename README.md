@@ -867,6 +867,7 @@ _Libraries for working with graphical user interface applications._
 
 ### Text Processing
 
+- [model-benchmark](https://github.com/oc-mm/model-benchmark) — Multi-model AI benchmark suite testing 4 API providers across 6 standardized tasks. All stdlib, zero external dependencies.
 _Libraries for parsing and manipulating plain texts._
 
 - General
