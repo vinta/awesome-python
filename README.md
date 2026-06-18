@@ -867,6 +867,7 @@ _Libraries for working with graphical user interface applications._
 
 ### Text Processing
 
+- [url-summarizer](https://github.com/oc-mm/mm-tools) — CLI tool to fetch and summarize any public URL using multiple AI providers (Mistral, Groq, Cerebras, Gemini).
 _Libraries for parsing and manipulating plain texts._
 
 - General
