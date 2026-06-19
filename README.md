@@ -76,6 +76,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 - [Job Schedulers](#job-schedulers)
 - [Logging](#logging)
 - [Network Virtualization](#network-virtualization)
+- [Resilience](#resilience)
 
 **CLI & GUI**
 
@@ -796,6 +797,12 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 - [mininet](https://github.com/mininet/mininet) - A popular network emulator and API written in Python.
 - [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
+
+### Resilience
+
+_Libraries for fault tolerance and resilience patterns._
+
+- [pyresilience](https://github.com/AhsanSheraz/pyresilience) - Unified resilience patterns (retry, circuit breaker, timeout, fallback, bulkhead, rate limiter, and cache) exposed through a single decorator, with zero external dependencies and async support.
 
 **CLI & GUI**
 
