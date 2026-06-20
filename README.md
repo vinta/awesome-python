@@ -171,8 +171,10 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
   - [voxcpm](https://github.com/OpenBMB/VoxCPM) - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.
-  - [Loopentx](https://github.com/yourusername/loopentx) - A Python framework for building autonomous agentic loops with durable execution, trust scoring, and shadow mode deployment.
 
+### Loop Engineering 
+_Agentic loop framework with durable execution and trust layer
+  - [Loopentx](https://github.com/yourusername/loopentx) - A Python framework for building autonomous agentic loops with durable execution, trust scoring, and shadow mode deployment.
 ### Deep Learning
 
 _Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning)._
