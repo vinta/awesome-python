@@ -268,6 +268,7 @@ _Libraries for building RESTful and GraphQL APIs._
 - Flask
   - [apiflask](https://github.com/apiflask/apiflask) - A lightweight Python web API framework based on Flask and Marshmallow.
 - Framework Agnostic
+  - [aiohttp](https://github.com/aio-libs/aiohttp) - An async HTTP client/server framework for asyncio and Python.
   - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
   - [fastapi](https://github.com/fastapi/fastapi) - A modern, fast, web framework for building APIs with standard Python type hints.
