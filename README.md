@@ -884,6 +884,7 @@ _Libraries for parsing and manipulating plain texts._
   - [sqids](https://github.com/sqids/sqids-python) - A library for generating short unique IDs from numbers.
   - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
 - Parser
+  - [parsy](https://github.com/python-parsy/parsy) - Easy, generic parser combinator library for creating parsers.
   - [pygments](https://github.com/pygments/pygments) - A generic syntax highlighter.
   - [pyparsing](https://github.com/pyparsing/pyparsing) - A general purpose framework for generating parsers.
   - [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
