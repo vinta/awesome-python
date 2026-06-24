@@ -533,7 +533,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - Dashboards and Apps
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
-- [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format
+- [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
 ### Geolocation
 
 _Libraries for geocoding addresses and working with latitudes and longitudes._
