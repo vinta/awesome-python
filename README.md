@@ -161,6 +161,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [outlines](https://github.com/dottxt-ai/outlines) - Structured text generation for LLMs with JSON schema, regex, and grammar-constrained decoding.
 - Pre-trained Models and Inference
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
+  - [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
@@ -532,7 +533,6 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](https://www.graphviz.org/).
 - Dashboards and Apps
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
-  - [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
 ### Geolocation
 
