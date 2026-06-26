@@ -394,6 +394,7 @@ _Libraries for sending and parsing email, and mail server management._
 
 - [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+- [otp-gateway](https://github.com/fajardev-tech/otp-gateway) - Zero-dependency library for receiving OTP codes via IMAP. Supports 30+ platforms, CLI + Python API.
 
 **Database & Storage**
 
