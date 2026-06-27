@@ -380,6 +380,7 @@ _Libraries to automate web scraping and extract web content._
 - Frameworks
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
+  - [invisible_playwright](https://github.com/feder-cr/invisible_playwright) - Playwright wrapper over a patched Firefox with a realistic, consistent browser fingerprint.
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
 - Content Extraction
