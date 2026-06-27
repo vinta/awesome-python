@@ -35,7 +35,14 @@
       <button id="btn-save-key"
         class="text-xs bg-agri-600 hover:bg-agri-700 text-white px-3 py-1.5 rounded-lg transition font-medium">Save</button>
     </div>
-    <p id="api-key-status" class="text-xs mt-1.5" style="color:#3d4f66;"></p>
+    <div class="flex items-center justify-between mt-2">
+      <label class="flex items-center gap-1.5 cursor-pointer select-none">
+        <input id="api-key-remember" type="checkbox" class="accent-agri-500 w-3 h-3" />
+        <span class="text-xs" style="color:#3d4f66;">Remember across sessions</span>
+      </label>
+      <button id="btn-forget-key" class="text-xs hover:text-red-400 transition hidden" style="color:#3d4f66;">Forget saved key</button>
+    </div>
+    <p id="api-key-status" class="text-xs mt-1" style="color:#3d4f66;"></p>
 
     <label class="block text-[10px] uppercase tracking-widest font-semibold mb-2 mt-3" style="color:#3d4f66;">AG-Refine App URL</label>
     <div class="flex gap-2">

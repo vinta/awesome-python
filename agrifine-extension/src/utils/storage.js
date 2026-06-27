@@ -32,7 +32,8 @@ export const KEYS = {
   FIELD_PROFILES: 'agrifine_field_profiles',
   SETTINGS:       'agrifine_settings',
   FARM_MEMORY:    'agrifine_farm_memory',
-  API_KEY:        'agrifine_api_key',   // session only
+  API_KEY:        'agrifine_api_key',        // session storage (always)
+  API_KEY_SAVED:  'agrifine_api_key_saved',  // local storage (when user opts to remember)
 };
 
 // ── Generic helpers ──────────────────────────────────────────────────────────

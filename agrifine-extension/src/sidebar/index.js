@@ -5,7 +5,7 @@ import { FieldProfileModule } from '../modules/field-profile/index.js';
 import { DashboardModule } from '../modules/dashboard/index.js';
 import { CarbonEstimatorModule } from '../modules/carbon-estimator/index.js';
 import { AgRefineModule } from '../ag-refine/index.js';
-import { sessionSet, sessionGet, KEYS } from '../utils/storage.js';
+import { sessionSet, sessionGet, localGet, localSet, KEYS } from '../utils/storage.js';
 import { getAgRefineUrl, setAgRefineUrl } from '../utils/agrefine-bridge.js';
 
 // ── Module registry ───────────────────────────────────────────────────────────
@@ -50,6 +50,8 @@ function setupSettings() {
   const saveBtn = document.getElementById('btn-save-key');
   const input = document.getElementById('api-key-input');
   const status = document.getElementById('api-key-status');
+  const rememberChk = document.getElementById('api-key-remember');
+  const forgetBtn = document.getElementById('btn-forget-key');
 
   const agRefineInput = document.getElementById('agrefine-url-input');
   const agRefineStatus = document.getElementById('agrefine-url-status');
@@ -58,35 +60,58 @@ function setupSettings() {
   btn.addEventListener('click', async () => {
     panel.classList.toggle('hidden');
     if (!panel.classList.contains('hidden')) {
-      const existing = await sessionGet(KEYS.API_KEY);
-      if (existing) {
+      const sessionKey = await sessionGet(KEYS.API_KEY);
+      const savedKey = await localGet(KEYS.API_KEY_SAVED);
+      if (sessionKey || savedKey) {
         input.value = '';
         input.placeholder = 'Key set — enter new key to replace';
-        status.textContent = '✓ API key is active this session';
+        status.textContent = savedKey
+          ? '✓ Key saved across sessions'
+          : '✓ Key active this session only';
+        status.style.color = '#4ade80';
+      }
+      if (savedKey) {
+        rememberChk.checked = true;
+        forgetBtn.classList.remove('hidden');
       }
       const agUrl = await getAgRefineUrl();
       if (agUrl) agRefineInput.value = agUrl;
     }
   });
 
-  agRefineSaveBtn.addEventListener('click', async () => {
-    const url = agRefineInput.value.trim();
-    await setAgRefineUrl(url);
-    agRefineStatus.textContent = url ? `✓ AG-Refine URL saved` : '✓ Cleared';
-    agRefineStatus.style.color = '#4ade80';
-    setTimeout(() => { agRefineStatus.style.color = '#3d4f66'; agRefineStatus.textContent = 'Used to sync fields and outputs from your AG-Refine app.'; }, 2500);
-  });
-
   saveBtn.addEventListener('click', async () => {
     const key = input.value.trim();
     if (!key.startsWith('sk-ant-')) {
       status.textContent = 'Key must start with sk-ant-';
+      status.style.color = '#f87171';
       return;
     }
-    await chrome.runtime.sendMessage({ type: 'SET_API_KEY', payload: { key } });
+    const remember = rememberChk.checked;
+    await chrome.runtime.sendMessage({ type: 'SET_API_KEY', payload: { key, remember } });
     input.value = '';
     input.placeholder = 'Key set — enter new key to replace';
-    status.textContent = '✓ Saved for this session';
+    status.textContent = remember ? '✓ Key saved across sessions' : '✓ Saved for this session';
+    status.style.color = '#4ade80';
+    forgetBtn.classList.toggle('hidden', !remember);
+  });
+
+  forgetBtn.addEventListener('click', async () => {
+    await localSet(KEYS.API_KEY_SAVED, null);
+    rememberChk.checked = false;
+    forgetBtn.classList.add('hidden');
+    status.textContent = 'Saved key removed';
+    status.style.color = '#3d4f66';
+  });
+
+  agRefineSaveBtn.addEventListener('click', async () => {
+    const url = agRefineInput.value.trim();
+    await setAgRefineUrl(url);
+    agRefineStatus.textContent = url ? '✓ AG-Refine URL saved' : '✓ Cleared';
+    agRefineStatus.style.color = '#4ade80';
+    setTimeout(() => {
+      agRefineStatus.style.color = '#3d4f66';
+      agRefineStatus.textContent = 'Used to sync fields and outputs from your AG-Refine app.';
+    }, 2500);
   });
 }
 

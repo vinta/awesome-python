@@ -632,7 +632,9 @@ var KEYS = {
   FIELD_PROFILES: 'agrifine_field_profiles',
   SETTINGS: 'agrifine_settings',
   FARM_MEMORY: 'agrifine_farm_memory',
-  API_KEY: 'agrifine_api_key' // session only
+  API_KEY: 'agrifine_api_key',
+  // session storage (always)
+  API_KEY_SAVED: 'agrifine_api_key_saved' // local storage (when user opts to remember)
 };
 
 // ── Generic helpers ──────────────────────────────────────────────────────────
@@ -1308,9 +1310,14 @@ chrome.sidePanel.setPanelBehavior({
   openPanelOnActionClick: true
 })["catch"](console.error);
 
+// Restore saved API key into session on service worker startup
+(0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.localGet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY_SAVED).then(function (saved) {
+  if (saved) (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.sessionSet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY, saved)["catch"](function () {});
+})["catch"](function () {});
+
 // ── Message router ────────────────────────────────────────────────────────────
 chrome.runtime.onMessage.addListener(function (message, _sender, sendResponse) {
-  var _message$payload;
+  var _message$payload2;
   switch (message.type) {
     case 'ANTHROPIC_REQUEST':
       handleAnthropicRequest(message.payload).then(sendResponse)["catch"](function (err) {
@@ -1322,16 +1329,27 @@ chrome.runtime.onMessage.addListener(function (message, _sender, sendResponse) {
     // keep channel open for async response
 
     case 'SET_API_KEY':
-      (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.sessionSet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY, message.payload.key).then(function () {
-        return sendResponse({
-          ok: true
+      {
+        var _message$payload = message.payload,
+          key = _message$payload.key,
+          remember = _message$payload.remember;
+        var ops = [(0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.sessionSet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY, key)];
+        if (remember) {
+          ops.push((0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY_SAVED, key));
+        } else {
+          ops.push((0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY_SAVED, null));
+        }
+        Promise.all(ops).then(function () {
+          return sendResponse({
+            ok: true
+          });
+        })["catch"](function (err) {
+          return sendResponse({
+            error: err.message
+          });
         });
-      })["catch"](function (err) {
-        return sendResponse({
-          error: err.message
-        });
-      });
-      return true;
+        return true;
+      }
     case 'GET_PAGE_CONTENT':
       sendResponse({
         ok: true
@@ -1359,7 +1377,7 @@ chrome.runtime.onMessage.addListener(function (message, _sender, sendResponse) {
       });
       return true;
     case 'READ_TAB_CONTENT':
-      readTabContent((_message$payload = message.payload) === null || _message$payload === void 0 ? void 0 : _message$payload.tab_id).then(sendResponse)["catch"](function (err) {
+      readTabContent((_message$payload2 = message.payload) === null || _message$payload2 === void 0 ? void 0 : _message$payload2.tab_id).then(sendResponse)["catch"](function (err) {
         return sendResponse({
           error: err.message
         });

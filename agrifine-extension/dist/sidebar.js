@@ -3290,7 +3290,9 @@ var KEYS = {
   FIELD_PROFILES: 'agrifine_field_profiles',
   SETTINGS: 'agrifine_settings',
   FARM_MEMORY: 'agrifine_farm_memory',
-  API_KEY: 'agrifine_api_key' // session only
+  API_KEY: 'agrifine_api_key',
+  // session storage (always)
+  API_KEY_SAVED: 'agrifine_api_key_saved' // local storage (when user opts to remember)
 };
 
 // ── Generic helpers ──────────────────────────────────────────────────────────
@@ -4202,16 +4204,16 @@ function activateTab(_x) {
   return _activateTab.apply(this, arguments);
 } // ── Settings panel ────────────────────────────────────────────────────────────
 function _activateTab() {
-  _activateTab = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(id) {
+  _activateTab = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(id) {
     var main;
-    return _regenerator().w(function (_context5) {
-      while (1) switch (_context5.n) {
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.n) {
         case 0:
           if (moduleMap[id]) {
-            _context5.n = 1;
+            _context6.n = 1;
             break;
           }
-          return _context5.a(2);
+          return _context6.a(2);
         case 1:
           activeModuleId = id;
           document.querySelectorAll('.tab-btn').forEach(function (btn) {
@@ -4221,12 +4223,12 @@ function _activateTab() {
           });
           main = document.getElementById('main-content');
           main.innerHTML = '';
-          _context5.n = 2;
+          _context6.n = 2;
           return moduleMap[id].render(main);
         case 2:
-          return _context5.a(2);
+          return _context6.a(2);
       }
-    }, _callee5);
+    }, _callee6);
   }));
   return _activateTab.apply(this, arguments);
 }
@@ -4236,86 +4238,118 @@ function setupSettings() {
   var saveBtn = document.getElementById('btn-save-key');
   var input = document.getElementById('api-key-input');
   var status = document.getElementById('api-key-status');
+  var rememberChk = document.getElementById('api-key-remember');
+  var forgetBtn = document.getElementById('btn-forget-key');
   var agRefineInput = document.getElementById('agrefine-url-input');
   var agRefineStatus = document.getElementById('agrefine-url-status');
   var agRefineSaveBtn = document.getElementById('btn-save-agrefine-url');
   btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-    var existing, agUrl;
+    var sessionKey, savedKey, agUrl;
     return _regenerator().w(function (_context) {
       while (1) switch (_context.n) {
         case 0:
           panel.classList.toggle('hidden');
           if (panel.classList.contains('hidden')) {
-            _context.n = 3;
+            _context.n = 4;
             break;
           }
           _context.n = 1;
           return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_7__.sessionGet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_7__.KEYS.API_KEY);
         case 1:
-          existing = _context.v;
-          if (existing) {
+          sessionKey = _context.v;
+          _context.n = 2;
+          return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_7__.localGet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_7__.KEYS.API_KEY_SAVED);
+        case 2:
+          savedKey = _context.v;
+          if (sessionKey || savedKey) {
             input.value = '';
             input.placeholder = 'Key set — enter new key to replace';
-            status.textContent = '✓ API key is active this session';
+            status.textContent = savedKey ? '✓ Key saved across sessions' : '✓ Key active this session only';
+            status.style.color = '#4ade80';
           }
-          _context.n = 2;
+          if (savedKey) {
+            rememberChk.checked = true;
+            forgetBtn.classList.remove('hidden');
+          }
+          _context.n = 3;
           return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_8__.getAgRefineUrl)();
-        case 2:
+        case 3:
           agUrl = _context.v;
           if (agUrl) agRefineInput.value = agUrl;
-        case 3:
+        case 4:
           return _context.a(2);
       }
     }, _callee);
   })));
-  agRefineSaveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
-    var url;
+  saveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
+    var key, remember;
     return _regenerator().w(function (_context2) {
       while (1) switch (_context2.n) {
         case 0:
+          key = input.value.trim();
+          if (key.startsWith('sk-ant-')) {
+            _context2.n = 1;
+            break;
+          }
+          status.textContent = 'Key must start with sk-ant-';
+          status.style.color = '#f87171';
+          return _context2.a(2);
+        case 1:
+          remember = rememberChk.checked;
+          _context2.n = 2;
+          return chrome.runtime.sendMessage({
+            type: 'SET_API_KEY',
+            payload: {
+              key: key,
+              remember: remember
+            }
+          });
+        case 2:
+          input.value = '';
+          input.placeholder = 'Key set — enter new key to replace';
+          status.textContent = remember ? '✓ Key saved across sessions' : '✓ Saved for this session';
+          status.style.color = '#4ade80';
+          forgetBtn.classList.toggle('hidden', !remember);
+        case 3:
+          return _context2.a(2);
+      }
+    }, _callee2);
+  })));
+  forgetBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
+          _context3.n = 1;
+          return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_7__.localSet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_7__.KEYS.API_KEY_SAVED, null);
+        case 1:
+          rememberChk.checked = false;
+          forgetBtn.classList.add('hidden');
+          status.textContent = 'Saved key removed';
+          status.style.color = '#3d4f66';
+        case 2:
+          return _context3.a(2);
+      }
+    }, _callee3);
+  })));
+  agRefineSaveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
+    var url;
+    return _regenerator().w(function (_context4) {
+      while (1) switch (_context4.n) {
+        case 0:
           url = agRefineInput.value.trim();
-          _context2.n = 1;
+          _context4.n = 1;
           return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_8__.setAgRefineUrl)(url);
         case 1:
-          agRefineStatus.textContent = url ? "\u2713 AG-Refine URL saved" : '✓ Cleared';
+          agRefineStatus.textContent = url ? '✓ AG-Refine URL saved' : '✓ Cleared';
           agRefineStatus.style.color = '#4ade80';
           setTimeout(function () {
             agRefineStatus.style.color = '#3d4f66';
             agRefineStatus.textContent = 'Used to sync fields and outputs from your AG-Refine app.';
           }, 2500);
         case 2:
-          return _context2.a(2);
+          return _context4.a(2);
       }
-    }, _callee2);
-  })));
-  saveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
-    var key;
-    return _regenerator().w(function (_context3) {
-      while (1) switch (_context3.n) {
-        case 0:
-          key = input.value.trim();
-          if (key.startsWith('sk-ant-')) {
-            _context3.n = 1;
-            break;
-          }
-          status.textContent = 'Key must start with sk-ant-';
-          return _context3.a(2);
-        case 1:
-          _context3.n = 2;
-          return chrome.runtime.sendMessage({
-            type: 'SET_API_KEY',
-            payload: {
-              key: key
-            }
-          });
-        case 2:
-          input.value = '';
-          input.placeholder = 'Key set — enter new key to replace';
-          status.textContent = '✓ Saved for this session';
-        case 3:
-          return _context3.a(2);
-      }
-    }, _callee3);
+    }, _callee4);
   })));
 }
 
@@ -4332,19 +4366,19 @@ function keepAlive() {
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
-  return _regenerator().w(function (_context4) {
-    while (1) switch (_context4.n) {
+document.addEventListener('DOMContentLoaded', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
+  return _regenerator().w(function (_context5) {
+    while (1) switch (_context5.n) {
       case 0:
         setupTabs();
         setupSettings();
         keepAlive();
-        _context4.n = 1;
+        _context5.n = 1;
         return activateTab(activeModuleId);
       case 1:
-        return _context4.a(2);
+        return _context5.a(2);
     }
-  }, _callee4);
+  }, _callee5);
 })));
 })();
 

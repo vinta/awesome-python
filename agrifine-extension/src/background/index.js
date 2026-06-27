@@ -1,9 +1,14 @@
-import { sessionGet, sessionSet, KEYS } from '../utils/storage.js';
+import { sessionGet, sessionSet, localGet, localSet, KEYS } from '../utils/storage.js';
 import { fetchAnthropic } from '../utils/api.js';
 import { syncFromAgRefine } from '../utils/agrefine-bridge.js';
 
 // Open the side panel when the action icon is clicked
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch(console.error);
+
+// Restore saved API key into session on service worker startup
+localGet(KEYS.API_KEY_SAVED).then((saved) => {
+  if (saved) sessionSet(KEYS.API_KEY, saved).catch(() => {});
+}).catch(() => {});
 
 // ── Message router ────────────────────────────────────────────────────────────
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
@@ -14,11 +19,19 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       );
       return true; // keep channel open for async response
 
-    case 'SET_API_KEY':
-      sessionSet(KEYS.API_KEY, message.payload.key)
+    case 'SET_API_KEY': {
+      const { key, remember } = message.payload;
+      const ops = [sessionSet(KEYS.API_KEY, key)];
+      if (remember) {
+        ops.push(localSet(KEYS.API_KEY_SAVED, key));
+      } else {
+        ops.push(localSet(KEYS.API_KEY_SAVED, null));
+      }
+      Promise.all(ops)
         .then(() => sendResponse({ ok: true }))
         .catch((err) => sendResponse({ error: err.message }));
       return true;
+    }
 
     case 'GET_PAGE_CONTENT':
       sendResponse({ ok: true });
