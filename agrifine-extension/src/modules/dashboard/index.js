@@ -41,13 +41,13 @@ export function DashboardModule() {
         <div class="px-4 mb-3">
           <div class="flex gap-2">
             <input id="dash-ai-input" type="text" placeholder="Ask anything… e.g. highest yield field?"
-              class="flex-1 text-sm border border-gray-300 rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
+              class="ag-input flex-1 rounded-xl" />
             <button id="dash-ai-btn"
               class="bg-agri-600 hover:bg-agri-700 text-white text-sm px-4 py-2 rounded-xl transition flex-shrink-0">
               Ask
             </button>
           </div>
-          <div id="dash-ai-answer" class="hidden mt-2 bg-white border border-agri-200 rounded-xl p-3 text-sm text-gray-700 leading-relaxed shadow-sm"></div>
+          <div id="dash-ai-answer" class="hidden mt-2 bg-night-700 border border-night-600 rounded-xl p-3 text-sm text-gray-200 leading-relaxed"></div>
         </div>
 
         <!-- Filters -->
@@ -55,12 +55,12 @@ export function DashboardModule() {
           <div class="flex gap-1.5 flex-wrap mb-2">
             ${CATEGORIES.map((c) => `
               <button data-cat="${c}" class="cat-btn text-xs px-2.5 py-1 rounded-full border transition
-                ${c === activeCategory ? 'bg-agri-600 text-white border-agri-600' : 'border-gray-300 text-gray-600 hover:border-agri-400'}">
+                ${c === activeCategory ? 'bg-agri-600 text-white border-agri-600' : 'border-night-500 text-gray-400 hover:border-agri-500'}">
                 ${c.charAt(0).toUpperCase() + c.slice(1)}
               </button>`).join('')}
           </div>
           <input id="dash-search" type="text" placeholder="Search by keyword or field name…"
-            class="w-full text-sm border border-gray-300 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-agri-400" />
+            class="ag-input" />
         </div>
 
         <!-- Unified list -->
@@ -76,7 +76,7 @@ export function DashboardModule() {
         btn.addEventListener('click', async () => {
           activeCategory = btn.dataset.cat;
           container.querySelectorAll('.cat-btn').forEach((b) => {
-            b.className = `cat-btn text-xs px-2.5 py-1 rounded-full border transition border-gray-300 text-gray-600 hover:border-agri-400`;
+            b.className = `cat-btn text-xs px-2.5 py-1 rounded-full border transition border-night-500 text-gray-400 hover:border-agri-500`;
           });
           btn.className = `cat-btn text-xs px-2.5 py-1 rounded-full border transition bg-agri-600 text-white border-agri-600`;
           await this._renderDashboard(container);
@@ -124,7 +124,7 @@ export function DashboardModule() {
           maxTokens: 512,
         });
 
-        answerEl.innerHTML = `<p class="font-medium text-agri-700 mb-1">Answer</p><span class="whitespace-pre-wrap">${escapeHtml(answer)}</span>`;
+        answerEl.innerHTML = `<p class="font-medium text-agri-400 mb-1">Answer</p><span class="whitespace-pre-wrap">${escapeHtml(answer)}</span>`;
       } catch (err) {
         answerEl.textContent = `Error: ${err.message}`;
       } finally {
@@ -173,12 +173,12 @@ export function DashboardModule() {
             <div class="flex items-start gap-2">
               <span class="text-lg flex-shrink-0">${sourceIcon}</span>
               <div class="flex-1 min-w-0">
-                <p class="text-sm font-semibold text-gray-800 truncate">${escapeHtml(title)}</p>
-                ${sub ? `<p class="text-xs text-gray-500 mt-0.5 leading-relaxed line-clamp-2">${escapeHtml(sub)}</p>` : ''}
+                <p class="text-sm font-semibold text-white truncate">${escapeHtml(title)}</p>
+                ${sub ? `<p class="text-xs text-gray-400 mt-0.5 leading-relaxed line-clamp-2">${escapeHtml(sub)}</p>` : ''}
                 <div class="flex items-center gap-2 mt-1.5">
-                  <span class="tag-pill bg-earth-100 text-earth-700">${escapeHtml(item._category)}</span>
+                  <span class="tag-pill">${escapeHtml(item._category)}</span>
                   ${(item.tags ?? []).filter((t) => t !== item._category).slice(0, 2).map((t) => `<span class="tag-pill">${escapeHtml(t)}</span>`).join('')}
-                  ${date ? `<span class="text-xs text-gray-300">${new Date(date).toLocaleDateString()}</span>` : ''}
+                  ${date ? `<span class="text-xs text-gray-500">${new Date(date).toLocaleDateString()}</span>` : ''}
                 </div>
               </div>
             </div>

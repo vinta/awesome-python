@@ -32,7 +32,9 @@ async function activateTab(id) {
   activeModuleId = id;
 
   document.querySelectorAll('.tab-btn').forEach((btn) => {
-    btn.classList.toggle('active-tab', btn.dataset.tab === id);
+    const active = btn.dataset.tab === id;
+    btn.classList.toggle('active-tab', active);
+    btn.style.color = active ? '' : '#3d4f66';
   });
 
   const main = document.getElementById('main-content');

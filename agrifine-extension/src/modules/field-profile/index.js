@@ -23,27 +23,21 @@ export function FieldProfileModule() {
         </div>
 
         <!-- Create form -->
-        <div id="fp-form" class="hidden px-4 mb-4 bg-white border border-gray-200 rounded-xl mx-4 p-4 shadow-sm">
-          <h3 class="text-sm font-semibold text-gray-700 mb-3">New Field</h3>
+        <div id="fp-form" class="hidden px-4 mb-4 bg-night-700 border border-night-600 rounded-xl mx-4 p-4">
+          <h3 class="text-sm font-semibold text-white mb-3">New Field</h3>
           <div class="space-y-2">
-            <input id="fp-name" type="text" placeholder="Field name *"
-              class="w-full text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
-            <input id="fp-clu" type="text" placeholder="CLU ID (optional)"
-              class="w-full text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
+            <input id="fp-name" type="text" placeholder="Field name *" class="ag-input" />
+            <input id="fp-clu" type="text" placeholder="CLU ID (optional)" class="ag-input" />
             <div class="flex gap-2">
-              <input id="fp-acres" type="number" placeholder="Acres"
-                class="w-1/2 text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
-              <input id="fp-soil" type="text" placeholder="Soil type"
-                class="w-1/2 text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
+              <input id="fp-acres" type="number" placeholder="Acres" class="ag-input w-1/2" />
+              <input id="fp-soil" type="text" placeholder="Soil type" class="ag-input w-1/2" />
             </div>
             <div class="flex gap-2">
-              <input id="fp-lat" type="number" step="any" placeholder="Latitude"
-                class="w-1/2 text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
-              <input id="fp-lon" type="number" step="any" placeholder="Longitude"
-                class="w-1/2 text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400" />
+              <input id="fp-lat" type="number" step="any" placeholder="Latitude" class="ag-input w-1/2" />
+              <input id="fp-lon" type="number" step="any" placeholder="Longitude" class="ag-input w-1/2" />
             </div>
             <textarea id="fp-notes" rows="2" placeholder="Notes (AI-queryable)"
-              class="w-full text-sm border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-agri-400 resize-none"></textarea>
+              class="ag-input resize-none"></textarea>
           </div>
           <div class="flex gap-2 mt-3">
             <button id="fp-save-btn"
@@ -51,7 +45,7 @@ export function FieldProfileModule() {
               Save
             </button>
             <button id="fp-cancel-btn"
-              class="flex-1 border border-gray-300 text-gray-600 text-sm font-medium py-2 rounded-lg hover:bg-gray-50 transition">
+              class="flex-1 border border-night-500 text-gray-300 text-sm font-medium py-2 rounded-lg hover:bg-night-700 transition">
               Cancel
             </button>
           </div>
@@ -126,20 +120,20 @@ export function FieldProfileModule() {
         <div class="agri-card cursor-pointer" data-id="${p.id}">
           <div class="flex items-center justify-between">
             <div class="flex-1">
-              <h3 class="text-sm font-bold text-gray-800">${p.name}</h3>
+              <h3 class="text-sm font-bold text-white">${p.name}</h3>
               <div class="flex flex-wrap gap-x-3 gap-y-0.5 mt-1">
-                ${p.acres ? `<span class="text-xs text-gray-500">${p.acres} ac</span>` : ''}
-                ${p.soilType ? `<span class="text-xs text-gray-500">${p.soilType}</span>` : ''}
-                ${p.cluId ? `<span class="text-xs text-agri-600">CLU ${p.cluId}</span>` : ''}
+                ${p.acres ? `<span class="text-xs text-gray-400">${p.acres} ac</span>` : ''}
+                ${p.soilType ? `<span class="text-xs text-gray-400">${p.soilType}</span>` : ''}
+                ${p.cluId ? `<span class="text-xs text-agri-400">CLU ${p.cluId}</span>` : ''}
               </div>
             </div>
             <div class="flex items-center gap-2">
-              <button class="fp-delete-btn text-gray-300 hover:text-red-400 transition" data-id="${p.id}" title="Delete">
+              <button class="fp-delete-btn text-night-300 hover:text-red-400 transition" data-id="${p.id}" title="Delete">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
-              <svg class="fp-chevron h-4 w-4 text-gray-400 transition-transform ${expandedId === p.id ? 'rotate-90' : ''}"
+              <svg class="fp-chevron h-4 w-4 text-gray-500 transition-transform ${expandedId === p.id ? 'rotate-90' : ''}"
                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
@@ -147,12 +141,12 @@ export function FieldProfileModule() {
           </div>
 
           <!-- Expanded detail -->
-          <div class="fp-detail ${expandedId === p.id ? '' : 'hidden'} mt-3 pt-3 border-t border-gray-100 text-xs text-gray-600 space-y-1">
+          <div class="fp-detail ${expandedId === p.id ? '' : 'hidden'} mt-3 pt-3 border-t border-night-600 text-xs text-gray-400 space-y-1">
             ${p.coordinates?.lat != null && p.coordinates?.lon != null ? `<p>📍 ${p.coordinates.lat.toFixed(4)}, ${p.coordinates.lon.toFixed(4)}</p>` : ''}
             ${p.notes ? `<p>📝 ${p.notes}</p>` : ''}
-            <p class="text-gray-300">Weather data: <span class="coming-soon">Phase 6</span></p>
-            <p class="text-gray-300">Carbon potential: <span class="coming-soon">Phase 7</span></p>
-            <p class="text-gray-300">Added ${new Date(p.createdAt).toLocaleDateString()}</p>
+            <p class="text-gray-500">Weather data: <span class="coming-soon">Phase 6</span></p>
+            <p class="text-gray-500">Carbon potential: <span class="coming-soon">Phase 7</span></p>
+            <p class="text-gray-500">Added ${new Date(p.createdAt).toLocaleDateString()}</p>
           </div>
         </div>
       `).join('');

@@ -2,59 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Active tab highlight */
+/* ── Base ── */
+body {
+  background-color: #0f1621;
+  color: #e2e8f0;
+}
+
+/* ── Active tab ── */
 .tab-btn.active-tab {
-  @apply text-agri-700;
+  @apply text-agri-400;
 }
-
 .tab-btn.active-tab svg {
-  @apply stroke-agri-700;
+  @apply stroke-agri-400;
+}
+.tab-btn.active-tab .tab-dot {
+  @apply opacity-100;
 }
 
-/* Card styles shared across modules */
+/* ── Shared card ── */
 .agri-card {
-  @apply bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-3;
+  @apply bg-night-700 rounded-xl border border-night-600 p-4 mb-3 transition-colors;
 }
-
 .agri-card:hover {
-  @apply shadow-md;
+  @apply border-night-500;
 }
 
-/* Tag pill */
+/* ── Tag pill ── */
 .tag-pill {
-  @apply inline-block text-xs px-2 py-0.5 rounded-full bg-agri-100 text-agri-800 font-medium mr-1 mb-1;
+  @apply inline-block text-xs px-2 py-0.5 rounded-full bg-night-600 text-agri-400 font-medium mr-1 mb-1;
 }
 
-/* Section heading */
+/* ── Section heading (OVERVIEW / HARVEST / SETUP style) ── */
 .section-heading {
-  @apply text-xs uppercase tracking-widest font-semibold text-gray-400 mb-2 px-4 pt-4;
+  @apply text-[10px] uppercase tracking-widest font-semibold text-night-300 mb-2 px-4 pt-4;
 }
 
-/* Empty state */
+/* ── Empty state ── */
 .empty-state {
-  @apply flex flex-col items-center justify-center py-16 text-gray-400 text-sm text-center px-6;
+  @apply flex flex-col items-center justify-center py-16 text-gray-500 text-sm text-center px-6;
 }
 
-/* Spinner */
+/* ── Spinner ── */
 .spinner {
-  @apply inline-block w-5 h-5 border-2 border-agri-300 border-t-agri-700 rounded-full animate-spin;
+  @apply inline-block w-4 h-4 border-2 border-night-500 border-t-agri-400 rounded-full animate-spin;
 }
 
-/* Coming soon badge */
+/* ── Coming soon badge ── */
 .coming-soon {
-  @apply inline-block text-xs px-2 py-0.5 rounded-full bg-earth-100 text-earth-700 font-semibold;
+  @apply inline-block text-xs px-2 py-0.5 rounded-full bg-night-600 text-agri-400 font-semibold;
 }
 
-/* Scrollbar styling */
+/* ── Input baseline ── */
+.ag-input {
+  @apply w-full text-sm bg-night-800 border border-night-500 text-white placeholder-gray-500
+         rounded-lg px-3 py-2 focus:outline-none focus:ring-1 focus:ring-agri-500 focus:border-agri-500;
+}
+
+/* ── Scrollbar ── */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
-
 ::-webkit-scrollbar-track {
   background: transparent;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #bbf7d0;
+  background: #1e2d40;
   border-radius: 2px;
 }

@@ -20,16 +20,16 @@ export function DataIngestModule() {
         <!-- Drop zone -->
         <div class="px-4 mb-4">
           <div id="drop-zone"
-            class="border-2 border-dashed border-agri-300 rounded-xl p-6 text-center cursor-pointer hover:border-agri-500 hover:bg-agri-50 transition">
+            class="border-2 border-dashed border-night-500 rounded-xl p-6 text-center cursor-pointer hover:border-agri-500 hover:bg-night-800 transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto text-agri-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                 d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
             </svg>
-            <p class="text-sm font-medium text-gray-600">Drop CSV, Excel, or PDF here</p>
-            <p class="text-xs text-gray-400 mt-1">or click to select a file</p>
+            <p class="text-sm font-medium text-gray-300">Drop CSV, Excel, or PDF here</p>
+            <p class="text-xs text-gray-500 mt-1">or click to select a file</p>
             <input id="file-input" type="file" accept=".csv,.xlsx,.xls,.pdf" class="hidden" />
           </div>
-          <div id="ingest-status" class="text-xs text-center text-gray-400 mt-2 min-h-[1rem]"></div>
+          <div id="ingest-status" class="text-xs text-center text-gray-500 mt-2 min-h-[1rem]"></div>
         </div>
 
         <!-- File list -->
@@ -48,16 +48,16 @@ export function DataIngestModule() {
 
       dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
-        dropZone.classList.add('border-agri-600', 'bg-agri-50');
+        dropZone.classList.add('border-agri-500', 'bg-night-800');
       });
 
       dropZone.addEventListener('dragleave', () => {
-        dropZone.classList.remove('border-agri-600', 'bg-agri-50');
+        dropZone.classList.remove('border-agri-500', 'bg-night-800');
       });
 
       dropZone.addEventListener('drop', (e) => {
         e.preventDefault();
-        dropZone.classList.remove('border-agri-600', 'bg-agri-50');
+        dropZone.classList.remove('border-agri-500', 'bg-night-800');
         const file = e.dataTransfer.files[0];
         if (file) this._processFile(file, container);
       });
@@ -212,17 +212,17 @@ export function DataIngestModule() {
         <div class="agri-card" data-id="${f.id}">
           <div class="flex items-start justify-between gap-2">
             <div class="flex-1">
-              <span class="text-xs font-bold uppercase tracking-wide text-earth-600">${f.type}</span>
-              <p class="text-sm font-semibold text-gray-800 leading-snug mt-0.5">${f.filename}</p>
-              <p class="text-xs text-gray-400 mt-0.5">${new Date(f.uploadedAt).toLocaleDateString()}</p>
+              <span class="text-xs font-bold uppercase tracking-wide text-agri-400">${f.type}</span>
+              <p class="text-sm font-semibold text-white leading-snug mt-0.5">${f.filename}</p>
+              <p class="text-xs text-gray-500 mt-0.5">${new Date(f.uploadedAt).toLocaleDateString()}</p>
             </div>
-            <button class="file-delete-btn text-gray-300 hover:text-red-400 transition flex-shrink-0" data-id="${f.id}" title="Remove">
+            <button class="file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0" data-id="${f.id}" title="Remove">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          ${f.preview ? `<pre class="text-xs text-gray-500 mt-2 whitespace-pre-wrap bg-gray-50 rounded p-2 overflow-hidden max-h-20">${f.preview}</pre>` : ''}
+          ${f.preview ? `<pre class="text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20">${f.preview}</pre>` : ''}
         </div>
       `).join('');
 

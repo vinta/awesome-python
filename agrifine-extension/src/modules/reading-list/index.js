@@ -23,18 +23,18 @@ export function ReadingListModule() {
 
     async render(container) {
       container.innerHTML = `
-        <div class="section-heading">Reading List</div>
+        <div class="section-heading">Intelligence Sources</div>
 
         <!-- Save current page -->
         <div class="px-4 mb-3">
           <button id="rl-save-btn"
-            class="w-full flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition">
+            class="w-full flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-lg transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
             Save current page
           </button>
-          <div id="rl-save-status" class="text-xs text-center text-gray-400 mt-1 min-h-[1rem]"></div>
+          <div id="rl-save-status" class="text-xs text-center mt-1 min-h-[1rem]" style="color:#3d4f66;"></div>
         </div>
 
         <!-- Tag filter -->
@@ -141,18 +141,18 @@ export function ReadingListModule() {
       listEl.innerHTML = filtered.map((item) => `
         <div class="agri-card" data-id="${escapeHtml(item.id)}">
           <div class="flex items-start justify-between gap-2">
-            <a href="${safeHref(item.url)}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-agri-700 hover:underline leading-snug flex-1">${escapeHtml(item.title)}</a>
-            <button class="rl-delete-btn text-gray-300 hover:text-red-400 transition flex-shrink-0" data-id="${escapeHtml(item.id)}" title="Remove">
+            <a href="${safeHref(item.url)}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-agri-400 hover:underline leading-snug flex-1">${escapeHtml(item.title)}</a>
+            <button class="rl-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0" data-id="${escapeHtml(item.id)}" title="Remove">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          ${item.summary ? `<p class="text-xs text-gray-500 mt-1.5 leading-relaxed">${escapeHtml(item.summary)}</p>` : ''}
+          ${item.summary ? `<p class="text-xs text-gray-400 mt-1.5 leading-relaxed">${escapeHtml(item.summary)}</p>` : ''}
           <div class="mt-2">
             ${(item.tags ?? []).map((t) => `<span class="tag-pill">${escapeHtml(t)}</span>`).join('')}
           </div>
-          <p class="text-xs text-gray-300 mt-2">${new Date(item.savedAt).toLocaleDateString()}</p>
+          <p class="text-xs text-gray-500 mt-2">${new Date(item.savedAt).toLocaleDateString()}</p>
         </div>
       `).join('');
 
