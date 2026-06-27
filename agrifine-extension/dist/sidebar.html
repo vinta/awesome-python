@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AG Refine</title>
+  <link rel="stylesheet" href="sidebar.css" />
+</head>
+<body class="h-screen flex flex-col overflow-hidden font-sans" style="background:#0f1621;color:#e2e8f0;">
+
+  <!-- Header — matches AG Refine branding -->
+  <header class="flex items-center justify-between px-4 py-3 flex-shrink-0" style="background:#131c2b;border-bottom:1px solid #1e2d40;">
+    <div class="flex items-start gap-2.5">
+      <div class="leading-none">
+        <div class="text-lg font-black text-white tracking-tight leading-none">AG</div>
+        <div class="text-[10px] font-bold text-white tracking-widest leading-none mt-0.5">REFINE</div>
+        <div class="text-[7px] font-semibold tracking-widest leading-none mt-1" style="color:#3d4f66;">FIELD INTELLIGENCE</div>
+      </div>
+    </div>
+    <button id="btn-settings" class="transition" style="color:#3d4f66;" onmouseenter="this.style.color='#e2e8f0'" onmouseleave="this.style.color='#3d4f66'" title="Settings">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    </button>
+  </header>
+
+  <!-- Settings panel -->
+  <div id="settings-panel" class="hidden flex-shrink-0 px-4 py-3" style="background:#131c2b;border-bottom:1px solid #1e2d40;">
+    <label class="block text-[10px] uppercase tracking-widest font-semibold mb-2" style="color:#3d4f66;">Anthropic API Key</label>
+    <div class="flex gap-2">
+      <input id="api-key-input" type="password" placeholder="sk-ant-..."
+        class="ag-input flex-1" />
+      <button id="btn-save-key"
+        class="text-xs bg-agri-600 hover:bg-agri-700 text-white px-3 py-1.5 rounded-lg transition font-medium">Save</button>
+    </div>
+    <p id="api-key-status" class="text-xs mt-1.5" style="color:#3d4f66;"></p>
+  </div>
+
+  <!-- Main content -->
+  <main id="main-content" class="flex-1 overflow-y-auto" style="background:#0f1621;"></main>
+
+  <!-- Bottom tab bar -->
+  <nav class="flex-shrink-0" style="background:#131c2b;border-top:1px solid #1e2d40;">
+    <div class="flex">
+
+      <button data-tab="reading-list"
+        class="tab-btn flex-1 flex flex-col items-center pt-2 pb-1.5 px-1 text-[9px] font-semibold tracking-wide transition active-tab" style="color:#3d4f66;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+        <span>INTEL</span>
+        <div class="tab-dot w-1 h-1 rounded-full bg-agri-400 mt-0.5 opacity-0"></div>
+      </button>
+
+      <button data-tab="data-ingest"
+        class="tab-btn flex-1 flex flex-col items-center pt-2 pb-1.5 px-1 text-[9px] font-semibold tracking-wide transition" style="color:#3d4f66;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+        </svg>
+        <span>INGEST</span>
+        <div class="tab-dot w-1 h-1 rounded-full bg-agri-400 mt-0.5 opacity-0"></div>
+      </button>
+
+      <button data-tab="field-profile"
+        class="tab-btn flex-1 flex flex-col items-center pt-2 pb-1.5 px-1 text-[9px] font-semibold tracking-wide transition" style="color:#3d4f66;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span>FIELDS</span>
+        <div class="tab-dot w-1 h-1 rounded-full bg-agri-400 mt-0.5 opacity-0"></div>
+      </button>
+
+      <button data-tab="dashboard"
+        class="tab-btn flex-1 flex flex-col items-center pt-2 pb-1.5 px-1 text-[9px] font-semibold tracking-wide transition" style="color:#3d4f66;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+        <span>DATA</span>
+        <div class="tab-dot w-1 h-1 rounded-full bg-agri-400 mt-0.5 opacity-0"></div>
+      </button>
+
+      <button data-tab="carbon-estimator"
+        class="tab-btn flex-1 flex flex-col items-center pt-2 pb-1.5 px-1 text-[9px] font-semibold tracking-wide transition" style="color:#3d4f66;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+        <span>CARBON</span>
+        <div class="tab-dot w-1 h-1 rounded-full bg-agri-400 mt-0.5 opacity-0"></div>
+      </button>
+
+      <button data-tab="ag-refine"
+        class="tab-btn flex-1 flex flex-col items-center pt-2 pb-1.5 px-1 text-[9px] font-semibold tracking-wide transition" style="color:#3d4f66;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mb-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        <span>AGENT</span>
+        <div class="tab-dot w-1 h-1 rounded-full bg-agri-400 mt-0.5 opacity-0"></div>
+      </button>
+
+    </div>
+  </nav>
+
+  <script src="sidebar.js"></script>
+</body>
+</html>
