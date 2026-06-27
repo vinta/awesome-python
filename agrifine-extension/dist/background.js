@@ -1547,7 +1547,7 @@ function _buildContextBundle() {
             var preview = f.structuredData ? Object.entries(f.structuredData).filter(function (_ref2) {
               var _ref3 = _slicedToArray(_ref2, 1),
                 k = _ref3[0];
-              return k !== 'raw_preview' && k !== 'parse_error';
+              return k !== 'raw_preview' && k !== 'raw_text' && k !== 'parse_error';
             }).slice(0, 5).map(function (_ref4) {
               var _ref5 = _slicedToArray(_ref4, 2),
                 k = _ref5[0],

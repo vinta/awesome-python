@@ -1049,6 +1049,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(22 101 52 / var(--tw-text-opacity, 1));
 }
+.text-amber-400 {
+  --tw-text-opacity: 1;
+  color: rgb(251 191 36 / var(--tw-text-opacity, 1));
+}
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity, 1));
@@ -1306,6 +1310,10 @@ body {
 .hover\:bg-night-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(19 28 43 / var(--tw-bg-opacity, 1));
+}
+.hover\:text-agri-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(134 239 172 / var(--tw-text-opacity, 1));
 }
 .hover\:text-agri-400:hover {
   --tw-text-opacity: 1;

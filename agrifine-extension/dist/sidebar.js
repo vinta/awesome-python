@@ -2285,39 +2285,39 @@ function tryDocServer(_x) {
   return _tryDocServer.apply(this, arguments);
 }
 function _tryDocServer() {
-  _tryDocServer = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(file) {
-    var fd, res, _yield$res$json, text, _t6;
-    return _regenerator().w(function (_context1) {
-      while (1) switch (_context1.p = _context1.n) {
+  _tryDocServer = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee10(file) {
+    var fd, res, _yield$res$json, text, _t7;
+    return _regenerator().w(function (_context11) {
+      while (1) switch (_context11.p = _context11.n) {
         case 0:
-          _context1.p = 0;
+          _context11.p = 0;
           fd = new FormData();
           fd.append('file', file);
-          _context1.n = 1;
+          _context11.n = 1;
           return fetch("".concat(DOC_SERVER, "/parse"), {
             method: 'POST',
             body: fd
           });
         case 1:
-          res = _context1.v;
+          res = _context11.v;
           if (res.ok) {
-            _context1.n = 2;
+            _context11.n = 2;
             break;
           }
-          return _context1.a(2, null);
+          return _context11.a(2, null);
         case 2:
-          _context1.n = 3;
+          _context11.n = 3;
           return res.json();
         case 3:
-          _yield$res$json = _context1.v;
+          _yield$res$json = _context11.v;
           text = _yield$res$json.text;
-          return _context1.a(2, text !== null && text !== void 0 ? text : null);
+          return _context11.a(2, text !== null && text !== void 0 ? text : null);
         case 4:
-          _context1.p = 4;
-          _t6 = _context1.v;
-          return _context1.a(2, null);
+          _context11.p = 4;
+          _t7 = _context11.v;
+          return _context11.a(2, null);
       }
-    }, _callee0, null, [[0, 4]]);
+    }, _callee10, null, [[0, 4]]);
   }));
   return _tryDocServer.apply(this, arguments);
 }
@@ -2373,7 +2373,7 @@ function DataIngestModule() {
       var _this3 = this;
       return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
         var _SUPPORTED_TYPES$file;
-        var status, typeName, extractedText, structuredData, raw, record, _t, _t2;
+        var status, typeName, extractedText, structuredData, raw, _err$message, _err$message2, isNoKey, record, _t, _t2;
         return _regenerator().w(function (_context2) {
           while (1) switch (_context2.p = _context2.n) {
             case 0:
@@ -2460,10 +2460,15 @@ function DataIngestModule() {
             case 14:
               _context2.p = 14;
               _t2 = _context2.v;
+              isNoKey = ((_err$message = _t2.message) === null || _err$message === void 0 ? void 0 : _err$message.toLowerCase().includes('no api key')) || ((_err$message2 = _t2.message) === null || _err$message2 === void 0 ? void 0 : _err$message2.toLowerCase().includes('api key set'));
               structuredData = {
-                raw_preview: extractedText.slice(0, 500),
-                parse_error: 'AI extraction unavailable'
+                raw_text: extractedText.slice(0, 6000),
+                // preserved for re-extraction
+                parse_error: isNoKey ? 'no_api_key' : 'ai_error'
               };
+              if (isNoKey) {
+                status.textContent = '⚙ Set API key in Settings to extract data';
+              }
             case 15:
               record = {
                 id: "file_".concat(Date.now()),
@@ -2474,7 +2479,7 @@ function DataIngestModule() {
                 preview: Object.entries(structuredData !== null && structuredData !== void 0 ? structuredData : {}).filter(function (_ref) {
                   var _ref2 = _slicedToArray(_ref, 1),
                     k = _ref2[0];
-                  return k !== 'raw_preview' && k !== 'parse_error';
+                  return k !== 'raw_preview' && k !== 'raw_text' && k !== 'parse_error';
                 }).slice(0, 5).map(function (_ref3) {
                   var _ref4 = _slicedToArray(_ref3, 2),
                     k = _ref4[0],
@@ -2815,25 +2820,36 @@ function DataIngestModule() {
     },
     _renderFileList: function _renderFileList(container) {
       var _this6 = this;
-      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9() {
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0() {
         var files, listEl;
-        return _regenerator().w(function (_context0) {
-          while (1) switch (_context0.n) {
+        return _regenerator().w(function (_context1) {
+          while (1) switch (_context1.n) {
             case 0:
-              _context0.n = 1;
+              _context1.n = 1;
               return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getIngestedFiles)();
             case 1:
-              files = _context0.v;
+              files = _context1.v;
               listEl = container.querySelector('#file-list');
               if (!(files.length === 0)) {
-                _context0.n = 2;
+                _context1.n = 2;
                 break;
               }
               listEl.innerHTML = "\n          <div class=\"empty-state\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-10 w-10 mb-3 opacity-30\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\" />\n            </svg>\n            <p>No files ingested yet.</p>\n            <p class=\"mt-1 text-xs\">Upload a CSV, Excel, or PDF file above.</p>\n          </div>";
-              return _context0.a(2);
+              return _context1.a(2);
             case 2:
               listEl.innerHTML = files.map(function (f) {
-                return "\n        <div class=\"agri-card\" data-id=\"".concat(f.id, "\">\n          <div class=\"flex items-start justify-between gap-2\">\n            <div class=\"flex-1\">\n              <span class=\"text-xs font-bold uppercase tracking-wide text-agri-400\">").concat(f.type, "</span>\n              <p class=\"text-sm font-semibold text-white leading-snug mt-0.5\">").concat(f.filename, "</p>\n              <p class=\"text-xs text-gray-500 mt-0.5\">").concat(new Date(f.uploadedAt).toLocaleDateString(), "</p>\n            </div>\n            <button class=\"file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0\" data-id=\"").concat(f.id, "\" title=\"Remove\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n              </svg>\n            </button>\n          </div>\n          ").concat(f.preview ? "<pre class=\"text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20\">".concat(f.preview, "</pre>") : '', "\n          ").concat(_this6._hasFieldData(f) ? "<p class=\"text-xs text-agri-400 mt-1.5\">\u2197 Contains field data \xB7 <button class=\"reimport-btn underline hover:no-underline\" data-id=\"".concat(f.id, "\">Re-import to profiles</button></p>") : '', "\n        </div>\n      ");
+                var _f$structuredData;
+                var parseError = (_f$structuredData = f.structuredData) === null || _f$structuredData === void 0 ? void 0 : _f$structuredData.parse_error;
+                var cardFooter = '';
+                if (parseError === 'no_api_key') {
+                  cardFooter = "\n            <div class=\"mt-2 flex items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-xs\" style=\"background:#1a1a0a;border:1px solid #92400e;\">\n              <span class=\"text-amber-400\">\u2699 Add API key in Settings to extract</span>\n              <button class=\"reextract-btn text-agri-400 hover:text-agri-300 font-medium flex-shrink-0\" data-id=\"".concat(f.id, "\">Extract now</button>\n            </div>");
+                } else if (parseError === 'ai_error') {
+                  cardFooter = "\n            <div class=\"mt-2 flex items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-xs\" style=\"background:#1a0a0a;border:1px solid #7f1d1d;\">\n              <span class=\"text-red-400\">AI extraction failed</span>\n              <button class=\"reextract-btn text-agri-400 hover:text-agri-300 font-medium flex-shrink-0\" data-id=\"".concat(f.id, "\">Retry</button>\n            </div>");
+                } else if (f.preview) {
+                  cardFooter = "<pre class=\"text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20\">".concat(f.preview, "</pre>");
+                }
+                var fieldLink = _this6._hasFieldData(f) ? "<p class=\"text-xs text-agri-400 mt-1.5\">\u2197 Contains field data \xB7 <button class=\"reimport-btn underline hover:no-underline\" data-id=\"".concat(f.id, "\">Re-import to profiles</button></p>") : '';
+                return "\n          <div class=\"agri-card\" data-id=\"".concat(f.id, "\">\n            <div class=\"flex items-start justify-between gap-2\">\n              <div class=\"flex-1\">\n                <span class=\"text-xs font-bold uppercase tracking-wide text-agri-400\">").concat(f.type, "</span>\n                <p class=\"text-sm font-semibold text-white leading-snug mt-0.5\">").concat(f.filename, "</p>\n                <p class=\"text-xs text-gray-500 mt-0.5\">").concat(new Date(f.uploadedAt).toLocaleDateString(), "</p>\n              </div>\n              <button class=\"file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0\" data-id=\"").concat(f.id, "\" title=\"Remove\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n                </svg>\n              </button>\n            </div>\n            ").concat(cardFooter, "\n            ").concat(fieldLink, "\n          </div>");
               }).join('');
               listEl.querySelectorAll('.file-delete-btn').forEach(function (btn) {
                 btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7() {
@@ -2872,10 +2888,110 @@ function DataIngestModule() {
                   }, _callee8);
                 })));
               });
+              listEl.querySelectorAll('.reextract-btn').forEach(function (btn) {
+                btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9() {
+                  var file;
+                  return _regenerator().w(function (_context0) {
+                    while (1) switch (_context0.n) {
+                      case 0:
+                        file = files.find(function (f) {
+                          return f.id === btn.dataset.id;
+                        });
+                        if (!file) {
+                          _context0.n = 1;
+                          break;
+                        }
+                        _context0.n = 1;
+                        return _this6._reExtractFile(file, container);
+                      case 1:
+                        return _context0.a(2);
+                    }
+                  }, _callee9);
+                })));
+              });
             case 3:
-              return _context0.a(2);
+              return _context1.a(2);
           }
-        }, _callee9);
+        }, _callee0);
+      }))();
+    },
+    _reExtractFile: function _reExtractFile(file, container) {
+      var _this7 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee1() {
+        var _ref14, _file$structuredData$, _file$structuredData, _file$structuredData2;
+        var status, rawText, structuredData, raw, _err$message3, _err$message4, isNoKey, updated, _t6;
+        return _regenerator().w(function (_context10) {
+          while (1) switch (_context10.p = _context10.n) {
+            case 0:
+              status = container.querySelector('#ingest-status');
+              rawText = (_ref14 = (_file$structuredData$ = (_file$structuredData = file.structuredData) === null || _file$structuredData === void 0 ? void 0 : _file$structuredData.raw_text) !== null && _file$structuredData$ !== void 0 ? _file$structuredData$ : (_file$structuredData2 = file.structuredData) === null || _file$structuredData2 === void 0 ? void 0 : _file$structuredData2.raw_preview) !== null && _ref14 !== void 0 ? _ref14 : '';
+              if (rawText) {
+                _context10.n = 1;
+                break;
+              }
+              status.textContent = 'No cached text — please re-upload the file.';
+              setTimeout(function () {
+                status.textContent = '';
+              }, 4000);
+              return _context10.a(2);
+            case 1:
+              status.textContent = "Re-extracting ".concat(file.filename, "\u2026");
+              structuredData = null;
+              _context10.p = 2;
+              _context10.n = 3;
+              return (0,_utils_api_js__WEBPACK_IMPORTED_MODULE_1__.callAnthropic)({
+                system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names (as "fields" array of strings), dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. For harvest data include avg_yield_bu_ac, avg_moisture_pct, harvest_date, and crop. Return only valid JSON.',
+                userMessage: rawText.slice(0, 6000),
+                maxTokens: 1024
+              });
+            case 3:
+              raw = _context10.v;
+              structuredData = JSON.parse(raw);
+              _context10.n = 5;
+              break;
+            case 4:
+              _context10.p = 4;
+              _t6 = _context10.v;
+              isNoKey = ((_err$message3 = _t6.message) === null || _err$message3 === void 0 ? void 0 : _err$message3.toLowerCase().includes('no api key')) || ((_err$message4 = _t6.message) === null || _err$message4 === void 0 ? void 0 : _err$message4.toLowerCase().includes('api key set'));
+              status.textContent = isNoKey ? '⚙ API key required — open Settings (gear icon) to add your Anthropic key.' : "Extraction failed: ".concat(_t6.message.slice(0, 80));
+              status.style.color = '#f87171';
+              setTimeout(function () {
+                status.textContent = '';
+                status.style.color = '';
+              }, 6000);
+              return _context10.a(2);
+            case 5:
+              updated = _objectSpread(_objectSpread({}, file), {}, {
+                structuredData: structuredData,
+                preview: Object.entries(structuredData).filter(function (_ref15) {
+                  var _ref16 = _slicedToArray(_ref15, 1),
+                    k = _ref16[0];
+                  return k !== 'raw_text' && k !== 'raw_preview';
+                }).slice(0, 5).map(function (_ref17) {
+                  var _ref18 = _slicedToArray(_ref17, 2),
+                    k = _ref18[0],
+                    v = _ref18[1];
+                  return "".concat(k, ": ").concat(JSON.stringify(v).slice(0, 80));
+                }).join('\n')
+              });
+              _context10.n = 6;
+              return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveIngestedFile)(updated);
+            case 6:
+              status.textContent = "\u2713 Extracted ".concat(file.filename);
+              status.style.color = '#4ade80';
+              setTimeout(function () {
+                status.textContent = '';
+                status.style.color = '';
+              }, 3000);
+              _context10.n = 7;
+              return _this7._renderFileList(container);
+            case 7:
+              _context10.n = 8;
+              return _this7._offerFieldImport(updated, container);
+            case 8:
+              return _context10.a(2);
+          }
+        }, _callee1, null, [[2, 4]]);
       }))();
     },
     _hasFieldData: function _hasFieldData(file) {
@@ -4982,7 +5098,7 @@ function _buildContextBundle() {
             var preview = f.structuredData ? Object.entries(f.structuredData).filter(function (_ref2) {
               var _ref3 = _slicedToArray(_ref2, 1),
                 k = _ref3[0];
-              return k !== 'raw_preview' && k !== 'parse_error';
+              return k !== 'raw_preview' && k !== 'raw_text' && k !== 'parse_error';
             }).slice(0, 5).map(function (_ref4) {
               var _ref5 = _slicedToArray(_ref4, 2),
                 k = _ref5[0],

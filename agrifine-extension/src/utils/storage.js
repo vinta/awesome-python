@@ -224,7 +224,7 @@ export async function buildContextBundle() {
   const fileLines = files.length === 0 ? ['(none)'] : files.slice(0, 10).map((f) => {
     const preview = f.structuredData
       ? Object.entries(f.structuredData)
-          .filter(([k]) => k !== 'raw_preview' && k !== 'parse_error')
+          .filter(([k]) => k !== 'raw_preview' && k !== 'raw_text' && k !== 'parse_error')
           .slice(0, 5)
           .map(([k, v]) => `${k}: ${JSON.stringify(v).slice(0, 120)}`)
           .join(' | ')

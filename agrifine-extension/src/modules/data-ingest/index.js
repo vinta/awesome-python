@@ -148,8 +148,16 @@ export function DataIngestModule() {
           maxTokens: 1024,
         });
         structuredData = JSON.parse(raw);
-      } catch (_) {
-        structuredData = { raw_preview: extractedText.slice(0, 500), parse_error: 'AI extraction unavailable' };
+      } catch (err) {
+        const isNoKey = err.message?.toLowerCase().includes('no api key') ||
+          err.message?.toLowerCase().includes('api key set');
+        structuredData = {
+          raw_text: extractedText.slice(0, 6000), // preserved for re-extraction
+          parse_error: isNoKey ? 'no_api_key' : 'ai_error',
+        };
+        if (isNoKey) {
+          status.textContent = '⚙ Set API key in Settings to extract data';
+        }
       }
 
       const record = {
@@ -159,7 +167,7 @@ export function DataIngestModule() {
         uploadedAt: new Date().toISOString(),
         structuredData,
         preview: Object.entries(structuredData ?? {})
-          .filter(([k]) => k !== 'raw_preview' && k !== 'parse_error')
+          .filter(([k]) => k !== 'raw_preview' && k !== 'raw_text' && k !== 'parse_error')
           .slice(0, 5)
           .map(([k, v]) => `${k}: ${JSON.stringify(v).slice(0, 80)}`)
           .join('\n'),
@@ -362,24 +370,46 @@ export function DataIngestModule() {
         return;
       }
 
-      listEl.innerHTML = files.map((f) => `
-        <div class="agri-card" data-id="${f.id}">
-          <div class="flex items-start justify-between gap-2">
-            <div class="flex-1">
-              <span class="text-xs font-bold uppercase tracking-wide text-agri-400">${f.type}</span>
-              <p class="text-sm font-semibold text-white leading-snug mt-0.5">${f.filename}</p>
-              <p class="text-xs text-gray-500 mt-0.5">${new Date(f.uploadedAt).toLocaleDateString()}</p>
+      listEl.innerHTML = files.map((f) => {
+        const parseError = f.structuredData?.parse_error;
+        let cardFooter = '';
+        if (parseError === 'no_api_key') {
+          cardFooter = `
+            <div class="mt-2 flex items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-xs" style="background:#1a1a0a;border:1px solid #92400e;">
+              <span class="text-amber-400">⚙ Add API key in Settings to extract</span>
+              <button class="reextract-btn text-agri-400 hover:text-agri-300 font-medium flex-shrink-0" data-id="${f.id}">Extract now</button>
+            </div>`;
+        } else if (parseError === 'ai_error') {
+          cardFooter = `
+            <div class="mt-2 flex items-center justify-between gap-2 rounded-lg px-2.5 py-2 text-xs" style="background:#1a0a0a;border:1px solid #7f1d1d;">
+              <span class="text-red-400">AI extraction failed</span>
+              <button class="reextract-btn text-agri-400 hover:text-agri-300 font-medium flex-shrink-0" data-id="${f.id}">Retry</button>
+            </div>`;
+        } else if (f.preview) {
+          cardFooter = `<pre class="text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20">${f.preview}</pre>`;
+        }
+        const fieldLink = this._hasFieldData(f)
+          ? `<p class="text-xs text-agri-400 mt-1.5">↗ Contains field data · <button class="reimport-btn underline hover:no-underline" data-id="${f.id}">Re-import to profiles</button></p>`
+          : '';
+
+        return `
+          <div class="agri-card" data-id="${f.id}">
+            <div class="flex items-start justify-between gap-2">
+              <div class="flex-1">
+                <span class="text-xs font-bold uppercase tracking-wide text-agri-400">${f.type}</span>
+                <p class="text-sm font-semibold text-white leading-snug mt-0.5">${f.filename}</p>
+                <p class="text-xs text-gray-500 mt-0.5">${new Date(f.uploadedAt).toLocaleDateString()}</p>
+              </div>
+              <button class="file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0" data-id="${f.id}" title="Remove">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
             </div>
-            <button class="file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0" data-id="${f.id}" title="Remove">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-          ${f.preview ? `<pre class="text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20">${f.preview}</pre>` : ''}
-          ${this._hasFieldData(f) ? `<p class="text-xs text-agri-400 mt-1.5">↗ Contains field data · <button class="reimport-btn underline hover:no-underline" data-id="${f.id}">Re-import to profiles</button></p>` : ''}
-        </div>
-      `).join('');
+            ${cardFooter}
+            ${fieldLink}
+          </div>`;
+      }).join('');
 
       listEl.querySelectorAll('.file-delete-btn').forEach((btn) => {
         btn.addEventListener('click', async () => {
@@ -394,6 +424,64 @@ export function DataIngestModule() {
           if (file) await this._offerFieldImport(file, container);
         });
       });
+
+      listEl.querySelectorAll('.reextract-btn').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const file = files.find((f) => f.id === btn.dataset.id);
+          if (file) await this._reExtractFile(file, container);
+        });
+      });
+    },
+
+    async _reExtractFile(file, container) {
+      const status = container.querySelector('#ingest-status');
+      const rawText = file.structuredData?.raw_text ?? file.structuredData?.raw_preview ?? '';
+
+      if (!rawText) {
+        status.textContent = 'No cached text — please re-upload the file.';
+        setTimeout(() => { status.textContent = ''; }, 4000);
+        return;
+      }
+
+      status.textContent = `Re-extracting ${file.filename}…`;
+      let structuredData = null;
+
+      try {
+        const raw = await callAnthropic({
+          system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names (as "fields" array of strings), dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. For harvest data include avg_yield_bu_ac, avg_moisture_pct, harvest_date, and crop. Return only valid JSON.',
+          userMessage: rawText.slice(0, 6000),
+          maxTokens: 1024,
+        });
+        structuredData = JSON.parse(raw);
+      } catch (err) {
+        const isNoKey = err.message?.toLowerCase().includes('no api key') ||
+          err.message?.toLowerCase().includes('api key set');
+        status.textContent = isNoKey
+          ? '⚙ API key required — open Settings (gear icon) to add your Anthropic key.'
+          : `Extraction failed: ${err.message.slice(0, 80)}`;
+        status.style.color = '#f87171';
+        setTimeout(() => { status.textContent = ''; status.style.color = ''; }, 6000);
+        return;
+      }
+
+      const updated = {
+        ...file,
+        structuredData,
+        preview: Object.entries(structuredData)
+          .filter(([k]) => k !== 'raw_text' && k !== 'raw_preview')
+          .slice(0, 5)
+          .map(([k, v]) => `${k}: ${JSON.stringify(v).slice(0, 80)}`)
+          .join('\n'),
+      };
+
+      await saveIngestedFile(updated);
+
+      status.textContent = `✓ Extracted ${file.filename}`;
+      status.style.color = '#4ade80';
+      setTimeout(() => { status.textContent = ''; status.style.color = ''; }, 3000);
+
+      await this._renderFileList(container);
+      await this._offerFieldImport(updated, container);
     },
 
     _hasFieldData(file) {
