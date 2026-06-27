@@ -1794,6 +1794,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _utils_storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/storage.js */ "./src/utils/storage.js");
 /* harmony import */ var _utils_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/api.js */ "./src/utils/api.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorValues(e) { if (null != e) { var t = e["function" == typeof Symbol && Symbol.iterator || "@@iterator"], r = 0; if (t) return t.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) return { next: function next() { return e && r >= e.length && (e = void 0), { value: e && e[r++], done: !e }; } }; } throw new TypeError(_typeof(e) + " is not iterable"); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -1817,39 +1829,39 @@ function tryDocServer(_x) {
   return _tryDocServer.apply(this, arguments);
 }
 function _tryDocServer() {
-  _tryDocServer = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(file) {
-    var fd, res, _yield$res$json, text, _t5;
-    return _regenerator().w(function (_context7) {
-      while (1) switch (_context7.p = _context7.n) {
+  _tryDocServer = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee0(file) {
+    var fd, res, _yield$res$json, text, _t6;
+    return _regenerator().w(function (_context1) {
+      while (1) switch (_context1.p = _context1.n) {
         case 0:
-          _context7.p = 0;
+          _context1.p = 0;
           fd = new FormData();
           fd.append('file', file);
-          _context7.n = 1;
+          _context1.n = 1;
           return fetch("".concat(DOC_SERVER, "/parse"), {
             method: 'POST',
             body: fd
           });
         case 1:
-          res = _context7.v;
+          res = _context1.v;
           if (res.ok) {
-            _context7.n = 2;
+            _context1.n = 2;
             break;
           }
-          return _context7.a(2, null);
+          return _context1.a(2, null);
         case 2:
-          _context7.n = 3;
+          _context1.n = 3;
           return res.json();
         case 3:
-          _yield$res$json = _context7.v;
+          _yield$res$json = _context1.v;
           text = _yield$res$json.text;
-          return _context7.a(2, text !== null && text !== void 0 ? text : null);
+          return _context1.a(2, text !== null && text !== void 0 ? text : null);
         case 4:
-          _context7.p = 4;
-          _t5 = _context7.v;
-          return _context7.a(2, null);
+          _context1.p = 4;
+          _t6 = _context1.v;
+          return _context1.a(2, null);
       }
-    }, _callee7, null, [[0, 4]]);
+    }, _callee0, null, [[0, 4]]);
   }));
   return _tryDocServer.apply(this, arguments);
 }
@@ -1863,7 +1875,8 @@ function DataIngestModule() {
         return _regenerator().w(function (_context) {
           while (1) switch (_context.n) {
             case 0:
-              container.innerHTML = "\n        <div class=\"section-heading\">Data Ingest</div>\n\n        <!-- Drop zone -->\n        <div class=\"px-4 mb-4\">\n          <div id=\"drop-zone\"\n            class=\"border-2 border-dashed border-night-500 rounded-xl p-6 text-center cursor-pointer hover:border-agri-500 hover:bg-night-800 transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-8 w-8 mx-auto text-agri-400 mb-2\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12\" />\n            </svg>\n            <p class=\"text-sm font-medium text-gray-300\">Drop CSV, Excel, or PDF here</p>\n            <p class=\"text-xs text-gray-500 mt-1\">or click to select a file</p>\n            <input id=\"file-input\" type=\"file\" accept=\".csv,.xlsx,.xls,.pdf\" class=\"hidden\" />\n          </div>\n          <div id=\"ingest-status\" class=\"text-xs text-center text-gray-500 mt-2 min-h-[1rem]\"></div>\n        </div>\n\n        <!-- File list -->\n        <div id=\"file-list\" class=\"px-4 pb-4\"></div>\n      ";
+              container.innerHTML = "\n        <div class=\"section-heading\">Data Ingest</div>\n\n        <!-- Drop zone -->\n        <div class=\"px-4 mb-4\">\n          <div id=\"drop-zone\"\n            class=\"border-2 border-dashed border-night-500 rounded-xl p-6 text-center cursor-pointer hover:border-agri-500 hover:bg-night-800 transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-8 w-8 mx-auto text-agri-400 mb-2\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12\" />\n            </svg>\n            <p class=\"text-sm font-medium text-gray-300\">Drop CSV, Excel, or PDF here</p>\n            <p class=\"text-xs text-gray-500 mt-1\">or click to select a file</p>\n            <input id=\"file-input\" type=\"file\" accept=\".csv,.xlsx,.xls,.pdf\" class=\"hidden\" />\n          </div>\n          <div id=\"ingest-status\" class=\"text-xs text-center text-gray-500 mt-2 min-h-[1rem]\"></div>\n        </div>\n\n        <!-- Field import banner (shown after processing if field data found) -->\n        <div id=\"field-import-banner\" class=\"hidden px-4 mb-3\">\n          <div class=\"bg-night-700 border border-agri-600 rounded-xl p-3\">\n            <p class=\"text-xs font-semibold text-agri-400 mb-1\">Field data detected</p>\n            <p id=\"field-import-desc\" class=\"text-xs text-gray-400 mb-2\"></p>\n            <p id=\"field-import-status\" class=\"text-xs text-gray-500 mb-2 hidden\"></p>\n            <button id=\"import-to-fields-btn\"\n              class=\"w-full bg-agri-600 hover:bg-agri-700 text-white text-xs font-medium py-1.5 rounded-lg transition\">\n              Import harvest data to field profiles\n            </button>\n          </div>\n        </div>\n\n        <!-- File list -->\n        <div id=\"file-list\" class=\"px-4 pb-4\"></div>\n      ";
+              _this._pendingImport = null;
               _this._bindEvents(container);
               _context.n = 1;
               return _this._renderFileList(container);
@@ -1896,6 +1909,9 @@ function DataIngestModule() {
       fileInput.addEventListener('change', function () {
         if (fileInput.files[0]) _this2._processFile(fileInput.files[0], container);
       });
+      container.querySelector('#import-to-fields-btn').addEventListener('click', function () {
+        return _this2._importToFields(container);
+      });
     },
     _processFile: function _processFile(file, container) {
       var _this3 = this;
@@ -1914,6 +1930,9 @@ function DataIngestModule() {
               status.textContent = 'Unsupported file type.';
               return _context2.a(2);
             case 1:
+              // Hide previous import banner
+              container.querySelector('#field-import-banner').classList.add('hidden');
+              _this3._pendingImport = null;
               status.textContent = "Parsing ".concat(typeName, "\u2026");
               extractedText = ''; // Try Python doc server first (more robust), fall back to browser-side
               _context2.n = 2;
@@ -1973,7 +1992,7 @@ function DataIngestModule() {
               _context2.p = 12;
               _context2.n = 13;
               return (0,_utils_api_js__WEBPACK_IMPORTED_MODULE_1__.callAnthropic)({
-                system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names, dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. Return only valid JSON.',
+                system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names (as "fields" array of strings), dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. For harvest data include avg_yield_bu_ac, avg_moisture_pct, harvest_date, and crop. Return only valid JSON.',
                 userMessage: extractedText.slice(0, 6000),
                 maxTokens: 1024
               });
@@ -1999,7 +2018,7 @@ function DataIngestModule() {
                 preview: Object.entries(structuredData !== null && structuredData !== void 0 ? structuredData : {}).filter(function (_ref) {
                   var _ref2 = _slicedToArray(_ref, 1),
                     k = _ref2[0];
-                  return k !== 'raw_preview';
+                  return k !== 'raw_preview' && k !== 'parse_error';
                 }).slice(0, 5).map(function (_ref3) {
                   var _ref4 = _slicedToArray(_ref3, 2),
                     k = _ref4[0],
@@ -2017,16 +2036,201 @@ function DataIngestModule() {
               _context2.n = 17;
               return _this3._renderFileList(container);
             case 17:
+              _context2.n = 18;
+              return _this3._offerFieldImport(record, container);
+            case 18:
               return _context2.a(2);
           }
         }, _callee2, null, [[12, 14], [3, 10]]);
       }))();
     },
+    _offerFieldImport: function _offerFieldImport(record, container) {
+      var _this4 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+        var sd, rawFields, profiles, matched, banner, desc, btn, importStatus;
+        return _regenerator().w(function (_context3) {
+          while (1) switch (_context3.n) {
+            case 0:
+              sd = record.structuredData;
+              if (!(!sd || sd.parse_error)) {
+                _context3.n = 1;
+                break;
+              }
+              return _context3.a(2);
+            case 1:
+              // Collect field names from multiple possible keys
+              rawFields = [].concat(_toConsumableArray(Array.isArray(sd.fields) ? sd.fields : []), _toConsumableArray(Array.isArray(sd.field_names) ? sd.field_names : [])).map(function (f) {
+                return String(f).trim();
+              }).filter(Boolean);
+              if (!(rawFields.length === 0)) {
+                _context3.n = 2;
+                break;
+              }
+              return _context3.a(2);
+            case 2:
+              _context3.n = 3;
+              return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
+            case 3:
+              profiles = _context3.v;
+              matched = rawFields.filter(function (name) {
+                return profiles.some(function (p) {
+                  return p.name.toLowerCase() === name.toLowerCase();
+                });
+              });
+              if (!(matched.length === 0)) {
+                _context3.n = 4;
+                break;
+              }
+              return _context3.a(2);
+            case 4:
+              _this4._pendingImport = {
+                record: record,
+                matched: matched
+              };
+              banner = container.querySelector('#field-import-banner');
+              desc = container.querySelector('#field-import-desc');
+              btn = container.querySelector('#import-to-fields-btn');
+              importStatus = container.querySelector('#field-import-status');
+              desc.textContent = "Found harvest data for: ".concat(matched.join(', '));
+              importStatus.classList.add('hidden');
+              btn.disabled = false;
+              btn.textContent = 'Import harvest data to field profiles';
+              btn.style.opacity = '';
+              banner.classList.remove('hidden');
+            case 5:
+              return _context3.a(2);
+          }
+        }, _callee3);
+      }))();
+    },
+    _importToFields: function _importToFields(container) {
+      var _this5 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
+        var _this5$_pendingImport, record, matched, sd, importStatus, btn, profiles, count, _iterator, _step, _loop, _t3;
+        return _regenerator().w(function (_context5) {
+          while (1) switch (_context5.p = _context5.n) {
+            case 0:
+              if (_this5._pendingImport) {
+                _context5.n = 1;
+                break;
+              }
+              return _context5.a(2);
+            case 1:
+              _this5$_pendingImport = _this5._pendingImport, record = _this5$_pendingImport.record, matched = _this5$_pendingImport.matched;
+              sd = record.structuredData;
+              importStatus = container.querySelector('#field-import-status');
+              btn = container.querySelector('#import-to-fields-btn');
+              btn.disabled = true;
+              btn.textContent = 'Importing…';
+              importStatus.textContent = '';
+              importStatus.classList.remove('hidden');
+              _context5.n = 2;
+              return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
+            case 2:
+              profiles = _context5.v;
+              count = 0;
+              _iterator = _createForOfIteratorHelper(matched);
+              _context5.p = 3;
+              _loop = /*#__PURE__*/_regenerator().m(function _loop() {
+                var _ref5, _sd$harvest_date, _ref6, _sd$crop, _sd$operation_type, _ref7, _ref8, _sd$avg_yield_bu_ac, _ref9, _sd$avg_moisture_pct, _profile$harvestRecor, _profile$cropHistory;
+                var fieldName, profile, harvestDate, cropYear, crop, yieldVal, moisture, harvestRecord, cropHistoryEntry, existingHarvests, existingHistory, updated;
+                return _regenerator().w(function (_context4) {
+                  while (1) switch (_context4.n) {
+                    case 0:
+                      fieldName = _step.value;
+                      profile = profiles.find(function (p) {
+                        return p.name.toLowerCase() === fieldName.toLowerCase();
+                      });
+                      if (profile) {
+                        _context4.n = 1;
+                        break;
+                      }
+                      return _context4.a(2, 1);
+                    case 1:
+                      harvestDate = (_ref5 = (_sd$harvest_date = sd.harvest_date) !== null && _sd$harvest_date !== void 0 ? _sd$harvest_date : sd.date) !== null && _ref5 !== void 0 ? _ref5 : new Date().toISOString().slice(0, 10);
+                      cropYear = parseInt(harvestDate.slice(0, 4), 10);
+                      crop = (_ref6 = (_sd$crop = sd.crop) !== null && _sd$crop !== void 0 ? _sd$crop : (_sd$operation_type = sd.operation_type) === null || _sd$operation_type === void 0 ? void 0 : _sd$operation_type.replace(/\s*harvest\s*/i, '').trim()) !== null && _ref6 !== void 0 ? _ref6 : 'Unknown';
+                      yieldVal = (_ref7 = (_ref8 = (_sd$avg_yield_bu_ac = sd.avg_yield_bu_ac) !== null && _sd$avg_yield_bu_ac !== void 0 ? _sd$avg_yield_bu_ac : sd.yield_bu_ac) !== null && _ref8 !== void 0 ? _ref8 : sd["yield"]) !== null && _ref7 !== void 0 ? _ref7 : null;
+                      moisture = (_ref9 = (_sd$avg_moisture_pct = sd.avg_moisture_pct) !== null && _sd$avg_moisture_pct !== void 0 ? _sd$avg_moisture_pct : sd.moisture_pct) !== null && _ref9 !== void 0 ? _ref9 : null;
+                      harvestRecord = {
+                        date: harvestDate,
+                        crop: crop,
+                        "yield": yieldVal ? parseFloat(yieldVal) : null,
+                        unit: 'bu/ac',
+                        moisture: moisture ? parseFloat(moisture) : null,
+                        source: record.filename
+                      };
+                      cropHistoryEntry = {
+                        year: cropYear,
+                        crop: crop,
+                        "yield": harvestRecord["yield"],
+                        unit: 'bu/ac'
+                      };
+                      existingHarvests = (_profile$harvestRecor = profile.harvestRecords) !== null && _profile$harvestRecor !== void 0 ? _profile$harvestRecor : [];
+                      existingHistory = (_profile$cropHistory = profile.cropHistory) !== null && _profile$cropHistory !== void 0 ? _profile$cropHistory : [];
+                      updated = _objectSpread(_objectSpread({}, profile), {}, {
+                        harvestRecords: [harvestRecord].concat(_toConsumableArray(existingHarvests.filter(function (r) {
+                          return !(r.date === harvestRecord.date && r.crop === harvestRecord.crop);
+                        }))),
+                        cropHistory: [cropHistoryEntry].concat(_toConsumableArray(existingHistory.filter(function (r) {
+                          return !(r.year === cropHistoryEntry.year && r.crop === cropHistoryEntry.crop);
+                        }))).sort(function (a, b) {
+                          return b.year - a.year;
+                        })
+                      });
+                      _context4.n = 2;
+                      return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(updated);
+                    case 2:
+                      count++;
+                    case 3:
+                      return _context4.a(2);
+                  }
+                }, _loop);
+              });
+              _iterator.s();
+            case 4:
+              if ((_step = _iterator.n()).done) {
+                _context5.n = 7;
+                break;
+              }
+              return _context5.d(_regeneratorValues(_loop()), 5);
+            case 5:
+              if (!_context5.v) {
+                _context5.n = 6;
+                break;
+              }
+              return _context5.a(3, 6);
+            case 6:
+              _context5.n = 4;
+              break;
+            case 7:
+              _context5.n = 9;
+              break;
+            case 8:
+              _context5.p = 8;
+              _t3 = _context5.v;
+              _iterator.e(_t3);
+            case 9:
+              _context5.p = 9;
+              _iterator.f();
+              return _context5.f(9);
+            case 10:
+              importStatus.textContent = "\u2713 Updated ".concat(count, " field profile").concat(count !== 1 ? 's' : '', " \u2014 check Fields tab");
+              importStatus.style.color = '#4ade80';
+              importStatus.classList.remove('hidden');
+              btn.textContent = 'Imported';
+              btn.style.opacity = '0.5';
+              _this5._pendingImport = null;
+            case 11:
+              return _context5.a(2);
+          }
+        }, _callee4, null, [[3, 8, 9, 10]]);
+      }))();
+    },
     _parseCSV: function _parseCSV(file) {
       return new Promise(function (resolve, reject) {
-        // PapaParse is loaded dynamically to keep the background bundle lean
-        __webpack_require__.e(/*! import() */ "vendors-node_modules_papaparse_papaparse_min_js").then(__webpack_require__.t.bind(__webpack_require__, /*! papaparse */ "./node_modules/papaparse/papaparse.min.js", 23)).then(function (_ref5) {
-          var Papa = _ref5["default"];
+        __webpack_require__.e(/*! import() */ "vendors-node_modules_papaparse_papaparse_min_js").then(__webpack_require__.t.bind(__webpack_require__, /*! papaparse */ "./node_modules/papaparse/papaparse.min.js", 23)).then(function (_ref0) {
+          var Papa = _ref0["default"];
           Papa.parse(file, {
             complete: function complete(results) {
               var rows = results.data.slice(0, 200);
@@ -2043,16 +2247,16 @@ function DataIngestModule() {
       return new Promise(function (resolve, reject) {
         var reader = new FileReader();
         reader.onload = /*#__PURE__*/function () {
-          var _ref6 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(e) {
-            var _yield$import, read, utils, wb, lines, _t3;
-            return _regenerator().w(function (_context3) {
-              while (1) switch (_context3.p = _context3.n) {
+          var _ref1 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(e) {
+            var _yield$import, read, utils, wb, lines, _t4;
+            return _regenerator().w(function (_context6) {
+              while (1) switch (_context6.p = _context6.n) {
                 case 0:
-                  _context3.p = 0;
-                  _context3.n = 1;
+                  _context6.p = 0;
+                  _context6.n = 1;
                   return __webpack_require__.e(/*! import() */ "vendors-node_modules_xlsx_xlsx_mjs").then(__webpack_require__.bind(__webpack_require__, /*! xlsx */ "./node_modules/xlsx/xlsx.mjs"));
                 case 1:
-                  _yield$import = _context3.v;
+                  _yield$import = _context6.v;
                   read = _yield$import.read;
                   utils = _yield$import.utils;
                   wb = read(e.target.result, {
@@ -2065,19 +2269,19 @@ function DataIngestModule() {
                     lines.push(utils.sheet_to_csv(ws).split('\n').slice(0, 100).join('\n'));
                   });
                   resolve(lines.join('\n'));
-                  _context3.n = 3;
+                  _context6.n = 3;
                   break;
                 case 2:
-                  _context3.p = 2;
-                  _t3 = _context3.v;
-                  reject(_t3);
+                  _context6.p = 2;
+                  _t4 = _context6.v;
+                  reject(_t4);
                 case 3:
-                  return _context3.a(2);
+                  return _context6.a(2);
               }
-            }, _callee3, null, [[0, 2]]);
+            }, _callee5, null, [[0, 2]]);
           }));
           return function (_x2) {
-            return _ref6.apply(this, arguments);
+            return _ref1.apply(this, arguments);
           };
         }();
         reader.onerror = reject;
@@ -2088,16 +2292,16 @@ function DataIngestModule() {
       return new Promise(function (resolve, reject) {
         var reader = new FileReader();
         reader.onload = /*#__PURE__*/function () {
-          var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(e) {
-            var pdfjsLib, loadingTask, pdf, pages, texts, i, page, content, _t4;
-            return _regenerator().w(function (_context4) {
-              while (1) switch (_context4.p = _context4.n) {
+          var _ref10 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(e) {
+            var pdfjsLib, loadingTask, pdf, pages, texts, i, page, content, _t5;
+            return _regenerator().w(function (_context7) {
+              while (1) switch (_context7.p = _context7.n) {
                 case 0:
-                  _context4.p = 0;
-                  _context4.n = 1;
+                  _context7.p = 0;
+                  _context7.n = 1;
                   return __webpack_require__.e(/*! import() */ "vendors-node_modules_pdfjs-dist_build_pdf_mjs").then(__webpack_require__.bind(__webpack_require__, /*! pdfjs-dist */ "./node_modules/pdfjs-dist/build/pdf.mjs"));
                 case 1:
-                  pdfjsLib = _context4.v;
+                  pdfjsLib = _context7.v;
                   pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('pdf.worker.js');
                   loadingTask = pdfjsLib.getDocument({
                     data: new Uint8Array(e.target.result),
@@ -2105,48 +2309,48 @@ function DataIngestModule() {
                     isEvalSupported: false,
                     useSystemFonts: true
                   });
-                  _context4.n = 2;
+                  _context7.n = 2;
                   return loadingTask.promise;
                 case 2:
-                  pdf = _context4.v;
+                  pdf = _context7.v;
                   pages = Math.min(pdf.numPages, 10);
                   texts = [];
                   i = 1;
                 case 3:
                   if (!(i <= pages)) {
-                    _context4.n = 7;
+                    _context7.n = 7;
                     break;
                   }
-                  _context4.n = 4;
+                  _context7.n = 4;
                   return pdf.getPage(i);
                 case 4:
-                  page = _context4.v;
-                  _context4.n = 5;
+                  page = _context7.v;
+                  _context7.n = 5;
                   return page.getTextContent();
                 case 5:
-                  content = _context4.v;
+                  content = _context7.v;
                   texts.push(content.items.map(function (s) {
                     return s.str;
                   }).join(' '));
                 case 6:
                   i++;
-                  _context4.n = 3;
+                  _context7.n = 3;
                   break;
                 case 7:
                   resolve(texts.join('\n'));
-                  _context4.n = 9;
+                  _context7.n = 9;
                   break;
                 case 8:
-                  _context4.p = 8;
-                  _t4 = _context4.v;
-                  reject(_t4);
+                  _context7.p = 8;
+                  _t5 = _context7.v;
+                  reject(_t5);
                 case 9:
-                  return _context4.a(2);
+                  return _context7.a(2);
               }
-            }, _callee4, null, [[0, 8]]);
+            }, _callee6, null, [[0, 8]]);
           }));
           return function (_x3) {
-            return _ref7.apply(this, arguments);
+            return _ref10.apply(this, arguments);
           };
         }();
         reader.onerror = reject;
@@ -2154,48 +2358,74 @@ function DataIngestModule() {
       });
     },
     _renderFileList: function _renderFileList(container) {
-      var _this4 = this;
-      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6() {
+      var _this6 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9() {
         var files, listEl;
-        return _regenerator().w(function (_context6) {
-          while (1) switch (_context6.n) {
+        return _regenerator().w(function (_context0) {
+          while (1) switch (_context0.n) {
             case 0:
-              _context6.n = 1;
+              _context0.n = 1;
               return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getIngestedFiles)();
             case 1:
-              files = _context6.v;
+              files = _context0.v;
               listEl = container.querySelector('#file-list');
               if (!(files.length === 0)) {
-                _context6.n = 2;
+                _context0.n = 2;
                 break;
               }
               listEl.innerHTML = "\n          <div class=\"empty-state\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-10 w-10 mb-3 opacity-30\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z\" />\n            </svg>\n            <p>No files ingested yet.</p>\n            <p class=\"mt-1 text-xs\">Upload a CSV, Excel, or PDF file above.</p>\n          </div>";
-              return _context6.a(2);
+              return _context0.a(2);
             case 2:
               listEl.innerHTML = files.map(function (f) {
-                return "\n        <div class=\"agri-card\" data-id=\"".concat(f.id, "\">\n          <div class=\"flex items-start justify-between gap-2\">\n            <div class=\"flex-1\">\n              <span class=\"text-xs font-bold uppercase tracking-wide text-agri-400\">").concat(f.type, "</span>\n              <p class=\"text-sm font-semibold text-white leading-snug mt-0.5\">").concat(f.filename, "</p>\n              <p class=\"text-xs text-gray-500 mt-0.5\">").concat(new Date(f.uploadedAt).toLocaleDateString(), "</p>\n            </div>\n            <button class=\"file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0\" data-id=\"").concat(f.id, "\" title=\"Remove\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n              </svg>\n            </button>\n          </div>\n          ").concat(f.preview ? "<pre class=\"text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20\">".concat(f.preview, "</pre>") : '', "\n        </div>\n      ");
+                return "\n        <div class=\"agri-card\" data-id=\"".concat(f.id, "\">\n          <div class=\"flex items-start justify-between gap-2\">\n            <div class=\"flex-1\">\n              <span class=\"text-xs font-bold uppercase tracking-wide text-agri-400\">").concat(f.type, "</span>\n              <p class=\"text-sm font-semibold text-white leading-snug mt-0.5\">").concat(f.filename, "</p>\n              <p class=\"text-xs text-gray-500 mt-0.5\">").concat(new Date(f.uploadedAt).toLocaleDateString(), "</p>\n            </div>\n            <button class=\"file-delete-btn text-night-300 hover:text-red-400 transition flex-shrink-0\" data-id=\"").concat(f.id, "\" title=\"Remove\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n              </svg>\n            </button>\n          </div>\n          ").concat(f.preview ? "<pre class=\"text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20\">".concat(f.preview, "</pre>") : '', "\n          ").concat(_this6._hasFieldData(f) ? "<p class=\"text-xs text-agri-400 mt-1.5\">\u2197 Contains field data \xB7 <button class=\"reimport-btn underline hover:no-underline\" data-id=\"".concat(f.id, "\">Re-import to profiles</button></p>") : '', "\n        </div>\n      ");
               }).join('');
               listEl.querySelectorAll('.file-delete-btn').forEach(function (btn) {
-                btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
-                  return _regenerator().w(function (_context5) {
-                    while (1) switch (_context5.n) {
+                btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7() {
+                  return _regenerator().w(function (_context8) {
+                    while (1) switch (_context8.n) {
                       case 0:
-                        _context5.n = 1;
+                        _context8.n = 1;
                         return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.deleteIngestedFile)(btn.dataset.id);
                       case 1:
-                        _context5.n = 2;
-                        return _this4._renderFileList(container);
+                        _context8.n = 2;
+                        return _this6._renderFileList(container);
                       case 2:
-                        return _context5.a(2);
+                        return _context8.a(2);
                     }
-                  }, _callee5);
+                  }, _callee7);
+                })));
+              });
+              listEl.querySelectorAll('.reimport-btn').forEach(function (btn) {
+                btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8() {
+                  var file;
+                  return _regenerator().w(function (_context9) {
+                    while (1) switch (_context9.n) {
+                      case 0:
+                        file = files.find(function (f) {
+                          return f.id === btn.dataset.id;
+                        });
+                        if (!file) {
+                          _context9.n = 1;
+                          break;
+                        }
+                        _context9.n = 1;
+                        return _this6._offerFieldImport(file, container);
+                      case 1:
+                        return _context9.a(2);
+                    }
+                  }, _callee8);
                 })));
               });
             case 3:
-              return _context6.a(2);
+              return _context0.a(2);
           }
-        }, _callee6);
+        }, _callee9);
       }))();
+    },
+    _hasFieldData: function _hasFieldData(file) {
+      var sd = file.structuredData;
+      if (!sd || sd.parse_error) return false;
+      return Array.isArray(sd.fields) && sd.fields.length > 0 || Array.isArray(sd.field_names) && sd.field_names.length > 0;
     }
   };
 }
@@ -2232,11 +2462,14 @@ function FieldProfileModule() {
         return _regenerator().w(function (_context) {
           while (1) switch (_context.n) {
             case 0:
-              container.innerHTML = "\n        <div class=\"section-heading\">Field Profiles</div>\n\n        <div class=\"px-4 mb-3 flex gap-2\">\n          <button id=\"fp-new-btn\"\n            class=\"flex-1 flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\" />\n            </svg>\n            New Field\n          </button>\n          <button id=\"fp-agrefine-sync-btn\" title=\"Sync fields from AG-Refine\"\n            class=\"flex items-center justify-center gap-1.5 border border-night-500 text-gray-300 hover:border-agri-500 hover:text-agri-400 text-xs font-medium px-3 py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15\" />\n            </svg>\n            AG-Refine\n          </button>\n        </div>\n        <div id=\"fp-sync-status\" class=\"px-4 text-xs min-h-[1rem] mb-2\" style=\"color:#3d4f66;\"></div>\n\n        <!-- Create form -->\n        <div id=\"fp-form\" class=\"hidden px-4 mb-4 bg-night-700 border border-night-600 rounded-xl mx-4 p-4\">\n          <h3 class=\"text-sm font-semibold text-white mb-3\">New Field</h3>\n          <div class=\"space-y-2\">\n            <input id=\"fp-name\" type=\"text\" placeholder=\"Field name *\" class=\"ag-input\" />\n            <input id=\"fp-clu\" type=\"text\" placeholder=\"CLU ID (optional)\" class=\"ag-input\" />\n            <div class=\"flex gap-2\">\n              <input id=\"fp-acres\" type=\"number\" placeholder=\"Acres\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-soil\" type=\"text\" placeholder=\"Soil type\" class=\"ag-input w-1/2\" />\n            </div>\n            <div class=\"flex gap-2\">\n              <input id=\"fp-lat\" type=\"number\" step=\"any\" placeholder=\"Latitude\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-lon\" type=\"number\" step=\"any\" placeholder=\"Longitude\" class=\"ag-input w-1/2\" />\n            </div>\n            <textarea id=\"fp-notes\" rows=\"2\" placeholder=\"Notes (AI-queryable)\"\n              class=\"ag-input resize-none\"></textarea>\n          </div>\n          <div class=\"flex gap-2 mt-3\">\n            <button id=\"fp-save-btn\"\n              class=\"flex-1 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2 rounded-lg transition\">\n              Save\n            </button>\n            <button id=\"fp-cancel-btn\"\n              class=\"flex-1 border border-night-500 text-gray-300 text-sm font-medium py-2 rounded-lg hover:bg-night-700 transition\">\n              Cancel\n            </button>\n          </div>\n        </div>\n\n        <!-- Profiles list -->\n        <div id=\"fp-list\" class=\"px-4 pb-4\"></div>\n      ";
+              container.innerHTML = "\n        <div class=\"section-heading\">Field Profiles</div>\n\n        <div class=\"px-4 mb-3 flex gap-2\">\n          <button id=\"fp-new-btn\"\n            class=\"flex-1 flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\" />\n            </svg>\n            New Field\n          </button>\n          <button id=\"fp-agrefine-sync-btn\" title=\"Pull fields from AG-Refine\"\n            class=\"flex items-center justify-center gap-1.5 border border-night-500 text-gray-300 hover:border-agri-500 hover:text-agri-400 text-xs font-medium px-3 py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-3.5 w-3.5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15\" />\n            </svg>\n            Pull\n          </button>\n          <button id=\"fp-agrefine-push-btn\" title=\"Push fields to AG-Refine\"\n            class=\"flex items-center justify-center gap-1.5 border border-night-500 text-gray-300 hover:border-agri-500 hover:text-agri-400 text-xs font-medium px-3 py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-3.5 w-3.5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12\" />\n            </svg>\n            Push\n          </button>\n        </div>\n        <div id=\"fp-sync-status\" class=\"px-4 text-xs min-h-[1rem] mb-2\" style=\"color:#3d4f66;\"></div>\n\n        <!-- Create form -->\n        <div id=\"fp-form\" class=\"hidden px-4 mb-4 bg-night-700 border border-night-600 rounded-xl mx-4 p-4\">\n          <h3 class=\"text-sm font-semibold text-white mb-3\">New Field</h3>\n          <div class=\"space-y-2\">\n            <input id=\"fp-name\" type=\"text\" placeholder=\"Field name *\" class=\"ag-input\" />\n            <input id=\"fp-clu\" type=\"text\" placeholder=\"CLU ID (optional)\" class=\"ag-input\" />\n            <div class=\"flex gap-2\">\n              <input id=\"fp-acres\" type=\"number\" placeholder=\"Acres\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-soil\" type=\"text\" placeholder=\"Soil type\" class=\"ag-input w-1/2\" />\n            </div>\n            <div class=\"flex gap-2\">\n              <input id=\"fp-lat\" type=\"number\" step=\"any\" placeholder=\"Latitude\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-lon\" type=\"number\" step=\"any\" placeholder=\"Longitude\" class=\"ag-input w-1/2\" />\n            </div>\n            <textarea id=\"fp-notes\" rows=\"2\" placeholder=\"Notes (AI-queryable)\"\n              class=\"ag-input resize-none\"></textarea>\n          </div>\n          <div class=\"flex gap-2 mt-3\">\n            <button id=\"fp-save-btn\"\n              class=\"flex-1 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2 rounded-lg transition\">\n              Save\n            </button>\n            <button id=\"fp-cancel-btn\"\n              class=\"flex-1 border border-night-500 text-gray-300 text-sm font-medium py-2 rounded-lg hover:bg-night-700 transition\">\n              Cancel\n            </button>\n          </div>\n        </div>\n\n        <!-- Profiles list -->\n        <div id=\"fp-list\" class=\"px-4 pb-4\"></div>\n\n        <!-- Sync log (shown after a sync) -->\n        <div id=\"fp-sync-log\" class=\"hidden px-4 pb-4\"></div>\n      ";
               _this._bindEvents(container);
               _context.n = 1;
               return _this._renderList(container);
             case 1:
+              _context.n = 2;
+              return _this._renderSyncLog(container);
+            case 2:
               return _context.a(2);
           }
         }, _callee);
@@ -2249,7 +2482,10 @@ function FieldProfileModule() {
         container.querySelector('#fp-form').classList.toggle('hidden', !showForm);
       });
       container.querySelector('#fp-agrefine-sync-btn').addEventListener('click', function () {
-        return _this2._syncAgRefine(container);
+        return _this2._pullFromAgRefine(container);
+      });
+      container.querySelector('#fp-agrefine-push-btn').addEventListener('click', function () {
+        return _this2._pushToAgRefine(container);
       });
       container.querySelector('#fp-cancel-btn').addEventListener('click', function () {
         showForm = false;
@@ -2279,14 +2515,11 @@ function FieldProfileModule() {
                 },
                 notes: container.querySelector('#fp-notes').value.trim() || null,
                 cropHistory: [],
-                // populated from ingested data in Phase 3
                 harvestRecords: [],
-                // populated from ingested CSVs in Phase 3
                 weatherData: null,
-                // Phase 6
                 carbonPotential: null,
-                // Phase 7
-                createdAt: new Date().toISOString()
+                createdAt: new Date().toISOString(),
+                _source: 'manual'
               };
               _context2.n = 2;
               return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(profile);
@@ -2301,7 +2534,7 @@ function FieldProfileModule() {
         }, _callee2);
       })));
     },
-    _syncAgRefine: function _syncAgRefine(container) {
+    _pullFromAgRefine: function _pullFromAgRefine(container) {
       var _this3 = this;
       return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
         var statusEl, result, parts;
@@ -2309,7 +2542,7 @@ function FieldProfileModule() {
           while (1) switch (_context3.n) {
             case 0:
               statusEl = container.querySelector('#fp-sync-status');
-              statusEl.textContent = 'Connecting to AG-Refine tab…';
+              statusEl.textContent = 'Connecting to AG-Refine…';
               statusEl.style.color = '#3d4f66';
               _context3.n = 1;
               return chrome.runtime.sendMessage({
@@ -2325,74 +2558,157 @@ function FieldProfileModule() {
               statusEl.style.color = '#f87171';
               setTimeout(function () {
                 statusEl.textContent = '';
-              }, 5000);
+                statusEl.style.color = '#3d4f66';
+              }, 6000);
               return _context3.a(2);
             case 2:
               parts = [];
-              if (result.added) parts.push("".concat(result.added, " added"));
+              if (result.added) parts.push("".concat(result.added, " field").concat(result.added !== 1 ? 's' : '', " added"));
               if (result.updated) parts.push("".concat(result.updated, " updated"));
               if (result.loadsFound) parts.push("".concat(result.loadsFound, " loads found"));
-              statusEl.textContent = parts.length ? "\u2713 Synced: ".concat(parts.join(', ')) : '✓ No new fields found in AG-Refine';
+              statusEl.textContent = parts.length ? "\u2713 Pull complete \u2014 ".concat(parts.join(', ')) : '✓ No new fields in AG-Refine';
               statusEl.style.color = '#4ade80';
               setTimeout(function () {
                 statusEl.textContent = '';
-              }, 4000);
+                statusEl.style.color = '#3d4f66';
+              }, 5000);
               _context3.n = 3;
               return _this3._renderList(container);
             case 3:
+              _context3.n = 4;
+              return _this3._renderSyncLog(container);
+            case 4:
               return _context3.a(2);
           }
         }, _callee3);
       }))();
     },
-    _renderList: function _renderList(container) {
-      var _this4 = this;
-      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6() {
-        var profiles, agRefineUrl, listEl;
-        return _regenerator().w(function (_context6) {
-          while (1) switch (_context6.n) {
+    _pushToAgRefine: function _pushToAgRefine(container) {
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
+        var statusEl, result;
+        return _regenerator().w(function (_context4) {
+          while (1) switch (_context4.n) {
             case 0:
-              _context6.n = 1;
-              return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
+              statusEl = container.querySelector('#fp-sync-status');
+              statusEl.textContent = 'Pushing to AG-Refine…';
+              statusEl.style.color = '#3d4f66';
+              _context4.n = 1;
+              return chrome.runtime.sendMessage({
+                type: 'AGREFINE_PUSH'
+              });
             case 1:
-              profiles = _context6.v;
-              _context6.n = 2;
-              return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_1__.getAgRefineUrl)();
-            case 2:
-              agRefineUrl = _context6.v;
-              listEl = container.querySelector('#fp-list');
-              if (!(profiles.length === 0)) {
-                _context6.n = 3;
+              result = _context4.v;
+              if (result.ok) {
+                _context4.n = 2;
                 break;
               }
-              listEl.innerHTML = "\n          <div class=\"empty-state\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-10 w-10 mb-3 opacity-30\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            <p>No field profiles yet.</p>\n            <p class=\"mt-1 text-xs\">Create a profile for each field in your operation.</p>\n          </div>";
-              return _context6.a(2);
+              statusEl.textContent = "\u26A0 ".concat(result.error);
+              statusEl.style.color = '#f87171';
+              setTimeout(function () {
+                statusEl.textContent = '';
+                statusEl.style.color = '#3d4f66';
+              }, 6000);
+              return _context4.a(2);
+            case 2:
+              statusEl.textContent = "\u2713 Pushed ".concat(result.count, " field").concat(result.count !== 1 ? 's' : '', " to AG-Refine");
+              statusEl.style.color = '#4ade80';
+              setTimeout(function () {
+                statusEl.textContent = '';
+                statusEl.style.color = '#3d4f66';
+              }, 4000);
+            case 3:
+              return _context4.a(2);
+          }
+        }, _callee4);
+      }))();
+    },
+    _renderSyncLog: function _renderSyncLog(container) {
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
+        var log, logEl, latest;
+        return _regenerator().w(function (_context5) {
+          while (1) switch (_context5.n) {
+            case 0:
+              _context5.n = 1;
+              return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_1__.getSyncLog)();
+            case 1:
+              log = _context5.v;
+              logEl = container.querySelector('#fp-sync-log');
+              if (!(log.length === 0)) {
+                _context5.n = 2;
+                break;
+              }
+              logEl.classList.add('hidden');
+              return _context5.a(2);
+            case 2:
+              latest = log[0];
+              logEl.classList.remove('hidden');
+              logEl.innerHTML = "\n        <div class=\"border border-night-600 rounded-xl p-3 text-xs\" style=\"background:#131c2b;\">\n          <div class=\"flex items-center justify-between mb-2\">\n            <span class=\"font-semibold text-agri-400\">AG-Refine Sync Log</span>\n            <span class=\"text-gray-500\">".concat(log.length, " sync").concat(log.length !== 1 ? 's' : '', "</span>\n          </div>\n          <div class=\"space-y-1.5\">\n            ").concat(log.slice(0, 5).map(function (entry) {
+                return "\n              <div class=\"flex items-start justify-between gap-2 pb-1.5 border-b border-night-600 last:border-0 last:pb-0\">\n                <div>\n                  <span class=\"text-gray-300\">".concat(new Date(entry.at).toLocaleString(), "</span>\n                  <div class=\"text-gray-500 mt-0.5\">\n                    ").concat(entry.fieldsAdded ? "+".concat(entry.fieldsAdded, " added") : '', "\n                    ").concat(entry.fieldsUpdated ? "".concat(entry.fieldsAdded ? ' · ' : '').concat(entry.fieldsUpdated, " updated") : '', "\n                    ").concat(!entry.fieldsAdded && !entry.fieldsUpdated ? 'No changes' : '', "\n                    ").concat(entry.loadsFound ? " \xB7 ".concat(entry.loadsFound, " loads") : '', "\n                  </div>\n                  ").concat(entry.tabUrl ? "<div class=\"text-night-300 truncate max-w-[180px]\" title=\"".concat(entry.tabUrl, "\">").concat(entry.tabUrl.replace(/^https?:\/\//, '').slice(0, 40), "</div>") : '', "\n                </div>\n                <span class=\"text-agri-400 flex-shrink-0\">\u2193 Pull</span>\n              </div>\n            ");
+              }).join(''), "\n          </div>\n          ").concat(log.length > 5 ? "<p class=\"text-gray-600 mt-1\">".concat(log.length - 5, " older entries hidden</p>") : '', "\n        </div>\n      ");
+            case 3:
+              return _context5.a(2);
+          }
+        }, _callee5);
+      }))();
+    },
+    _renderList: function _renderList(container) {
+      var _this4 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8() {
+        var profiles, agRefineUrl, listEl;
+        return _regenerator().w(function (_context8) {
+          while (1) switch (_context8.n) {
+            case 0:
+              _context8.n = 1;
+              return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
+            case 1:
+              profiles = _context8.v;
+              _context8.n = 2;
+              return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_1__.getAgRefineUrl)();
+            case 2:
+              agRefineUrl = _context8.v;
+              listEl = container.querySelector('#fp-list');
+              if (!(profiles.length === 0)) {
+                _context8.n = 3;
+                break;
+              }
+              listEl.innerHTML = "\n          <div class=\"empty-state\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-10 w-10 mb-3 opacity-30\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            <p>No field profiles yet.</p>\n            <p class=\"mt-1 text-xs\">Create a profile or sync from AG-Refine.</p>\n          </div>";
+              return _context8.a(2);
             case 3:
               listEl.innerHTML = profiles.map(function (p) {
-                var _p$coordinates, _p$coordinates2, _p$_source;
-                return "\n        <div class=\"agri-card cursor-pointer\" data-id=\"".concat(p.id, "\">\n          <div class=\"flex items-center justify-between\">\n            <div class=\"flex-1\">\n              <h3 class=\"text-sm font-bold text-white\">").concat(p.name, "</h3>\n              <div class=\"flex flex-wrap gap-x-3 gap-y-0.5 mt-1\">\n                ").concat(p.acres ? "<span class=\"text-xs text-gray-400\">".concat(p.acres, " ac</span>") : '', "\n                ").concat(p.soilType ? "<span class=\"text-xs text-gray-400\">".concat(p.soilType, "</span>") : '', "\n                ").concat(p.cluId ? "<span class=\"text-xs text-agri-400\">CLU ".concat(p.cluId, "</span>") : '', "\n              </div>\n            </div>\n            <div class=\"flex items-center gap-2\">\n              <button class=\"fp-delete-btn text-night-300 hover:text-red-400 transition\" data-id=\"").concat(p.id, "\" title=\"Delete\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n                </svg>\n              </button>\n              <svg class=\"fp-chevron h-4 w-4 text-gray-500 transition-transform ").concat(expandedId === p.id ? 'rotate-90' : '', "\"\n                xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n              </svg>\n            </div>\n          </div>\n\n          <!-- Expanded detail -->\n          <div class=\"fp-detail ").concat(expandedId === p.id ? '' : 'hidden', " mt-3 pt-3 border-t border-night-600 text-xs text-gray-400 space-y-1\">\n            ").concat(((_p$coordinates = p.coordinates) === null || _p$coordinates === void 0 ? void 0 : _p$coordinates.lat) != null && ((_p$coordinates2 = p.coordinates) === null || _p$coordinates2 === void 0 ? void 0 : _p$coordinates2.lon) != null ? "<p>\uD83D\uDCCD ".concat(p.coordinates.lat.toFixed(4), ", ").concat(p.coordinates.lon.toFixed(4), "</p>") : '', "\n            ").concat(p.notes ? "<p>\uD83D\uDCDD ".concat(p.notes, "</p>") : '', "\n            ").concat((_p$_source = p._source) !== null && _p$_source !== void 0 && _p$_source.includes('ag-refine') ? "<p class=\"text-agri-400\">\u2197 Synced from AG-Refine</p>" : '', "\n            ").concat(agRefineUrl ? "<a href=\"".concat(agRefineUrl, "\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-agri-400 hover:underline\">Open in AG-Refine \u2197</a>") : '', "\n            <p class=\"text-gray-500\">Weather data: <span class=\"coming-soon\">Phase 6</span></p>\n            <p class=\"text-gray-500\">Carbon potential: <span class=\"coming-soon\">Phase 7</span></p>\n            <p class=\"text-gray-500\">Added ").concat(new Date(p.createdAt).toLocaleDateString(), "</p>\n          </div>\n        </div>\n      ");
+                var _p$cropHistory, _p$cropHistory2, _p$harvestRecords, _p$harvestRecords2, _p$cropHistory3, _p$coordinates, _p$coordinates2;
+                var isExpanded = expandedId === p.id;
+                var sourceLabel = p._source === 'ag-refine' ? 'AG-Refine' : p._source === 'ag-refine-merged' ? 'AG-Refine + manual' : p._source === 'manual' ? 'manual' : null;
+                var cropHistoryHtml = ((_p$cropHistory = p.cropHistory) !== null && _p$cropHistory !== void 0 ? _p$cropHistory : []).length > 0 ? "<div class=\"mt-2.5\">\n              <p class=\"text-agri-400 font-semibold uppercase tracking-wide text-[9px] mb-1\">Crop History</p>\n              <div class=\"space-y-0.5\">\n                ".concat(((_p$cropHistory2 = p.cropHistory) !== null && _p$cropHistory2 !== void 0 ? _p$cropHistory2 : []).slice(0, 5).map(function (h) {
+                  var _h$unit;
+                  return "\n                  <div class=\"flex justify-between\">\n                    <span>".concat(h.year, " \u2014 ").concat(h.crop, "</span>\n                    ").concat(h["yield"] != null ? "<span class=\"text-white\">".concat(h["yield"], " ").concat((_h$unit = h.unit) !== null && _h$unit !== void 0 ? _h$unit : 'bu/ac', "</span>") : '', "\n                  </div>\n                ");
+                }).join(''), "\n              </div>\n            </div>") : '';
+                var harvestHtml = ((_p$harvestRecords = p.harvestRecords) !== null && _p$harvestRecords !== void 0 ? _p$harvestRecords : []).length > 0 ? "<div class=\"mt-2.5\">\n              <p class=\"text-agri-400 font-semibold uppercase tracking-wide text-[9px] mb-1\">Harvest Records</p>\n              <div class=\"space-y-0.5\">\n                ".concat(((_p$harvestRecords2 = p.harvestRecords) !== null && _p$harvestRecords2 !== void 0 ? _p$harvestRecords2 : []).slice(0, 4).map(function (h) {
+                  var _h$date$slice, _h$date, _h$unit2;
+                  return "\n                  <div class=\"flex justify-between gap-2\">\n                    <span>".concat((_h$date$slice = (_h$date = h.date) === null || _h$date === void 0 ? void 0 : _h$date.slice(0, 10)) !== null && _h$date$slice !== void 0 ? _h$date$slice : '?', " \u2014 ").concat(h.crop, "</span>\n                    <span class=\"text-white flex-shrink-0\">\n                      ").concat(h["yield"] != null ? "".concat(h["yield"], " ").concat((_h$unit2 = h.unit) !== null && _h$unit2 !== void 0 ? _h$unit2 : '') : '', "\n                      ").concat(h.moisture != null ? " @ ".concat(h.moisture, "%") : '', "\n                    </span>\n                  </div>\n                ");
+                }).join(''), "\n              </div>\n            </div>") : '';
+                return "\n          <div class=\"agri-card cursor-pointer\" data-id=\"".concat(p.id, "\">\n            <div class=\"flex items-center justify-between\">\n              <div class=\"flex-1 min-w-0\">\n                <h3 class=\"text-sm font-bold text-white\">").concat(p.name, "</h3>\n                <div class=\"flex flex-wrap gap-x-3 gap-y-0.5 mt-1\">\n                  ").concat(p.acres != null ? "<span class=\"text-xs text-gray-400\">".concat(p.acres, " ac</span>") : '', "\n                  ").concat(p.soilType ? "<span class=\"text-xs text-gray-400\">".concat(p.soilType, "</span>") : '', "\n                  ").concat(p.cluId ? "<span class=\"text-xs text-agri-400\">CLU ".concat(p.cluId, "</span>") : '', "\n                  ").concat(((_p$cropHistory3 = p.cropHistory) !== null && _p$cropHistory3 !== void 0 ? _p$cropHistory3 : []).length > 0 ? "<span class=\"text-xs text-gray-500\">".concat(p.cropHistory.length, " yr history</span>") : '', "\n                  ").concat(sourceLabel ? "<span class=\"text-[9px] uppercase tracking-wide px-1.5 py-0.5 rounded\" style=\"background:#1a2438;color:#3d4f66;\">".concat(sourceLabel, "</span>") : '', "\n                </div>\n              </div>\n              <div class=\"flex items-center gap-2 flex-shrink-0\">\n                <button class=\"fp-delete-btn text-night-300 hover:text-red-400 transition\" data-id=\"").concat(p.id, "\" title=\"Delete\">\n                  <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n                  </svg>\n                </button>\n                <svg class=\"fp-chevron h-4 w-4 text-gray-500 transition-transform ").concat(isExpanded ? 'rotate-90' : '', "\"\n                  xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n                </svg>\n              </div>\n            </div>\n\n            <!-- Expanded detail -->\n            <div class=\"fp-detail ").concat(isExpanded ? '' : 'hidden', " mt-3 pt-3 border-t border-night-600 text-xs text-gray-400 space-y-1\">\n              ").concat(((_p$coordinates = p.coordinates) === null || _p$coordinates === void 0 ? void 0 : _p$coordinates.lat) != null && ((_p$coordinates2 = p.coordinates) === null || _p$coordinates2 === void 0 ? void 0 : _p$coordinates2.lon) != null ? "<p>\uD83D\uDCCD ".concat(p.coordinates.lat.toFixed(4), ", ").concat(p.coordinates.lon.toFixed(4), "</p>") : '', "\n              ").concat(p.notes ? "<p class=\"text-gray-300\">\uD83D\uDCDD ".concat(p.notes, "</p>") : '', "\n              ").concat(cropHistoryHtml, "\n              ").concat(harvestHtml, "\n              ").concat(!cropHistoryHtml && !harvestHtml ? "<p class=\"text-gray-600 italic\">No crop history yet \u2014 ingest a harvest file to populate.</p>" : '', "\n              <div class=\"mt-2.5 pt-2 border-t border-night-600 flex items-center justify-between\">\n                <p class=\"text-gray-600\">Added ").concat(new Date(p.createdAt).toLocaleDateString(), "</p>\n                <div class=\"flex gap-3\">\n                  ").concat(agRefineUrl ? "<a href=\"".concat(agRefineUrl, "\" target=\"_blank\" rel=\"noopener noreferrer\"\n                    class=\"text-agri-400 hover:underline\" onclick=\"event.stopPropagation()\">Open in AG-Refine \u2197</a>") : '', "\n                  <span class=\"text-gray-600\">Carbon: <span class=\"coming-soon\">Phase 7</span></span>\n                </div>\n              </div>\n            </div>\n          </div>\n        ");
               }).join('');
               listEl.querySelectorAll('.agri-card').forEach(function (card) {
                 card.addEventListener('click', /*#__PURE__*/function () {
-                  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(e) {
+                  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6(e) {
                     var id;
-                    return _regenerator().w(function (_context4) {
-                      while (1) switch (_context4.n) {
+                    return _regenerator().w(function (_context6) {
+                      while (1) switch (_context6.n) {
                         case 0:
                           if (!e.target.closest('.fp-delete-btn')) {
-                            _context4.n = 1;
+                            _context6.n = 1;
                             break;
                           }
-                          return _context4.a(2);
+                          return _context6.a(2);
                         case 1:
                           id = card.dataset.id;
                           expandedId = expandedId === id ? null : id;
-                          _context4.n = 2;
+                          _context6.n = 2;
                           return _this4._renderList(container);
                         case 2:
-                          return _context4.a(2);
+                          return _context6.a(2);
                       }
-                    }, _callee4);
+                    }, _callee6);
                   }));
                   return function (_x) {
                     return _ref2.apply(this, arguments);
@@ -2401,21 +2717,21 @@ function FieldProfileModule() {
               });
               listEl.querySelectorAll('.fp-delete-btn').forEach(function (btn) {
                 btn.addEventListener('click', /*#__PURE__*/function () {
-                  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(e) {
-                    return _regenerator().w(function (_context5) {
-                      while (1) switch (_context5.n) {
+                  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(e) {
+                    return _regenerator().w(function (_context7) {
+                      while (1) switch (_context7.n) {
                         case 0:
                           e.stopPropagation();
-                          _context5.n = 1;
+                          _context7.n = 1;
                           return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.deleteFieldProfile)(btn.dataset.id);
                         case 1:
                           if (expandedId === btn.dataset.id) expandedId = null;
-                          _context5.n = 2;
+                          _context7.n = 2;
                           return _this4._renderList(container);
                         case 2:
-                          return _context5.a(2);
+                          return _context7.a(2);
                       }
-                    }, _callee5);
+                    }, _callee7);
                   }));
                   return function (_x2) {
                     return _ref3.apply(this, arguments);
@@ -2423,9 +2739,9 @@ function FieldProfileModule() {
                 }());
               });
             case 4:
-              return _context6.a(2);
+              return _context8.a(2);
           }
-        }, _callee6);
+        }, _callee8);
       }))();
     }
   };
@@ -2670,6 +2986,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getAgRefineUrl: () => (/* binding */ getAgRefineUrl),
 /* harmony export */   getSyncLog: () => (/* binding */ getSyncLog),
+/* harmony export */   pushToAgRefine: () => (/* binding */ pushToAgRefine),
 /* harmony export */   setAgRefineUrl: () => (/* binding */ setAgRefineUrl),
 /* harmony export */   syncFromAgRefine: () => (/* binding */ syncFromAgRefine)
 /* harmony export */ });
@@ -2925,38 +3242,117 @@ function extractLoads(raw) {
   }
   return loads;
 }
-function syncFromAgRefine() {
-  return _syncFromAgRefine.apply(this, arguments);
+
+// Injected into AG-Refine tab to write field data back into its localStorage
+function writeFieldsToAgRefineTab(fields) {
+  try {
+    localStorage.setItem('agrifine_pushed_fields', JSON.stringify(fields));
+    localStorage.setItem('agrifine_pushed_at', new Date().toISOString());
+    // Dispatch an event so a listening AG-Refine app can react immediately
+    window.dispatchEvent(new CustomEvent('agrifine:fields-updated', {
+      detail: {
+        fields: fields
+      }
+    }));
+    return {
+      ok: true,
+      count: fields.length
+    };
+  } catch (err) {
+    return {
+      ok: false,
+      error: err.message
+    };
+  }
 }
-function _syncFromAgRefine() {
-  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
-    var configuredUrl, allTabs, agRefineTabs, tab, raw, _yield$chrome$scripti, _yield$chrome$scripti2, result, fields, loads, existing, added, updated, _iterator3, _step3, _loop, log, history, _t7, _t8;
-    return _regenerator().w(function (_context5) {
-      while (1) switch (_context5.p = _context5.n) {
+function pushToAgRefine(_x2) {
+  return _pushToAgRefine.apply(this, arguments);
+}
+function _pushToAgRefine() {
+  _pushToAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(profiles) {
+    var configuredUrl, allTabs, agRefineTabs, tab, _yield$chrome$scripti, _yield$chrome$scripti2, result, _t7;
+    return _regenerator().w(function (_context4) {
+      while (1) switch (_context4.p = _context4.n) {
         case 0:
-          _context5.n = 1;
+          _context4.n = 1;
           return getAgRefineUrl();
         case 1:
-          configuredUrl = _context5.v;
-          _context5.n = 2;
+          configuredUrl = _context4.v;
+          _context4.n = 2;
           return chrome.tabs.query({});
         case 2:
-          allTabs = _context5.v;
+          allTabs = _context4.v;
           agRefineTabs = allTabs.filter(function (t) {
             return tabMatchesAgRefine(t, configuredUrl);
           });
           if (!(agRefineTabs.length === 0)) {
-            _context5.n = 3;
+            _context4.n = 3;
             break;
           }
-          return _context5.a(2, {
+          return _context4.a(2, {
+            ok: false,
+            error: 'No AG-Refine tab found. Open AG-Refine first.'
+          });
+        case 3:
+          tab = agRefineTabs[0];
+          _context4.p = 4;
+          _context4.n = 5;
+          return chrome.scripting.executeScript({
+            target: {
+              tabId: tab.id
+            },
+            func: writeFieldsToAgRefineTab,
+            args: [profiles]
+          });
+        case 5:
+          _yield$chrome$scripti = _context4.v;
+          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
+          result = _yield$chrome$scripti2[0];
+          return _context4.a(2, result.result);
+        case 6:
+          _context4.p = 6;
+          _t7 = _context4.v;
+          return _context4.a(2, {
+            ok: false,
+            error: "Cannot write to AG-Refine tab: ".concat(_t7.message)
+          });
+      }
+    }, _callee4, null, [[4, 6]]);
+  }));
+  return _pushToAgRefine.apply(this, arguments);
+}
+function syncFromAgRefine() {
+  return _syncFromAgRefine.apply(this, arguments);
+}
+function _syncFromAgRefine() {
+  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
+    var configuredUrl, allTabs, agRefineTabs, tab, raw, _yield$chrome$scripti3, _yield$chrome$scripti4, result, fields, loads, existing, added, updated, _iterator3, _step3, _loop, log, history, _t8, _t9;
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.p = _context6.n) {
+        case 0:
+          _context6.n = 1;
+          return getAgRefineUrl();
+        case 1:
+          configuredUrl = _context6.v;
+          _context6.n = 2;
+          return chrome.tabs.query({});
+        case 2:
+          allTabs = _context6.v;
+          agRefineTabs = allTabs.filter(function (t) {
+            return tabMatchesAgRefine(t, configuredUrl);
+          });
+          if (!(agRefineTabs.length === 0)) {
+            _context6.n = 3;
+            break;
+          }
+          return _context6.a(2, {
             ok: false,
             error: 'No AG-Refine tab found. Open AG-Refine in a browser tab first.'
           });
         case 3:
           tab = agRefineTabs[0];
-          _context5.p = 4;
-          _context5.n = 5;
+          _context6.p = 4;
+          _context6.n = 5;
           return chrome.scripting.executeScript({
             target: {
               tabId: tab.id
@@ -2964,41 +3360,41 @@ function _syncFromAgRefine() {
             func: scrapeAgRefineTab
           });
         case 5:
-          _yield$chrome$scripti = _context5.v;
-          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
-          result = _yield$chrome$scripti2[0];
+          _yield$chrome$scripti3 = _context6.v;
+          _yield$chrome$scripti4 = _slicedToArray(_yield$chrome$scripti3, 1);
+          result = _yield$chrome$scripti4[0];
           raw = result.result;
-          _context5.n = 7;
+          _context6.n = 7;
           break;
         case 6:
-          _context5.p = 6;
-          _t7 = _context5.v;
-          return _context5.a(2, {
+          _context6.p = 6;
+          _t8 = _context6.v;
+          return _context6.a(2, {
             ok: false,
-            error: "Cannot read AG-Refine tab: ".concat(_t7.message)
+            error: "Cannot read AG-Refine tab: ".concat(_t8.message)
           });
         case 7:
           fields = extractFields(raw);
           loads = extractLoads(raw); // Merge fields — update existing by name, insert new ones
-          _context5.n = 8;
+          _context6.n = 8;
           return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
         case 8:
-          existing = _context5.v;
+          existing = _context6.v;
           added = 0;
           updated = 0;
           _iterator3 = _createForOfIteratorHelper(fields);
-          _context5.p = 9;
+          _context6.p = 9;
           _loop = /*#__PURE__*/_regenerator().m(function _loop() {
             var f, match, _match$coordinates, _match$cropHistory, _match$notes, _match$cluId, merged;
-            return _regenerator().w(function (_context4) {
-              while (1) switch (_context4.n) {
+            return _regenerator().w(function (_context5) {
+              while (1) switch (_context5.n) {
                 case 0:
                   f = _step3.value;
                   match = existing.find(function (e) {
                     return e.name.toLowerCase() === f.name.toLowerCase();
                   });
                   if (!match) {
-                    _context4.n = 2;
+                    _context5.n = 2;
                     break;
                   }
                   // Merge: fill in missing data without overwriting user edits
@@ -3009,43 +3405,43 @@ function _syncFromAgRefine() {
                     cluId: (_match$cluId = match.cluId) !== null && _match$cluId !== void 0 ? _match$cluId : f.cluId,
                     _source: 'ag-refine-merged'
                   });
-                  _context4.n = 1;
+                  _context5.n = 1;
                   return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(merged);
                 case 1:
                   updated++;
-                  _context4.n = 4;
+                  _context5.n = 4;
                   break;
                 case 2:
-                  _context4.n = 3;
+                  _context5.n = 3;
                   return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(f);
                 case 3:
                   added++;
                 case 4:
-                  return _context4.a(2);
+                  return _context5.a(2);
               }
             }, _loop);
           });
           _iterator3.s();
         case 10:
           if ((_step3 = _iterator3.n()).done) {
-            _context5.n = 12;
+            _context6.n = 12;
             break;
           }
-          return _context5.d(_regeneratorValues(_loop()), 11);
+          return _context6.d(_regeneratorValues(_loop()), 11);
         case 11:
-          _context5.n = 10;
+          _context6.n = 10;
           break;
         case 12:
-          _context5.n = 14;
+          _context6.n = 14;
           break;
         case 13:
-          _context5.p = 13;
-          _t8 = _context5.v;
-          _iterator3.e(_t8);
+          _context6.p = 13;
+          _t9 = _context6.v;
+          _iterator3.e(_t9);
         case 14:
-          _context5.p = 14;
+          _context6.p = 14;
           _iterator3.f();
-          return _context5.f(14);
+          return _context6.f(14);
         case 15:
           log = {
             at: new Date().toISOString(),
@@ -3055,15 +3451,15 @@ function _syncFromAgRefine() {
             loadsFound: loads.length,
             rawKeys: Object.keys(_objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage))
           };
-          _context5.n = 16;
+          _context6.n = 16;
           return getSyncLog();
         case 16:
-          history = _context5.v;
+          history = _context6.v;
           history.unshift(log);
-          _context5.n = 17;
+          _context6.n = 17;
           return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(SYNC_LOG_KEY, history.slice(0, 20));
         case 17:
-          return _context5.a(2, {
+          return _context6.a(2, {
             ok: true,
             added: added,
             updated: updated,
@@ -3072,7 +3468,7 @@ function _syncFromAgRefine() {
             tabUrl: tab.url
           });
       }
-    }, _callee4, null, [[9, 13, 14, 15], [4, 6]]);
+    }, _callee5, null, [[9, 13, 14, 15], [4, 6]]);
   }));
   return _syncFromAgRefine.apply(this, arguments);
 }

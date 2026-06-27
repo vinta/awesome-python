@@ -1,4 +1,4 @@
-import { getIngestedFiles, saveIngestedFile, deleteIngestedFile } from '../../utils/storage.js';
+import { getIngestedFiles, saveIngestedFile, deleteIngestedFile, getFieldProfiles, saveFieldProfile } from '../../utils/storage.js';
 import { callAnthropic } from '../../utils/api.js';
 
 const SUPPORTED_TYPES = {
@@ -47,10 +47,24 @@ export function DataIngestModule() {
           <div id="ingest-status" class="text-xs text-center text-gray-500 mt-2 min-h-[1rem]"></div>
         </div>
 
+        <!-- Field import banner (shown after processing if field data found) -->
+        <div id="field-import-banner" class="hidden px-4 mb-3">
+          <div class="bg-night-700 border border-agri-600 rounded-xl p-3">
+            <p class="text-xs font-semibold text-agri-400 mb-1">Field data detected</p>
+            <p id="field-import-desc" class="text-xs text-gray-400 mb-2"></p>
+            <p id="field-import-status" class="text-xs text-gray-500 mb-2 hidden"></p>
+            <button id="import-to-fields-btn"
+              class="w-full bg-agri-600 hover:bg-agri-700 text-white text-xs font-medium py-1.5 rounded-lg transition">
+              Import harvest data to field profiles
+            </button>
+          </div>
+        </div>
+
         <!-- File list -->
         <div id="file-list" class="px-4 pb-4"></div>
       `;
 
+      this._pendingImport = null;
       this._bindEvents(container);
       await this._renderFileList(container);
     },
@@ -80,6 +94,10 @@ export function DataIngestModule() {
       fileInput.addEventListener('change', () => {
         if (fileInput.files[0]) this._processFile(fileInput.files[0], container);
       });
+
+      container.querySelector('#import-to-fields-btn').addEventListener('click', () =>
+        this._importToFields(container)
+      );
     },
 
     async _processFile(file, container) {
@@ -93,6 +111,10 @@ export function DataIngestModule() {
         status.textContent = 'Unsupported file type.';
         return;
       }
+
+      // Hide previous import banner
+      container.querySelector('#field-import-banner').classList.add('hidden');
+      this._pendingImport = null;
 
       status.textContent = `Parsing ${typeName}…`;
       let extractedText = '';
@@ -121,7 +143,7 @@ export function DataIngestModule() {
 
       try {
         const raw = await callAnthropic({
-          system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names, dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. Return only valid JSON.',
+          system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names (as "fields" array of strings), dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. For harvest data include avg_yield_bu_ac, avg_moisture_pct, harvest_date, and crop. Return only valid JSON.',
           userMessage: extractedText.slice(0, 6000),
           maxTokens: 1024,
         });
@@ -137,7 +159,7 @@ export function DataIngestModule() {
         uploadedAt: new Date().toISOString(),
         structuredData,
         preview: Object.entries(structuredData ?? {})
-          .filter(([k]) => k !== 'raw_preview')
+          .filter(([k]) => k !== 'raw_preview' && k !== 'parse_error')
           .slice(0, 5)
           .map(([k, v]) => `${k}: ${JSON.stringify(v).slice(0, 80)}`)
           .join('\n'),
@@ -147,11 +169,116 @@ export function DataIngestModule() {
       status.textContent = 'File processed!';
       setTimeout(() => { status.textContent = ''; }, 2000);
       await this._renderFileList(container);
+
+      // Offer to import field data if field names were found
+      await this._offerFieldImport(record, container);
+    },
+
+    async _offerFieldImport(record, container) {
+      const sd = record.structuredData;
+      if (!sd || sd.parse_error) return;
+
+      // Collect field names from multiple possible keys
+      const rawFields = [
+        ...(Array.isArray(sd.fields) ? sd.fields : []),
+        ...(Array.isArray(sd.field_names) ? sd.field_names : []),
+      ].map((f) => String(f).trim()).filter(Boolean);
+
+      if (rawFields.length === 0) return;
+
+      const profiles = await getFieldProfiles();
+      const matched = rawFields.filter((name) =>
+        profiles.some((p) => p.name.toLowerCase() === name.toLowerCase())
+      );
+
+      if (matched.length === 0) return;
+
+      this._pendingImport = { record, matched };
+
+      const banner = container.querySelector('#field-import-banner');
+      const desc = container.querySelector('#field-import-desc');
+      const btn = container.querySelector('#import-to-fields-btn');
+      const importStatus = container.querySelector('#field-import-status');
+
+      desc.textContent = `Found harvest data for: ${matched.join(', ')}`;
+      importStatus.classList.add('hidden');
+      btn.disabled = false;
+      btn.textContent = 'Import harvest data to field profiles';
+      btn.style.opacity = '';
+      banner.classList.remove('hidden');
+    },
+
+    async _importToFields(container) {
+      if (!this._pendingImport) return;
+
+      const { record, matched } = this._pendingImport;
+      const sd = record.structuredData;
+      const importStatus = container.querySelector('#field-import-status');
+      const btn = container.querySelector('#import-to-fields-btn');
+
+      btn.disabled = true;
+      btn.textContent = 'Importing…';
+      importStatus.textContent = '';
+      importStatus.classList.remove('hidden');
+
+      const profiles = await getFieldProfiles();
+      let count = 0;
+
+      for (const fieldName of matched) {
+        const profile = profiles.find((p) => p.name.toLowerCase() === fieldName.toLowerCase());
+        if (!profile) continue;
+
+        const harvestDate = sd.harvest_date ?? sd.date ?? new Date().toISOString().slice(0, 10);
+        const cropYear = parseInt(harvestDate.slice(0, 4), 10);
+        const crop = sd.crop ?? sd.operation_type?.replace(/\s*harvest\s*/i, '').trim() ?? 'Unknown';
+        const yieldVal = sd.avg_yield_bu_ac ?? sd.yield_bu_ac ?? sd.yield ?? null;
+        const moisture = sd.avg_moisture_pct ?? sd.moisture_pct ?? null;
+
+        const harvestRecord = {
+          date: harvestDate,
+          crop,
+          yield: yieldVal ? parseFloat(yieldVal) : null,
+          unit: 'bu/ac',
+          moisture: moisture ? parseFloat(moisture) : null,
+          source: record.filename,
+        };
+
+        const cropHistoryEntry = {
+          year: cropYear,
+          crop,
+          yield: harvestRecord.yield,
+          unit: 'bu/ac',
+        };
+
+        const existingHarvests = profile.harvestRecords ?? [];
+        const existingHistory = profile.cropHistory ?? [];
+
+        const updated = {
+          ...profile,
+          harvestRecords: [
+            harvestRecord,
+            ...existingHarvests.filter((r) => !(r.date === harvestRecord.date && r.crop === harvestRecord.crop)),
+          ],
+          cropHistory: [
+            cropHistoryEntry,
+            ...existingHistory.filter((r) => !(r.year === cropHistoryEntry.year && r.crop === cropHistoryEntry.crop)),
+          ].sort((a, b) => b.year - a.year),
+        };
+
+        await saveFieldProfile(updated);
+        count++;
+      }
+
+      importStatus.textContent = `✓ Updated ${count} field profile${count !== 1 ? 's' : ''} — check Fields tab`;
+      importStatus.style.color = '#4ade80';
+      importStatus.classList.remove('hidden');
+      btn.textContent = 'Imported';
+      btn.style.opacity = '0.5';
+      this._pendingImport = null;
     },
 
     _parseCSV(file) {
       return new Promise((resolve, reject) => {
-        // PapaParse is loaded dynamically to keep the background bundle lean
         import('papaparse').then(({ default: Papa }) => {
           Papa.parse(file, {
             complete: (results) => {
@@ -250,6 +377,7 @@ export function DataIngestModule() {
             </button>
           </div>
           ${f.preview ? `<pre class="text-xs text-gray-400 mt-2 whitespace-pre-wrap bg-night-800 rounded p-2 overflow-hidden max-h-20">${f.preview}</pre>` : ''}
+          ${this._hasFieldData(f) ? `<p class="text-xs text-agri-400 mt-1.5">↗ Contains field data · <button class="reimport-btn underline hover:no-underline" data-id="${f.id}">Re-import to profiles</button></p>` : ''}
         </div>
       `).join('');
 
@@ -259,6 +387,22 @@ export function DataIngestModule() {
           await this._renderFileList(container);
         });
       });
+
+      listEl.querySelectorAll('.reimport-btn').forEach((btn) => {
+        btn.addEventListener('click', async () => {
+          const file = files.find((f) => f.id === btn.dataset.id);
+          if (file) await this._offerFieldImport(file, container);
+        });
+      });
+    },
+
+    _hasFieldData(file) {
+      const sd = file.structuredData;
+      if (!sd || sd.parse_error) return false;
+      return (
+        (Array.isArray(sd.fields) && sd.fields.length > 0) ||
+        (Array.isArray(sd.field_names) && sd.field_names.length > 0)
+      );
     },
   };
 }

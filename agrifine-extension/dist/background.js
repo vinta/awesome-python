@@ -12,6 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getAgRefineUrl: () => (/* binding */ getAgRefineUrl),
 /* harmony export */   getSyncLog: () => (/* binding */ getSyncLog),
+/* harmony export */   pushToAgRefine: () => (/* binding */ pushToAgRefine),
 /* harmony export */   setAgRefineUrl: () => (/* binding */ setAgRefineUrl),
 /* harmony export */   syncFromAgRefine: () => (/* binding */ syncFromAgRefine)
 /* harmony export */ });
@@ -267,38 +268,117 @@ function extractLoads(raw) {
   }
   return loads;
 }
-function syncFromAgRefine() {
-  return _syncFromAgRefine.apply(this, arguments);
+
+// Injected into AG-Refine tab to write field data back into its localStorage
+function writeFieldsToAgRefineTab(fields) {
+  try {
+    localStorage.setItem('agrifine_pushed_fields', JSON.stringify(fields));
+    localStorage.setItem('agrifine_pushed_at', new Date().toISOString());
+    // Dispatch an event so a listening AG-Refine app can react immediately
+    window.dispatchEvent(new CustomEvent('agrifine:fields-updated', {
+      detail: {
+        fields: fields
+      }
+    }));
+    return {
+      ok: true,
+      count: fields.length
+    };
+  } catch (err) {
+    return {
+      ok: false,
+      error: err.message
+    };
+  }
 }
-function _syncFromAgRefine() {
-  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
-    var configuredUrl, allTabs, agRefineTabs, tab, raw, _yield$chrome$scripti, _yield$chrome$scripti2, result, fields, loads, existing, added, updated, _iterator3, _step3, _loop, log, history, _t7, _t8;
-    return _regenerator().w(function (_context5) {
-      while (1) switch (_context5.p = _context5.n) {
+function pushToAgRefine(_x2) {
+  return _pushToAgRefine.apply(this, arguments);
+}
+function _pushToAgRefine() {
+  _pushToAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(profiles) {
+    var configuredUrl, allTabs, agRefineTabs, tab, _yield$chrome$scripti, _yield$chrome$scripti2, result, _t7;
+    return _regenerator().w(function (_context4) {
+      while (1) switch (_context4.p = _context4.n) {
         case 0:
-          _context5.n = 1;
+          _context4.n = 1;
           return getAgRefineUrl();
         case 1:
-          configuredUrl = _context5.v;
-          _context5.n = 2;
+          configuredUrl = _context4.v;
+          _context4.n = 2;
           return chrome.tabs.query({});
         case 2:
-          allTabs = _context5.v;
+          allTabs = _context4.v;
           agRefineTabs = allTabs.filter(function (t) {
             return tabMatchesAgRefine(t, configuredUrl);
           });
           if (!(agRefineTabs.length === 0)) {
-            _context5.n = 3;
+            _context4.n = 3;
             break;
           }
-          return _context5.a(2, {
+          return _context4.a(2, {
+            ok: false,
+            error: 'No AG-Refine tab found. Open AG-Refine first.'
+          });
+        case 3:
+          tab = agRefineTabs[0];
+          _context4.p = 4;
+          _context4.n = 5;
+          return chrome.scripting.executeScript({
+            target: {
+              tabId: tab.id
+            },
+            func: writeFieldsToAgRefineTab,
+            args: [profiles]
+          });
+        case 5:
+          _yield$chrome$scripti = _context4.v;
+          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
+          result = _yield$chrome$scripti2[0];
+          return _context4.a(2, result.result);
+        case 6:
+          _context4.p = 6;
+          _t7 = _context4.v;
+          return _context4.a(2, {
+            ok: false,
+            error: "Cannot write to AG-Refine tab: ".concat(_t7.message)
+          });
+      }
+    }, _callee4, null, [[4, 6]]);
+  }));
+  return _pushToAgRefine.apply(this, arguments);
+}
+function syncFromAgRefine() {
+  return _syncFromAgRefine.apply(this, arguments);
+}
+function _syncFromAgRefine() {
+  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
+    var configuredUrl, allTabs, agRefineTabs, tab, raw, _yield$chrome$scripti3, _yield$chrome$scripti4, result, fields, loads, existing, added, updated, _iterator3, _step3, _loop, log, history, _t8, _t9;
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.p = _context6.n) {
+        case 0:
+          _context6.n = 1;
+          return getAgRefineUrl();
+        case 1:
+          configuredUrl = _context6.v;
+          _context6.n = 2;
+          return chrome.tabs.query({});
+        case 2:
+          allTabs = _context6.v;
+          agRefineTabs = allTabs.filter(function (t) {
+            return tabMatchesAgRefine(t, configuredUrl);
+          });
+          if (!(agRefineTabs.length === 0)) {
+            _context6.n = 3;
+            break;
+          }
+          return _context6.a(2, {
             ok: false,
             error: 'No AG-Refine tab found. Open AG-Refine in a browser tab first.'
           });
         case 3:
           tab = agRefineTabs[0];
-          _context5.p = 4;
-          _context5.n = 5;
+          _context6.p = 4;
+          _context6.n = 5;
           return chrome.scripting.executeScript({
             target: {
               tabId: tab.id
@@ -306,41 +386,41 @@ function _syncFromAgRefine() {
             func: scrapeAgRefineTab
           });
         case 5:
-          _yield$chrome$scripti = _context5.v;
-          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
-          result = _yield$chrome$scripti2[0];
+          _yield$chrome$scripti3 = _context6.v;
+          _yield$chrome$scripti4 = _slicedToArray(_yield$chrome$scripti3, 1);
+          result = _yield$chrome$scripti4[0];
           raw = result.result;
-          _context5.n = 7;
+          _context6.n = 7;
           break;
         case 6:
-          _context5.p = 6;
-          _t7 = _context5.v;
-          return _context5.a(2, {
+          _context6.p = 6;
+          _t8 = _context6.v;
+          return _context6.a(2, {
             ok: false,
-            error: "Cannot read AG-Refine tab: ".concat(_t7.message)
+            error: "Cannot read AG-Refine tab: ".concat(_t8.message)
           });
         case 7:
           fields = extractFields(raw);
           loads = extractLoads(raw); // Merge fields — update existing by name, insert new ones
-          _context5.n = 8;
+          _context6.n = 8;
           return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
         case 8:
-          existing = _context5.v;
+          existing = _context6.v;
           added = 0;
           updated = 0;
           _iterator3 = _createForOfIteratorHelper(fields);
-          _context5.p = 9;
+          _context6.p = 9;
           _loop = /*#__PURE__*/_regenerator().m(function _loop() {
             var f, match, _match$coordinates, _match$cropHistory, _match$notes, _match$cluId, merged;
-            return _regenerator().w(function (_context4) {
-              while (1) switch (_context4.n) {
+            return _regenerator().w(function (_context5) {
+              while (1) switch (_context5.n) {
                 case 0:
                   f = _step3.value;
                   match = existing.find(function (e) {
                     return e.name.toLowerCase() === f.name.toLowerCase();
                   });
                   if (!match) {
-                    _context4.n = 2;
+                    _context5.n = 2;
                     break;
                   }
                   // Merge: fill in missing data without overwriting user edits
@@ -351,43 +431,43 @@ function _syncFromAgRefine() {
                     cluId: (_match$cluId = match.cluId) !== null && _match$cluId !== void 0 ? _match$cluId : f.cluId,
                     _source: 'ag-refine-merged'
                   });
-                  _context4.n = 1;
+                  _context5.n = 1;
                   return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(merged);
                 case 1:
                   updated++;
-                  _context4.n = 4;
+                  _context5.n = 4;
                   break;
                 case 2:
-                  _context4.n = 3;
+                  _context5.n = 3;
                   return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(f);
                 case 3:
                   added++;
                 case 4:
-                  return _context4.a(2);
+                  return _context5.a(2);
               }
             }, _loop);
           });
           _iterator3.s();
         case 10:
           if ((_step3 = _iterator3.n()).done) {
-            _context5.n = 12;
+            _context6.n = 12;
             break;
           }
-          return _context5.d(_regeneratorValues(_loop()), 11);
+          return _context6.d(_regeneratorValues(_loop()), 11);
         case 11:
-          _context5.n = 10;
+          _context6.n = 10;
           break;
         case 12:
-          _context5.n = 14;
+          _context6.n = 14;
           break;
         case 13:
-          _context5.p = 13;
-          _t8 = _context5.v;
-          _iterator3.e(_t8);
+          _context6.p = 13;
+          _t9 = _context6.v;
+          _iterator3.e(_t9);
         case 14:
-          _context5.p = 14;
+          _context6.p = 14;
           _iterator3.f();
-          return _context5.f(14);
+          return _context6.f(14);
         case 15:
           log = {
             at: new Date().toISOString(),
@@ -397,15 +477,15 @@ function _syncFromAgRefine() {
             loadsFound: loads.length,
             rawKeys: Object.keys(_objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage))
           };
-          _context5.n = 16;
+          _context6.n = 16;
           return getSyncLog();
         case 16:
-          history = _context5.v;
+          history = _context6.v;
           history.unshift(log);
-          _context5.n = 17;
+          _context6.n = 17;
           return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(SYNC_LOG_KEY, history.slice(0, 20));
         case 17:
-          return _context5.a(2, {
+          return _context6.a(2, {
             ok: true,
             added: added,
             updated: updated,
@@ -414,7 +494,7 @@ function _syncFromAgRefine() {
             tabUrl: tab.url
           });
       }
-    }, _callee4, null, [[9, 13, 14, 15], [4, 6]]);
+    }, _callee5, null, [[9, 13, 14, 15], [4, 6]]);
   }));
   return _syncFromAgRefine.apply(this, arguments);
 }
@@ -1385,6 +1465,16 @@ chrome.runtime.onMessage.addListener(function (message, _sender, sendResponse) {
       return true;
     case 'AGREFINE_SYNC':
       (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_2__.syncFromAgRefine)().then(sendResponse)["catch"](function (err) {
+        return sendResponse({
+          ok: false,
+          error: err.message
+        });
+      });
+      return true;
+    case 'AGREFINE_PUSH':
+      (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)().then(function (profiles) {
+        return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_2__.pushToAgRefine)(profiles);
+      }).then(sendResponse)["catch"](function (err) {
         return sendResponse({
           ok: false,
           error: err.message

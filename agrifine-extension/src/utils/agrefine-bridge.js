@@ -135,6 +135,41 @@ function extractLoads(raw) {
   return loads;
 }
 
+// Injected into AG-Refine tab to write field data back into its localStorage
+function writeFieldsToAgRefineTab(fields) {
+  try {
+    localStorage.setItem('agrifine_pushed_fields', JSON.stringify(fields));
+    localStorage.setItem('agrifine_pushed_at', new Date().toISOString());
+    // Dispatch an event so a listening AG-Refine app can react immediately
+    window.dispatchEvent(new CustomEvent('agrifine:fields-updated', { detail: { fields } }));
+    return { ok: true, count: fields.length };
+  } catch (err) {
+    return { ok: false, error: err.message };
+  }
+}
+
+export async function pushToAgRefine(profiles) {
+  const configuredUrl = await getAgRefineUrl();
+  const allTabs = await chrome.tabs.query({});
+  const agRefineTabs = allTabs.filter((t) => tabMatchesAgRefine(t, configuredUrl));
+
+  if (agRefineTabs.length === 0) {
+    return { ok: false, error: 'No AG-Refine tab found. Open AG-Refine first.' };
+  }
+
+  const tab = agRefineTabs[0];
+  try {
+    const [result] = await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      func: writeFieldsToAgRefineTab,
+      args: [profiles],
+    });
+    return result.result;
+  } catch (err) {
+    return { ok: false, error: `Cannot write to AG-Refine tab: ${err.message}` };
+  }
+}
+
 export async function syncFromAgRefine() {
   const configuredUrl = await getAgRefineUrl();
   const allTabs = await chrome.tabs.query({});
