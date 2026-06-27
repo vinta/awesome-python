@@ -6,6 +6,7 @@ import { DashboardModule } from '../modules/dashboard/index.js';
 import { CarbonEstimatorModule } from '../modules/carbon-estimator/index.js';
 import { AgRefineModule } from '../ag-refine/index.js';
 import { sessionSet, sessionGet, KEYS } from '../utils/storage.js';
+import { getAgRefineUrl, setAgRefineUrl } from '../utils/agrefine-bridge.js';
 
 // ── Module registry ───────────────────────────────────────────────────────────
 const MODULES = [
@@ -50,6 +51,10 @@ function setupSettings() {
   const input = document.getElementById('api-key-input');
   const status = document.getElementById('api-key-status');
 
+  const agRefineInput = document.getElementById('agrefine-url-input');
+  const agRefineStatus = document.getElementById('agrefine-url-status');
+  const agRefineSaveBtn = document.getElementById('btn-save-agrefine-url');
+
   btn.addEventListener('click', async () => {
     panel.classList.toggle('hidden');
     if (!panel.classList.contains('hidden')) {
@@ -59,7 +64,17 @@ function setupSettings() {
         input.placeholder = 'Key set — enter new key to replace';
         status.textContent = '✓ API key is active this session';
       }
+      const agUrl = await getAgRefineUrl();
+      if (agUrl) agRefineInput.value = agUrl;
     }
+  });
+
+  agRefineSaveBtn.addEventListener('click', async () => {
+    const url = agRefineInput.value.trim();
+    await setAgRefineUrl(url);
+    agRefineStatus.textContent = url ? `✓ AG-Refine URL saved` : '✓ Cleared';
+    agRefineStatus.style.color = '#4ade80';
+    setTimeout(() => { agRefineStatus.style.color = '#3d4f66'; agRefineStatus.textContent = 'Used to sync fields and outputs from your AG-Refine app.'; }, 2500);
   });
 
   saveBtn.addEventListener('click', async () => {

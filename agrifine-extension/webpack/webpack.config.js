@@ -19,6 +19,7 @@ module.exports = {
     path: distDir,
     filename: '[name].js',
     clean: true,
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -45,6 +46,10 @@ module.exports = {
         { from: path.join(publicDir, 'icons'), to: path.join(distDir, 'icons') },
         { from: path.join(rootDir, 'manifest.json'), to: distDir },
         { from: path.join(srcDir, 'sidebar', 'sidebar.html'), to: path.join(distDir, 'sidebar.html') },
+        {
+          from: path.join(rootDir, 'node_modules/pdfjs-dist/build/pdf.worker.min.mjs'),
+          to: path.join(distDir, 'pdf.worker.js'),
+        },
       ],
     }),
   ],

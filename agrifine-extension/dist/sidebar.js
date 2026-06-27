@@ -1812,6 +1812,47 @@ var SUPPORTED_TYPES = {
   'application/vnd.ms-excel': 'Excel',
   'application/pdf': 'PDF'
 };
+var DOC_SERVER = 'http://localhost:7432';
+function tryDocServer(_x) {
+  return _tryDocServer.apply(this, arguments);
+}
+function _tryDocServer() {
+  _tryDocServer = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(file) {
+    var fd, res, _yield$res$json, text, _t5;
+    return _regenerator().w(function (_context7) {
+      while (1) switch (_context7.p = _context7.n) {
+        case 0:
+          _context7.p = 0;
+          fd = new FormData();
+          fd.append('file', file);
+          _context7.n = 1;
+          return fetch("".concat(DOC_SERVER, "/parse"), {
+            method: 'POST',
+            body: fd
+          });
+        case 1:
+          res = _context7.v;
+          if (res.ok) {
+            _context7.n = 2;
+            break;
+          }
+          return _context7.a(2, null);
+        case 2:
+          _context7.n = 3;
+          return res.json();
+        case 3:
+          _yield$res$json = _context7.v;
+          text = _yield$res$json.text;
+          return _context7.a(2, text !== null && text !== void 0 ? text : null);
+        case 4:
+          _context7.p = 4;
+          _t5 = _context7.v;
+          return _context7.a(2, null);
+      }
+    }, _callee7, null, [[0, 4]]);
+  }));
+  return _tryDocServer.apply(this, arguments);
+}
 function DataIngestModule() {
   return {
     id: 'data-ingest',
@@ -1874,69 +1915,81 @@ function DataIngestModule() {
               return _context2.a(2);
             case 1:
               status.textContent = "Parsing ".concat(typeName, "\u2026");
-              extractedText = '';
-              _context2.p = 2;
-              if (!(typeName === 'CSV')) {
-                _context2.n = 4;
+              extractedText = ''; // Try Python doc server first (more robust), fall back to browser-side
+              _context2.n = 2;
+              return tryDocServer(file);
+            case 2:
+              extractedText = _context2.v;
+              if (!extractedText) {
+                _context2.n = 3;
                 break;
               }
-              _context2.n = 3;
-              return _this3._parseCSV(file);
+              status.textContent = "Parsed via Python server\u2026";
+              _context2.n = 11;
+              break;
             case 3:
-              extractedText = _context2.v;
-              _context2.n = 8;
-              break;
+              _context2.p = 3;
+              if (!(typeName === 'CSV')) {
+                _context2.n = 5;
+                break;
+              }
+              _context2.n = 4;
+              return _this3._parseCSV(file);
             case 4:
-              if (!(typeName === 'Excel')) {
-                _context2.n = 6;
-                break;
-              }
-              _context2.n = 5;
-              return _this3._parseExcel(file);
+              extractedText = _context2.v;
+              _context2.n = 9;
+              break;
             case 5:
-              extractedText = _context2.v;
-              _context2.n = 8;
-              break;
-            case 6:
-              if (!(typeName === 'PDF')) {
-                _context2.n = 8;
+              if (!(typeName === 'Excel')) {
+                _context2.n = 7;
                 break;
               }
-              _context2.n = 7;
-              return _this3._parsePDF(file);
-            case 7:
+              _context2.n = 6;
+              return _this3._parseExcel(file);
+            case 6:
               extractedText = _context2.v;
-            case 8:
-              _context2.n = 10;
+              _context2.n = 9;
               break;
+            case 7:
+              if (!(typeName === 'PDF')) {
+                _context2.n = 9;
+                break;
+              }
+              _context2.n = 8;
+              return _this3._parsePDF(file);
+            case 8:
+              extractedText = _context2.v;
             case 9:
-              _context2.p = 9;
+              _context2.n = 11;
+              break;
+            case 10:
+              _context2.p = 10;
               _t = _context2.v;
               status.textContent = "Parse error: ".concat(_t.message);
               return _context2.a(2);
-            case 10:
+            case 11:
               status.textContent = 'Extracting structured data with AI…';
               structuredData = null;
-              _context2.p = 11;
-              _context2.n = 12;
+              _context2.p = 12;
+              _context2.n = 13;
               return (0,_utils_api_js__WEBPACK_IMPORTED_MODULE_1__.callAnthropic)({
                 system: 'You are an agricultural data analyst. Extract and return structured JSON from this document. Identify: operation type, field names, dates, quantities, equipment, crop types, financial figures, and any carbon or emissions data. Return only valid JSON.',
                 userMessage: extractedText.slice(0, 6000),
                 maxTokens: 1024
               });
-            case 12:
+            case 13:
               raw = _context2.v;
               structuredData = JSON.parse(raw);
-              _context2.n = 14;
+              _context2.n = 15;
               break;
-            case 13:
-              _context2.p = 13;
+            case 14:
+              _context2.p = 14;
               _t2 = _context2.v;
               structuredData = {
                 raw_preview: extractedText.slice(0, 500),
                 parse_error: 'AI extraction unavailable'
               };
-            case 14:
+            case 15:
               record = {
                 id: "file_".concat(Date.now()),
                 filename: file.name,
@@ -1954,19 +2007,19 @@ function DataIngestModule() {
                   return "".concat(k, ": ").concat(JSON.stringify(v).slice(0, 80));
                 }).join('\n')
               };
-              _context2.n = 15;
+              _context2.n = 16;
               return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveIngestedFile)(record);
-            case 15:
+            case 16:
               status.textContent = 'File processed!';
               setTimeout(function () {
                 status.textContent = '';
               }, 2000);
-              _context2.n = 16;
+              _context2.n = 17;
               return _this3._renderFileList(container);
-            case 16:
+            case 17:
               return _context2.a(2);
           }
-        }, _callee2, null, [[11, 13], [2, 9]]);
+        }, _callee2, null, [[12, 14], [3, 10]]);
       }))();
     },
     _parseCSV: function _parseCSV(file) {
@@ -2023,7 +2076,7 @@ function DataIngestModule() {
               }
             }, _callee3, null, [[0, 2]]);
           }));
-          return function (_x) {
+          return function (_x2) {
             return _ref6.apply(this, arguments);
           };
         }();
@@ -2036,7 +2089,7 @@ function DataIngestModule() {
         var reader = new FileReader();
         reader.onload = /*#__PURE__*/function () {
           var _ref7 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(e) {
-            var pdfjsLib, pdf, pages, texts, i, page, content, _t4;
+            var pdfjsLib, loadingTask, pdf, pages, texts, i, page, content, _t4;
             return _regenerator().w(function (_context4) {
               while (1) switch (_context4.p = _context4.n) {
                 case 0:
@@ -2046,10 +2099,14 @@ function DataIngestModule() {
                 case 1:
                   pdfjsLib = _context4.v;
                   pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('pdf.worker.js');
+                  loadingTask = pdfjsLib.getDocument({
+                    data: new Uint8Array(e.target.result),
+                    useWorkerFetch: false,
+                    isEvalSupported: false,
+                    useSystemFonts: true
+                  });
                   _context4.n = 2;
-                  return pdfjsLib.getDocument({
-                    data: e.target.result
-                  }).promise;
+                  return loadingTask.promise;
                 case 2:
                   pdf = _context4.v;
                   pages = Math.min(pdf.numPages, 10);
@@ -2088,7 +2145,7 @@ function DataIngestModule() {
               }
             }, _callee4, null, [[0, 8]]);
           }));
-          return function (_x2) {
+          return function (_x3) {
             return _ref7.apply(this, arguments);
           };
         }();
@@ -2156,10 +2213,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   FieldProfileModule: () => (/* binding */ FieldProfileModule)
 /* harmony export */ });
 /* harmony import */ var _utils_storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/storage.js */ "./src/utils/storage.js");
+/* harmony import */ var _utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/agrefine-bridge.js */ "./src/utils/agrefine-bridge.js");
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+
 
 function FieldProfileModule() {
   var showForm = false;
@@ -2173,7 +2232,7 @@ function FieldProfileModule() {
         return _regenerator().w(function (_context) {
           while (1) switch (_context.n) {
             case 0:
-              container.innerHTML = "\n        <div class=\"section-heading\">Field Profiles</div>\n\n        <div class=\"px-4 mb-3\">\n          <button id=\"fp-new-btn\"\n            class=\"w-full flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\" />\n            </svg>\n            New Field Profile\n          </button>\n        </div>\n\n        <!-- Create form -->\n        <div id=\"fp-form\" class=\"hidden px-4 mb-4 bg-night-700 border border-night-600 rounded-xl mx-4 p-4\">\n          <h3 class=\"text-sm font-semibold text-white mb-3\">New Field</h3>\n          <div class=\"space-y-2\">\n            <input id=\"fp-name\" type=\"text\" placeholder=\"Field name *\" class=\"ag-input\" />\n            <input id=\"fp-clu\" type=\"text\" placeholder=\"CLU ID (optional)\" class=\"ag-input\" />\n            <div class=\"flex gap-2\">\n              <input id=\"fp-acres\" type=\"number\" placeholder=\"Acres\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-soil\" type=\"text\" placeholder=\"Soil type\" class=\"ag-input w-1/2\" />\n            </div>\n            <div class=\"flex gap-2\">\n              <input id=\"fp-lat\" type=\"number\" step=\"any\" placeholder=\"Latitude\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-lon\" type=\"number\" step=\"any\" placeholder=\"Longitude\" class=\"ag-input w-1/2\" />\n            </div>\n            <textarea id=\"fp-notes\" rows=\"2\" placeholder=\"Notes (AI-queryable)\"\n              class=\"ag-input resize-none\"></textarea>\n          </div>\n          <div class=\"flex gap-2 mt-3\">\n            <button id=\"fp-save-btn\"\n              class=\"flex-1 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2 rounded-lg transition\">\n              Save\n            </button>\n            <button id=\"fp-cancel-btn\"\n              class=\"flex-1 border border-night-500 text-gray-300 text-sm font-medium py-2 rounded-lg hover:bg-night-700 transition\">\n              Cancel\n            </button>\n          </div>\n        </div>\n\n        <!-- Profiles list -->\n        <div id=\"fp-list\" class=\"px-4 pb-4\"></div>\n      ";
+              container.innerHTML = "\n        <div class=\"section-heading\">Field Profiles</div>\n\n        <div class=\"px-4 mb-3 flex gap-2\">\n          <button id=\"fp-new-btn\"\n            class=\"flex-1 flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 4v16m8-8H4\" />\n            </svg>\n            New Field\n          </button>\n          <button id=\"fp-agrefine-sync-btn\" title=\"Sync fields from AG-Refine\"\n            class=\"flex items-center justify-center gap-1.5 border border-night-500 text-gray-300 hover:border-agri-500 hover:text-agri-400 text-xs font-medium px-3 py-2.5 rounded-xl transition\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15\" />\n            </svg>\n            AG-Refine\n          </button>\n        </div>\n        <div id=\"fp-sync-status\" class=\"px-4 text-xs min-h-[1rem] mb-2\" style=\"color:#3d4f66;\"></div>\n\n        <!-- Create form -->\n        <div id=\"fp-form\" class=\"hidden px-4 mb-4 bg-night-700 border border-night-600 rounded-xl mx-4 p-4\">\n          <h3 class=\"text-sm font-semibold text-white mb-3\">New Field</h3>\n          <div class=\"space-y-2\">\n            <input id=\"fp-name\" type=\"text\" placeholder=\"Field name *\" class=\"ag-input\" />\n            <input id=\"fp-clu\" type=\"text\" placeholder=\"CLU ID (optional)\" class=\"ag-input\" />\n            <div class=\"flex gap-2\">\n              <input id=\"fp-acres\" type=\"number\" placeholder=\"Acres\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-soil\" type=\"text\" placeholder=\"Soil type\" class=\"ag-input w-1/2\" />\n            </div>\n            <div class=\"flex gap-2\">\n              <input id=\"fp-lat\" type=\"number\" step=\"any\" placeholder=\"Latitude\" class=\"ag-input w-1/2\" />\n              <input id=\"fp-lon\" type=\"number\" step=\"any\" placeholder=\"Longitude\" class=\"ag-input w-1/2\" />\n            </div>\n            <textarea id=\"fp-notes\" rows=\"2\" placeholder=\"Notes (AI-queryable)\"\n              class=\"ag-input resize-none\"></textarea>\n          </div>\n          <div class=\"flex gap-2 mt-3\">\n            <button id=\"fp-save-btn\"\n              class=\"flex-1 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2 rounded-lg transition\">\n              Save\n            </button>\n            <button id=\"fp-cancel-btn\"\n              class=\"flex-1 border border-night-500 text-gray-300 text-sm font-medium py-2 rounded-lg hover:bg-night-700 transition\">\n              Cancel\n            </button>\n          </div>\n        </div>\n\n        <!-- Profiles list -->\n        <div id=\"fp-list\" class=\"px-4 pb-4\"></div>\n      ";
               _this._bindEvents(container);
               _context.n = 1;
               return _this._renderList(container);
@@ -2188,6 +2247,9 @@ function FieldProfileModule() {
       container.querySelector('#fp-new-btn').addEventListener('click', function () {
         showForm = !showForm;
         container.querySelector('#fp-form').classList.toggle('hidden', !showForm);
+      });
+      container.querySelector('#fp-agrefine-sync-btn').addEventListener('click', function () {
+        return _this2._syncAgRefine(container);
       });
       container.querySelector('#fp-cancel-btn').addEventListener('click', function () {
         showForm = false;
@@ -2239,50 +2301,98 @@ function FieldProfileModule() {
         }, _callee2);
       })));
     },
-    _renderList: function _renderList(container) {
+    _syncAgRefine: function _syncAgRefine(container) {
       var _this3 = this;
-      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
-        var profiles, listEl;
-        return _regenerator().w(function (_context5) {
-          while (1) switch (_context5.n) {
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+        var statusEl, result, parts;
+        return _regenerator().w(function (_context3) {
+          while (1) switch (_context3.n) {
             case 0:
-              _context5.n = 1;
+              statusEl = container.querySelector('#fp-sync-status');
+              statusEl.textContent = 'Connecting to AG-Refine tab…';
+              statusEl.style.color = '#3d4f66';
+              _context3.n = 1;
+              return chrome.runtime.sendMessage({
+                type: 'AGREFINE_SYNC'
+              });
+            case 1:
+              result = _context3.v;
+              if (result.ok) {
+                _context3.n = 2;
+                break;
+              }
+              statusEl.textContent = "\u26A0 ".concat(result.error);
+              statusEl.style.color = '#f87171';
+              setTimeout(function () {
+                statusEl.textContent = '';
+              }, 5000);
+              return _context3.a(2);
+            case 2:
+              parts = [];
+              if (result.added) parts.push("".concat(result.added, " added"));
+              if (result.updated) parts.push("".concat(result.updated, " updated"));
+              if (result.loadsFound) parts.push("".concat(result.loadsFound, " loads found"));
+              statusEl.textContent = parts.length ? "\u2713 Synced: ".concat(parts.join(', ')) : '✓ No new fields found in AG-Refine';
+              statusEl.style.color = '#4ade80';
+              setTimeout(function () {
+                statusEl.textContent = '';
+              }, 4000);
+              _context3.n = 3;
+              return _this3._renderList(container);
+            case 3:
+              return _context3.a(2);
+          }
+        }, _callee3);
+      }))();
+    },
+    _renderList: function _renderList(container) {
+      var _this4 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6() {
+        var profiles, agRefineUrl, listEl;
+        return _regenerator().w(function (_context6) {
+          while (1) switch (_context6.n) {
+            case 0:
+              _context6.n = 1;
               return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
             case 1:
-              profiles = _context5.v;
+              profiles = _context6.v;
+              _context6.n = 2;
+              return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_1__.getAgRefineUrl)();
+            case 2:
+              agRefineUrl = _context6.v;
               listEl = container.querySelector('#fp-list');
               if (!(profiles.length === 0)) {
-                _context5.n = 2;
+                _context6.n = 3;
                 break;
               }
               listEl.innerHTML = "\n          <div class=\"empty-state\">\n            <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-10 w-10 mb-3 opacity-30\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n              <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"\n                d=\"M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z\" />\n            </svg>\n            <p>No field profiles yet.</p>\n            <p class=\"mt-1 text-xs\">Create a profile for each field in your operation.</p>\n          </div>";
-              return _context5.a(2);
-            case 2:
+              return _context6.a(2);
+            case 3:
               listEl.innerHTML = profiles.map(function (p) {
-                var _p$coordinates, _p$coordinates2;
-                return "\n        <div class=\"agri-card cursor-pointer\" data-id=\"".concat(p.id, "\">\n          <div class=\"flex items-center justify-between\">\n            <div class=\"flex-1\">\n              <h3 class=\"text-sm font-bold text-white\">").concat(p.name, "</h3>\n              <div class=\"flex flex-wrap gap-x-3 gap-y-0.5 mt-1\">\n                ").concat(p.acres ? "<span class=\"text-xs text-gray-400\">".concat(p.acres, " ac</span>") : '', "\n                ").concat(p.soilType ? "<span class=\"text-xs text-gray-400\">".concat(p.soilType, "</span>") : '', "\n                ").concat(p.cluId ? "<span class=\"text-xs text-agri-400\">CLU ".concat(p.cluId, "</span>") : '', "\n              </div>\n            </div>\n            <div class=\"flex items-center gap-2\">\n              <button class=\"fp-delete-btn text-night-300 hover:text-red-400 transition\" data-id=\"").concat(p.id, "\" title=\"Delete\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n                </svg>\n              </button>\n              <svg class=\"fp-chevron h-4 w-4 text-gray-500 transition-transform ").concat(expandedId === p.id ? 'rotate-90' : '', "\"\n                xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n              </svg>\n            </div>\n          </div>\n\n          <!-- Expanded detail -->\n          <div class=\"fp-detail ").concat(expandedId === p.id ? '' : 'hidden', " mt-3 pt-3 border-t border-night-600 text-xs text-gray-400 space-y-1\">\n            ").concat(((_p$coordinates = p.coordinates) === null || _p$coordinates === void 0 ? void 0 : _p$coordinates.lat) != null && ((_p$coordinates2 = p.coordinates) === null || _p$coordinates2 === void 0 ? void 0 : _p$coordinates2.lon) != null ? "<p>\uD83D\uDCCD ".concat(p.coordinates.lat.toFixed(4), ", ").concat(p.coordinates.lon.toFixed(4), "</p>") : '', "\n            ").concat(p.notes ? "<p>\uD83D\uDCDD ".concat(p.notes, "</p>") : '', "\n            <p class=\"text-gray-500\">Weather data: <span class=\"coming-soon\">Phase 6</span></p>\n            <p class=\"text-gray-500\">Carbon potential: <span class=\"coming-soon\">Phase 7</span></p>\n            <p class=\"text-gray-500\">Added ").concat(new Date(p.createdAt).toLocaleDateString(), "</p>\n          </div>\n        </div>\n      ");
+                var _p$coordinates, _p$coordinates2, _p$_source;
+                return "\n        <div class=\"agri-card cursor-pointer\" data-id=\"".concat(p.id, "\">\n          <div class=\"flex items-center justify-between\">\n            <div class=\"flex-1\">\n              <h3 class=\"text-sm font-bold text-white\">").concat(p.name, "</h3>\n              <div class=\"flex flex-wrap gap-x-3 gap-y-0.5 mt-1\">\n                ").concat(p.acres ? "<span class=\"text-xs text-gray-400\">".concat(p.acres, " ac</span>") : '', "\n                ").concat(p.soilType ? "<span class=\"text-xs text-gray-400\">".concat(p.soilType, "</span>") : '', "\n                ").concat(p.cluId ? "<span class=\"text-xs text-agri-400\">CLU ".concat(p.cluId, "</span>") : '', "\n              </div>\n            </div>\n            <div class=\"flex items-center gap-2\">\n              <button class=\"fp-delete-btn text-night-300 hover:text-red-400 transition\" data-id=\"").concat(p.id, "\" title=\"Delete\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-4 w-4 pointer-events-none\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M6 18L18 6M6 6l12 12\" />\n                </svg>\n              </button>\n              <svg class=\"fp-chevron h-4 w-4 text-gray-500 transition-transform ").concat(expandedId === p.id ? 'rotate-90' : '', "\"\n                xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M9 5l7 7-7 7\" />\n              </svg>\n            </div>\n          </div>\n\n          <!-- Expanded detail -->\n          <div class=\"fp-detail ").concat(expandedId === p.id ? '' : 'hidden', " mt-3 pt-3 border-t border-night-600 text-xs text-gray-400 space-y-1\">\n            ").concat(((_p$coordinates = p.coordinates) === null || _p$coordinates === void 0 ? void 0 : _p$coordinates.lat) != null && ((_p$coordinates2 = p.coordinates) === null || _p$coordinates2 === void 0 ? void 0 : _p$coordinates2.lon) != null ? "<p>\uD83D\uDCCD ".concat(p.coordinates.lat.toFixed(4), ", ").concat(p.coordinates.lon.toFixed(4), "</p>") : '', "\n            ").concat(p.notes ? "<p>\uD83D\uDCDD ".concat(p.notes, "</p>") : '', "\n            ").concat((_p$_source = p._source) !== null && _p$_source !== void 0 && _p$_source.includes('ag-refine') ? "<p class=\"text-agri-400\">\u2197 Synced from AG-Refine</p>" : '', "\n            ").concat(agRefineUrl ? "<a href=\"".concat(agRefineUrl, "\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-agri-400 hover:underline\">Open in AG-Refine \u2197</a>") : '', "\n            <p class=\"text-gray-500\">Weather data: <span class=\"coming-soon\">Phase 6</span></p>\n            <p class=\"text-gray-500\">Carbon potential: <span class=\"coming-soon\">Phase 7</span></p>\n            <p class=\"text-gray-500\">Added ").concat(new Date(p.createdAt).toLocaleDateString(), "</p>\n          </div>\n        </div>\n      ");
               }).join('');
               listEl.querySelectorAll('.agri-card').forEach(function (card) {
                 card.addEventListener('click', /*#__PURE__*/function () {
-                  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3(e) {
+                  var _ref2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(e) {
                     var id;
-                    return _regenerator().w(function (_context3) {
-                      while (1) switch (_context3.n) {
+                    return _regenerator().w(function (_context4) {
+                      while (1) switch (_context4.n) {
                         case 0:
                           if (!e.target.closest('.fp-delete-btn')) {
-                            _context3.n = 1;
+                            _context4.n = 1;
                             break;
                           }
-                          return _context3.a(2);
+                          return _context4.a(2);
                         case 1:
                           id = card.dataset.id;
                           expandedId = expandedId === id ? null : id;
-                          _context3.n = 2;
-                          return _this3._renderList(container);
+                          _context4.n = 2;
+                          return _this4._renderList(container);
                         case 2:
-                          return _context3.a(2);
+                          return _context4.a(2);
                       }
-                    }, _callee3);
+                    }, _callee4);
                   }));
                   return function (_x) {
                     return _ref2.apply(this, arguments);
@@ -2291,31 +2401,31 @@ function FieldProfileModule() {
               });
               listEl.querySelectorAll('.fp-delete-btn').forEach(function (btn) {
                 btn.addEventListener('click', /*#__PURE__*/function () {
-                  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(e) {
-                    return _regenerator().w(function (_context4) {
-                      while (1) switch (_context4.n) {
+                  var _ref3 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(e) {
+                    return _regenerator().w(function (_context5) {
+                      while (1) switch (_context5.n) {
                         case 0:
                           e.stopPropagation();
-                          _context4.n = 1;
+                          _context5.n = 1;
                           return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.deleteFieldProfile)(btn.dataset.id);
                         case 1:
                           if (expandedId === btn.dataset.id) expandedId = null;
-                          _context4.n = 2;
-                          return _this3._renderList(container);
+                          _context5.n = 2;
+                          return _this4._renderList(container);
                         case 2:
-                          return _context4.a(2);
+                          return _context5.a(2);
                       }
-                    }, _callee4);
+                    }, _callee5);
                   }));
                   return function (_x2) {
                     return _ref3.apply(this, arguments);
                   };
                 }());
               });
-            case 3:
-              return _context5.a(2);
+            case 4:
+              return _context6.a(2);
           }
-        }, _callee5);
+        }, _callee6);
       }))();
     }
   };
@@ -2546,6 +2656,425 @@ function ReadingListModule() {
       }))();
     }
   };
+}
+
+/***/ },
+
+/***/ "./src/utils/agrefine-bridge.js"
+/*!**************************************!*\
+  !*** ./src/utils/agrefine-bridge.js ***!
+  \**************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getAgRefineUrl: () => (/* binding */ getAgRefineUrl),
+/* harmony export */   getSyncLog: () => (/* binding */ getSyncLog),
+/* harmony export */   setAgRefineUrl: () => (/* binding */ setAgRefineUrl),
+/* harmony export */   syncFromAgRefine: () => (/* binding */ syncFromAgRefine)
+/* harmony export */ });
+/* harmony import */ var _storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage.js */ "./src/utils/storage.js");
+function _regeneratorValues(e) { if (null != e) { var t = e["function" == typeof Symbol && Symbol.iterator || "@@iterator"], r = 0; if (t) return t.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) return { next: function next() { return e && r >= e.length && (e = void 0), { value: e && e[r++], done: !e }; } }; } throw new TypeError(_typeof(e) + " is not iterable"); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+/**
+ * AG-Refine Sister-App Bridge
+ *
+ * Detects an open AG-Refine tab, pulls field and output data from its
+ * localStorage/sessionStorage, and maps it into Agrifine field profiles.
+ *
+ * AG-Refine tab detection: any tab whose URL matches a configurable pattern
+ * (default: localhost:* OR any URL containing "ag-refine" or "agrefine").
+ * Set the URL in Settings > AG-Refine URL to pin it to a specific origin.
+ */
+
+
+var AGREFINE_KEY = 'agrifine_agrefine_url';
+var SYNC_LOG_KEY = 'agrifine_agrefine_sync_log';
+function getAgRefineUrl() {
+  return _getAgRefineUrl.apply(this, arguments);
+}
+function _getAgRefineUrl() {
+  _getAgRefineUrl = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
+    var _yield$localGet;
+    var _t, _t2, _t3;
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.n) {
+        case 0:
+          _context.n = 1;
+          return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localGet)(AGREFINE_KEY);
+        case 1:
+          _t2 = _yield$localGet = _context.v;
+          _t = _t2 !== null;
+          if (!_t) {
+            _context.n = 2;
+            break;
+          }
+          _t = _yield$localGet !== void 0;
+        case 2:
+          if (!_t) {
+            _context.n = 3;
+            break;
+          }
+          _t3 = _yield$localGet;
+          _context.n = 4;
+          break;
+        case 3:
+          _t3 = '';
+        case 4:
+          return _context.a(2, _t3);
+      }
+    }, _callee);
+  }));
+  return _getAgRefineUrl.apply(this, arguments);
+}
+function setAgRefineUrl(_x) {
+  return _setAgRefineUrl.apply(this, arguments);
+}
+function _setAgRefineUrl() {
+  _setAgRefineUrl = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2(url) {
+    return _regenerator().w(function (_context2) {
+      while (1) switch (_context2.n) {
+        case 0:
+          _context2.n = 1;
+          return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(AGREFINE_KEY, url);
+        case 1:
+          return _context2.a(2);
+      }
+    }, _callee2);
+  }));
+  return _setAgRefineUrl.apply(this, arguments);
+}
+function getSyncLog() {
+  return _getSyncLog.apply(this, arguments);
+}
+function _getSyncLog() {
+  _getSyncLog = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+    var _yield$localGet2;
+    var _t4, _t5, _t6;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
+          _context3.n = 1;
+          return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localGet)(SYNC_LOG_KEY);
+        case 1:
+          _t5 = _yield$localGet2 = _context3.v;
+          _t4 = _t5 !== null;
+          if (!_t4) {
+            _context3.n = 2;
+            break;
+          }
+          _t4 = _yield$localGet2 !== void 0;
+        case 2:
+          if (!_t4) {
+            _context3.n = 3;
+            break;
+          }
+          _t6 = _yield$localGet2;
+          _context3.n = 4;
+          break;
+        case 3:
+          _t6 = [];
+        case 4:
+          return _context3.a(2, _t6);
+      }
+    }, _callee3);
+  }));
+  return _getSyncLog.apply(this, arguments);
+}
+function tabMatchesAgRefine(tab, configuredUrl) {
+  if (!tab.url) return false;
+  if (configuredUrl) {
+    try {
+      var origin = new URL(configuredUrl).origin;
+      return tab.url.startsWith(origin);
+    } catch (_) {}
+  }
+  var u = tab.url.toLowerCase();
+  return u.includes('ag-refine') || u.includes('agrefine') || u.startsWith('http://localhost') || u.startsWith('http://127.0.0.1');
+}
+
+// Injected into the AG-Refine tab — reads all storage and DOM hints
+function scrapeAgRefineTab() {
+  var out = {
+    localStorage: {},
+    sessionStorage: {},
+    domHints: {}
+  };
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    try {
+      out.localStorage[k] = JSON.parse(localStorage.getItem(k));
+    } catch (_) {
+      out.localStorage[k] = localStorage.getItem(k);
+    }
+  }
+  for (var _i = 0; _i < sessionStorage.length; _i++) {
+    var _k = sessionStorage.key(_i);
+    try {
+      out.sessionStorage[_k] = JSON.parse(sessionStorage.getItem(_k));
+    } catch (_) {
+      out.sessionStorage[_k] = sessionStorage.getItem(_k);
+    }
+  }
+
+  // Pull field-name-like text from the DOM as a fallback hint
+  var fieldEls = document.querySelectorAll('[data-field],[data-name],[data-id]');
+  fieldEls.forEach(function (el) {
+    var _ref, _el$dataset$field, _el$textContent;
+    var id = (_ref = (_el$dataset$field = el.dataset.field) !== null && _el$dataset$field !== void 0 ? _el$dataset$field : el.dataset.id) !== null && _ref !== void 0 ? _ref : el.dataset.name;
+    if (id) out.domHints[id] = ((_el$textContent = el.textContent) !== null && _el$textContent !== void 0 ? _el$textContent : '').trim().slice(0, 200);
+  });
+  return out;
+}
+
+/**
+ * Map raw AG-Refine storage dump to Agrifine field profile shape.
+ * Tries common key patterns used by React/Next.js ag apps.
+ */
+function extractFields(raw) {
+  var all = _objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage);
+  var candidates = [];
+  for (var _i2 = 0, _Object$entries = Object.entries(all); _i2 < _Object$entries.length; _i2++) {
+    var _Object$entries$_i = _slicedToArray(_Object$entries[_i2], 2),
+      key = _Object$entries$_i[0],
+      val = _Object$entries$_i[1];
+    var k = key.toLowerCase();
+    if (!k.includes('field') && !k.includes('load') && !k.includes('farm') && !k.includes('plot')) continue;
+    var arr = Array.isArray(val) ? val : val && _typeof(val) === 'object' ? [val] : null;
+    if (!arr) continue;
+    var _iterator = _createForOfIteratorHelper(arr),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var _ref2, _ref3, _ref4, _ref5, _item$name, _ref6, _item$id, _ref7, _ref8, _item$cluId, _ref9, _ref0, _item$acres, _ref1, _ref10, _item$soilType, _ref11, _item$lat, _item$coordinates, _ref12, _ref13, _ref14, _item$lon, _item$coordinates2, _item$coordinates3, _ref15, _ref16, _item$notes, _item$cropHistory, _item$cropHistory2, _item$harvests, _item$harvests2, _item$carbonPotential, _ref17, _item$createdAt;
+        var item = _step.value;
+        if (!item || _typeof(item) !== 'object') continue;
+        var name = (_ref2 = (_ref3 = (_ref4 = (_ref5 = (_item$name = item.name) !== null && _item$name !== void 0 ? _item$name : item.fieldName) !== null && _ref5 !== void 0 ? _ref5 : item.field_name) !== null && _ref4 !== void 0 ? _ref4 : item.title) !== null && _ref3 !== void 0 ? _ref3 : item.label) !== null && _ref2 !== void 0 ? _ref2 : null;
+        if (!name) continue;
+        candidates.push({
+          id: "agr_".concat((_ref6 = (_item$id = item.id) !== null && _item$id !== void 0 ? _item$id : item.fieldId) !== null && _ref6 !== void 0 ? _ref6 : Date.now(), "_").concat(Math.random().toString(36).slice(2, 6)),
+          name: String(name),
+          cluId: (_ref7 = (_ref8 = (_item$cluId = item.cluId) !== null && _item$cluId !== void 0 ? _item$cluId : item.clu_id) !== null && _ref8 !== void 0 ? _ref8 : item.clu) !== null && _ref7 !== void 0 ? _ref7 : null,
+          acres: parseFloat((_ref9 = (_ref0 = (_item$acres = item.acres) !== null && _item$acres !== void 0 ? _item$acres : item.area) !== null && _ref0 !== void 0 ? _ref0 : item.size) !== null && _ref9 !== void 0 ? _ref9 : item.acreage) || null,
+          soilType: (_ref1 = (_ref10 = (_item$soilType = item.soilType) !== null && _item$soilType !== void 0 ? _item$soilType : item.soil_type) !== null && _ref10 !== void 0 ? _ref10 : item.soil) !== null && _ref1 !== void 0 ? _ref1 : null,
+          coordinates: {
+            lat: parseFloat((_ref11 = (_item$lat = item.lat) !== null && _item$lat !== void 0 ? _item$lat : item.latitude) !== null && _ref11 !== void 0 ? _ref11 : (_item$coordinates = item.coordinates) === null || _item$coordinates === void 0 ? void 0 : _item$coordinates.lat) || null,
+            lon: parseFloat((_ref12 = (_ref13 = (_ref14 = (_item$lon = item.lon) !== null && _item$lon !== void 0 ? _item$lon : item.lng) !== null && _ref14 !== void 0 ? _ref14 : item.longitude) !== null && _ref13 !== void 0 ? _ref13 : (_item$coordinates2 = item.coordinates) === null || _item$coordinates2 === void 0 ? void 0 : _item$coordinates2.lon) !== null && _ref12 !== void 0 ? _ref12 : (_item$coordinates3 = item.coordinates) === null || _item$coordinates3 === void 0 ? void 0 : _item$coordinates3.lng) || null
+          },
+          notes: (_ref15 = (_ref16 = (_item$notes = item.notes) !== null && _item$notes !== void 0 ? _item$notes : item.description) !== null && _ref16 !== void 0 ? _ref16 : item.comments) !== null && _ref15 !== void 0 ? _ref15 : null,
+          cropHistory: Array.isArray((_item$cropHistory = item.cropHistory) !== null && _item$cropHistory !== void 0 ? _item$cropHistory : item.crop_history) ? (_item$cropHistory2 = item.cropHistory) !== null && _item$cropHistory2 !== void 0 ? _item$cropHistory2 : item.crop_history : [],
+          harvestRecords: Array.isArray((_item$harvests = item.harvests) !== null && _item$harvests !== void 0 ? _item$harvests : item.harvestRecords) ? (_item$harvests2 = item.harvests) !== null && _item$harvests2 !== void 0 ? _item$harvests2 : item.harvestRecords : [],
+          carbonPotential: (_item$carbonPotential = item.carbonPotential) !== null && _item$carbonPotential !== void 0 ? _item$carbonPotential : null,
+          weatherData: null,
+          createdAt: (_ref17 = (_item$createdAt = item.createdAt) !== null && _item$createdAt !== void 0 ? _item$createdAt : item.created_at) !== null && _ref17 !== void 0 ? _ref17 : new Date().toISOString(),
+          _source: 'ag-refine'
+        });
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  }
+  return candidates;
+}
+
+/**
+ * Loads also come over — map to ingested file records for the dashboard.
+ */
+function extractLoads(raw) {
+  var all = _objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage);
+  var loads = [];
+  for (var _i3 = 0, _Object$entries2 = Object.entries(all); _i3 < _Object$entries2.length; _i3++) {
+    var _Object$entries2$_i = _slicedToArray(_Object$entries2[_i3], 2),
+      key = _Object$entries2$_i[0],
+      val = _Object$entries2$_i[1];
+    var k = key.toLowerCase();
+    if (!k.includes('load') && !k.includes('scale') && !k.includes('ticket') && !k.includes('delivery')) continue;
+    var arr = Array.isArray(val) ? val : null;
+    if (!arr) continue;
+    var _iterator2 = _createForOfIteratorHelper(arr),
+      _step2;
+    try {
+      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+        var item = _step2.value;
+        if (!item || _typeof(item) !== 'object') continue;
+        loads.push(item);
+      }
+    } catch (err) {
+      _iterator2.e(err);
+    } finally {
+      _iterator2.f();
+    }
+  }
+  return loads;
+}
+function syncFromAgRefine() {
+  return _syncFromAgRefine.apply(this, arguments);
+}
+function _syncFromAgRefine() {
+  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
+    var configuredUrl, allTabs, agRefineTabs, tab, raw, _yield$chrome$scripti, _yield$chrome$scripti2, result, fields, loads, existing, added, updated, _iterator3, _step3, _loop, log, history, _t7, _t8;
+    return _regenerator().w(function (_context5) {
+      while (1) switch (_context5.p = _context5.n) {
+        case 0:
+          _context5.n = 1;
+          return getAgRefineUrl();
+        case 1:
+          configuredUrl = _context5.v;
+          _context5.n = 2;
+          return chrome.tabs.query({});
+        case 2:
+          allTabs = _context5.v;
+          agRefineTabs = allTabs.filter(function (t) {
+            return tabMatchesAgRefine(t, configuredUrl);
+          });
+          if (!(agRefineTabs.length === 0)) {
+            _context5.n = 3;
+            break;
+          }
+          return _context5.a(2, {
+            ok: false,
+            error: 'No AG-Refine tab found. Open AG-Refine in a browser tab first.'
+          });
+        case 3:
+          tab = agRefineTabs[0];
+          _context5.p = 4;
+          _context5.n = 5;
+          return chrome.scripting.executeScript({
+            target: {
+              tabId: tab.id
+            },
+            func: scrapeAgRefineTab
+          });
+        case 5:
+          _yield$chrome$scripti = _context5.v;
+          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
+          result = _yield$chrome$scripti2[0];
+          raw = result.result;
+          _context5.n = 7;
+          break;
+        case 6:
+          _context5.p = 6;
+          _t7 = _context5.v;
+          return _context5.a(2, {
+            ok: false,
+            error: "Cannot read AG-Refine tab: ".concat(_t7.message)
+          });
+        case 7:
+          fields = extractFields(raw);
+          loads = extractLoads(raw); // Merge fields — update existing by name, insert new ones
+          _context5.n = 8;
+          return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
+        case 8:
+          existing = _context5.v;
+          added = 0;
+          updated = 0;
+          _iterator3 = _createForOfIteratorHelper(fields);
+          _context5.p = 9;
+          _loop = /*#__PURE__*/_regenerator().m(function _loop() {
+            var f, match, _match$coordinates, _match$cropHistory, _match$notes, _match$cluId, merged;
+            return _regenerator().w(function (_context4) {
+              while (1) switch (_context4.n) {
+                case 0:
+                  f = _step3.value;
+                  match = existing.find(function (e) {
+                    return e.name.toLowerCase() === f.name.toLowerCase();
+                  });
+                  if (!match) {
+                    _context4.n = 2;
+                    break;
+                  }
+                  // Merge: fill in missing data without overwriting user edits
+                  merged = _objectSpread(_objectSpread(_objectSpread({}, f), match), {}, {
+                    coordinates: ((_match$coordinates = match.coordinates) === null || _match$coordinates === void 0 ? void 0 : _match$coordinates.lat) != null ? match.coordinates : f.coordinates,
+                    cropHistory: (_match$cropHistory = match.cropHistory) !== null && _match$cropHistory !== void 0 && _match$cropHistory.length ? match.cropHistory : f.cropHistory,
+                    notes: (_match$notes = match.notes) !== null && _match$notes !== void 0 ? _match$notes : f.notes,
+                    cluId: (_match$cluId = match.cluId) !== null && _match$cluId !== void 0 ? _match$cluId : f.cluId,
+                    _source: 'ag-refine-merged'
+                  });
+                  _context4.n = 1;
+                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(merged);
+                case 1:
+                  updated++;
+                  _context4.n = 4;
+                  break;
+                case 2:
+                  _context4.n = 3;
+                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(f);
+                case 3:
+                  added++;
+                case 4:
+                  return _context4.a(2);
+              }
+            }, _loop);
+          });
+          _iterator3.s();
+        case 10:
+          if ((_step3 = _iterator3.n()).done) {
+            _context5.n = 12;
+            break;
+          }
+          return _context5.d(_regeneratorValues(_loop()), 11);
+        case 11:
+          _context5.n = 10;
+          break;
+        case 12:
+          _context5.n = 14;
+          break;
+        case 13:
+          _context5.p = 13;
+          _t8 = _context5.v;
+          _iterator3.e(_t8);
+        case 14:
+          _context5.p = 14;
+          _iterator3.f();
+          return _context5.f(14);
+        case 15:
+          log = {
+            at: new Date().toISOString(),
+            tabUrl: tab.url,
+            fieldsAdded: added,
+            fieldsUpdated: updated,
+            loadsFound: loads.length,
+            rawKeys: Object.keys(_objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage))
+          };
+          _context5.n = 16;
+          return getSyncLog();
+        case 16:
+          history = _context5.v;
+          history.unshift(log);
+          _context5.n = 17;
+          return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(SYNC_LOG_KEY, history.slice(0, 20));
+        case 17:
+          return _context5.a(2, {
+            ok: true,
+            added: added,
+            updated: updated,
+            loadsFound: loads.length,
+            loads: loads,
+            tabUrl: tab.url
+          });
+      }
+    }, _callee4, null, [[9, 13, 14, 15], [4, 6]]);
+  }));
+  return _syncFromAgRefine.apply(this, arguments);
 }
 
 /***/ },
@@ -3467,18 +3996,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -3542,25 +4059,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		let scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		const document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript?.tagName.toUpperCase() === 'SCRIPT')
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				const scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					let i = scripts.length - 1;
-/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
@@ -3669,10 +4168,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_carbon_estimator_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../modules/carbon-estimator/index.js */ "./src/modules/carbon-estimator/index.js");
 /* harmony import */ var _ag_refine_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ag-refine/index.js */ "./src/ag-refine/index.js");
 /* harmony import */ var _utils_storage_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/storage.js */ "./src/utils/storage.js");
+/* harmony import */ var _utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utils/agrefine-bridge.js */ "./src/utils/agrefine-bridge.js");
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+
 
 
 
@@ -3701,16 +4202,16 @@ function activateTab(_x) {
   return _activateTab.apply(this, arguments);
 } // ── Settings panel ────────────────────────────────────────────────────────────
 function _activateTab() {
-  _activateTab = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(id) {
+  _activateTab = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(id) {
     var main;
-    return _regenerator().w(function (_context4) {
-      while (1) switch (_context4.n) {
+    return _regenerator().w(function (_context5) {
+      while (1) switch (_context5.n) {
         case 0:
           if (moduleMap[id]) {
-            _context4.n = 1;
+            _context5.n = 1;
             break;
           }
-          return _context4.a(2);
+          return _context5.a(2);
         case 1:
           activeModuleId = id;
           document.querySelectorAll('.tab-btn').forEach(function (btn) {
@@ -3720,12 +4221,12 @@ function _activateTab() {
           });
           main = document.getElementById('main-content');
           main.innerHTML = '';
-          _context4.n = 2;
+          _context5.n = 2;
           return moduleMap[id].render(main);
         case 2:
-          return _context4.a(2);
+          return _context5.a(2);
       }
-    }, _callee4);
+    }, _callee5);
   }));
   return _activateTab.apply(this, arguments);
 }
@@ -3735,14 +4236,17 @@ function setupSettings() {
   var saveBtn = document.getElementById('btn-save-key');
   var input = document.getElementById('api-key-input');
   var status = document.getElementById('api-key-status');
+  var agRefineInput = document.getElementById('agrefine-url-input');
+  var agRefineStatus = document.getElementById('agrefine-url-status');
+  var agRefineSaveBtn = document.getElementById('btn-save-agrefine-url');
   btn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee() {
-    var existing;
+    var existing, agUrl;
     return _regenerator().w(function (_context) {
       while (1) switch (_context.n) {
         case 0:
           panel.classList.toggle('hidden');
           if (panel.classList.contains('hidden')) {
-            _context.n = 2;
+            _context.n = 3;
             break;
           }
           _context.n = 1;
@@ -3754,25 +4258,50 @@ function setupSettings() {
             input.placeholder = 'Key set — enter new key to replace';
             status.textContent = '✓ API key is active this session';
           }
+          _context.n = 2;
+          return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_8__.getAgRefineUrl)();
         case 2:
+          agUrl = _context.v;
+          if (agUrl) agRefineInput.value = agUrl;
+        case 3:
           return _context.a(2);
       }
     }, _callee);
   })));
-  saveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
-    var key;
+  agRefineSaveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
+    var url;
     return _regenerator().w(function (_context2) {
       while (1) switch (_context2.n) {
         case 0:
+          url = agRefineInput.value.trim();
+          _context2.n = 1;
+          return (0,_utils_agrefine_bridge_js__WEBPACK_IMPORTED_MODULE_8__.setAgRefineUrl)(url);
+        case 1:
+          agRefineStatus.textContent = url ? "\u2713 AG-Refine URL saved" : '✓ Cleared';
+          agRefineStatus.style.color = '#4ade80';
+          setTimeout(function () {
+            agRefineStatus.style.color = '#3d4f66';
+            agRefineStatus.textContent = 'Used to sync fields and outputs from your AG-Refine app.';
+          }, 2500);
+        case 2:
+          return _context2.a(2);
+      }
+    }, _callee2);
+  })));
+  saveBtn.addEventListener('click', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+    var key;
+    return _regenerator().w(function (_context3) {
+      while (1) switch (_context3.n) {
+        case 0:
           key = input.value.trim();
           if (key.startsWith('sk-ant-')) {
-            _context2.n = 1;
+            _context3.n = 1;
             break;
           }
           status.textContent = 'Key must start with sk-ant-';
-          return _context2.a(2);
+          return _context3.a(2);
         case 1:
-          _context2.n = 2;
+          _context3.n = 2;
           return chrome.runtime.sendMessage({
             type: 'SET_API_KEY',
             payload: {
@@ -3784,9 +4313,9 @@ function setupSettings() {
           input.placeholder = 'Key set — enter new key to replace';
           status.textContent = '✓ Saved for this session';
         case 3:
-          return _context2.a(2);
+          return _context3.a(2);
       }
-    }, _callee2);
+    }, _callee3);
   })));
 }
 
@@ -3803,19 +4332,19 @@ function keepAlive() {
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
-  return _regenerator().w(function (_context3) {
-    while (1) switch (_context3.n) {
+document.addEventListener('DOMContentLoaded', /*#__PURE__*/_asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4() {
+  return _regenerator().w(function (_context4) {
+    while (1) switch (_context4.n) {
       case 0:
         setupTabs();
         setupSettings();
         keepAlive();
-        _context3.n = 1;
+        _context4.n = 1;
         return activateTab(activeModuleId);
       case 1:
-        return _context3.a(2);
+        return _context4.a(2);
     }
-  }, _callee3);
+  }, _callee4);
 })));
 })();
 

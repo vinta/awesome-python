@@ -8,6 +8,21 @@ const SUPPORTED_TYPES = {
   'application/pdf': 'PDF',
 };
 
+const DOC_SERVER = 'http://localhost:7432';
+
+async function tryDocServer(file) {
+  try {
+    const fd = new FormData();
+    fd.append('file', file);
+    const res = await fetch(`${DOC_SERVER}/parse`, { method: 'POST', body: fd });
+    if (!res.ok) return null;
+    const { text } = await res.json();
+    return text ?? null;
+  } catch (_) {
+    return null;
+  }
+}
+
 export function DataIngestModule() {
   return {
     id: 'data-ingest',
@@ -82,17 +97,23 @@ export function DataIngestModule() {
       status.textContent = `Parsing ${typeName}…`;
       let extractedText = '';
 
-      try {
-        if (typeName === 'CSV') {
-          extractedText = await this._parseCSV(file);
-        } else if (typeName === 'Excel') {
-          extractedText = await this._parseExcel(file);
-        } else if (typeName === 'PDF') {
-          extractedText = await this._parsePDF(file);
+      // Try Python doc server first (more robust), fall back to browser-side
+      extractedText = await tryDocServer(file);
+      if (extractedText) {
+        status.textContent = `Parsed via Python server…`;
+      } else {
+        try {
+          if (typeName === 'CSV') {
+            extractedText = await this._parseCSV(file);
+          } else if (typeName === 'Excel') {
+            extractedText = await this._parseExcel(file);
+          } else if (typeName === 'PDF') {
+            extractedText = await this._parsePDF(file);
+          }
+        } catch (err) {
+          status.textContent = `Parse error: ${err.message}`;
+          return;
         }
-      } catch (err) {
-        status.textContent = `Parse error: ${err.message}`;
-        return;
       }
 
       status.textContent = 'Extracting structured data with AI…';
@@ -173,7 +194,13 @@ export function DataIngestModule() {
           try {
             const pdfjsLib = await import('pdfjs-dist');
             pdfjsLib.GlobalWorkerOptions.workerSrc = chrome.runtime.getURL('pdf.worker.js');
-            const pdf = await pdfjsLib.getDocument({ data: e.target.result }).promise;
+            const loadingTask = pdfjsLib.getDocument({
+              data: new Uint8Array(e.target.result),
+              useWorkerFetch: false,
+              isEvalSupported: false,
+              useSystemFonts: true,
+            });
+            const pdf = await loadingTask.promise;
             const pages = Math.min(pdf.numPages, 10);
             const texts = [];
             for (let i = 1; i <= pages; i++) {

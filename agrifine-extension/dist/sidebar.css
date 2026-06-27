@@ -1232,6 +1232,10 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(19 28 43 / var(--tw-bg-opacity, 1));
 }
+.hover\:text-agri-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(74 222 128 / var(--tw-text-opacity, 1));
+}
 .hover\:text-gray-300:hover {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));

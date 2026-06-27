@@ -1,4 +1,5 @@
 import { getFieldProfiles, saveFieldProfile, deleteFieldProfile } from '../../utils/storage.js';
+import { getAgRefineUrl, setAgRefineUrl } from '../../utils/agrefine-bridge.js';
 
 export function FieldProfileModule() {
   let showForm = false;
@@ -12,15 +13,23 @@ export function FieldProfileModule() {
       container.innerHTML = `
         <div class="section-heading">Field Profiles</div>
 
-        <div class="px-4 mb-3">
+        <div class="px-4 mb-3 flex gap-2">
           <button id="fp-new-btn"
-            class="w-full flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition">
+            class="flex-1 flex items-center justify-center gap-2 bg-agri-600 hover:bg-agri-700 text-white text-sm font-medium py-2.5 rounded-xl transition">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
             </svg>
-            New Field Profile
+            New Field
+          </button>
+          <button id="fp-agrefine-sync-btn" title="Sync fields from AG-Refine"
+            class="flex items-center justify-center gap-1.5 border border-night-500 text-gray-300 hover:border-agri-500 hover:text-agri-400 text-xs font-medium px-3 py-2.5 rounded-xl transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+            </svg>
+            AG-Refine
           </button>
         </div>
+        <div id="fp-sync-status" class="px-4 text-xs min-h-[1rem] mb-2" style="color:#3d4f66;"></div>
 
         <!-- Create form -->
         <div id="fp-form" class="hidden px-4 mb-4 bg-night-700 border border-night-600 rounded-xl mx-4 p-4">
@@ -65,6 +74,8 @@ export function FieldProfileModule() {
         container.querySelector('#fp-form').classList.toggle('hidden', !showForm);
       });
 
+      container.querySelector('#fp-agrefine-sync-btn').addEventListener('click', () => this._syncAgRefine(container));
+
       container.querySelector('#fp-cancel-btn').addEventListener('click', () => {
         showForm = false;
         container.querySelector('#fp-form').classList.add('hidden');
@@ -99,8 +110,33 @@ export function FieldProfileModule() {
       });
     },
 
+    async _syncAgRefine(container) {
+      const statusEl = container.querySelector('#fp-sync-status');
+      statusEl.textContent = 'Connecting to AG-Refine tab…';
+      statusEl.style.color = '#3d4f66';
+
+      const result = await chrome.runtime.sendMessage({ type: 'AGREFINE_SYNC' });
+
+      if (!result.ok) {
+        statusEl.textContent = `⚠ ${result.error}`;
+        statusEl.style.color = '#f87171';
+        setTimeout(() => { statusEl.textContent = ''; }, 5000);
+        return;
+      }
+
+      const parts = [];
+      if (result.added) parts.push(`${result.added} added`);
+      if (result.updated) parts.push(`${result.updated} updated`);
+      if (result.loadsFound) parts.push(`${result.loadsFound} loads found`);
+      statusEl.textContent = parts.length ? `✓ Synced: ${parts.join(', ')}` : '✓ No new fields found in AG-Refine';
+      statusEl.style.color = '#4ade80';
+      setTimeout(() => { statusEl.textContent = ''; }, 4000);
+      await this._renderList(container);
+    },
+
     async _renderList(container) {
       const profiles = await getFieldProfiles();
+      const agRefineUrl = await getAgRefineUrl();
       const listEl = container.querySelector('#fp-list');
 
       if (profiles.length === 0) {
@@ -144,6 +180,8 @@ export function FieldProfileModule() {
           <div class="fp-detail ${expandedId === p.id ? '' : 'hidden'} mt-3 pt-3 border-t border-night-600 text-xs text-gray-400 space-y-1">
             ${p.coordinates?.lat != null && p.coordinates?.lon != null ? `<p>📍 ${p.coordinates.lat.toFixed(4)}, ${p.coordinates.lon.toFixed(4)}</p>` : ''}
             ${p.notes ? `<p>📝 ${p.notes}</p>` : ''}
+            ${p._source?.includes('ag-refine') ? `<p class="text-agri-400">↗ Synced from AG-Refine</p>` : ''}
+            ${agRefineUrl ? `<a href="${agRefineUrl}" target="_blank" rel="noopener noreferrer" class="text-agri-400 hover:underline">Open in AG-Refine ↗</a>` : ''}
             <p class="text-gray-500">Weather data: <span class="coming-soon">Phase 6</span></p>
             <p class="text-gray-500">Carbon potential: <span class="coming-soon">Phase 7</span></p>
             <p class="text-gray-500">Added ${new Date(p.createdAt).toLocaleDateString()}</p>

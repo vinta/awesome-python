@@ -1,5 +1,6 @@
 import { sessionGet, sessionSet, KEYS } from '../utils/storage.js';
 import { fetchAnthropic } from '../utils/api.js';
+import { syncFromAgRefine } from '../utils/agrefine-bridge.js';
 
 // Open the side panel when the action icon is clicked
 chrome.sidePanel.setPanelBehavior({ openPanelOnActionClick: true }).catch(console.error);
@@ -45,6 +46,12 @@ chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
       readTabContent(message.payload?.tab_id)
         .then(sendResponse)
         .catch((err) => sendResponse({ error: err.message }));
+      return true;
+
+    case 'AGREFINE_SYNC':
+      syncFromAgRefine()
+        .then(sendResponse)
+        .catch((err) => sendResponse({ ok: false, error: err.message }));
       return true;
 
     default:
