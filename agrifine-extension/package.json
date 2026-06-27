@@ -1,0 +1,30 @@
+{
+  "name": "agrifine-extension",
+  "version": "0.1.0",
+  "description": "Browser extension farm data dashboard",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack/webpack.config.js",
+    "watch": "webpack --config webpack/webpack.config.js --watch",
+    "build:prod": "NODE_ENV=production webpack --config webpack/webpack.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "autoprefixer": "^10.4.19",
+    "babel-loader": "^9.1.3",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.0",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^3.4.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "pdfjs-dist": "^4.2.67",
+    "xlsx": "^0.18.5"
+  }
+}

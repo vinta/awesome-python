@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Active tab highlight */
+.tab-btn.active-tab {
+  @apply text-agri-700;
+}
+
+.tab-btn.active-tab svg {
+  @apply stroke-agri-700;
+}
+
+/* Card styles shared across modules */
+.agri-card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-100 p-4 mb-3;
+}
+
+.agri-card:hover {
+  @apply shadow-md;
+}
+
+/* Tag pill */
+.tag-pill {
+  @apply inline-block text-xs px-2 py-0.5 rounded-full bg-agri-100 text-agri-800 font-medium mr-1 mb-1;
+}
+
+/* Section heading */
+.section-heading {
+  @apply text-xs uppercase tracking-widest font-semibold text-gray-400 mb-2 px-4 pt-4;
+}
+
+/* Empty state */
+.empty-state {
+  @apply flex flex-col items-center justify-center py-16 text-gray-400 text-sm text-center px-6;
+}
+
+/* Spinner */
+.spinner {
+  @apply inline-block w-5 h-5 border-2 border-agri-300 border-t-agri-700 rounded-full animate-spin;
+}
+
+/* Coming soon badge */
+.coming-soon {
+  @apply inline-block text-xs px-2 py-0.5 rounded-full bg-earth-100 text-earth-700 font-semibold;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbf7d0;
+  border-radius: 2px;
+}
