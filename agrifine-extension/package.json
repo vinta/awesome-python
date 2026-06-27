@@ -16,6 +16,7 @@
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "mini-css-extract-plugin": "^2.9.0",
+    "playwright": "^1.61.1",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
     "tailwindcss": "^3.4.3",
