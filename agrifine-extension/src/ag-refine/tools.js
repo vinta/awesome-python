@@ -1,5 +1,11 @@
 import { getReadingList, getIngestedFiles, getFieldProfiles } from '../utils/storage.js';
 
+function csvEscape(val) {
+  const s = String(val ?? '');
+  return (s.includes(',') || s.includes('"') || s.includes('\n'))
+    ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
 // ── Tool definitions sent to Claude ──────────────────────────────────────────
 
 export const TOOL_DEFINITIONS = [
@@ -87,6 +93,86 @@ export const TOOL_DEFINITIONS = [
     },
   },
   {
+    name: 'screenshot_active_tab',
+    description: 'Take a screenshot of the currently active browser tab. Returns an image Claude can visually inspect — use this to see what the user is currently viewing, check a web page layout, verify data on screen, or analyse any visible content.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        description: {
+          type: 'string',
+          description: 'Optional note about why the screenshot is being taken (for context)',
+        },
+      },
+      required: [],
+    },
+  },
+  {
+    name: 'get_page_content',
+    description: 'Fetch the full text content of the currently active browser tab, or look up a saved reading-list URL. Use this to read articles, extract data from web pages, or analyse the text of any page the user has open.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        url: {
+          type: 'string',
+          description: 'Optional URL to look up in the saved reading list. If omitted, reads the active tab.',
+        },
+      },
+      required: [],
+    },
+  },
+  {
+    name: 'export_farm_data',
+    description: 'Generate and download a CSV or JSON export of farm data. Triggers a file download in the user\'s browser. Use when the user asks to export, download, or save their farm data.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        data_type: {
+          type: 'string',
+          enum: ['reading_list', 'field_profiles', 'ingested_files', 'all'],
+          description: 'Which data set to export',
+        },
+        format: {
+          type: 'string',
+          enum: ['csv', 'json'],
+          description: 'File format (csv or json). "all" data_type always uses json.',
+        },
+      },
+      required: ['data_type'],
+    },
+  },
+  {
+    name: 'open_tab',
+    description: 'Open a URL in a new browser tab and wait for it to load. Use this to navigate to a relevant website — USDA, weather services, commodity markets, farm news, etc. After opening, call read_tab_content or screenshot_active_tab to extract information.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        url: {
+          type: 'string',
+          description: 'The full URL to open (must start with https:// or http://)',
+        },
+        reason: {
+          type: 'string',
+          description: 'Why you are opening this URL — shown to the user',
+        },
+      },
+      required: ['url'],
+    },
+  },
+  {
+    name: 'read_tab_content',
+    description: 'Extract and parse the text content of a browser tab. Call after open_tab to read the page that was just loaded, or omit tab_id to read the currently active tab.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        tab_id: {
+          type: 'number',
+          description: 'Tab ID returned by open_tab. Omit to read the currently active tab.',
+        },
+      },
+      required: [],
+    },
+  },
+  {
     name: 'calculate_gdd',
     description: 'Calculate Growing Degree Days from temperature data. Uses base temp of 50°F for forage crops.',
     input_schema: {
@@ -128,6 +214,16 @@ export async function executeTool(name, input) {
       return toolLookupUSDAsoil(input);
     case 'calculate_gdd':
       return toolCalculateGDD(input);
+    case 'screenshot_active_tab':
+      return toolScreenshotActiveTab(input);
+    case 'get_page_content':
+      return toolGetPageContent(input);
+    case 'export_farm_data':
+      return toolExportFarmData(input);
+    case 'open_tab':
+      return toolOpenTab(input);
+    case 'read_tab_content':
+      return toolReadTabContent(input);
     default:
       return { error: `Unknown tool: ${name}` };
   }
@@ -282,6 +378,146 @@ async function toolLookupUSDAsoil({ latitude, longitude }) {
       note: 'USDA SDA API unavailable — soil data requires network access from background worker',
     };
   }
+}
+
+function toolScreenshotActiveTab() {
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({ type: 'CAPTURE_SCREENSHOT' }, (response) => {
+      if (chrome.runtime.lastError) {
+        reject(new Error(chrome.runtime.lastError.message));
+        return;
+      }
+      if (response?.error) {
+        reject(new Error(response.error));
+        return;
+      }
+      // Strip data URL prefix — agent.js will format this as an image content block
+      const base64 = response.dataUrl.replace(/^data:image\/\w+;base64,/, '');
+      resolve({
+        _type: 'image',
+        media_type: 'image/jpeg',
+        data: base64,
+        url: response.url,
+        title: response.title,
+      });
+    });
+  });
+}
+
+async function toolGetPageContent({ url } = {}) {
+  // Check reading list cache first if a URL was given
+  if (url) {
+    const list = await getReadingList();
+    const saved = list.find((i) => i.url === url || i.url.startsWith(url));
+    if (saved) {
+      return {
+        url: saved.url,
+        title: saved.title,
+        summary: saved.summary,
+        tags: saved.tags,
+        source: 'reading_list_cache',
+      };
+    }
+  }
+
+  // Fall back to reading the active tab via content script
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({ type: 'GET_ACTIVE_TAB_CONTENT' }, (response) => {
+      if (chrome.runtime.lastError) {
+        reject(new Error(chrome.runtime.lastError.message));
+        return;
+      }
+      if (response?.error) {
+        reject(new Error(response.error));
+        return;
+      }
+      resolve(response);
+    });
+  });
+}
+
+async function toolExportFarmData({ data_type, format = 'csv' }) {
+  let records;
+  let filename;
+  let content;
+  const date = new Date().toISOString().slice(0, 10);
+
+  if (data_type === 'all') {
+    const [rl, files, profiles] = await Promise.all([getReadingList(), getIngestedFiles(), getFieldProfiles()]);
+    filename = `agrifine_export_${date}.json`;
+    content = JSON.stringify({ reading_list: rl, ingested_files: files, field_profiles: profiles }, null, 2);
+    records = rl.length + files.length + profiles.length;
+  } else if (data_type === 'reading_list') {
+    const list = await getReadingList();
+    records = list.length;
+    filename = `agrifine_reading_list_${date}.${format}`;
+    if (format === 'json') {
+      content = JSON.stringify(list, null, 2);
+    } else {
+      const hdrs = ['title', 'url', 'summary', 'tags', 'savedAt'];
+      const rows = list.map((i) => [i.title, i.url, i.summary ?? '', (i.tags ?? []).join('; '), i.savedAt].map(csvEscape));
+      content = [hdrs.join(','), ...rows.map((r) => r.join(','))].join('\n');
+    }
+  } else if (data_type === 'field_profiles') {
+    const profiles = await getFieldProfiles();
+    records = profiles.length;
+    filename = `agrifine_field_profiles_${date}.${format}`;
+    if (format === 'json') {
+      content = JSON.stringify(profiles, null, 2);
+    } else {
+      const hdrs = ['name', 'acres', 'soil_type', 'latitude', 'longitude', 'clu_id', 'notes', 'created_at'];
+      const rows = profiles.map((p) => [
+        p.name, p.acres ?? '', p.soilType ?? '',
+        p.coordinates?.lat ?? '', p.coordinates?.lon ?? '',
+        p.cluId ?? '', p.notes ?? '', p.createdAt,
+      ].map(csvEscape));
+      content = [hdrs.join(','), ...rows.map((r) => r.join(','))].join('\n');
+    }
+  } else if (data_type === 'ingested_files') {
+    const files = await getIngestedFiles();
+    records = files.length;
+    filename = `agrifine_ingested_files_${date}.json`;
+    content = JSON.stringify(files, null, 2);
+  } else {
+    return { error: `Unknown data_type: ${data_type}` };
+  }
+
+  // Trigger download inside the sidebar page
+  const mimeType = filename.endsWith('.json') ? 'application/json' : 'text/csv';
+  const blob = new Blob([content], { type: mimeType });
+  const objectUrl = URL.createObjectURL(blob);
+  const anchor = document.createElement('a');
+  anchor.href = objectUrl;
+  anchor.download = filename;
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+  setTimeout(() => URL.revokeObjectURL(objectUrl), 2000);
+
+  return { exported: true, filename, record_count: records, format: filename.split('.').pop(), data_type };
+}
+
+function toolOpenTab({ url, reason }) {
+  if (!url.startsWith('http://') && !url.startsWith('https://')) {
+    return Promise.resolve({ error: 'URL must start with http:// or https://' });
+  }
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({ type: 'OPEN_TAB', payload: { url } }, (response) => {
+      if (chrome.runtime.lastError) { reject(new Error(chrome.runtime.lastError.message)); return; }
+      if (response?.error) { reject(new Error(response.error)); return; }
+      resolve({ ...response, reason: reason ?? null });
+    });
+  });
+}
+
+function toolReadTabContent({ tab_id } = {}) {
+  return new Promise((resolve, reject) => {
+    chrome.runtime.sendMessage({ type: 'READ_TAB_CONTENT', payload: { tab_id: tab_id ?? null } }, (response) => {
+      if (chrome.runtime.lastError) { reject(new Error(chrome.runtime.lastError.message)); return; }
+      if (response?.error) { reject(new Error(response.error)); return; }
+      resolve(response);
+    });
+  });
 }
 
 function toolCalculateGDD({ daily_highs, daily_lows, base_temp = 50 }) {

@@ -1,20 +1,26 @@
 import { AgrifineAgent } from './agent.js';
 
 const TOOL_ICONS = {
-  get_reading_list:   '📖',
-  get_field_profiles: '🌱',
-  get_ingested_files: '📄',
-  get_weather:        '🌤️',
-  lookup_usda_soil:   '🏛️',
-  calculate_gdd:      '📊',
+  get_reading_list:      '📖',
+  get_field_profiles:    '🌱',
+  get_ingested_files:    '📄',
+  get_weather:           '🌤️',
+  lookup_usda_soil:      '🏛️',
+  calculate_gdd:         '📊',
+  screenshot_active_tab: '📸',
+  get_page_content:      '🔍',
+  export_farm_data:      '⬇️',
+  open_tab:              '🌐',
+  read_tab_content:      '📋',
 };
 
 const SUGGESTED_PROMPTS = [
   'What are my current field conditions and harvest windows?',
   'Which fields have the best soil for carbon sequestration?',
   'Summarise all my farm data and flag any issues',
-  'What does the 7-day weather look like for my fields?',
-  'What USDA programs might I qualify for based on my fields?',
+  'Screenshot this page and tell me what agricultural data you see',
+  'Read this page and save any farm data you find',
+  'Export my reading list and field profiles to CSV',
 ];
 
 export function AgRefineModule() {

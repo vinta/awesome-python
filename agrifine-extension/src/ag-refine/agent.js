@@ -86,11 +86,29 @@ export class AgrifineAgent {
 
           this.onEvent({ type: 'tool_result', data: { name: block.name, result } });
 
-          toolResults.push({
-            type: 'tool_result',
-            tool_use_id: block.id,
-            content: JSON.stringify(result),
-          });
+          // Screenshot tool returns an image — pass it as a vision content block
+          if (result && result._type === 'image') {
+            toolResults.push({
+              type: 'tool_result',
+              tool_use_id: block.id,
+              content: [
+                {
+                  type: 'image',
+                  source: { type: 'base64', media_type: result.media_type, data: result.data },
+                },
+                {
+                  type: 'text',
+                  text: `Screenshot of "${result.title}" (${result.url})`,
+                },
+              ],
+            });
+          } else {
+            toolResults.push({
+              type: 'tool_result',
+              tool_use_id: block.id,
+              content: JSON.stringify(result),
+            });
+          }
         }
 
         messages.push({ role: 'user', content: toolResults });
