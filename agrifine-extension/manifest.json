@@ -14,18 +14,18 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "dist/background.js",
+    "service_worker": "background.js",
     "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["dist/content.js"],
+      "js": ["content.js"],
       "run_at": "document_idle"
     }
   ],
   "side_panel": {
-    "default_path": "dist/sidebar.html"
+    "default_path": "sidebar.html"
   },
   "action": {
     "default_title": "Open Agrifine",
