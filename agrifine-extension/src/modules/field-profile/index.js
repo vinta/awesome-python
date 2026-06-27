@@ -145,7 +145,8 @@ export function FieldProfileModule() {
       const parts = [];
       if (result.added) parts.push(`${result.added} field${result.added !== 1 ? 's' : ''} added`);
       if (result.updated) parts.push(`${result.updated} updated`);
-      if (result.loadsFound) parts.push(`${result.loadsFound} loads found`);
+      if (result.ticketsPulled) parts.push(`${result.ticketsPulled} tickets`);
+      if (result.labSamplesPulled) parts.push(`${result.labSamplesPulled} lab samples`);
       statusEl.textContent = parts.length
         ? `✓ Pull complete — ${parts.join(', ')}`
         : '✓ No new fields in AG-Refine';
@@ -170,7 +171,9 @@ export function FieldProfileModule() {
         return;
       }
 
-      statusEl.textContent = `✓ Pushed ${result.count} field${result.count !== 1 ? 's' : ''} to AG-Refine`;
+      statusEl.textContent = result.message
+        ? `✓ ${result.message}`
+        : `✓ Pushed ${result.pushed} field${result.pushed !== 1 ? 's' : ''} to AG-Refine`;
       statusEl.style.color = '#4ade80';
       setTimeout(() => { statusEl.textContent = ''; statusEl.style.color = '#3d4f66'; }, 4000);
     },
@@ -201,7 +204,8 @@ export function FieldProfileModule() {
                     ${entry.fieldsAdded ? `+${entry.fieldsAdded} added` : ''}
                     ${entry.fieldsUpdated ? `${entry.fieldsAdded ? ' · ' : ''}${entry.fieldsUpdated} updated` : ''}
                     ${!entry.fieldsAdded && !entry.fieldsUpdated ? 'No changes' : ''}
-                    ${entry.loadsFound ? ` · ${entry.loadsFound} loads` : ''}
+                    ${entry.ticketsPulled ? ` · ${entry.ticketsPulled} tickets` : ''}
+                    ${entry.labSamplesPulled ? ` · ${entry.labSamplesPulled} lab samples` : ''}
                   </div>
                   ${entry.tabUrl ? `<div class="text-night-300 truncate max-w-[180px]" title="${entry.tabUrl}">${entry.tabUrl.replace(/^https?:\/\//, '').slice(0, 40)}</div>` : ''}
                 </div>
@@ -253,16 +257,34 @@ export function FieldProfileModule() {
             </div>`
           : '';
 
+        const labHtml = (p.labSamples ?? []).length > 0
+          ? `<div class="mt-2.5">
+              <p class="text-agri-400 font-semibold uppercase tracking-wide text-[9px] mb-1">Lab / NIR Samples</p>
+              <div class="space-y-0.5">
+                ${(p.labSamples ?? []).slice(0, 3).map((s) => `
+                  <div class="flex justify-between gap-2">
+                    <span>${s.date?.slice(0, 10) ?? '?'}</span>
+                    <span class="text-white flex-shrink-0 text-right">
+                      ${s.dm_pct != null ? `DM ${s.dm_pct}%` : ''}
+                      ${s.ndf_pct != null ? ` NDF ${s.ndf_pct}%` : ''}
+                      ${s.rfv != null ? ` RFV ${s.rfv}` : ''}
+                    </span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>`
+          : '';
+
         const harvestHtml = (p.harvestRecords ?? []).length > 0
           ? `<div class="mt-2.5">
               <p class="text-agri-400 font-semibold uppercase tracking-wide text-[9px] mb-1">Harvest Records</p>
               <div class="space-y-0.5">
                 ${(p.harvestRecords ?? []).slice(0, 4).map((h) => `
                   <div class="flex justify-between gap-2">
-                    <span>${h.date?.slice(0, 10) ?? '?'} — ${h.crop}</span>
+                    <span>${h.date?.slice(0, 10) ?? '?'}${h.commodity ? ` — ${h.commodity}` : h.crop ? ` — ${h.crop}` : ''}</span>
                     <span class="text-white flex-shrink-0">
-                      ${h.yield != null ? `${h.yield} ${h.unit ?? ''}` : ''}
-                      ${h.moisture != null ? ` @ ${h.moisture}%` : ''}
+                      ${h.yield != null ? `${Number(h.yield).toLocaleString()} ${h.unit ?? 'lb'}` : ''}
+                      ${h.quality?.dm_pct != null ? ` DM${h.quality.dm_pct}%` : h.moisture != null ? ` @ ${h.moisture}%H` : ''}
                     </span>
                   </div>
                 `).join('')}
@@ -304,8 +326,9 @@ export function FieldProfileModule() {
               ${p.notes ? `<p class="text-gray-300">📝 ${p.notes}</p>` : ''}
               ${cropHistoryHtml}
               ${harvestHtml}
-              ${!cropHistoryHtml && !harvestHtml
-                ? `<p class="text-gray-600 italic">No crop history yet — ingest a harvest file to populate.</p>`
+              ${labHtml}
+              ${!cropHistoryHtml && !harvestHtml && !labHtml
+                ? `<p class="text-gray-600 italic">No crop history yet — ingest a harvest file or pull from AG-Refine.</p>`
                 : ''}
               <div class="mt-2.5 pt-2 border-t border-night-600 flex items-center justify-between">
                 <p class="text-gray-600">Added ${new Date(p.createdAt).toLocaleDateString()}</p>

@@ -194,13 +194,27 @@ export async function buildContextBundle() {
       : null;
     const history = (p.cropHistory ?? []).slice(0, 4).map((h) => `${h.year}: ${h.crop}`).join(', ');
     const harvests = (p.harvestRecords ?? []).slice(0, 3)
-      .map((h) => `${h.date?.slice(0, 10) ?? '?'}: ${h.yield} ${h.unit ?? ''}`.trim()).join('; ');
+      .map((h) => {
+        const label = h.commodity ?? h.crop ?? 'load';
+        const qty = h.yield != null ? `${Number(h.yield).toLocaleString()} ${h.unit ?? 'lb'}` : '?';
+        const dm = h.quality?.dm_pct != null ? ` DM${h.quality.dm_pct}%` : '';
+        return `${h.date?.slice(0, 10) ?? '?'} ${label}: ${qty}${dm}`;
+      }).join('; ');
+    const latestLab = (p.labSamples ?? []).slice(0, 1).map((s) => {
+      const parts = [];
+      if (s.dm_pct != null) parts.push(`DM ${s.dm_pct}%`);
+      if (s.ndf_pct != null) parts.push(`NDF ${s.ndf_pct}%`);
+      if (s.rfv != null) parts.push(`RFV ${s.rfv}`);
+      if (s.nel != null) parts.push(`NEL ${s.nel}`);
+      return parts.join(', ');
+    })[0] ?? null;
     const parts = [
       `Field "${p.name}" | ${p.acres ?? '?'} ac | ${p.soilType ?? 'unknown soil'}`,
       coords ? `  Coords: ${coords}` : null,
       p.cluId ? `  CLU: ${p.cluId}` : null,
       history ? `  Crop history: ${history}` : null,
       harvests ? `  Harvests: ${harvests}` : null,
+      latestLab ? `  Latest lab: ${latestLab}` : null,
       p.notes ? `  Notes: ${p.notes}` : null,
     ];
     return parts.filter(Boolean).join('\n');

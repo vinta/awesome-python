@@ -17,33 +17,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   syncFromAgRefine: () => (/* binding */ syncFromAgRefine)
 /* harmony export */ });
 /* harmony import */ var _storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./storage.js */ "./src/utils/storage.js");
-function _regeneratorValues(e) { if (null != e) { var t = e["function" == typeof Symbol && Symbol.iterator || "@@iterator"], r = 0; if (t) return t.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) return { next: function next() { return e && r >= e.length && (e = void 0), { value: e && e[r++], done: !e }; } }; } throw new TypeError(_typeof(e) + " is not iterable"); }
-function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
-function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
-function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorValues(e) { if (null != e) { var t = e["function" == typeof Symbol && Symbol.iterator || "@@iterator"], r = 0; if (t) return t.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) return { next: function next() { return e && r >= e.length && (e = void 0), { value: e && e[r++], done: !e }; } }; } throw new TypeError(_typeof(e) + " is not iterable"); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
-function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
-function _defineProperty(e, r, t) { return (r = _toPropertyKey(r)) in e ? Object.defineProperty(e, r, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : e[r] = t, e; }
-function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
-function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
 /**
  * AG-Refine Sister-App Bridge
  *
- * Detects an open AG-Refine tab, pulls field and output data from its
- * localStorage/sessionStorage, and maps it into Agrifine field profiles.
+ * Calls AG-Refine's REST API through the tab's own page context so session
+ * cookies work without any CORS setup on the server. Requires AG-Refine to
+ * be open in a browser tab and the user to be logged in there.
  *
- * AG-Refine tab detection: any tab whose URL matches a configurable pattern
- * (default: localhost:* OR any URL containing "ag-refine" or "agrefine").
- * Set the URL in Settings > AG-Refine URL to pin it to a specific origin.
+ * Tab detection: matches any tab whose URL starts with the configured base URL
+ * (default: localhost:* or any URL containing "ag-refine" / "agrefine").
+ * Set Settings → AG-Refine URL to pin it to a specific origin.
  */
 
 
@@ -151,352 +152,625 @@ function tabMatchesAgRefine(tab, configuredUrl) {
   var u = tab.url.toLowerCase();
   return u.includes('ag-refine') || u.includes('agrefine') || u.startsWith('http://localhost') || u.startsWith('http://127.0.0.1');
 }
-
-// Injected into the AG-Refine tab — reads all storage and DOM hints
-function scrapeAgRefineTab() {
-  var out = {
-    localStorage: {},
-    sessionStorage: {},
-    domHints: {}
-  };
-  for (var i = 0; i < localStorage.length; i++) {
-    var k = localStorage.key(i);
-    try {
-      out.localStorage[k] = JSON.parse(localStorage.getItem(k));
-    } catch (_) {
-      out.localStorage[k] = localStorage.getItem(k);
-    }
-  }
-  for (var _i = 0; _i < sessionStorage.length; _i++) {
-    var _k = sessionStorage.key(_i);
-    try {
-      out.sessionStorage[_k] = JSON.parse(sessionStorage.getItem(_k));
-    } catch (_) {
-      out.sessionStorage[_k] = sessionStorage.getItem(_k);
-    }
-  }
-
-  // Pull field-name-like text from the DOM as a fallback hint
-  var fieldEls = document.querySelectorAll('[data-field],[data-name],[data-id]');
-  fieldEls.forEach(function (el) {
-    var _ref, _el$dataset$field, _el$textContent;
-    var id = (_ref = (_el$dataset$field = el.dataset.field) !== null && _el$dataset$field !== void 0 ? _el$dataset$field : el.dataset.id) !== null && _ref !== void 0 ? _ref : el.dataset.name;
-    if (id) out.domHints[id] = ((_el$textContent = el.textContent) !== null && _el$textContent !== void 0 ? _el$textContent : '').trim().slice(0, 200);
-  });
-  return out;
-}
-
-/**
- * Map raw AG-Refine storage dump to Agrifine field profile shape.
- * Tries common key patterns used by React/Next.js ag apps.
- */
-function extractFields(raw) {
-  var all = _objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage);
-  var candidates = [];
-  for (var _i2 = 0, _Object$entries = Object.entries(all); _i2 < _Object$entries.length; _i2++) {
-    var _Object$entries$_i = _slicedToArray(_Object$entries[_i2], 2),
-      key = _Object$entries$_i[0],
-      val = _Object$entries$_i[1];
-    var k = key.toLowerCase();
-    if (!k.includes('field') && !k.includes('load') && !k.includes('farm') && !k.includes('plot')) continue;
-    var arr = Array.isArray(val) ? val : val && _typeof(val) === 'object' ? [val] : null;
-    if (!arr) continue;
-    var _iterator = _createForOfIteratorHelper(arr),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var _ref2, _ref3, _ref4, _ref5, _item$name, _ref6, _item$id, _ref7, _ref8, _item$cluId, _ref9, _ref0, _item$acres, _ref1, _ref10, _item$soilType, _ref11, _item$lat, _item$coordinates, _ref12, _ref13, _ref14, _item$lon, _item$coordinates2, _item$coordinates3, _ref15, _ref16, _item$notes, _item$cropHistory, _item$cropHistory2, _item$harvests, _item$harvests2, _item$carbonPotential, _ref17, _item$createdAt;
-        var item = _step.value;
-        if (!item || _typeof(item) !== 'object') continue;
-        var name = (_ref2 = (_ref3 = (_ref4 = (_ref5 = (_item$name = item.name) !== null && _item$name !== void 0 ? _item$name : item.fieldName) !== null && _ref5 !== void 0 ? _ref5 : item.field_name) !== null && _ref4 !== void 0 ? _ref4 : item.title) !== null && _ref3 !== void 0 ? _ref3 : item.label) !== null && _ref2 !== void 0 ? _ref2 : null;
-        if (!name) continue;
-        candidates.push({
-          id: "agr_".concat((_ref6 = (_item$id = item.id) !== null && _item$id !== void 0 ? _item$id : item.fieldId) !== null && _ref6 !== void 0 ? _ref6 : Date.now(), "_").concat(Math.random().toString(36).slice(2, 6)),
-          name: String(name),
-          cluId: (_ref7 = (_ref8 = (_item$cluId = item.cluId) !== null && _item$cluId !== void 0 ? _item$cluId : item.clu_id) !== null && _ref8 !== void 0 ? _ref8 : item.clu) !== null && _ref7 !== void 0 ? _ref7 : null,
-          acres: parseFloat((_ref9 = (_ref0 = (_item$acres = item.acres) !== null && _item$acres !== void 0 ? _item$acres : item.area) !== null && _ref0 !== void 0 ? _ref0 : item.size) !== null && _ref9 !== void 0 ? _ref9 : item.acreage) || null,
-          soilType: (_ref1 = (_ref10 = (_item$soilType = item.soilType) !== null && _item$soilType !== void 0 ? _item$soilType : item.soil_type) !== null && _ref10 !== void 0 ? _ref10 : item.soil) !== null && _ref1 !== void 0 ? _ref1 : null,
-          coordinates: {
-            lat: parseFloat((_ref11 = (_item$lat = item.lat) !== null && _item$lat !== void 0 ? _item$lat : item.latitude) !== null && _ref11 !== void 0 ? _ref11 : (_item$coordinates = item.coordinates) === null || _item$coordinates === void 0 ? void 0 : _item$coordinates.lat) || null,
-            lon: parseFloat((_ref12 = (_ref13 = (_ref14 = (_item$lon = item.lon) !== null && _item$lon !== void 0 ? _item$lon : item.lng) !== null && _ref14 !== void 0 ? _ref14 : item.longitude) !== null && _ref13 !== void 0 ? _ref13 : (_item$coordinates2 = item.coordinates) === null || _item$coordinates2 === void 0 ? void 0 : _item$coordinates2.lon) !== null && _ref12 !== void 0 ? _ref12 : (_item$coordinates3 = item.coordinates) === null || _item$coordinates3 === void 0 ? void 0 : _item$coordinates3.lng) || null
-          },
-          notes: (_ref15 = (_ref16 = (_item$notes = item.notes) !== null && _item$notes !== void 0 ? _item$notes : item.description) !== null && _ref16 !== void 0 ? _ref16 : item.comments) !== null && _ref15 !== void 0 ? _ref15 : null,
-          cropHistory: Array.isArray((_item$cropHistory = item.cropHistory) !== null && _item$cropHistory !== void 0 ? _item$cropHistory : item.crop_history) ? (_item$cropHistory2 = item.cropHistory) !== null && _item$cropHistory2 !== void 0 ? _item$cropHistory2 : item.crop_history : [],
-          harvestRecords: Array.isArray((_item$harvests = item.harvests) !== null && _item$harvests !== void 0 ? _item$harvests : item.harvestRecords) ? (_item$harvests2 = item.harvests) !== null && _item$harvests2 !== void 0 ? _item$harvests2 : item.harvestRecords : [],
-          carbonPotential: (_item$carbonPotential = item.carbonPotential) !== null && _item$carbonPotential !== void 0 ? _item$carbonPotential : null,
-          weatherData: null,
-          createdAt: (_ref17 = (_item$createdAt = item.createdAt) !== null && _item$createdAt !== void 0 ? _item$createdAt : item.created_at) !== null && _ref17 !== void 0 ? _ref17 : new Date().toISOString(),
-          _source: 'ag-refine'
-        });
-      }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
-    }
-  }
-  return candidates;
-}
-
-/**
- * Loads also come over — map to ingested file records for the dashboard.
- */
-function extractLoads(raw) {
-  var all = _objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage);
-  var loads = [];
-  for (var _i3 = 0, _Object$entries2 = Object.entries(all); _i3 < _Object$entries2.length; _i3++) {
-    var _Object$entries2$_i = _slicedToArray(_Object$entries2[_i3], 2),
-      key = _Object$entries2$_i[0],
-      val = _Object$entries2$_i[1];
-    var k = key.toLowerCase();
-    if (!k.includes('load') && !k.includes('scale') && !k.includes('ticket') && !k.includes('delivery')) continue;
-    var arr = Array.isArray(val) ? val : null;
-    if (!arr) continue;
-    var _iterator2 = _createForOfIteratorHelper(arr),
-      _step2;
-    try {
-      for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-        var item = _step2.value;
-        if (!item || _typeof(item) !== 'object') continue;
-        loads.push(item);
-      }
-    } catch (err) {
-      _iterator2.e(err);
-    } finally {
-      _iterator2.f();
-    }
-  }
-  return loads;
-}
-
-// Injected into AG-Refine tab to write field data back into its localStorage
-function writeFieldsToAgRefineTab(fields) {
-  try {
-    localStorage.setItem('agrifine_pushed_fields', JSON.stringify(fields));
-    localStorage.setItem('agrifine_pushed_at', new Date().toISOString());
-    // Dispatch an event so a listening AG-Refine app can react immediately
-    window.dispatchEvent(new CustomEvent('agrifine:fields-updated', {
-      detail: {
-        fields: fields
-      }
-    }));
-    return {
-      ok: true,
-      count: fields.length
-    };
-  } catch (err) {
-    return {
-      ok: false,
-      error: err.message
-    };
-  }
-}
-function pushToAgRefine(_x2) {
-  return _pushToAgRefine.apply(this, arguments);
-}
-function _pushToAgRefine() {
-  _pushToAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(profiles) {
-    var configuredUrl, allTabs, agRefineTabs, tab, _yield$chrome$scripti, _yield$chrome$scripti2, result, _t7;
+function findAgRefineTab(_x2) {
+  return _findAgRefineTab.apply(this, arguments);
+} // ── Functions injected into the AG-Refine tab ─────────────────────────────────
+// These run in the page's origin context — same-origin, session cookies included.
+// They must be fully self-contained (no closures over outer-scope variables).
+function _findAgRefineTab() {
+  _findAgRefineTab = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee4(configuredUrl) {
+    var _allTabs$find;
+    var allTabs;
     return _regenerator().w(function (_context4) {
-      while (1) switch (_context4.p = _context4.n) {
+      while (1) switch (_context4.n) {
         case 0:
           _context4.n = 1;
-          return getAgRefineUrl();
-        case 1:
-          configuredUrl = _context4.v;
-          _context4.n = 2;
           return chrome.tabs.query({});
-        case 2:
+        case 1:
           allTabs = _context4.v;
-          agRefineTabs = allTabs.filter(function (t) {
+          return _context4.a(2, (_allTabs$find = allTabs.find(function (t) {
             return tabMatchesAgRefine(t, configuredUrl);
-          });
-          if (!(agRefineTabs.length === 0)) {
-            _context4.n = 3;
-            break;
-          }
-          return _context4.a(2, {
-            ok: false,
-            error: 'No AG-Refine tab found. Open AG-Refine first.'
-          });
-        case 3:
-          tab = agRefineTabs[0];
-          _context4.p = 4;
-          _context4.n = 5;
-          return chrome.scripting.executeScript({
-            target: {
-              tabId: tab.id
-            },
-            func: writeFieldsToAgRefineTab,
-            args: [profiles]
-          });
-        case 5:
-          _yield$chrome$scripti = _context4.v;
-          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
-          result = _yield$chrome$scripti2[0];
-          return _context4.a(2, result.result);
-        case 6:
-          _context4.p = 6;
-          _t7 = _context4.v;
-          return _context4.a(2, {
-            ok: false,
-            error: "Cannot write to AG-Refine tab: ".concat(_t7.message)
+          })) !== null && _allTabs$find !== void 0 ? _allTabs$find : null);
+      }
+    }, _callee4);
+  }));
+  return _findAgRefineTab.apply(this, arguments);
+}
+function _injectFetchAll() {
+  return _injectFetchAll2.apply(this, arguments);
+}
+function _injectFetchAll2() {
+  _injectFetchAll2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee6() {
+    var base, get, _get, _yield$Promise$all, _yield$Promise$all2, fields, tickets, labSamples, harvestPlans;
+    return _regenerator().w(function (_context6) {
+      while (1) switch (_context6.n) {
+        case 0:
+          _get = function _get3() {
+            _get = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5(path) {
+              var res, _t7;
+              return _regenerator().w(function (_context5) {
+                while (1) switch (_context5.p = _context5.n) {
+                  case 0:
+                    _context5.p = 0;
+                    _context5.n = 1;
+                    return fetch(base + path, {
+                      credentials: 'include'
+                    });
+                  case 1:
+                    res = _context5.v;
+                    if (!(res.status === 401)) {
+                      _context5.n = 2;
+                      break;
+                    }
+                    return _context5.a(2, {
+                      __auth_error: true
+                    });
+                  case 2:
+                    return _context5.a(2, res.ok ? res.json() : null);
+                  case 3:
+                    _context5.p = 3;
+                    _t7 = _context5.v;
+                    return _context5.a(2, null);
+                }
+              }, _callee5, null, [[0, 3]]);
+            }));
+            return _get.apply(this, arguments);
+          };
+          get = function _get2(_x5) {
+            return _get.apply(this, arguments);
+          };
+          base = window.location.origin;
+          _context6.n = 1;
+          return Promise.all([get('/api/fields/'), get('/api/scales/tickets/all'), get('/api/intelligence/lab-samples'), get('/api/harvest/plans')]);
+        case 1:
+          _yield$Promise$all = _context6.v;
+          _yield$Promise$all2 = _slicedToArray(_yield$Promise$all, 4);
+          fields = _yield$Promise$all2[0];
+          tickets = _yield$Promise$all2[1];
+          labSamples = _yield$Promise$all2[2];
+          harvestPlans = _yield$Promise$all2[3];
+          return _context6.a(2, {
+            fields: fields,
+            tickets: tickets,
+            labSamples: labSamples,
+            harvestPlans: harvestPlans
           });
       }
-    }, _callee4, null, [[4, 6]]);
+    }, _callee6);
   }));
-  return _pushToAgRefine.apply(this, arguments);
+  return _injectFetchAll2.apply(this, arguments);
 }
+function _injectPushFields(_x3) {
+  return _injectPushFields2.apply(this, arguments);
+} // ── Data mapping ──────────────────────────────────────────────────────────────
+function _injectPushFields2() {
+  _injectPushFields2 = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee7(newFields) {
+    var base, results, _iterator, _step, field, _body$id, res, body, _t8, _t9, _t0;
+    return _regenerator().w(function (_context7) {
+      while (1) switch (_context7.p = _context7.n) {
+        case 0:
+          base = window.location.origin;
+          results = [];
+          _iterator = _createForOfIteratorHelper(newFields);
+          _context7.p = 1;
+          _iterator.s();
+        case 2:
+          if ((_step = _iterator.n()).done) {
+            _context7.n = 10;
+            break;
+          }
+          field = _step.value;
+          _context7.p = 3;
+          _context7.n = 4;
+          return fetch(base + '/api/fields/', {
+            method: 'POST',
+            credentials: 'include',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(field)
+          });
+        case 4:
+          res = _context7.v;
+          if (!res.ok) {
+            _context7.n = 6;
+            break;
+          }
+          _context7.n = 5;
+          return res.json();
+        case 5:
+          _t8 = _context7.v;
+          _context7.n = 7;
+          break;
+        case 6:
+          _t8 = null;
+        case 7:
+          body = _t8;
+          results.push({
+            name: field.name,
+            ok: res.ok,
+            status: res.status,
+            agRefineId: (_body$id = body === null || body === void 0 ? void 0 : body.id) !== null && _body$id !== void 0 ? _body$id : null
+          });
+          _context7.n = 9;
+          break;
+        case 8:
+          _context7.p = 8;
+          _t9 = _context7.v;
+          results.push({
+            name: field.name,
+            ok: false,
+            status: 0,
+            error: _t9.message
+          });
+        case 9:
+          _context7.n = 2;
+          break;
+        case 10:
+          _context7.n = 12;
+          break;
+        case 11:
+          _context7.p = 11;
+          _t0 = _context7.v;
+          _iterator.e(_t0);
+        case 12:
+          _context7.p = 12;
+          _iterator.f();
+          return _context7.f(12);
+        case 13:
+          return _context7.a(2, results);
+      }
+    }, _callee7, null, [[3, 8], [1, 11, 12, 13]]);
+  }));
+  return _injectPushFields2.apply(this, arguments);
+}
+function mapAgFieldToProfile(agField, ticketsByFieldId, labSamplesByFieldId) {
+  var _ticketsByFieldId$agF, _labSamplesByFieldId$, _agField$farm_name, _ref, _agField$acres_fsa, _agField$notes;
+  var fieldTickets = ((_ticketsByFieldId$agF = ticketsByFieldId[agField.id]) !== null && _ticketsByFieldId$agF !== void 0 ? _ticketsByFieldId$agF : []).filter(function (t) {
+    return t.net_weight != null;
+  }).map(function (t) {
+    var _t$unit, _t$dry_matter_pct, _t$protein_pct, _t$starch_pct, _t$commodity, _t$harvest;
+    return {
+      date: t.captured_at,
+      "yield": t.net_weight,
+      unit: (_t$unit = t.unit) !== null && _t$unit !== void 0 ? _t$unit : 'lb',
+      moisture: t.dry_matter_pct != null ? +(100 - t.dry_matter_pct).toFixed(1) : null,
+      quality: {
+        dm_pct: (_t$dry_matter_pct = t.dry_matter_pct) !== null && _t$dry_matter_pct !== void 0 ? _t$dry_matter_pct : null,
+        protein_pct: (_t$protein_pct = t.protein_pct) !== null && _t$protein_pct !== void 0 ? _t$protein_pct : null,
+        starch_pct: (_t$starch_pct = t.starch_pct) !== null && _t$starch_pct !== void 0 ? _t$starch_pct : null
+      },
+      commodity: (_t$commodity = t.commodity) !== null && _t$commodity !== void 0 ? _t$commodity : null,
+      harvest_label: (_t$harvest = t.harvest) !== null && _t$harvest !== void 0 ? _t$harvest : null,
+      ticket_id: t.id,
+      source: 'ag-refine'
+    };
+  });
+  var cropHistory = [];
+  if (agField.crop) {
+    var _agField$variety;
+    var year = agField.planting_date ? parseInt(agField.planting_date.slice(0, 4), 10) : new Date().getFullYear();
+    cropHistory.push({
+      year: year,
+      crop: agField.crop,
+      variety: (_agField$variety = agField.variety) !== null && _agField$variety !== void 0 ? _agField$variety : null
+    });
+  }
+  var labSamples = ((_labSamplesByFieldId$ = labSamplesByFieldId[agField.id]) !== null && _labSamplesByFieldId$ !== void 0 ? _labSamplesByFieldId$ : []).map(function (s) {
+    var _s$sampled_at, _s$dry_matter_pct, _s$ndf_pct, _s$adf_pct, _s$rfv, _s$rfq, _s$nel, _s$digestibility_pct;
+    return {
+      date: (_s$sampled_at = s.sampled_at) !== null && _s$sampled_at !== void 0 ? _s$sampled_at : null,
+      dm_pct: (_s$dry_matter_pct = s.dry_matter_pct) !== null && _s$dry_matter_pct !== void 0 ? _s$dry_matter_pct : null,
+      ndf_pct: (_s$ndf_pct = s.ndf_pct) !== null && _s$ndf_pct !== void 0 ? _s$ndf_pct : null,
+      adf_pct: (_s$adf_pct = s.adf_pct) !== null && _s$adf_pct !== void 0 ? _s$adf_pct : null,
+      rfv: (_s$rfv = s.rfv) !== null && _s$rfv !== void 0 ? _s$rfv : null,
+      rfq: (_s$rfq = s.rfq) !== null && _s$rfq !== void 0 ? _s$rfq : null,
+      nel: (_s$nel = s.nel) !== null && _s$nel !== void 0 ? _s$nel : null,
+      digestibility_pct: (_s$digestibility_pct = s.digestibility_pct) !== null && _s$digestibility_pct !== void 0 ? _s$digestibility_pct : null
+    };
+  });
+  return {
+    id: "agr_".concat(agField.id),
+    name: agField.name,
+    farmName: (_agField$farm_name = agField.farm_name) !== null && _agField$farm_name !== void 0 ? _agField$farm_name : null,
+    acres: (_ref = (_agField$acres_fsa = agField.acres_fsa) !== null && _agField$acres_fsa !== void 0 ? _agField$acres_fsa : agField.acres_calculated) !== null && _ref !== void 0 ? _ref : null,
+    soilType: null,
+    coordinates: {
+      lat: null,
+      lon: null
+    },
+    notes: (_agField$notes = agField.notes) !== null && _agField$notes !== void 0 ? _agField$notes : null,
+    cropHistory: cropHistory,
+    harvestRecords: fieldTickets,
+    labSamples: labSamples,
+    carbonPotential: null,
+    weatherData: null,
+    createdAt: new Date().toISOString(),
+    _source: 'ag-refine',
+    _agRefineId: agField.id
+  };
+}
+
+// ── Public API ────────────────────────────────────────────────────────────────
+
 function syncFromAgRefine() {
   return _syncFromAgRefine.apply(this, arguments);
 }
 function _syncFromAgRefine() {
-  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee5() {
-    var configuredUrl, allTabs, agRefineTabs, tab, raw, _yield$chrome$scripti3, _yield$chrome$scripti4, result, fields, loads, existing, added, updated, _iterator3, _step3, _loop, log, history, _t8, _t9;
-    return _regenerator().w(function (_context6) {
-      while (1) switch (_context6.p = _context6.n) {
+  _syncFromAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee8() {
+    var _raw$fields;
+    var configuredUrl, tab, raw, _yield$chrome$scripti, _yield$chrome$scripti2, result, agFields, allTickets, allLabSamples, ticketsByFieldId, _iterator2, _step2, _t$field_id, _ticketsByFieldId$_t$, t, labSamplesByFieldId, _iterator3, _step3, _s$field_id, _labSamplesByFieldId$2, s, incomingProfiles, existing, added, updated, _iterator4, _step4, _loop, logEntry, history, _t1, _t10, _t11, _t12;
+    return _regenerator().w(function (_context9) {
+      while (1) switch (_context9.p = _context9.n) {
         case 0:
-          _context6.n = 1;
+          _context9.n = 1;
           return getAgRefineUrl();
         case 1:
-          configuredUrl = _context6.v;
-          _context6.n = 2;
-          return chrome.tabs.query({});
+          configuredUrl = _context9.v;
+          _context9.n = 2;
+          return findAgRefineTab(configuredUrl);
         case 2:
-          allTabs = _context6.v;
-          agRefineTabs = allTabs.filter(function (t) {
-            return tabMatchesAgRefine(t, configuredUrl);
-          });
-          if (!(agRefineTabs.length === 0)) {
-            _context6.n = 3;
+          tab = _context9.v;
+          if (tab) {
+            _context9.n = 3;
             break;
           }
-          return _context6.a(2, {
+          return _context9.a(2, {
             ok: false,
             error: 'No AG-Refine tab found. Open AG-Refine in a browser tab first.'
           });
         case 3:
-          tab = agRefineTabs[0];
-          _context6.p = 4;
-          _context6.n = 5;
+          _context9.p = 3;
+          _context9.n = 4;
           return chrome.scripting.executeScript({
             target: {
               tabId: tab.id
             },
-            func: scrapeAgRefineTab
+            func: _injectFetchAll
           });
-        case 5:
-          _yield$chrome$scripti3 = _context6.v;
-          _yield$chrome$scripti4 = _slicedToArray(_yield$chrome$scripti3, 1);
-          result = _yield$chrome$scripti4[0];
+        case 4:
+          _yield$chrome$scripti = _context9.v;
+          _yield$chrome$scripti2 = _slicedToArray(_yield$chrome$scripti, 1);
+          result = _yield$chrome$scripti2[0];
           raw = result.result;
-          _context6.n = 7;
+          _context9.n = 6;
           break;
-        case 6:
-          _context6.p = 6;
-          _t8 = _context6.v;
-          return _context6.a(2, {
+        case 5:
+          _context9.p = 5;
+          _t1 = _context9.v;
+          return _context9.a(2, {
             ok: false,
-            error: "Cannot read AG-Refine tab: ".concat(_t8.message)
+            error: "Cannot reach AG-Refine tab: ".concat(_t1.message)
+          });
+        case 6:
+          if (!(!raw || (_raw$fields = raw.fields) !== null && _raw$fields !== void 0 && _raw$fields.__auth_error)) {
+            _context9.n = 7;
+            break;
+          }
+          return _context9.a(2, {
+            ok: false,
+            error: 'AG-Refine returned 401 — please log in to AG-Refine first.'
           });
         case 7:
-          fields = extractFields(raw);
-          loads = extractLoads(raw); // Merge fields — update existing by name, insert new ones
-          _context6.n = 8;
+          agFields = Array.isArray(raw.fields) ? raw.fields.filter(function (f) {
+            return f.active !== false;
+          }) : [];
+          allTickets = Array.isArray(raw.tickets) ? raw.tickets : [];
+          allLabSamples = Array.isArray(raw.labSamples) ? raw.labSamples : []; // Index by field_id for O(1) lookup
+          ticketsByFieldId = {};
+          _iterator2 = _createForOfIteratorHelper(allTickets);
+          _context9.p = 8;
+          _iterator2.s();
+        case 9:
+          if ((_step2 = _iterator2.n()).done) {
+            _context9.n = 12;
+            break;
+          }
+          t = _step2.value;
+          if (!(t.field_id == null)) {
+            _context9.n = 10;
+            break;
+          }
+          return _context9.a(3, 11);
+        case 10:
+          ((_ticketsByFieldId$_t$ = ticketsByFieldId[_t$field_id = t.field_id]) !== null && _ticketsByFieldId$_t$ !== void 0 ? _ticketsByFieldId$_t$ : ticketsByFieldId[_t$field_id] = []).push(t);
+        case 11:
+          _context9.n = 9;
+          break;
+        case 12:
+          _context9.n = 14;
+          break;
+        case 13:
+          _context9.p = 13;
+          _t10 = _context9.v;
+          _iterator2.e(_t10);
+        case 14:
+          _context9.p = 14;
+          _iterator2.f();
+          return _context9.f(14);
+        case 15:
+          labSamplesByFieldId = {};
+          _iterator3 = _createForOfIteratorHelper(allLabSamples);
+          _context9.p = 16;
+          _iterator3.s();
+        case 17:
+          if ((_step3 = _iterator3.n()).done) {
+            _context9.n = 20;
+            break;
+          }
+          s = _step3.value;
+          if (!(s.field_id == null)) {
+            _context9.n = 18;
+            break;
+          }
+          return _context9.a(3, 19);
+        case 18:
+          ((_labSamplesByFieldId$2 = labSamplesByFieldId[_s$field_id = s.field_id]) !== null && _labSamplesByFieldId$2 !== void 0 ? _labSamplesByFieldId$2 : labSamplesByFieldId[_s$field_id] = []).push(s);
+        case 19:
+          _context9.n = 17;
+          break;
+        case 20:
+          _context9.n = 22;
+          break;
+        case 21:
+          _context9.p = 21;
+          _t11 = _context9.v;
+          _iterator3.e(_t11);
+        case 22:
+          _context9.p = 22;
+          _iterator3.f();
+          return _context9.f(22);
+        case 23:
+          incomingProfiles = agFields.map(function (f) {
+            return mapAgFieldToProfile(f, ticketsByFieldId, labSamplesByFieldId);
+          });
+          _context9.n = 24;
           return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
-        case 8:
-          existing = _context6.v;
+        case 24:
+          existing = _context9.v;
           added = 0;
           updated = 0;
-          _iterator3 = _createForOfIteratorHelper(fields);
-          _context6.p = 9;
+          _iterator4 = _createForOfIteratorHelper(incomingProfiles);
+          _context9.p = 25;
           _loop = /*#__PURE__*/_regenerator().m(function _loop() {
-            var f, match, _match$coordinates, _match$cropHistory, _match$notes, _match$cluId, merged;
-            return _regenerator().w(function (_context5) {
-              while (1) switch (_context5.n) {
+            var _existing$find;
+            var profile, match, _match$cropHistory, _match$harvestRecords, _match$soilType, _match$coordinates, _match$notes;
+            return _regenerator().w(function (_context8) {
+              while (1) switch (_context8.n) {
                 case 0:
-                  f = _step3.value;
-                  match = existing.find(function (e) {
-                    return e.name.toLowerCase() === f.name.toLowerCase();
+                  profile = _step4.value;
+                  match = (_existing$find = existing.find(function (e) {
+                    return e._agRefineId === profile._agRefineId;
+                  })) !== null && _existing$find !== void 0 ? _existing$find : existing.find(function (e) {
+                    return e.name.toLowerCase() === profile.name.toLowerCase();
                   });
                   if (!match) {
-                    _context5.n = 2;
+                    _context8.n = 2;
                     break;
                   }
-                  // Merge: fill in missing data without overwriting user edits
-                  merged = _objectSpread(_objectSpread(_objectSpread({}, f), match), {}, {
-                    coordinates: ((_match$coordinates = match.coordinates) === null || _match$coordinates === void 0 ? void 0 : _match$coordinates.lat) != null ? match.coordinates : f.coordinates,
-                    cropHistory: (_match$cropHistory = match.cropHistory) !== null && _match$cropHistory !== void 0 && _match$cropHistory.length ? match.cropHistory : f.cropHistory,
-                    notes: (_match$notes = match.notes) !== null && _match$notes !== void 0 ? _match$notes : f.notes,
-                    cluId: (_match$cluId = match.cluId) !== null && _match$cluId !== void 0 ? _match$cluId : f.cluId,
+                  _context8.n = 1;
+                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(_objectSpread(_objectSpread({}, profile), {}, {
+                    id: match.id,
+                    cropHistory: (_match$cropHistory = match.cropHistory) !== null && _match$cropHistory !== void 0 && _match$cropHistory.length ? match.cropHistory : profile.cropHistory,
+                    harvestRecords: profile.harvestRecords.length ? profile.harvestRecords : (_match$harvestRecords = match.harvestRecords) !== null && _match$harvestRecords !== void 0 ? _match$harvestRecords : [],
+                    soilType: (_match$soilType = match.soilType) !== null && _match$soilType !== void 0 ? _match$soilType : profile.soilType,
+                    coordinates: ((_match$coordinates = match.coordinates) === null || _match$coordinates === void 0 ? void 0 : _match$coordinates.lat) != null ? match.coordinates : profile.coordinates,
+                    notes: (_match$notes = match.notes) !== null && _match$notes !== void 0 ? _match$notes : profile.notes,
                     _source: 'ag-refine-merged'
-                  });
-                  _context5.n = 1;
-                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(merged);
+                  }));
                 case 1:
                   updated++;
-                  _context5.n = 4;
+                  _context8.n = 4;
                   break;
                 case 2:
-                  _context5.n = 3;
-                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(f);
+                  _context8.n = 3;
+                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(profile);
                 case 3:
                   added++;
                 case 4:
-                  return _context5.a(2);
+                  return _context8.a(2);
               }
             }, _loop);
           });
-          _iterator3.s();
-        case 10:
-          if ((_step3 = _iterator3.n()).done) {
-            _context6.n = 12;
+          _iterator4.s();
+        case 26:
+          if ((_step4 = _iterator4.n()).done) {
+            _context9.n = 28;
             break;
           }
-          return _context6.d(_regeneratorValues(_loop()), 11);
-        case 11:
-          _context6.n = 10;
+          return _context9.d(_regeneratorValues(_loop()), 27);
+        case 27:
+          _context9.n = 26;
           break;
-        case 12:
-          _context6.n = 14;
+        case 28:
+          _context9.n = 30;
           break;
-        case 13:
-          _context6.p = 13;
-          _t9 = _context6.v;
-          _iterator3.e(_t9);
-        case 14:
-          _context6.p = 14;
-          _iterator3.f();
-          return _context6.f(14);
-        case 15:
-          log = {
+        case 29:
+          _context9.p = 29;
+          _t12 = _context9.v;
+          _iterator4.e(_t12);
+        case 30:
+          _context9.p = 30;
+          _iterator4.f();
+          return _context9.f(30);
+        case 31:
+          logEntry = {
             at: new Date().toISOString(),
             tabUrl: tab.url,
             fieldsAdded: added,
             fieldsUpdated: updated,
-            loadsFound: loads.length,
-            rawKeys: Object.keys(_objectSpread(_objectSpread({}, raw.localStorage), raw.sessionStorage))
+            ticketsPulled: allTickets.length,
+            labSamplesPulled: allLabSamples.length
           };
-          _context6.n = 16;
+          _context9.n = 32;
           return getSyncLog();
-        case 16:
-          history = _context6.v;
-          history.unshift(log);
-          _context6.n = 17;
+        case 32:
+          history = _context9.v;
+          history.unshift(logEntry);
+          _context9.n = 33;
           return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.localSet)(SYNC_LOG_KEY, history.slice(0, 20));
-        case 17:
-          return _context6.a(2, {
+        case 33:
+          return _context9.a(2, {
             ok: true,
             added: added,
             updated: updated,
-            loadsFound: loads.length,
-            loads: loads,
-            tabUrl: tab.url
+            ticketsPulled: allTickets.length,
+            labSamplesPulled: allLabSamples.length
           });
       }
-    }, _callee5, null, [[9, 13, 14, 15], [4, 6]]);
+    }, _callee8, null, [[25, 29, 30, 31], [16, 21, 22, 23], [8, 13, 14, 15], [3, 5]]);
   }));
   return _syncFromAgRefine.apply(this, arguments);
+}
+function pushToAgRefine(_x4) {
+  return _pushToAgRefine.apply(this, arguments);
+}
+function _pushToAgRefine() {
+  _pushToAgRefine = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee9(profiles) {
+    var configuredUrl, tab, toCreate, _result$result, _yield$chrome$scripti3, _yield$chrome$scripti4, result, results, pushed, failures, existing, _iterator5, _step5, _loop2, _t13, _t14;
+    return _regenerator().w(function (_context1) {
+      while (1) switch (_context1.p = _context1.n) {
+        case 0:
+          _context1.n = 1;
+          return getAgRefineUrl();
+        case 1:
+          configuredUrl = _context1.v;
+          _context1.n = 2;
+          return findAgRefineTab(configuredUrl);
+        case 2:
+          tab = _context1.v;
+          if (tab) {
+            _context1.n = 3;
+            break;
+          }
+          return _context1.a(2, {
+            ok: false,
+            error: 'No AG-Refine tab found. Open AG-Refine in a browser tab first.'
+          });
+        case 3:
+          // Only push profiles that haven't been synced from AG-Refine yet
+          toCreate = profiles.filter(function (p) {
+            return !p._agRefineId;
+          }).map(function (p) {
+            var _p$farmName, _p$acres, _p$cropHistory$0$crop, _p$cropHistory, _p$cropHistory$0$vari, _p$cropHistory2, _p$notes;
+            return {
+              name: p.name,
+              farm_name: (_p$farmName = p.farmName) !== null && _p$farmName !== void 0 ? _p$farmName : null,
+              acres_fsa: (_p$acres = p.acres) !== null && _p$acres !== void 0 ? _p$acres : null,
+              crop: (_p$cropHistory$0$crop = (_p$cropHistory = p.cropHistory) === null || _p$cropHistory === void 0 || (_p$cropHistory = _p$cropHistory[0]) === null || _p$cropHistory === void 0 ? void 0 : _p$cropHistory.crop) !== null && _p$cropHistory$0$crop !== void 0 ? _p$cropHistory$0$crop : null,
+              variety: (_p$cropHistory$0$vari = (_p$cropHistory2 = p.cropHistory) === null || _p$cropHistory2 === void 0 || (_p$cropHistory2 = _p$cropHistory2[0]) === null || _p$cropHistory2 === void 0 ? void 0 : _p$cropHistory2.variety) !== null && _p$cropHistory$0$vari !== void 0 ? _p$cropHistory$0$vari : null,
+              notes: (_p$notes = p.notes) !== null && _p$notes !== void 0 ? _p$notes : null
+            };
+          });
+          if (!(toCreate.length === 0)) {
+            _context1.n = 4;
+            break;
+          }
+          return _context1.a(2, {
+            ok: true,
+            pushed: 0,
+            message: 'All profiles are already synced with AG-Refine.'
+          });
+        case 4:
+          _context1.p = 4;
+          _context1.n = 5;
+          return chrome.scripting.executeScript({
+            target: {
+              tabId: tab.id
+            },
+            func: _injectPushFields,
+            args: [toCreate]
+          });
+        case 5:
+          _yield$chrome$scripti3 = _context1.v;
+          _yield$chrome$scripti4 = _slicedToArray(_yield$chrome$scripti3, 1);
+          result = _yield$chrome$scripti4[0];
+          results = (_result$result = result.result) !== null && _result$result !== void 0 ? _result$result : [];
+          pushed = results.filter(function (r) {
+            return r.ok;
+          }).length;
+          failures = results.filter(function (r) {
+            return !r.ok;
+          }); // Back-fill _agRefineId on successfully pushed profiles
+          _context1.n = 6;
+          return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.getFieldProfiles)();
+        case 6:
+          existing = _context1.v;
+          _iterator5 = _createForOfIteratorHelper(results);
+          _context1.p = 7;
+          _loop2 = /*#__PURE__*/_regenerator().m(function _loop2() {
+            var res, p;
+            return _regenerator().w(function (_context0) {
+              while (1) switch (_context0.n) {
+                case 0:
+                  res = _step5.value;
+                  if (!(!res.ok || !res.agRefineId)) {
+                    _context0.n = 1;
+                    break;
+                  }
+                  return _context0.a(2, 1);
+                case 1:
+                  p = existing.find(function (e) {
+                    return e.name === res.name;
+                  });
+                  if (!p) {
+                    _context0.n = 2;
+                    break;
+                  }
+                  _context0.n = 2;
+                  return (0,_storage_js__WEBPACK_IMPORTED_MODULE_0__.saveFieldProfile)(_objectSpread(_objectSpread({}, p), {}, {
+                    _agRefineId: res.agRefineId,
+                    _source: 'ag-refine-merged'
+                  }));
+                case 2:
+                  return _context0.a(2);
+              }
+            }, _loop2);
+          });
+          _iterator5.s();
+        case 8:
+          if ((_step5 = _iterator5.n()).done) {
+            _context1.n = 11;
+            break;
+          }
+          return _context1.d(_regeneratorValues(_loop2()), 9);
+        case 9:
+          if (!_context1.v) {
+            _context1.n = 10;
+            break;
+          }
+          return _context1.a(3, 10);
+        case 10:
+          _context1.n = 8;
+          break;
+        case 11:
+          _context1.n = 13;
+          break;
+        case 12:
+          _context1.p = 12;
+          _t13 = _context1.v;
+          _iterator5.e(_t13);
+        case 13:
+          _context1.p = 13;
+          _iterator5.f();
+          return _context1.f(13);
+        case 14:
+          return _context1.a(2, {
+            ok: failures.length === 0,
+            pushed: pushed,
+            failures: failures.length ? failures : undefined
+          });
+        case 15:
+          _context1.p = 15;
+          _t14 = _context1.v;
+          return _context1.a(2, {
+            ok: false,
+            error: "Cannot write to AG-Refine: ".concat(_t14.message)
+          });
+      }
+    }, _callee9, null, [[7, 12, 13, 14], [4, 15]]);
+  }));
+  return _pushToAgRefine.apply(this, arguments);
 }
 
 /***/ },
@@ -1245,28 +1519,39 @@ function _buildContextBundle() {
 
           // ── 2. Field profiles with crop history and harvest records ──────────────────
           fieldLines = profiles.length === 0 ? ['(none)'] : profiles.map(function (p) {
-            var _p$coordinates, _p$coordinates2, _p$cropHistory, _p$harvestRecords, _p$acres, _p$soilType;
+            var _p$coordinates, _p$coordinates2, _p$cropHistory, _p$harvestRecords, _slice$map$, _p$labSamples, _p$acres, _p$soilType;
             var coords = ((_p$coordinates = p.coordinates) === null || _p$coordinates === void 0 ? void 0 : _p$coordinates.lat) != null && ((_p$coordinates2 = p.coordinates) === null || _p$coordinates2 === void 0 ? void 0 : _p$coordinates2.lon) != null ? "".concat(p.coordinates.lat.toFixed(4), ", ").concat(p.coordinates.lon.toFixed(4)) : null;
             var history = ((_p$cropHistory = p.cropHistory) !== null && _p$cropHistory !== void 0 ? _p$cropHistory : []).slice(0, 4).map(function (h) {
               return "".concat(h.year, ": ").concat(h.crop);
             }).join(', ');
             var harvests = ((_p$harvestRecords = p.harvestRecords) !== null && _p$harvestRecords !== void 0 ? _p$harvestRecords : []).slice(0, 3).map(function (h) {
-              var _h$date$slice, _h$date, _h$unit;
-              return "".concat((_h$date$slice = (_h$date = h.date) === null || _h$date === void 0 ? void 0 : _h$date.slice(0, 10)) !== null && _h$date$slice !== void 0 ? _h$date$slice : '?', ": ").concat(h["yield"], " ").concat((_h$unit = h.unit) !== null && _h$unit !== void 0 ? _h$unit : '').trim();
+              var _ref, _h$commodity, _h$unit, _h$quality, _h$date$slice, _h$date;
+              var label = (_ref = (_h$commodity = h.commodity) !== null && _h$commodity !== void 0 ? _h$commodity : h.crop) !== null && _ref !== void 0 ? _ref : 'load';
+              var qty = h["yield"] != null ? "".concat(Number(h["yield"]).toLocaleString(), " ").concat((_h$unit = h.unit) !== null && _h$unit !== void 0 ? _h$unit : 'lb') : '?';
+              var dm = ((_h$quality = h.quality) === null || _h$quality === void 0 ? void 0 : _h$quality.dm_pct) != null ? " DM".concat(h.quality.dm_pct, "%") : '';
+              return "".concat((_h$date$slice = (_h$date = h.date) === null || _h$date === void 0 ? void 0 : _h$date.slice(0, 10)) !== null && _h$date$slice !== void 0 ? _h$date$slice : '?', " ").concat(label, ": ").concat(qty).concat(dm);
             }).join('; ');
-            var parts = ["Field \"".concat(p.name, "\" | ").concat((_p$acres = p.acres) !== null && _p$acres !== void 0 ? _p$acres : '?', " ac | ").concat((_p$soilType = p.soilType) !== null && _p$soilType !== void 0 ? _p$soilType : 'unknown soil'), coords ? "  Coords: ".concat(coords) : null, p.cluId ? "  CLU: ".concat(p.cluId) : null, history ? "  Crop history: ".concat(history) : null, harvests ? "  Harvests: ".concat(harvests) : null, p.notes ? "  Notes: ".concat(p.notes) : null];
+            var latestLab = (_slice$map$ = ((_p$labSamples = p.labSamples) !== null && _p$labSamples !== void 0 ? _p$labSamples : []).slice(0, 1).map(function (s) {
+              var parts = [];
+              if (s.dm_pct != null) parts.push("DM ".concat(s.dm_pct, "%"));
+              if (s.ndf_pct != null) parts.push("NDF ".concat(s.ndf_pct, "%"));
+              if (s.rfv != null) parts.push("RFV ".concat(s.rfv));
+              if (s.nel != null) parts.push("NEL ".concat(s.nel));
+              return parts.join(', ');
+            })[0]) !== null && _slice$map$ !== void 0 ? _slice$map$ : null;
+            var parts = ["Field \"".concat(p.name, "\" | ").concat((_p$acres = p.acres) !== null && _p$acres !== void 0 ? _p$acres : '?', " ac | ").concat((_p$soilType = p.soilType) !== null && _p$soilType !== void 0 ? _p$soilType : 'unknown soil'), coords ? "  Coords: ".concat(coords) : null, p.cluId ? "  CLU: ".concat(p.cluId) : null, history ? "  Crop history: ".concat(history) : null, harvests ? "  Harvests: ".concat(harvests) : null, latestLab ? "  Latest lab: ".concat(latestLab) : null, p.notes ? "  Notes: ".concat(p.notes) : null];
             return parts.filter(Boolean).join('\n');
           }); // ── 3. Ingested data files ───────────────────────────────────────────────────
           fileLines = files.length === 0 ? ['(none)'] : files.slice(0, 10).map(function (f) {
             var _f$preview$slice, _f$preview, _f$uploadedAt$slice, _f$uploadedAt;
-            var preview = f.structuredData ? Object.entries(f.structuredData).filter(function (_ref) {
-              var _ref2 = _slicedToArray(_ref, 1),
-                k = _ref2[0];
+            var preview = f.structuredData ? Object.entries(f.structuredData).filter(function (_ref2) {
+              var _ref3 = _slicedToArray(_ref2, 1),
+                k = _ref3[0];
               return k !== 'raw_preview' && k !== 'parse_error';
-            }).slice(0, 5).map(function (_ref3) {
-              var _ref4 = _slicedToArray(_ref3, 2),
-                k = _ref4[0],
-                v = _ref4[1];
+            }).slice(0, 5).map(function (_ref4) {
+              var _ref5 = _slicedToArray(_ref4, 2),
+                k = _ref5[0],
+                v = _ref5[1];
               return "".concat(k, ": ").concat(JSON.stringify(v).slice(0, 120));
             }).join(' | ') : (_f$preview$slice = (_f$preview = f.preview) === null || _f$preview === void 0 ? void 0 : _f$preview.slice(0, 200)) !== null && _f$preview$slice !== void 0 ? _f$preview$slice : '(no structured data)';
             return "[".concat(f.type, "] ").concat(f.filename, " (").concat((_f$uploadedAt$slice = (_f$uploadedAt = f.uploadedAt) === null || _f$uploadedAt === void 0 ? void 0 : _f$uploadedAt.slice(0, 10)) !== null && _f$uploadedAt$slice !== void 0 ? _f$uploadedAt$slice : '?', "): ").concat(preview);
