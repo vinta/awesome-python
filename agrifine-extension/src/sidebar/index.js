@@ -4,6 +4,7 @@ import { DataIngestModule } from '../modules/data-ingest/index.js';
 import { FieldProfileModule } from '../modules/field-profile/index.js';
 import { DashboardModule } from '../modules/dashboard/index.js';
 import { CarbonEstimatorModule } from '../modules/carbon-estimator/index.js';
+import { AgRefineModule } from '../ag-refine/index.js';
 import { sessionSet, sessionGet, KEYS } from '../utils/storage.js';
 
 // ── Module registry ───────────────────────────────────────────────────────────
@@ -13,6 +14,7 @@ const MODULES = [
   FieldProfileModule(),
   DashboardModule(),
   CarbonEstimatorModule(),
+  AgRefineModule(),
 ];
 
 const moduleMap = Object.fromEntries(MODULES.map((m) => [m.id, m]));
