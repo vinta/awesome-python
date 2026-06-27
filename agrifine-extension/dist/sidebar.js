@@ -293,6 +293,215 @@ var AgrifineAgent = /*#__PURE__*/function () {
 
 /***/ },
 
+/***/ "./src/ag-refine/committee.js"
+/*!************************************!*\
+  !*** ./src/ag-refine/committee.js ***!
+  \************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   COMMITTEE: () => (/* binding */ COMMITTEE),
+/* harmony export */   runCommitteeAgent: () => (/* binding */ runCommitteeAgent)
+/* harmony export */ });
+/* harmony import */ var _utils_storage_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/storage.js */ "./src/utils/storage.js");
+function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
+function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
+function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+/**
+ * The Boardroom — Multi-Agent Audit Committee
+ *
+ * Four named advisors, each with a domain-specific persona, review the same
+ * farm data context and report in sequence. Later agents receive a summary of
+ * what earlier agents said, enabling authentic cross-domain commentary.
+ */
+
+var MODEL = 'claude-sonnet-4-6';
+var ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
+var COMMITTEE = [{
+  id: 'financials',
+  name: 'Kount Kuekkens',
+  role: 'CFO · Financials',
+  emoji: '💹',
+  accentColor: '#d97706',
+  borderStyle: 'border-l-[3px]',
+  borderColor: '#d97706',
+  persona: "You are Kount Kuekkens, a retired agricultural economist now serving as CFO for this farm operation. You speak with a spiraling rhetorical style \u2014 you begin broad, drift into economic theory or historical context, but always land on concrete \"Dairy Moneyball\" math that actually matters.\n\nYour domain: Income Over Feed Cost (IOFC), commodity price impacts on margins, feed efficiency ratios, processor quality premium/penalty thresholds, cash flow position, budget variances, and the financial consequences of operational data errors.\n\nWhen you spot data problems, quantify the financial blindspot they create. When you see opportunities, express them in dollar terms. You are candid about when you are \"spiraling\" into uncertainty vs. when you have hard numbers. You occasionally reference obscure economic principles before getting to the point.\n\nReport in 3\u20134 paragraphs. Be specific \u2014 name dollar figures, percentages, and cite the data points you are drawing from."
+}, {
+  id: 'crops',
+  name: 'Rolf Forage',
+  role: 'Agronomist · Crops',
+  emoji: '🌾',
+  accentColor: '#16a34a',
+  borderColor: '#16a34a',
+  persona: "You are Rolf Forage (pronounced \"For-ahh-juz\"), a fiercely opinionated agronomist and crops director. You do not care about spreadsheets or financial models \u2014 you care about what is actually in the field and the bunker right now.\n\nYour domain: forage quality (dry matter, NDF, fiber digestibility), silage inventory and fermentation integrity, harvest timing windows, field conditions (soil type, drainage, compaction), cover crop programs, nutrient cycling, and input scheduling.\n\nYou are demanding and direct. If the data shows a crop problem that will compromise feed quality, you say so loudly and insist it be corrected immediately \u2014 you do not sugarcoat risk to protect someone's budget. You will call out the financial team for cutting corners that ultimately cost more in lost production. You speak in practical, field-level language.\n\nReport in 3\u20134 paragraphs. Be opinionated and specific about what needs to happen and when."
+}, {
+  id: 'herd',
+  name: 'Dr. Vera Hest',
+  role: 'Chief Veterinarian · Herd Health',
+  emoji: '🐄',
+  accentColor: '#60a5fa',
+  borderColor: '#60a5fa',
+  persona: "You are Dr. Vera Hest, a sharp-witted, data-driven veterinarian and herd health director. You value biological metrics and animal welfare above all else \u2014 and you will challenge any department that proposes to compromise herd health in the name of cost savings or operational convenience.\n\nYour domain: Somatic Cell Count (SCC) trends and penalty risk, Dry Matter Intake (DMI) per cow, Body Condition Score (BCS), transition cow health, Temperature-Humidity Index (THI) and heat stress protocol, milk component trends (fat, protein), reproductive performance, and disease incidence (ketosis, mastitis, lameness, displaced abomasum).\n\nYou connect biological metrics to production outcomes \u2014 a BCS over 3.75 at calving means dystocia and ketosis next month; a THI of 86 means DMI drops 10\u201315% and milk yield follows within 48 hours. You are precise with thresholds, not vague. You speak clinically but translate findings for the group when needed.\n\nReport in 3\u20134 paragraphs. Be incisive. Cite specific thresholds and explain their downstream consequences."
+}, {
+  id: 'personnel',
+  name: 'Marla Shift',
+  role: 'Operations Manager · Personnel',
+  emoji: '📋',
+  accentColor: '#94a3b8',
+  borderColor: '#94a3b8',
+  persona: "You are Marla Shift, the operations-hardened manager who oversees labor, personnel scheduling, equipment maintenance, and day-to-day execution. You are the \"reality check\" of the boardroom.\n\nYour domain: labor availability and shift coverage, overtime costs and crew fatigue, equipment uptime and maintenance backlogs, safety compliance, training gaps, and operational root causes of data errors or production misses.\n\nWhen the other advisors make demands \u2014 Rolf needs an early harvest crew, Vera wants manual pen checks every two hours, Kount wants a new validation system built by Friday \u2014 you translate those demands into actual execution requirements: how many people, how many hours, what it costs, and what else will be delayed or skipped to make it happen.\n\nYou provide honest operational explanations (not excuses) for why things went wrong: mechanical failures, staffing gaps during peak periods, training slips under pressure. You are pragmatic, occasionally exasperated, and very good at finding workarounds under real-world constraints.\n\nReport in 3\u20134 paragraphs. Be concrete about labor, time, and resource constraints."
+}];
+
+/**
+ * Run a single committee agent and stream their response.
+ * priorStatements: array of { name, role, text } from agents who already spoke.
+ * onChunk: called with partial text as it streams in.
+ */
+function runCommitteeAgent(_x, _x2, _x3, _x4) {
+  return _runCommitteeAgent.apply(this, arguments);
+}
+function _runCommitteeAgent() {
+  _runCommitteeAgent = _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee(agent, topic, priorStatements, onChunk) {
+    var apiKey, contextBundle, priorContext, systemPrompt, res, text, reader, decoder, fullText, buffer, _lines$pop, _yield$reader$read, done, value, lines, _iterator, _step, line, payload, _evt$delta, evt, _t;
+    return _regenerator().w(function (_context) {
+      while (1) switch (_context.p = _context.n) {
+        case 0:
+          _context.n = 1;
+          return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.sessionGet)(_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.KEYS.API_KEY);
+        case 1:
+          apiKey = _context.v;
+          if (apiKey) {
+            _context.n = 2;
+            break;
+          }
+          throw new Error('No API key set — open ⚙ Settings to add your Anthropic key.');
+        case 2:
+          _context.n = 3;
+          return (0,_utils_storage_js__WEBPACK_IMPORTED_MODULE_0__.buildContextBundle)();
+        case 3:
+          contextBundle = _context.v;
+          priorContext = priorStatements.length > 0 ? "\n\n\u2500\u2500 PRIOR STATEMENTS FROM YOUR COLLEAGUES \u2500\u2500\n".concat(priorStatements.map(function (s) {
+            return "".concat(s.name, " (").concat(s.role, "):\n").concat(s.text);
+          }).join('\n\n─────────────────────\n\n')) : '';
+          systemPrompt = "".concat(agent.persona, "\n\n\u2500\u2500 FARM DATA CONTEXT \u2500\u2500\n").concat(contextBundle).concat(priorContext, "\n\nYou are presenting your department report at the weekly audit boardroom. Address the meeting topic directly from your domain's perspective. If colleagues have already spoken, you may reference or push back on their points where they intersect with your domain.");
+          _context.n = 4;
+          return fetch(ANTHROPIC_URL, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'x-api-key': apiKey,
+              'anthropic-version': '2023-06-01',
+              'anthropic-dangerous-direct-browser-access': 'true'
+            },
+            body: JSON.stringify({
+              model: MODEL,
+              max_tokens: 1024,
+              stream: true,
+              system: systemPrompt,
+              messages: [{
+                role: 'user',
+                content: topic
+              }]
+            })
+          });
+        case 4:
+          res = _context.v;
+          if (res.ok) {
+            _context.n = 6;
+            break;
+          }
+          _context.n = 5;
+          return res.text();
+        case 5:
+          text = _context.v;
+          throw new Error("API ".concat(res.status, ": ").concat(text));
+        case 6:
+          // Stream SSE response
+          reader = res.body.getReader();
+          decoder = new TextDecoder();
+          fullText = '';
+          buffer = '';
+        case 7:
+          if (false) // removed by dead control flow
+{}
+          _context.n = 8;
+          return reader.read();
+        case 8:
+          _yield$reader$read = _context.v;
+          done = _yield$reader$read.done;
+          value = _yield$reader$read.value;
+          if (!done) {
+            _context.n = 9;
+            break;
+          }
+          return _context.a(3, 19);
+        case 9:
+          buffer += decoder.decode(value, {
+            stream: true
+          });
+          lines = buffer.split('\n');
+          buffer = (_lines$pop = lines.pop()) !== null && _lines$pop !== void 0 ? _lines$pop : '';
+          _iterator = _createForOfIteratorHelper(lines);
+          _context.p = 10;
+          _iterator.s();
+        case 11:
+          if ((_step = _iterator.n()).done) {
+            _context.n = 15;
+            break;
+          }
+          line = _step.value;
+          if (line.startsWith('data: ')) {
+            _context.n = 12;
+            break;
+          }
+          return _context.a(3, 14);
+        case 12:
+          payload = line.slice(6).trim();
+          if (!(payload === '[DONE]')) {
+            _context.n = 13;
+            break;
+          }
+          return _context.a(3, 14);
+        case 13:
+          try {
+            evt = JSON.parse(payload);
+            if (evt.type === 'content_block_delta' && ((_evt$delta = evt.delta) === null || _evt$delta === void 0 ? void 0 : _evt$delta.type) === 'text_delta') {
+              fullText += evt.delta.text;
+              onChunk(evt.delta.text, fullText);
+            }
+          } catch (_) {}
+        case 14:
+          _context.n = 11;
+          break;
+        case 15:
+          _context.n = 17;
+          break;
+        case 16:
+          _context.p = 16;
+          _t = _context.v;
+          _iterator.e(_t);
+        case 17:
+          _context.p = 17;
+          _iterator.f();
+          return _context.f(17);
+        case 18:
+          _context.n = 7;
+          break;
+        case 19:
+          return _context.a(2, fullText);
+      }
+    }, _callee, null, [[10, 16, 17, 18]]);
+  }));
+  return _runCommitteeAgent.apply(this, arguments);
+}
+
+/***/ },
+
 /***/ "./src/ag-refine/index.js"
 /*!********************************!*\
   !*** ./src/ag-refine/index.js ***!
@@ -304,10 +513,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   AgRefineModule: () => (/* binding */ AgRefineModule)
 /* harmony export */ });
 /* harmony import */ var _agent_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./agent.js */ "./src/ag-refine/agent.js");
+/* harmony import */ var _committee_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./committee.js */ "./src/ag-refine/committee.js");
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _regeneratorValues(e) { if (null != e) { var t = e["function" == typeof Symbol && Symbol.iterator || "@@iterator"], r = 0; if (t) return t.call(e); if ("function" == typeof e.next) return e; if (!isNaN(e.length)) return { next: function next() { return e && r >= e.length && (e = void 0), { value: e && e[r++], done: !e }; } }; } throw new TypeError(_typeof(e) + " is not iterable"); }
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 function _regenerator() { /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */ var e, t, r = "function" == typeof Symbol ? Symbol : {}, n = r.iterator || "@@iterator", o = r.toStringTag || "@@toStringTag"; function i(r, n, o, i) { var c = n && n.prototype instanceof Generator ? n : Generator, u = Object.create(c.prototype); return _regeneratorDefine2(u, "_invoke", function (r, n, o) { var i, c, u, f = 0, p = o || [], y = !1, G = { p: 0, n: 0, v: e, a: d, f: d.bind(e, 4), d: function d(t, r) { return i = t, c = 0, u = e, G.n = r, a; } }; function d(r, n) { for (c = r, u = n, t = 0; !y && f && !o && t < p.length; t++) { var o, i = p[t], d = G.p, l = i[2]; r > 3 ? (o = l === n) && (u = i[(c = i[4]) ? 5 : (c = 3, 3)], i[4] = i[5] = e) : i[0] <= d && ((o = r < 2 && d < i[1]) ? (c = 0, G.v = n, G.n = i[1]) : d < l && (o = r < 3 || i[0] > n || n > l) && (i[4] = r, i[5] = n, G.n = l, c = 0)); } if (o || r > 1) return a; throw y = !0, n; } return function (o, p, l) { if (f > 1) throw TypeError("Generator is already running"); for (y && 1 === p && d(p, l), c = p, u = l; (t = c < 2 ? e : u) || !y;) { i || (c ? c < 3 ? (c > 1 && (G.n = -1), d(c, u)) : G.n = u : G.v = u); try { if (f = 2, i) { if (c || (o = "next"), t = i[o]) { if (!(t = t.call(i, u))) throw TypeError("iterator result is not an object"); if (!t.done) return t; u = t.value, c < 2 && (c = 0); } else 1 === c && (t = i["return"]) && t.call(i), c < 2 && (u = TypeError("The iterator does not provide a '" + o + "' method"), c = 1); i = e; } else if ((t = (y = G.n < 0) ? u : r.call(n, G)) !== a) break; } catch (t) { i = e, c = 1, u = t; } finally { f = 1; } } return { value: t, done: y }; }; }(r, o, i), !0), u; } var a = {}; function Generator() {} function GeneratorFunction() {} function GeneratorFunctionPrototype() {} t = Object.getPrototypeOf; var c = [][n] ? t(t([][n]())) : (_regeneratorDefine2(t = {}, n, function () { return this; }), t), u = GeneratorFunctionPrototype.prototype = Generator.prototype = Object.create(c); function f(e) { return Object.setPrototypeOf ? Object.setPrototypeOf(e, GeneratorFunctionPrototype) : (e.__proto__ = GeneratorFunctionPrototype, _regeneratorDefine2(e, o, "GeneratorFunction")), e.prototype = Object.create(u), e; } return GeneratorFunction.prototype = GeneratorFunctionPrototype, _regeneratorDefine2(u, "constructor", GeneratorFunctionPrototype), _regeneratorDefine2(GeneratorFunctionPrototype, "constructor", GeneratorFunction), GeneratorFunction.displayName = "GeneratorFunction", _regeneratorDefine2(GeneratorFunctionPrototype, o, "GeneratorFunction"), _regeneratorDefine2(u), _regeneratorDefine2(u, o, "Generator"), _regeneratorDefine2(u, n, function () { return this; }), _regeneratorDefine2(u, "toString", function () { return "[object Generator]"; }), (_regenerator = function _regenerator() { return { w: i, m: f }; })(); }
 function _regeneratorDefine2(e, r, n, t) { var i = Object.defineProperty; try { i({}, "", {}); } catch (e) { i = 0; } _regeneratorDefine2 = function _regeneratorDefine(e, r, n, t) { function o(r, n) { _regeneratorDefine2(e, r, function (e) { return this._invoke(r, n, e); }); } r ? i ? i(e, r, { value: n, enumerable: !t, configurable: !t, writable: !t }) : e[r] = n : (o("next", 0), o("throw", 1), o("return", 2)); }, _regeneratorDefine2(e, r, n, t); }
 function asyncGeneratorStep(n, t, e, r, o, a, c) { try { var i = n[a](c), u = i.value; } catch (n) { return void e(n); } i.done ? t(u) : Promise.resolve(u).then(r, o); }
 function _asyncToGenerator(n) { return function () { var t = this, e = arguments; return new Promise(function (r, o) { var a = n.apply(t, e); function _next(n) { asyncGeneratorStep(a, r, o, _next, _throw, "next", n); } function _throw(n) { asyncGeneratorStep(a, r, o, _next, _throw, "throw", n); } _next(void 0); }); }; }
+
 
 var TOOL_ICONS = {
   get_reading_list: '📖',
@@ -324,10 +540,20 @@ var TOOL_ICONS = {
   get_farm_memory: '🧠',
   update_farm_memory: '💾'
 };
-var SUGGESTED_PROMPTS = ['Review all my farm data and build a farm memory summary', 'What are my current field conditions and harvest windows?', 'What risks or opportunities do you see across my operation?', 'Screenshot this page and tell me what agricultural data you see', 'Export my reading list and field profiles to CSV'];
+var AGENT_PROMPTS = ['Review all my farm data and build a farm memory summary', 'What are my current field conditions and harvest windows?', 'What risks or opportunities do you see across my operation?', 'Screenshot this page and tell me what agricultural data you see', 'Export my reading list and field profiles to CSV'];
+var BOARDROOM_PROMPTS = ['Weekly operations audit — all departments, give me your status', 'We have a data integrity issue — assess the impact by department', 'Heat stress event incoming — what does each department need?', 'Review all farm data and identify the single biggest risk per department', 'What is the biggest point of contention between departments right now?'];
 function AgRefineModule() {
-  var messages = [];
-  var isRunning = false;
+  var mode = 'agent'; // 'agent' | 'boardroom'
+
+  // Agent mode state
+  var agentMessages = [];
+  var agentRunning = false;
+
+  // Boardroom mode state
+  var boardMessages = []; // { type: 'topic'|'report'|'chair'|'thinking', ... }
+  var boardRunning = false;
+  var boardTargetAgent = null; // null = all, or agent id for targeted response
+
   return {
     id: 'ag-refine',
     label: 'AgriAgent',
@@ -337,46 +563,116 @@ function AgRefineModule() {
         return _regenerator().w(function (_context) {
           while (1) switch (_context.n) {
             case 0:
-              container.innerHTML = "\n        <div class=\"flex flex-col h-full\">\n\n          <!-- Header bar -->\n          <div class=\"px-4 pt-4 pb-2 flex-shrink-0\">\n            <div class=\"flex items-center gap-2 mb-1\">\n              <span class=\"text-base\">\uD83E\uDD16</span>\n              <h2 class=\"text-sm font-bold text-white\">AgriAgent</h2>\n              <span class=\"text-xs px-2 py-0.5 rounded-full bg-night-600 text-agri-400 font-medium\">AI Agent</span>\n            </div>\n            <p class=\"text-xs text-gray-500\">Multi-step reasoning over all your farm data</p>\n          </div>\n\n          <!-- Chat history -->\n          <div id=\"agent-chat\" class=\"flex-1 overflow-y-auto px-4 py-2 space-y-3\"></div>\n\n          <!-- Suggested prompts (shown when empty) -->\n          <div id=\"agent-suggestions\" class=\"px-4 pb-2 flex-shrink-0\">\n            <p class=\"text-xs text-gray-500 mb-2\">Try asking\u2026</p>\n            <div class=\"flex flex-col gap-1.5\">\n              ".concat(SUGGESTED_PROMPTS.map(function (p) {
-                return "\n                <button class=\"suggest-btn text-left text-xs bg-night-700 hover:bg-night-600 text-agri-400 px-3 py-2 rounded-lg border border-night-500 transition\">\n                  ".concat(p, "\n                </button>");
-              }).join(''), "\n            </div>\n          </div>\n\n          <!-- Input bar -->\n          <div class=\"flex-shrink-0 border-t border-night-600 px-3 py-3\">\n            <div class=\"flex gap-2 items-end\">\n              <textarea id=\"agent-input\" rows=\"2\"\n                placeholder=\"Ask the agent anything about your farm\u2026\"\n                class=\"ag-input flex-1 rounded-xl resize-none\"></textarea>\n              <button id=\"agent-send\"\n                class=\"flex-shrink-0 bg-agri-600 hover:bg-agri-700 disabled:bg-night-500 text-white rounded-xl px-3 py-2 transition\">\n                <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                  <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 19l9 2-9-18-9 18 9-2zm0 0v-8\" />\n                </svg>\n              </button>\n            </div>\n            <button id=\"agent-clear\" class=\"text-xs text-gray-500 hover:text-gray-300 mt-1 transition\">Clear conversation</button>\n          </div>\n        </div>\n      ");
+              container.innerHTML = _this._html();
               _this._bindEvents(container);
-              _this._renderMessages(container);
+              _this._switchMode(mode, container);
             case 1:
               return _context.a(2);
           }
         }, _callee);
       }))();
     },
+    _html: function _html() {
+      return "\n        <div class=\"flex flex-col h-full\">\n\n          <!-- Mode toggle -->\n          <div class=\"flex-shrink-0 flex border-b border-night-600\" style=\"background:#131c2b;\">\n            <button data-mode=\"agent\"\n              class=\"mode-btn flex-1 py-2.5 text-xs font-bold uppercase tracking-widest transition\">\n              Agent\n            </button>\n            <button data-mode=\"boardroom\"\n              class=\"mode-btn flex-1 py-2.5 text-xs font-bold uppercase tracking-widest transition\">\n              Boardroom\n            </button>\n          </div>\n\n          <!-- \u2500\u2500 AGENT MODE \u2500\u2500 -->\n          <div id=\"panel-agent\" class=\"flex flex-col flex-1 overflow-hidden hidden\">\n\n            <div class=\"px-4 pt-3 pb-2 flex-shrink-0\">\n              <div class=\"flex items-center gap-2 mb-0.5\">\n                <span class=\"text-base\">\uD83E\uDD16</span>\n                <h2 class=\"text-sm font-bold text-white\">AgriAgent</h2>\n                <span class=\"text-xs px-2 py-0.5 rounded-full bg-night-600 text-agri-400 font-medium\">AI Agent</span>\n              </div>\n              <p class=\"text-xs text-gray-500\">Multi-step reasoning over all your farm data</p>\n            </div>\n\n            <div id=\"agent-chat\" class=\"flex-1 overflow-y-auto px-4 py-2 space-y-3\"></div>\n\n            <div id=\"agent-suggestions\" class=\"px-4 pb-2 flex-shrink-0\">\n              <p class=\"text-xs text-gray-500 mb-2\">Try asking\u2026</p>\n              <div class=\"flex flex-col gap-1.5\">\n                ".concat(AGENT_PROMPTS.map(function (p) {
+        return "\n                  <button class=\"agent-suggest-btn text-left text-xs bg-night-700 hover:bg-night-600 text-agri-400 px-3 py-2 rounded-lg border border-night-500 transition\">\n                    ".concat(p, "\n                  </button>");
+      }).join(''), "\n              </div>\n            </div>\n\n            <div class=\"flex-shrink-0 border-t border-night-600 px-3 py-3\">\n              <div class=\"flex gap-2 items-end\">\n                <textarea id=\"agent-input\" rows=\"2\"\n                  placeholder=\"Ask the agent anything about your farm\u2026\"\n                  class=\"ag-input flex-1 rounded-xl resize-none\"></textarea>\n                <button id=\"agent-send\"\n                  class=\"flex-shrink-0 bg-agri-600 hover:bg-agri-700 disabled:bg-night-500 text-white rounded-xl px-3 py-2 transition\">\n                  <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 19l9 2-9-18-9 18 9-2zm0 0v-8\" />\n                  </svg>\n                </button>\n              </div>\n              <button id=\"agent-clear\" class=\"text-xs text-gray-500 hover:text-gray-300 mt-1 transition\">Clear conversation</button>\n            </div>\n          </div>\n\n          <!-- \u2500\u2500 BOARDROOM MODE \u2500\u2500 -->\n          <div id=\"panel-boardroom\" class=\"flex flex-col flex-1 overflow-hidden hidden\">\n\n            <!-- Committee roster -->\n            <div class=\"flex-shrink-0 px-4 pt-3 pb-2\">\n              <div class=\"flex items-center gap-1.5 mb-2\">\n                <span class=\"text-sm\">\uD83C\uDFDB\uFE0F</span>\n                <h2 class=\"text-sm font-bold text-white\">The Boardroom</h2>\n              </div>\n              <div class=\"flex flex-wrap gap-1.5\">\n                ").concat(_committee_js__WEBPACK_IMPORTED_MODULE_1__.COMMITTEE.map(function (a) {
+        return "\n                  <div class=\"flex items-center gap-1 px-2 py-1 rounded-lg border text-xs\"\n                    style=\"border-color:".concat(a.borderColor, "22;background:").concat(a.accentColor, "11;\">\n                    <span>").concat(a.emoji, "</span>\n                    <span style=\"color:").concat(a.accentColor, ";\">").concat(a.name, "</span>\n                  </div>\n                ");
+      }).join(''), "\n              </div>\n            </div>\n\n            <!-- Meeting transcript -->\n            <div id=\"board-chat\" class=\"flex-1 overflow-y-auto px-4 py-2 space-y-3\"></div>\n\n            <!-- Suggested meeting topics (when empty) -->\n            <div id=\"board-suggestions\" class=\"px-4 pb-2 flex-shrink-0\">\n              <p class=\"text-xs text-gray-500 mb-2\">Call the meeting to order\u2026</p>\n              <div class=\"flex flex-col gap-1.5\">\n                ").concat(BOARDROOM_PROMPTS.map(function (p) {
+        return "\n                  <button class=\"board-suggest-btn text-left text-xs bg-night-700 hover:bg-night-600 text-agri-400 px-3 py-2 rounded-lg border border-night-500 transition\">\n                    ".concat(p, "\n                  </button>");
+      }).join(''), "\n              </div>\n            </div>\n\n            <!-- Input bar -->\n            <div class=\"flex-shrink-0 border-t border-night-600 px-3 py-3\">\n              <!-- Agent selector for targeted follow-ups -->\n              <div id=\"board-target-bar\" class=\"hidden flex gap-1.5 mb-2 flex-wrap\">\n                <span class=\"text-[9px] uppercase tracking-widest text-gray-500 self-center mr-0.5\">Address:</span>\n                <button data-target=\"all\" class=\"target-btn active-target text-[9px] px-2 py-1 rounded border border-agri-600 text-agri-400 transition\">All</button>\n                ").concat(_committee_js__WEBPACK_IMPORTED_MODULE_1__.COMMITTEE.map(function (a) {
+        return "\n                  <button data-target=\"".concat(a.id, "\" class=\"target-btn text-[9px] px-2 py-1 rounded border border-night-500 transition\" style=\"color:").concat(a.accentColor, "66;\">\n                    ").concat(a.name.split(' ')[0], "\n                  </button>\n                ");
+      }).join(''), "\n              </div>\n\n              <div class=\"flex gap-2 items-end\">\n                <textarea id=\"board-input\" rows=\"2\"\n                  placeholder=\"State the meeting topic, or ask a follow-up\u2026\"\n                  class=\"ag-input flex-1 rounded-xl resize-none\"></textarea>\n                <button id=\"board-send\"\n                  class=\"flex-shrink-0 bg-agri-600 hover:bg-agri-700 disabled:bg-night-500 text-white rounded-xl px-3 py-2 transition\">\n                  <svg xmlns=\"http://www.w3.org/2000/svg\" class=\"h-5 w-5\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\">\n                    <path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 19l9 2-9-18-9 18 9-2zm0 0v-8\" />\n                  </svg>\n                </button>\n              </div>\n              <button id=\"board-clear\" class=\"text-xs text-gray-500 hover:text-gray-300 mt-1 transition\">Clear meeting</button>\n            </div>\n          </div>\n\n        </div>\n      ");
+    },
+    _switchMode: function _switchMode(newMode, container) {
+      mode = newMode;
+      container.querySelector('#panel-agent').classList.toggle('hidden', mode !== 'agent');
+      container.querySelector('#panel-boardroom').classList.toggle('hidden', mode !== 'boardroom');
+      container.querySelectorAll('.mode-btn').forEach(function (btn) {
+        var active = btn.dataset.mode === mode;
+        btn.style.color = active ? '#22c55e' : '#3d4f66';
+        btn.style.borderBottom = active ? '2px solid #22c55e' : '2px solid transparent';
+      });
+    },
     _bindEvents: function _bindEvents(container) {
       var _this2 = this;
-      var input = container.querySelector('#agent-input');
-      var sendBtn = container.querySelector('#agent-send');
-      var send = function send() {
-        var text = input.value.trim();
-        if (!text || isRunning) return;
-        input.value = '';
+      // Mode toggle
+      container.querySelectorAll('.mode-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          return _this2._switchMode(btn.dataset.mode, container);
+        });
+      });
+
+      // ── Agent mode ──
+      var agentInput = container.querySelector('#agent-input');
+      var agentSend = container.querySelector('#agent-send');
+      var sendAgent = function sendAgent() {
+        var text = agentInput.value.trim();
+        if (!text || agentRunning) return;
+        agentInput.value = '';
         _this2._runAgent(text, container);
       };
-      sendBtn.addEventListener('click', send);
-      input.addEventListener('keydown', function (e) {
+      agentSend.addEventListener('click', sendAgent);
+      agentInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' && !e.shiftKey) {
           e.preventDefault();
-          send();
+          sendAgent();
         }
       });
-      container.querySelectorAll('.suggest-btn').forEach(function (btn) {
+      container.querySelectorAll('.agent-suggest-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
-          input.value = btn.textContent.trim();
-          send();
+          agentInput.value = btn.textContent.trim();
+          sendAgent();
         });
       });
       container.querySelector('#agent-clear').addEventListener('click', function () {
-        messages = [];
-        isRunning = false;
-        _this2._renderMessages(container);
+        agentMessages = [];
+        agentRunning = false;
+        _this2._renderAgentMessages(container);
+      });
+
+      // ── Boardroom mode ──
+      var boardInput = container.querySelector('#board-input');
+      var boardSend = container.querySelector('#board-send');
+      var sendBoard = function sendBoard() {
+        var text = boardInput.value.trim();
+        if (!text || boardRunning) return;
+        boardInput.value = '';
+        _this2._runBoardroom(text, container);
+      };
+      boardSend.addEventListener('click', sendBoard);
+      boardInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendBoard();
+        }
+      });
+      container.querySelectorAll('.board-suggest-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          boardInput.value = btn.textContent.trim();
+          sendBoard();
+        });
+      });
+      container.querySelector('#board-clear').addEventListener('click', function () {
+        boardMessages = [];
+        boardRunning = false;
+        boardTargetAgent = null;
+        container.querySelector('#board-target-bar').classList.add('hidden');
+        _this2._renderBoardMessages(container);
+      });
+
+      // Target agent selector
+      container.querySelectorAll('.target-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          boardTargetAgent = btn.dataset.target === 'all' ? null : btn.dataset.target;
+          container.querySelectorAll('.target-btn').forEach(function (b) {
+            b.classList.toggle('active-target', b.dataset.target === (boardTargetAgent !== null && boardTargetAgent !== void 0 ? boardTargetAgent : 'all'));
+            b.style.borderColor = b.classList.contains('active-target') ? '#22c55e' : '';
+            if (!b.classList.contains('active-target')) b.style.borderColor = '#253047';
+          });
+        });
       });
     },
+    // ── Agent mode logic ──────────────────────────────────────────────────────
     _runAgent: function _runAgent(userText, container) {
       var _this3 = this;
       return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee2() {
@@ -385,33 +681,27 @@ function AgRefineModule() {
         return _regenerator().w(function (_context2) {
           while (1) switch (_context2.p = _context2.n) {
             case 0:
-              if (!isRunning) {
+              if (!agentRunning) {
                 _context2.n = 1;
                 break;
               }
               return _context2.a(2);
             case 1:
-              isRunning = true;
-
-              // Hide suggestions
+              agentRunning = true;
               (_container$querySelec = container.querySelector('#agent-suggestions')) === null || _container$querySelec === void 0 || _container$querySelec.classList.add('hidden');
-
-              // Add user message
-              messages.push({
+              agentMessages.push({
                 role: 'user',
                 text: userText
               });
-              _this3._renderMessages(container);
-
-              // Thinking placeholder
+              _this3._renderAgentMessages(container);
               thinkingId = "thinking_".concat(Date.now());
-              messages.push({
+              agentMessages.push({
                 role: 'thinking',
                 id: thinkingId,
                 steps: []
               });
-              _this3._renderMessages(container);
-              thinkingMsg = messages[messages.length - 1];
+              _this3._renderAgentMessages(container);
+              thinkingMsg = agentMessages[agentMessages.length - 1];
               agent = new _agent_js__WEBPACK_IMPORTED_MODULE_0__.AgrifineAgent({
                 onEvent: function onEvent(_ref) {
                   var type = _ref.type,
@@ -433,28 +723,27 @@ function AgRefineModule() {
                     var last = thinkingMsg.steps[thinkingMsg.steps.length - 1];
                     if ((last === null || last === void 0 ? void 0 : last.type) === 'tool') last.done = true;
                   } else if (type === 'answer') {
-                    // Replace thinking bubble with final answer
-                    var idx = messages.findIndex(function (m) {
+                    var idx = agentMessages.findIndex(function (m) {
                       return m.id === thinkingId;
                     });
-                    if (idx >= 0) messages.splice(idx, 1);
-                    messages.push({
+                    if (idx >= 0) agentMessages.splice(idx, 1);
+                    agentMessages.push({
                       role: 'assistant',
                       text: data
                     });
-                    isRunning = false;
+                    agentRunning = false;
                   } else if (type === 'error') {
-                    var _idx = messages.findIndex(function (m) {
+                    var _idx = agentMessages.findIndex(function (m) {
                       return m.id === thinkingId;
                     });
-                    if (_idx >= 0) messages.splice(_idx, 1);
-                    messages.push({
+                    if (_idx >= 0) agentMessages.splice(_idx, 1);
+                    agentMessages.push({
                       role: 'error',
                       text: data
                     });
-                    isRunning = false;
+                    agentRunning = false;
                   }
-                  _this3._renderMessages(container);
+                  _this3._renderAgentMessages(container);
                 }
               });
               _context2.p = 2;
@@ -466,58 +755,225 @@ function AgRefineModule() {
             case 4:
               _context2.p = 4;
               _t = _context2.v;
-              idx = messages.findIndex(function (m) {
+              idx = agentMessages.findIndex(function (m) {
                 return m.id === thinkingId;
               });
-              if (idx >= 0) messages.splice(idx, 1);
-              messages.push({
+              if (idx >= 0) agentMessages.splice(idx, 1);
+              agentMessages.push({
                 role: 'error',
                 text: _t.message
               });
-              isRunning = false;
-              _this3._renderMessages(container);
+              agentRunning = false;
+              _this3._renderAgentMessages(container);
             case 5:
               return _context2.a(2);
           }
         }, _callee2, null, [[2, 4]]);
       }))();
     },
-    _renderMessages: function _renderMessages(container) {
+    _renderAgentMessages: function _renderAgentMessages(container) {
       var chat = container.querySelector('#agent-chat');
       if (!chat) return;
-      if (messages.length === 0) {
+      if (agentMessages.length === 0) {
         var _container$querySelec2;
         chat.innerHTML = '';
         (_container$querySelec2 = container.querySelector('#agent-suggestions')) === null || _container$querySelec2 === void 0 || _container$querySelec2.classList.remove('hidden');
         return;
       }
-      chat.innerHTML = messages.map(function (msg) {
+      chat.innerHTML = agentMessages.map(function (msg) {
         if (msg.role === 'user') {
-          return "\n            <div class=\"flex justify-end\">\n              <div class=\"max-w-[85%] bg-agri-600 text-white text-sm px-3 py-2 rounded-2xl rounded-tr-sm\">\n                ".concat(escapeHtml(msg.text), "\n              </div>\n            </div>");
+          return "<div class=\"flex justify-end\">\n            <div class=\"max-w-[85%] bg-agri-600 text-white text-sm px-3 py-2 rounded-2xl rounded-tr-sm\">\n              ".concat(escapeHtml(msg.text), "\n            </div>\n          </div>");
         }
         if (msg.role === 'thinking') {
           var _msg$steps;
           var steps = (_msg$steps = msg.steps) !== null && _msg$steps !== void 0 ? _msg$steps : [];
-          return "\n            <div class=\"flex flex-col gap-1.5\">\n              ".concat(steps.map(function (step) {
+          return "<div class=\"flex flex-col gap-1.5\">\n            ".concat(steps.map(function (step) {
             if (step.type === 'status') {
-              return "<div class=\"flex items-center gap-1.5 text-xs text-gray-500\">\n                    <span class=\"spinner flex-shrink-0\"></span> ".concat(escapeHtml(step.text), "\n                  </div>");
+              return "<div class=\"flex items-center gap-1.5 text-xs text-gray-500\">\n                  <span class=\"spinner flex-shrink-0\"></span> ".concat(escapeHtml(step.text), "\n                </div>");
             }
             if (step.type === 'tool') {
-              return "<div class=\"flex items-center gap-2 text-xs bg-night-700 border border-night-600 rounded-lg px-3 py-1.5\">\n                    <span>".concat(step.icon, "</span>\n                    <span class=\"font-medium text-agri-400\">").concat(step.name, "</span>\n                    ").concat(step.done ? '<span class="ml-auto text-agri-500">✓</span>' : '<span class="spinner ml-auto flex-shrink-0"></span>', "\n                  </div>");
+              return "<div class=\"flex items-center gap-2 text-xs bg-night-700 border border-night-600 rounded-lg px-3 py-1.5\">\n                  <span>".concat(step.icon, "</span>\n                  <span class=\"font-medium text-agri-400\">").concat(step.name, "</span>\n                  ").concat(step.done ? '<span class="ml-auto text-agri-500">✓</span>' : '<span class="spinner ml-auto flex-shrink-0"></span>', "\n                </div>");
             }
             return '';
-          }).join(''), "\n              ").concat(steps.length === 0 ? '<div class="flex items-center gap-1.5 text-xs text-gray-500"><span class="spinner"></span> Starting…</div>' : '', "\n            </div>");
+          }).join(''), "\n            ").concat(steps.length === 0 ? '<div class="flex items-center gap-1.5 text-xs text-gray-500"><span class="spinner"></span> Starting…</div>' : '', "\n          </div>");
         }
         if (msg.role === 'assistant') {
-          return "\n            <div class=\"flex gap-2 items-start\">\n              <div class=\"flex-shrink-0 w-6 h-6 rounded-full bg-night-600 flex items-center justify-center text-xs\">\uD83E\uDD16</div>\n              <div class=\"flex-1 bg-night-700 border border-night-600 rounded-2xl rounded-tl-sm px-3 py-2.5 text-sm text-gray-200 leading-relaxed whitespace-pre-wrap\">\n                ".concat(escapeHtml(msg.text), "\n              </div>\n            </div>");
+          return "<div class=\"flex gap-2 items-start\">\n            <div class=\"flex-shrink-0 w-6 h-6 rounded-full bg-night-600 flex items-center justify-center text-xs\">\uD83E\uDD16</div>\n            <div class=\"flex-1 bg-night-700 border border-night-600 rounded-2xl rounded-tl-sm px-3 py-2.5 text-sm text-gray-200 leading-relaxed whitespace-pre-wrap\">".concat(escapeHtml(msg.text), "</div>\n          </div>");
         }
         if (msg.role === 'error') {
-          return "\n            <div class=\"text-xs bg-red-900/20 border border-red-900/40 text-red-400 rounded-xl px-3 py-2\">\n              \u26A0\uFE0F ".concat(escapeHtml(msg.text), "\n            </div>");
+          return "<div class=\"text-xs bg-red-900/20 border border-red-900/40 text-red-400 rounded-xl px-3 py-2\">\u26A0\uFE0F ".concat(escapeHtml(msg.text), "</div>");
         }
         return '';
       }).join('');
+      chat.scrollTop = chat.scrollHeight;
+    },
+    // ── Boardroom mode logic ──────────────────────────────────────────────────
+    _runBoardroom: function _runBoardroom(topic, container) {
+      var _this4 = this;
+      return _asyncToGenerator(/*#__PURE__*/_regenerator().m(function _callee3() {
+        var _container$querySelec3;
+        var agentsToRun, priorStatements, _iterator, _step, agent, _iterator2, _step2, _loop, _t3;
+        return _regenerator().w(function (_context4) {
+          while (1) switch (_context4.p = _context4.n) {
+            case 0:
+              if (!boardRunning) {
+                _context4.n = 1;
+                break;
+              }
+              return _context4.a(2);
+            case 1:
+              boardRunning = true;
+              (_container$querySelec3 = container.querySelector('#board-suggestions')) === null || _container$querySelec3 === void 0 || _container$querySelec3.classList.add('hidden');
 
-      // Scroll to bottom
+              // Add chair statement
+              boardMessages.push({
+                type: 'chair',
+                text: topic
+              });
+              _this4._renderBoardMessages(container);
+
+              // Determine which agents respond
+              agentsToRun = boardTargetAgent ? _committee_js__WEBPACK_IMPORTED_MODULE_1__.COMMITTEE.filter(function (a) {
+                return a.id === boardTargetAgent;
+              }) : _committee_js__WEBPACK_IMPORTED_MODULE_1__.COMMITTEE; // Build context: full prior statements from this meeting for sequential passing
+              priorStatements = boardMessages.filter(function (m) {
+                return m.type === 'report' && m.text;
+              }).map(function (m) {
+                return {
+                  name: m.agent.name,
+                  role: m.agent.role,
+                  text: m.text
+                };
+              }); // Add thinking placeholders for each agent that will speak
+              _iterator = _createForOfIteratorHelper(agentsToRun);
+              try {
+                for (_iterator.s(); !(_step = _iterator.n()).done;) {
+                  agent = _step.value;
+                  boardMessages.push({
+                    type: 'thinking',
+                    agentId: agent.id,
+                    agent: agent
+                  });
+                }
+              } catch (err) {
+                _iterator.e(err);
+              } finally {
+                _iterator.f();
+              }
+              _this4._renderBoardMessages(container);
+
+              // Run agents sequentially so each gets the prior context
+              _iterator2 = _createForOfIteratorHelper(agentsToRun);
+              _context4.p = 2;
+              _loop = /*#__PURE__*/_regenerator().m(function _loop() {
+                var agent, msgIdx, reportMsg, _t2;
+                return _regenerator().w(function (_context3) {
+                  while (1) switch (_context3.p = _context3.n) {
+                    case 0:
+                      agent = _step2.value;
+                      msgIdx = boardMessages.findIndex(function (m) {
+                        return m.type === 'thinking' && m.agentId === agent.id;
+                      }); // Convert thinking → streaming report
+                      reportMsg = {
+                        type: 'report',
+                        agent: agent,
+                        text: '',
+                        streaming: true
+                      };
+                      if (msgIdx >= 0) boardMessages.splice(msgIdx, 1, reportMsg);
+                      _this4._renderBoardMessages(container);
+                      _context3.p = 1;
+                      _context3.n = 2;
+                      return (0,_committee_js__WEBPACK_IMPORTED_MODULE_1__.runCommitteeAgent)(agent, topic, priorStatements, function (chunk, fullText) {
+                        reportMsg.text = fullText;
+                        _this4._renderBoardMessages(container);
+                      });
+                    case 2:
+                      reportMsg.streaming = false;
+                      priorStatements.push({
+                        name: agent.name,
+                        role: agent.role,
+                        text: reportMsg.text
+                      });
+                      _context3.n = 4;
+                      break;
+                    case 3:
+                      _context3.p = 3;
+                      _t2 = _context3.v;
+                      boardMessages.splice(boardMessages.indexOf(reportMsg), 1, {
+                        type: 'error',
+                        text: "".concat(agent.name, ": ").concat(_t2.message)
+                      });
+                    case 4:
+                      _this4._renderBoardMessages(container);
+                    case 5:
+                      return _context3.a(2);
+                  }
+                }, _loop, null, [[1, 3]]);
+              });
+              _iterator2.s();
+            case 3:
+              if ((_step2 = _iterator2.n()).done) {
+                _context4.n = 5;
+                break;
+              }
+              return _context4.d(_regeneratorValues(_loop()), 4);
+            case 4:
+              _context4.n = 3;
+              break;
+            case 5:
+              _context4.n = 7;
+              break;
+            case 6:
+              _context4.p = 6;
+              _t3 = _context4.v;
+              _iterator2.e(_t3);
+            case 7:
+              _context4.p = 7;
+              _iterator2.f();
+              return _context4.f(7);
+            case 8:
+              boardRunning = false;
+
+              // Show target bar after the first meeting round
+              if (boardMessages.some(function (m) {
+                return m.type === 'report';
+              })) {
+                container.querySelector('#board-target-bar').classList.remove('hidden');
+              }
+              _this4._renderBoardMessages(container);
+            case 9:
+              return _context4.a(2);
+          }
+        }, _callee3, null, [[2, 6, 7, 8]]);
+      }))();
+    },
+    _renderBoardMessages: function _renderBoardMessages(container) {
+      var chat = container.querySelector('#board-chat');
+      if (!chat) return;
+      if (boardMessages.length === 0) {
+        var _container$querySelec4;
+        chat.innerHTML = '';
+        (_container$querySelec4 = container.querySelector('#board-suggestions')) === null || _container$querySelec4 === void 0 || _container$querySelec4.classList.remove('hidden');
+        return;
+      }
+      chat.innerHTML = boardMessages.map(function (msg) {
+        if (msg.type === 'chair') {
+          return "\n            <div class=\"flex justify-end\">\n              <div class=\"max-w-[85%] bg-agri-600 text-white text-xs px-3 py-2 rounded-2xl rounded-tr-sm\">\n                <div class=\"text-[9px] uppercase tracking-widest text-agri-200 mb-1 font-semibold\">Chair \xB7 David</div>\n                ".concat(escapeHtml(msg.text), "\n              </div>\n            </div>");
+        }
+        if (msg.type === 'thinking') {
+          var a = msg.agent;
+          return "\n            <div class=\"rounded-xl border border-night-600 overflow-hidden\" style=\"border-left-color:".concat(a.accentColor, "44;border-left-width:3px;\">\n              <div class=\"px-3 pt-2.5 pb-1 flex items-center gap-2\" style=\"background:#131c2b;\">\n                <span>").concat(a.emoji, "</span>\n                <span class=\"text-xs font-bold\" style=\"color:").concat(a.accentColor, ";\">").concat(a.name, "</span>\n                <span class=\"text-[9px] uppercase tracking-widest text-gray-500\">").concat(a.role, "</span>\n                <span class=\"spinner ml-auto flex-shrink-0\"></span>\n              </div>\n              <div class=\"px-3 py-2 text-xs text-gray-500 italic\" style=\"background:#0f1621;\">\n                Reviewing data\u2026\n              </div>\n            </div>");
+        }
+        if (msg.type === 'report') {
+          var _a = msg.agent;
+          return "\n            <div class=\"rounded-xl border border-night-600 overflow-hidden\" style=\"border-left-color:".concat(_a.accentColor, ";border-left-width:3px;\">\n              <div class=\"px-3 pt-2.5 pb-1 flex items-center gap-2\" style=\"background:#131c2b;\">\n                <span>").concat(_a.emoji, "</span>\n                <span class=\"text-xs font-bold\" style=\"color:").concat(_a.accentColor, ";\">").concat(_a.name, "</span>\n                <span class=\"text-[9px] uppercase tracking-widest text-gray-500\">").concat(_a.role, "</span>\n                ").concat(msg.streaming ? '<span class="spinner ml-auto flex-shrink-0"></span>' : '', "\n              </div>\n              <div class=\"px-3 py-2.5 text-xs text-gray-200 leading-relaxed whitespace-pre-wrap\" style=\"background:#0f1621;\">\n                ").concat(escapeHtml(msg.text || '…'), "\n              </div>\n            </div>");
+        }
+        if (msg.type === 'error') {
+          return "<div class=\"text-xs bg-red-900/20 border border-red-900/40 text-red-400 rounded-xl px-3 py-2\">\u26A0\uFE0F ".concat(escapeHtml(msg.text), "</div>");
+        }
+        return '';
+      }).join('');
       chat.scrollTop = chat.scrollHeight;
     }
   };
