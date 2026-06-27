@@ -47,6 +47,7 @@ export async function fetchAnthropic({ system, userMessage, maxTokens = 1024 }) 
       'Content-Type': 'application/json',
       'x-api-key': apiKey,
       'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true',
     },
     body: JSON.stringify(body),
   });
