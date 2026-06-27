@@ -12,14 +12,15 @@ const TOOL_ICONS = {
   export_farm_data:      '⬇️',
   open_tab:              '🌐',
   read_tab_content:      '📋',
+  get_farm_memory:       '🧠',
+  update_farm_memory:    '💾',
 };
 
 const SUGGESTED_PROMPTS = [
+  'Review all my farm data and build a farm memory summary',
   'What are my current field conditions and harvest windows?',
-  'Which fields have the best soil for carbon sequestration?',
-  'Summarise all my farm data and flag any issues',
+  'What risks or opportunities do you see across my operation?',
   'Screenshot this page and tell me what agricultural data you see',
-  'Read this page and save any farm data you find',
   'Export my reading list and field profiles to CSV',
 ];
 

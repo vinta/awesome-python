@@ -1,4 +1,4 @@
-import { getReadingList, getIngestedFiles, getFieldProfiles } from '../utils/storage.js';
+import { getReadingList, getIngestedFiles, getFieldProfiles, getFarmMemory, saveFarmMemory } from '../utils/storage.js';
 
 function csvEscape(val) {
   const s = String(val ?? '');
@@ -141,6 +141,33 @@ export const TOOL_DEFINITIONS = [
     },
   },
   {
+    name: 'get_farm_memory',
+    description: 'Retrieve the stored farm memory — the AI-synthesized knowledge base for this operation. Returns the most recent summary, key insights, action items, risk flags, and opportunities identified in prior sessions. Call this if the system context did not already include farm memory.',
+    input_schema: { type: 'object', properties: {}, required: [] },
+  },
+  {
+    name: 'update_farm_memory',
+    description: 'Save an updated farm memory snapshot. Call this after synthesizing new insights so future sessions benefit from what you learned. Write a comprehensive aiGeneratedSummary covering the whole farm operation — fields, soils, crops, patterns, and strategic outlook.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        aiGeneratedSummary: {
+          type: 'string',
+          description: 'A rich narrative synthesis of the farm operation. Cover: total acreage, each field\'s status, soil conditions, crop history patterns, financial health (if data available), key risks, and strategic opportunities. Write as a briefing you\'d give a new advisor.',
+        },
+        farm_name: { type: 'string', description: 'Farm or operation name if known' },
+        total_acres: { type: 'number', description: 'Total acreage across all fields' },
+        primary_crops: { type: 'array', items: { type: 'string' }, description: 'Primary crops grown' },
+        soil_overview: { type: 'string', description: 'Summary of soil conditions across the operation' },
+        key_insights: { type: 'array', items: { type: 'string' }, description: 'Most important observations — patterns, correlations, or findings about this farm' },
+        action_items: { type: 'array', items: { type: 'string' }, description: 'Recommended next steps for the operator' },
+        risk_flags: { type: 'array', items: { type: 'string' }, description: 'Risks, concerns, or issues to monitor' },
+        opportunities: { type: 'array', items: { type: 'string' }, description: 'Opportunities identified — programs, practices, markets' },
+      },
+      required: ['aiGeneratedSummary'],
+    },
+  },
+  {
     name: 'open_tab',
     description: 'Open a URL in a new browser tab and wait for it to load. Use this to navigate to a relevant website — USDA, weather services, commodity markets, farm news, etc. After opening, call read_tab_content or screenshot_active_tab to extract information.',
     input_schema: {
@@ -220,6 +247,10 @@ export async function executeTool(name, input) {
       return toolGetPageContent(input);
     case 'export_farm_data':
       return toolExportFarmData(input);
+    case 'get_farm_memory':
+      return toolGetFarmMemory();
+    case 'update_farm_memory':
+      return toolUpdateFarmMemory(input);
     case 'open_tab':
       return toolOpenTab(input);
     case 'read_tab_content':
@@ -495,6 +526,32 @@ async function toolExportFarmData({ data_type, format = 'csv' }) {
   setTimeout(() => URL.revokeObjectURL(objectUrl), 2000);
 
   return { exported: true, filename, record_count: records, format: filename.split('.').pop(), data_type };
+}
+
+async function toolGetFarmMemory() {
+  const memory = await getFarmMemory();
+  if (!memory) {
+    return {
+      has_memory: false,
+      message: 'No farm memory stored yet. Review the field profiles and ingested files, then call update_farm_memory to create a persistent knowledge base for this farm.',
+    };
+  }
+  return { has_memory: true, ...memory };
+}
+
+async function toolUpdateFarmMemory(input) {
+  await saveFarmMemory({
+    aiGeneratedSummary: input.aiGeneratedSummary,
+    farm_name:    input.farm_name    ?? null,
+    total_acres:  input.total_acres  ?? null,
+    primary_crops: input.primary_crops  ?? [],
+    soil_overview: input.soil_overview  ?? null,
+    key_insights:  input.key_insights  ?? [],
+    action_items:  input.action_items  ?? [],
+    risk_flags:    input.risk_flags    ?? [],
+    opportunities: input.opportunities ?? [],
+  });
+  return { saved: true, message: 'Farm memory updated. Future sessions will begin with this knowledge.' };
 }
 
 function toolOpenTab({ url, reason }) {
