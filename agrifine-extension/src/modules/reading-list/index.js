@@ -1,6 +1,19 @@
 import { getReadingList, saveReadingItem, deleteReadingItem } from '../../utils/storage.js';
 import { callAnthropic, AGRICULTURE_TAGS } from '../../utils/api.js';
 
+function escapeHtml(str) {
+  return String(str ?? '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
+function safeHref(url) {
+  try {
+    const u = new URL(url);
+    return (u.protocol === 'https:' || u.protocol === 'http:') ? escapeHtml(url) : '#';
+  } catch (_) { return '#'; }
+}
+
 export function ReadingListModule() {
   let currentTag = 'all';
 
@@ -126,18 +139,18 @@ export function ReadingListModule() {
       }
 
       listEl.innerHTML = filtered.map((item) => `
-        <div class="agri-card" data-id="${item.id}">
+        <div class="agri-card" data-id="${escapeHtml(item.id)}">
           <div class="flex items-start justify-between gap-2">
-            <a href="${item.url}" target="_blank" class="text-sm font-semibold text-agri-700 hover:underline leading-snug flex-1">${item.title}</a>
-            <button class="rl-delete-btn text-gray-300 hover:text-red-400 transition flex-shrink-0" data-id="${item.id}" title="Remove">
+            <a href="${safeHref(item.url)}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-agri-700 hover:underline leading-snug flex-1">${escapeHtml(item.title)}</a>
+            <button class="rl-delete-btn text-gray-300 hover:text-red-400 transition flex-shrink-0" data-id="${escapeHtml(item.id)}" title="Remove">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
-          ${item.summary ? `<p class="text-xs text-gray-500 mt-1.5 leading-relaxed">${item.summary}</p>` : ''}
+          ${item.summary ? `<p class="text-xs text-gray-500 mt-1.5 leading-relaxed">${escapeHtml(item.summary)}</p>` : ''}
           <div class="mt-2">
-            ${(item.tags ?? []).map((t) => `<span class="tag-pill">${t}</span>`).join('')}
+            ${(item.tags ?? []).map((t) => `<span class="tag-pill">${escapeHtml(t)}</span>`).join('')}
           </div>
           <p class="text-xs text-gray-300 mt-2">${new Date(item.savedAt).toLocaleDateString()}</p>
         </div>

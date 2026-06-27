@@ -151,7 +151,7 @@ async function toolGetReadingList({ tag } = {}) {
 async function toolGetFieldProfiles({ field_name } = {}) {
   const profiles = await getFieldProfiles();
   const filtered = field_name
-    ? profiles.filter((p) => p.name.toLowerCase().includes(field_name.toLowerCase()))
+    ? profiles.filter((p) => p.name?.toLowerCase().includes(field_name.toLowerCase()))
     : profiles;
   return {
     count: filtered.length,
@@ -260,6 +260,7 @@ async function toolLookupUSDAsoil({ latitude, longitude }) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `request=query&query=${encodeURIComponent(query)}&format=JSON`,
     });
+    if (!res.ok) throw new Error(`USDA SDA API ${res.status}`);
     const data = await res.json();
     const rows = data.Table ?? [];
     return {

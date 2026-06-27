@@ -153,7 +153,15 @@ export function AgRefineModule() {
         },
       });
 
-      await agent.run(userText);
+      try {
+        await agent.run(userText);
+      } catch (err) {
+        const idx = messages.findIndex((m) => m.id === thinkingId);
+        if (idx >= 0) messages.splice(idx, 1);
+        messages.push({ role: 'error', text: err.message });
+        isRunning = false;
+        this._renderMessages(container);
+      }
     },
 
     _renderMessages(container) {

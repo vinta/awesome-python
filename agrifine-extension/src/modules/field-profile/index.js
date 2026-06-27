@@ -148,7 +148,7 @@ export function FieldProfileModule() {
 
           <!-- Expanded detail -->
           <div class="fp-detail ${expandedId === p.id ? '' : 'hidden'} mt-3 pt-3 border-t border-gray-100 text-xs text-gray-600 space-y-1">
-            ${p.coordinates?.lat ? `<p>📍 ${p.coordinates.lat.toFixed(4)}, ${p.coordinates.lon.toFixed(4)}</p>` : ''}
+            ${p.coordinates?.lat != null && p.coordinates?.lon != null ? `<p>📍 ${p.coordinates.lat.toFixed(4)}, ${p.coordinates.lon.toFixed(4)}</p>` : ''}
             ${p.notes ? `<p>📝 ${p.notes}</p>` : ''}
             <p class="text-gray-300">Weather data: <span class="coming-soon">Phase 6</span></p>
             <p class="text-gray-300">Carbon potential: <span class="coming-soon">Phase 7</span></p>

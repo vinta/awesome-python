@@ -69,7 +69,10 @@ export function DataIngestModule() {
 
     async _processFile(file, container) {
       const status = container.querySelector('#ingest-status');
-      const typeName = SUPPORTED_TYPES[file.type] ?? (file.name.endsWith('.csv') ? 'CSV' : null);
+      const typeName = SUPPORTED_TYPES[file.type]
+        ?? (file.name.endsWith('.csv') ? 'CSV'
+          : (file.name.endsWith('.xlsx') || file.name.endsWith('.xls')) ? 'Excel'
+          : null);
 
       if (!typeName) {
         status.textContent = 'Unsupported file type.';

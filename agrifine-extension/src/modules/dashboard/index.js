@@ -3,6 +3,12 @@ import {
 } from '../../utils/storage.js';
 import { callAnthropic } from '../../utils/api.js';
 
+function escapeHtml(str) {
+  return String(str ?? '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 const CATEGORIES = ['all', 'land', 'equipment', 'harvest', 'finance', 'carbon', 'weather'];
 
 function tagCategory(item) {
@@ -118,7 +124,7 @@ export function DashboardModule() {
           maxTokens: 512,
         });
 
-        answerEl.innerHTML = `<p class="font-medium text-agri-700 mb-1">Answer</p>${answer}`;
+        answerEl.innerHTML = `<p class="font-medium text-agri-700 mb-1">Answer</p><span class="whitespace-pre-wrap">${escapeHtml(answer)}</span>`;
       } catch (err) {
         answerEl.textContent = `Error: ${err.message}`;
       } finally {
@@ -167,11 +173,11 @@ export function DashboardModule() {
             <div class="flex items-start gap-2">
               <span class="text-lg flex-shrink-0">${sourceIcon}</span>
               <div class="flex-1 min-w-0">
-                <p class="text-sm font-semibold text-gray-800 truncate">${title}</p>
-                ${sub ? `<p class="text-xs text-gray-500 mt-0.5 leading-relaxed line-clamp-2">${sub}</p>` : ''}
+                <p class="text-sm font-semibold text-gray-800 truncate">${escapeHtml(title)}</p>
+                ${sub ? `<p class="text-xs text-gray-500 mt-0.5 leading-relaxed line-clamp-2">${escapeHtml(sub)}</p>` : ''}
                 <div class="flex items-center gap-2 mt-1.5">
-                  <span class="tag-pill bg-earth-100 text-earth-700">${item._category}</span>
-                  ${(item.tags ?? []).filter((t) => t !== item._category).slice(0, 2).map((t) => `<span class="tag-pill">${t}</span>`).join('')}
+                  <span class="tag-pill bg-earth-100 text-earth-700">${escapeHtml(item._category)}</span>
+                  ${(item.tags ?? []).filter((t) => t !== item._category).slice(0, 2).map((t) => `<span class="tag-pill">${escapeHtml(t)}</span>`).join('')}
                   ${date ? `<span class="text-xs text-gray-300">${new Date(date).toLocaleDateString()}</span>` : ''}
                 </div>
               </div>

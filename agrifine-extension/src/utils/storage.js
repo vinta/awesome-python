@@ -22,26 +22,38 @@ export const KEYS = {
 // ── Generic helpers ──────────────────────────────────────────────────────────
 
 export async function localGet(key) {
-  return new Promise((resolve) => {
-    chrome.storage.local.get(key, (result) => resolve(result[key] ?? null));
+  return new Promise((resolve, reject) => {
+    chrome.storage.local.get(key, (result) => {
+      if (chrome.runtime.lastError) { reject(new Error(chrome.runtime.lastError.message)); return; }
+      resolve(result[key] ?? null);
+    });
   });
 }
 
 export async function localSet(key, value) {
-  return new Promise((resolve) => {
-    chrome.storage.local.set({ [key]: value }, resolve);
+  return new Promise((resolve, reject) => {
+    chrome.storage.local.set({ [key]: value }, () => {
+      if (chrome.runtime.lastError) { reject(new Error(chrome.runtime.lastError.message)); return; }
+      resolve();
+    });
   });
 }
 
 export async function sessionGet(key) {
-  return new Promise((resolve) => {
-    chrome.storage.session.get(key, (result) => resolve(result[key] ?? null));
+  return new Promise((resolve, reject) => {
+    chrome.storage.session.get(key, (result) => {
+      if (chrome.runtime.lastError) { reject(new Error(chrome.runtime.lastError.message)); return; }
+      resolve(result[key] ?? null);
+    });
   });
 }
 
 export async function sessionSet(key, value) {
-  return new Promise((resolve) => {
-    chrome.storage.session.set({ [key]: value }, resolve);
+  return new Promise((resolve, reject) => {
+    chrome.storage.session.set({ [key]: value }, () => {
+      if (chrome.runtime.lastError) { reject(new Error(chrome.runtime.lastError.message)); return; }
+      resolve();
+    });
   });
 }
 

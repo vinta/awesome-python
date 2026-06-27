@@ -61,8 +61,7 @@ export class AgrifineAgent {
       // Append assistant turn
       messages.push({ role: 'assistant', content: response.content });
 
-      if (response.stop_reason === 'end_turn') {
-        // Extract final text
+      if (response.stop_reason === 'end_turn' || response.stop_reason === 'max_tokens') {
         const text = response.content
           .filter((b) => b.type === 'text')
           .map((b) => b.text)
@@ -113,6 +112,7 @@ export class AgrifineAgent {
         'Content-Type': 'application/json',
         'x-api-key': apiKey,
         'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
       },
       body: JSON.stringify(body),
     });
