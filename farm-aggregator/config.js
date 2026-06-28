@@ -31,7 +31,7 @@ export const config = {
     apiKey: process.env.TOMTOM_API_KEY ?? '',
   },
   server: {
-    port: parseInt(process.env.WEBHOOK_PORT ?? '3001', 10),
+    port: parseInt(process.env.PORT ?? process.env.WEBHOOK_PORT ?? '3001', 10),
   },
   schedule: {
     pulse:  process.env.PULSE_SCHEDULE  ?? '0 * * * *',

@@ -1,0 +1,45 @@
+services:
+  - type: web
+    name: farm-aggregator
+    runtime: node
+    rootDir: farm-aggregator
+    buildCommand: npm install
+    startCommand: node index.js
+    plan: starter
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: AGREFINE_API_URL
+        value: https://ag-refine.onrender.com/api
+      - key: AGREFINE_API_KEY
+        sync: false
+      - key: DROPBOX_APP_KEY
+        sync: false
+      - key: DROPBOX_APP_SECRET
+        sync: false
+      - key: DROPBOX_REFRESH_TOKEN
+        sync: false
+      - key: DROPBOX_INBOX_PATH
+        value: /Farm/Inbox
+      - key: DROPBOX_OUTBOX_PATH
+        value: /Farm/Summaries
+      - key: DROPBOX_DAIRYCOMP_PATH
+        value: /Farm/DairyComp
+      - key: DROPBOX_FEEDLYNC_PATH
+        value: /Farm/FeedLync
+      - key: WHATSAPP_ACCESS_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_ID
+        sync: false
+      - key: WHATSAPP_RECIPIENT
+        sync: false
+      - key: TOMTOM_API_KEY
+        sync: false
+      - key: PULSE_SCHEDULE
+        value: "0 * * * *"
+      - key: DAILY_SCHEDULE
+        value: "0 6 * * *"
+      - key: WEEKLY_SCHEDULE
+        value: "0 6 * * 1"
