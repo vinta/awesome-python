@@ -1,0 +1,19 @@
+{
+  "name": "farm-aggregator",
+  "version": "0.1.0",
+  "description": "Farm data aggregator — pulls AG-Refine + Dropbox, synthesises with Haiku, pushes summaries",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "dropbox": "^10.34.0",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
