@@ -1,0 +1,10 @@
+{
+  "name": "farm-bridge",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "dotenv": "^16.4.5",
+    "dropbox": "^10.34.0"
+  }
+}

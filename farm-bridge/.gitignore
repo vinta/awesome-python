@@ -1,0 +1,2 @@
+.env
+node_modules/
