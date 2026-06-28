@@ -1,14 +1,13 @@
 services:
-  - type: web
-    name: farm-aggregator
+  - type: cron
+    name: farm-pulse
     runtime: node
     rootDir: farm-aggregator
     buildCommand: npm install
-    startCommand: node index.js
-    plan: starter
-    envVars:
-      - key: NODE_ENV
-        value: production
+    startCommand: node scripts/run-pulse.js
+    schedule: "0 * * * *"
+    plan: free
+    envVars: &env
       - key: ANTHROPIC_API_KEY
         sync: false
       - key: AGREFINE_API_URL
@@ -37,9 +36,23 @@ services:
         sync: false
       - key: TOMTOM_API_KEY
         sync: false
-      - key: PULSE_SCHEDULE
-        value: "0 * * * *"
-      - key: DAILY_SCHEDULE
-        value: "0 6 * * *"
-      - key: WEEKLY_SCHEDULE
-        value: "0 6 * * 1"
+
+  - type: cron
+    name: farm-daily-digest
+    runtime: node
+    rootDir: farm-aggregator
+    buildCommand: npm install
+    startCommand: node scripts/run-daily.js
+    schedule: "0 6 * * *"
+    plan: free
+    envVars: *env
+
+  - type: cron
+    name: farm-weekly-summary
+    runtime: node
+    rootDir: farm-aggregator
+    buildCommand: npm install
+    startCommand: node scripts/run-weekly.js
+    schedule: "0 6 * * 1"
+    plan: free
+    envVars: *env
