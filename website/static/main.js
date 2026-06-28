@@ -119,6 +119,9 @@ rows.forEach(function (row, i) {
     next = next.nextElementSibling;
   }
   row._expandRow = next;
+  if (row._descRow) {
+    row.classList.toggle("has-visible-desc", !row._descRow.hidden);
+  }
 });
 
 function collapseAll() {
@@ -165,6 +168,7 @@ function applyFilters() {
       if (row._descRow.hidden !== descHidden) {
         row._descRow.hidden = descHidden;
       }
+      row.classList.toggle("has-visible-desc", !descHidden);
     }
 
     if (show) {

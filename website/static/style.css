@@ -790,7 +790,7 @@ kbd {
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
-.row:has(+ .desc-row:not([hidden])) td {
+.row.has-visible-desc td {
   border-bottom-color: transparent;
   padding-bottom: 0.35rem;
 }
@@ -1000,7 +1000,9 @@ th[data-sort].sort-asc::after {
   text-wrap: pretty;
   overflow-wrap: break-word;
   word-break: break-word;
+  content-visibility: auto;
   contain: layout style paint;
+  contain-intrinsic-size: auto 5rem;
   animation: expand-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
