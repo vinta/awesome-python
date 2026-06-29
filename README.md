@@ -447,6 +447,7 @@ _Databases implemented in Python._
 - [pickledb](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 - [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 - [ZODB](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
+- [zvec](https://github.com/alibaba/zvec) - An embedded vector database for on-device RAG and edge AI, the SQLite of vector databases.
 
 ### Caching
 
