@@ -322,7 +322,7 @@ _Tools for managing, compressing and minifying website assets._
 _Libraries for implementing authentication schemes._
 
 - OAuth
-  - [authlib](https://github.com/authlib/authlib) - JavaScript Object Signing and Encryption draft implementation.
+  - [authlib](https://github.com/authlib/authlib) - A comprehensive library for building OAuth, OpenID Connect, and JWT/JWS/JWE/JWK/JWA.
   - [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
   - [django-oauth-toolkit](https://github.com/django-oauth/django-oauth-toolkit) - OAuth 2 goodies for Django.
   - [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
