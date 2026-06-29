@@ -854,6 +854,7 @@ _Libraries for working with graphical user interface applications._
   - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
   - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
 - Web-based
+  - [buridan/ui](https://github.com/LineIndent/ui) - Composable, themeable components designed for Reflex. Extend, override, and ship without fighting the framework. Open source. 
   - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
   - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
   - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
