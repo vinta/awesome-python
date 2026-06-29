@@ -411,6 +411,7 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
   - [pony](https://github.com/ponyorm/pony/) - ORM that provides a generator-oriented interface to SQL.
   - [sqlmodel](https://github.com/fastapi/sqlmodel) - SQLModel is based on Python type annotations, and powered by Pydantic and SQLAlchemy.
   - [tortoise-orm](https://github.com/tortoise/tortoise-orm) - An easy-to-use asyncio ORM inspired by Django, with relations support.
+  - [yara-orm](https://github.com/vsdudakov/yara-orm) - Fast async ORM with a Rust engine; Tortoise-style models, querysets, relations and migrations for PostgreSQL and SQLite.
 - NoSQL Databases
   - [beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
   - [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
