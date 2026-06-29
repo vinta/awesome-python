@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}Sponsor Awesome Python{% endblock %}
-{% block description %}Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use.{% endblock %}
+{% block description %}{{ sponsorship_description }}{% endblock %}
 {% block canonical_url %}https://awesome-python.com/sponsorship/{% endblock %}
 {% block alternate_links %}{% endblock %}
+{% block extra_head %}
+<script type="application/ld+json">{{ sponsorship_json_ld | safe }}</script>
+{% endblock %}
 {% block header %}
 <header class="category-hero sponsorship-hero">
   <div class="hero-sheen" aria-hidden="true"></div>
@@ -19,6 +22,7 @@
           rel="noopener"
           >Submit a project</a
         >
+        <a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>
       </div>
     </nav>
 
@@ -45,7 +49,7 @@
           >Email sponsorship@awesome-python.com</a
         >
         <a
-          href="https://github.com/vinta/awesome-python"
+          href="https://github.com/vinta/awesome-python/blob/master/SPONSORSHIP.md"
           class="hero-action hero-action-secondary"
           target="_blank"
           rel="noopener"
@@ -71,8 +75,8 @@
         <div>
           <dt>Who visits</dt>
           <dd>
-            Mid to senior Python developers arriving with a specific question:
-            a maintained ORM, a fast HTTP client, a task queue worth running in
+            Mid to senior Python developers arriving with a specific question: a
+            maintained ORM, a fast HTTP client, a task queue worth running in
             production.
           </dd>
         </div>
@@ -123,7 +127,7 @@
             <li>Logo link in the sponsor section of awesome-python.com.</li>
           </ul>
           <a
-            href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship%20-%20Headline"
+            href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship%20-%20Headline%20Tier"
             class="tier-cta"
             >Email about Headline tier</a
           >
@@ -131,7 +135,7 @@
         <li class="tier">
           <p class="tier-eyebrow">Featured Sponsor</p>
           <p class="tier-price">
-            <span class="tier-amount">$150</span>
+            <span class="tier-amount">$200</span>
             <span class="tier-cadence">/ month</span>
           </p>
           <p class="tier-summary">
@@ -146,9 +150,38 @@
             <li>Text link in the sponsor section of awesome-python.com.</li>
           </ul>
           <a
-            href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship%20-%20Featured"
+            href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship%20-%20Featured%20Tier"
             class="tier-cta"
             >Email about Featured tier</a
+          >
+        </li>
+        <li class="tier">
+          <p class="tier-eyebrow">Indie Dev Sponsor</p>
+          <p class="tier-price">
+            <span class="tier-amount">$99</span>
+            <span class="tier-cadence">/ month or $249 / quarter</span>
+          </p>
+          <p class="tier-summary">
+            Lower-cost text link for eligible indie developers and solo
+            founders.
+          </p>
+          <ul class="tier-includes">
+            <li>
+              Text entry (<code>[Name](URL) - Description.</code>, max 120
+              characters) in the README sponsor section, directly below Featured
+              sponsors.
+            </li>
+            <li>Text link in the sponsor section of awesome-python.com.</li>
+            <li>
+              Available only to founder-led, one-person-company products. Funded
+              startups, agencies, recruiters, larger companies, and products
+              with enterprise sales teams should use Featured or Headline.
+            </li>
+          </ul>
+          <a
+            href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship%20-%20Indie%20Dev%20Tier"
+            class="tier-cta"
+            >Email about Indie Dev tier</a
           >
         </li>
       </ol>
@@ -169,6 +202,12 @@
           >
           <span class="past-sponsor-desc"
             >The terminal for modern developers.</span
+          >
+        </li>
+        <li>
+          <a href="https://pyrun.dev" target="_blank" rel="noopener">pyr</a>
+          <span class="past-sponsor-desc"
+            >Zero-config Python project manager.</span
           >
         </li>
       </ul>
@@ -193,13 +232,17 @@
       <dl class="sponsorship-facts">
         <div>
           <dt>Tier</dt>
-          <dd>Headline Sponsor ($500/mo) or Featured Sponsor ($150/mo).</dd>
+          <dd>
+            Headline Sponsor ($500/mo), Featured Sponsor ($200/mo), or Indie Dev
+            Sponsor ($99/mo or $249/quarter).
+          </dd>
         </div>
         <div>
           <dt>Content</dt>
           <dd>
             Product name, URL, logo, and description (Headline tier), or
-            <code>[Name](URL) - Description.</code> entry (Featured tier).
+            <code>[Name](URL) - Description.</code> entry (Featured or Indie Dev
+            tier).
           </dd>
         </div>
         <div>

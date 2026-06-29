@@ -283,6 +283,7 @@ class TestBuild:
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/categories/widgets/"
         assert parser.meta_by_property["og:url"] == "https://awesome-python.com/categories/widgets/"
         assert '<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs text entry point" />' not in category_html
+        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in category_html
         assert "<h1>Widgets</h1>" in category_html
         assert 'Widget libraries. Also see <a href="https://example.com/widgets" target="_blank" rel="noopener">awesome-widgets</a>.' in category_html
         assert 'href="https://example.com/w1"' in category_html
@@ -481,6 +482,7 @@ class TestBuild:
         assert parser.meta_by_name["twitter:description"] == expected_description
         assert parser.meta_by_name["twitter:image"] == expected_image
         assert "<head>\n    <meta charset" in html
+        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
         assert 'id="hero-category-heading">Browse by category</h2>' in html
         assert 'class="hero-category-link" href="/categories/ai-and-agents/"' in html
 
@@ -569,7 +571,7 @@ class TestBuild:
 
         assert data["@context"] == "https://schema.org"
         graph = {node["@type"]: node for node in data["@graph"]}
-        assert set(graph) == {"WebSite", "CollectionPage"}
+        assert set(graph) == {"WebSite", "CollectionPage", "BreadcrumbList"}
         assert graph["WebSite"]["@id"] == "https://awesome-python.com/#website"
         collection = graph["CollectionPage"]
         assert collection["name"] == "Widgets Python Libraries"
@@ -587,6 +589,12 @@ class TestBuild:
         assert urls == {"https://example.com/w1", "https://github.com/owner/w2"}
         positions = sorted(item["position"] for item in item_list["itemListElement"])
         assert positions == [1, 2]
+
+        breadcrumbs = graph["BreadcrumbList"]["itemListElement"]
+        assert breadcrumbs == [
+            {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Widgets", "item": "https://awesome-python.com/categories/widgets/"},
+        ]
 
     def test_group_page_falls_back_to_default_description_in_json_ld(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -685,8 +693,79 @@ class TestBuild:
         assert "<h1>Synchronous</h1>" in sync
         assert "category-breadcrumb" in sync
 
+        parser = HeadMetadataParser()
+        parser.feed(sync)
+        assert parser.title.strip() == "Synchronous for Web Frameworks - Awesome Python"
+        assert parser.meta_by_name["description"] == "Explore 1 curated Python projects in Synchronous for Web Frameworks. Part of the Awesome Python catalog."
+
+        marker = '<script type="application/ld+json">'
+        start = sync.index(marker) + len(marker)
+        end = sync.index("</script>", start)
+        graph = {node["@type"]: node for node in json.loads(sync[start:end])["@graph"]}
+        assert graph["CollectionPage"]["name"] == "Synchronous for Web Frameworks"
+        assert graph["BreadcrumbList"]["itemListElement"] == [
+            {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Web Frameworks",
+                "item": "https://awesome-python.com/categories/web-frameworks/",
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Synchronous",
+                "item": "https://awesome-python.com/categories/web-frameworks/synchronous/",
+            },
+        ]
+
         parent = (site / "categories" / "web-frameworks" / "index.html").read_text(encoding="utf-8")
         assert "category-breadcrumb" not in parent
+
+    def test_sponsorship_page_contains_json_ld(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com/w1) - A widget.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output"
+        html = (site / "sponsorship" / "index.html").read_text(encoding="utf-8")
+        parser = HeadMetadataParser()
+        parser.feed(html)
+
+        assert parser.title.strip() == "Sponsor Awesome Python"
+        assert parser.meta_by_name["description"] == (
+            "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+        )
+        assert parser.links_by_rel["canonical"] == "https://awesome-python.com/sponsorship/"
+        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
+
+        marker = '<script type="application/ld+json">'
+        start = html.index(marker) + len(marker)
+        end = html.index("</script>", start)
+        graph = {node["@type"]: node for node in json.loads(html[start:end])["@graph"]}
+
+        assert set(graph) == {"WebSite", "WebPage", "BreadcrumbList"}
+        assert graph["WebPage"]["@id"] == "https://awesome-python.com/sponsorship/"
+        assert graph["WebPage"]["url"] == "https://awesome-python.com/sponsorship/"
+        assert graph["BreadcrumbList"]["itemListElement"] == [
+            {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Sponsorship", "item": "https://awesome-python.com/sponsorship/"},
+        ]
 
     def test_index_embeds_filter_urls_json(self, tmp_path):
         readme = textwrap.dedent("""\

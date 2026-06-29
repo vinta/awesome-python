@@ -26,29 +26,37 @@ Your sponsorship puts your product in front of developers at the exact moment th
 - Large logo and one-line description (max 120 characters) pinned at the very top of the README, above all project entries
 - Logo link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
-### Featured Sponsor - $150/month
+### Featured Sponsor - $200/month
 
 - Text entry (`[Name](URL) - Description.`, max 120 characters) pinned at the top of the README, directly below Headline sponsors
 - Text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
+
+### Indie Dev Sponsor - $99/month or $249/quarter
+
+- Lower-cost tier for indie developers, solo founders, and one-person companies only
+- Text entry (`[Name](URL) - Description.`, max 120 characters) in the README sponsor section, directly below Featured sponsors
+- Text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
+
+Indie Dev Sponsor is available only to founder-led (one-person company) products. Funded startups, larger companies, and products with enterprise sales teams should use Featured or Headline Sponsor.
+
+## Get Started
+
+Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship) with:
+
+- **Tier:** Headline Sponsor ($500/mo), Featured Sponsor ($200/mo), or Indie Dev Sponsor ($99/mo or $249/quarter)
+- **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured or Indie Dev tier)
+- **Duration:** 1, 3, 6 months, or longer
+- **Payment method:** US bank transfer (ACH/wire) or PayPal
+
+One upfront payment per term. Setup takes less than 24 hours.
 
 ## Previously Sponsored By
 
 - [Warp](https://www.warp.dev/) - The terminal for modern developers.
 - [pyr](https://pyrun.dev) - Zero-config Python project manager.
 
-## Get Started
-
-Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship) with:
-
-- **Tier:** Headline Sponsor ($500/mo) or Featured Sponsor ($150/mo)
-- **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured tier)
-- **Duration:** 1, 3, 6 months, or longer
-- **Payment method:** US bank transfer (ACH/wire) or PayPal
-
-One upfront payment per term. Setup takes less than 24 hours.
-
 ## Editorial Independence
 
-Sponsorship is logo/link placement in the README header. It does not influence which projects are listed. Listings are curated on merit through the normal [contribution process](CONTRIBUTING.md).
+Sponsorship is logo or link placement in the README header. It does not influence which projects are listed. Listings are curated on merit through the normal [contribution process](CONTRIBUTING.md).
 
 We reserve the right to request changes to sponsor text, logos, or links that are misleading, off-topic, or incompatible with the README formatting.
