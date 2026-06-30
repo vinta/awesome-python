@@ -167,6 +167,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
   - [unsloth](https://github.com/unslothai/unsloth) - A library for faster LLM fine-tuning and training with reduced memory usage.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
+- [SuperCompress](https://supercompress.vercel.app) - Learned prompt compression that reduces LLM token costs by ~65% using a ~5K-param CPU policy (~60ms latency), preserving answer quality. Open-source (MIT).
 - Speech
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
@@ -1152,6 +1153,8 @@ _Useful libraries or tools that don't fit in the categories above._
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
+
+- [SuperCompress](https://github.com/arjunkshah/supercompress) - Learned prompt compression for LLMs. Cuts ~65% of tokens before inference. CPU-only policy (~5K params). `pip install supercompress`.
 ## Resources
 
 Where to discover learning resources or new Python libraries.
