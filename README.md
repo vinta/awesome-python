@@ -180,8 +180,8 @@ _Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learni
 
 - [jax](https://github.com/jax-ml/jax) - A library for high-performance numerical computing with automatic differentiation and JIT compilation.
 - [keras](https://github.com/keras-team/keras) - A high-level deep learning library with support for JAX, TensorFlow, and PyTorch backends.
-- [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
 - [pytorch](https://github.com/pytorch/pytorch) - Tensors and Dynamic neural networks in Python with strong GPU acceleration.
+- [pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning) - Deep learning framework to train, deploy, and ship AI products Lightning fast.
 - [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.
 - [tensorflow](https://github.com/tensorflow/tensorflow) - The most popular Deep Learning framework created by Google.
 
@@ -193,7 +193,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [feature_engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - [h2o](https://github.com/h2oai/h2o-3) - Open Source Fast Scalable Machine Learning Platform.
 - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high performance gradient boosting framework.
-- [mindsdb](https://github.com/mindsdb/minds-platform) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
+- [mindsdb](https://github.com/mindsdb/minds) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
 - - [scikit-lego](https://github.com/koaning/scikit-lego) - A collection of lego bricks for scikit-learn pipelines.
@@ -323,7 +323,7 @@ _Tools for managing, compressing and minifying website assets._
 _Libraries for implementing authentication schemes._
 
 - OAuth
-  - [authlib](https://github.com/authlib/authlib) - JavaScript Object Signing and Encryption draft implementation.
+  - [authlib](https://github.com/authlib/authlib) - A comprehensive library for building OAuth, OpenID Connect, and JWT/JWS/JWE/JWK/JWA.
   - [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
   - [django-oauth-toolkit](https://github.com/django-oauth/django-oauth-toolkit) - OAuth 2 goodies for Django.
   - [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
@@ -448,6 +448,7 @@ _Databases implemented in Python._
 - [pickledb](https://github.com/patx/pickledb) - A simple and lightweight key-value store for Python.
 - [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 - [ZODB](https://github.com/zopefoundation/ZODB) - A native object database for Python. A key-value and object graph database.
+- [zvec](https://github.com/alibaba/zvec) - An embedded vector database for on-device RAG and edge AI, the SQLite of vector databases.
 
 ### Caching
 
@@ -481,8 +482,8 @@ _Libraries for serializing complex data types._
 _Libraries for data analysis._
 
 - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
-- [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [data-profiling](https://github.com/Data-Centric-AI-Community/fg-data-profiling) - Generate detailed data profiling reports for pandas DataFrames.
+- [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
 - [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
 - [ibis](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
 - [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
@@ -697,21 +698,21 @@ _Libraries for debugging code._
 _Compile software from source code._
 
 - [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
+- [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
 - [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
 - [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
-- [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 - [scons](https://github.com/SCons/scons) - A software construction tool.
 
 ### Documentation
 
 _Libraries for generating project documentation._
 
-- [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
-  - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 - [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
 - [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
+- [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
+  - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
 
 **DevOps**
 
@@ -855,6 +856,7 @@ _Libraries for working with graphical user interface applications._
   - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
   - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
 - Web-based
+  - [buridan/ui](https://github.com/LineIndent/ui) - Composable, themeable components designed for Reflex. Extend, override, and ship without fighting the framework. Open source. 
   - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
   - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
   - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
@@ -911,7 +913,7 @@ _Libraries for parsing and manipulating specific text formats._
 
 - General
   - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
-  - [kreuzberg](https://github.com/kreuzberg-dev/kreuzberg) - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
+  - [kreuzberg](https://github.com/xberg-io/xberg) - High-performance document extraction library with a Rust core, supporting 62+ formats including PDF, Office, images with OCR, HTML, email, and archives.
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 - MS Office
