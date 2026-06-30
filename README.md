@@ -1153,6 +1153,8 @@ _Useful libraries or tools that don't fit in the categories above._
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
+
+- [SuperCompress](https://github.com/arjunkshah/supercompress) - Learned prompt compression for LLMs. Cuts ~65% of tokens before inference. CPU-only policy (~5K params). `pip install supercompress`.
 ## Resources
 
 Where to discover learning resources or new Python libraries.
