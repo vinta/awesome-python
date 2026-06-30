@@ -456,6 +456,7 @@ _Libraries for caching data._
 - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 - [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
+- [khazad](https://github.com/GuglielmoCerri/khazad) - Transparent semantic cache for LLM API calls, powered by Redis Vector Sets.
 - [python-diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend with faster lookups than memcached and redis.
 
 ### Search
