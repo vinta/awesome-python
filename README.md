@@ -254,6 +254,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
   - [microdot](https://github.com/miguelgrinberg/microdot) - The impossibly small web framework for Python and MicroPython.
   - [reflex](https://github.com/reflex-dev/reflex) - A framework for building reactive, full-stack web applications entirely with Python.
   - [robyn](https://github.com/sparckles/Robyn) - A high-performance async Python web framework with a Rust runtime.
+- [spikard](https://github.com/Goldziher/spikard) - Rust-powered polyglot HTTP framework with type-safe routing, tower middleware, and OpenAPI/GraphQL/JSON-RPC codegen (Python binding over a Rust core).
   - [starlette](https://github.com/Kludex/starlette) - A lightweight ASGI framework and toolkit for building high-performance async services.
   - [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
 
