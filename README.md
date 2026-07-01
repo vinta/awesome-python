@@ -1152,6 +1152,8 @@ _Useful libraries or tools that don't fit in the categories above._
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 - [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
+- [OpenRuna](https://www.openruna.com/best/ai-coding-prompts) — Graph directory of AI coding prompts, Python tools, and automation workflows for developers.
+
 ## Resources
 
 Where to discover learning resources or new Python libraries.
