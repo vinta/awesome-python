@@ -388,6 +388,7 @@ _Libraries to automate web scraping and extract web content._
   - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
   - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
+  - [darkbot-ai-templates](https://github.com/AMEOBIUS/darkbot-ai-templates) - 17 production-ready code templates: Web Scraper (anti-detection), TG Bot, AI Agent, CDP Automation, Captcha Solver, and more.
 
 ### Email
 
