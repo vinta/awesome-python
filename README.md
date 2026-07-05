@@ -146,6 +146,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [bub](https://github.com/bubbuild/bub) - A lightweight, hook-first Python framework for channel-native agents that live alongside people.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
+  - [enlil](https://github.com/conchaestradamiguelangel-droid/enlil) - A self-hosted multi-agent LLM council where 9 AI models deliberate in parallel on every query, producing a post-quantum signed consensus output (ML-DSA-87, NIST FIPS 204). BYOK, GPL-3.0.
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
