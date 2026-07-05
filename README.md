@@ -893,6 +893,7 @@ _Libraries for parsing and manipulating plain texts._
   - [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
   - [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
   - [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
+  - [tree-sitter-language-pack](https://github.com/xberg-io/tree-sitter-language-pack) - A comprehensive collection of tree-sitter parsers for 300+ languages, distributed as prebuilt wheels.
 
 ### HTML Manipulation
 
