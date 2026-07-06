@@ -173,6 +173,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
   - [voxcpm](https://github.com/OpenBMB/VoxCPM) - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.
+  - [issuebeam](https://github.com/issuebeam/issuebeam) - Gives AI coding agents (Cursor, Claude Code, Copilot) the skill to create and manage GitHub Issues directly.
+
 
 ### Deep Learning
 
