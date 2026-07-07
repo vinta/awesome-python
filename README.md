@@ -163,6 +163,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Pre-trained Models and Inference
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
   - [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
+  - [liter-llm](https://github.com/xberg-io/liter-llm) - A universal LLM API client with a Rust core, calling 142+ providers through a single OpenAI-compatible interface, with a built-in proxy and MCP server.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
