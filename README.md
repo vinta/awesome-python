@@ -843,6 +843,12 @@ _Useful CLI-based tools for productivity._
   - [mycli](https://github.com/dbcli/mycli) - MySQL CLI with autocompletion and syntax highlighting.
   - [pgcli](https://github.com/dbcli/pgcli) - PostgreSQL CLI with autocompletion and syntax highlighting.
 
+- Python Dev Tooling
+  - [kryptorious-depguard](https://github.com/CodeGero/kryptorious-depguard) - Cross-ecosystem dependency auditor: detects undeclared imports, unused deps, unpinned specifiers, and lockfile drift.
+  - [kryptorious-apiguard](https://github.com/CodeGero/apiguard) - OpenAPI breaking-change detector that flags removed endpoints and type changes before they ship.
+  - [kryptorious-gitsweep](https://github.com/CodeGero/kryptorious-gitsweep) - Git repository hygiene: prunes stale branches and surfaces forgotten worktrees.
+  - [kryptorious-csvclean](https://github.com/CodeGero/kryptorious-csvclean) - Validates and normalizes CSV/TSV files from the command line.
+
 ### GUI Development
 
 _Libraries for working with graphical user interface applications._
