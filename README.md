@@ -387,6 +387,7 @@ _Libraries to automate web scraping and extract web content._
   - [crawlberg](https://github.com/xberg-io/crawlberg) - A high-performance web crawling engine with a Rust core, headless-browser fallback, and built-in robots.txt and sitemap parsing.
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
+  - [website-downloader](https://github.com/PKHarsimran/website-downloader) - A modern wget --mirror / HTTrack alternative that saves entire websites as browsable offline copies, with JavaScript rendering, incremental updates, and zip/WARC export.
 - Content Extraction
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
