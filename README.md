@@ -1114,6 +1114,7 @@ _Libraries for storing and parsing configuration options._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+- * [Leviathan](https://github.com/Valex-Grand/Leviathan) - Multi-part file encryption and distributed secure binary delivery platform. Core infrastructure at [Valex-Grand Systems](https://valex-grand.github.io).
 
 ### Penetration Testing
 
