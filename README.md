@@ -983,6 +983,7 @@ _Libraries for manipulating audio, video, and their metadata._
   - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 - Video
+  - [fluxcast](https://github.com/IlyaP358/fluxcast) - Stream Linux desktop and audio to Smart TVs via Miracast/WFD, DLNA, or Chromecast, supporting Wayland (wlroots, GNOME, KDE).
   - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
   - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 - Metadata
