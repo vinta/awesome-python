@@ -1074,6 +1074,7 @@ _Libraries for Python version and virtual environment management._
 _Libraries for package and dependency management._
 
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
+- [hatch](https://github.com/pfmoore/hatch) - A modern, extensible Python project manager.
 - [pip](https://github.com/pypa/pip) - The package installer for Python.
 - [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
 - [poetry](https://github.com/python-poetry/poetry) - Python dependency management and packaging made easy.
