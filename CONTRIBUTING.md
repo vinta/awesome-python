@@ -107,4 +107,4 @@ PRs will be **closed** if:
 - Project is archived or abandoned (no commits in 12+ months)
 - No documentation or unclear use case
 - Less than 100 GitHub stars without Hidden Gem justification
-- Repository less than 1 months old
+- Repository less than 1 month old
