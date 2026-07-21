@@ -697,6 +697,7 @@ _Libraries for debugging code._
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
 - Others
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
+  - [django-orm-lens](https://github.com/FROWNINGdev/django-orm-lens) - Live sidebar and Mermaid ER diagram for your Django models plus a CLI and MCP server for AI agents. Static AST analysis — no DB, no Django boot.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [memory_graph](https://github.com/bterwijn/memory_graph) - Visualize Python data at runtime to debug references, mutability, and aliasing.
