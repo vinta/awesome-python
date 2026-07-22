@@ -158,6 +158,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [entroly](https://github.com/juyterman1000/entroly) - An auditable context control plane that optimizes prompt context, stabilizes cache prefixes, and verifies answers locally with WITNESS.
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+  - [lumen](https://github.com/holoviz/lumen) - An agent framework for conversational analysis of SQL, dataframe and multidimensional array data.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
   - [outlines](https://github.com/dottxt-ai/outlines) - Structured text generation for LLMs with JSON schema, regex, and grammar-constrained decoding.
 - Pre-trained Models and Inference
