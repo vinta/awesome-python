@@ -1055,6 +1055,7 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
 - [trio](https://github.com/python-trio/trio) - A friendly library for async concurrency and I/O.
 - [twisted](https://github.com/twisted/twisted) - An event-driven networking engine.
 - [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
+- [lucen](https://github.com/fcmv/lucen) - Parallelize marked for-loops with just two comments, with results guaranteed bit-identical to sequential Python.
 
 ### Date and Time
 
