@@ -1,3 +1,4 @@
+- [RAGeval](https://github.com/Yacine-ai-tech/RAGeval) - A multi-judge RAG evaluation framework for testing retrieval pipelines.
 # [Awesome Python](https://awesome-python.com/)
 
 An opinionated guide to the best Python frameworks, libraries, tools, and resources.
