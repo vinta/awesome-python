@@ -328,7 +328,7 @@ _Libraries for implementing authentication schemes._
 
 - OAuth
   - [authlib](https://github.com/authlib/authlib) - A comprehensive library for building OAuth, OpenID Connect, and JWT/JWS/JWE/JWK/JWA.
-  - [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
+  - [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that \"just works.\"
   - [django-oauth-toolkit](https://github.com/django-oauth/django-oauth-toolkit) - OAuth 2 goodies for Django.
   - [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
 - JWT
@@ -701,6 +701,7 @@ _Libraries for debugging code._
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [memory_graph](https://github.com/bterwijn/memory_graph) - Visualize Python data at runtime to debug references, mutability, and aliasing.
+  - [safedump](https://github.com/Muneer320/safedump) - Local-first crash diagnostics for Python. Capture full debugging context, redact secrets, and inspect crashes offline.
 
 ### Build Tools
 
@@ -946,7 +947,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
 - Markdown
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
-  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber's Markdown.
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
