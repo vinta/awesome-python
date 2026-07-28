@@ -382,7 +382,7 @@ _Libraries for working with HTTP._
 _Libraries to automate web scraping and extract web content._
 
 - Frameworks
-  - [alterlab](https://github.com/RapierCraft/AlterLab-SDK) - Web scraping SDK with automatic anti-bot bypass, JavaScript rendering, and structured data extraction.
+  - [alterlab](https://github.com/RapierCraft/AlterLab-SDK) - Web scraping SDK with automatic website compatibility, JavaScript rendering, and structured data extraction.
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
   - [crawlberg](https://github.com/xberg-io/crawlberg) - A high-performance web crawling engine with a Rust core, headless-browser fallback, and built-in robots.txt and sitemap parsing.
