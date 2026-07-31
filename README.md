@@ -1125,6 +1125,7 @@ _Libraries for storing and parsing configuration options._
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 
+* [Dark-Moon](https://github.com/ASCIT31/Dark-Moon) - Autonomous AI penetration-testing platform written in Python; self-hosted, multi-agent, with an MCP server and per-finding evidence trail.
 ### Penetration Testing
 
 _Frameworks and tools for penetration testing._
