@@ -625,6 +625,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 
 - Code Analysis
   - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+  - [DepTend](https://github.com/SpIob/DepTend) - Scans a repo's PyPI dependencies against the OSV database and ranks what to fix first, with the full scoring breakdown shown for every result.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
