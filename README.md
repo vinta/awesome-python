@@ -82,8 +82,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 - [CLI Development](#cli-development)
 - [CLI Tools](#cli-tools)
 - [GUI Development](#gui-development)
-
-**Text & Documents**
+- [Spotify-Toolkit](https://github.com/DarksAces/Spotify-Toolkit)
 
 - [Text Processing](#text-processing)
 - [HTML Manipulation](#html-manipulation)
