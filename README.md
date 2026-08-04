@@ -641,6 +641,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 - Refactoring
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
+  - [basilisk-python](https://github.com/Nimblesite/Basilisk) - A strict-by-default type checker and language server, the only checker passing every test in the official typing conformance suite.
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
   - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
