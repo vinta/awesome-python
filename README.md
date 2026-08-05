@@ -644,6 +644,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
   - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
+  - [pyright](https://github.com/microsoft/pyright) - Microsoft's static type checker for Python, used by Pylance in VS Code.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
 - Type Annotations Generators
@@ -722,6 +723,7 @@ _Libraries for generating project documentation._
 
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 - [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
+- [mkdocs-material](https://github.com/squidfunk/mkdocs-material) - The most popular theme for MkDocs, used by FastAPI, Pydantic, and many others.
 - [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 - [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
   - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
