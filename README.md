@@ -15,6 +15,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 - [AI and Agents](#ai-and-agents)
 - [Deep Learning](#deep-learning)
 - [Machine Learning](#machine-learning)
+- [ragleap-rag](https://github.com/antonyrag/ragleap-core) - CPU-only RAG (Retrieval-     Augmented Generation) library with pluggable vector backends and embedding providers.
 - [Natural Language Processing](#natural-language-processing)
 - [Computer Vision](#computer-vision)
 - [Recommender Systems](#recommender-systems)
