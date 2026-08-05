@@ -1191,6 +1191,7 @@ Where to discover learning resources or new Python libraries.
 
 ### Websites
 
+- [CheatGrid Python Cheat Sheet](https://www.cheatgrid.com/programming-languages/0004-python-cheat-sheet) - Free single-page Python reference covering data types, comprehensions, decorators, context managers, asyncio, type hints, and the standard library, with a spaced-repetition flashcard deck and practice questions for the same topic.
 - [Python Developer Tooling Handbook](https://pydevtools.com/) - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
 
 ## Contributing
