@@ -722,6 +722,7 @@ _Libraries for generating project documentation._
 
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 - [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
+- [mkdocs-material](https://github.com/squidfunk/mkdocs-material) - The most popular theme for MkDocs, used by FastAPI, Pydantic, and many others.
 - [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 - [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
   - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
