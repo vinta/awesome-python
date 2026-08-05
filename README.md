@@ -156,6 +156,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
   - [smolagents](https://github.com/huggingface/smolagents) - A lightweight library to build agents and multi-agent workflows with minimal code.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
+  - [trae-agent](https://github.com/bytedance/trae-agent) - A research-friendly coding agent with multi-LLM support, extensible tools, and detailed execution trajectories for analysing and improving agent behaviour.
 - Data Layer
   - [entroly](https://github.com/juyterman1000/entroly) - An auditable context control plane that optimizes prompt context, stabilizes cache prefixes, and verifies answers locally with WITNESS.
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
