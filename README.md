@@ -709,6 +709,7 @@ _Libraries for debugging code._
 
 _Compile software from source code._
 
+- [bakefile](https://github.com/wislertt/bakefile) - An OOP task runner in Python. It works like a Makefile, but tasks are Python class methods, so you can inherit and reuse them across projects.
 - [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
 - [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
