@@ -149,27 +149,33 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive AI agent framework that grows with you.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
+  - [livetalking](https://github.com/lipku/livetalking) - A framework for real time interactive streaming digital human.
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
   - [OpenChronicle](https://github.com/Einsia/OpenChronicle) - Open-source, local-first memory for any tool-capable LLM agent.
   - [promptise](https://github.com/promptise-com/foundry) - A framework for building end-to-end production-ready agentic systems, scalable & secure MCP's and autonomous agents.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
+  - [smolagents](https://github.com/huggingface/smolagents) - A lightweight library to build agents and multi-agent workflows with minimal code.
   - [TradingAgents](https://github.com/TauricResearch/TradingAgents) - A multi-agents LLM financial trading framework.
 - Data Layer
+  - [entroly](https://github.com/juyterman1000/entroly) - An auditable context control plane that optimizes prompt context, stabilizes cache prefixes, and verifies answers locally with WITNESS.
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+  - [lumen](https://github.com/holoviz/lumen) - An agent framework for conversational analysis of SQL, dataframe and multidimensional array data.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
   - [outlines](https://github.com/dottxt-ai/outlines) - Structured text generation for LLMs with JSON schema, regex, and grammar-constrained decoding.
 - Pre-trained Models and Inference
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
   - [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
+  - [liter-llm](https://github.com/xberg-io/liter-llm) - A universal LLM API client with a Rust core, calling 142+ providers through a single OpenAI-compatible interface, with a built-in proxy and MCP server.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
   - [unsloth](https://github.com/unslothai/unsloth) - A library for faster LLM fine-tuning and training with reduced memory usage.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
 - Speech
-  - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
+  - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
+  - [SenseVoice](https://github.com/FunAudioLLM/SenseVoice) - A multilingual speech understanding model for speech recognition, language identification, emotion recognition, and audio event detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
   - [voxcpm](https://github.com/OpenBMB/VoxCPM) - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.
 
@@ -195,7 +201,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 - [mindsdb](https://github.com/mindsdb/minds) - MindsDB is an open source AI layer for existing databases that allows you to effortlessly develop, train and deploy state-of-the-art machine learning models using standard queries.
 - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for probabilistic graphical models and Bayesian networks.
 - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
-- - [scikit-lego](https://github.com/koaning/scikit-lego) - A collection of lego bricks for scikit-learn pipelines.
+- [scikit-lego](https://github.com/koaning/scikit-lego) - A collection of lego bricks for scikit-learn pipelines.
 - [spark.ml](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/)'s scalable [Machine Learning library](https://spark.apache.org/docs/latest/ml-guide.html) for distributed computing.
 - [TabGAN](https://github.com/Diyago/Tabular-data-generation) - Synthetic tabular data generation using GANs, Diffusion Models, and LLMs.
 - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting.
@@ -219,6 +225,7 @@ _Libraries for working with human languages._
 _Libraries for Computer Vision._
 
 - [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
+- [fiftyone](https://github.com/voxel51/fiftyone) - The open-source tool for building high-quality datasets and computer vision models.
 - [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
 - [opencv](https://github.com/opencv/opencv-python) - Open Source Computer Vision Library.
 - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
@@ -381,8 +388,10 @@ _Libraries to automate web scraping and extract web content._
 - Frameworks
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
+  - [crawlberg](https://github.com/xberg-io/crawlberg) - A high-performance web crawling engine with a Rust core, headless-browser fallback, and built-in robots.txt and sitemap parsing.
   - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
+  - [website-downloader](https://github.com/PKHarsimran/website-downloader) - A modern wget --mirror / HTTrack alternative that turns whole websites into browsable offline copies.
 - Content Extraction
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
@@ -473,6 +482,7 @@ _Libraries for serializing complex data types._
 
 - [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
 - [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
+- [msgspec](https://github.com/msgspec/msgspec) - A fast serialization and validation library with built-in support for JSON, MessagePack, YAML, and TOML.
 - [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
 
 **Data & Science**
@@ -489,6 +499,9 @@ _Libraries for data analysis._
 - [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
+
+- [percentify](https://github.com/data-centt/percentify) - Exploratory stats and data-quality diagnostics/profiler, that supports both pandas and Polars DataFrames inputs.
+
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
 
 ### Data Ingestion / ETL
@@ -828,6 +841,7 @@ _Useful CLI-based tools for productivity._
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
+  - [kaydet](https://github.com/miratcan/kaydet) - Queryable personal database and terminal diary with SQLite search, tags, metadata, and AI integration via MCP.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
@@ -852,6 +866,7 @@ _Libraries for working with graphical user interface applications._
   - [pygobject](https://github.com/GNOME/pygobject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
   - [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
   - [pyside](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
+  - [tkdesigner](https://github.com/ParthJadhav/Tkinter-Designer) - Generates Tkinter interfaces from Figma designs using the Figma API.
   - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
   - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
   - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
@@ -894,12 +909,14 @@ _Libraries for parsing and manipulating plain texts._
   - [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
   - [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
   - [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
+  - [tree-sitter-language-pack](https://github.com/xberg-io/tree-sitter-language-pack) - A comprehensive collection of tree-sitter parsers for 300+ languages, distributed as prebuilt wheels.
 
 ### HTML Manipulation
 
 _Libraries for working with HTML and XML._
 
 - [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
+- [html-to-markdown](https://github.com/xberg-io/html-to-markdown) - A fast, CommonMark-compliant HTML to Markdown converter with a Rust core, tolerant of malformed HTML.
 - [justhtml](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works.
 - [lxml](https://github.com/lxml/lxml) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
@@ -1069,6 +1086,7 @@ _Libraries for Python version and virtual environment management._
 _Libraries for package and dependency management._
 
 - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
+- [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project manager for environments, builds, and publishing.
 - [pip](https://github.com/pypa/pip) - The package installer for Python.
 - [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
 - [poetry](https://github.com/python-poetry/poetry) - Python dependency management and packaging made easy.
