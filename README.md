@@ -841,7 +841,7 @@ _Useful CLI-based tools for productivity._
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering projects templates.
   - [doitlive](https://github.com/sloria/doitlive) - A tool for live presentations in the terminal.
   - [kaydet](https://github.com/miratcan/kaydet) - Queryable personal database and terminal diary with SQLite search, tags, metadata, and AI integration via MCP.
-  - [pyrig](https://github.com/Winipedia/pyrig) - Scaffolds and rigs up a complete, fully configured Python project in one command, then keeps it in sync as pyrig evolves.
+  - [pyrig](https://github.com/Winipedia/pyrig) - A tool that standardizes and automates Python project setup, configuration, development, and maintenance.
   - [thefuck](https://github.com/nvbn/thefuck) - Correcting your previous console command.
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
   - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
