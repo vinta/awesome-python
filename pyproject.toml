@@ -1,0 +1,52 @@
+[project]
+name = "awesome-python"
+version = "0.1.0"
+description = "An opinionated list of awesome Python frameworks, libraries, software and resources."
+authors = [{ name = "Vinta Chen", email = "vinta.chen@gmail.com" }]
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.13"
+dependencies = []
+
+[project.urls]
+Homepage = "https://awesome-python.com/"
+Repository = "https://github.com/vinta/awesome-python"
+
+[dependency-groups]
+build = ["httpx==0.28.1", "jinja2==3.1.6", "markdown-it-py==4.0.0"]
+lint = ["ruff==0.15.6", "ty==0.0.33"]
+test = ["pytest==9.0.3"]
+dev = [
+    { include-group = "build" },
+    { include-group = "lint" },
+    { include-group = "test" },
+    "watchdog==6.0.0",
+]
+
+[tool.uv]
+exclude-newer = "3 days"
+no-build = true
+
+[tool.uv.pip]
+only-binary = [":all:"]
+
+[tool.ruff]
+line-length = 200
+
+[tool.ty.environment]
+python-version = "3.13"
+root = ["website"]
+
+[tool.ty.terminal]
+error-on-warning = true
+
+[tool.ty.rules]
+division-by-zero = "error"
+possibly-missing-attribute = "error"
+possibly-missing-import = "error"
+possibly-unresolved-reference = "error"
+unused-ignore-comment = "error"
+
+[tool.pytest.ini_options]
+testpaths = ["website/tests"]
+pythonpath = ["website"]

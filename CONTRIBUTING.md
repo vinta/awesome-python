@@ -1,20 +1,110 @@
 # Contributing
 
-Your contributions are always welcome!
+## Quality Requirements
 
-## Guidelines
+All submissions must satisfy **ALL** of these:
 
-* Add one link per Pull Request.
-    * Make sure the PR title is in the format of `Add project-name`.
-    * Write down the reason why the library is awesome.
-* Add the link: `* [project-name](http://example.com/) - A short description ends with a period.`
-    * Keep descriptions concise and **short**.
-* Add a section if needed.
-    * Add the section description.
-    * Add the section title to Table of Contents.
-* Search previous Pull Requests or Issues before making a new one, as yours may be a duplicate.
-* Don't mention `Python` in the description as it's implied.
-* Check your spelling and grammar.
-* Remove any trailing whitespace.
+1. **Python-first**: Primarily written in Python (>50% of codebase)
+2. **Active**: Commits within the last 12 months
+3. **Stable**: Production-ready, not alpha/beta/experimental
+4. **Documented**: Clear README with examples and use cases
+5. **Unique**: Adds distinct value, not "yet another X"
+6. **Established**: Repository at least 1 month old
 
-Just a gentle reminder: **Try not to submit your own project. Instead, wait for someone finds it useful and submits it for you.**
+## Acceptance Criteria
+
+Your submission must meet **ONE** of the following criteria:
+
+### 1. Industry Standard
+
+- The go-to tool that almost everyone uses for a specific use case
+- Examples: requests, flask, pandas, numpy
+- Limit: 1-3 tools per category
+
+### 2. Rising Star
+
+- Rapid growth: 5,000+ GitHub stars in less than 1 year
+- Significant community buzz and adoption
+- Solving problems in new or better ways
+- Examples: fastapi, ruff, uv
+
+### 3. Hidden Gem
+
+- Exceptional quality despite fewer stars (100-500 stars preferred; < 100 requires strong justification)
+- Solves niche problems elegantly
+- Strong recommendation from experienced developers
+- **Must demonstrate real-world usage** (not a project published last week)
+- Repository must be at least 3 months old with consistent activity
+- Must include compelling justification in PR description
+
+## Entry Format Reference
+
+**Use GitHub repository URLs** whenever possible. Projects linked to a GitHub repo are ranked higher on [awesome-python.com](https://awesome-python.com/).
+
+### Naming Convention
+
+Use the **PyPI package name** as the display name so developers can copy it directly to `pip install`. Check the canonical name at `https://pypi.org/pypi/{package}/json`. If the project is not on PyPI, use the GitHub repository name instead.
+
+### Standard Entry
+
+```markdown
+- [pypi-name](https://github.com/owner/repo) - Description ending with period.
+```
+
+### Standard Library Module
+
+```markdown
+- [module](https://docs.python.org/3/library/module.html) - (Python standard library) Description.
+```
+
+### Fork of Another Project
+
+```markdown
+- [new-name](https://github.com/owner/new-name) - Description ([original-name](original-url) fork).
+```
+
+### Entry with Related Awesome List
+
+```markdown
+- [project](https://github.com/owner/project) - Description.
+  - [awesome-project](https://github.com/someone/awesome-project)
+```
+
+### Subcategory Format
+
+```markdown
+- Subcategory Name
+  - [project](url) - Description.
+```
+
+## Adding a New Section
+
+1. Add section description in italics: `*Libraries for doing X.*`
+2. Add the section under the appropriate thematic group (e.g., **AI & ML**, **Web**, **Data & Science**)
+3. Add the section title to the Table of Contents under its group
+4. Keep entries in alphabetical order within each category
+
+## Review Process
+
+PRs are reviewed by automated tools and maintainers:
+
+1. **Format Check**: Entry follows the correct format
+2. **Category Check**: Placed in the appropriate category/subcategory
+3. **Duplicate Check**: Not already listed or previously rejected
+4. **Activity Check**: Project shows recent activity
+5. **Quality Check**: Meets acceptance criteria
+
+Search previous Pull Requests and Issues before submitting, as yours may be a duplicate.
+
+## Automatic Rejection
+
+PRs will be **closed** if:
+
+- Adding multiple projects in one PR
+- Duplicate of existing entry or recently-closed PR
+- Empty or placeholder PR descriptions
+- Placed under an inappropriate category
+- Project is archived or abandoned (no commits in 12+ months)
+- No documentation or unclear use case
+- Less than 100 GitHub stars without Hidden Gem justification
+- Repository less than 1 months old

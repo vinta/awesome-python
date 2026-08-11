@@ -1,0 +1,17 @@
+# Awesome Python
+
+Awesome Python is an opinionated catalog of {{ total_entries }} Python frameworks, libraries, tools, and resources across {{ total_categories }} {% if total_categories == 1 %}category{% else %}categories{% endif %}.
+
+Scan the category index, then jump to the matching section for direct project links and short descriptions. GitHub entries with known star data end with a `GitHub stars: N` note in parentheses; treat it as popularity context, not a quality guarantee. Use the homepage for project context outside the catalog.
+
+## Primary Links
+
+- Homepage: {{ site_url }}
+- GitHub repository: {{ github_repo_url }}
+- Contributing guide: {{ contributing_url }}
+- Sponsorship: {{ sponsorship_url }}
+- Sitemap: {{ sitemap_url }}
+
+## Categories
+
+{{ categories_md }}

@@ -1,0 +1,83 @@
+name: Deploy Website
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.repository == 'vinta/awesome-python'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: https://awesome-python.com/
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --group build --locked
+
+      - name: Run tests
+        if: github.event_name == 'schedule'
+        run: make test
+
+      - name: Get date
+        id: date
+        run: echo "today=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Restore star data cache
+        id: cache-stars
+        uses: actions/cache/restore@v4
+        with:
+          path: website/data/github_stars.json
+          key: github-stars-${{ steps.date.outputs.today }}
+          restore-keys: github-stars-
+
+      - name: Fetch GitHub stars
+        id: fetch-stars
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: make fetch_github_stars
+
+      - name: Save star data cache
+        if: steps.fetch-stars.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: website/data/github_stars.json
+          key: github-stars-${{ steps.date.outputs.today }}
+
+      - name: Verify star data exists
+        run: |
+          if [ ! -f website/data/github_stars.json ]; then
+            echo "::error::github_stars.json not found. No cache and fetch failed or was skipped."
+            exit 1
+          fi
+          python -m json.tool website/data/github_stars.json > /dev/null
+
+      - name: Build website
+        run: make build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: website/output/
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
