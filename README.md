@@ -178,6 +178,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [SenseVoice](https://github.com/FunAudioLLM/SenseVoice) - A multilingual speech understanding model for speech recognition, language identification, emotion recognition, and audio event detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
   - [voxcpm](https://github.com/OpenBMB/VoxCPM) - A tokenizer-free text-to-speech foundation model for multilingual speech generation and voice cloning.
+  - [voicute](https://github.com/voicute/onnx-wakeword) - Offline keyword spotting and wake word detection with ONNX Runtime, multi-keyword support, and 5-layer anti-false-trigger filtering.
 
 ### Deep Learning
 
