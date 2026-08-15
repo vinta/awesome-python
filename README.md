@@ -299,20 +299,20 @@ _Libraries and tools for templating and lexing._
 
 ### Web Asset Management
 
-_Tools for managing, compressing and minifying website assets._
+_Tools for managing, storing, compressing and minifying website assets._
 
-- [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline JavaScript or CSS into a single cached file.
 - [django-storages](https://github.com/jschneier/django-storages) - A collection of custom storage back ends for Django.
+- [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline JavaScript or CSS into a single cached file.
 
 ### Authentication
 
 _Libraries for implementing authentication schemes._
 
 - OAuth
+  - [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
   - [authlib](https://github.com/authlib/authlib) - A comprehensive library for building OAuth, OpenID Connect, and JWT/JWS/JWE/JWK/JWA.
   - [django-allauth](https://github.com/pennersr/django-allauth) - Authentication app for Django that "just works."
   - [django-oauth-toolkit](https://github.com/django-oauth/django-oauth-toolkit) - OAuth 2 goodies for Django.
-  - [oauthlib](https://github.com/oauthlib/oauthlib) - A generic and thorough implementation of the OAuth request-signing logic.
 - JWT
   - [pyjwt](https://github.com/jpadilla/pyjwt) - JSON Web Token implementation in Python.
 - Permissions
