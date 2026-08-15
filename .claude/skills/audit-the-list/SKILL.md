@@ -1,7 +1,7 @@
 ---
 name: audit-the-list
 description: Audit README.md sections against the shortlist rules — re-verify every entry's verdict with live data, promote or demote challengers, restructure oversized use cases, prune, and evaluate proposed additions. Fire when the maintainer asks to audit, sweep, prune, re-check, or maintain sections, or asks whether an entry (or a proposed one) deserves its slot.
-argument-hint: [all sections or specific sections]
+argument-hint: [all or specific groups or sections]
 ---
 
 # Audit the list
@@ -10,7 +10,7 @@ An Audit re-runs the admission test over live sections of README.md: every entry
 
 ## 1. Scope
 
-Resolve the scope from the arguments. Named sections mean exactly those, whether or not they were audited before (a re-run is how a past verdict gets rechecked). `all` is ambiguous — AskUserQuestion whether it means every section or only never-audited ones; prior audits are recorded in git history (`git log --oneline --grep="sweep\|audit"`). With no arguments, AskUserQuestion listing the never-audited Thematic Groups. Batch the work one Thematic Group per sitting. Done when the section list is settled.
+Resolve the scope from the arguments. Named sections mean exactly those, whether or not they were audited before (a re-run is how a past verdict gets rechecked). `all` is ambiguous — `AskUserQuestion` whether it means every section or only never-audited ones; prior audits are recorded in git history (`git log --oneline --grep="sweep\|audit"`). With no arguments, AskUserQuestion listing the never-audited Thematic Groups. Batch the work one Thematic Group per sitting. Done when the section list is settled.
 
 ## 2. Evidence
 
@@ -28,7 +28,7 @@ Draft a verdict and reason for every entry, restructure before cap: decide Split
 
 ## 4. Review and go
 
-Run the preview-verdicts skill: it generates the interactive review page and defines how the maintainer's feedback JSON comes back and gets processed. Their verdicts are final. Before touching README.md, surface what the feedback implies but does not decide — cap overflows, homeless entries after a Split, tier for a tierless flip — as named assumptions or questions, then get an explicit go.
+Run the `preview-verdicts` skill: it generates the interactive review page and defines how the maintainer's feedback JSON comes back and gets processed. Their verdicts are final. Before touching README.md, surface what the feedback implies but does not decide — cap overflows, homeless entries after a Split, tier for a tierless flip — as named assumptions or questions, then get an explicit go.
 
 ## 5. Execute
 
