@@ -141,6 +141,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
 - Vendor Agent SDKs
+  - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
 - Personal Assistants
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
