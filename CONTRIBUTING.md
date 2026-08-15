@@ -73,7 +73,7 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 
 ### Entry Ordering
 
-Within a use case, the obvious choices are listed first, alphabetically; challengers follow, alphabetically. There is no marker in the entry text — position is the marker, so the last entries of a use case may be its challengers.
+Within a use case, the obvious choices are listed first, ordered by PyPI downloads per month from high to low; challengers follow, in the same order. Entries without a download signal (standard-library modules, agent skill packs) sort last within their tier, alphabetically. There is no marker in the entry text — position is the marker, so the last entries of a use case may be its challengers.
 
 ## Changing the Structure
 

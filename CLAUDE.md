@@ -24,7 +24,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources. Publi
 
 ## Key Rules
 
-- Ordering within a use case: obvious choices first (alphabetically), then challengers (alphabetically). See CONTRIBUTING.md.
+- Ordering within a use case: obvious choices first, then challengers, each tier by PyPI downloads/month descending; no-signal entries last in tier, alphabetically. See CONTRIBUTING.md.
 - A shortlist, not a catalog: per use case, up to 3 obvious choices plus up to 2 challengers, hard maximum 5.
 - One project per PR.
 - One entry per commit when adding or deleting entries. Exception: a prune sweep is one commit per section, its body listing each removal with its reason. Format, wording, or categorization changes across multiple entries may be bundled in a single commit.
