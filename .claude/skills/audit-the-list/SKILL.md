@@ -1,7 +1,7 @@
 ---
 name: audit-the-list
 description: Audit README.md sections against the shortlist rules — re-verify every entry's verdict with live data, promote or demote challengers, restructure oversized use cases, prune, and evaluate proposed additions. Fire when the maintainer asks to audit, sweep, prune, re-check, or maintain sections, or asks whether an entry (or a proposed one) deserves its slot.
-argument-hint: [all or specific groups or sections]
+argument-hint: [all or specific sections]
 ---
 
 # Audit the list
