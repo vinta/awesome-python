@@ -480,18 +480,10 @@ _Libraries for serializing complex data types._
 
 _Libraries for data analysis._
 
-- [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas) - Pandas on AWS.
-- [data-profiling](https://github.com/Data-Centric-AI-Community/fg-data-profiling) - Generate detailed data profiling reports for pandas DataFrames.
-- [datasette](https://github.com/simonw/datasette) - An open source multi-tool for exploring and publishing data.
-- [desbordante](https://github.com/desbordante/desbordante-core/) - An open source data profiler for complex pattern discovery.
-- [ibis](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
-- [modin](https://github.com/modin-project/modin) - A drop-in pandas replacement that scales workflows by changing a single line of code.
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
-- [pathway](https://github.com/pathwaycom/pathway) - Real-time data processing framework for Python with reactive dataflows.
-
-- [percentify](https://github.com/data-centt/percentify) - Exploratory stats and data-quality diagnostics/profiler, that supports both pandas and Polars DataFrames inputs.
-
+  - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas)
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
+- [ibis-framework](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
 
 ### Data Ingestion / ETL
 
