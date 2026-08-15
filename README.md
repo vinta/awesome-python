@@ -253,7 +253,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 
 ### Web APIs
 
-_Libraries for building RESTful and GraphQL APIs._
+_Libraries for building RESTful, GraphQL, and RPC APIs._
 
 - Django
   - [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
@@ -266,23 +266,20 @@ _Libraries for building RESTful and GraphQL APIs._
   - [fastapi](https://github.com/fastapi/fastapi) - A modern, fast, web framework for building APIs with standard Python type hints.
   - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [strawberry](https://github.com/strawberry-graphql/strawberry) - A GraphQL library that leverages Python type annotations for schema definition.
+- RPC
+  - [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
 
 ### Web Servers
 
 _ASGI and WSGI compatible web servers._
 
 - ASGI
-  - [daphne](https://github.com/django/daphne) - An HTTP, HTTP/2 and WebSocket protocol server for ASGI and ASGI-HTTP.
+  - [uvicorn](https://github.com/Kludex/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
   - [granian](https://github.com/emmett-framework/granian) - A Rust HTTP server for Python applications built on top of Hyper and Tokio, supporting WSGI/ASGI/RSGI.
   - [hypercorn](https://github.com/pgjones/hypercorn) - An ASGI and WSGI Server based on Hyper libraries and inspired by Gunicorn.
-  - [uvicorn](https://github.com/Kludex/uvicorn) - A lightning-fast ASGI server implementation, using uvloop and httptools.
 - WSGI
   - [gunicorn](https://github.com/benoitc/gunicorn) - Pre-forked, ported from Ruby's Unicorn project.
-  - [uwsgi](https://github.com/unbit/uwsgi) - A project aims at developing a full stack for building hosting services, written in C.
   - [waitress](https://github.com/Pylons/waitress) - Multi-threaded, powers Pyramid.
-- RPC
-  - [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
-  - [rpyc](https://github.com/tomerfiliba-org/rpyc) (Remote Python Call) - A transparent and symmetric RPC library for Python.
 
 ### WebSocket
 
