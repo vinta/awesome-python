@@ -362,16 +362,11 @@ _Libraries to automate web scraping and extract web content._
 
 - Frameworks
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
-  - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
-  - [crawlberg](https://github.com/xberg-io/crawlberg) - A high-performance web crawling engine with a Rust core, headless-browser fallback, and built-in robots.txt and sitemap parsing.
-  - [mechanicalsoup](https://github.com/MechanicalSoup/MechanicalSoup) - A Python library for automating interaction with websites.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
-  - [website-downloader](https://github.com/PKHarsimran/website-downloader) - A modern wget --mirror / HTTrack alternative that turns whole websites into browsable offline copies.
+  - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
 - Content Extraction
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
-  - [micawber](https://github.com/coleifer/micawber) - A small library for extracting rich content from URLs.
-  - [sumy](https://github.com/miso-belica/sumy) - A module for automatic summarization of text documents and HTML pages.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
 
 ### Email
