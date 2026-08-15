@@ -373,7 +373,6 @@ _Libraries to automate web scraping and extract web content._
 
 _Libraries for sending and parsing email, and mail server management._
 
-- [modoboa](https://github.com/modoboa/modoboa) - A mail hosting and management platform including a modern Web UI.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
 **Database & Storage**
