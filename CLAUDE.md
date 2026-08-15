@@ -19,7 +19,7 @@ An opinionated list of Python frameworks, libraries, tools, and resources. Publi
   - `readme_parser.py`: Markdown-to-structured-data parser.
   - `templates/`, `static/`: Jinja2 templates and CSS/JS assets.
   - `tests/`: Pytest tests for the build pipeline.
-- **Makefile**: `make install`, `make build`, `make preview`, `make test`, `make fetch_github_stars`.
+- **Makefile**: `make install`, `make build`, `make preview`, `make test`, `make lint`, `make format`, `make typecheck`, `make fetch_github_stars`. On machines with only Python 3.14, prefix uv-based targets with `UV_PYTHON=3.13` (watchdog 6.0.0 ships no 3.14 wheel and the project sets `no-build`).
 - **pyproject.toml**: Uses `uv` for dependency management. Python >=3.13.
 
 ## Key Rules
