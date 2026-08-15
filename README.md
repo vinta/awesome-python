@@ -2,6 +2,8 @@
 
 An opinionated guide to the best Python frameworks, libraries, tools, and resources.
 
+Every category is a shortlist, not a catalog: at most a few obvious choices per use case, kept short by editorial judgment informed by real-world usage. A missing project usually means its category is full — [CONTRIBUTING.md](CONTRIBUTING.md) explains how entries get in and what it takes to displace one. For exhaustive catalogs, follow the linked awesome-* lists.
+
 **Visit the [website](https://awesome-python.com/) to search and filter projects more easily.**
 
 ## **Sponsors**

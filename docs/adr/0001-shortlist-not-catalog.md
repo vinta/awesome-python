@@ -1,5 +1,5 @@
 ---
-status: proposed
+status: accepted
 ---
 
 # awesome-python is a shortlist of obvious choices, not a catalog

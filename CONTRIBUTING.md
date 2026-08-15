@@ -1,41 +1,35 @@
 # Contributing
 
+awesome-python is a shortlist, not a catalog. Each use case lists only its obvious choices, and most rejections mean "the use case is full", not "your project is bad". Read this whole page before opening a PR.
+
 ## Quality Requirements
 
 All submissions must satisfy **ALL** of these:
 
-1. **Python-first**: Primarily written in Python (>50% of codebase)
+1. **Serves Python Developers**: Python developers use it in their Python work. Implementation language and packaging are irrelevant — uv and ty are written in Rust, and agent skill packs are markdown, yet all belong; a pure-Python project nobody uses in Python work does not.
 2. **Active**: Commits within the last 12 months
 3. **Stable**: Production-ready, not alpha/beta/experimental
 4. **Documented**: Clear README with examples and use cases
-5. **Unique**: Adds distinct value, not "yet another X"
-6. **Established**: Repository at least 1 month old
+5. **Established**: Repository at least 1 month old
 
-## Acceptance Criteria
+## Admission
 
-Your submission must meet **ONE** of the following criteria:
+A **use case** is one distinct job a reader needs done. Use cases are defined by the list's structure: each subcategory is a use case, and a section without subcategories is a single use case. Structure changes — new sections, new subcategories, splitting an oversized use case into finer ones — are made only by the maintainer; an entry PR can never create the subcategory it needs.
 
-### 1. Industry Standard
+Each use case lists at most:
 
-- The go-to tool that almost everyone uses for a specific use case
-- Examples: requests, flask, pandas, numpy
-- Limit: 1-3 tools per category
+- **Up to 3 obvious choices** — tools an experienced Python developer would name unprompted when asked "what do I use for this?"
+- **Up to 2 challengers** — tools that are not yet the obvious choice but are credible successors to one. Admission as a challenger requires adoption-trajectory evidence, not popularity alone.
 
-### 2. Rising Star
+Hard maximum: 5 entries per use case. This is a qualitative bar first and a numeric backstop second — most use cases should carry fewer.
 
-- Rapid growth: 5,000+ GitHub stars in less than 1 year
-- Significant community buzz and adoption
-- Solving problems in new or better ways
-- Examples: fastapi, ruff, uv
+**Displacement**: once a use case is at its cap, the only way in is to name the entry your project replaces and argue that yours does that entry's job better. One in, one out.
 
-### 3. Hidden Gem
+**Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
 
-- Exceptional quality despite fewer stars (100-500 stars preferred; < 100 requires strong justification)
-- Solves niche problems elegantly
-- Strong recommendation from experienced developers
-- **Must demonstrate real-world usage** (not a project published last week)
-- Repository must be at least 3 months old with consistent activity
-- Must include compelling justification in PR description
+**Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
+
+Looking for an exhaustive catalog instead? Follow the awesome-* lists linked under individual entries (for example awesome-python-testing) — they exist precisely so this list doesn't have to be one.
 
 ## Entry Format Reference
 
@@ -77,22 +71,28 @@ Use the **PyPI package name** as the display name so developers can copy it dire
   - [project](url) - Description.
 ```
 
-## Adding a New Section
+### Entry Ordering
 
-1. Add section description in italics: `*Libraries for doing X.*`
+Within a use case, the obvious choices are listed first, alphabetically; challengers follow, alphabetically. There is no marker in the entry text — position is the marker, so the last entries of a use case may be its challengers.
+
+## Changing the Structure
+
+Adding sections or subcategories is maintainer-only (see Admission). For maintainer reference:
+
+1. Add the section description in italics: `*Libraries for doing X.*`
 2. Add the section under the appropriate thematic group (e.g., **AI & ML**, **Web**, **Data & Science**)
 3. Add the section title to the Table of Contents under its group
-4. Keep entries in alphabetical order within each category
+4. Order entries per Entry Ordering above
 
 ## Review Process
 
 PRs are reviewed by automated tools and maintainers:
 
 1. **Format Check**: Entry follows the correct format
-2. **Category Check**: Placed in the appropriate category/subcategory
+2. **Category Check**: Placed in the appropriate use case
 3. **Duplicate Check**: Not already listed or previously rejected
 4. **Activity Check**: Project shows recent activity
-5. **Quality Check**: Meets acceptance criteria
+5. **Admission Check**: Meets the Admission rules above, including Displacement when the use case is at its cap
 
 Search previous Pull Requests and Issues before submitting, as yours may be a duplicate.
 
@@ -101,10 +101,12 @@ Search previous Pull Requests and Issues before submitting, as yours may be a du
 PRs will be **closed** if:
 
 - Adding multiple projects in one PR
+- The use case is at its cap and the PR makes no Displacement argument
+- The PR creates a new section or subcategory and fills it (structure changes are maintainer-only)
+- Coordinated multi-entry self-promotion: multiple related projects from the same organization or author, across one or several PRs
 - Duplicate of existing entry or recently-closed PR
 - Empty or placeholder PR descriptions
 - Placed under an inappropriate category
 - Project is archived or abandoned (no commits in 12+ months)
 - No documentation or unclear use case
-- Less than 100 GitHub stars without Hidden Gem justification
-- Repository less than 1 months old
+- Repository less than 1 month old
