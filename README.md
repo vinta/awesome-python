@@ -445,9 +445,8 @@ _Libraries for caching data._
 
 _Libraries and software for indexing and performing search queries on data._
 
+- [elasticsearch](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
 - [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
-- [elasticsearch-py](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/products/elasticsearch).
-- [pysolr](https://github.com/django-haystack/pysolr) - A lightweight Python wrapper for [Apache Solr](https://lucene.apache.org/solr/).
 
 ### Serialization
 
