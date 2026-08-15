@@ -30,7 +30,7 @@ running.
 Results are cached to data/pypi_downloads.tsv (merged with any existing
 rows); names with no PyPI rows are written as NOT_FOUND.
 
-Usage: python fetch_pypi_downloads.py [--bigquery] [--dry-run] [--names-file FILE]
+Usage: python fetch_pypi_downloads_via_clickpy.py [--bigquery] [--dry-run] [--names-file FILE]
 """
 
 import re

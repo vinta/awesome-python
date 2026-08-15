@@ -4,7 +4,7 @@
 Cross-check for a handful of packages during audits — not for full-README
 sweeps: the free API key is throttled to 5 requests/minute (10 burst), so
 this script sleeps 12s between requests and 530 names would take ~2 hours
-(use fetch_pypi_downloads.py for bulk). Reads PEPY_TECH_API_KEY from the
+(use fetch_pypi_downloads_via_clickpy.py for bulk). Reads PEPY_TECH_API_KEY from the
 environment, falling back to the repo-root .env. The v2 endpoint returns
 ~90 days of per-day per-version counts; this script sums the most recent
 30 days present in the response across all versions. pepy counts include
@@ -13,7 +13,7 @@ ClickPy/BigQuery figures; pypistats.org excludes mirrors, so never mix
 the two in one comparison. Results print to stdout as TSV and are not
 cached — data/pypi_downloads.tsv stays single-source.
 
-Usage: python fetch_pepy_downloads.py NAME [NAME ...]
+Usage: python fetch_pypi_downloads_via_pepy.py NAME [NAME ...]
 """
 
 import os
@@ -22,7 +22,7 @@ import time
 from pathlib import Path
 
 import httpx
-from fetch_pypi_downloads import normalize
+from fetch_pypi_downloads_via_clickpy import normalize
 
 ENV_FILE = Path(__file__).parent.parent / ".env"
 PEPY_URL = "https://api.pepy.tech/api/v2/projects/{name}"
@@ -49,7 +49,7 @@ def last_30_day_total(downloads_per_day: dict[str, dict[str, int]]) -> int:
 
 def main() -> None:
     if len(sys.argv) < 2:
-        print("Usage: python fetch_pepy_downloads.py NAME [NAME ...]", file=sys.stderr)
+        print("Usage: python fetch_pypi_downloads_via_pepy.py NAME [NAME ...]", file=sys.stderr)
         sys.exit(1)
     names = [normalize(name) for name in sys.argv[1:]]
     with httpx.Client(headers={"X-API-Key": load_api_key()}, timeout=30) as client:
