@@ -501,11 +501,9 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 _Libraries for validating data. Used for forms in many cases._
 
-- [cerberus](https://github.com/pyeve/cerberus) - A lightweight and extensible data validation library.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
-- [voluptuous](https://github.com/alecthomas/voluptuous) - A Python data validation library primarily intended for validating data from untrusted sources.
 
 ### Data Visualization
 
