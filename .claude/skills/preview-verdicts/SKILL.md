@@ -15,7 +15,7 @@ Maintainer review happens through an interactive HTML page: one row per entry wi
    - `verdict` is `keep` or `drop`, seeded from the current adjudication or dry-run.
    - `reason` is plain language the maintainer reads cold — no invented shorthand. When fresh evidence contradicts the seeded verdict (a big download count on a drop, a dead repo on a keep), say so in that row's reason instead of silently changing the seed.
 2. Copy `template.html` (sibling of this file) and replace the placeholders: `__TITLE__` (page title), `__SUB__` (sub-header: scope, seed provenance, fetch date, and the standing instruction to flip/comment then Copy feedback), `__KEY__` (localStorage key), `__DATA__` (the array). `__KEY__` must be unique per review — slug plus date, e.g. `awesome-python-science-2026-09-01` — because saved state under a reused key bleeds a previous review's flips into rows with the same section and entry name.
-3. Write the page to `/tmp/awesome-python-<slug>-preview.html`, `open` it, and tell the maintainer the path and the return path: flip or comment rows (they highlight yellow), press **Copy feedback**, paste the JSON into the chat. Done when the page is open and the return path is stated.
+3. Write the page to `tmp/awesome-python-<slug>-preview.html` in the repo root (git-ignored; create the directory if needed), `open` it, and tell the maintainer the path and the return path: flip or comment rows (they highlight yellow), press **Copy feedback**, paste the JSON into the chat. Done when the page is open and the return path is stated.
 
 ## Process the pasted feedback
 

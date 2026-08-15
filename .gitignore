@@ -18,6 +18,7 @@ docs/*
 !docs/adr/
 
 # agents
+tmp/
 .superpowers/
 .playwright-cli/
 skills-lock.json
