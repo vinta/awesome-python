@@ -331,9 +331,8 @@ _Libraries for administrative interfaces._
 
 _Content Management Systems._
 
-- [django-cms](https://github.com/django-cms/django-cms) - The easy-to-use and developer-friendly enterprise CMS powered by Django.
-- [indico](https://github.com/indico/indico) - A feature-rich event management system, made @ [CERN](https://en.wikipedia.org/wiki/CERN).
 - [wagtail](https://github.com/wagtail/wagtail) - A Django content management system.
+- [django-cms](https://github.com/django-cms/django-cms) - The easy-to-use and developer-friendly enterprise CMS powered by Django.
 
 ### Static Site Generators
 
