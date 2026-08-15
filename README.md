@@ -643,21 +643,19 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [pytest](https://github.com/pytest-dev/pytest) - A mature full-featured Python testing tool.
     - [awesome-pytest](https://github.com/augustogoulart/awesome-pytest)
   - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
-  - [scanapi](https://github.com/scanapi/scanapi) - Automated Testing and Documentation for your REST API.
-  - [unittest](https://docs.python.org/3/library/unittest.html) - (Python standard library) Unit testing framework.
 - Test Runners
-  - [nox](https://github.com/wntrblm/nox) - Flexible test automation for Python.
   - [tox](https://github.com/tox-dev/tox) - Auto builds and tests distributions in multiple Python versions
-- GUI / Web Testing
-  - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+  - [nox](https://github.com/wntrblm/nox) - Flexible test automation for Python.
+- Browser Automation
   - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
-  - [pyautogui](https://github.com/asweigart/pyautogui) - PyAutoGUI is a cross-platform GUI automation Python module for human beings.
-  - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
+- Load Testing
+  - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+- API Testing
+  - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
 - Mock
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
-  - [mocket](https://github.com/mindflayer/python-mocket) - A socket mock framework with gevent/asyncio/SSL support.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
   - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
