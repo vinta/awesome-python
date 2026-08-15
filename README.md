@@ -401,6 +401,7 @@ _Libraries for connecting and operating databases._
   - [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   - [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
+  - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
 - SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
   - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
