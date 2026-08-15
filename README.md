@@ -142,8 +142,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
 - Vendor Agent SDKs
-  - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
+  - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
 - Personal Assistants
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
 - Prompt Optimization
@@ -155,9 +155,9 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Pre-trained Models
   - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
 - LLM Inference and Serving
-  - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
+  - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
 - LLM Gateways
   - [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
 - Image and Video Generation
@@ -165,8 +165,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Fine-tuning
   - [unsloth](https://github.com/unslothai/unsloth) - A library for faster LLM fine-tuning and training with reduced memory usage.
 - Speech
-  - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
+  - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
 
 ### Deep Learning
@@ -492,8 +492,8 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 - General
   - [dlt](https://github.com/dlt-hub/dlt) - A Python library for building data pipelines with automatic schema inference, incremental loading, and support for multiple sources and destinations.
 - Financial Data
-  - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
   - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
+  - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
   - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
   - [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
 
@@ -501,9 +501,9 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 _Libraries for validating data. Used for forms in many cases._
 
+- [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
-- [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 
 ### Data Visualization
 
@@ -517,19 +517,19 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 - Specialized
   - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
-  - [graphify](https://github.com/safishamsi/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
   - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](https://www.graphviz.org/).
+  - [graphify](https://github.com/safishamsi/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
 - Dashboards and Apps
-  - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
+  - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
 
 ### Geolocation
 
 _Libraries for geocoding addresses and working with latitudes and longitudes._
 
-- [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 - [geopandas](https://github.com/geopandas/geopandas) - Python tools for geographic data (GeoSeries/GeoDataFrame) built on pandas.
 - [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
+- [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 - [geodjango](https://github.com/django/django) - A world-class geographic web framework that is part of [Django](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
 
 ### Science
@@ -537,9 +537,9 @@ _Libraries for geocoding addresses and working with latitudes and longitudes._
 _Libraries for scientific computing. Also see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists)._
 
 - Core
-  - [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
   - [numpy](https://github.com/numpy/numpy) - A fundamental package for scientific computing with Python.
   - [scipy](https://github.com/scipy/scipy) - A Python-based ecosystem of open-source software for mathematics, science, and engineering.
+  - [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
 - Symbolic Mathematics
   - [sympy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 - Statistics
@@ -551,9 +551,9 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
   - [astropy](https://github.com/astropy/astropy) - A community Python library for Astronomy.
   - [obspy](https://github.com/obspy/obspy) - A Python toolbox for seismology.
 - Simulation and Modeling
-  - [mesa](https://github.com/mesa/mesa) - An agent-based modeling framework for building, analyzing, and visualizing complex system simulations.
   - [pymc](https://github.com/pymc-devs/pymc) - Probabilistic programming and Bayesian modeling in Python.
   - [simpy](https://gitlab.com/team-simpy/simpy) - A process-based discrete-event simulation framework.
+  - [mesa](https://github.com/mesa/mesa) - An agent-based modeling framework for building, analyzing, and visualizing complex system simulations.
 - Graphs and Networks
   - [networkx](https://github.com/networkx/networkx) - A high-productivity software for complex networks.
 - Computational Geometry
@@ -568,8 +568,8 @@ _Libraries for quantum computing._
 
 - [qiskit](https://github.com/Qiskit/qiskit) - An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
 - [qutip](https://github.com/qutip/qutip) - Quantum Toolbox in Python.
-- [cirq](https://github.com/quantumlib/Cirq) - A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
 - [pennylane](https://github.com/PennyLaneAI/pennylane) - A hybrid quantum-classical machine learning library with automatic differentiation support.
+- [cirq](https://github.com/quantumlib/Cirq) - A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
 
 **Developer Tools**
 
@@ -628,9 +628,9 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
 _Libraries for testing codebases and generating test data. Also see [awesome-python-testing](https://github.com/cleder/awesome-python-testing)._
 
 - Frameworks
-  - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
   - [pytest](https://github.com/pytest-dev/pytest) - A mature full-featured Python testing tool.
     - [awesome-pytest](https://github.com/augustogoulart/awesome-pytest)
+  - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced Quickcheck style property based testing library.
   - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 - Test Runners
   - [tox](https://github.com/tox-dev/tox) - Auto builds and tests distributions in multiple Python versions
@@ -643,11 +643,11 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - API Testing
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
 - Mock
+  - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
-  - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
-  - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
+  - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
 - Object Factories
   - [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
   - [polyfactory](https://github.com/litestar-org/polyfactory) - mock data generation library with support to classes (continuation of `pydantic-factories`)
@@ -902,8 +902,8 @@ _Libraries for parsing and manipulating specific text formats._
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 - File Conversion
-  - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - Excel
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
   - [xlsxwriter](https://github.com/jmcnamara/XlsxWriter) - A Python module for creating Excel .xlsx files.
@@ -912,14 +912,14 @@ _Libraries for parsing and manipulating specific text formats._
 - PowerPoint
   - [python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint (.pptx) files.
 - PDF
-  - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - Pdfminer.six is a community maintained fork of the original PDFMiner.
   - [pypdf](https://github.com/py-pdf/pypdf) - A library capable of splitting, merging, cropping, and transforming PDF pages.
   - [reportlab](https://www.reportlab.com/opensource/) - Allowing Rapid creation of rich PDF documents.
+  - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - Pdfminer.six is a community maintained fork of the original PDFMiner.
 - HTML-to-PDF
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
 - Markdown
-  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
+  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
   - [pyyaml](https://github.com/yaml/pyyaml) - YAML implementations for Python.
