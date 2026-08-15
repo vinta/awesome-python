@@ -47,6 +47,9 @@ _Avoid_: One-in-one-out (informal alias)
 An entry (at most two per Use Case) that is not yet the Obvious Choice but is a credible successor to one. Marked by ordering, not description: within a Use Case, Obvious Choices are listed first, then Challengers, each tier by PyPI downloads/month descending (no-signal entries last in tier, alphabetically). Admission requires adoption-trajectory evidence, not popularity alone.
 _Avoid_: Rising Star (old lane name), Hidden Gem (old lane name — concept removed entirely)
 
+**Second Tier**:
+A Challenger slot holding a demoted incumbent instead of a rising successor — a former Obvious Choice or fading community standard an Audit kept below the current Obvious Choices (clickhouse-driver behind the official client, dogpile.cache and django-cacheops behind cachetools and diskcache, django-haystack in Search). It counts against the two Challenger slots and is marked by position like any Challenger; the adoption-trajectory bar gates only new admissions, not demotions.
+
 **Split**:
 Maintainer-only restructuring of an oversized Use Case into finer Use Cases (new Subcategories), considered before any trimming when the size reflects genuinely distinct jobs. A submitter's entry PR can never perform a Split.
 
