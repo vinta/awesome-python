@@ -397,21 +397,22 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
 _Libraries for connecting and operating databases._
 
 - MySQL - [awesome-mysql](https://github.com/shlomi-noach/awesome-mysql)
-  - [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
   - [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure Python MySQL driver compatible to mysql-python.
+  - [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   - [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
 - SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
   - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
-- Other Relational Databases
+- ClickHouse
   - [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
+- Other Relational Databases
   - [mssql-python](https://github.com/microsoft/mssql-python) - Official Microsoft driver for SQL Server and Azure SQL, built on ODBC for high performance and low memory usage.
 - NoSQL Databases
+  - [redis](https://github.com/redis/redis-py) - The Python client for Redis.
+  - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [cassandra-driver](https://github.com/apache/cassandra-python-driver) - The Python Driver for Apache Cassandra.
   - [django-mongodb-backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
-  - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
-  - [redis-py](https://github.com/redis/redis-py) - The Python client for Redis.
 
 ### Database
 
