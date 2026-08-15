@@ -28,4 +28,5 @@ An opinionated list of Python frameworks, libraries, tools, and resources. Publi
 - A shortlist, not a catalog: per use case, up to 3 obvious choices plus up to 2 challengers, hard maximum 5.
 - One project per PR.
 - One entry per commit when adding or deleting entries. Exception: a prune sweep is one commit per section, its body listing each removal with its reason. Format, wording, or categorization changes across multiple entries may be bundled in a single commit.
+- Every keep/drop reason must be verified against current online data at decision time — download counts, repo activity and archived status, PyPI metadata, project docs. Training-data recollections alone are not evidence; verify before stating, and label anything unverifiable as a judgment call.
 - README.md is the single source of content truth.
