@@ -12,7 +12,10 @@ excludes mirrors by default.
 
 This script is the sole writer of data/pypi_downloads.tsv and rewrites it
 from scratch each run, so entries removed from README.md drop out
-naturally; names with no PyPI rows are written as NOT_FOUND. Cross-checks
+naturally; names with no PyPI rows are written as NOT_FOUND. The file
+starts with a header row (name, downloads, fetched_at) and every row
+carries the sweep date: a cache fetched within the last 7 days is current
+enough for audit verdicts, so only re-run when older. Cross-checks
 against other sources (fetch_pypi_downloads_via_bigquery.py,
 fetch_pypi_downloads_via_pepy.py) print to stdout and never touch the
 cache.
@@ -21,6 +24,7 @@ Usage: python fetch_pypi_downloads_via_clickpy.py
 """
 
 import re
+from datetime import date
 from pathlib import Path
 
 import httpx
@@ -67,7 +71,9 @@ def main() -> None:
     names = collect_names(README_PATH.read_text())
     print(f"Querying {len(names)} package names...")
     counts = fetch_clickpy(names)
-    OUT_FILE.write_text("\n".join(f"{name}\t{counts.get(name, 'NOT_FOUND')}" for name in names) + "\n")
+    fetched_at = date.today().isoformat()
+    rows = "\n".join(f"{name}\t{counts.get(name, 'NOT_FOUND')}\t{fetched_at}" for name in names)
+    OUT_FILE.write_text(f"name\tdownloads\tfetched_at\n{rows}\n")
     print(f"Done. {len(counts)}/{len(names)} names found on PyPI. Cached to {OUT_FILE}")
 
 
