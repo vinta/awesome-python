@@ -2,8 +2,6 @@
 
 An opinionated guide to the best Python frameworks, libraries, tools, and resources.
 
-Every category is a shortlist, not a catalog: at most a few obvious choices per use case, kept short by editorial judgment informed by real-world usage. A missing project usually means its category is full — [CONTRIBUTING.md](CONTRIBUTING.md) explains how entries get in and what it takes to displace one. For exhaustive catalogs, follow the linked awesome-* lists.
-
 **Visit the [website](https://awesome-python.com/) to search and filter projects more easily.**
 
 ## **Sponsors**
@@ -550,6 +548,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - Dashboards and Apps
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
+
 ### Geolocation
 
 _Libraries for geocoding addresses and working with latitudes and longitudes._
@@ -872,7 +871,7 @@ _Libraries for working with graphical user interface applications._
   - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
   - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
 - Web-based
-  - [buridan/ui](https://github.com/LineIndent/ui) - Composable, themeable components designed for Reflex. Extend, override, and ship without fighting the framework. Open source. 
+  - [buridan/ui](https://github.com/LineIndent/ui) - Composable, themeable components designed for Reflex. Extend, override, and ship without fighting the framework. Open source.
   - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
   - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
   - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
