@@ -1,5 +1,5 @@
 ---
-name: verdict-preview
+name: preview-verdicts
 description: Generate the interactive keep/drop verdict preview (HTML page with per-row feedback controls) whenever a prune sweep, batch entry edit, or restructure needs maintainer review before touching README.md — and process the feedback JSON the maintainer pastes back.
 ---
 
