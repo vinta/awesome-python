@@ -46,3 +46,9 @@ _Avoid_: Rising Star (old lane name), Hidden Gem (old lane name — concept remo
 
 **Split**:
 Maintainer-only restructuring of an oversized Use Case into finer Use Cases (new Subcategories), considered before any trimming when the size reflects genuinely distinct jobs. A submitter's entry PR can never perform a Split.
+
+### Maintenance
+
+**Audit**:
+The recurring maintenance pass over one or more Sections: every Entry's verdict re-verified against current evidence, Challengers promoted or demoted, oversized Use Cases Split, drops and admissions re-decided. The maintainer adjudicates through an interactive preview, and entry changes land only on their explicit go. The 2026-08 shortlist-reform sweeps were the first Audits.
+_Avoid_: Sweep (reform-era name for a Section's first Audit)
