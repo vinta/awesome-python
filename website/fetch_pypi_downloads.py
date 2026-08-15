@@ -2,13 +2,21 @@
 """Fetch last-30-day PyPI download counts for README entries via BigQuery.
 
 Shells out to the `bq` CLI (Google Cloud SDK) against the public
-`bigquery-public-data.pypi.file_downloads` table. The table is clustered on
-file.project, so scanned bytes grow with the IN-list: a few dozen names
-prune to tens of GB while the full README (~530 names) balloons to over
-1 TB — past the free tier. Fetch per curation sitting with --names-file
-instead of all at once. Results are cached to data/pypi_downloads.tsv
-(merged with any existing rows); names with no PyPI rows are written as
-NOT_FOUND. Always --dry-run first to check the scan estimate.
+`bigquery-public-data.pypi.file_downloads` table. The table is partitioned
+on timestamp and clustered on the top-level `project` column — filter on
+`project`, never `file.project`: both hold identical values (verified
+2026-08-16, 408M rows on one day, zero mismatches), but only a `project`
+filter gets cluster pruning, and the `file` record costs ~4x more to scan.
+A 30-day query dry-runs at up to ~275 GB (the pre-pruning upper bound for
+a full-README IN list; small lists estimate lower); actual billed bytes
+shrink further with cluster pruning (33.7 GB measured for a single name),
+so even a full-README sweep fits the 1 TiB/month free tier.
+MAX_BYTES_BILLED is a safety net against accidentally unpartitioned
+queries; BigQuery enforces it against the pre-run upper bound, so it must
+stay above the dry-run estimate or every query fails. Results are cached
+to data/pypi_downloads.tsv (merged with any existing rows); names with no
+PyPI rows are written as NOT_FOUND. Always --dry-run first to check the
+scan estimate.
 
 Usage: python fetch_pypi_downloads.py [--dry-run] [--names-file FILE]
 """
@@ -24,6 +32,7 @@ from readme_parser import parse_readme
 DATA_DIR = Path(__file__).parent / "data"
 OUT_FILE = DATA_DIR / "pypi_downloads.tsv"
 README_PATH = Path(__file__).parent.parent / "README.md"
+MAX_BYTES_BILLED = 400_000_000_000
 
 # PyPI normalizes names to lowercase with runs of -, _, . collapsed to -.
 PYPI_NAME_RE = re.compile(r"^[a-z0-9]([a-z0-9-]*[a-z0-9])?$")
@@ -47,14 +56,14 @@ def collect_names(readme_text: str) -> list[str]:
 def fetch(names: list[str], dry_run: bool) -> dict[str, int]:
     in_list = ", ".join(f"'{name}'" for name in names)
     query = (
-        "SELECT file.project AS project, COUNT(*) AS downloads "
+        "SELECT project, COUNT(*) AS downloads "
         "FROM `bigquery-public-data.pypi.file_downloads` "
         "WHERE DATE(timestamp) BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY) "
         "AND CURRENT_DATE() "
-        f"AND file.project IN ({in_list}) "
-        "GROUP BY file.project"
+        f"AND project IN ({in_list}) "
+        "GROUP BY project"
     )
-    cmd = ["bq", "query", "--use_legacy_sql=false", "--format=json"]
+    cmd = ["bq", "query", "--use_legacy_sql=false", "--format=json", f"--maximum_bytes_billed={MAX_BYTES_BILLED}"]
     if dry_run:
         cmd.append("--dry_run")
     cmd.append(query)
