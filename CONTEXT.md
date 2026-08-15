@@ -10,7 +10,7 @@ The editorial domain of awesome-python: which projects the list carries, how the
 A single listed project: `- [name](url) - Description.` The unit that is admitted, displaced, or pruned. Named by PyPI package name when one exists, else by repository name.
 
 **Sub-item**:
-An indented link under an Entry (awesome-django under django, aws-sdk-pandas under pandas, flower under celery). Not an Entry: it holds no slot, does not count against the Cap, and rides its parent — re-homed or removed with it. Maintainer-only placement for a companion project whose job is inseparable from its parent's.
+An indented link under an Entry (awesome-django under django, aws-sdk-pandas under pandas, flower under celery). Not an Entry: it holds no slot, does not count against the Cap, and rides its parent — re-homed or removed with it. Maintainer-only placement, for a companion project whose job is inseparable from its parent's (flower monitors celery) or an awesome-* also-see list.
 
 **Thematic Group**:
 A bold group line (e.g. "AI & ML", "Web Development") that clusters Sections in the TOC and the Projects body.
