@@ -13,8 +13,9 @@ __pycache__/
 website/output/
 website/data/
 
-# docs
-docs/
+# docs (except decision records)
+docs/*
+!docs/adr/
 
 # agents
 .agents/
