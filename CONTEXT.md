@@ -7,27 +7,30 @@ The editorial domain of awesome-python: which projects the list carries, how the
 ### List structure
 
 **Entry**:
-A single listed project: `- [pypi-name](url) - Description.` The unit that is admitted, displaced, or pruned.
+A single listed project: `- [name](url) - Description.` The unit that is admitted, displaced, or pruned. Named by PyPI package name when one exists, else by repository name.
+
+**Thematic Group**:
+A bold group line (e.g. "AI & ML", "Web Development") that clusters Sections in the TOC and the Projects body.
 
 **Section**:
 A `###` heading in README.md (e.g. "Testing", "AI and Agents"). Sections group entries and live under a Thematic Group.
 _Avoid_: Category (overloaded — the TOC calls them categories, but rules bind to Use Cases, not Sections)
 
 **Subcategory**:
-A named bullet inside a Section with indented entries under it (e.g. "Mocking" inside "Testing"). Where present, each Subcategory is one Use Case.
+A named bullet inside a Section with indented entries under it (e.g. "Mock" inside "Testing"). Where present, each Subcategory is one Use Case.
 
 **Use Case**:
-The unit of "it" in "one obvious way to do it": one distinct job a reader needs done. Defined by the list's existing structure — each Subcategory is a Use Case; a flat Section is a single Use Case. Submitters cannot define Use Cases; only the list structure does.
+The unit of "it" in "one obvious way to do it": one distinct job a reader needs done. Defined by the list's structure — each Subcategory is a Use Case; a flat Section is a single Use Case. Submitters cannot define Use Cases; only the maintainer changes the structure (see Split).
 _Avoid_: Niche, micro-category
 
 ### Admission
 
 **Serves Python Developers**:
-The scope test for what belongs on the list at all: Python developers use it in their Python work. Implementation language is irrelevant — uv and ty are Rust and belong; a pure-Python library nobody uses in Python work does not.
+The scope test for what belongs on the list at all: Python developers use it in their Python work. Implementation language and packaging are irrelevant — uv and ty are Rust and belong; a pure-Python library nobody uses in Python work does not.
 _Avoid_: Python-first, written-in-Python (old requirement — removed)
 
 **Obvious Choice**:
-An entry an experienced Python developer would name unprompted when asked "what do I use for [Use Case]?". Certified by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. A standard-library module holds a slot only when it is itself the Obvious Choice for the Use Case, not merely relevant to it.
+An entry an experienced Python developer would name unprompted when asked "what do I use for [Use Case]?". Certified by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars; judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). A standard-library module holds a slot only when it is itself the Obvious Choice for the Use Case, not merely relevant to it.
 _Avoid_: Industry Standard (old lane name), awesome (unfalsifiable)
 
 **Cap**:
@@ -42,4 +45,4 @@ An entry (at most two per Use Case) that is not yet the Obvious Choice but is a 
 _Avoid_: Rising Star (old lane name), Hidden Gem (old lane name — concept removed entirely)
 
 **Split**:
-Maintainer-only restructuring of an oversized Use Case into finer Use Cases (new Subcategories), chosen over trimming when the size reflects genuinely distinct jobs. A submitter's entry PR can never perform a Split.
+Maintainer-only restructuring of an oversized Use Case into finer Use Cases (new Subcategories), considered before any trimming when the size reflects genuinely distinct jobs. A submitter's entry PR can never perform a Split.
