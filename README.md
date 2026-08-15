@@ -527,11 +527,10 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 
 _Libraries for geocoding addresses and working with latitudes and longitudes._
 
-- [django-countries](https://github.com/SmileyChris/django-countries) - A Django app that provides a country field for models and forms.
-- [geodjango](https://github.com/django/django) - A world-class geographic web framework that is part of [Django](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
 - [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
 - [geopandas](https://github.com/geopandas/geopandas) - Python tools for geographic data (GeoSeries/GeoDataFrame) built on pandas.
 - [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
+- [geodjango](https://github.com/django/django) - A world-class geographic web framework that is part of [Django](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
 
 ### Science
 
