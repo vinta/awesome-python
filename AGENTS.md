@@ -1,12 +1,14 @@
 # AGENTS.md
 
-An opinionated shortlist of Python frameworks, libraries, tools, and resources, published at [awesome-python.com](https://awesome-python.com/). README.md is the single source of truth for catalog entries and README sponsor placements; `website/` renders it into the static site.
+An opinionated guide to the best Python frameworks, libraries, tools, and resources.
+
+[README.md](README.md) is the single source of truth for catalog entries and README sponsor placements; `website/` renders it into the static site: [awesome-python.com](https://awesome-python.com/).
 
 ## Entry Rules
 
 [CONTRIBUTING.md](CONTRIBUTING.md) holds the admission rules, quality requirements, rejection rules, entry format, and ordering. Apply it whenever adding or removing an entry — direct commits included, not only PR reviews.
 
-- Every keep/drop reason must be verified against current online data at decision time — download counts, repo activity and archived status, PyPI metadata, project docs. Training-data recollections are not evidence; label anything unverifiable as a judgment call.
+- Every keep/drop reason must be verified against current online data at decision time — download counts, repo activity and archived status, PyPI metadata, project docs. Judging tiers — obvious choice vs challenger — also requires WebSearch evidence (adoption trajectory, community sentiment), not download counts alone. Training-data recollections are not evidence; label anything unverifiable as a judgment call.
 - One entry per commit when adding or deleting entries. Exceptions: a prune sweep is one commit per section, its body listing each removal with its reason; format, wording, or categorization changes may be bundled.
 - Sponsor placement never influences which projects get listed — see [SPONSORSHIP.md](SPONSORSHIP.md). `website/templates/sponsorship.html` separately defines the sponsorship content on the published website page.
 
