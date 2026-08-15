@@ -347,7 +347,7 @@ _Static site generator is a software that takes some text + templates as input a
 
 _Libraries for working with HTTP._
 
-- General
+- Clients
   - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
   - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
   - [aiohttp](https://github.com/aio-libs/aiohttp) - Asynchronous HTTP client/server framework for asyncio and Python.
