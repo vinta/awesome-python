@@ -256,19 +256,16 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 _Libraries for building RESTful and GraphQL APIs._
 
 - Django
-  - [django-modern-rest](https://github.com/wemake-services/django-modern-rest) - Modern REST with speed, types, async, `msgspec`, `pydantic` and other goodies!
-  - [django-ninja](https://github.com/vitalik/django-ninja) - Fast, Django REST framework based on type hints and Pydantic.
   - [django-rest-framework](https://github.com/encode/django-rest-framework) - A powerful and flexible toolkit to build web APIs.
+  - [django-ninja](https://github.com/vitalik/django-ninja) - Fast, Django REST framework based on type hints and Pydantic.
   - [strawberry-django](https://github.com/strawberry-graphql/strawberry-django) - Strawberry GraphQL integration with Django.
+  - [django-modern-rest](https://github.com/wemake-services/django-modern-rest) - Modern REST with speed, types, async, `msgspec`, `pydantic` and other goodies!
 - Flask
   - [apiflask](https://github.com/apiflask/apiflask) - A lightweight Python web API framework based on Flask and Marshmallow.
 - Framework Agnostic
-  - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
-  - [falcon](https://github.com/falconry/falcon) - A high-performance framework for building cloud APIs and web app backends.
   - [fastapi](https://github.com/fastapi/fastapi) - A modern, fast, web framework for building APIs with standard Python type hints.
-  - [sanic](https://github.com/sanic-org/sanic) - A Python web server and web framework that's written to go fast.
+  - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that automatically handles requests based on your OpenAPI specification.
   - [strawberry](https://github.com/strawberry-graphql/strawberry) - A GraphQL library that leverages Python type annotations for schema definition.
-  - [webargs](https://github.com/marshmallow-code/webargs) - A friendly library for parsing HTTP request arguments with built-in support for popular web frameworks.
 
 ### Web Servers
 
