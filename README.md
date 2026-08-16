@@ -490,6 +490,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 - General
   - [dlt](https://github.com/dlt-hub/dlt) - A Python library for building data pipelines with automatic schema inference, incremental loading, and support for multiple sources and destinations.
+  - [pathway](https://github.com/pathwaycom/pathway) - Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.
 - Financial Data
   - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
   - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
