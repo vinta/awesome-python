@@ -12,7 +12,7 @@ from pathlib import Path
 import pytest
 from build import (
     TemplateEntry,
-    annotate_entries_with_stars,
+    annotate_entries_with_stats,
     build,
     detect_source_type,
     extract_entries,
@@ -334,6 +334,10 @@ class TestBuild:
             "owner/w2": {"stars": 42, "owner": "owner", "fetched_at": "2026-01-01T00:00:00+00:00"},
         }
         (data_dir / "github_stars.json").write_text(json.dumps(stars), encoding="utf-8")
+        (data_dir / "pypi_downloads.tsv").write_text(
+            "name\tpackage\tdownloads\tfetched_at\nw1\tw1\t777\t2026-08-16\n",
+            encoding="utf-8",
+        )
 
         build(tmp_path)
 
@@ -343,7 +347,8 @@ class TestBuild:
 
         assert '<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs text entry point" />' in index_html
 
-        assert llms_txt.startswith("# Awesome Python\n")
+        assert llms_txt.startswith("# Awesome Python\n\nIntro.\n")
+        assert "2 projects across 1 category." in llms_txt
         assert "Scan the category index" in llms_txt
         assert "Homepage: https://awesome-python.com/" in llms_txt
         assert "Markdown homepage" not in llms_txt
@@ -357,7 +362,7 @@ class TestBuild:
         assert "- [Widgets](https://awesome-python.com/categories/widgets/)" in llms_txt
         assert "- [Widgets](#widgets)" not in llms_txt
         assert "### Widgets" in llms_txt
-        assert "- [w1](https://example.com) - A widget." in llms_txt
+        assert "- [w1](https://example.com) - A widget. (PyPI downloads/month: 777)" in llms_txt
         assert "- [w2](https://github.com/owner/w2) - A starred widget. (GitHub stars: 42)" in llms_txt
         assert llms_txt != readme
         assert "# Contributing" not in llms_txt
@@ -1196,15 +1201,24 @@ class TestExtractEntries:
 
 
 # ---------------------------------------------------------------------------
-# annotate_entries_with_stars
+# annotate_entries_with_stats
 # ---------------------------------------------------------------------------
 
 
-class TestAnnotateEntriesWithStars:
+class TestAnnotateEntriesWithStats:
     def test_appends_star_count_to_bullet(self):
         markdown = "- [foo](https://github.com/owner/foo) - A foo.\n"
         stars = {"owner/foo": {"stars": 123, "owner": "owner"}}
-        assert annotate_entries_with_stars(markdown, stars) == ("- [foo](https://github.com/owner/foo) - A foo. (123 GitHub stars)\n")
+        assert annotate_entries_with_stats(markdown, stars, {}) == ("- [foo](https://github.com/owner/foo) - A foo. (GitHub stars: 123)\n")
+
+    def test_appends_downloads_by_display_name(self):
+        markdown = "- [Foo.py](https://example.com) - A foo.\n"
+        assert annotate_entries_with_stats(markdown, {}, {"foo-py": 777}) == ("- [Foo.py](https://example.com) - A foo. (PyPI downloads/month: 777)\n")
+
+    def test_appends_downloads_and_stars_together(self):
+        markdown = "- [foo](https://github.com/owner/foo) - A foo.\n"
+        stars = {"owner/foo": {"stars": 123, "owner": "owner"}}
+        assert annotate_entries_with_stats(markdown, stars, {"foo": 777}) == ("- [foo](https://github.com/owner/foo) - A foo. (PyPI downloads/month: 777, GitHub stars: 123)\n")
 
     def test_uses_first_github_link(self):
         markdown = "- [foo](https://github.com/owner/foo) - A foo. Also [bar](https://github.com/owner/bar).\n"
@@ -1212,31 +1226,31 @@ class TestAnnotateEntriesWithStars:
             "owner/foo": {"stars": 10, "owner": "owner"},
             "owner/bar": {"stars": 99, "owner": "owner"},
         }
-        assert annotate_entries_with_stars(markdown, stars) == ("- [foo](https://github.com/owner/foo) - A foo. Also [bar](https://github.com/owner/bar). (10 GitHub stars)\n")
+        assert annotate_entries_with_stats(markdown, stars, {}) == ("- [foo](https://github.com/owner/foo) - A foo. Also [bar](https://github.com/owner/bar). (GitHub stars: 10)\n")
 
-    def test_skips_entries_without_star_data(self):
+    def test_skips_entries_without_data(self):
         markdown = "- [foo](https://github.com/owner/foo) - A foo.\n"
-        assert annotate_entries_with_stars(markdown, {}) == markdown
+        assert annotate_entries_with_stats(markdown, {}, {}) == markdown
 
-    def test_skips_non_github_links(self):
+    def test_skips_non_github_links_for_stars(self):
         markdown = "- [foo](https://example.com) - A foo.\n"
         stars = {"owner/foo": {"stars": 1, "owner": "owner"}}
-        assert annotate_entries_with_stars(markdown, stars) == markdown
+        assert annotate_entries_with_stats(markdown, stars, {}) == markdown
 
     def test_skips_non_bullet_lines(self):
         markdown = "See [foo](https://github.com/owner/foo) for details.\n"
         stars = {"owner/foo": {"stars": 1, "owner": "owner"}}
-        assert annotate_entries_with_stars(markdown, stars) == markdown
+        assert annotate_entries_with_stats(markdown, stars, {"foo": 5}) == markdown
 
     def test_handles_indented_bullets(self):
         markdown = "    - [foo](https://github.com/owner/foo)\n"
         stars = {"owner/foo": {"stars": 7, "owner": "owner"}}
-        assert annotate_entries_with_stars(markdown, stars) == ("    - [foo](https://github.com/owner/foo) (7 GitHub stars)\n")
+        assert annotate_entries_with_stats(markdown, stars, {}) == ("    - [foo](https://github.com/owner/foo) (GitHub stars: 7)\n")
 
     def test_preserves_lines_without_trailing_newline(self):
         markdown = "- [foo](https://github.com/owner/foo) - A foo."
         stars = {"owner/foo": {"stars": 5, "owner": "owner"}}
-        assert annotate_entries_with_stars(markdown, stars) == ("- [foo](https://github.com/owner/foo) - A foo. (5 GitHub stars)")
+        assert annotate_entries_with_stats(markdown, stars, {}) == ("- [foo](https://github.com/owner/foo) - A foo. (GitHub stars: 5)")
 
 
 class TestLoadDownloads:

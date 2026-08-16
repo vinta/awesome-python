@@ -16,7 +16,7 @@ from jinja2 import Environment, FileSystemLoader
 from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, slugify
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
-MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)\s]+)\)")
+MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 BULLET_LINE_RE = re.compile(r"^\s*-\s")
 SITE_URL = "https://awesome-python.com/"
 SITEMAP_URL = f"{SITE_URL}sitemap.xml"
@@ -377,7 +377,7 @@ def link_llms_category_index_to_canonical_pages(markdown: str, categories: Seque
     out: list[str] = []
 
     def replace_link(match: re.Match[str]) -> str:
-        target = match.group(1)
+        target = match.group(2)
         url = category_urls.get(target)
         if url is None:
             return match.group(0)
@@ -393,21 +393,24 @@ def build_llms_txt(
     template_text: str,
     *,
     readme_text: str,
+    subtitle: str,
     stars_data: dict[str, dict],
+    downloads_data: dict[str, int],
     categories: Sequence[ParsedSection],
     total_entries: int,
 ) -> str:
-    """Render the llms.txt entry point with the curated category catalog."""
-    categories_md = annotate_entries_with_stars(
+    """Render the llms.txt entry point with the curated category shortlist."""
+    categories_md = annotate_entries_with_stats(
         link_llms_category_index_to_canonical_pages(
             extract_categories_body(readme_text).rstrip(),
             categories,
         ),
         stars_data,
-        format_stars=lambda n: f"GitHub stars: {n}",
+        downloads_data,
     )
     text_env = Environment(autoescape=False, trim_blocks=True, lstrip_blocks=True)
     rendered = text_env.from_string(template_text).render(
+        subtitle=subtitle,
         site_url=SITE_URL,
         github_repo_url="https://github.com/vinta/awesome-python",
         contributing_url="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md",
@@ -420,38 +423,46 @@ def build_llms_txt(
     return rendered.rstrip() + "\n"
 
 
-def annotate_entries_with_stars(
+def annotate_entries_with_stats(
     markdown: str,
     stars_data: dict[str, dict],
-    *,
-    format_stars=None,
+    downloads_data: dict[str, int],
 ) -> str:
-    """Append the star count to bullet entry lines whose first GitHub link has known star data.
+    """Append download and star counts to bullet entry lines.
 
-    `format_stars` controls the parenthesized text. Defaults to "{N} GitHub stars".
-    Pass `str` for a bare number.
+    Downloads are looked up by the first link's display name (the same key the
+    TSV cache uses); stars by the first GitHub link with known star data.
     """
-    if format_stars is None:
-        format_stars = lambda n: f"{n} GitHub stars"  # noqa: E731 lambda-assignment
     lines = markdown.splitlines(keepends=True)
     out: list[str] = []
     for line in lines:
         if not BULLET_LINE_RE.match(line):
             out.append(line)
             continue
-        annotated = line
-        for match in MARKDOWN_LINK_RE.finditer(line):
-            repo_key = extract_github_repo(match.group(1))
+        links = MARKDOWN_LINK_RE.findall(line)
+        parts: list[str] = []
+        if links:
+            name, url = links[0]
+            # Category-index bullets link into the site itself, and Built-in entries
+            # would hit same-named PyPI backports (e.g. logging) — no counts for either.
+            if not url.startswith((SITE_URL, "#")) and detect_source_type(url) != "Built-in":
+                downloads = downloads_data.get(normalize(name))
+                if downloads is not None:
+                    parts.append(f"PyPI downloads/month: {downloads}")
+        for _, url in links:
+            repo_key = extract_github_repo(url)
             if not repo_key:
                 continue
             entry = stars_data.get(repo_key)
-            if not entry or "stars" not in entry:
-                continue
-            stripped = line.rstrip("\n")
-            ending = line[len(stripped) :]
-            annotated = f"{stripped} ({format_stars(entry['stars'])}){ending}"
-            break
-        out.append(annotated)
+            if entry and "stars" in entry:
+                parts.append(f"GitHub stars: {entry['stars']}")
+                break
+        if not parts:
+            out.append(line)
+            continue
+        stripped = line.rstrip("\n")
+        ending = line[len(stripped) :]
+        out.append(f"{stripped} ({', '.join(parts)}){ending}")
     return "".join(out)
 
 
@@ -751,7 +762,9 @@ def build(repo_root: Path) -> None:
     llms_txt = build_llms_txt(
         llms_template,
         readme_text=readme_text,
+        subtitle=subtitle,
         stars_data=stars_data,
+        downloads_data=downloads_data,
         categories=categories,
         total_entries=total_entries,
     )
