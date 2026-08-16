@@ -12,7 +12,3 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 - One entry per commit when adding or deleting entries. Exceptions: a prune sweep is one commit per section, its body listing each removal with its reason; format, wording, or categorization changes may be bundled. Cross-section re-homes ride the originating audit's commit (both sides of the move in one diff).
 - Resources sections are not project entries: out of audit scope, and the website never parses them.
 - Sponsor placement never influences which projects get listed — see [SPONSORSHIP.md](SPONSORSHIP.md).
-
-## Gotchas
-
-- On machines with only Python 3.14, prefix uv-based make targets with `UV_PYTHON=3.13` — watchdog 6.0.0 ships no 3.14 wheel and the project sets `no-build`.
