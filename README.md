@@ -1105,6 +1105,7 @@ _Frameworks and tools for penetration testing._
 _Tools for auditing dependencies against known vulnerabilities._
 
 - [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the PyPI Advisory Database and OSV.
+- [uv audit](https://docs.astral.sh/uv/reference/cli/#uv-audit) - uv's built-in dependency vulnerability and malware scanning backed by OSV (preview).
 
 ### Web Security
 
