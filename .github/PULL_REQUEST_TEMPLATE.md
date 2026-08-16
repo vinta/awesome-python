@@ -16,7 +16,7 @@
 
 Pick one:
 
-- [ ] **Obvious choice** - a tool an experienced Python developer would name unprompted for this use case
+- [ ] **Obvious choice** - a tool an experienced Python developer would name when asked "what do I use for this?"
 - [ ] **Challenger** - not yet the obvious choice, but a credible successor to one. Give adoption-trajectory evidence, not popularity alone.
 
 Explain:
