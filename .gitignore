@@ -13,12 +13,6 @@ __pycache__/
 website/output/
 website/data/
 
-# docs (except decision records)
-docs/*
-!docs/adr/
-
 # agents
-tmp/
-.superpowers/
 .playwright-cli/
-skills-lock.json
+tmp/
