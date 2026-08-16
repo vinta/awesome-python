@@ -1,6 +1,6 @@
 # [Awesome Python](https://awesome-python.com/)
 
-The definitive list that answers "I want to do X in Python, which tool should I use?" - An opinionated guide to the best Python frameworks, libraries, tools, and projects.
+An opinionated guide to the best Python frameworks, libraries, and tools.
 
 **Visit the [website](https://awesome-python.com/) to search and filter projects more easily.**
 
