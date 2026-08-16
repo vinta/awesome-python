@@ -1090,6 +1090,7 @@ _Libraries for cryptographic primitives and secure protocols._
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
+- [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
 
 ### Penetration Testing
 
@@ -1137,8 +1138,6 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/pallets-eco/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
-- [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
-- [tryton](https://github.com/tryton/tryton) - A general-purpose business framework.
 
 ## Resources
 
