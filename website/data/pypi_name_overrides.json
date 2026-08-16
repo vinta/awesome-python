@@ -1,4 +1,5 @@
 {
+  "autobahn-python": "autobahn",
   "cpython": null,
   "devpi": "devpi-server",
   "django-rest-framework": "djangorestframework",
@@ -6,11 +7,13 @@
   "fasthtml": "python-fasthtml",
   "jinja": "jinja2",
   "mem0": "mem0ai",
+  "pangu-py": "pangu",
   "playwright-python": "playwright",
   "pyenv": null,
   "python-patterns": null,
   "pytorch": "torch",
   "renpy": null,
   "strawberry": "strawberry-graphql",
+  "strawberry-django": "strawberry-graphql-django",
   "winpython": null
 }
