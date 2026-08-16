@@ -394,6 +394,7 @@ def build_llms_txt(
     *,
     readme_text: str,
     subtitle: str,
+    build_date: str,
     stars_data: dict[str, dict],
     downloads_data: dict[str, int],
     categories: Sequence[ParsedSection],
@@ -411,6 +412,7 @@ def build_llms_txt(
     text_env = Environment(autoescape=False, trim_blocks=True, lstrip_blocks=True)
     rendered = text_env.from_string(template_text).render(
         subtitle=subtitle,
+        build_date=build_date,
         site_url=SITE_URL,
         github_repo_url="https://github.com/vinta/awesome-python",
         contributing_url="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md",
@@ -763,6 +765,7 @@ def build(repo_root: Path) -> None:
         llms_template,
         readme_text=readme_text,
         subtitle=subtitle,
+        build_date=build_date.strftime("%Y/%m/%d"),
         stars_data=stars_data,
         downloads_data=downloads_data,
         categories=categories,

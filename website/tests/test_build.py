@@ -348,7 +348,7 @@ class TestBuild:
         assert '<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs text entry point" />' in index_html
 
         assert llms_txt.startswith("# Awesome Python\n\nIntro.\n")
-        assert "2 projects across 1 category." in llms_txt
+        assert "2 projects across 1 category, updated on " in llms_txt
         assert "Scan the category index" in llms_txt
         assert "Homepage: https://awesome-python.com/" in llms_txt
         assert "Markdown homepage" not in llms_txt
