@@ -638,6 +638,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - Browser Automation
   - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
   - [selenium](https://github.com/SeleniumHQ/selenium) - Python bindings for [Selenium](https://selenium.dev/) [WebDriver](https://selenium.dev/documentation/webdriver/).
+  - [seleniumbase](https://github.com/seleniumbase/SeleniumBase) - Python framework for web automation & testing, with stealth options.
 - Load Testing
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
 - API Testing
