@@ -857,6 +857,8 @@ _Libraries for parsing and manipulating plain texts._
   - [charset-normalizer](https://github.com/jawah/charset_normalizer) - Universal character encoding detector, the default of the requests ecosystem.
   - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
+- Fuzzy Matching
+  - [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) - Rapid fuzzy string matching using various string metrics, with a C++ core.
 - General
   - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
