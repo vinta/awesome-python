@@ -16,9 +16,10 @@ naturally; names with no PyPI rows are written as NOT_FOUND. Counts are
 looked up by README display name; when the display name differs from the
 canonical PyPI package (a squatter or a dead predecessor would be
 measured otherwise), add the mapping to the curated
-data/pypi_name_overrides.json — normalized README name to the real
-package, or null for projects that are not pip-installable so their
-row is never queried. The file starts with a header row (name, package,
+data/pypi_name_overrides.json — normalized README name to
+{"package": ..., "reason": ...}, where package is the real PyPI name
+or null for projects that are not pip-installable so their row is
+never queried, and reason records why. The file starts with a header row (name, package,
 downloads, fetched_at) — package is the PyPI package the row actually
 measured ("-" for null overrides) — and every row carries the sweep
 date: a cache fetched within the last 7 days is current enough for
@@ -53,7 +54,13 @@ def normalize(name: str) -> str:
 
 
 def load_overrides() -> dict[str, str | None]:
-    return json.loads(OVERRIDES_FILE.read_text())
+    """Load curated overrides: normalized README name -> PyPI package to measure (None = never query).
+
+    Each file entry is {"package": str | null, "reason": str | null}; the reason is
+    documentation only — required for null packages, optional for remaps.
+    """
+    raw = json.loads(OVERRIDES_FILE.read_text())
+    return {name: entry["package"] for name, entry in raw.items()}
 
 
 def resolve(name: str) -> str | None:
