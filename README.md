@@ -772,19 +772,19 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 _Libraries for building command-line applications._
 
 - CLI Development
-  - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
-  - [cement](https://github.com/datafolklabs/cement) - CLI Application Framework for Python.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
-  - [python-fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
-  - [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click and Pydantic.
+  - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
+  - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
+  - [fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
 - Terminal Rendering
-  - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
-  - [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
-  - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
-  - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
-  - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
+  - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
+  - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
+  - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
+- TUI Frameworks
+  - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
+  - [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
 
 ### CLI Tools
 
