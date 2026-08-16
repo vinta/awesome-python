@@ -718,6 +718,7 @@ _Software and libraries for DevOps._
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
   - [sentry-sdk](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+  - [flower](https://github.com/mher/flower) - A real-time monitor and web admin for Celery task queues.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 - Other
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
@@ -738,7 +739,6 @@ _Frameworks and libraries for Distributed Computing._
 _Libraries for working with task queues._
 
 - [celery](https://github.com/celery/celery) - An asynchronous task queue/job queue based on distributed message passing.
-  - [flower](https://github.com/mher/flower)
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 - [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
 - [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
