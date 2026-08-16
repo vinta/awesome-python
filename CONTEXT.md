@@ -44,7 +44,7 @@ The only admission path into a full Use Case: the PR names the entry it replaces
 _Avoid_: One-in-one-out (informal alias)
 
 **Challenger**:
-An entry (at most two per Use Case) that is not yet the Obvious Choice but is a credible successor to one. Marked by ordering, not description: within a Use Case, Obvious Choices are listed first, then Challengers, each tier by PyPI downloads/month descending (no-signal entries last in tier, alphabetically). Admission requires adoption-trajectory evidence, not popularity alone.
+An entry (at most two per Use Case) that is not yet the Obvious Choice but is a credible successor to one. Marked by ordering, not description: within a Use Case, Obvious Choices are listed first, then Challengers, each tier by PyPI downloads/month descending (standard-library modules first in tier, other no-signal entries last in tier, alphabetically). Admission requires adoption-trajectory evidence, not popularity alone.
 _Avoid_: Rising Star (old lane name), Hidden Gem (old lane name — concept removed entirely)
 
 **Second Tier**:
