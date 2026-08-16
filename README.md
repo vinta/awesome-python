@@ -1046,6 +1046,7 @@ _Libraries for package and dependency management._
   - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 - Build Backends
   - [setuptools](https://github.com/pypa/setuptools) - The historical and still most widely used pyproject build backend.
+  - [hatchling](https://github.com/pypa/hatch) - Modern, extensible build backend from the hatch project.
 
 ### Package Repositories
 
