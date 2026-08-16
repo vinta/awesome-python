@@ -27,6 +27,8 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 
 **Displacement**: once a use case is at its cap, the only way in is to name the entry your project replaces and argue that yours does that entry's job better. One in, one out.
 
+**Dual-listing**: a tool may hold entries in multiple use cases, but only when it earns its slot in each independently — uv sits in both Environment Management and Package Management. List the full entry in each home with identical lines; never a "see X above" note, since the website only renders list items. Description edits update every copy in the same commit. Each slot is audited on its own: dropping one home keeps the other, and dropping the tool entirely removes all copies in one commit. Dual-listing is a maintainer decision; a PR adding a second home for an existing entry is treated as a duplicate.
+
 **Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
 
 **Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
