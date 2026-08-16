@@ -784,6 +784,7 @@ _Libraries for building command-line applications._
   - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
 - TUI Frameworks
   - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
+  - [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
   - [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
 
 ### CLI Tools
@@ -812,26 +813,22 @@ _Useful CLI-based tools._
 _Libraries for working with graphical user interface applications._
 
 - Desktop
-  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
-  - [dearpygui](https://github.com/hoffstadt/DearPyGui) - A Simple GPU accelerated Python GUI framework
-  - [enaml](https://github.com/nucleic/enaml) - Creating beautiful user-interfaces with Declarative Syntax like QML.
-  - [kivy](https://github.com/kivy/kivy) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
-  - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
   - [pygobject](https://github.com/GNOME/pygobject) - Python Bindings for GLib/GObject/GIO/GTK+ (GTK+3).
-  - [PyQt](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
-  - [pyside](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), this is same as PyQt but it's the official binding with different licensing.
-  - [tkdesigner](https://github.com/ParthJadhav/Tkinter-Designer) - Generates Tkinter interfaces from Figma designs using the Figma API.
-  - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
-  - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
   - [wxPython](https://github.com/wxWidgets/Phoenix) - A blending of the wxWidgets C++ class library with the Python.
+  - [kivy](https://github.com/kivy/kivy) - A library for creating NUI applications, running on Windows, Linux, Mac OS X, Android and iOS.
+  - [dearpygui](https://github.com/hoffstadt/DearPyGui) - A Simple GPU accelerated Python GUI framework
+  - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
+- Qt
+  - [PySide6](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), same as PyQt6 but it's the official binding with different licensing.
+  - [PyQt6](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
+- Tkinter
+  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
+  - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
+  - [tkdesigner](https://github.com/ParthJadhav/Tkinter-Designer) - Generates Tkinter interfaces from Figma designs using the Figma API.
 - Web-based
-  - [buridan/ui](https://github.com/LineIndent/ui) - Composable, themeable components designed for Reflex. Extend, override, and ship without fighting the framework. Open source.
-  - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
-  - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
   - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
-- Terminal
-  - [curses](https://docs.python.org/3/library/curses.html) - (Python standard library) The built-in wrapper for [ncurses](https://www.gnu.org/software/ncurses/) used to create terminal GUI applications.
-  - [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
+  - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
+  - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
 - Wrappers
   - [gooey](https://github.com/chriskiehl/Gooey) - Turn command line programs into a full GUI application with one line.
 
@@ -961,6 +958,7 @@ _Awesome game development libraries._
 - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
 - [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
 - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
+- [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
 - [pyopengl](https://github.com/mcfletch/pyopengl) - Python ctypes bindings for OpenGL and it's related APIs.
 - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
