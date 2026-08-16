@@ -213,6 +213,8 @@ _Libraries for working with human languages._
   - [stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
+  - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
+  - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
 
 ### Computer Vision
 
@@ -851,29 +853,26 @@ _Libraries for working with graphical user interface applications._
 
 _Libraries for parsing and manipulating plain texts._
 
-- General
-  - [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
+- Encoding and Unicode
   - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
-  - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
-  - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
+- General
+  - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
   - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
-  - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
-  - [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
-  - [textdistance](https://github.com/life4/textdistance) - Compute distance between sequences with 30+ algorithms.
-  - [unidecode](https://github.com/avian2/unidecode) - ASCII transliterations of Unicode text.
-- Unique identifiers
-  - [sqids](https://github.com/sqids/sqids-python) - A library for generating short unique IDs from numbers.
-  - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
+- Internationalization
+  - [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
 - Parser
-  - [parsy](https://github.com/python-parsy/parsy) - Easy, generic parser combinator library for creating parsers.
   - [pygments](https://github.com/pygments/pygments) - A generic syntax highlighter.
   - [pyparsing](https://github.com/pyparsing/pyparsing) - A general purpose framework for generating parsers.
-  - [python-nameparser](https://github.com/derek73/python-nameparser) - Parsing human names into their individual components.
-  - [python-phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
-  - [python-user-agents](https://github.com/selwin/python-user-agents) - Browser user agent parser.
   - [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
-  - [tree-sitter-language-pack](https://github.com/xberg-io/tree-sitter-language-pack) - A comprehensive collection of tree-sitter parsers for 300+ languages, distributed as prebuilt wheels.
+  - [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
+  - [parsy](https://github.com/python-parsy/parsy) - Easy, generic parser combinator library for creating parsers.
+- Transliteration and Slugs
+  - [python-slugify](https://github.com/un33k/python-slugify) - A Python slugify library that translates unicode to ASCII.
+  - [unidecode](https://github.com/avian2/unidecode) - ASCII transliterations of Unicode text.
+- Unique identifiers
+  - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
+  - [sqids](https://github.com/sqids/sqids-python) - A library for generating short unique IDs from numbers.
 
 ### HTML Manipulation
 
