@@ -1047,6 +1047,7 @@ _Libraries for package and dependency management._
 - Build Backends
   - [setuptools](https://github.com/pypa/setuptools) - The historical and still most widely used pyproject build backend.
   - [hatchling](https://github.com/pypa/hatch) - Modern, extensible build backend from the hatch project.
+  - [uv-build](https://github.com/astral-sh/uv) - uv's fast, minimal build backend for pure-Python projects.
 
 ### Package Repositories
 
