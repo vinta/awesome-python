@@ -584,29 +584,27 @@ _Interactive Python interpreters (REPL)._
 _Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/analysis-tools-dev/static-analysis)._
 
 - Code Analysis
-  - [code2flow](https://github.com/scottrogowski/code2flow) - Turn your Python and JavaScript code into DOT flowcharts.
+  - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
-  - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
-- Code Linters
-  - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
-  - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
-    - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
-  - [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
-- Code Formatters
+- Linters and Formatters
+  - [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
   - [black](https://github.com/psf/black) - The uncompromising Python code formatter.
   - [isort](https://github.com/PyCQA/isort) - A Python utility / library to sort imports.
-  - [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
+  - [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
+  - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
+    - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
 - Refactoring
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
+- Security Linters
+  - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
-  - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
+    - [typeshed](https://github.com/python/typeshed)
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
-  - [typeshed](https://github.com/python/typeshed) - Collection of library stubs for Python, with static types.
+  - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
 - Type Annotations Generators
   - [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
-  - [pytype](https://github.com/google/pytype) - Pytype checks and infers types for Python code - without requiring type annotations.
 
 ### Testing
 
