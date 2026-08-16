@@ -1020,6 +1020,7 @@ _Libraries for working with dates and times._
 - [dateparser](https://github.com/scrapinghub/dateparser) - A Python parser for human-readable dates in dozens of languages.
 - [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 - [pendulum](https://github.com/python-pendulum/pendulum) - Python datetimes made easy.
+- [whenever](https://github.com/ariebovenberg/whenever) - A modern datetime library, type-safe and DST-safe, backed by Rust.
 
 **Python Toolchain**
 
