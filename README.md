@@ -30,6 +30,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 - [Authentication](#authentication)
 - [Admin Panels](#admin-panels)
 - [CMS](#cms)
+- [ERP](#erp)
 - [Static Site Generators](#static-site-generators)
 
 **HTTP & Scraping**
@@ -121,7 +122,6 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 
 **Other**
 
-- [ERP](#erp)
 - [Hardware](#hardware)
 - [Microsoft Windows](#microsoft-windows)
 - [Miscellaneous](#miscellaneous)
@@ -337,6 +337,12 @@ _Content Management Systems._
 
 - [wagtail](https://github.com/wagtail/wagtail) - A Django content management system.
 - [django-cms](https://github.com/django-cms/django-cms) - The easy-to-use and developer-friendly enterprise CMS powered by Django.
+
+### ERP
+
+_Enterprise resource planning frameworks._
+
+- [odoo](https://github.com/odoo/odoo) - A suite of open source business apps: CRM, e-commerce, accounting, inventory, and thousands of community modules.
 
 ### Static Site Generators
 
@@ -1116,12 +1122,6 @@ _Libraries for application-layer web security._
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Other**
-
-### ERP
-
-_Enterprise resource planning frameworks._
-
-- [odoo](https://github.com/odoo/odoo) - A suite of open source business apps: CRM, e-commerce, accounting, inventory, and thousands of community modules.
 
 ### Hardware
 
