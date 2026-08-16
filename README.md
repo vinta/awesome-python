@@ -854,6 +854,7 @@ _Libraries for working with graphical user interface applications._
 _Libraries for parsing and manipulating plain texts._
 
 - Encoding and Unicode
+  - [charset-normalizer](https://github.com/jawah/charset_normalizer) - Universal character encoding detector, the default of the requests ecosystem.
   - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
 - General
