@@ -1041,7 +1041,6 @@ _Libraries for Python version and virtual environment management._
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
-  - [pyenv-win](https://github.com/pyenv-win/pyenv-win)
 
 ### Package Management
 
@@ -1138,6 +1137,7 @@ _Python programming on Microsoft Windows._
 
 - [pythonnet](https://github.com/pythonnet/pythonnet) - Python Integration with the .NET Common Language Runtime (CLR).
 - [pywin32](https://github.com/mhammond/pywin32) - Python Extensions for Windows.
+- [pyenv-win](https://github.com/pyenv-win/pyenv-win) - A Python version manager for Windows ([pyenv](https://github.com/pyenv/pyenv) fork).
 - [winpython](https://github.com/winpython/winpython) - Portable development environment for Windows 10/11.
 
 ### Miscellaneous
