@@ -713,13 +713,11 @@ _Software and libraries for DevOps._
 
 _Frameworks and libraries for Distributed Computing._
 
-- Batch Processing
-  - [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
-  - [luigi](https://github.com/spotify/luigi) - A module that helps you build complex pipelines of batch jobs.
-  - [mpi4py](https://github.com/mpi4py/mpi4py) - Python bindings for MPI.
-  - [pyspark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
-  - [joblib](https://github.com/joblib/joblib) - A set of tools to provide lightweight pipelining in Python.
-  - [ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
+- [ray](https://github.com/ray-project/ray/) - A system for parallel and distributed Python that unifies the machine learning ecosystem.
+- [pyspark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
+- [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
+- [joblib](https://github.com/joblib/joblib) - A set of tools to provide lightweight pipelining in Python.
+- [mpi4py](https://github.com/mpi4py/mpi4py) - Python bindings for MPI.
 
 ### Task Queues
 
