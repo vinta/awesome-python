@@ -25,7 +25,7 @@ Group survivors by target use case — PRs proposing entries for the same use ca
 ## 4. Act
 
 - **Close**: per closing PR, AskUserQuestion presenting the draft closing comment — the comment states the reason and links CONTRIBUTING.md. Arms: close with this comment, close without a comment, keep open. Then `gh pr close <number> --repo vinta/awesome-python --comment "<comment>"`, or a plain close.
-- **Merge**: `gh pr merge <number> --repo vinta/awesome-python --merge`, then reconcile the section locally: `git pull`, remove the entry the verdict displaced, put the new entry at its Entry Ordering position, `UV_PYTHON=3.13 make test`, commit, push. An add-only diff that displaces is the normal case — the removal is this step's job, not the contributor's.
+- **Merge**: `gh pr merge <number> --repo vinta/awesome-python --merge`, then reconcile the section locally: `git pull`, remove the entry the verdict displaced, put the new entry at its Entry Ordering position, `make test`, commit, push. An add-only diff that displaces is the normal case — the removal is this step's job, not the contributor's.
 - **Park**: any reviewed PR left open gets `gh pr edit <number> --repo vinta/awesome-python --add-label "claude reviewed"` so the next fetch skips it.
 
 ## 5. Report
