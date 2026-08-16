@@ -168,6 +168,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
+  - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
+  - [kittentts](https://github.com/KittenML/KittenTTS) - Lightweight ONNX text-to-speech library with small CPU-friendly models.
 
 ### Deep Learning
 
@@ -939,19 +941,15 @@ _Libraries for manipulating images._
 _Libraries for manipulating audio, video, and their metadata._
 
 - Audio
-  - [birdnet](https://github.com/birdnet-team/BirdNET-Analyzer) - Deep learning framework for acoustic species detection; identifies bird species from audio recordings using TensorFlow.
-  - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
-  - [KittenTTS](https://github.com/KittenML/KittenTTS) - Lightweight ONNX text-to-speech library with small CPU-friendly models.
-  - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
-  - [matchering](https://github.com/sergree/matchering) - A library for automated reference audio mastering.
   - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
+  - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
 - Video
   - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
   - [vidgear](https://github.com/abhiTronix/vidgear) - Most Powerful multi-threaded Video Processing framework.
 - Metadata
-  - [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
   - [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
   - [tinytag](https://github.com/tinytag/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
+  - [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
 
 ### Game Development
 
