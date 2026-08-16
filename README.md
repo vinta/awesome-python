@@ -763,9 +763,8 @@ _Libraries for generating and working with logs._
 
 _Tools and libraries for Virtual Networking and SDN (Software Defined Networking)._
 
-- [mininet](https://github.com/mininet/mininet) - A popular network emulator and API written in Python.
-- [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
+- [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
 
 **CLI & GUI**
 
