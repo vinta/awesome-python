@@ -1074,10 +1074,9 @@ _Libraries to create packaged executables for release distribution._
 _Libraries for storing and parsing configuration options._
 
 - [configparser](https://docs.python.org/3/library/configparser.html) - (Python standard library) INI file parser.
-- [dynaconf](https://github.com/dynaconf/dynaconf) - Dynaconf is a configuration manager with plugins for Django, Flask and FastAPI.
-- [hydra](https://github.com/facebookresearch/hydra) - Hydra is a framework for elegantly configuring complex applications.
-- [python-decouple](https://github.com/HBNetwork/python-decouple) - Strict separation of settings from code.
 - [python-dotenv](https://github.com/theskumar/python-dotenv) - Reads key-value pairs from a `.env` file and sets them as environment variables.
+- [hydra-core](https://github.com/hydra-ecosystem/hydra) - Hydra is a framework for elegantly configuring complex applications.
+- [dynaconf](https://github.com/dynaconf/dynaconf) - Dynaconf is a configuration manager with plugins for Django, Flask and FastAPI.
 
 **Security**
 
