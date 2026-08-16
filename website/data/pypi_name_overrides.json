@@ -1,0 +1,16 @@
+{
+  "cpython": null,
+  "devpi": "devpi-server",
+  "django-rest-framework": "djangorestframework",
+  "django-rules": "rules",
+  "fasthtml": "python-fasthtml",
+  "jinja": "jinja2",
+  "mem0": "mem0ai",
+  "playwright-python": "playwright",
+  "pyenv": null,
+  "python-patterns": null,
+  "pytorch": "torch",
+  "renpy": null,
+  "strawberry": "strawberry-graphql",
+  "winpython": null
+}

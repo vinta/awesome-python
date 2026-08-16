@@ -7,7 +7,8 @@ this script sleeps 12s between requests and 530 names would take ~2 hours
 (use fetch_pypi_downloads_via_clickpy.py for bulk). Reads PEPY_TECH_API_KEY from the
 environment, falling back to the repo-root .env. The v2 endpoint returns
 ~90 days of per-day per-version counts; this script sums the most recent
-30 days present in the response across all versions. pepy counts include
+30 days present in the response across all versions. Names resolve
+through data/pypi_name_overrides.json, matching the cache sweep. pepy counts include
 mirror/CI traffic (CI filtering is a paid pepy feature), matching the
 ClickPy/BigQuery figures; pypistats.org excludes mirrors, so never mix
 the two in one comparison. Results print to stdout as TSV and are not
@@ -22,7 +23,7 @@ import time
 from pathlib import Path
 
 import httpx
-from fetch_pypi_downloads_via_clickpy import normalize
+from fetch_pypi_downloads_via_clickpy import resolve
 
 ENV_FILE = Path(__file__).parent.parent / ".env"
 PEPY_URL = "https://api.pepy.tech/api/v2/projects/{name}"
@@ -51,7 +52,13 @@ def main() -> None:
     if len(sys.argv) < 2:
         print("Usage: python fetch_pypi_downloads_via_pepy.py NAME [NAME ...]", file=sys.stderr)
         sys.exit(1)
-    names = [normalize(name) for name in sys.argv[1:]]
+    names = []
+    for arg in sys.argv[1:]:
+        pkg = resolve(arg)
+        if pkg is None:
+            print(f"{arg}: not pip-installable per pypi_name_overrides.json, skipping", file=sys.stderr)
+        else:
+            names.append(pkg)
     with httpx.Client(headers={"X-API-Key": load_api_key()}, timeout=30) as client:
         for i, name in enumerate(names):
             if i:

@@ -3,7 +3,8 @@
 
 Queries the canonical source ClickPy mirrors —
 `bigquery-public-data.pypi.file_downloads` via the `bq` CLI — and prints
-name<TAB>count TSV to stdout. Maintainer-local (needs a personal GCP
+name<TAB>count TSV to stdout. Names resolve through
+data/pypi_name_overrides.json, matching the cache sweep. Maintainer-local (needs a personal GCP
 account) and print-only: data/pypi_downloads.tsv is written solely by
 fetch_pypi_downloads_via_clickpy.py.
 
@@ -27,7 +28,7 @@ import subprocess
 import sys
 from json import loads
 
-from fetch_pypi_downloads_via_clickpy import normalize
+from fetch_pypi_downloads_via_clickpy import resolve
 
 MAX_BYTES_BILLED = 400_000_000_000
 
@@ -59,7 +60,16 @@ def fetch_bigquery(names: list[str], dry_run: bool) -> dict[str, int]:
 
 def main() -> None:
     dry_run = "--dry-run" in sys.argv
-    names = sorted({normalize(arg) for arg in sys.argv[1:] if arg != "--dry-run"})
+    names = set()
+    for arg in sys.argv[1:]:
+        if arg == "--dry-run":
+            continue
+        pkg = resolve(arg)
+        if pkg is None:
+            print(f"{arg}: not pip-installable per pypi_name_overrides.json, skipping", file=sys.stderr)
+        else:
+            names.add(pkg)
+    names = sorted(names)
     if not names:
         print("Usage: python fetch_pypi_downloads_via_bigquery.py [--dry-run] NAME [NAME ...]", file=sys.stderr)
         sys.exit(1)
