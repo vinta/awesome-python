@@ -155,7 +155,10 @@
           </td>
           <td class="col-downloads">
             {% if entry.downloads is not none %}{{
-            "{:,}".format(entry.downloads) }}{% else %}&mdash;{% endif %}
+            "{:,}".format(entry.downloads) }}{% else %}<span
+              class="source-badge"
+              >Not on PyPI</span
+            >{% endif %}
           </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
