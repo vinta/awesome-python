@@ -563,12 +563,12 @@ _Libraries for quantum computing._
 _Python implementation of data structures, algorithms and design patterns. Also see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms)._
 
 - Algorithms
-  - [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
   - [sortedcontainers](https://github.com/grantjenks/python-sortedcontainers) - Fast and pure-Python implementation of sorted collections.
+  - [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
   - [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
 - Design Patterns
-  - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
   - [transitions](https://github.com/pytransitions/transitions) - A lightweight, object-oriented finite state machine implementation.
+  - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
 
 ### Interactive Interpreter
 
@@ -673,12 +673,12 @@ _Compile software from source code._
 
 _Libraries for generating project documentation._
 
-- [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
-- [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
-  - [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
-- [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 - [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
   - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
+- [mkdocs](https://github.com/mkdocs/mkdocs/) - Markdown friendly documentation generator.
+  - [mkdocs-material](https://github.com/squidfunk/mkdocs-material)
+- [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
+- [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
 
 **DevOps**
 
