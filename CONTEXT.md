@@ -33,11 +33,11 @@ The scope test for what belongs on the list at all: Python developers use it in 
 _Avoid_: Python-first, written-in-Python (old requirement — removed)
 
 **Obvious Choice**:
-An entry an experienced Python developer would name unprompted when asked "what do I use for [Use Case]?". Certified by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars; judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). A standard-library module holds a slot only when it is itself the Obvious Choice for the Use Case, not merely relevant to it.
+An entry an experienced Python developer would name unprompted when asked "what do I use for [Use Case]?". Certified by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars; judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs — extended to any project consumed outside pip: SDK downloads like renpy, deployed services like thumbor — and large-but-specific audiences misread as "niche"). A standard-library module holds a slot only when it is itself the Obvious Choice for the Use Case, not merely relevant to it.
 _Avoid_: Industry Standard (old lane name), awesome (unfalsifiable)
 
 **Cap**:
-The per-Use-Case entry limit: up to 3 Obvious Choices plus up to 2 Challengers, hard maximum 5. A qualitative bar first, a numeric backstop second.
+The per-Use-Case entry limit: up to 3 Obvious Choices plus up to 2 Challengers, hard maximum 5. A qualitative bar first, a numeric backstop second — and a ceiling, not a floor: a minted Use Case may hold a single entry.
 
 **Displacement**:
 The only admission path into a full Use Case: the PR names the entry it replaces and argues the newcomer does that entry's job better. One in, one out.
