@@ -228,7 +228,8 @@ _Libraries for Computer Vision._
 - OCR
   - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
   - [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 40+ languages supported.
-
+  - [microsaas-agent-api](https://pypi.org/project/microsaas-agent-api/) - Python SDK for receipt OCR document parsing, email validation, and AI tools.
+    
 ### Recommender Systems
 
 _Libraries for building recommender systems._
