@@ -29,7 +29,7 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 
 **Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
 
-Looking for an exhaustive catalog instead? Follow the awesome-* lists linked under individual entries (for example awesome-python-testing) — they exist precisely so this list doesn't have to be one.
+Looking for an exhaustive catalog instead? Follow the awesome-\* lists linked under individual entries (for example awesome-python-testing) — they exist precisely so this list doesn't have to be one.
 
 ## Entry Format Reference
 
@@ -73,7 +73,7 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 
 ### Entry Ordering
 
-Within a use case, the obvious choices are listed first, ordered by PyPI downloads per month from high to low; challengers follow, in the same order. Standard-library modules sort first within their tier — built-ins lead — alphabetically when there are several. Other entries without a download signal (agent skill packs, projects distributed outside PyPI) sort last within their tier, alphabetically. There is no marker in the entry text — position is the marker, so the last entries of a use case may be its challengers.
+Within a use case, the obvious choices are listed first, ordered by PyPI downloads per month from high to low; challengers follow, in the same order. Standard-library modules sort first in the use case — built-ins lead, before everything else — alphabetically when there are several. (This never conflicts with tier order: a standard-library module is only listed where it is itself the obvious choice, so it always belongs to the first tier.) Other entries without a download signal (agent skill packs, projects distributed outside PyPI) sort last within their tier, alphabetically. There is no marker in the entry text — position is the marker, so the last entries of a use case may be its challengers.
 
 ## Changing the Structure
 
