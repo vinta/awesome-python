@@ -168,6 +168,9 @@
           <th class="col-name" data-sort="name">
             <button type="button" class="sort-btn">Project Name</button>
           </th>
+          <th class="col-downloads" data-sort="downloads">
+            <button type="button" class="sort-btn">PyPI Downloads</button>
+          </th>
           <th class="col-stars" data-sort="stars">
             <button type="button" class="sort-btn">GitHub Stars</button>
           </th>
@@ -200,6 +203,13 @@
               >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
               else %}{{ entry.categories[0] }}{% endif %}</span
             >
+          </td>
+          <td class="col-downloads">
+            {% if entry.downloads is not none %}{{
+            "{:,}".format(entry.downloads) }}{% else %}<span
+              class="source-badge"
+              >Not on PyPI</span
+            >{% endif %}
           </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
@@ -260,14 +270,14 @@
         {% if entry.description %}
         <tr class="desc-row" aria-hidden="true" hidden>
           <td class="col-num"></td>
-          <td colspan="5">
+          <td colspan="6">
             <div class="desc-text">{{ entry.description | safe }}</div>
           </td>
         </tr>
         {% endif %}
         <tr class="expand-row" id="expand-{{ loop.index }}">
           <td></td>
-          <td colspan="4">
+          <td colspan="5">
             <div class="expand-content">
               {% if entry.description %}
               <div class="expand-desc">{{ entry.description | safe }}</div>
@@ -298,6 +308,10 @@
                   ><time datetime="{{ entry.last_commit_at }}"
                     >{{ entry.last_commit_at[:10] }}</time
                   ></span
+                >{% endif %} {% if entry.downloads is not none %}<span
+                  class="expand-downloads"
+                  ><span class="expand-sep">/</span>{{
+                  "{:,}".format(entry.downloads) }} downloads/month</span
                 >{% endif %}
               </div>
             </div>

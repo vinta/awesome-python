@@ -7,6 +7,9 @@ install:
 fetch_github_stars:
 	uv run python website/fetch_github_stars.py
 
+fetch_pypi_downloads:
+	uv run python website/fetch_pypi_downloads_via_clickpy.py
+
 test:
 	uv run pytest website/tests/ -v
 
@@ -23,10 +26,7 @@ build:
 	uv run python website/build.py
 
 preview: build
-	uv run watchmedo shell-command \
-		--patterns='*.md;*.html;*.css;*.js;*.py' \
-		--recursive \
-		--wait --drop \
-		--command='uv run python website/build.py' \
+	uv run watchfiles \
+		'uv run python website/build.py' \
 		README.md website/templates website/static website/data & \
 	python -m http.server -b 127.0.0.1 -d website/output/ 8000

@@ -893,6 +893,14 @@ th[data-sort].sort-asc::after {
   letter-spacing: 0.02em;
 }
 
+.col-downloads {
+  width: 9.5rem;
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+}
+
 .col-commit {
   width: 9rem;
   white-space: nowrap;
@@ -1041,7 +1049,8 @@ th[data-sort].sort-asc::after {
   color: var(--line-strong);
 }
 
-.expand-commit {
+.expand-commit,
+.expand-downloads {
   display: none;
 }
 
@@ -1606,11 +1615,13 @@ th[data-sort].sort-asc::after {
     justify-self: start;
   }
 
-  .col-commit {
+  .col-commit,
+  .col-downloads {
     display: none;
   }
 
-  .expand-commit {
+  .expand-commit,
+  .expand-downloads {
     display: inline;
   }
 

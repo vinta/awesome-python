@@ -5,7 +5,7 @@ description = "An opinionated list of awesome Python frameworks, libraries, soft
 authors = [{ name = "Vinta Chen", email = "vinta.chen@gmail.com" }]
 readme = "README.md"
 license = "MIT"
-requires-python = ">=3.13"
+requires-python = ">=3.14"
 dependencies = []
 
 [project.urls]
@@ -13,14 +13,15 @@ Homepage = "https://awesome-python.com/"
 Repository = "https://github.com/vinta/awesome-python"
 
 [dependency-groups]
-build = ["httpx==0.28.1", "jinja2==3.1.6", "markdown-it-py==4.0.0"]
-lint = ["ruff==0.15.6", "ty==0.0.33"]
-test = ["pytest==9.0.3"]
+build = ["httpx>=0.28.1", "jinja2>=3.1.6", "markdown-it-py>=4.0.0"]
+lint = ["ruff>=0.15.6", "ty>=0.0.33"]
+test = ["pytest>=9.0.3"]
+preview = ["watchfiles>=1.2.0"]
 dev = [
     { include-group = "build" },
     { include-group = "lint" },
     { include-group = "test" },
-    "watchdog==6.0.0",
+    { include-group = "preview" },
 ]
 
 [tool.uv]
@@ -34,7 +35,7 @@ only-binary = [":all:"]
 line-length = 200
 
 [tool.ty.environment]
-python-version = "3.13"
+python-version = "3.14"
 root = ["website"]
 
 [tool.ty.terminal]

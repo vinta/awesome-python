@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Fetch GitHub star counts and owner info for all GitHub repos in README.md."""
+"""Fetch GitHub star counts and owner info for all GitHub repos in README.md.
+
+The output file (data/github_stars.json) is gitignored; CI fetches it at
+deploy time, so local runs are for previews only — never commit the data.
+Entries removed from README.md leave harmless orphan keys behind.
+"""
 
 import json
 import os

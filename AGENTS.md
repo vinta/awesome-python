@@ -1,31 +1,13 @@
 # AGENTS.md
 
-## Repository Overview
+An opinionated guide to the best Python frameworks, libraries, tools, and resources.
 
-An opinionated list of Python frameworks, libraries, tools, and resources. Published at [awesome-python.com](https://awesome-python.com/).
+[README.md](README.md) is the single source of truth for catalog entries and README sponsor placements; `website/` renders it into the static site: [awesome-python.com](https://awesome-python.com/).
 
-## Entry Guidelines
+## Entry Rules
 
-**Refer to [CONTRIBUTING.md](CONTRIBUTING.md)** for acceptance criteria, quality requirements, rejection rules, and entry format. Apply these rules whenever adding or removing an entry, whether reviewing a PR or committing directly.
+[CONTRIBUTING.md](CONTRIBUTING.md) holds the admission rules, quality requirements, rejection rules, entry format, and ordering. Apply it whenever adding or removing an entry — direct commits included, not only PR reviews.
 
-## Structure
-
-- **README.md**: Source of truth for catalog entries and README sponsor placements. Hierarchical categories with alphabetically ordered entries.
-- **CONTRIBUTING.md**: Submission guidelines and review criteria.
-- **SPONSORSHIP.md**: Sponsor tiers, placement rules, and the editorial-independence policy. `website/templates/sponsorship.html` separately defines which sponsorship content appears on the published website page.
-- **website/**: Static site generator that builds awesome-python.com from README.md.
-  - `build.py`: Parses README.md and renders HTML via Jinja2 templates.
-  - `fetch_github_stars.py`: Fetches star counts into `website/data/`.
-  - `readme_parser.py`: Markdown-to-structured-data parser.
-  - `templates/`, `static/`: Jinja2 templates and CSS/JS assets.
-  - `tests/`: Pytest tests for the build pipeline.
-- **Makefile**: `make install`, `make build`, `make preview`, `make test`, `make lint`, `make format`, `make typecheck`, `make fetch_github_stars`.
-- **pyproject.toml**: Uses `uv` for dependency management. Python >=3.13.
-
-## Key Rules
-
-- Alphabetical ordering within categories is mandatory.
-- Quality over quantity. Only "awesome" projects.
-- One project per PR.
-- One entry per commit when adding or deleting entries. Format, wording, or categorization changes across multiple entries may be bundled in a single commit.
-- README.md is the source of truth for catalog entries and README sponsor placements; treat `SPONSORSHIP.md` and `website/templates/sponsorship.html` as separate sponsorship content surfaces.
+- Every keep/drop reason must be verified against current online data at decision time — download counts, repo activity and archived status, PyPI metadata, project docs. Judging tiers — obvious choice vs challenger — also requires WebSearch evidence (adoption trajectory, community sentiment), not download counts alone. Training-data recollections are not evidence; label anything unverifiable as a judgment call.
+- One entry per commit when adding or deleting entries. Exceptions: a prune sweep is one commit per section, its body listing each removal with its reason; format, wording, or categorization changes may be bundled.
+- Sponsor placement never influences which projects get listed — see [SPONSORSHIP.md](SPONSORSHIP.md). `website/templates/sponsorship.html` separately defines the sponsorship content on the published website page.

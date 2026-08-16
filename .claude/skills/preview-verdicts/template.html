@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+  :root {
+    --ink: #1c1917; --paper: #faf9f7; --muted: #78716c; --line: #e7e5e4;
+    --keep: #1d4ed8; --keep-bg: #eff4ff; --drop: #b42318; --drop-bg: #fdf1ef;
+    --changed: #fffbeb; --changed-line: #f5c518;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.5 -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+  .wrap { padding: 2rem 2.5rem 6rem; }
+  h1 { font-size: 1.7rem; margin: 0 0 .3rem; }
+  .sub { color: var(--muted); margin: 0 0 1.6rem; font-size: 1rem; }
+  .sub b { color: var(--ink); }
+  .sub code { background: #f0eeec; padding: .1em .35em; border-radius: 4px; font-size: .92em; }
+  h2 { font-size: 1.35rem; margin: 2.2rem 0 .2rem; border-bottom: 2px solid var(--ink); padding-bottom: .3rem; }
+  h3 { font-size: 1.05rem; margin: 1.3rem 0 .4rem; color: var(--ink); }
+  h3 .note { font-weight: 400; color: var(--muted); font-size: .92rem; }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-size: .82rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding: .35rem .6rem; border-bottom: 1px solid var(--line); }
+  td { padding: .5rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr.changed td { background: var(--changed); border-bottom-color: var(--changed-line); }
+  td.name { white-space: nowrap; font-weight: 600; }
+  td.name a { color: var(--ink); text-decoration: none; border-bottom: 1px solid #c8c4c0; }
+  td.name a:hover { border-bottom-color: var(--ink); }
+  td.dl { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
+  td.mine { white-space: nowrap; }
+  .badge { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .03em; padding: .12em .5em; border-radius: 4px; }
+  .badge.keep { color: var(--keep); background: var(--keep-bg); }
+  .badge.drop { color: var(--drop); background: var(--drop-bg); }
+  td.reason { color: #44403c; font-size: .95rem; max-width: 34rem; }
+  td.yours { white-space: nowrap; }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .seg button { border: 0; background: #fff; padding: .3rem .8rem; font: inherit; font-size: .88rem; cursor: pointer; color: var(--muted); }
+  .seg button + button { border-left: 1px solid var(--line); }
+  .seg button.on.k { background: var(--keep); color: #fff; font-weight: 700; }
+  .seg button.on.d { background: var(--drop); color: #fff; font-weight: 700; }
+  td.fb input { width: 100%; min-width: 14rem; font: inherit; font-size: .92rem; padding: .3rem .5rem; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+  td.fb input:focus { outline: 2px solid var(--keep); outline-offset: 0; }
+  .bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--ink); color: #fafaf9; display: flex; align-items: center; gap: 1.4rem; padding: .7rem 2.5rem; font-size: .95rem; }
+  .bar .counts b { font-variant-numeric: tabular-nums; }
+  .bar button { font: inherit; font-weight: 700; padding: .45rem 1.1rem; border: 0; border-radius: 6px; background: #fafaf9; color: var(--ink); cursor: pointer; }
+  .bar button:hover { background: #e7e5e4; }
+  .bar .hint { color: #a8a29e; }
+  #out { display: none; width: 100%; height: 9rem; margin-top: 1rem; font: 13px/1.4 ui-monospace, monospace; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>__TITLE__</h1>
+  <p class="sub">__SUB__</p>
+  <div id="app"></div>
+  <textarea id="out" readonly></textarea>
+</div>
+<div class="bar">
+  <span class="counts" id="counts"></span>
+  <button onclick="copyFeedback()">Copy feedback</button>
+  <span class="hint" id="hint">Copies only rows you changed or commented, as JSON.</span>
+</div>
+<script>
+const DATA = __DATA__;
+
+const KEY = "__KEY__";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+
+function rowId(section, name) { return section + "::" + name; }
+
+function render() {
+  const app = document.getElementById("app");
+  let html = "", lastSection = "";
+  for (const [section, subcat, rows] of DATA) {
+    if (section !== lastSection) { html += `<h2>${section}</h2>`; lastSection = section; }
+    const parts = subcat.split(" — ");
+    html += `<h3>${parts[0]}${parts[1] ? ` <span class="note">— ${parts[1]}</span>` : ""}</h3>`;
+    html += `<table><tr><th>Entry</th><th style="text-align:right">Downloads/mo</th><th>My verdict</th><th>My reason</th><th>Yours</th><th>Your reason (optional)</th></tr>`;
+    for (const [name, url, dl, mine, reason] of rows) {
+      const id = rowId(section, name);
+      const s = state[id] || {};
+      const yours = s.verdict || mine;
+      const changed = yours !== mine || (s.feedback || "").trim() !== "";
+      html += `<tr id="${cssId(id)}" class="${changed ? "changed" : ""}">
+        <td class="name"><a href="${url}" target="_blank" rel="noopener">${name}</a></td>
+        <td class="dl">${dl}</td>
+        <td class="mine"><span class="badge ${mine}">${mine.toUpperCase()}</span></td>
+        <td class="reason">${reason}</td>
+        <td class="yours"><span class="seg">
+          <button class="k ${yours === "keep" ? "on" : ""}" onclick="setV('${esc(id)}','keep')">Keep</button>
+          <button class="d ${yours === "drop" ? "on" : ""}" onclick="setV('${esc(id)}','drop')">Drop</button>
+        </span></td>
+        <td class="fb"><input value="${(s.feedback || "").replace(/"/g, "&quot;")}" oninput="setF('${esc(id)}', this.value)" placeholder="why…"></td>
+      </tr>`;
+    }
+    html += `</table>`;
+  }
+  app.innerHTML = html;
+  updateCounts();
+}
+
+function cssId(id) { return "r-" + id.replace(/[^a-zA-Z0-9]/g, "_"); }
+function esc(id) { return id.replace(/'/g, "\\'"); }
+
+function setV(id, v) { state[id] = state[id] || {}; state[id].verdict = v; save(); render(); }
+function setF(id, f) {
+  state[id] = state[id] || {}; state[id].feedback = f; save();
+  const [section, name] = id.split("::");
+  const mine = findMine(section, name);
+  const yours = state[id].verdict || mine;
+  document.getElementById(cssId(id)).className = (yours !== mine || f.trim() !== "") ? "changed" : "";
+  updateCounts();
+}
+function findMine(section, name) {
+  for (const [s, , rows] of DATA) if (s === section) for (const r of rows) if (r[0] === name) return r[3];
+}
+function save() { localStorage.setItem(KEY, JSON.stringify(state)); }
+
+function collect() {
+  const out = [];
+  for (const [section, subcat, rows] of DATA) {
+    for (const [name, , , mine] of rows) {
+      const id = rowId(section, name);
+      const s = state[id] || {};
+      const yours = s.verdict || mine;
+      const fb = (s.feedback || "").trim();
+      if (yours !== mine || fb) out.push({ section, subcategory: subcat.split(" — ")[0], entry: name, my_verdict: mine, your_verdict: yours, reason: fb });
+    }
+  }
+  return out;
+}
+
+function updateCounts() {
+  let keeps = 0, total = 0, changed = 0;
+  for (const [section, , rows] of DATA) for (const [name, , , mine] of rows) {
+    total++;
+    const s = state[rowId(section, name)] || {};
+    const yours = s.verdict || mine;
+    if (yours === "keep") keeps++;
+    if (yours !== mine) changed++;
+  }
+  document.getElementById("counts").innerHTML = `<b>${keeps}</b> keep · <b>${total - keeps}</b> drop of <b>${total}</b> &nbsp;|&nbsp; <b>${changed}</b> verdicts flipped`;
+}
+
+function copyFeedback() {
+  const fb = collect();
+  const text = fb.length ? JSON.stringify(fb, null, 1) : "(no changes — all verdicts accepted as-is)";
+  const hint = document.getElementById("hint");
+  navigator.clipboard.writeText(text).then(
+    () => { hint.textContent = `Copied ${fb.length ? fb.length + " row(s)" : "acceptance note"} — paste into the chat.`; },
+    () => { const o = document.getElementById("out"); o.style.display = "block"; o.value = text; o.select(); hint.textContent = "Clipboard blocked — select & copy the box above."; }
+  );
+}
+
+render();
+</script>
+</body>
+</html>

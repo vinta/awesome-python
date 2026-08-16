@@ -5,7 +5,7 @@ function getScrollBehavior() {
 }
 
 let activeFilter = null;
-let activeSort = { col: "stars", order: "desc" };
+let activeSort = { col: "downloads", order: "desc" };
 const searchInput = document.querySelector(".search");
 const filterBar = document.querySelector(".filter-bar");
 const filterValue = document.querySelector(".filter-value");
@@ -211,7 +211,7 @@ function buildQueryString() {
   const params = new URLSearchParams();
   const query = searchInput ? searchInput.value.trim() : "";
   if (query) params.set("q", query);
-  if (activeSort.col !== "stars" || activeSort.order !== "desc") {
+  if (activeSort.col !== "downloads" || activeSort.order !== "desc") {
     params.set("sort", activeSort.col);
     params.set("order", activeSort.order);
   }
@@ -233,6 +233,14 @@ function getSortValue(row, col) {
   if (col === "stars") {
     const text = row
       .querySelector(".col-stars")
+      .textContent.trim()
+      .replace(/,/g, "");
+    const num = parseInt(text, 10);
+    return isNaN(num) ? -1 : num;
+  }
+  if (col === "downloads") {
+    const text = row
+      .querySelector(".col-downloads")
       .textContent.trim()
       .replace(/,/g, "");
     const num = parseInt(text, 10);
@@ -384,7 +392,7 @@ sortHeaders.forEach(function (th) {
     if (activeSort.col === col) {
       if (activeSort.order === defaultOrder)
         activeSort = { col: col, order: altOrder };
-      else activeSort = { col: "stars", order: "desc" };
+      else activeSort = { col: "downloads", order: "desc" };
     } else {
       activeSort = { col: col, order: defaultOrder };
     }
@@ -467,7 +475,10 @@ if (backToTop) {
   const order = params.get("order");
   if (q && searchInput) searchInput.value = q;
   if (
-    (sort === "name" || sort === "stars" || sort === "commit-time") &&
+    (sort === "name" ||
+      sort === "stars" ||
+      sort === "downloads" ||
+      sort === "commit-time") &&
     (order === "desc" || order === "asc")
   ) {
     activeSort = { col: sort, order: order };

@@ -11,14 +11,9 @@ __pycache__/
 
 # website
 website/output/
-website/data/
-
-# docs
-docs/
+website/data/*
+!website/data/pypi_name_overrides.json
 
 # agents
-.agents/
-.claude/skills/
-.superpowers/
 .playwright-cli/
-skills-lock.json
+tmp/
