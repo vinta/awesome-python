@@ -687,27 +687,25 @@ _Libraries for generating project documentation._
 _Software and libraries for DevOps._
 
 - Cloud Providers
-  - [awscli](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services.
   - [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
+  - [awscli](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services.
 - Configuration Management
   - [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
-  - [cloudinit](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
-  - [openstack](https://github.com/openstack/openstack) - Open source software for building private and public clouds.
+  - [cloud-init](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
   - [pyinfra](https://github.com/pyinfra-dev/pyinfra) - A versatile CLI tools and python libraries to automate infrastructure.
-  - [saltstack](https://github.com/saltstack/salt) - Infrastructure automation and management system.
+  - [salt](https://github.com/saltstack/salt) - Infrastructure automation and management system.
 - Deployment
-  - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
   - [fabric](https://github.com/fabric/fabric) - A simple, Pythonic tool for remote execution and deployment.
+  - [chalice](https://github.com/aws/chalice) - A Python serverless microframework for AWS.
 - Monitoring and Processes
   - [psutil](https://github.com/giampaolo/psutil) - A cross-platform process and system utilities module.
-  - [sentry-python](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
-  - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+  - [sentry-sdk](https://github.com/getsentry/sentry-python) - Sentry SDK for Python.
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
+  - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 - Other
-  - [borg](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
-  - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
-  - [kubesdk](https://github.com/puzl-cloud/kubesdk) - A modern async-first Kubernetes client and API model generator.
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
+  - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+  - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
 
 ### Distributed Computing
 
