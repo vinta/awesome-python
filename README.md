@@ -590,6 +590,8 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
+- Git Hooks
+  - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 - Linters and Formatters
   - [ruff](https://github.com/astral-sh/ruff) - An extremely fast Python linter and code formatter.
   - [black](https://github.com/psf/black) - The uncompromising Python code formatter.
@@ -706,7 +708,6 @@ _Software and libraries for DevOps._
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 - Other
-  - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
 
