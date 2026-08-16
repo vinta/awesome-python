@@ -171,6 +171,9 @@
           <th class="col-stars" data-sort="stars">
             <button type="button" class="sort-btn">GitHub Stars</button>
           </th>
+          <th class="col-downloads" data-sort="downloads">
+            <button type="button" class="sort-btn">Downloads/Month</button>
+          </th>
           <th class="col-commit" data-sort="commit-time">
             <button type="button" class="sort-btn">Last Commit</button>
           </th>
@@ -206,6 +209,10 @@
             elif entry.source_type %}<span class="source-badge"
               >{{ entry.source_type }}</span
             >{% else %}&mdash;{% endif %}
+          </td>
+          <td class="col-downloads">
+            {% if entry.downloads is not none %}{{
+            "{:,}".format(entry.downloads) }}{% else %}&mdash;{% endif %}
           </td>
           <td
             class="col-commit"
@@ -260,14 +267,14 @@
         {% if entry.description %}
         <tr class="desc-row" aria-hidden="true" hidden>
           <td class="col-num"></td>
-          <td colspan="5">
+          <td colspan="6">
             <div class="desc-text">{{ entry.description | safe }}</div>
           </td>
         </tr>
         {% endif %}
         <tr class="expand-row" id="expand-{{ loop.index }}">
           <td></td>
-          <td colspan="4">
+          <td colspan="5">
             <div class="expand-content">
               {% if entry.description %}
               <div class="expand-desc">{{ entry.description | safe }}</div>
@@ -298,6 +305,10 @@
                   ><time datetime="{{ entry.last_commit_at }}"
                     >{{ entry.last_commit_at[:10] }}</time
                   ></span
+                >{% endif %} {% if entry.downloads is not none %}<span
+                  class="expand-downloads"
+                  ><span class="expand-sep">/</span>{{
+                  "{:,}".format(entry.downloads) }} downloads/month</span
                 >{% endif %}
               </div>
             </div>

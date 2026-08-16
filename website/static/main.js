@@ -238,6 +238,14 @@ function getSortValue(row, col) {
     const num = parseInt(text, 10);
     return isNaN(num) ? -1 : num;
   }
+  if (col === "downloads") {
+    const text = row
+      .querySelector(".col-downloads")
+      .textContent.trim()
+      .replace(/,/g, "");
+    const num = parseInt(text, 10);
+    return isNaN(num) ? -1 : num;
+  }
   if (col === "commit-time") {
     const attr = row.querySelector(".col-commit").getAttribute("data-commit");
     return attr ? new Date(attr).getTime() : 0;
@@ -467,7 +475,10 @@ if (backToTop) {
   const order = params.get("order");
   if (q && searchInput) searchInput.value = q;
   if (
-    (sort === "name" || sort === "stars" || sort === "commit-time") &&
+    (sort === "name" ||
+      sort === "stars" ||
+      sort === "downloads" ||
+      sort === "commit-time") &&
     (order === "desc" || order === "asc")
   ) {
     activeSort = { col: sort, order: order };

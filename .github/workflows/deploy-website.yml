@@ -71,6 +71,25 @@ jobs:
           fi
           python -m json.tool website/data/github_stars.json > /dev/null
 
+      - name: Restore PyPI download data cache
+        uses: actions/cache/restore@v4
+        with:
+          path: website/data/pypi_downloads.tsv
+          key: pypi-downloads-${{ steps.date.outputs.today }}
+          restore-keys: pypi-downloads-
+
+      - name: Fetch PyPI downloads
+        id: fetch-downloads
+        continue-on-error: true
+        run: make fetch_pypi_downloads
+
+      - name: Save PyPI download data cache
+        if: steps.fetch-downloads.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: website/data/pypi_downloads.tsv
+          key: pypi-downloads-${{ steps.date.outputs.today }}
+
       - name: Build website
         run: make build
 

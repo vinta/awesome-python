@@ -11,6 +11,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
 
+from fetch_pypi_downloads_via_clickpy import normalize
 from jinja2 import Environment, FileSystemLoader
 from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, slugify
 
@@ -52,6 +53,7 @@ class TemplateEntry(TypedDict):
     groups: list[str]
     subcategories: list[TemplateSubcategory]
     stars: int | None
+    downloads: int | None
     owner: str | None
     last_commit_at: str | None
     source_type: str | None
@@ -94,6 +96,22 @@ def load_stars(path: Path) -> dict[str, dict]:
         except json.JSONDecodeError:
             return {}
     return {}
+
+
+def load_downloads(path: Path) -> dict[str, int]:
+    """Load last-30-day download counts from the TSV cache, keyed by normalized README name.
+
+    Columns: name, package, downloads, fetched_at. Skips the header and
+    NOT_FOUND rows. Returns empty dict if the file doesn't exist.
+    """
+    if not path.exists():
+        return {}
+    downloads: dict[str, int] = {}
+    for line in path.read_text(encoding="utf-8").splitlines()[1:]:
+        parts = line.split("\t")
+        if len(parts) >= 3 and parts[2].isdigit():
+            downloads[parts[0]] = int(parts[2])
+    return downloads
 
 
 def sort_entries(entries: Sequence[TemplateEntry]) -> list[TemplateEntry]:
@@ -481,6 +499,7 @@ def extract_entries(
                     groups=[],
                     subcategories=[],
                     stars=None,
+                    downloads=None,
                     owner=None,
                     last_commit_at=None,
                     source_type=detect_source_type(entry["url"]),
@@ -535,6 +554,7 @@ def build(repo_root: Path) -> None:
     build_date = datetime.now(UTC)
 
     stars_data = load_stars(website / "data" / "github_stars.json")
+    downloads_data = load_downloads(website / "data" / "pypi_downloads.tsv")
 
     repo_self = stars_data.get("vinta/awesome-python", {})
     repo_stars = None
@@ -551,6 +571,9 @@ def build(repo_root: Path) -> None:
             entry["stars"] = sd["stars"]
             entry["owner"] = sd["owner"]
             entry["last_commit_at"] = sd.get("last_commit_at", "")
+        # Built-in entries would hit same-named PyPI backports (e.g. asyncio), not the stdlib.
+        if entry.get("source_type") != "Built-in":
+            entry["downloads"] = downloads_data.get(normalize(entry["name"]))
 
     entries = sort_entries(entries)
     category_urls = {cat["name"]: category_path(cat) for cat in categories}

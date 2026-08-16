@@ -7,6 +7,9 @@ install:
 fetch_github_stars:
 	uv run python website/fetch_github_stars.py
 
+fetch_pypi_downloads:
+	uv run python website/fetch_pypi_downloads_via_clickpy.py
+
 test:
 	uv run pytest website/tests/ -v
 

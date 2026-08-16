@@ -17,6 +17,7 @@ from build import (
     detect_source_type,
     extract_entries,
     extract_github_repo,
+    load_downloads,
     load_stars,
     sort_entries,
     subcategory_path,
@@ -428,6 +429,40 @@ class TestBuild:
         assert "100" in html
         # Expand content present
         assert "expand-content" in html
+
+    def test_build_with_downloads_renders_column(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            ## Stuff
+
+            - [My-Lib](https://github.com/org/mylib) - On PyPI.
+            - [no-pypi](https://example.com/none) - Not on PyPI.
+            - [asyncio](https://docs.python.org/3/library/asyncio.html) - Built-in.
+
+            # Contributing
+
+            Done.
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        data_dir = tmp_path / "website" / "data"
+        data_dir.mkdir(parents=True)
+        # Keyed by normalized README display name, like fetch_pypi_downloads_via_clickpy.py writes it
+        (data_dir / "pypi_downloads.tsv").write_text(
+            "name\tpackage\tdownloads\tfetched_at\nasyncio\tasyncio\t26305454\t2026-08-16\nmy-lib\tmy-lib\t1234567\t2026-08-16\n",
+            encoding="utf-8",
+        )
+
+        build(tmp_path)
+
+        html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
+        assert "1,234,567" in html
+        # Built-in entries never show PyPI counts: the asyncio row is the backport package
+        assert "26,305,454" not in html
 
     def test_build_fails_when_group_and_category_slug_collide(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -974,6 +1009,7 @@ def _template_entry(name: str, stars: int | None, source_type: str | None = None
         groups=[],
         subcategories=[],
         stars=stars,
+        downloads=None,
         owner=None,
         last_commit_at=None,
         source_type=source_type,
@@ -1199,3 +1235,16 @@ class TestAnnotateEntriesWithStars:
         markdown = "- [foo](https://github.com/owner/foo) - A foo."
         stars = {"owner/foo": {"stars": 5, "owner": "owner"}}
         assert annotate_entries_with_stars(markdown, stars) == ("- [foo](https://github.com/owner/foo) - A foo. (5 GitHub stars)")
+
+
+class TestLoadDownloads:
+    def test_parses_tsv_and_skips_not_found(self, tmp_path):
+        tsv = tmp_path / "pypi_downloads.tsv"
+        tsv.write_text(
+            "name\tpackage\tdownloads\tfetched_at\naiohttp\taiohttp\t649105404\t2026-08-16\npytorch\ttorch\t50000000\t2026-08-16\ndead-pkg\t-\tNOT_FOUND\t2026-08-16\n",
+            encoding="utf-8",
+        )
+        assert load_downloads(tsv) == {"aiohttp": 649105404, "pytorch": 50000000}
+
+    def test_missing_file_returns_empty(self, tmp_path):
+        assert load_downloads(tmp_path / "nope.tsv") == {}
