@@ -53,25 +53,25 @@ test = [
 
 [package.metadata.requires-dev]
 build = [
-    { name = "httpx", specifier = "==0.28.1" },
-    { name = "jinja2", specifier = "==3.1.6" },
-    { name = "markdown-it-py", specifier = "==4.0.0" },
+    { name = "httpx", specifier = ">=0.28.1" },
+    { name = "jinja2", specifier = ">=3.1.6" },
+    { name = "markdown-it-py", specifier = ">=4.0.0" },
 ]
 dev = [
-    { name = "httpx", specifier = "==0.28.1" },
-    { name = "jinja2", specifier = "==3.1.6" },
-    { name = "markdown-it-py", specifier = "==4.0.0" },
-    { name = "pytest", specifier = "==9.0.3" },
-    { name = "ruff", specifier = "==0.15.6" },
-    { name = "ty", specifier = "==0.0.33" },
-    { name = "watchfiles", specifier = "==1.2.0" },
+    { name = "httpx", specifier = ">=0.28.1" },
+    { name = "jinja2", specifier = ">=3.1.6" },
+    { name = "markdown-it-py", specifier = ">=4.0.0" },
+    { name = "pytest", specifier = ">=9.0.3" },
+    { name = "ruff", specifier = ">=0.15.6" },
+    { name = "ty", specifier = ">=0.0.33" },
+    { name = "watchfiles", specifier = ">=1.2.0" },
 ]
 lint = [
-    { name = "ruff", specifier = "==0.15.6" },
-    { name = "ty", specifier = "==0.0.33" },
+    { name = "ruff", specifier = ">=0.15.6" },
+    { name = "ty", specifier = ">=0.0.33" },
 ]
-preview = [{ name = "watchfiles", specifier = "==1.2.0" }]
-test = [{ name = "pytest", specifier = "==9.0.3" }]
+preview = [{ name = "watchfiles", specifier = ">=1.2.0" }]
+test = [{ name = "pytest", specifier = ">=9.0.3" }]
 
 [[package]]
 name = "certifi"
