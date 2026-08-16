@@ -12,7 +12,11 @@ excludes mirrors by default.
 
 This script is the sole writer of data/pypi_downloads.tsv and rewrites it
 from scratch each run, so entries removed from README.md drop out
-naturally; names with no PyPI rows are written as NOT_FOUND. The file
+naturally; names with no PyPI rows are written as NOT_FOUND. Counts are
+looked up by README display name: when the display name differs from the
+canonical PyPI package, the row silently measures the wrong package (a
+squatter or a dead predecessor) — verify identity at
+pypi.org/pypi/{name}/json before citing a count. The file
 starts with a header row (name, downloads, fetched_at) and every row
 carries the sweep date: a cache fetched within the last 7 days is current
 enough for audit verdicts, so only re-run when older. Cross-checks
