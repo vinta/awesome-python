@@ -602,6 +602,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
     - [typeshed](https://github.com/python/typeshed)
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
+  - [pyright](https://github.com/microsoft/pyright) - Full-featured static type checker for Python from Microsoft, the engine behind Pylance.
   - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
 - Type Annotations Generators
   - [monkeytype](https://github.com/Instagram/MonkeyType) - A system for Python that generates static type annotations by collecting runtime types.
