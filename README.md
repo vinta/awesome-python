@@ -983,8 +983,8 @@ _Libraries for enhancing Python built-in classes._
 
 - [attrs](https://github.com/python-attrs/attrs) - Replacement for `__init__`, `__eq__`, `__repr__`, etc. boilerplate in class definitions.
 - [bidict](https://github.com/jab/bidict) - Efficient, Pythonic bidirectional map data structures and related functionality.
-- [box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 - [uuid-utils](https://github.com/aminalaee/uuid-utils) - A fast, Rust-backed drop-in replacement for Python's built-in `uuid` module, supporting RFC 9562 (UUIDv6, UUIDv7, and UUIDv8).
+- [python-box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot notation access.
 
 ### Functional Programming
 
@@ -1016,10 +1016,10 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
 
 _Libraries for working with dates and times._
 
+- [python-dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [dateparser](https://github.com/scrapinghub/dateparser) - A Python parser for human-readable dates in dozens of languages.
-- [dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
-- [pendulum](https://github.com/python-pendulum/pendulum) - Python datetimes made easy.
 - [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
+- [pendulum](https://github.com/python-pendulum/pendulum) - Python datetimes made easy.
 
 **Python Toolchain**
 
