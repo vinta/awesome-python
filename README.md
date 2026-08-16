@@ -121,6 +121,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 
 **Other**
 
+- [ERP](#erp)
 - [Hardware](#hardware)
 - [Microsoft Windows](#microsoft-windows)
 - [Miscellaneous](#miscellaneous)
@@ -1115,6 +1116,12 @@ _Libraries for application-layer web security._
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Other**
+
+### ERP
+
+_Enterprise resource planning frameworks._
+
+- [odoo](https://github.com/odoo/odoo) - A suite of open source business apps: CRM, e-commerce, accounting, inventory, and thousands of community modules.
 
 ### Hardware
 
