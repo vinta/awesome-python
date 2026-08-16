@@ -652,6 +652,7 @@ _Libraries for debugging code._
   - [hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
 - Profiler
   - [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
+  - [memray](https://github.com/bloomberg/memray) - A memory profiler that tracks allocations in Python code, native extensions, and the interpreter itself.
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
 - Others
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
