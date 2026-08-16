@@ -595,10 +595,9 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [pylint](https://github.com/pylint-dev/pylint) - A fully customizable source code analyzer.
   - [flake8](https://github.com/PyCQA/flake8) - A wrapper around `pycodestyle`, `pyflakes` and McCabe.
     - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
+  - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
 - Refactoring
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
-- Security Linters
-  - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - Check variable types during compile time.
     - [typeshed](https://github.com/python/typeshed)
