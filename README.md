@@ -405,8 +405,8 @@ _Libraries for connecting and operating databases._
   - [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
   - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
 - SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
-  - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
+  - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
 - ClickHouse
   - [clickhouse-connect](https://github.com/ClickHouse/clickhouse-connect) - The official ClickHouse client, with SQLAlchemy and Superset connectors.
   - [clickhouse-driver](https://github.com/mymarilyn/clickhouse-driver) - Python driver with native interface for ClickHouse.
@@ -629,9 +629,9 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - API Testing
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
 - Mock
+  - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
   - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
-  - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
   - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
 - Object Factories
@@ -756,9 +756,9 @@ _Libraries for scheduling jobs._
 
 _Libraries for generating and working with logs._
 
+- [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
 - [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
-- [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 
 ### Network Virtualization
 
@@ -774,9 +774,9 @@ _Tools and libraries for Virtual Networking and SDN (Software Defined Networking
 _Libraries for building command-line applications._
 
 - CLI Development
+  - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click and Pydantic.
-  - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
 - Terminal Rendering
@@ -824,8 +824,8 @@ _Libraries for working with graphical user interface applications._
   - [PySide6](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), same as PyQt6 but it's the official binding with different licensing.
   - [PyQt6](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
 - Tkinter
-  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
   - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
+  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
   - [tkdesigner](https://github.com/ParthJadhav/Tkinter-Designer) - Generates Tkinter interfaces from Figma designs using the Figma API.
 - Web-based
   - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
@@ -905,8 +905,8 @@ _Libraries for parsing and manipulating specific text formats._
   - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
-  - [pyyaml](https://github.com/yaml/pyyaml) - YAML implementations for Python.
   - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
+  - [pyyaml](https://github.com/yaml/pyyaml) - YAML implementations for Python.
 
 ### File Manipulation
 
@@ -990,9 +990,9 @@ _Libraries for enhancing Python built-in classes._
 
 _Functional Programming with Python._
 
+- [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [more-itertools](https://github.com/more-itertools/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 - [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz/) for Cython-accelerated performance.
-- [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 - [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 
@@ -1001,10 +1001,10 @@ _Functional Programming with Python._
 _Libraries for asynchronous, concurrent and parallel execution. Also see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)._
 
 - Async I/O
-  - [anyio](https://github.com/agronholm/anyio) - A high-level async concurrency and networking framework that works on top of asyncio or trio.
-  - [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
   - [asyncio](https://docs.python.org/3/library/asyncio.html) - (Python standard library) Asynchronous I/O, event loop, coroutines and tasks.
     - [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio)
+  - [anyio](https://github.com/agronholm/anyio) - A high-level async concurrency and networking framework that works on top of asyncio or trio.
+  - [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
   - [trio](https://github.com/python-trio/trio) - A friendly library for async concurrency and I/O.
   - [gevent](https://github.com/gevent/gevent) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
   - [twisted](https://github.com/twisted/twisted) - An event-driven networking engine.
@@ -1016,9 +1016,9 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
 
 _Libraries for working with dates and times._
 
+- [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 - [python-dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [dateparser](https://github.com/scrapinghub/dateparser) - A Python parser for human-readable dates in dozens of languages.
-- [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 - [pendulum](https://github.com/python-pendulum/pendulum) - Python datetimes made easy.
 - [whenever](https://github.com/ariebovenberg/whenever) - A modern datetime library, type-safe and DST-safe, backed by Rust.
 
