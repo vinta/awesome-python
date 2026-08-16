@@ -50,6 +50,9 @@ _Avoid_: Rising Star (old lane name), Hidden Gem (old lane name — concept remo
 **Second Tier**:
 A Challenger slot holding a demoted incumbent instead of a rising successor — a former Obvious Choice or fading community standard an Audit kept below the current Obvious Choices (clickhouse-driver behind the official client, dogpile.cache and django-cacheops behind cachetools and diskcache, django-haystack in Search). It counts against the two Challenger slots and is marked by position like any Challenger; the adoption-trajectory bar gates only new admissions, not demotions.
 
+**Override**:
+A maintainer decision, made in an Audit and explicitly recorded, that keeps an entry or use-case shape past a written limit — the activity line, the stability bar, a cap, or a structure rule. Case-by-case: an Override never loosens the written rule for any other entry, and submitters cannot cite one.
+
 **Split**:
 Maintainer-only restructuring of an oversized Use Case into finer Use Cases (new Subcategories), considered before any trimming when the size reflects genuinely distinct jobs. A submitter's entry PR can never perform a Split.
 

@@ -23,6 +23,8 @@ Each use case lists at most:
 
 Hard maximum: 5 entries per use case. This is a qualitative bar first and a numeric backstop second — most use cases should carry fewer.
 
+**Overrides**: the maintainer may exceed any limit on this page — the caps, the activity requirement, the stability requirement — for a specific entry or use case by explicit decision. An override is case-by-case; it does not loosen these rules for submissions, and citing one in a PR carries no weight.
+
 **Displacement**: once a use case is at its cap, the only way in is to name the entry your project replaces and argue that yours does that entry's job better. One in, one out.
 
 **Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
