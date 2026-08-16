@@ -663,7 +663,7 @@ _Libraries for debugging code._
 
 ### Build Tools
 
-_Compile software from source code._
+_Compile software from source code. If you're looking for Python packaging/build tools, see [Package Management](#package-management)._
 
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
 - [scons](https://github.com/SCons/scons) - A software construction tool.
