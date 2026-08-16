@@ -1084,18 +1084,20 @@ _Libraries for storing and parsing configuration options._
 
 ### Cryptography
 
+_Libraries for cryptographic primitives and secure protocols._
+
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
-- [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+- [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 
 ### Penetration Testing
 
 _Frameworks and tools for penetration testing._
 
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
-- [setoolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
-- [sherlock](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
+- [sherlock-project](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
+- [social-engineer-toolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
 
 ### Web Security
 
