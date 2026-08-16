@@ -40,14 +40,13 @@
   </g>
 
   <!-- Kicker -->
-  <text x="80" y="200" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#c9ba9e" letter-spacing="2">THE FIELD GUIDE TO THE PYTHON ECOSYSTEM</text>
+  <text x="80" y="200" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#c9ba9e" letter-spacing="1">The definitive list that answers "I want to do X in Python, which tool should I use?"</text>
 
   <!-- Title -->
   <text x="80" y="326" font-family="Georgia, 'Times New Roman', 'Palatino Linotype', serif" font-size="96" fill="#f5f0e8" letter-spacing="-2">Awesome Python</text>
 
   <!-- Subtitle -->
-  <text x="80" y="394" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#b5a890">An opinionated list of awesome Python frameworks,</text>
-  <text x="80" y="430" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#b5a890">libraries, tools, and resources.</text>
+  <text x="80" y="394" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" fill="#b5a890">An opinionated guide to the best Python frameworks, libraries, and tools.</text>
 
   <!-- URL -->
   <text x="80" y="556" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#c08a40" letter-spacing="0.5">awesome-python.com</text>
