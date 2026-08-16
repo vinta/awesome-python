@@ -480,7 +480,6 @@ _Libraries for serializing complex data types._
 _Libraries for data analysis._
 
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
-  - [aws-sdk-pandas](https://github.com/aws/aws-sdk-pandas)
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
 - [ibis-framework](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
 
@@ -489,6 +488,7 @@ _Libraries for data analysis._
 _Libraries for data extraction, transformation, and loading pipelines across multiple sources and destinations._
 
 - General
+  - [awswrangler](https://github.com/aws/aws-sdk-pandas) - Pandas integration with AWS services like Athena, Glue, Redshift, S3, and DynamoDB.
   - [dlt](https://github.com/dlt-hub/dlt) - A Python library for building data pipelines with automatic schema inference, incremental loading, and support for multiple sources and destinations.
   - [pathway](https://github.com/pathwaycom/pathway) - Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.
 - Financial Data
