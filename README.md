@@ -955,13 +955,14 @@ _Libraries for manipulating audio, video, and their metadata._
 
 _Awesome game development libraries._
 
-- [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
-- [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
-- [py-sdl2](https://github.com/py-sdl/py-sdl2) - A ctypes based wrapper for the SDL2 library.
-- [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
-- [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
-- [pyopengl](https://github.com/mcfletch/pyopengl) - Python ctypes bindings for OpenGL and it's related APIs.
-- [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
+- 3D Engines
+  - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed by Disney.
+- Game Frameworks
+  - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
+  - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
+  - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
+- Visual Novels
+  - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
 **Python Language**
 
