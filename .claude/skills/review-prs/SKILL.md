@@ -22,7 +22,7 @@ Resolve each survivor's target use case against the current README — a diff's 
 
 ## 3. Judge
 
-Group survivors by target use case — PRs proposing entries for the same use case compete for the same slots, so they ride one invocation. Per group, invoke the audit-the-list skill with arguments in this shape: "Judge proposed entries <names, each with its PR number> for the <section — subcategory> use case. Evidence and Verdicts steps only; report the verdicts back. No preview page, no README changes, no commits." The verdict for each PR is merge or close, grounded in the fetched evidence; when the use case is at cap, a merge verdict names the entry that leaves. An entry no current use case fits is a third outcome — a structure question: carry it to Act with evidence attached, and the maintainer decides there (mint the subcategory and merge, close, or leave open). Done when every survivor holds a verdict with a reason.
+Group survivors by target use case — PRs proposing entries for the same use case compete for the same slots, so they ride one invocation. Per group, invoke the `audit-the-list` skill with arguments in this shape: "Judge proposed entries <names, each with its PR number> for the <section — subcategory> use case. Evidence and Verdicts steps only; report the verdicts back. No preview page, no README changes, no commits." The verdict for each PR is merge or close, grounded in the fetched evidence; when the use case is at cap, a merge verdict names the entry that leaves. An entry no current use case fits is a third outcome — a structure question: carry it to Act with evidence attached, and the maintainer decides there (mint the subcategory and merge, close, or leave open). Done when every survivor holds a verdict with a reason.
 
 ## 4. Act
 
