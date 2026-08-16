@@ -168,7 +168,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
   - [vibevoice](https://github.com/microsoft/VibeVoice) - A family of open-source voice AI models from Microsoft for text-to-speech and long-form speech recognition.
-  - [gtts](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
+  - [gTTS](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [kittentts](https://github.com/KittenML/KittenTTS) - Lightweight ONNX text-to-speech library with small CPU-friendly models.
 
 ### Deep Learning
@@ -975,7 +975,7 @@ _Implementations of Python._
 - [cpython](https://github.com/python/cpython) - Default, most widely used implementation of the Python programming language written in C.
 - [micropython](https://github.com/micropython/micropython) - A lean and efficient Python programming language implementation.
 - [pypy](https://github.com/pypy/pypy) - A very fast and compliant implementation of the Python language.
-- [cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
+- [Cython](https://github.com/cython/cython) - Optimizing Static Compiler for Python.
 - [pyodide](https://github.com/pyodide/pyodide) - Python distribution for the browser and Node.js based on WebAssembly.
 
 ### Built-in Classes Enhancement
@@ -1008,7 +1008,7 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
   - [uvloop](https://github.com/MagicStack/uvloop) - Ultra fast asyncio event loop.
   - [trio](https://github.com/python-trio/trio) - A friendly library for async concurrency and I/O.
   - [gevent](https://github.com/gevent/gevent) - A coroutine-based Python networking library that uses [greenlet](https://github.com/python-greenlet/greenlet).
-  - [twisted](https://github.com/twisted/twisted) - An event-driven networking engine.
+  - [Twisted](https://github.com/twisted/twisted) - An event-driven networking engine.
 - Parallelism
   - [concurrent.futures](https://docs.python.org/3/library/concurrent.futures.html) - (Python standard library) A high-level interface for asynchronously executing callables.
   - [multiprocessing](https://docs.python.org/3/library/multiprocessing.html) - (Python standard library) Process-based parallelism.
