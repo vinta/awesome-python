@@ -690,6 +690,7 @@ _Software and libraries for DevOps._
   - [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
   - [awscli](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services.
   - [azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) - Microsoft Azure SDK for Python, published as per-service packages.
+  - [google-cloud-python](https://github.com/googleapis/google-cloud-python) - Google Cloud client libraries for Python, published as per-service packages.
 - Configuration Management
   - [ansible](https://github.com/ansible/ansible) - A radically simple IT automation platform.
   - [cloud-init](https://github.com/canonical/cloud-init) - A multi-distribution package that handles early initialization of a cloud instance.
