@@ -1037,12 +1037,13 @@ _Libraries for Python version and virtual environment management._
 
 _Libraries for package and dependency management._
 
-- [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
-- [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project manager for environments, builds, and publishing.
-- [pip](https://github.com/pypa/pip) - The package installer for Python.
-- [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
-- [poetry](https://github.com/python-poetry/poetry) - Python dependency management and packaging made easy.
-- [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
+- Package Managers
+  - [pip](https://github.com/pypa/pip) - The package installer for Python.
+  - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
+  - [poetry](https://github.com/python-poetry/poetry) - Python dependency management and packaging made easy.
+  - [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project manager for environments, builds, and publishing.
+  - [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
+  - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
 
 ### Package Repositories
 
