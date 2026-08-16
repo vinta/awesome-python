@@ -1,4 +1,13 @@
-"""Parse README.md into structured section data using markdown-it-py AST."""
+"""Parse README.md into structured section data using markdown-it-py AST.
+
+Empirically verified behavior worth knowing before editing README.md:
+everything above `## Projects` is ignored; new subcategories need no
+parser change (a bullet without a leading link plus indented entries);
+a standalone all-bold paragraph inside the Projects region becomes a
+Thematic Group marker; prose placed right after `## Categories` leaks
+into llms.txt; the build's "Total entries" figure counts sub-items
+(indented links under an entry), not just entries.
+"""
 
 from __future__ import annotations
 
