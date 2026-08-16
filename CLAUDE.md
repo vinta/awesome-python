@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-An opinionated guide to the best Python frameworks, libraries, tools, and resources.
+An opinionated guide to the best Python frameworks, libraries, and tools.
 
 [README.md](README.md) is the single source of content truth; `website/` renders it into the static site: [awesome-python.com](https://awesome-python.com/).
 
