@@ -664,12 +664,9 @@ _Libraries for debugging code._
 
 _Compile software from source code._
 
-- [bitbake](https://github.com/openembedded/bitbake) - A make-like build tool for embedded Linux.
-- [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
-- [platformio](https://github.com/platformio/platformio-core) - A console tool to build code with different development platforms.
-- [pybuilder](https://github.com/pybuilder/pybuilder) - A continuous build tool written in pure Python.
 - [scons](https://github.com/SCons/scons) - A software construction tool.
+- [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 
 ### Documentation
 
