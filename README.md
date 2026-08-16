@@ -517,7 +517,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
 - Specialized
   - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
   - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](https://www.graphviz.org/).
-  - [graphify](https://github.com/safishamsi/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
+  - [graphify](https://github.com/Graphify-Labs/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
 - Dashboards and Apps
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
