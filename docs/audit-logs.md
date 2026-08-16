@@ -26,8 +26,8 @@ Display names follow the canonical PyPI package name. These entries keep a diffe
 
 These entries sit past the 12-month activity requirement without an override. Each one is kept by editorial judgment: mature, stable, and no successor exists.
 
-- sortedcontainers
-- jinja
+- ftfy
 - itsdangerous
 - jieba
-- ftfy
+- jinja
+- sortedcontainers

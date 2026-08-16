@@ -18,7 +18,7 @@ A **use case** is one distinct job a reader needs done. Use cases are defined by
 
 Each use case lists at most:
 
-- **Up to 3 obvious choices** — tools an experienced Python developer would name unprompted when asked "what do I use for this?"
+- **Up to 3 obvious choices** — tools an experienced Python developer would name when asked "what do I use for this?"
 - **Up to 2 challengers** — tools that are not yet the obvious choice but are credible successors to one. Admission as a challenger requires adoption-trajectory evidence, not popularity alone.
 
 Hard maximum: 5 entries per use case. This is a qualitative bar first and a numeric backstop second — most use cases should carry fewer.
@@ -27,7 +27,7 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 
 **Displacement**: once a use case is at its cap, the only way in is to name the entry your project replaces and argue that yours does that entry's job better. One in, one out.
 
-**Dual-listing**: a tool may hold entries in multiple use cases, but only when it earns its slot in each independently — uv sits in both Environment Management and Package Management. List the full entry in each home with identical lines; never a "see X above" note, since the website only renders list items. Description edits update every copy in the same commit. Each slot is audited on its own: dropping one home keeps the other, and dropping the tool entirely removes all copies in one commit. Dual-listing is a maintainer decision; a PR adding a second home for an existing entry is treated as a duplicate.
+**Dual-listing**: a tool may hold entries in multiple use cases, but only when it earns its slot in each independently. List the full entry in each home with identical lines; never a "see X above" note, since the website only renders list items. Description edits update every copy in the same commit. Each slot is audited on its own: dropping one home keeps the other, and dropping the tool entirely removes all copies in one commit. Dual-listing is a maintainer decision; a PR adding a second home for an existing entry is treated as a duplicate.
 
 **Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
 
