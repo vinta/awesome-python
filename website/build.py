@@ -115,20 +115,24 @@ def load_downloads(path: Path) -> dict[str, int]:
 
 
 def sort_entries(entries: Sequence[TemplateEntry]) -> list[TemplateEntry]:
-    """Sort entries by stars descending, then name ascending.
+    """Sort entries by downloads descending, then name ascending.
 
-    Three tiers: starred entries first, stdlib second, other non-starred last.
+    Four tiers: entries with download counts first, then starred entries by
+    stars descending, then stdlib, then the rest.
     """
 
     def sort_key(entry: TemplateEntry) -> tuple[int, int, int, str]:
+        downloads = entry["downloads"]
         stars = entry["stars"]
         name = entry["name"].lower()
+        if downloads is not None:
+            return (0, -downloads, 0, name)
         if stars is not None:
             builtin = 1 if entry.get("source_type") == "Built-in" else 0
-            return (0, -stars, builtin, name)
+            return (1, -stars, builtin, name)
         if entry.get("source_type") == "Built-in":
-            return (1, 0, 0, name)
-        return (2, 0, 0, name)
+            return (2, 0, 0, name)
+        return (3, 0, 0, name)
 
     return sorted(entries, key=sort_key)
 

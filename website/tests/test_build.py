@@ -463,6 +463,8 @@ class TestBuild:
         assert "1,234,567" in html
         # Built-in entries never show PyPI counts: the asyncio row is the backport package
         assert "26,305,454" not in html
+        # Default sort: entries with download counts come first
+        assert html.index("My-Lib") < html.index("no-pypi")
 
     def test_build_fails_when_group_and_category_slug_collide(self, tmp_path):
         readme = textwrap.dedent("""\
