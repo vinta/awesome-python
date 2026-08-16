@@ -24,22 +24,16 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="hero-kicker">The field guide to the Python ecosystem</p>
+        <p class="hero-kicker">The definitive list that answers "I want to do X in Python, which tool should I use?"</p>
         <h1>Awesome Python</h1>
-        <p class="hero-sub">
-          {{ subtitle }}<br />Maintained by
-          <a href="https://github.com/vinta" target="_blank" rel="noopener"
-            >@vinta</a
-          >
+        <p class="hero-sub">{{ subtitle }}</p>
+        <p class="hero-proof">
+          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{ build_date }}{% endif %} {% if repo_stars or
+          build_date %}/{% endif %} Maintained by
+          <a href="https://github.com/vinta" target="_blank" rel="noopener">@vinta</a>
           and
-          <a
-            href="https://github.com/JinyangWang27"
-            target="_blank"
-            rel="noopener"
-            >@JinyangWang27</a
-          >.
+          <a href="https://github.com/JinyangWang27" target="_blank" rel="noopener">@JinyangWang27</a>
         </p>
-
         <div class="hero-actions">
           <a
             href="#library-index"
@@ -55,14 +49,6 @@
             >View on GitHub</a
           >
         </div>
-
-        {% if repo_stars or build_date %}
-        <p class="hero-proof">
-          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if
-          repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{
-          build_date }}{% endif %}
-        </p>
-        {% endif %}
       </div>
     </div>
 

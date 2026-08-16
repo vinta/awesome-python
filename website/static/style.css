@@ -306,7 +306,7 @@ kbd {
 }
 
 .hero-sub {
-  margin-top: 1.3rem;
+  margin-top: 2rem;
   color: var(--hero-muted);
   font-size: clamp(1rem, 2vw, 1.18rem);
   text-wrap: pretty;
@@ -331,10 +331,21 @@ kbd {
 }
 
 .hero-proof {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   color: var(--hero-proof);
   font-size: var(--text-sm);
   letter-spacing: 0.02em;
+}
+
+.hero-proof a {
+  color: var(--hero-text);
+  text-decoration: underline;
+  text-decoration-color: oklch(100% 0 0 / 0.25);
+  text-underline-offset: 0.2em;
+}
+
+.hero-proof a:hover {
+  text-decoration-color: oklch(100% 0 0 / 0.6);
 }
 
 .hero-category-nav {
