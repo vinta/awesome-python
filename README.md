@@ -116,6 +116,7 @@ An opinionated guide to the best Python frameworks, libraries, tools, and resour
 
 - [Cryptography](#cryptography)
 - [Penetration Testing](#penetration-testing)
+- [Supply Chain Security](#supply-chain-security)
 - [Web Security](#web-security)
 
 **Other**
@@ -1098,6 +1099,12 @@ _Frameworks and tools for penetration testing._
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 - [sherlock-project](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [social-engineer-toolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
+
+### Supply Chain Security
+
+_Tools for auditing dependencies against known vulnerabilities._
+
+- [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the PyPI Advisory Database and OSV.
 
 ### Web Security
 
