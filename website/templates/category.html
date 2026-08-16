@@ -117,11 +117,11 @@
           <th class="col-name" data-sort="name">
             <button type="button" class="sort-btn">Project Name</button>
           </th>
-          <th class="col-stars" data-sort="stars">
-            <button type="button" class="sort-btn">GitHub Stars</button>
-          </th>
           <th class="col-downloads" data-sort="downloads">
             <button type="button" class="sort-btn">PyPI Downloads</button>
+          </th>
+          <th class="col-stars" data-sort="stars">
+            <button type="button" class="sort-btn">GitHub Stars</button>
           </th>
           <th class="col-commit" data-sort="commit-time">
             <button type="button" class="sort-btn">Last Commit</button>
@@ -153,15 +153,15 @@
               else %}{{ category.name }}{% endif %}</span
             >
           </td>
+          <td class="col-downloads">
+            {% if entry.downloads is not none %}{{
+            "{:,}".format(entry.downloads) }}{% else %}&mdash;{% endif %}
+          </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
             elif entry.source_type %}<span class="source-badge"
               >{{ entry.source_type }}</span
             >{% else %}&mdash;{% endif %}
-          </td>
-          <td class="col-downloads">
-            {% if entry.downloads is not none %}{{
-            "{:,}".format(entry.downloads) }}{% else %}&mdash;{% endif %}
           </td>
           <td
             class="col-commit"
