@@ -18,7 +18,7 @@ Sort the batch: entry additions continue; anything else (typo fixes, website cha
 
 Apply the Automatic Rejection rules that the diff and PR metadata answer without judgment. The recently-closed-duplicate rule needs a lookup: `gh pr list --repo vinta/awesome-python --state closed --search "<project name>" --limit 10`. A screened-out PR goes straight to step 4 as a close, with the rule it broke as its reason.
 
-Resolve each survivor's target use case against the current README, since most diffs sit on stale bases and their context lines show sections that no longer exist. A merge conflict is a symptom of that stale base — it rides to the Merge arm, which absorbs it. Done when every surviving PR names its target use case.
+Resolve each survivor's target use case against the current README — a diff's context lines show the base the PR was written on, which may have changed since. A merge conflict rides to the Merge arm, which absorbs it. Done when every surviving PR names its target use case.
 
 ## 3. Judge
 
