@@ -154,6 +154,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
+  - [veritasgraph-mcp](https://github.com/bibinprathap/VeritasGraph) - A knowledge graph framework for building GraphRAG applications with tree-search retrieval and verifiable citations.
 - Pre-trained Models
   - [transformers](https://github.com/huggingface/transformers) - A framework that lets you easily use pre-trained transformer models for NLP, vision, and audio tasks.
 - LLM Inference and Serving
