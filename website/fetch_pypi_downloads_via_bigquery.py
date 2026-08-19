@@ -47,7 +47,7 @@ def fetch_bigquery(names: list[str], dry_run: bool) -> dict[str, int]:
     if dry_run:
         cmd.append("--dry_run")
     cmd.append(query)
-    result = subprocess.run(cmd, capture_output=True, text=True)
+    result = subprocess.run(cmd, capture_output=True, text=True, check=False)
     if result.returncode != 0:
         print(result.stderr, file=sys.stderr)
         sys.exit(1)

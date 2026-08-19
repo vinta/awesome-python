@@ -4,6 +4,8 @@ import textwrap
 from pathlib import Path
 
 import pytest
+from markdown_it import MarkdownIt
+from markdown_it.tree import SyntaxTreeNode
 
 from readme_parser import (
     _find_inline,
@@ -12,9 +14,6 @@ from readme_parser import (
     render_inline_html,
     render_inline_text,
 )
-
-from markdown_it import MarkdownIt
-from markdown_it.tree import SyntaxTreeNode
 
 
 def _parse_inline(md_text: str) -> list[SyntaxTreeNode]:
