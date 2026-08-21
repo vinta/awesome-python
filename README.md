@@ -367,6 +367,7 @@ _Libraries for working with HTTP._
   - [aiohttp](https://github.com/aio-libs/aiohttp) - Asynchronous HTTP client/server framework for asyncio and Python.
   - [urllib3](https://github.com/urllib3/urllib3) - A HTTP library with thread-safe connection pooling, file post support, sanity friendly.
   - [httpx2](https://github.com/pydantic/httpx2) - HTTP/1.1 and HTTP/2 client with sync and async APIs, maintained by Pydantic ([httpx](https://github.com/encode/httpx) fork).
+  - [zapros](https://github.com/kap-sh/zapros) - Modern and extensible HTTP client with sync and async APIs, retries, caching, and WebSockets built in.
 - URL Manipulation
   - [yarl](https://github.com/aio-libs/yarl) - Yet another URL library.
   - [httpx.URL](https://www.python-httpx.org/api/) - The immutable URL class bundled with HTTPX.
