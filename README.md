@@ -814,6 +814,7 @@ _Useful CLI-based tools._
   - [litecli](https://github.com/dbcli/litecli) - SQLite CLI with autocompletion and syntax highlighting.
   - [iredis](https://github.com/laixintao/iredis) - Redis CLI with autocompletion and syntax highlighting.
 - Downloaders
+  - [SpotiFLAC](https://github.com/BartolomeoRusso9/SpotiFLAC-Module-Version) - Download Spotify tracks in true lossless FLAC from Tidal, Qobuz, Amazon Music and Deezer with sync/async Python APIs.
   - [yt-dlp](https://github.com/yt-dlp/yt-dlp) - A command-line program to download videos from YouTube and other video sites, a fork of youtube-dl.
 - HTTP Clients
   - [httpie](https://github.com/httpie/cli) - A command line HTTP client, a user-friendly cURL replacement.
