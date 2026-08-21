@@ -1170,6 +1170,7 @@ Where to discover learning resources or new Python libraries.
 
 ### Websites
 
+- [Markdown Tutorials](https://codefreelance.net/apps/markdown_tutorials/) - Interactive tutorials and reference for Python's standard library and language features ([Source Code](https://github.com/codecaine-zz/markdown_tutorials)).
 - [Python Developer Tooling Handbook](https://pydevtools.com/) - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
 
 ## Contributing
