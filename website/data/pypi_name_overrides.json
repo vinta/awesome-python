@@ -36,6 +36,7 @@
   "tkinter": { "package": null, "reason": "stdlib module" },
   "tomllib": { "package": null, "reason": "stdlib module" },
   "trailofbits-skills": { "package": null, "reason": "agent skills repo, not a package" },
+  "uv-audit": { "package": null, "reason": "part of uv (the `uv audit` subcommand); PyPI uv-audit is an unrelated third-party tool by rocshers" },
   "warehouse": { "package": null, "reason": "the PyPI server itself; deployed, not pip-installed" },
   "winpython": { "package": null, "reason": "distribution with its own installer; PyPI name is a 2012 relic" },
   "zoneinfo": { "package": null, "reason": "stdlib module" }
