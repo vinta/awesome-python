@@ -571,6 +571,7 @@ _Libraries for quantum computing._
 - [qutip](https://github.com/qutip/qutip) - Quantum Toolbox in Python.
 - [pennylane](https://github.com/PennyLaneAI/pennylane) - A hybrid quantum-classical machine learning library with automatic differentiation support.
 - [cirq](https://github.com/quantumlib/Cirq) - A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
+- [cognitive-discovery-system](https://github.com/Furox88/cognitive-discovery-system) - A pure-Python, zero-dependency scientific platform whose readable, from-scratch quantum simulator covers single/multi-qubit circuits, Bell/GHZ states and entanglement detection.
 
 **Developer Tools**
 
