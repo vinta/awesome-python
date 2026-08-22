@@ -388,6 +388,7 @@ _Libraries to automate web scraping and extract web content._
 _Libraries for sending and parsing email, and mail server management._
 
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
+- [rfc5322](https://github.com/AH64-dll/rfc5322) - Zero-dependency RFC 5322 email-address parser with strict and permissive modes.
 
 **Database & Storage**
 
