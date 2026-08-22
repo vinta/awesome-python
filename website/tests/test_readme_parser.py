@@ -1,10 +1,12 @@
 """Tests for the readme_parser module."""
 
+import re
 import textwrap
 from pathlib import Path
 
 import pytest
 
+from fetch_pypi_downloads_via_clickpy import PYPI_NAME_RE, load_overrides, normalize
 from readme_parser import (
     _find_inline,
     _parse_section_entries,
@@ -469,6 +471,25 @@ class TestParseRealReadme:
                     if not see["url"].startswith(("https://", "http://")):
                         bad.append(f"{cat['name']}: [{see['name']}] (also_see) has invalid url: {see['url']!r}")
         assert bad == [], "Entries with invalid URLs:\n" + "\n".join(bad)
+
+    def test_bundled_entries_are_never_queried_on_pypi(self):
+        """A "(part of X)" entry ships inside something else, so it has no package of its own.
+
+        If its display name happens to be PyPI-shaped and no null override
+        records that, the download sweep queries PyPI and silently measures
+        whatever unrelated project owns the name. That is how uv-audit picked
+        up a third-party package after being renamed from "uv audit".
+        """
+        overrides = load_overrides()
+        bad = []
+        for cat in self.cats:
+            for entry in cat["entries"]:
+                if not re.match(r"^\(part of ", entry["description"]):
+                    continue
+                name = normalize(entry["name"])
+                if PYPI_NAME_RE.match(name) and overrides.get(name, name) is not None:
+                    bad.append(f"[{entry['name']}] needs a null entry in pypi_name_overrides.json")
+        assert bad == [], "Bundled entries the download sweep would query:\n" + "\n".join(bad)
 
     def test_no_malformed_entry_lines(self):
         """Detect list items that look like entries but have broken link syntax.
