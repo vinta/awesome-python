@@ -698,7 +698,7 @@ _Libraries for generating project documentation._
 - [mkdocs-material](https://github.com/squidfunk/mkdocs-material) - A documentation framework and Material Design theme built on MkDocs.
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
 - [pdoc](https://github.com/mitmproxy/pdoc) - Epydoc replacement to auto generate API documentation for Python libraries.
-- [zensical](https://github.com/zensical/zensical) - A modern static site generator for technical documentation, built by the Material for MkDocs team.
+- [zensical](https://github.com/zensical/zensical) - A modern static site generator for technical documentation.
 
 **DevOps**
 
