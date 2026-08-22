@@ -22,6 +22,12 @@ Display names follow the canonical PyPI package name. These entries keep a diffe
 - strawberry -- `strawberry-graphql`.
 - strawberry-django -- `strawberry-graphql-django`.
 
+### Stability Exceptions
+
+Entries admitted despite the Stable quality requirement, by maintainer decision:
+
+- zensical -- admitted 2026-08-23 at version 0.0.57, PyPI classifier `Development Status :: 3 - Alpha`, with no 1.0 target announced. Admitted as a challenger displacing mkdocs because the Documentation section was carrying a dying upstream: the Material for MkDocs team's announcement of 2025-11-05 put Material into maintenance mode for twelve months and called MkDocs itself unmaintained since 2024-08 and a supply chain risk. Re-check when 1.0 lands.
+
 ### Mature-stable Keeps
 
 These entries sit past the 12-month activity requirement without an override. Each one is kept by editorial judgment: mature, stable, and no successor exists.
