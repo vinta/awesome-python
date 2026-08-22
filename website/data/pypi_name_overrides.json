@@ -1,6 +1,6 @@
 {
   "autobahn-python": { "package": "autobahn", "reason": null },
-  "azure-sdk-for-python": { "package": null, "reason": "monorepo umbrella; ships as many azure-* packages, no single package represents it" },
+  "azure-sdk-for-python": { "package": null, "reason": "monorepo umbrella; ships as many azure-* packages, no single package represents it", "badge": "Multiple on PyPI" },
   "cloud-init": { "package": null, "reason": "installed via distro images, not pip" },
   "concurrent-futures": { "package": null, "reason": "stdlib module" },
   "cpython": { "package": null, "reason": "not pip-installable; the cpython PyPI name was squatted" },
@@ -12,7 +12,7 @@
   "django-rules": { "package": "rules", "reason": "PyPI django-rules is an abandoned unrelated fork; dfunckt's project publishes as rules" },
   "fasthtml": { "package": "python-fasthtml", "reason": null },
   "geodjango": { "package": null, "reason": "part of Django (django.contrib.gis), not a package" },
-  "google-cloud-python": { "package": null, "reason": "monorepo umbrella; ships as many google-cloud-* packages" },
+  "google-cloud-python": { "package": null, "reason": "monorepo umbrella; ships as many google-cloud-* packages", "badge": "Multiple on PyPI" },
   "graphify": { "package": null, "reason": "GitHub-only so far; young project, remap if it publishes" },
   "httpx-url": { "package": null, "reason": "class in the httpx package, not a package" },
   "jinja": { "package": "jinja2", "reason": "PyPI jinja is Jinja1; current releases publish as jinja2" },

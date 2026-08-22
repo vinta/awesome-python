@@ -11,7 +11,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
 
-from fetch_pypi_downloads_via_clickpy import normalize
+from fetch_pypi_downloads_via_clickpy import OVERRIDES_FILE, normalize
 from jinja2 import Environment, FileSystemLoader
 from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, slugify
 
@@ -60,6 +60,7 @@ class TemplateEntry(TypedDict):
     last_commit_at: str | None
     source_type: str | None
     bundled: bool
+    badge: str | None
     also_see: list[AlsoSee]
 
 
@@ -99,6 +100,17 @@ def load_stars(path: Path) -> dict[str, dict]:
         except json.JSONDecodeError:
             return {}
     return {}
+
+
+def load_pypi_badges() -> dict[str, str]:
+    """Load the badge each entry shows in place of a download count.
+
+    Keyed by normalized README name. Only entries whose missing count needs
+    explaining beyond "Not on PyPI" carry one, e.g. the SDK monorepos that do
+    ship on PyPI, just as many per-service packages.
+    """
+    raw = json.loads(OVERRIDES_FILE.read_text())
+    return {name: entry["badge"] for name, entry in raw.items() if entry.get("badge")}
 
 
 def load_downloads(path: Path) -> dict[str, int]:
@@ -524,6 +536,7 @@ def extract_entries(
                     last_commit_at=None,
                     source_type=detect_source_type(entry["url"]),
                     bundled=bool(BUNDLED_PREFIX_RE.match(entry["description"])),
+                    badge=None,
                     also_see=entry["also_see"],
                 )
                 seen[key] = existing
@@ -576,6 +589,7 @@ def build(repo_root: Path) -> None:
 
     stars_data = load_stars(website / "data" / "github_stars.json")
     downloads_data = load_downloads(website / "data" / "pypi_downloads.tsv")
+    pypi_badges = load_pypi_badges()
 
     repo_self = stars_data.get("vinta/awesome-python", {})
     repo_stars = None
@@ -595,6 +609,7 @@ def build(repo_root: Path) -> None:
         # Stdlib entries would hit same-named PyPI backports (e.g. asyncio), not the stdlib.
         if entry.get("source_type") != BUILTIN_FILTER:
             entry["downloads"] = downloads_data.get(normalize(entry["name"]))
+        entry["badge"] = pypi_badges.get(normalize(entry["name"]))
 
     entries = sort_entries(entries)
     category_urls = {cat["name"]: category_path(cat) for cat in categories}

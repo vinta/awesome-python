@@ -56,8 +56,10 @@ def normalize(name: str) -> str:
 def load_overrides() -> dict[str, str | None]:
     """Load curated overrides: normalized README name -> PyPI package to measure (None = never query).
 
-    Each file entry is {"package": str | null, "reason": str | null}; the reason is
-    documentation only — required for null packages, optional for remaps.
+    Each file entry is {"package": str | null, "reason": str | null} plus an
+    optional "badge" the website renders in place of a download count; the
+    reason is documentation only — required for null packages, optional for
+    remaps.
     """
     raw = json.loads(OVERRIDES_FILE.read_text())
     return {name: entry["package"] for name, entry in raw.items()}

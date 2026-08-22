@@ -18,6 +18,7 @@ from build import (
     extract_entries,
     extract_github_repo,
     load_downloads,
+    load_pypi_badges,
     load_stars,
     sort_entries,
     subcategory_path,
@@ -1012,6 +1013,16 @@ class TestLoadStars:
 # ---------------------------------------------------------------------------
 
 
+class TestLoadPypiBadges:
+    def test_only_entries_with_a_badge_are_returned(self):
+        badges = load_pypi_badges()
+        assert badges["azure-sdk-for-python"] == "Multiple on PyPI"
+        assert badges["google-cloud-python"] == "Multiple on PyPI"
+        # Entries whose missing count needs no explaining stay off the map
+        assert "cpython" not in badges
+        assert "tomllib" not in badges
+
+
 def _template_entry(name: str, stars: int | None, source_type: str | None = None) -> TemplateEntry:
     return TemplateEntry(
         name=name,
@@ -1026,6 +1037,7 @@ def _template_entry(name: str, stars: int | None, source_type: str | None = None
         last_commit_at=None,
         source_type=source_type,
         bundled=False,
+        badge=None,
         also_see=[],
     )
 
