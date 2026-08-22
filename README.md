@@ -369,7 +369,6 @@ _Libraries for working with HTTP._
   - [httpx2](https://github.com/pydantic/httpx2) - HTTP/1.1 and HTTP/2 client with sync and async APIs, maintained by Pydantic ([httpx](https://github.com/encode/httpx) fork).
 - URL Manipulation
   - [yarl](https://github.com/aio-libs/yarl) - Yet another URL library.
-  - [httpx.URL](https://www.python-httpx.org/api/) - (part of HTTPX) The immutable URL class.
 
 ### Web Scraping
 
