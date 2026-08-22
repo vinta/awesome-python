@@ -156,10 +156,9 @@
           <td class="col-downloads">
             {% if entry.downloads is not none %}{{
             "{:,}".format(entry.downloads) }}{% elif entry.source_type ==
-            'Stdlib' %}<span class="source-badge">Stdlib</span>{% else %}<span
-              class="source-badge"
-              >Not on PyPI</span
-            >{% endif %}
+            'Stdlib' %}<span class="source-badge">Stdlib</span>{% elif
+            entry.bundled %}<span class="source-badge">Bundled</span>{% else
+            %}<span class="source-badge">Not on PyPI</span>{% endif %}
           </td>
           <td class="col-stars">
             {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%

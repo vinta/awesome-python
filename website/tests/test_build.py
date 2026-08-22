@@ -446,6 +446,7 @@ class TestBuild:
             - [My-Lib](https://github.com/org/mylib) - On PyPI.
             - [no-pypi](https://example.com/none) - Not on PyPI.
             - [asyncio](https://docs.python.org/3/library/asyncio.html) - Stdlib.
+            - [my-lib.thing](https://github.com/org/mylib) - (part of My-Lib) A bundled feature.
 
             # Contributing
 
@@ -470,6 +471,10 @@ class TestBuild:
         assert "26,305,454" not in html
         # Default sort: entries with download counts come first
         assert html.index("My-Lib") < html.index("no-pypi")
+        # Each no-download entry gets the badge matching why it has no count
+        assert html.count('<span class="source-badge">Stdlib</span>') == 1
+        assert html.count('<span class="source-badge">Bundled</span>') == 1
+        assert html.count('<span class="source-badge">Not on PyPI</span>') == 1
 
     def test_build_fails_when_group_and_category_slug_collide(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -1020,6 +1025,7 @@ def _template_entry(name: str, stars: int | None, source_type: str | None = None
         owner=None,
         last_commit_at=None,
         source_type=source_type,
+        bundled=False,
         also_see=[],
     )
 

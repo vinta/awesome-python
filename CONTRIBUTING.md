@@ -55,6 +55,14 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 - [module](https://docs.python.org/3/library/module.html) - (Python standard library) Description.
 ```
 
+### Bundled Feature
+
+A feature that ships inside a larger library, framework, or tool rather than as its own PyPI package. The `(part of X)` prefix is parsed by the website, which renders a "Bundled" badge in place of a download count, so write it exactly in that form and name the parent as developers say it.
+
+```markdown
+- [name](url) - (part of Parent) Description ending with period.
+```
+
 ### Fork of Another Project
 
 ```markdown

@@ -369,7 +369,7 @@ _Libraries for working with HTTP._
   - [httpx2](https://github.com/pydantic/httpx2) - HTTP/1.1 and HTTP/2 client with sync and async APIs, maintained by Pydantic ([httpx](https://github.com/encode/httpx) fork).
 - URL Manipulation
   - [yarl](https://github.com/aio-libs/yarl) - Yet another URL library.
-  - [httpx.URL](https://www.python-httpx.org/api/) - The immutable URL class bundled with HTTPX.
+  - [httpx.URL](https://www.python-httpx.org/api/) - (part of HTTPX) The immutable URL class.
 
 ### Web Scraping
 
@@ -399,7 +399,7 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
 - Relational Databases
   - [sqlalchemy](https://github.com/sqlalchemy/sqlalchemy) - The Python SQL Toolkit and Object Relational Mapper.
     - [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy)
-  - [django.db.models](https://github.com/django/django) - The Django [ORM](https://docs.djangoproject.com/en/dev/topics/db/models/).
+  - [django.db.models](https://github.com/django/django) - (part of Django) The Django [ORM](https://docs.djangoproject.com/en/dev/topics/db/models/).
   - [peewee](https://github.com/coleifer/peewee) - A small, expressive ORM.
   - [sqlmodel](https://github.com/fastapi/sqlmodel) - SQLModel is based on Python type annotations, and powered by Pydantic and SQLAlchemy.
 - NoSQL Databases
@@ -531,7 +531,7 @@ _Libraries for geocoding addresses and working with latitudes and longitudes._
 - [geopandas](https://github.com/geopandas/geopandas) - Python tools for geographic data (GeoSeries/GeoDataFrame) built on pandas.
 - [geopy](https://github.com/geopy/geopy) - Python Geocoding Toolbox.
 - [geojson](https://github.com/jazzband/geojson) - Python bindings and utilities for GeoJSON.
-- [geodjango](https://github.com/django/django) - A world-class geographic web framework that is part of [Django](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
+- [geodjango](https://github.com/django/django) - (part of Django) A world-class [geographic web framework](https://docs.djangoproject.com/en/dev/ref/contrib/gis/).
 
 ### Science
 
@@ -1118,7 +1118,7 @@ _Frameworks and tools for penetration testing._
 _Tools for auditing dependencies against known vulnerabilities._
 
 - [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the PyPI Advisory Database and OSV.
-- [uv audit](https://docs.astral.sh/uv/reference/cli/#uv-audit) - uv's built-in dependency vulnerability and malware scanning backed by OSV.
+- [uv audit](https://docs.astral.sh/uv/reference/cli/#uv-audit) - (part of uv) Built-in dependency vulnerability and malware scanning backed by OSV.
 
 ### Web Security
 

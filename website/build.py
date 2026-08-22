@@ -31,6 +31,8 @@ SPONSORSHIP_PATH = "/sponsorship/"
 SPONSORSHIP_PUBLIC_URL = f"{SITE_URL}sponsorship/"
 SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
 
+BUNDLED_PREFIX_RE = re.compile(r"^\(part of ")
+
 SOURCE_TYPE_DOMAINS = {
     "docs.python.org": BUILTIN_FILTER,
     "gitlab.com": "GitLab",
@@ -57,6 +59,7 @@ class TemplateEntry(TypedDict):
     owner: str | None
     last_commit_at: str | None
     source_type: str | None
+    bundled: bool
     also_see: list[AlsoSee]
 
 
@@ -520,6 +523,7 @@ def extract_entries(
                     owner=None,
                     last_commit_at=None,
                     source_type=detect_source_type(entry["url"]),
+                    bundled=bool(BUNDLED_PREFIX_RE.match(entry["description"])),
                     also_see=entry["also_see"],
                 )
                 seen[key] = existing

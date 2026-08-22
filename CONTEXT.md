@@ -12,6 +12,10 @@ A single listed project: `- [name](url) - Description.` The unit that is admitte
 **Sub-item**:
 An indented awesome-* also-see link under an Entry (awesome-django under django, awesome-pytest under pytest). Not an Entry: it holds no slot, does not count against the Cap, and rides its parent — re-homed or removed with it. Maintainer-only placement, and only for awesome-* lists: a companion project either earns a full Entry in its proper Use Case or is not listed.
 
+**Bundled Entry**:
+An Entry for a feature that ships inside a larger library, framework, or tool rather than as its own PyPI package (django.db.models, geodjango, httpx.URL, uv audit). Marked in README.md by a `(part of X)` description prefix, which the website reads to render a "Bundled" badge where a download count would go. It holds a normal slot and is audited like any other Entry; only its download signal is absent.
+_Avoid_: Pointer entry (reform-era name)
+
 **Thematic Group**:
 A bold group line (e.g. "AI & ML", "Web Development") that clusters Sections in the TOC and the Projects body.
 
