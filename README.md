@@ -964,6 +964,7 @@ _Libraries for manipulating audio, video, and their metadata._
   - [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
   - [tinytag](https://github.com/tinytag/tinytag) - A library for reading music meta data of MP3, OGG, FLAC and Wave files.
   - [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
+  - [SpotiFLAC](https://github.com/BartolomeoRusso9/SpotiFLAC-Module-Version) - Resolves track metadata from Spotify, Tidal, Apple Music, SoundCloud, YouTube and Pandora links and enriches it via MusicBrainz, with sync/async Python APIs and a pluggable extension system for provider-based audio retrieval.
 
 ### Game Development
 
