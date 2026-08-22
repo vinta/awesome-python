@@ -445,7 +445,7 @@ class TestBuild:
 
             - [My-Lib](https://github.com/org/mylib) - On PyPI.
             - [no-pypi](https://example.com/none) - Not on PyPI.
-            - [asyncio](https://docs.python.org/3/library/asyncio.html) - Built-in.
+            - [asyncio](https://docs.python.org/3/library/asyncio.html) - Stdlib.
 
             # Contributing
 
@@ -466,7 +466,7 @@ class TestBuild:
 
         html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
         assert "1,234,567" in html
-        # Built-in entries never show PyPI counts: the asyncio row is the backport package
+        # Stdlib entries never show PyPI counts: the asyncio row is the backport package
         assert "26,305,454" not in html
         # Default sort: entries with download counts come first
         assert html.index("My-Lib") < html.index("no-pypi")
@@ -1060,7 +1060,7 @@ class TestSortEntries:
 
     def test_builtin_between_starred_and_unstarred(self):
         entries = [
-            _template_entry("builtin", None, "Built-in"),
+            _template_entry("builtin", None, "Stdlib"),
             _template_entry("starred", 100),
             _template_entry("unstarred", None),
         ]
@@ -1078,7 +1078,7 @@ class TestDetectSourceType:
         assert detect_source_type("https://github.com/psf/requests") is None
 
     def test_stdlib_url(self):
-        assert detect_source_type("https://docs.python.org/3/library/asyncio.html") == "Built-in"
+        assert detect_source_type("https://docs.python.org/3/library/asyncio.html") == "Stdlib"
 
     def test_gitlab_url(self):
         assert detect_source_type("https://gitlab.com/org/repo") == "GitLab"
@@ -1167,7 +1167,7 @@ class TestExtractEntries:
         groups = parse_readme(readme)
         categories = [c for g in groups for c in g["categories"]]
         entries = extract_entries(categories, groups)
-        assert entries[0]["source_type"] == "Built-in"
+        assert entries[0]["source_type"] == "Stdlib"
 
     def test_subcategory_includes_slug_and_url(self):
         readme = textwrap.dedent("""\

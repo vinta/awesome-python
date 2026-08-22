@@ -175,7 +175,7 @@
         {% for entry in entries %}
         <tr
           class="row"
-          data-tags="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}||{{ entry.groups | join('||') }}{% if entry.source_type == 'Built-in' %}||Built-in{% endif %}"
+          data-tags="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}||{{ entry.groups | join('||') }}{% if entry.source_type == 'Stdlib' %}||Stdlib{% endif %}"
           tabindex="0"
           aria-expanded="false"
           aria-controls="expand-{{ loop.index }}"
@@ -192,7 +192,8 @@
           </td>
           <td class="col-downloads">
             {% if entry.downloads is not none %}{{
-            "{:,}".format(entry.downloads) }}{% else %}<span
+            "{:,}".format(entry.downloads) }}{% elif entry.source_type ==
+            'Stdlib' %}<span class="source-badge">Stdlib</span>{% else %}<span
               class="source-badge"
               >Not on PyPI</span
             >{% endif %}
@@ -240,14 +241,14 @@
             >
               {{ entry.groups[0] }}
             </a>
-            {% if entry.source_type == 'Built-in' %}
+            {% if entry.source_type == 'Stdlib' %}
             <a
               class="tag tag-source"
               href="/categories/built-in/"
-              data-value="Built-in"
+              data-value="Stdlib"
               data-url="/categories/built-in/"
             >
-              Built-in
+              Stdlib
             </a>
             {% endif %}
           </td>

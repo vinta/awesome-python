@@ -22,7 +22,7 @@ SITE_URL = "https://awesome-python.com/"
 SITEMAP_URL = f"{SITE_URL}sitemap.xml"
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
 
-BUILTIN_FILTER = "Built-in"
+BUILTIN_FILTER = "Stdlib"
 BUILTIN_SLUG = "built-in"
 BUILTIN_PATH = f"/categories/{BUILTIN_SLUG}/"
 BUILTIN_PUBLIC_URL = f"{SITE_URL}categories/{BUILTIN_SLUG}/"
@@ -32,7 +32,7 @@ SPONSORSHIP_PUBLIC_URL = f"{SITE_URL}sponsorship/"
 SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
 
 SOURCE_TYPE_DOMAINS = {
-    "docs.python.org": "Built-in",
+    "docs.python.org": BUILTIN_FILTER,
     "gitlab.com": "GitLab",
     "bitbucket.org": "Bitbucket",
 }
@@ -128,9 +128,9 @@ def sort_entries(entries: Sequence[TemplateEntry]) -> list[TemplateEntry]:
         if downloads is not None:
             return (0, -downloads, 0, name)
         if stars is not None:
-            builtin = 1 if entry.get("source_type") == "Built-in" else 0
+            builtin = 1 if entry.get("source_type") == BUILTIN_FILTER else 0
             return (1, -stars, builtin, name)
-        if entry.get("source_type") == "Built-in":
+        if entry.get("source_type") == BUILTIN_FILTER:
             return (2, 0, 0, name)
         return (3, 0, 0, name)
 
@@ -445,9 +445,9 @@ def annotate_entries_with_stats(
         parts: list[str] = []
         if links:
             name, url = links[0]
-            # Category-index bullets link into the site itself, and Built-in entries
+            # Category-index bullets link into the site itself, and stdlib entries
             # would hit same-named PyPI backports (e.g. logging) — no counts for either.
-            if not url.startswith((SITE_URL, "#")) and detect_source_type(url) != "Built-in":
+            if not url.startswith((SITE_URL, "#")) and detect_source_type(url) != BUILTIN_FILTER:
                 downloads = downloads_data.get(normalize(name))
                 if downloads is not None:
                     parts.append(f"PyPI downloads/month: {downloads}")
@@ -581,15 +581,15 @@ def build(repo_root: Path) -> None:
 
     for entry in entries:
         repo_key = extract_github_repo(entry["url"])
-        if not repo_key and entry.get("source_type") == "Built-in":
+        if not repo_key and entry.get("source_type") == BUILTIN_FILTER:
             repo_key = "python/cpython"
         if repo_key and repo_key in stars_data:
             sd = stars_data[repo_key]
             entry["stars"] = sd["stars"]
             entry["owner"] = sd["owner"]
             entry["last_commit_at"] = sd.get("last_commit_at", "")
-        # Built-in entries would hit same-named PyPI backports (e.g. asyncio), not the stdlib.
-        if entry.get("source_type") != "Built-in":
+        # Stdlib entries would hit same-named PyPI backports (e.g. asyncio), not the stdlib.
+        if entry.get("source_type") != BUILTIN_FILTER:
             entry["downloads"] = downloads_data.get(normalize(entry["name"]))
 
     entries = sort_entries(entries)
