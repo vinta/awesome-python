@@ -139,9 +139,10 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
 - Orchestration
+  - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
+  - [jaybox-core](https://github.com/Jaybox-core/jaybox-core) - A security-hardened agentic execution runtime and Directed Acyclic Verification Graph (DAVG) engine.
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
-  - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
 - Vendor Agent SDKs
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
