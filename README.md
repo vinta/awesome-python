@@ -146,6 +146,9 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Vendor Agent SDKs
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
   - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
+- Model Context Protocol (MCP)
+  - [fastmcp](https://github.com/jlowin/fastmcp) - The fast, pythonic way to build Model Context Protocol (MCP) servers and AI agent tools.
+  - [mcp](https://github.com/modelcontextprotocol/python-sdk) - The official Python SDK for the Model Context Protocol.
 - Personal Assistants
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
 - Prompt Optimization
