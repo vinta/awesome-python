@@ -1110,6 +1110,7 @@ _Libraries for cryptographic primitives and secure protocols._
 _Frameworks and tools for penetration testing._
 
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
+- [LeakRadar](https://github.com/Ajmax76/leakradar) - Open-source CLI DAST scanner for automated BOLA/IDOR vulnerability testing on REST APIs.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 - [sherlock-project](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 - [social-engineer-toolkit](https://github.com/trustedsec/social-engineer-toolkit) - A toolkit for social engineering.
