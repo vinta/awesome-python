@@ -1033,6 +1033,7 @@ _Libraries for asynchronous, concurrent and parallel execution. Also see [awesom
 
 _Libraries for working with dates and times._
 
+- [cron-translate](https://github.com/fabiocicerchia/cron-translate) - Translates cron expressions to/from plain English, with timezone support and a next-N-runs preview.
 - [zoneinfo](https://docs.python.org/3/library/zoneinfo.html) - (Python standard library) IANA time zone support. Brings the [tz database](https://en.wikipedia.org/wiki/Tz_database) into Python.
 - [python-dateutil](https://github.com/dateutil/dateutil) - Extensions to the standard Python [datetime](https://docs.python.org/3/library/datetime.html) module.
 - [dateparser](https://github.com/scrapinghub/dateparser) - A Python parser for human-readable dates in dozens of languages.
