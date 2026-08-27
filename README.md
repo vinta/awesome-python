@@ -893,6 +893,7 @@ _Libraries for working with HTML and XML._
 - [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 - [markupsafe](https://github.com/pallets/markupsafe) - Implements a XML/HTML/XHTML Markup safe string for Python.
 - [justhtml](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works.
+- [domonic](https://github.com/byteface/domonic) - Python DOM and HTML toolkit for generating, parsing and manipulating HTML/XML/SVG with CSS selectors, XPath, Web APIs and JavaScript-like utilities.
 
 ### File Format Processing
 
