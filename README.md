@@ -609,6 +609,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
   - [complexipy](https://github.com/rohaquinlop/complexipy) - Cognitive complexity analysis for Python code, written in Rust.
+  - [thailint](https://github.com/be-wise-be-kind/thai-lint) - Detects anti-patterns common in AI-generated code, including cross-file duplication and unjustified linter suppressions.
 - Git Hooks
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 - Linters and Formatters
