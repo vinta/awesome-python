@@ -255,6 +255,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
     - [awesome-pyramid](https://github.com/uralbash/awesome-pyramid)
   - [fasthtml](https://github.com/AnswerDotAI/fasthtml) - The fastest way to create an HTML app.
     - [awesome-fasthtml](https://github.com/amosgyamfi/awesome-fasthtml)
+  - [py4web](https://github.com/web2py/py4web) - PY4WEB is a full stack web framework for the rapid development of efficient database driven web applications.
 - Asynchronous
   - [starlette](https://github.com/Kludex/starlette) - A lightweight ASGI framework and toolkit for building high-performance async services.
   - [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
