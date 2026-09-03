@@ -162,6 +162,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
+  - [viento](https://github.com/abhinav00anand/viento) - Distributed AI inference runtime SDK connecting local LLMs to a cloud mesh.
 - LLM Gateways
   - [LiteLLM](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
 - Image and Video Generation
