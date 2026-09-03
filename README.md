@@ -1106,6 +1106,7 @@ _Libraries for cryptographic primitives and secure protocols._
 - [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Various helpers to pass trusted data to untrusted environments.
+- [Gorgona](https://github.com/adrianpeticila/gorgona) - Minimalist, zero-dependency Python guardrail engine for secret scanning, brand isolation, and agent cycle prevention.
 
 ### Penetration Testing
 
