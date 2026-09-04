@@ -83,7 +83,7 @@ An opinionated guide to the best Python frameworks, libraries, and tools.
 - [CLI Development](#cli-development)
 - [CLI Tools](#cli-tools)
 - [GUI Development](#gui-development)
-
+- 
 **Text & Documents**
 
 - [Text Processing](#text-processing)
@@ -1110,7 +1110,7 @@ _Libraries for cryptographic primitives and secure protocols._
 ### Penetration Testing
 
 _Frameworks and tools for penetration testing._
-
+- [https://github.com/Jeffy123-zhu/logspecter] - Fast, schema-aware secret acanner for clud logs.
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 - [sherlock-project](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
