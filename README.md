@@ -135,6 +135,7 @@ An opinionated guide to the best Python frameworks, libraries, and tools.
 _Libraries for building AI applications, LLM integrations, and autonomous agents._
 
 - Agent Skills
+  - [buildanchor](https://github.com/tensilestream/buildanchor) - Local build truth and change-validation layer for Python codebases and AI coding agents.
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
