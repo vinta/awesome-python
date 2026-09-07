@@ -138,6 +138,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
   - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
+- Governance
+  - [consensus-hardening-protocol](https://github.com/icohangar-ops/consensus-hardening-protocol) - Adversarial decision hardening for multi-agent systems, with an R0 gate, foundation attack, signed decision record, CLI, and conformance suite.
 - Orchestration
   - [langchain](https://github.com/langchain-ai/langchain) - Building applications with LLMs through composability.
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
@@ -728,6 +730,7 @@ _Software and libraries for DevOps._
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
   - [flower](https://github.com/mher/flower) - A real-time monitor and web admin for Celery task queues.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+  - [cubiczan-resilience](https://github.com/icohangar-ops/cubiczan-resilience) - Retry/backoff, circuit breaker, idempotency ledger, atomic writes, and fail-closed FastAPI helpers.
 - Other
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
