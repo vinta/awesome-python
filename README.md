@@ -945,6 +945,7 @@ _Libraries for manipulating images._
 - Barcodes and QR Codes
   - [qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
   - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
+  - [pyStrich](https://github.com/mmulqueen/pyStrich) - A pure-Python 1D and 2D barcode generator: Code 39, Code 128, EAN-13, ITF-14, Data Matrix, QR Code, PDF417 and Aztec Code.
 - General
   - [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](https://www.pythonware.com/products/pil/) fork.
   - [scikit-image](https://github.com/scikit-image/scikit-image) - A Python library for (scientific) image processing.
