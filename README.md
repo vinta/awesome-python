@@ -1154,6 +1154,7 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/pallets-eco/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+- [gun101](https://github.com/dialga-cmd/gun101) - A simple, secure file encryption tool using AES-256-GCM and Argon2id.
 
 ## Resources
 
