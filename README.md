@@ -143,6 +143,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
   - [crewai](https://github.com/crewAIInc/crewAI) - A framework for orchestrating role-playing autonomous AI agents for collaborative task solving.
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
+  - [consensus-hardening-protocol](https://github.com/icohangar-ops/consensus-hardening-protocol) - Adversarial decision hardening for multi-agent systems, with an R0 gate, foundation attack, signed decision record, CLI, and conformance suite.
 - Vendor Agent SDKs
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
   - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
