@@ -1154,6 +1154,7 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/pallets-eco/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+- [gun101-tpm](https://github.com/dialga-cmd/gun101-tpm) - Hardware-bound file encryption using TPM 2.0, ensuring encrypted files can only be decrypted on the originating machine.
 
 ## Resources
 
