@@ -731,6 +731,7 @@ _Software and libraries for DevOps._
 - Other
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
+  - [cubiczan-resilience](https://github.com/icohangar-ops/cubiczan-resilience) - Battle-tested resilience primitives for retries, circuit breakers, idempotency, atomic writes, and fail-closed FastAPI helpers.
 
 ### Distributed Computing
 
