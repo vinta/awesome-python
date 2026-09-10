@@ -1176,6 +1176,7 @@ Where to discover learning resources or new Python libraries.
 
 ### Websites
 
+- [awesome-python](https://github.com/vinta/awesome-python) - An opinionated guide to the best Python frameworks, libraries, and tools.
 - [Python Developer Tooling Handbook](https://pydevtools.com/) - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
 
 ## Contributing
