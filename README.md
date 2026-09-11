@@ -467,6 +467,7 @@ _Libraries and software for indexing and performing search queries on data._
 - [opensearch-py](https://github.com/opensearch-project/opensearch-py) - The official low-level Python client for [OpenSearch](https://opensearch.org/).
 - [meilisearch](https://github.com/meilisearch/meilisearch-python) - The official Python client for the [Meilisearch](https://www.meilisearch.com/) search engine.
 - [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
+- [whoosh3](https://github.com/priya-sundaram-dev/whoosh) - Fast, pure-Python full-text search you embed directly in your app, with no server or extra services ([Whoosh](https://github.com/whoosh-community/whoosh) fork).
 
 ### Serialization
 
