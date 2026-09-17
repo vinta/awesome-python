@@ -1124,6 +1124,7 @@ _Tools for auditing dependencies against known vulnerabilities._
 
 - [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the PyPI Advisory Database and OSV.
 - [uv-audit](https://github.com/astral-sh/uv) - (part of uv) uv's [dependency vulnerability and malware scanning](https://docs.astral.sh/uv/reference/cli/#uv-audit) backed by OSV.
+- [ephemora-cell](https://github.com/MichaelS1011/ephemora-cell) - Isolated WASM sandbox for untrusted AI-generated code. Capability-based WASI (wasmtime) with fuel/memory/time/I/O/FS limits, 0.51ms warm, 424 tests, wasi-testsuite conformance.
 
 ### Web Security
 
