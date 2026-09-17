@@ -1,6 +1,6 @@
-# [Awesome Python](https://awesome-python.com/)
 
-An opinionated guide to the best Python frameworks, libraries, and tools.
+
+A# [Awesome Python](https://awesome-python.com/ opinionated guide to the best Python frameworks, libraries, and tools.
 
 **Visit the [website](https://awesome-python.com/) to search and filter projects more easily.**
 
@@ -730,6 +730,7 @@ _Software and libraries for DevOps._
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
   - [flower](https://github.com/mher/flower) - A real-time monitor and web admin for Celery task queues.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
+  - [bashautom](https://github.com/huskago/bashautom) - Persistent, stateful bash sessions for Python automation.
 - Other
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
   - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
