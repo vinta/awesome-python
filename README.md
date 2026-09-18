@@ -145,7 +145,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [pydantic-ai](https://github.com/pydantic/pydantic-ai) - A Python agent framework for building generative AI applications with structured schemas.
 - Vendor Agent SDKs
   - [openai-agents](https://github.com/openai/openai-agents-python) - OpenAI's framework for building and managing AI agents.
-  - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
+  - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness 鈥?custom tools, in-process MCP servers, hooks.
 - Personal Assistants
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
 - Prompt Optimization
@@ -154,6 +154,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
+  - [MindForge](https://github.com/opok-ops/MindForge) - Production-grade lifelong memory system for AI agents: 4-tier memory, 6-way hybrid search, AES-256-GCM encryption, MCP server, CLI and Python SDK.
   - [openviking](https://github.com/volcengine/OpenViking) - A context database for AI agents that unifies memory, resources, and skills.
   - [semantica](https://github.com/semantica-agi/semantica) - A graph-native context and knowledge layer for AI agents with reasoning, provenance, and governance.
 - Pre-trained Models
@@ -217,7 +218,7 @@ _Libraries for working with human languages._
   - [stanza](https://github.com/stanfordnlp/stanza) - The Stanford NLP Group's official Python library, supporting 60+ languages.
 - Chinese
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
-  - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
+  - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (婕㈠瓧) to pinyin (鎷奸煶).
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
 
 ### Computer Vision
@@ -922,7 +923,7 @@ _Libraries for parsing and manipulating specific text formats._
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
 - Markdown
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
-  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber鈥檚 Markdown.
   - [mistune](https://github.com/lepture/mistune) - Fastest and full featured pure Python parsers of Markdown.
 - Data Formats
   - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
