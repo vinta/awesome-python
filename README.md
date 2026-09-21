@@ -219,6 +219,8 @@ _Libraries for working with human languages._
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
   - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
+  - [yasbd-lib](https://github.com/speedyk-005/yasbd-lib) - High-accuracy, rule-based sentence boundary detector (SBD). Drop-in pysbd adapter, streaming APIs, CLI, and a spaCy component across 39+ languages.
+
 
 ### Computer Vision
 
