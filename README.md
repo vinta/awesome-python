@@ -652,6 +652,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - Load Testing
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
 - API Testing
+  - [driftwire](https://github.com/Haswell119/driftwire) - Zero-dependency CLI for detecting OpenAPI contract drift: breaking changes between spec versions and spec-vs-reality checks against a live API.
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web applications built with Open API / Swagger specifications.
 - Mock
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
