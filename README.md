@@ -1090,6 +1090,7 @@ _Libraries to create packaged executables for release distribution._
   - [cx-Freeze](https://github.com/marcelotduarte/cx_Freeze) - It is a Python tool that converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
 - Obfuscation
   - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
+  - [pyobfus](https://github.com/zhurong2020/pyobfus) - AST-based obfuscator with reverse stack-trace mapping, framework-aware presets and a JSON CLI for AI coding agents.
 
 ### Configuration Files
 
