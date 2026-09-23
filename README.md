@@ -668,7 +668,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - Fake Data
   - [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
   - [mimesis](https://github.com/lk-geimfari/mimesis) - is a Python library that help you generate fake data.
-  - [mockjutsu](https://github.com/altansayan/mock-jutsu-api) - Checksum-valid financial test data generator (IBAN MOD-97, Luhn cards, TCKN, ISIN, BIC/SWIFT) — unlike format-only fakers, every value passes real validation.
+  - [mockjutsu](https://github.com/altansayan/mock-jutsu-api) - Checksum-valid financial test data generator (IBAN MOD-97, Luhn cards, TCKN, ISIN, BIC/SWIFT) — unlike format-only fakers, every value passes real validation. Also published as a Java library on Maven Central.
 
 ### Debugging Tools
 
