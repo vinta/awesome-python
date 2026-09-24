@@ -985,6 +985,7 @@ _Awesome game development libraries._
   - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
   - [pygame-ce](https://github.com/pygame-community/pygame-ce) - An actively developed drop-in replacement with new features and performance improvements ([pygame](https://github.com/pygame/pygame) fork).
   - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
+  - [pyxel](https://github.com/kitao/pyxel) - Retro game engine with built-in pixel art, tilemap, sound and music editors.
 - Visual Novels
   - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
