@@ -148,6 +148,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [claude-agent-sdk](https://github.com/anthropics/claude-agent-sdk-python) - Anthropic's Python SDK for building AI agents on Claude Code's harness — custom tools, in-process MCP servers, hooks.
 - Personal Assistants
   - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
+  - [AstrBot](https://github.com/AstrBotDevs/AstrBot) - A multi-platform AI assistant that connects LLMs to chat apps like Telegram, Slack, and QQ, extensible with Python plugins.
 - Prompt Optimization
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
 - Data Layer
@@ -167,7 +168,9 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Image and Video Generation
   - [diffusers](https://github.com/huggingface/diffusers) - A library that provides pre-trained diffusion models for generating and editing images, audio, and video.
 - Fine-tuning
+  - [peft](https://github.com/huggingface/peft) - A library for parameter-efficient fine-tuning of large pretrained models.
   - [unsloth](https://github.com/unslothai/unsloth) - A library for faster LLM fine-tuning and training with reduced memory usage.
+  - [axolotl](https://github.com/axolotl-ai-cloud/axolotl) - A framework for fine-tuning and post-training large language models.
 - Speech
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with 170x realtime speed, 50+ languages, speaker diarization, and emotion detection.
@@ -380,6 +383,7 @@ _Libraries to automate web scraping and extract web content._
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
+  - [stagehand](https://github.com/browserbase/stagehand) - A fast and token-efficient browser automation SDK to extract data and perform self-healing actions on web pages.
 - Content Extraction
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [html2text](https://github.com/Alir3z4/html2text) - Convert HTML to Markdown-formatted text.
@@ -445,6 +449,7 @@ _In-process databases usable directly from Python._
   - [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with embeddings and semantic search.
   - [lancedb](https://github.com/lancedb/lancedb) - A developer-friendly embedded retrieval database for multimodal AI.
   - [zvec](https://github.com/alibaba/zvec) - An embedded vector database for on-device RAG and edge AI, the SQLite of vector databases.
+  - [pixeltable](https://github.com/pixeltable/pixeltable) - Declarative multimodal AI data engine for tables, computed columns, and embedding search.
 - Key-Value & Document
   - [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 
@@ -605,10 +610,11 @@ _Interactive Python interpreters (REPL)._
 _Tools of static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/analysis-tools-dev/static-analysis)._
 
 - Code Analysis
+  - [import-linter](https://github.com/seddonym/import-linter) - A linter that enforces architectural constraints on imports between Python modules.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
+  - [complexipy](https://github.com/rohaquinlop/complexipy) - Cognitive complexity analysis for Python code, written in Rust.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
   - [repowise](https://github.com/repowise-dev/repowise) - Codebase intelligence that indexes repos into dependency graphs, git history, and auto-generated docs with dead code detection.
-  - [complexipy](https://github.com/rohaquinlop/complexipy) - Cognitive complexity analysis for Python code, written in Rust.
 - Git Hooks
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 - Linters and Formatters
