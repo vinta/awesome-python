@@ -280,7 +280,7 @@ class TestBuild:
 
         assert 'href="/categories/widgets/"' in index_html
         assert 'data-value="Widgets"' in index_html
-        assert parser.title.strip() == "Widgets Python Libraries - Awesome Python"
+        assert parser.title.strip() == "Python Widgets Libraries - Awesome Python"
         assert parser.meta_by_name["description"] == "Widget libraries. Also see awesome-widgets. Explore 2 curated Python projects in Widgets."
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/categories/widgets/"
         assert parser.meta_by_property["og:url"] == "https://awesome-python.com/categories/widgets/"
@@ -622,7 +622,7 @@ class TestBuild:
         assert set(graph) == {"WebSite", "CollectionPage", "BreadcrumbList"}
         assert graph["WebSite"]["@id"] == "https://awesome-python.com/#website"
         collection = graph["CollectionPage"]
-        assert collection["name"] == "Widgets Python Libraries"
+        assert collection["name"] == "Python Widgets Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/widgets/"
         assert collection["url"] == "https://awesome-python.com/categories/widgets/"
         assert collection["description"] == "Widget libraries. Explore 2 curated Python projects in Widgets."
@@ -672,7 +672,7 @@ class TestBuild:
 
         graph = {node["@type"]: node for node in data["@graph"]}
         collection = graph["CollectionPage"]
-        assert collection["name"] == "AI & ML Python Libraries"
+        assert collection["name"] == "Python AI & ML Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["url"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["description"] == "Explore 1 curated Python projects in AI & ML. Part of the Awesome Python catalog."

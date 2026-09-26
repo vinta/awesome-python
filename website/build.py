@@ -222,7 +222,7 @@ def category_meta_title(name: str, parent_name: str | None = None) -> str:
         if len(title) <= 60:
             return title
         return f"{name} - Awesome Python"
-    title = f"{name} Python Libraries - Awesome Python"
+    title = f"Python {name} Libraries - Awesome Python"
     if len(title) <= 60:
         return title
     return f"{name} - Awesome Python"
