@@ -76,6 +76,9 @@
 {% endblock %}
 {% block content %}
 {% macro entry_rows(entry, index) %}
+        {# On section and subcategory pages the group heading already names the row's use case #}
+        {% set grouped_page = entry_groups and not group_categories %}
+        {% set section_path = "/categories/" ~ parent_category.slug ~ "/" if parent_category else current_path %}
         <tr
           class="row"
           tabindex="0"
@@ -87,7 +90,7 @@
             <a href="{{ entry.url }}" target="_blank" rel="noopener"
               >{{ entry.name }}</a
             >
-            <span class="mobile-cat"
+            <span class="mobile-cat{% if grouped_page and (not entry.subcategories or category_urls[entry.subcategories[0].value.split(' > ')[0]] == section_path) %} repeats-heading{% endif %}"
               >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
               else %}{{ category.name }}{% endif %}</span
             >
@@ -123,13 +126,13 @@
           </td>
           <td class="col-cat">
             {% for subcat in entry.subcategories %}
-            <a class="tag{% if subcat.url == current_path %} active{% endif %}" href="{{ category_urls[subcat.value.split(' > ')[0]] }}#{{ subcat.slug }}">
+            <a class="tag{% if subcat.url == current_path %} active{% endif %}{% if grouped_page and category_urls[subcat.value.split(' > ')[0]] == section_path %} repeats-heading{% endif %}" href="{{ category_urls[subcat.value.split(' > ')[0]] }}#{{ subcat.slug }}">
               {{ subcat.name }}
             </a>
             {% endfor %}
             {% for cat in entry.categories %}
             <a
-              class="tag{% if category_urls[cat] == current_path %} active{% endif %}"
+              class="tag{% if category_urls[cat] == current_path %} active{% endif %}{% if grouped_page and category_urls[cat] == current_path %} repeats-heading{% endif %}"
               href="{{ category_urls[cat] }}"
               >{{ cat }}</a
             >

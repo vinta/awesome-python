@@ -991,6 +991,7 @@ class TestBuild:
         assert positions == sorted(positions)
         assert '<a class="jump-link" href="#small">Small</a>' in html
         assert '<a href="/categories/widgets/small/">Small</a>' in html
+        assert '<a class="tag repeats-heading" href="/categories/widgets/#small">' in html
         assert '<tr class="desc-row">' in html
 
         subcategory_html = (site / "widgets" / "small" / "index.html").read_text(encoding="utf-8")
@@ -1033,6 +1034,7 @@ class TestBuild:
         dl_heading = html.index('<a href="/categories/deep-learning/">Deep Learning</a>')
         assert ml_heading < html.index(">ml1</a") < dl_heading < html.index(">dl1</a")
         assert html.count(">ml1</a") == 1
+        assert "repeats-heading" not in html
         assert 'class="jump-links"' not in html
 
     def test_build_rejects_redirect_to_missing_page(self, tmp_path):

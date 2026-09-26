@@ -288,6 +288,7 @@ function sortRows() {
 const sortHeaders = document.querySelectorAll("th[data-sort]");
 
 function updateSortIndicators() {
+  if (table) table.classList.toggle("sorted", activeSort.col !== "editorial");
   sortHeaders.forEach(function (th) {
     th.classList.remove("sort-asc", "sort-desc");
     if (th.dataset.sort === activeSort.col) {
