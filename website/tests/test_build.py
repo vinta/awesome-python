@@ -990,6 +990,7 @@ class TestBuild:
         positions = [html.index(marker) for marker in ('<h2 id="small">', ">w2</a", ">w1</a", '<h2 id="large">', ">w3</a")]
         assert positions == sorted(positions)
         assert '<a class="jump-link" href="#small">Small</a>' in html
+        assert '<a href="/categories/widgets/small/">Small</a>' in html
         assert '<tr class="desc-row">' in html
 
         subcategory_html = (site / "widgets" / "small" / "index.html").read_text(encoding="utf-8")

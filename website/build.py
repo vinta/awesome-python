@@ -276,7 +276,8 @@ def group_section_entries(section: ParsedSection, entries_by_key: dict[tuple[str
     groups: dict[str, EntryGroup] = {}
     for parsed in section["entries"]:
         name = parsed["subcategory"]
-        group = groups.setdefault(name, EntryGroup(name=name, slug=slugify(name) if name else "", url="", entries=[]))
+        slug = slugify(name) if name else ""
+        group = groups.setdefault(name, EntryGroup(name=name, slug=slug, url=subcategory_path(section["slug"], slug) if name else "", entries=[]))
         group["entries"].append(entries_by_key[(parsed["url"], parsed["name"])])
     return list(groups.values())
 
