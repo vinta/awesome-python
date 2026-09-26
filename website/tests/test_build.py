@@ -280,7 +280,6 @@ class TestBuild:
         parser.feed(category_html)
 
         assert 'href="/categories/widgets/"' in index_html
-        assert 'data-value="Widgets"' in index_html
         assert parser.title.strip() == "Python Widgets Libraries - Awesome Python"
         assert parser.meta_by_name["description"] == "Widget libraries. Also see awesome-widgets. Explore 2 curated Python projects in Widgets."
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/categories/widgets/"
@@ -816,75 +815,6 @@ class TestBuild:
             {"@type": "ListItem", "position": 2, "name": "Sponsorship", "item": "https://awesome-python.com/sponsorship/"},
         ]
 
-    def test_index_embeds_filter_urls_json(self, tmp_path):
-        readme = textwrap.dedent("""\
-            # T
-
-            ## Projects
-
-            **AI & ML**
-
-            ## Deep Learning
-
-            - [dl1](https://example.com/dl1) - DL.
-
-            ## Machine Learning
-
-            - Classical
-
-                - [ml1](https://example.com/ml1) - ML.
-
-            # Contributing
-
-            Done.
-        """)
-        self._copy_real_templates(tmp_path)
-        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
-        build(tmp_path)
-
-        site = tmp_path / "website" / "output"
-        index_html = (site / "index.html").read_text(encoding="utf-8")
-
-        marker = '<script type="application/json" id="filter-urls">'
-        assert marker in index_html
-        start = index_html.index(marker) + len(marker)
-        end = index_html.index("</script>", start)
-        data = json.loads(index_html[start:end])
-
-        assert data["Deep Learning"] == "/categories/deep-learning/"
-        assert data["Machine Learning"] == "/categories/machine-learning/"
-        assert data["AI & ML"] == "/categories/ai-ml/"
-        assert data["Machine Learning > Classical"] == "/categories/machine-learning/classical/"
-
-    def test_filter_urls_json_escapes_closing_script_tag(self, tmp_path):
-        readme = textwrap.dedent("""\
-            # T
-
-            ## Projects
-
-            ## Sneaky </script><script>x=1</script>
-
-            - [a](https://example.com) - A.
-
-            # Contributing
-
-            Done.
-        """)
-        self._copy_real_templates(tmp_path)
-        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
-        build(tmp_path)
-
-        site = tmp_path / "website" / "output"
-        index_html = (site / "index.html").read_text(encoding="utf-8")
-
-        marker = '<script type="application/json" id="filter-urls">'
-        start = index_html.index(marker) + len(marker)
-        end = index_html.index("</script>", start)
-        block = index_html[start:end]
-        assert "</script>" not in block
-        data = json.loads(block)
-        assert any("Sneaky" in key for key in data)
-
     def test_build_creates_group_pages(self, tmp_path):
         readme = textwrap.dedent("""\
             # T
@@ -925,7 +855,7 @@ class TestBuild:
         assert "wf1" in web_dev
         assert "dl1" not in web_dev
 
-    def test_tag_buttons_have_data_url(self, tmp_path):
+    def test_tags_link_to_pages_and_subcategory_anchors(self, tmp_path):
         readme = textwrap.dedent("""\
             # T
 
@@ -950,11 +880,14 @@ class TestBuild:
         site = tmp_path / "website" / "output"
         index_html = (site / "index.html").read_text(encoding="utf-8")
 
-        assert 'data-value="Deep Learning"' in index_html
-        assert 'data-url="/categories/deep-learning/"' in index_html
-        assert 'data-value="AI &amp; ML"' in index_html or 'data-value="AI & ML"' in index_html
-        assert 'data-url="/categories/ai-ml/"' in index_html
-        assert 'data-url="/categories/deep-learning/vision/"' in index_html
+        category_html = (site / "categories" / "deep-learning" / "index.html").read_text(encoding="utf-8")
+
+        for html in (index_html, category_html):
+            assert 'href="/categories/deep-learning/#vision"' in html
+            assert 'href="/categories/ai-ml/"' in html
+            assert "data-url=" not in html
+        assert 'href="/categories/deep-learning/"' in index_html
+        assert 'id="vision"' in category_html
 
     _REDIRECT_README = textwrap.dedent("""\
         # Awesome Python

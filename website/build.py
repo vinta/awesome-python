@@ -678,12 +678,7 @@ def build(repo_root: Path) -> None:
     filter_urls: dict[str, str] = dict(category_urls)
     for group in parsed_groups:
         filter_urls[group["name"]] = group_path(group["slug"])
-    for entry in entries:
-        for sub in entry.get("subcategories", []):
-            filter_urls[sub["value"]] = sub["url"]
     builtin_entries = [e for e in entries if e.get("source_type") == BUILTIN_FILTER]
-    if builtin_entries:
-        filter_urls[BUILTIN_FILTER] = BUILTIN_PATH
 
     env = Environment(
         loader=FileSystemLoader(website / "templates"),
@@ -696,7 +691,6 @@ def build(repo_root: Path) -> None:
         shutil.rmtree(site_dir)
     site_dir.mkdir(parents=True)
 
-    filter_urls_json = json.dumps(filter_urls, sort_keys=True, ensure_ascii=False).replace("</", "<\\/")
     homepage_json_ld = json.dumps(
         build_homepage_json_ld(entries, len(categories)),
         ensure_ascii=False,
@@ -715,7 +709,6 @@ def build(repo_root: Path) -> None:
             sponsors=sponsors,
             category_urls=category_urls,
             filter_urls=filter_urls,
-            filter_urls_json=filter_urls_json,
             homepage_json_ld=homepage_json_ld,
         ),
         encoding="utf-8",
@@ -762,7 +755,6 @@ def build(repo_root: Path) -> None:
                 category_urls=category_urls,
                 current_path=current_path,
                 filter_urls=filter_urls,
-                filter_urls_json=filter_urls_json,
                 parent_category=parent_category,
                 group_categories=group_categories,
                 category_json_ld=category_json_ld,
