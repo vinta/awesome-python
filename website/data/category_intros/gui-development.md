@@ -4,17 +4,17 @@ How to choose:
 
 - Full desktop app: PySide6, or PyQt6 if your app can be GPL or you buy a license
 - Small tool without third-party packages: tkinter
-- Modern look for a tkinter app: [CustomTkinter](https://customtkinter.tomschimansky.com/)
-- tkinter layout drawn in Figma: [Tkinter Designer](https://github.com/ParthJadhav/Tkinter-Designer)
-- Native widgets on Windows, macOS, and Linux: [wxPython](https://wxpython.org/pages/overview/)
-- GNOME app on Linux: [PyGObject](https://pygobject.gnome.org/)
-- GPU-rendered tools for your scripts: [Dear PyGui](https://dearpygui.readthedocs.io/en/latest/about/what-why.html)
+- Modern look for a tkinter app: CustomTkinter
+- tkinter layout drawn in Figma: Tkinter Designer
+- Native widgets on Windows, macOS, and Linux: wxPython
+- GNOME app on Linux: PyGObject
+- GPU-rendered tools for your scripts: Dear PyGui
 - Multi-touch apps on Android and iOS: Kivy
 - Native widgets on desktop and mobile: Toga
 - One codebase for web, desktop, and mobile: Flet
 - Dashboards and web UIs: NiceGUI
-- HTML/JavaScript frontend in a desktop window: [pywebview](https://pywebview.flowrl.com/guide/)
-- GUI for an existing argparse script: [Gooey](https://github.com/chriskiehl/Gooey)
+- HTML/JavaScript frontend in a desktop window: pywebview
+- GUI for an existing argparse script: Gooey
 
 PySide6 is Qt for Python, the [official Python bindings for Qt](https://doc.qt.io/qtforpython-6/), under the LGPL, the GPL, or a commercial license. Qt's docs [recommend a virtual environment](https://doc.qt.io/qtforpython-6/gettingstarted.html) over installing it into your system Python. Ship it with [pyside6-deploy](https://doc.qt.io/qtforpython-6/deployment/index.html).
 
