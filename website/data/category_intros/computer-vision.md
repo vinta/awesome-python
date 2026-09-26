@@ -1,24 +1,24 @@
-For a Python computer vision library, start with OpenCV, and add Ultralytics YOLO to detect objects. For OCR, use pytesseract for scans and EasyOCR for photos.
+Start with OpenCV when you need a Python computer vision library for images and video. To train and run detection models, use Ultralytics YOLO.
 
 How to choose:
 
-- Reading, transforming, and writing images and video: OpenCV
-- Detecting, segmenting, or tracking objects with a pretrained model: Ultralytics YOLO, which is AGPL-3.0 unless you buy an Enterprise License
-- Image processing and augmentation on GPU batches, inside a PyTorch model or training loop: Kornia
-- Browsing a dataset, finding label mistakes, and seeing where a model fails: FiftyOne
-- Scanned pages and documents: pytesseract, on top of a Tesseract engine you install yourself
-- Text in photos, without a separate OCR engine to install: EasyOCR
+- Image and video processing: OpenCV
+- Detection, segmentation, and pose models: Ultralytics YOLO
+- Vision ops inside a PyTorch model: Kornia
+- Dataset curation and model evaluation: FiftyOne
+- OCR on clean, printed documents: pytesseract
+- OCR on text in photos: EasyOCR
 
-OpenCV ships as four wheels on PyPI, and you install exactly one, since they all use the same `cv2` namespace. On a server or in Docker, pick `opencv-python-headless`, which leaves out the GUI libraries. The opencv-python README says [you should always use it](https://github.com/opencv/opencv-python#installation-and-usage) unless you call `cv2.imshow`. The wheels are CPU-only; for CUDA, you build OpenCV from source.
+OpenCV comes as [four pip packages that share the `cv2` namespace](https://github.com/opencv/opencv-python), so install only one: opencv-python for the main modules, or opencv-contrib-python to add the extra modules. If you never call `cv2.imshow` or you build your GUI with another toolkit, install the headless variant of either one, which also makes Docker images smaller.
 
-With Ultralytics YOLO, load a pretrained checkpoint with `YOLO()`, fine-tune it with `model.train()`, and ship it with `model.export(format="onnx")`. Check the license before you build a product on it. Ultralytics says an Enterprise License is ["required if you want to use Ultralytics YOLO without open-sourcing your entire project"](https://www.ultralytics.com/license), even for models you trained yourself.
+Ultralytics YOLO covers the [whole life of a model](https://docs.ultralytics.com/modes/): train, validate, predict, export, and track, from Python or the `yolo` command. Its docs recommend [starting training from a pretrained model](https://docs.ultralytics.com/modes/train/). To deploy, [export it](https://docs.ultralytics.com/modes/export/) to ONNX, TensorRT, CoreML, or another format. The code and the models you train with it are [AGPL-3.0](https://www.ultralytics.com/license), so unless you open-source your whole project, you need an Enterprise License.
 
-Kornia works on PyTorch tensors, so its operators ["run wherever the tensor lives"](https://kornia.readthedocs.io/en/latest/) and take a whole batch in one call. Gradients flow through them too, so they can sit inside your model or your loss. Its augmentations expect [float tensors in [0, 1]](https://kornia.readthedocs.io/en/latest/augmentation.html): one still in [0, 255] doesn't raise an error, it just clips.
+Kornia is a [differentiable computer vision library like OpenCV, with strong GPU support](https://kornia.readthedocs.io/en/latest/get-started/introduction.html). Every operator works on PyTorch tensors and supports autograd, so vision ops can run on the GPU and sit inside your training loop.
 
-With FiftyOne, load your images and your model's predictions into a `fo.Dataset` and browse them with `fo.launch_app()`. Then run `compute_mistakenness()` to rank likely label mistakes, which [create an artificial ceiling](https://docs.voxel51.com/brain/index.html) on how good your model can get. Before you trust a test score, run `compute_leaky_splits()` too: duplicates across train and test make it easy to [overestimate your model](https://docs.voxel51.com/brain/index.html#leaky-splits).
+FiftyOne works on the data side of a model. [Load your dataset and your model's predictions into it](https://docs.voxel51.com/user_guide/basics.html), then see where the model succeeds and fails, and find mistakes in your labels. It [integrates with Ultralytics](https://docs.voxel51.com/integrations/ultralytics.html), so you can run and fine-tune YOLO models on FiftyOne datasets.
 
-pytesseract wraps the `tesseract` command, so install Tesseract separately and make sure it's on your `PATH`. Pass `lang=` for anything but English. Tesseract works best at 300 DPI or more, so scale small images up. It also [expects a page of text](https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html) by default, so for a single line, pass `config="--psm 7"`.
+pytesseract [wraps the Tesseract OCR engine](https://github.com/madmaze/pytesseract), which you install on its own, then put on your PATH or point `tesseract_cmd` at. Tesseract suits clean, printed text and needs no GPU. To get better results, [improve the image first](https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html): Tesseract works best at 300 DPI or more, and retraining rarely helps unless you use an unusual font or a new language.
 
-With EasyOCR, create one `easyocr.Reader` and reuse it: loading the model takes a while, and it [needs to be run only once](https://github.com/JaidedAI/EasyOCR#usage).
+EasyOCR is a [general OCR that reads text in photos as well as in documents](https://www.jaided.ai/easyocr), in dozens of languages. It handles text in photos, where Tesseract struggles, but it's slow without a GPU. Create a `Reader` for your languages [once](https://github.com/JaidedAI/EasyOCR) and reuse it for every image, since that call loads the model into memory.
 
-Watch the channel order when you pass images between libraries. OpenCV [loads color images as BGR](https://docs.opencv.org/4.x/d4/da8/group__imgcodecs.html). Ultralytics YOLO and EasyOCR take OpenCV images as they are, but pytesseract assumes RGB, so convert first with `cv2.cvtColor(img, cv2.COLOR_BGR2RGB)`.
+Ultralytics YOLO, Kornia, and EasyOCR run on PyTorch. When you need a specific CUDA build, install PyTorch before the library, as [Ultralytics](https://docs.ultralytics.com/quickstart/) and [Kornia](https://kornia.readthedocs.io/en/latest/get-started/installation.html) recommend. EasyOCR's README says the same for Windows.
