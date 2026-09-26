@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "website",
+      "runtimeExecutable": "make",
+      "runtimeArgs": ["preview"],
+      "port": 8000
+    }
+  ]
+}
