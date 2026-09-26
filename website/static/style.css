@@ -496,15 +496,42 @@ kbd {
   text-wrap: pretty;
 }
 
-.category-subtitle a {
+.category-subtitle a,
+.category-intro a {
   color: var(--hero-text);
   text-decoration: underline;
   text-decoration-color: oklch(100% 0 0 / 0.32);
   text-underline-offset: 0.2em;
 }
 
-.category-subtitle a:hover {
+.category-subtitle a:hover,
+.category-intro a:hover {
   text-decoration-color: oklch(100% 0 0 / 0.7);
+}
+
+.category-intro {
+  margin-top: 1.75rem;
+  display: grid;
+  gap: 0.9rem;
+  color: var(--hero-muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  text-wrap: pretty;
+}
+
+.category-intro > p:first-child {
+  color: var(--hero-text);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.category-intro ul {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: 1.25rem;
+}
+
+.category-intro code {
+  font-size: 0.9em;
 }
 
 .sponsor-band {

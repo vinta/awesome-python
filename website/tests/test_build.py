@@ -991,6 +991,22 @@ class TestBuild:
         assert '<meta name="robots" content="noindex">' in stub
         assert "old-widgets" not in (site / "sitemap.xml").read_text(encoding="utf-8")
 
+    def test_build_renders_category_intro_and_uses_lead_as_meta_description(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use `w1` for most apps.\n\nSee [the docs](https://example.com/docs).\n\nHow to choose:\n\n- Small apps: w1\n", encoding="utf-8")
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        parser = HeadMetadataParser()
+        parser.feed(category_html)
+        assert parser.meta_by_name["description"] == "Use w1 for most apps."
+        assert '<div class="category-intro"><p>Use <code>w1</code> for most apps.</p>' in category_html
+        assert "<li>Small apps: w1</li>" in category_html
+        assert '<a href="https://example.com/docs" target="_blank" rel="noopener">the docs</a>' in category_html
+
     def test_build_rejects_redirect_to_missing_page(self, tmp_path):
         self._copy_real_templates(tmp_path)
         (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")

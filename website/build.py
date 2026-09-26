@@ -13,7 +13,9 @@ from typing import TypedDict
 
 from fetch_pypi_downloads_via_clickpy import OVERRIDES_FILE, normalize
 from jinja2 import Environment, FileSystemLoader
-from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, slugify
+from markdown_it import MarkdownIt
+from markdown_it.tree import SyntaxTreeNode
+from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, render_inline_text, slugify
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
@@ -233,6 +235,24 @@ def category_meta_description(name: str, entry_count: int, description: str, par
         lead = description if description.endswith((".", "!", "?")) else f"{description}."
         return f"{lead} {count_sentence}"
     return f"{count_sentence} Part of the Awesome Python catalog."
+
+
+def load_category_intro(path: Path) -> tuple[str, str]:
+    """Render a category intro file to HTML, plus its first paragraph as plain text for the meta description.
+
+    Returns empty strings if the category has no intro file.
+    """
+    if not path.exists():
+        return "", ""
+    md = MarkdownIt("commonmark")
+    tokens = md.parse(path.read_text(encoding="utf-8"))
+    for token in tokens:
+        for child in token.children or []:
+            if child.type == "link_open":
+                child.attrSet("target", "_blank")
+                child.attrSet("rel", "noopener")
+    lead = next(node for node in SyntaxTreeNode(tokens).children if node.type == "paragraph")
+    return md.renderer.render(tokens, md.options, {}), render_inline_text(lead.children[0].children)
 
 
 def build_breadcrumb_json_ld(items: Sequence[tuple[str, str]]) -> dict:
@@ -676,7 +696,8 @@ def build(repo_root: Path) -> None:
         page_dir.mkdir(parents=True, exist_ok=True)
         parent_name = parent_category["name"] if parent_category else None
         category_title = category_meta_title(category["name"], parent_name)
-        category_description = category_meta_description(category["name"], len(entries), category["description"], parent_name)
+        intro_html, intro_lead = load_category_intro(website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md")
+        category_description = intro_lead or category_meta_description(category["name"], len(entries), category["description"], parent_name)
         breadcrumbs = [("Awesome Python", SITE_URL)]
         if parent_category:
             breadcrumbs.append((parent_category["name"], category_public_url(parent_category)))
@@ -691,6 +712,7 @@ def build(repo_root: Path) -> None:
                 category_title=category_title,
                 category_url=category_url,
                 category_description=category_description,
+                intro_html=intro_html,
                 entries=entries,
                 total_categories=len(categories),
                 category_urls=category_urls,

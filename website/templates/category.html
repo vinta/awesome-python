@@ -37,6 +37,9 @@
       {% if category.description_html %}
       <p class="category-subtitle">{{ category.description_html | safe }}</p>
       {% endif %}
+      {% if intro_html %}
+      <div class="category-intro">{{ intro_html | safe }}</div>
+      {% endif %}
     </div>
 
     {% if group_categories %}
