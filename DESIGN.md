@@ -140,7 +140,7 @@ Hard-won sizing rules (do not relax):
 Depth comes from **tonal layers**, not heavy shadows.
 
 - The page is a quiet warm canvas (`--bg-page`). The content shell is slightly brighter paper (`--bg-paper`). The sponsor band, CTA backgrounds, and inline decorative blocks step up to `--bg-paper-strong`.
-- The hero is the one place that uses real atmosphere: subtle grid, slow sheen, warm radial gradients on a dark earthy ground (`--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`). The sheen and any other motion respect `prefers-reduced-motion`.
+- The hero and the category guide band are the only places with real atmosphere: warm gradients on a dark earthy ground (`--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`). Only the hero adds the subtle grid and slow sheen. The sheen and any other motion respect `prefers-reduced-motion`.
 - The footer is a single tonal block in `--footer-bg`, no internal gradients.
 - Two depth treatments are allowed and only these two. The search input combines a 1px inset highlight (`--search-inset`) with a soft warm drop shadow (`--search-shadow`, intensified by `--search-focus-shadow` on focus). The primary CTA button (`.hero-action-primary`) carries a warm drop shadow for press affordance. Both shadows are soft, warm-tinted, and tied to interactive elements. No new drop shadows on cards, panels, rows, or static decoration.
 - No glassmorphism as default decoration.
@@ -160,8 +160,11 @@ The shape language is overwhelmingly **pill on small, zero radius on large**.
 The component vocabulary is small and table-led. Source of truth: `website/static/style.css`.
 
 - **Table-driven index** (the hero of the page). Sticky header, sortable columns, click-to-expand rows that indent under the Name column. Modeled on placestoread.xyz. Not a card grid.
+- **Group rows**. Section, subcategory, and group pages list rows in README order. Section pages add one H2 row per use case; group pages add one per section, linking to that section's page. A note replaces the sort arrow until someone sorts a column, which flattens the list and hides the group rows.
 - **Filter tags** (`.tag`). `--accent-soft` background with `--accent-deep` text. Pill shape. Hover swaps to `--highlight` background with `--tag-hover-border` border and ink text. Active state uses the warm `--tag-active-start` → `--tag-active-end` gradient with hero-ink text. Tag variants (`tag-group`, `tag-source`) inherit the base `.tag` style today and differ only at narrow widths (`tag-group` hides under 960px). Add a new variant only when a real visual difference is needed.
 - **Hero**. Magazine-cover headline, dark earthy ground, kicker and proof microcopy, primary CTA button using `--hero-btn-start` / `--hero-btn-end`. Subtle grid plus slow sheen. Respects `prefers-reduced-motion`.
+- **Jump links**. One per use case in a category hero, plus one for the guide. Underlined like the intro's links, with a trailing ↓. Never tag-styled: tags filter the table or open another page, jump links only scroll.
+- **Guide band**. Everything in a category intro after its "How to choose" list. It sits below the table on the hero's dark gradient, with its H2 above the text.
 - **Sponsor band**. Sits in the README header on `--bg-paper-strong`. Editorial layout, not a logo wall. Sponsor links share the global accent treatment.
 - **CTA**. Warm `--cta-bg`, full-bleed within shell. The button itself uses accent tokens.
 - **Footer**. Dark warm charcoal, part of the same system. Footer links share the global hover and focus treatment.
