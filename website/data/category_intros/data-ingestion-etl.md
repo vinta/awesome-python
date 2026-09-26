@@ -1,0 +1,27 @@
+Loading data from APIs and databases into a warehouse with a Python ETL library is dlt's job. Fetching stock prices for your own research is yfinance's.
+
+How to choose:
+
+- Data from APIs and databases into a warehouse or data lake: dlt
+- Stock prices and financials for your own research: yfinance
+- pandas DataFrames in and out of AWS services: AWS SDK for pandas (awswrangler)
+- One pipeline for both batch data and live streams: Pathway
+- Chinese market data: AKShare
+- SEC filings and XBRL financial statements: EdgarTools
+- Many data providers behind one API: OpenBB
+
+dlt [loads data from messy sources into well-structured datasets](https://dlthub.com/docs/intro), and infers the schema and data types for you. For an API, start with `dlt init rest_api duckdb`: you [declare the endpoints, pagination, and authentication](https://dlthub.com/docs/dlt-ecosystem/verified-sources/rest_api/basic), and the REST API source does the rest. Build and test on DuckDB locally, then [switch the destination](https://dlthub.com/docs/reference/explainers/how-dlt-works) when you deploy. To [pick a write disposition](https://dlthub.com/docs/general-usage/incremental-loading#how-to-choose-the-right-write-disposition), ask whether your data can change: append records that never change, and merge the ones that do. Keep credentials in `secrets.toml` or environment variables, and [never commit `secrets.toml`](https://dlthub.com/docs/general-usage/credentials/setup#secretstoml-and-configtoml).
+
+yfinance [fetches market data from Yahoo Finance](https://github.com/ranaroussi/yfinance). Use `Ticker` for one symbol, from its price history to its financial statements, and [`download()` for several symbols](https://ranaroussi.github.io/yfinance/) at once.
+
+awswrangler is the AWS SDK for pandas. It [connects DataFrames to AWS data and analytics services](https://aws-sdk-pandas.readthedocs.io/en/stable/about.html) like Athena, Glue, Redshift, and S3. It [leaves credentials to boto3 sessions](https://aws-sdk-pandas.readthedocs.io/en/stable/tutorials/002%20-%20Sessions.html): pass your own as `boto3_session`, or it uses the default session. Write S3 data with `wr.s3.to_parquet(..., dataset=True, database=..., table=...)`, and the dataset [goes into the Glue Catalog](https://aws-sdk-pandas.readthedocs.io/en/stable/stubs/awswrangler.s3.to_parquet.html), where Athena can query it.
+
+Pathway is a [Python ETL framework for stream processing](https://github.com/pathwaycom/pathway), and a Rust engine runs your Python code. To switch between batch and streaming, you [change only the data sources](https://pathway.com/developers/user-guide/introduction/batch-processing/), and the rest of the pipeline stays the same. Streaming is the standard way to run it. Data flows in once you call `pw.run()` and nothing after that call runs, so [read the results through output connectors](https://pathway.com/developers/user-guide/introduction/streaming-and-static-modes/). Pathway is under the [Business Source License](https://pathway.com/developers/user-guide/introduction/licensing-guide/), not an open-source one: production use is free within its limits, and the code converts to Apache after 4 years.
+
+AKShare is a [Python library for financial data](https://akshare.akfamily.xyz/introduction.html) on stocks, futures, options, funds, bonds, and more, collected from public websites as you call it. Its [stock data](https://akshare.akfamily.xyz/data/stock/stock.html) centers on China, from A-shares and B-shares to the STAR Market, plus Hong Kong and US stocks. Each dataset is one function, like `ak.stock_zh_a_hist()` for A-share daily prices. Its interfaces break when those websites change, so [upgrade AKShare before you use it](https://akshare.akfamily.xyz/installation.html).
+
+EdgarTools [makes SEC filings easy to access and analyze](https://edgartools.readthedocs.io/en/latest/). Start from a `Company` or a `Filing`, and `.obj()` gives you [a typed object for that form](https://github.com/dgunning/edgartools#how-it-works), with its data as pandas DataFrames. EDGAR requires an email with every request, so set your identity first, with `set_identity()` or the [`EDGAR_IDENTITY` variable](https://edgartools.readthedocs.io/en/latest/configuration/). For bulk work, [turn on local storage](https://edgartools.readthedocs.io/en/latest/guides/local-storage/), which cuts down requests and respects the SEC's rate limits.
+
+OpenBB's Open Data Platform [integrates proprietary, licensed, and public data sources](https://github.com/OpenBB-finance/OpenBB) and serves them to Python, a REST API, Excel, and MCP servers. Install it in a [new environment](https://docs.openbb.co/odp/python/installation), not your system Python. Pass `provider` to each query: without it, OpenBB [picks the first available provider in alphabetical order](https://docs.openbb.co/odp/python/quickstart). Most providers [need your own API key](https://docs.openbb.co/odp/python/settings/user_settings/api_keys).
+
+Read the data's terms before you build a product on it, and check its numbers before you trade on them. yfinance's docs say [Yahoo's API is for personal use only](https://ranaroussi.github.io/yfinance/), AKShare says its data is [only for academic research](https://github.com/akfamily/akshare#statement), and OpenBB says its data is [not necessarily accurate](https://github.com/OpenBB-finance/OpenBB#4-disclaimer).
