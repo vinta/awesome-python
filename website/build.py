@@ -772,6 +772,18 @@ def build(repo_root: Path) -> None:
             parent_category=cat_by_slug[cat_slug],
         )
 
+    redirects_file = website / "data" / "redirects.json"
+    redirects = json.loads(redirects_file.read_text(encoding="utf-8")) if redirects_file.exists() else {}
+    for old_path, new_path in redirects.items():
+        tpl_redirect = env.get_template("redirect.html")
+        stub = site_dir / old_path.strip("/") / "index.html"
+        if stub.exists():
+            raise ValueError(f"redirect source {old_path} is a live page; remove it from redirects.json")
+        if not (site_dir / new_path.strip("/") / "index.html").exists():
+            raise ValueError(f"redirect target {new_path} for {old_path} does not exist")
+        stub.parent.mkdir(parents=True, exist_ok=True)
+        stub.write_text(tpl_redirect.render(target_url=SITE_URL + new_path.lstrip("/")), encoding="utf-8")
+
     static_src = website / "static"
     static_dst = site_dir / "static"
     if static_src.exists():

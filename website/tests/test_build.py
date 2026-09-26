@@ -955,6 +955,56 @@ class TestBuild:
         assert 'data-url="/categories/ai-ml/"' in index_html
         assert 'data-url="/categories/deep-learning/vision/"' in index_html
 
+    _REDIRECT_README = textwrap.dedent("""\
+        # Awesome Python
+
+        Intro.
+
+        ## Projects
+
+        **Tools**
+
+        ### Widgets
+
+        - [w1](https://example.com/w1) - A widget.
+
+        ## Contributing
+
+        Help!
+    """)
+
+    def _write_redirects(self, tmp_path, redirects):
+        data_dir = tmp_path / "website" / "data"
+        data_dir.mkdir(parents=True)
+        (data_dir / "redirects.json").write_text(json.dumps(redirects), encoding="utf-8")
+
+    def test_build_writes_redirect_stub_outside_sitemap(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        self._write_redirects(tmp_path, {"/categories/old-widgets/": "/categories/widgets/"})
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output"
+        stub = (site / "categories" / "old-widgets" / "index.html").read_text(encoding="utf-8")
+        assert '<link rel="canonical" href="https://awesome-python.com/categories/widgets/">' in stub
+        assert '<meta http-equiv="refresh" content="0; url=https://awesome-python.com/categories/widgets/">' in stub
+        assert '<meta name="robots" content="noindex">' in stub
+        assert "old-widgets" not in (site / "sitemap.xml").read_text(encoding="utf-8")
+
+    def test_build_rejects_redirect_to_missing_page(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        self._write_redirects(tmp_path, {"/categories/old-widgets/": "/categories/gone/"})
+        with pytest.raises(ValueError, match="does not exist"):
+            build(tmp_path)
+
+    def test_build_rejects_redirect_over_live_page(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        self._write_redirects(tmp_path, {"/categories/widgets/": "/"})
+        with pytest.raises(ValueError, match="is a live page"):
+            build(tmp_path)
+
 
 # ---------------------------------------------------------------------------
 # extract_github_repo
