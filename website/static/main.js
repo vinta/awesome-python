@@ -364,6 +364,24 @@ sortHeaders.forEach(function (th) {
   });
 });
 
+// Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[href*="#"]');
+  if (!link || link.pathname !== location.pathname) return;
+  const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+  const groupRow = heading ? heading.closest(".group-row") : null;
+  if (!groupRow) return;
+  if (activeSort.col !== "editorial") {
+    activeSort = defaultSort;
+    sortRows();
+    updateSortIndicators();
+  }
+  if (groupRow.hidden && searchInput) {
+    searchInput.value = "";
+    applyFilters();
+  }
+});
+
 if (searchInput) {
   let searchTimer;
   searchInput.addEventListener("input", function () {
