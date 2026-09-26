@@ -62,91 +62,15 @@
 </header>
 {% endblock %}
 {% block content %}
-<script type="application/json" id="filter-urls">{{ filter_urls_json | safe }}</script>
-<section class="results-section" id="library-index">
-  <div class="results-intro section-shell" data-reveal>
-    <div>
-      <h2>Search every project in one place</h2>
-    </div>
-    <p class="results-note">
-      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
-      details.
-    </p>
-  </div>
-
-  <div class="controls section-shell" data-reveal>
-    <h2 class="sr-only">Search and filter</h2>
-    <div class="search-wrap">
-      <svg
-        class="search-icon"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-      </svg>
-      <input
-        type="search"
-        class="search"
-        placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
-        aria-label="Search projects"
-      />
-    </div>
-    <div class="filter-bar" aria-live="polite">
-      <span>Filtering for <strong class="filter-value"></strong></span>
-      <button class="filter-clear" aria-label="Clear filter">
-        Clear filter
-      </button>
-    </div>
-  </div>
-
-  <h2 class="sr-only">Results</h2>
-  <div
-    class="table-wrap"
-    tabindex="0"
-    role="region"
-    aria-label="Libraries table"
-  >
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="col-num"><span class="sr-only">Row number</span></th>
-          <th class="col-name" data-sort="name">
-            <button type="button" class="sort-btn">Project Name</button>
-          </th>
-          <th class="col-downloads" data-sort="downloads">
-            <button type="button" class="sort-btn">PyPI Downloads</button>
-          </th>
-          <th class="col-stars" data-sort="stars">
-            <button type="button" class="sort-btn">GitHub Stars</button>
-          </th>
-          <th class="col-commit" data-sort="commit-time">
-            <button type="button" class="sort-btn">Last Commit</button>
-          </th>
-          <th class="col-cat">Tags</th>
-          <th class="col-arrow">
-            <button class="back-to-top" aria-label="Back to top">
-              Top &uarr;
-            </button>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for entry in entries %}
+{% macro entry_rows(entry, index) %}
         <tr
           class="row"
           data-tags="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}||{{ entry.groups | join('||') }}{% if entry.source_type == 'Stdlib' %}||Stdlib{% endif %}"
           tabindex="0"
           aria-expanded="false"
-          aria-controls="expand-{{ loop.index }}"
+          aria-controls="expand-{{ index }}"
         >
-          <td class="col-num">{{ loop.index }}</td>
+          <td class="col-num">{{ index }}</td>
           <td class="col-name">
             <a href="{{ entry.url }}" target="_blank" rel="noopener"
               >{{ entry.name }}</a
@@ -232,7 +156,7 @@
           </td>
         </tr>
         {% endif %}
-        <tr class="expand-row" id="expand-{{ loop.index }}">
+        <tr class="expand-row" id="expand-{{ index }}">
           <td></td>
           <td colspan="5">
             <div class="expand-content">
@@ -273,6 +197,85 @@
           </td>
           <td></td>
         </tr>
+{% endmacro %}
+<script type="application/json" id="filter-urls">{{ filter_urls_json | safe }}</script>
+<section class="results-section" id="library-index">
+  <div class="results-intro section-shell" data-reveal>
+    <div>
+      <h2>Search every project in one place</h2>
+    </div>
+    <p class="results-note">
+      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      details.
+    </p>
+  </div>
+
+  <div class="controls section-shell" data-reveal>
+    <h2 class="sr-only">Search and filter</h2>
+    <div class="search-wrap">
+      <svg
+        class="search-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input
+        type="search"
+        class="search"
+        placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
+        aria-label="Search projects"
+      />
+    </div>
+    <div class="filter-bar" aria-live="polite">
+      <span>Filtering for <strong class="filter-value"></strong></span>
+      <button class="filter-clear" aria-label="Clear filter">
+        Clear filter
+      </button>
+    </div>
+  </div>
+
+  <h2 class="sr-only">Results</h2>
+  <div
+    class="table-wrap"
+    tabindex="0"
+    role="region"
+    aria-label="Libraries table"
+  >
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="col-num"><span class="sr-only">Row number</span></th>
+          <th class="col-name" data-sort="name">
+            <button type="button" class="sort-btn">Project Name</button>
+          </th>
+          <th class="col-downloads" data-sort="downloads">
+            <button type="button" class="sort-btn">PyPI Downloads</button>
+          </th>
+          <th class="col-stars" data-sort="stars">
+            <button type="button" class="sort-btn">GitHub Stars</button>
+          </th>
+          <th class="col-commit" data-sort="commit-time">
+            <button type="button" class="sort-btn">Last Commit</button>
+          </th>
+          <th class="col-cat">Tags</th>
+          <th class="col-arrow">
+            <button class="back-to-top" aria-label="Back to top">
+              Top &uarr;
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+        {{ entry_rows(entry, loop.index) }}
         {% endfor %}
       </tbody>
     </table>
