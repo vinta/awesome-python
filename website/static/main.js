@@ -4,8 +4,14 @@ function getScrollBehavior() {
   return reducedMotion.matches ? "auto" : "smooth";
 }
 
+const table = document.querySelector(".table");
+// Category pages list rows in editorial (README) order until a column is sorted
+const defaultSort =
+  table && table.dataset.defaultSort === "editorial"
+    ? { col: "editorial", order: "asc" }
+    : { col: "downloads", order: "desc" };
 let activeFilter = null;
-let activeSort = { col: "downloads", order: "desc" };
+let activeSort = defaultSort;
 const searchInput = document.querySelector(".search");
 const filterBar = document.querySelector(".filter-bar");
 const filterValue = document.querySelector(".filter-value");
@@ -14,6 +20,7 @@ const noResults = document.querySelector(".no-results");
 const rows = document.querySelectorAll(".table tbody tr.row");
 const tags = document.querySelectorAll(".tag");
 const tbody = document.querySelector(".table tbody");
+const groupRows = document.querySelectorAll(".table tbody tr.group-row");
 
 function initRevealSections() {
   const sections = document.querySelectorAll("[data-reveal]");
@@ -111,6 +118,12 @@ document
     time.textContent = relativeTime(time.getAttribute("datetime"));
   });
 
+let currentGroupRow = null;
+Array.prototype.forEach.call(tbody ? tbody.rows : [], function (tr) {
+  if (tr.classList.contains("group-row")) currentGroupRow = tr;
+  else if (tr.classList.contains("row")) tr._groupRow = currentGroupRow;
+});
+
 rows.forEach(function (row, i) {
   row._origIndex = i;
   let next = row.nextElementSibling;
@@ -176,6 +189,15 @@ function applyFilters() {
     }
   });
 
+  groupRows.forEach(function (groupRow) {
+    groupRow.hidden = true;
+  });
+  if (activeSort.col === "editorial") {
+    rows.forEach(function (row) {
+      if (!row.hidden && row._groupRow) row._groupRow.hidden = false;
+    });
+  }
+
   if (noResults) noResults.hidden = visibleCount > 0;
 
   tags.forEach(function (tag) {
@@ -211,7 +233,7 @@ function buildQueryString() {
   const params = new URLSearchParams();
   const query = searchInput ? searchInput.value.trim() : "";
   if (query) params.set("q", query);
-  if (activeSort.col !== "downloads" || activeSort.order !== "desc") {
+  if (activeSort.col !== defaultSort.col || activeSort.order !== defaultSort.order) {
     params.set("sort", activeSort.col);
     params.set("order", activeSort.order);
   }
@@ -227,6 +249,8 @@ function updateURL() {
 }
 
 function getSortValue(row, col) {
+  // +1 keeps the first row above the "no value" cutoff in sortRows
+  if (col === "editorial") return row._origIndex + 1;
   if (col === "name") {
     return row.querySelector(".col-name a").textContent.trim().toLowerCase();
   }
@@ -282,7 +306,12 @@ function sortRows() {
   });
 
   const frag = document.createDocumentFragment();
+  let lastGroupRow = null;
   arr.forEach(function (row) {
+    if (col === "editorial" && row._groupRow && row._groupRow !== lastGroupRow) {
+      frag.appendChild(row._groupRow);
+      lastGroupRow = row._groupRow;
+    }
     frag.appendChild(row);
     if (row._descRow) frag.appendChild(row._descRow);
     if (row._expandRow) frag.appendChild(row._expandRow);
@@ -392,7 +421,7 @@ sortHeaders.forEach(function (th) {
     if (activeSort.col === col) {
       if (activeSort.order === defaultOrder)
         activeSort = { col: col, order: altOrder };
-      else activeSort = { col: "downloads", order: "desc" };
+      else activeSort = defaultSort;
     } else {
       activeSort = { col: col, order: defaultOrder };
     }

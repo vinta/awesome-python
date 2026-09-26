@@ -40,6 +40,19 @@
       {% if intro_html %}
       <div class="category-intro">{{ intro_html | safe }}</div>
       {% endif %}
+      {% set named_groups = entry_groups | selectattr("name") | list %}
+      {% if (named_groups and not group_categories) or guide_html %}
+      <nav class="jump-links" aria-label="On this page">
+        {% if not group_categories %}
+        {% for group in named_groups %}
+        <a class="jump-link" href="#{{ group.slug }}">{{ group.name }}</a>
+        {% endfor %}
+        {% endif %}
+        {% if guide_html %}
+        <a class="jump-link" href="#guide">{{ category.name }} guide</a>
+        {% endif %}
+      </nav>
+      {% endif %}
     </div>
 
     {% if group_categories %}
@@ -201,9 +214,17 @@
 <script type="application/json" id="filter-urls">{{ filter_urls_json | safe }}</script>
 <section class="results-section" id="library-index">
   <div class="results-intro section-shell" data-reveal>
+    {% if entry_groups %}
+    {% set named_groups = entry_groups | selectattr("name") | list %}
+    <p class="order-note">
+      {% if group_categories %}Listed by section, in editorial order.{% elif named_groups %}Listed in editorial order, grouped by use case.{% else %}Listed in editorial order.{% endif %}
+      <strong>Click a column</strong> to re-sort the whole list.
+    </p>
+    {% else %}
     <div>
-      <h2>Search every project in one place</h2>
+      <h2>{{ entries | length }} {{ category.name }} projects</h2>
     </div>
+    {% endif %}
     <p class="results-note">
       Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
       details.
@@ -249,7 +270,7 @@
     role="region"
     aria-label="Libraries table"
   >
-    <table class="table">
+    <table class="table"{% if entry_groups %} data-default-sort="editorial"{% endif %}>
       <thead>
         <tr>
           <th class="col-num"><span class="sr-only">Row number</span></th>
@@ -274,9 +295,29 @@
         </tr>
       </thead>
       <tbody>
+        {% if entry_groups %}
+        {% set row = namespace(index=0) %}
+        {% for group in entry_groups %}
+        {% if group.name %}
+        <tr class="group-row">
+          <th colspan="7" scope="rowgroup">
+            <h2 id="{{ group.slug }}">
+              {% if group.url %}<a href="{{ group.url }}">{{ group.name }}</a>{% else %}{{ group.name }}{% endif %}
+              <span class="group-count">{{ group.entries | length }} project{{ "s" if group.entries | length != 1 }}</span>
+            </h2>
+          </th>
+        </tr>
+        {% endif %}
+        {% for entry in group.entries %}
+        {% set row.index = row.index + 1 %}
+        {{ entry_rows(entry, row.index) }}
+        {% endfor %}
+        {% endfor %}
+        {% else %}
         {% for entry in entries %}
         {{ entry_rows(entry, loop.index) }}
         {% endfor %}
+        {% endif %}
       </tbody>
     </table>
   </div>
@@ -289,6 +330,15 @@
     </p>
   </div>
 </section>
+
+{% if guide_html %}
+<section class="guide-band" id="guide">
+  <div class="guide-section section-shell">
+    <h2>{{ category.name }} guide</h2>
+    <div class="guide-body">{{ guide_html | safe }}</div>
+  </div>
+</section>
+{% endif %}
 
 <section class="final-cta" data-reveal>
   <div class="section-shell">

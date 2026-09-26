@@ -17,6 +17,7 @@ from build import (
     detect_source_type,
     extract_entries,
     extract_github_repo,
+    load_category_intro,
     load_downloads,
     load_pypi_badges,
     load_stars,
@@ -291,7 +292,7 @@ class TestBuild:
         assert 'href="https://example.com/w1"' in category_html
         assert "A widget." in category_html
         assert 'href="https://github.com/owner/w2"' in category_html
-        assert '<table class="table">' in category_html
+        assert '<table class="table" data-default-sort="editorial">' in category_html
         assert "42" in category_html
         assert "2026-01-01T00:00:00+00:00" in category_html
 
@@ -1007,6 +1008,99 @@ class TestBuild:
         assert "<li>Small apps: w1</li>" in category_html
         assert '<a href="https://example.com/docs" target="_blank" rel="noopener">the docs</a>' in category_html
 
+    def test_build_renders_category_guide_below_table(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use w1.\n\nHow to choose:\n\n- Small apps: w1\n\nSet up w1 once per process.\n", encoding="utf-8")
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        intro_html = category_html.split('<div class="category-intro">', 1)[1].split("</div>", 1)[0]
+        assert "<li>Small apps: w1</li>" in intro_html
+        assert "Set up w1" not in intro_html
+        guide_html = category_html.split('<section class="guide-band" id="guide">', 1)[1]
+        assert "<h2>Widgets guide</h2>" in guide_html
+        assert "<p>Set up w1 once per process.</p>" in guide_html
+        assert category_html.index('id="guide"') > category_html.index("</table>")
+        assert '<a class="jump-link" href="#guide">Widgets guide</a>' in category_html
+
+    def test_section_page_groups_rows_by_use_case_in_readme_order(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **Tools**
+
+            ### Widgets
+
+            - Small
+              - [w2](https://example.com/w2) - Second.
+              - [w1](https://example.com/w1) - First.
+            - Large
+              - [w3](https://example.com/w3) - Third.
+              - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - Stdlib.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output" / "categories"
+        html = (site / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'data-default-sort="editorial"' in html
+        positions = [html.index(marker) for marker in ('<h2 id="small">', ">w2</a", ">w1</a", '<h2 id="large">', ">w3</a")]
+        assert positions == sorted(positions)
+        assert '<a class="jump-link" href="#small">Small</a>' in html
+        assert '<tr class="desc-row">' in html
+
+        subcategory_html = (site / "widgets" / "small" / "index.html").read_text(encoding="utf-8")
+        assert 'data-default-sort="editorial"' in subcategory_html
+        assert "group-row" not in subcategory_html
+        assert subcategory_html.index(">w2</a") < subcategory_html.index(">w1</a")
+
+        builtin_html = (site / "built-in" / "index.html").read_text(encoding="utf-8")
+        assert "data-default-sort" not in builtin_html
+        assert "group-row" not in builtin_html
+
+    def test_group_page_groups_rows_by_section_with_links(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **AI & ML**
+
+            ## Machine Learning
+
+            - [ml1](https://example.com/ml1) - ML.
+
+            ## Deep Learning
+
+            - [dl1](https://example.com/dl1) - DL.
+            - [ml1](https://example.com/ml1) - ML again.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        html = (tmp_path / "website" / "output" / "categories" / "ai-ml" / "index.html").read_text(encoding="utf-8")
+        assert 'data-default-sort="editorial"' in html
+        ml_heading = html.index('<a href="/categories/machine-learning/">Machine Learning</a>')
+        dl_heading = html.index('<a href="/categories/deep-learning/">Deep Learning</a>')
+        assert ml_heading < html.index(">ml1</a") < dl_heading < html.index(">dl1</a")
+        assert html.count(">ml1</a") == 1
+        assert 'class="jump-links"' not in html
+
     def test_build_rejects_redirect_to_missing_page(self, tmp_path):
         self._copy_real_templates(tmp_path)
         (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
@@ -1348,3 +1442,28 @@ class TestLoadDownloads:
 
     def test_missing_file_returns_empty(self, tmp_path):
         assert load_downloads(tmp_path / "nope.tsv") == {}
+
+
+# ---------------------------------------------------------------------------
+# load_category_intro
+# ---------------------------------------------------------------------------
+
+
+class TestLoadCategoryIntro:
+    def test_splits_after_how_to_choose_list(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use `w1` for most apps.\n\nHow to choose:\n\n- Small apps: w1\n- Big apps: w2\n\nConfigure w1 once.\n\nPin w2.\n", encoding="utf-8")
+        intro_html, guide_html, lead = load_category_intro(path)
+        assert intro_html == "<p>Use <code>w1</code> for most apps.</p>\n<p>How to choose:</p>\n<ul>\n<li>Small apps: w1</li>\n<li>Big apps: w2</li>\n</ul>\n"
+        assert guide_html == "<p>Configure w1 once.</p>\n<p>Pin w2.</p>\n"
+        assert lead == "Use w1 for most apps."
+
+    def test_keeps_everything_above_table_without_how_to_choose_list(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\n- Small apps: w1\n\nConfigure w1 once.\n", encoding="utf-8")
+        intro_html, guide_html, _ = load_category_intro(path)
+        assert "Configure w1 once." in intro_html
+        assert guide_html == ""
+
+    def test_returns_empty_strings_without_intro_file(self, tmp_path):
+        assert load_category_intro(tmp_path / "missing.md") == ("", "", "")
