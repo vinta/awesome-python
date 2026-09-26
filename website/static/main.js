@@ -10,15 +10,10 @@ const defaultSort =
   table && table.dataset.defaultSort === "editorial"
     ? { col: "editorial", order: "asc" }
     : { col: "downloads", order: "desc" };
-let activeFilter = null;
 let activeSort = defaultSort;
 const searchInput = document.querySelector(".search");
-const filterBar = document.querySelector(".filter-bar");
-const filterValue = document.querySelector(".filter-value");
-const filterClear = document.querySelector(".filter-clear");
 const noResults = document.querySelector(".no-results");
 const rows = document.querySelectorAll(".table tbody tr.row");
-const tags = document.querySelectorAll(".tag");
 const tbody = document.querySelector(".table tbody");
 const groupRows = document.querySelectorAll(".table tbody tr.group-row");
 
@@ -145,7 +140,7 @@ function collapseAll() {
 
 function applyFilters() {
   const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
-  const descRowsVisible = !isIndexDocument || activeFilter !== null;
+  const descRowsVisible = !isIndexDocument;
   let visibleCount = 0;
 
   collapseAll();
@@ -153,12 +148,7 @@ function applyFilters() {
   rows.forEach(function (row) {
     let show = true;
 
-    if (activeFilter) {
-      const rowTags = row.dataset.tags;
-      show = rowTags ? rowTags.split("||").includes(activeFilter) : false;
-    }
-
-    if (show && query) {
+    if (query) {
       if (!row._searchText) {
         let text = row.textContent.toLowerCase();
         if (row._descRow) {
@@ -200,34 +190,11 @@ function applyFilters() {
 
   if (noResults) noResults.hidden = visibleCount > 0;
 
-  tags.forEach(function (tag) {
-    tag.classList.toggle("active", activeFilter === tag.dataset.value);
-  });
-
-  if (filterBar) {
-    if (activeFilter) {
-      filterBar.classList.add("visible");
-      if (filterValue) filterValue.textContent = activeFilter;
-    } else {
-      filterBar.classList.remove("visible");
-    }
-  }
-
   updateURL();
 }
 
-const filterUrlsScript = document.getElementById("filter-urls");
-const filterToUrl = filterUrlsScript
-  ? JSON.parse(filterUrlsScript.textContent)
-  : {};
-
 const isIndexDocument =
   location.pathname === "/" || location.pathname === "/index.html";
-
-const urlToFilter = {};
-Object.keys(filterToUrl).forEach(function (k) {
-  urlToFilter[filterToUrl[k]] = k;
-});
 
 function buildQueryString() {
   const params = new URLSearchParams();
@@ -243,9 +210,7 @@ function buildQueryString() {
 
 function updateURL() {
   if (!isIndexDocument) return;
-  const path =
-    activeFilter && filterToUrl[activeFilter] ? filterToUrl[activeFilter] : "/";
-  history.replaceState(null, "", path + buildQueryString());
+  history.replaceState(null, "", "/" + buildQueryString());
 }
 
 function getSortValue(row, col) {
@@ -340,8 +305,8 @@ function updateSortIndicators() {
 // Expand/collapse: event delegation on tbody
 if (tbody) {
   tbody.addEventListener("click", function (e) {
-    // Don't toggle if clicking a link or tag button
-    if (e.target.closest("a") || e.target.closest(".tag")) return;
+    // Don't toggle if clicking a link
+    if (e.target.closest("a")) return;
 
     let row = e.target.closest("tr.row");
     if (!row) {
@@ -370,36 +335,6 @@ if (tbody) {
   });
 }
 
-tags.forEach(function (tag) {
-  tag.addEventListener("click", function (e) {
-    e.preventDefault();
-    const value = tag.dataset.value;
-    const url = tag.dataset.url;
-    if (isIndexDocument) {
-      activeFilter = activeFilter === value ? null : value;
-      if (activeFilter && url) {
-        history.pushState(null, "", url + buildQueryString());
-      } else {
-        history.pushState(null, "", "/" + buildQueryString());
-      }
-      applyFilters();
-    } else if (url) {
-      window.location.href = url + "#library-index";
-    }
-  });
-});
-
-if (filterClear) {
-  filterClear.addEventListener("click", function () {
-    if (!isIndexDocument) {
-      window.location.href = "/#library-index";
-      return;
-    }
-    activeFilter = null;
-    applyFilters();
-  });
-}
-
 const noResultsClear = document.querySelector(".no-results-clear");
 if (noResultsClear) {
   noResultsClear.addEventListener("click", function () {
@@ -408,7 +343,6 @@ if (noResultsClear) {
       return;
     }
     if (searchInput) searchInput.value = "";
-    activeFilter = null;
     applyFilters();
   });
 }
@@ -451,7 +385,6 @@ if (searchInput) {
     }
     if (e.key === "Escape" && document.activeElement === searchInput) {
       searchInput.value = "";
-      activeFilter = null;
       applyFilters();
       searchInput.blur();
     }
@@ -512,20 +445,8 @@ if (backToTop) {
   ) {
     activeSort = { col: sort, order: order };
   }
-  const matched = urlToFilter[location.pathname];
-  if (matched) activeFilter = matched;
-  if (q || activeFilter || sort) {
+  if (q || sort) {
     sortRows();
-  }
-  if (activeFilter) {
-    applyFilters();
   }
   updateSortIndicators();
 })();
-
-window.addEventListener("popstate", function () {
-  if (!isIndexDocument) return;
-  const matched = urlToFilter[location.pathname];
-  activeFilter = matched || null;
-  applyFilters();
-});

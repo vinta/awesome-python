@@ -78,7 +78,6 @@
 {% macro entry_rows(entry, index) %}
         <tr
           class="row"
-          data-tags="{{ entry.categories | join('||') }}{% if entry.subcategories %}||{{ entry.subcategories | map(attribute='value') | join('||') }}{% endif %}||{{ entry.groups | join('||') }}{% if entry.source_type == 'Stdlib' %}||Stdlib{% endif %}"
           tabindex="0"
           aria-expanded="false"
           aria-controls="expand-{{ index }}"
@@ -124,7 +123,7 @@
           </td>
           <td class="col-cat">
             {% for subcat in entry.subcategories %}
-            <a class="tag{% if subcat.url == current_path %} active{% endif %}" href="{{ subcat.url }}" data-value="{{ subcat.value }}" data-url="{{ subcat.url }}">
+            <a class="tag{% if subcat.url == current_path %} active{% endif %}" href="{{ category_urls[subcat.value.split(' > ')[0]] }}#{{ subcat.slug }}">
               {{ subcat.name }}
             </a>
             {% endfor %}
@@ -132,8 +131,6 @@
             <a
               class="tag{% if category_urls[cat] == current_path %} active{% endif %}"
               href="{{ category_urls[cat] }}"
-              data-value="{{ cat }}"
-              data-url="{{ category_urls[cat] }}"
               >{{ cat }}</a
             >
             {% endfor %}
@@ -142,8 +139,6 @@
             <a
               class="tag tag-group{% if group_url == current_path %} active{% endif %}"
               href="{{ group_url }}"
-              data-value="{{ entry.groups[0] }}"
-              data-url="{{ group_url }}"
             >
               {{ entry.groups[0] }}
             </a>
@@ -152,8 +147,6 @@
             <a
               class="tag tag-source{% if '/categories/built-in/' == current_path %} active{% endif %}"
               href="/categories/built-in/"
-              data-value="Stdlib"
-              data-url="/categories/built-in/"
             >
               Stdlib
             </a>
@@ -211,7 +204,6 @@
           <td></td>
         </tr>
 {% endmacro %}
-<script type="application/json" id="filter-urls">{{ filter_urls_json | safe }}</script>
 <section class="results-section" id="library-index">
   <div class="results-intro section-shell" data-reveal>
     {% if entry_groups %}
@@ -254,12 +246,6 @@
         placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
         aria-label="Search projects"
       />
-    </div>
-    <div class="filter-bar" aria-live="polite">
-      <span>Filtering for <strong class="filter-value"></strong></span>
-      <button class="filter-clear" aria-label="Clear filter">
-        Clear filter
-      </button>
     </div>
   </div>
 
