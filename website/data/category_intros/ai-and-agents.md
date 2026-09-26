@@ -2,28 +2,18 @@ LangChain is the place to start among Python libraries for AI agents, and LangGr
 
 How to choose:
 
-- A first agent, or a prebuilt tool-calling loop: LangChain
-- Long-running, stateful agents that mix fixed steps with LLM-driven ones: LangGraph
-- Typed agents whose outputs are validated: Pydantic AI
-- A team of role-playing agents: CrewAI
+- Skills for your coding agent: Django AI Skills, Sentry Skills, or Trail of Bits Skills
+- A first agent: LangChain, or LangGraph to control every step
 - An agent built on one vendor's platform: OpenAI Agents SDK or Claude Agent SDK
-- Structured data from an LLM, without an agent framework: Instructor
+- A ready-made personal assistant: Hermes Agent, or AstrBot for chat apps
 - Prompts tuned against a metric instead of by hand: DSPy
-- RAG over your own documents: LlamaIndex
-- Memory that survives across sessions: Mem0
-- Agent context you can browse and edit like files: OpenViking
-- A knowledge graph with provenance for regulated domains: Semantica
+- Structured output, RAG, or agent memory: Instructor, LlamaIndex, or Mem0
 - Running pre-trained models: Transformers
-- Serving a model on GPUs: vLLM, or SGLang when requests share long prompts
-- Running a model on Apple silicon: MLX LM
+- Serving a model: vLLM, or MLX LM on Apple silicon
 - One API for many LLM providers: LiteLLM
 - Image and video generation: Diffusers
-- Fine-tuning: PEFT for adapters, Unsloth for fast low-memory training, Axolotl for YAML-configured runs across GPUs
-- Speech to text: Whisper, or FunASR for streaming and edge deployment
-- Text to speech: Kitten TTS on CPU, gTTS for a quick online voice
-- Speech research: VibeVoice
-- A ready-made personal assistant: Hermes Agent, or AstrBot for chat apps like Telegram, Slack, and QQ
-- Skills for your coding agent: Django AI Skills for Django, Sentry Skills for code review, Trail of Bits Skills for security work
+- Fine-tuning: PEFT, Unsloth, or Axolotl
+- Speech: Whisper for speech to text, Kitten TTS for text to speech
 
 New to agents? LangGraph's own docs [recommend LangChain's prebuilt agents](https://docs.langchain.com/oss/python/langgraph/overview), which run on LangGraph: give an agent a model, tools, and a prompt, and the loop is handled for you. Drop down to LangGraph for [needs that combine deterministic and agentic workflows](https://docs.langchain.com/oss/python/langchain/overview). You don't need LangChain to use LangGraph.
 
