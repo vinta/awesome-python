@@ -868,6 +868,11 @@ kbd {
   text-underline-offset: 0.2em;
 }
 
+/* main.js adds .sorted once a column sort flattens the groups */
+.table:not(.sorted) .repeats-heading {
+  display: none;
+}
+
 .group-count {
   font-family: var(--font-body);
   font-size: var(--text-sm);

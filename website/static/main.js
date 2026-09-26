@@ -288,6 +288,7 @@ function sortRows() {
 const sortHeaders = document.querySelectorAll("th[data-sort]");
 
 function updateSortIndicators() {
+  if (table) table.classList.toggle("sorted", activeSort.col !== "editorial");
   sortHeaders.forEach(function (th) {
     th.classList.remove("sort-asc", "sort-desc");
     if (th.dataset.sort === activeSort.col) {
@@ -362,6 +363,24 @@ sortHeaders.forEach(function (th) {
     sortRows();
     updateSortIndicators();
   });
+});
+
+// Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[href*="#"]');
+  if (!link || link.pathname !== location.pathname) return;
+  const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+  const groupRow = heading ? heading.closest(".group-row") : null;
+  if (!groupRow) return;
+  if (activeSort.col !== "editorial") {
+    activeSort = defaultSort;
+    sortRows();
+    updateSortIndicators();
+  }
+  if (groupRow.hidden && searchInput) {
+    searchInput.value = "";
+    applyFilters();
+  }
 });
 
 if (searchInput) {
