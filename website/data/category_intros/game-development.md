@@ -1,4 +1,4 @@
-A 2D game needs a loop: write your own with pygame-ce, the Python game development library, or let Arcade run it. Panda3D does 3D, and Ren'Py visual novels.
+pygame-ce leaves the 2D game loop to you, while Arcade runs it for you. For 3D, Panda3D covers Python game development, and Ren'Py builds visual novels.
 
 How to choose:
 
