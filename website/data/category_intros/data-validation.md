@@ -1,4 +1,4 @@
-Validate API input and config with Pydantic, the Python data validation library built on type hints. Use Pandera for dataframes, jsonschema for JSON Schema.
+Declare API input and config as type hints, and Pydantic validates them. Pandera brings Python data validation to dataframes, and jsonschema covers JSON Schema.
 
 How to choose:
 

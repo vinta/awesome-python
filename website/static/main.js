@@ -145,7 +145,9 @@ function applyFilters() {
 
   collapseAll();
 
-  rows.forEach(function (row) {
+  // Number rows in their sorted DOM order, not the load order `rows` keeps
+  const orderedRows = tbody ? tbody.querySelectorAll("tr.row") : rows;
+  orderedRows.forEach(function (row) {
     let show = true;
 
     if (query) {

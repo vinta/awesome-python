@@ -1,4 +1,4 @@
-PDF, Word, and Excel files open with pypdf, python-docx, and openpyxl, a Python file format library for each. MarkItDown turns all three into Markdown.
+pypdf reads PDFs, python-docx Word files, and openpyxl Excel sheets: one Python file format library per format. MarkItDown turns any of them into Markdown.
 
 How to choose:
 
