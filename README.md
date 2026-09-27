@@ -847,7 +847,7 @@ _Libraries for working with graphical user interface applications._
   - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
 - Qt
   - [PySide6](https://github.com/pyside/pyside-setup) - Qt for Python offers the official Python bindings for [Qt](https://www.qt.io/), largely API-compatible with PyQt6 but with different licensing.
-  - [PyQt6](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
+  - [PyQt6](https://pypi.org/project/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
 - Tkinter
   - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
   - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
@@ -1181,6 +1181,8 @@ Where to discover learning resources or new Python libraries.
 ### Websites
 
 - [Python Developer Tooling Handbook](https://pydevtools.com/) - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
+
+- [TheCodeForge Python Errors](https://thecodeforge.io/python/python-modulenotfounderror/) - Practical guides to Python's most common errors (ModuleNotFoundError, pip, UnicodeDecodeError) with fixes.
 
 ## Contributing
 
