@@ -20,6 +20,7 @@ from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, par
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 BULLET_LINE_RE = re.compile(r"^\s*-\s")
+ANCHOR_LINK_ATTRS_RE = re.compile(r'href="(#[^"]*)" target="_blank" rel="noopener"')
 SITE_URL = "https://awesome-python.com/"
 SITEMAP_URL = f"{SITE_URL}sitemap.xml"
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -466,6 +467,21 @@ def link_llms_category_index_to_canonical_pages(markdown: str, categories: Seque
     return "".join(out)
 
 
+def link_description_anchors_to_category_pages(categories: Sequence[ParsedSection]) -> None:
+    """Point README anchor links in section descriptions at category pages, which lack those anchors."""
+    category_paths = {}
+    for category in categories:
+        category_paths[f"#{category['slug']}"] = category_path(category)
+        category_paths[github_markdown_anchor(category["name"])] = category_path(category)
+
+    def replace_attrs(match: re.Match[str]) -> str:
+        path = category_paths.get(match.group(1))
+        return f'href="{path}"' if path else match.group(0)
+
+    for category in categories:
+        category["description_html"] = ANCHOR_LINK_ATTRS_RE.sub(replace_attrs, category["description_html"])
+
+
 def build_llms_txt(
     template_text: str,
     *,
@@ -645,6 +661,7 @@ def build(repo_root: Path) -> None:
     duplicates = {s for s, n in Counter(all_top_level_slugs).items() if n > 1}
     if duplicates:
         raise ValueError(f"slug collision in /categories/ namespace: {sorted(duplicates)}. Rename a category or group so their slugs differ.")
+    link_description_anchors_to_category_pages(categories)
     total_entries = sum(c["entry_count"] for c in categories)
     entries = extract_entries(categories, parsed_groups)
     build_date = datetime.now(UTC)

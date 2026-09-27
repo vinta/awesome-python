@@ -295,6 +295,41 @@ class TestBuild:
         assert "42" in category_html
         assert "2026-01-01T00:00:00+00:00" in category_html
 
+    def test_build_links_description_anchors_to_category_pages(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## Projects
+
+            **Tools**
+
+            ## Audio & Video
+
+            _Media tools._
+
+            - [a1](https://example.com/a1) - A media tool.
+
+            ## Widgets
+
+            _Widget libraries. Also see [Audio & Video](#audio--video) and [Gadgets](#gadgets)._
+
+            - [w1](https://example.com/w1) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'Also see <a href="/categories/audio-video/">Audio &amp; Video</a>' in category_html
+        assert '<a href="#gadgets" target="_blank" rel="noopener">Gadgets</a>' in category_html
+
     def test_build_creates_llms_text_alternate_without_sponsors(self, tmp_path):
         readme = textwrap.dedent("""\
             # Awesome Python
