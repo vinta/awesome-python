@@ -223,7 +223,7 @@ _Libraries for working with human languages._
 
 ### Computer Vision
 
-_Libraries for Computer Vision._
+_Libraries for image and video analysis, object detection, and OCR._
 
 - General
   - [opencv-python](https://github.com/opencv/opencv-python) - Open Source Computer Vision Library.
@@ -305,7 +305,7 @@ _Libraries for working with WebSocket._
 
 ### Template Engines
 
-_Libraries and tools for templating and lexing._
+_Libraries for rendering text and HTML from templates._
 
 - [jinja](https://github.com/pallets/jinja) - A modern and designer friendly templating language.
 - [mako](https://github.com/sqlalchemy/mako) - Hyperfast and lightweight templating for the Python platform.
@@ -392,7 +392,7 @@ _Libraries to automate web scraping and extract web content._
 
 ### Email
 
-_Libraries for sending and parsing email, and mail server management._
+_Libraries for sending email._
 
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
@@ -692,7 +692,7 @@ _Libraries for debugging code._
 
 ### Build Tools
 
-_Compile software from source code. If you're looking for Python packaging/build tools, see [Package Management](#package-management)._
+_Task runners and software build tools. If you're looking for Python packaging/build tools, see [Package Management](#package-management)._
 
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
 - [scons](https://github.com/SCons/scons) - A software construction tool.
@@ -903,7 +903,7 @@ _Libraries for working with HTML and XML._
 
 ### File Format Processing
 
-_Libraries for parsing and manipulating specific text formats._
+_Libraries for parsing and manipulating specific file formats._
 
 - General
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
@@ -1074,7 +1074,7 @@ _Libraries for package and dependency management._
 
 ### Package Repositories
 
-_Local PyPI repository server and proxies._
+_Local PyPI repository servers, proxies, and mirrors._
 
 - [bandersnatch](https://github.com/pypa/bandersnatch/) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 - [devpi](https://github.com/devpi/devpi) - PyPI server and packaging/testing/release tool.
