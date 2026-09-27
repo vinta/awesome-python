@@ -1,4 +1,4 @@
-If your templates should hold no Python code, Jinja fits: a Python template engine whose sandbox also renders untrusted templates. Mako embeds plain Python.
+Whether templates may hold Python code splits the Python template engines: Jinja keeps code out and sandboxes untrusted templates, Mako embeds plain Python.
 
 How to choose:
 
