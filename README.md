@@ -136,8 +136,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 
 - Agent Skills
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
-  - [sentry-skills](https://github.com/getsentry/skills) - Python-focused engineering skills for code review, debugging, and backend workflows.
-  - [trailofbits-skills](https://github.com/trailofbits/skills) - Python-friendly security skills for auditing, testing, and safer backend development.
+  - [sentry-skills](https://github.com/getsentry/skills) - Agent skills the Sentry team uses for code review, pull requests, and Django reviews.
+  - [trailofbits-skills](https://github.com/trailofbits/skills) - Security skills for vulnerability detection, auditing, and testing.
 - Orchestration
   - [langchain](https://github.com/langchain-ai/langchain) - A framework for building agents and LLM-powered applications.
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
@@ -205,7 +205,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
   - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high performance gradient boosting framework.
   - [catboost](https://github.com/catboost/catboost) - A fast, scalable, high performance gradient boosting on decision trees library.
 - Time Series Forecasting
-  - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting.
+  - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting, with non-commercial default weights.
 
 ### Natural Language Processing
 
@@ -227,11 +227,11 @@ _Libraries for image and video analysis, object detection, and OCR._
 
 - General
   - [opencv-python](https://github.com/opencv/opencv-python) - Open Source Computer Vision Library.
-  - [ultralytics](https://github.com/ultralytics/ultralytics) - Ultralytics YOLO for object detection, segmentation, pose estimation, and classification with state-of-the-art accuracy and speed.
+  - [ultralytics](https://github.com/ultralytics/ultralytics) - Ultralytics YOLO for object detection, segmentation, pose estimation, classification, and tracking.
   - [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
   - [fiftyone](https://github.com/voxel51/fiftyone) - The open-source tool for building high-quality datasets and computer vision models.
 - OCR
-  - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for [Google Tesseract OCR](https://github.com/tesseract-ocr).
+  - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for the [Tesseract OCR](https://github.com/tesseract-ocr) engine.
   - [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 80+ languages supported.
 
 ### Recommender Systems
@@ -251,7 +251,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 - Synchronous
   - [flask](https://github.com/pallets/flask) - A microframework for Python.
     - [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
-  - [django](https://github.com/django/django) - The most popular web framework in Python.
+  - [django](https://github.com/django/django) - A high-level web framework that encourages rapid development and clean, pragmatic design.
     - [awesome-django](https://github.com/wsvincent/awesome-django)
   - [bottle](https://github.com/bottlepy/bottle) - A fast and simple micro-framework distributed as a single file with no dependencies.
   - [pyramid](https://github.com/Pylons/pyramid) - A small, fast, down-to-earth, open source Python web framework.
@@ -299,7 +299,7 @@ _ASGI and WSGI compatible web servers._
 _Libraries for working with WebSocket._
 
 - [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
-- [channels](https://github.com/django/channels) - Developer-friendly asynchrony for Django.
+- [channels](https://github.com/django/channels) - Brings WebSocket, long-poll HTTP, and other async support to Django.
 - [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
 - [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
 
@@ -419,7 +419,7 @@ _Libraries for connecting and operating databases._
 
 - MySQL - [awesome-mysql](https://github.com/shlomi-noach/awesome-mysql)
   - [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure-Python MySQL and MariaDB client library, based on PEP 249.
-  - [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL connector with Python 3 support ([mysql-python](https://sourceforge.net/projects/mysql-python/) fork).
+  - [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL and MariaDB connector ([MySQLdb1](https://github.com/farcepest/MySQLdb1) fork).
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   - [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
   - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
@@ -502,7 +502,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
   - [pathway](https://github.com/pathwaycom/pathway) - Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.
 - Financial Data
   - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
-  - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, built for human beings!
+  - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, with data provided for academic research only.
   - [edgartools](https://github.com/dgunning/edgartools) - Library for downloading structured data from SEC EDGAR filings and XBRL financial statements.
   - [openbb](https://github.com/OpenBB-finance/OpenBB) - A financial data platform for analysts, quants and AI agents.
 
@@ -512,7 +512,7 @@ _Libraries for validating data. Used for forms in many cases._
 
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
-- [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, and Spark.
+- [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, PySpark, and more.
 
 ### Data Visualization
 
@@ -548,7 +548,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - Core
   - [numpy](https://github.com/numpy/numpy) - A fundamental package for scientific computing with Python.
   - [scipy](https://github.com/scipy/scipy) - Fundamental algorithms for scientific computing in Python.
-  - [numba](https://github.com/numba/numba) - Python JIT compiler to LLVM aimed at scientific Python.
+  - [numba](https://github.com/numba/numba) - A NumPy-aware JIT compiler for Python, using LLVM.
 - Symbolic Mathematics
   - [sympy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 - Statistics
@@ -578,7 +578,7 @@ _Libraries for quantum computing._
 
 - [qiskit](https://github.com/Qiskit/qiskit) - An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
 - [qutip](https://github.com/qutip/qutip) - Quantum Toolbox in Python.
-- [pennylane](https://github.com/PennyLaneAI/pennylane) - A hybrid quantum-classical machine learning library with automatic differentiation support.
+- [pennylane](https://github.com/PennyLaneAI/pennylane) - A cross-platform library for quantum computing, quantum machine learning, and quantum chemistry.
 - [cirq](https://github.com/quantumlib/Cirq) - A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
 
 **Developer Tools**
@@ -745,7 +745,7 @@ _Frameworks and libraries for Distributed Computing._
 - [ray](https://github.com/ray-project/ray/) - A unified framework for scaling AI and Python applications.
 - [pyspark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
 - [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
-- [joblib](https://github.com/joblib/joblib) - A set of tools to provide lightweight pipelining in Python.
+- [joblib](https://github.com/joblib/joblib) - Parallel computing and disk-based caching for Python functions.
 - [mpi4py](https://github.com/mpi4py/mpi4py) - Python bindings for MPI.
 
 ### Task Queues
@@ -755,7 +755,7 @@ _Libraries for working with task queues._
 - [celery](https://github.com/celery/celery) - An asynchronous task queue/job queue based on distributed message passing.
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 - [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
-- [huey](https://github.com/coleifer/huey) - Little multi-threaded task queue.
+- [huey](https://github.com/coleifer/huey) - A little task queue with multi-process, multi-thread, or greenlet workers.
 - [taskiq](https://github.com/taskiq-python/taskiq) - Distributed task queue with native asyncio support and pluggable brokers.
 
 ### Messaging
@@ -868,7 +868,7 @@ _Libraries for working with graphical user interface applications._
 _Libraries for parsing and manipulating plain texts._
 
 - Encoding and Unicode
-  - [charset-normalizer](https://github.com/jawah/charset_normalizer) - Universal character encoding detector, the default of the requests ecosystem.
+  - [charset-normalizer](https://github.com/jawah/charset_normalizer) - Universal character encoding detector, and a dependency of requests.
   - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
 - Fuzzy Matching
@@ -899,7 +899,7 @@ _Libraries for working with HTML and XML._
 - [lxml](https://github.com/lxml/lxml) - A very fast, easy-to-use and versatile library for handling HTML and XML.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 - [markupsafe](https://github.com/pallets/markupsafe) - Safely adds untrusted strings to HTML/XML markup.
-- [justhtml](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that just works.
+- [justhtml](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that sanitizes untrusted HTML by default.
 
 ### File Format Processing
 
@@ -956,7 +956,7 @@ _Libraries for manipulating images._
   - [scikit-image](https://github.com/scikit-image/scikit-image) - A Python library for (scientific) image processing.
   - [rembg](https://github.com/danielgatis/rembg) - A tool to remove image backgrounds.
   - [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](https://imagemagick.org/magick-wand/), C API for ImageMagick.
-  - [pyvips](https://github.com/libvips/pyvips) - A fast image processing library with low memory needs.
+  - [pyvips](https://github.com/libvips/pyvips) - A binding for libvips, a fast image processing library with low memory needs.
 - Image Serving
   - [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, re-sizing and flipping of images.
 
@@ -1109,7 +1109,7 @@ _Libraries for storing and parsing configuration options._
 _Libraries for cryptographic primitives and secure protocols._
 
 - [cryptography](https://github.com/pyca/cryptography) - A package designed to expose cryptographic primitives and recipes to Python developers.
-- [pynacl](https://github.com/pyca/pynacl) - Python binding to the Networking and Cryptography (NaCl) library.
+- [pynacl](https://github.com/pyca/pynacl) - Python binding to libsodium, a fork of the Networking and Cryptography (NaCl) library.
 - [paramiko](https://github.com/paramiko/paramiko) - The leading native Python SSHv2 protocol library.
 - [itsdangerous](https://github.com/pallets/itsdangerous) - Safely pass trusted data to untrusted environments and back.
 
