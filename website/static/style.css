@@ -535,7 +535,12 @@ kbd {
 
 .category-intro code,
 .guide-body code {
+  font-family: ui-monospace, "SFMono-Regular", "Menlo", monospace;
   font-size: 0.9em;
+  padding: 0.08rem 0.4rem;
+  border-radius: 0.4rem;
+  background: var(--hero-line);
+  color: var(--hero-text);
 }
 
 .jump-links {
