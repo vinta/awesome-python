@@ -29,7 +29,7 @@ DSPy has you [write signatures, not prompts](https://dspy.ai/). Give it examples
 
 LlamaIndex is a [data framework](https://github.com/run-llama/llama_index) for LLM apps: it loads, indexes, and queries your documents. Install `llama-index` to start, or `llama-index-core` plus only the integrations you need.
 
-Mem0 adds [memory that persists across sessions](https://docs.mem0.ai/). Self-host the open-source version, or use the managed platform. OpenViking is [AGPL-licensed](https://github.com/volcengine/OpenViking/blob/main/LICENSE), where Mem0 is Apache 2.0.
+Mem0 adds [memory that persists across sessions](https://docs.mem0.ai/). Self-host the open-source version, or use the managed platform. OpenViking is [AGPL-licensed](https://github.com/volcengine/OpenViking/blob/main/LICENSE), where Mem0 is Apache-licensed.
 
 Transformers runs pre-trained models from the Hugging Face Hub. Start with [`pipeline()`](https://huggingface.co/docs/transformers/pipeline_tutorial): pick a task and a model, and it handles preprocessing and output. Diffusers works the same way for [diffusion models](https://huggingface.co/docs/diffusers/index).
 
