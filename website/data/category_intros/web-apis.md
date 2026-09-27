@@ -1,4 +1,4 @@
-For a Django project, pick Django REST framework or Django Ninja. Outside Django, build on FastAPI, a Python API framework based on type hints.
+Outside Django, declare each FastAPI endpoint with type hints. Django projects add a Python API framework on top instead: Django REST framework or Django Ninja.
 
 How to choose:
 
