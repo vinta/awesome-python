@@ -1,4 +1,4 @@
-Most code should handle time zones with zoneinfo and pick python-dateutil, the Python date library for parsing date strings and adding months.
+Handle time zones with the built-in zoneinfo. Parsing date strings and adding months is where a Python date library earns its install: python-dateutil.
 
 How to choose:
 
