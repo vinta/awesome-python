@@ -1,4 +1,4 @@
-In production, Gunicorn serves WSGI apps like Django, and Uvicorn serves ASGI apps like FastAPI. Waitress, a pure-Python web server, runs WSGI apps on Windows.
+In production, Gunicorn serves WSGI apps like Django, and Uvicorn ASGI apps like FastAPI. Need a Python web server on Windows? Waitress runs WSGI there.
 
 How to choose:
 
