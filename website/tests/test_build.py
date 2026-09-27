@@ -679,6 +679,39 @@ class TestBuild:
             {"@type": "ListItem", "position": 2, "name": "Widgets", "item": "https://awesome-python.com/categories/widgets/"},
         ]
 
+    def test_category_json_ld_follows_page_order(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            _Widget libraries._
+
+            - [zeta](https://example.com/zeta) - Listed first.
+            - [alpha](https://example.com/alpha) - Listed second.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        marker = '<script type="application/ld+json">'
+        start = category_html.index(marker) + len(marker)
+        data = json.loads(category_html[start : category_html.index("</script>", start)])
+        collection = next(node for node in data["@graph"] if node["@type"] == "CollectionPage")
+        items = collection["mainEntity"]["itemListElement"]
+        assert [(item["position"], item["name"]) for item in items] == [(1, "zeta"), (2, "alpha")]
+
     def test_group_page_falls_back_to_default_description_in_json_ld(self, tmp_path):
         readme = textwrap.dedent("""\
             # T

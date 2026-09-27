@@ -755,8 +755,9 @@ def build(repo_root: Path) -> None:
         if parent_category:
             breadcrumbs.append((parent_category["name"], category_public_url(parent_category)))
         breadcrumbs.append((category["name"], category_url))
+        page_entries = [entry for group in entry_groups for entry in group["entries"]] if entry_groups else entries
         category_json_ld = json.dumps(
-            build_category_json_ld(category_title.removesuffix(" - Awesome Python"), category_url, category_description, entries, breadcrumbs),
+            build_category_json_ld(category_title.removesuffix(" - Awesome Python"), category_url, category_description, page_entries, breadcrumbs),
             ensure_ascii=False,
         ).replace("</", "<\\/")
         (page_dir / "index.html").write_text(
