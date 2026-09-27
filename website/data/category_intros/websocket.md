@@ -1,0 +1,21 @@
+With Django, Channels is the pick; with Flask and Socket.IO clients, Flask-SocketIO. Standalone apps run on websockets, a Python WebSocket library.
+
+How to choose:
+
+- A Django project: Channels
+- A Flask app with Socket.IO clients: Flask-SocketIO
+- Plain WebSocket servers and clients: websockets
+- A few real-time features next to a Django project: websockets as a separate server
+- RPC and pub/sub over WAMP, or a Twisted app: Autobahn|Python
+
+Channels [extends Django beyond HTTP](https://channels.readthedocs.io/en/latest/) to handle WebSockets, and it [integrates with Django's auth and sessions](https://channels.readthedocs.io/en/latest/introduction.html). Write [sync consumers by default](https://channels.readthedocs.io/en/latest/topics/consumers.html#basic-layout). Switch to async ones only when async handling helps and every library you call is async-native. Serve everything with Daphne, or [keep HTTP on your WSGI server](https://channels.readthedocs.io/en/latest/deploying.html#http-and-websocket) and send only WebSockets to Daphne.
+
+Flask-SocketIO speaks Socket.IO, which is [not a WebSocket implementation](https://socket.io/docs/v4/#what-socketio-is-not): a plain WebSocket client can't connect to it. Pick it when your clients use [a Socket.IO client library](https://flask-socketio.readthedocs.io/en/latest/intro.html#requirements). In return, you get events, [rooms, and broadcasting](https://flask-socketio.readthedocs.io/en/latest/getting_started.html#rooms). Start the server with `socketio.run()`, since `flask run` [lacks WebSocket support](https://flask-socketio.readthedocs.io/en/latest/getting_started.html#initialization).
+
+websockets runs on asyncio by default, which is [ideal for servers with many connections](https://websockets.readthedocs.io/en/stable/). For clients, its threading implementation is a good alternative. It [isn't an HTTP server](https://websockets.readthedocs.io/en/stable/faq/server.html#how-do-i-run-http-and-websocket-servers-on-the-same-port), so [run it as its own program](https://websockets.readthedocs.io/en/stable/deploy/index.html#how-do-i-start-a-process) that calls `serve()`, not under a WSGI or ASGI server. For a few real-time features in a Django project, like notifications, its docs find [a separate websockets server next to Django](https://websockets.readthedocs.io/en/stable/howto/django.html) well suited, where Channels means switching to a new deployment architecture.
+
+Autobahn|Python implements [both WebSocket and WAMP, on Twisted or asyncio](https://autobahn.readthedocs.io/en/latest/). WAMP adds [RPC and pub/sub over WebSocket](https://github.com/crossbario/autobahn-python), and every WAMP client [needs a WAMP router to talk to](https://autobahn.readthedocs.io/en/latest/wamp/programming.html#wamp-programming-1). Write components with functions and decorators, [the recommended approach](https://autobahn.readthedocs.io/en/latest/wamp/programming.html#creating-components-1).
+
+Always [secure WebSocket connections with TLS](https://websockets.readthedocs.io/en/stable/topics/security.html#encryption) in production. Any site can open a WebSocket to yours, with your users' cookies attached. If you serve private data, [restrict the allowed origins](https://channels.readthedocs.io/en/latest/topics/security.html#websockets): Channels has `AllowedHostsOriginValidator`, websockets has the [`origins` argument](https://websockets.readthedocs.io/en/stable/reference/asyncio/server.html#websockets.asyncio.server.serve), and Flask-SocketIO [allows only the same origin by default](https://flask-socketio.readthedocs.io/en/latest/deployment.html#cross-origin-controls).
+
+Broadcasting across processes needs a message broker such as Redis. Channels' [production channel layer](https://channels.readthedocs.io/en/latest/topics/channel_layers.html#redis-channel-layer) runs on it, Flask-SocketIO [takes it as a message queue](https://flask-socketio.readthedocs.io/en/latest/deployment.html#using-multiple-workers), with sticky sessions at the load balancer, and websockets' docs [suggest it for pub/sub](https://websockets.readthedocs.io/en/stable/faq/server.html#how-do-i-send-a-message-to-a-channel-a-topic-or-some-users).

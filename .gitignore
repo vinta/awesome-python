@@ -13,6 +13,8 @@ __pycache__/
 website/output/
 website/data/*
 !website/data/pypi_name_overrides.json
+!website/data/redirects.json
+!website/data/category_intros/
 
 # agents
 .playwright-cli/

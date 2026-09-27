@@ -1,0 +1,15 @@
+Validate API input and config with Pydantic, the Python data validation library built on type hints. Use Pandera for dataframes, jsonschema for JSON Schema.
+
+How to choose:
+
+- API input, forms, and config: Pydantic
+- Data checked against a JSON Schema document: jsonschema
+- pandas, polars, or PySpark dataframes: Pandera
+
+Pydantic builds the schema from your [type hints](https://pydantic.dev/docs/validation/latest/get-started/why/) and guarantees the types of the [output, not the input](https://pydantic.dev/docs/validation/latest/concepts/models/): by default, a numeric string passed to an int field comes out as an int. Where a wrong type should raise an error instead, turn on [strict mode](https://pydantic.dev/docs/validation/latest/concepts/strict_mode/) per field or per model. [Validate incoming JSON directly](https://pydantic.dev/docs/validation/latest/concepts/performance/) instead of parsing it into a dict first. To load config from environment variables, use [Pydantic Settings](https://pydantic.dev/docs/validation/latest/concepts/pydantic_settings/).
+
+jsonschema is an [implementation of the JSON Schema specification](https://python-jsonschema.readthedocs.io/en/stable/), so one schema can [work across different systems and platforms](https://json-schema.org/overview/what-is-jsonschema). When you validate many instances against one schema, [create a validator for your schema's draft once and call its `validate` method](https://python-jsonschema.readthedocs.io/en/stable/validate/). Use [`iter_errors()`](https://python-jsonschema.readthedocs.io/en/stable/errors/) to report every error, not only the first. To enforce `format` keywords such as dates or emails, [hook a format checker](https://python-jsonschema.readthedocs.io/en/stable/validate/#validating-formats) into the validator.
+
+Pandera validates [dataframe-like objects](https://pandera.readthedocs.io/en/stable/): define a schema once and use it on pandas, polars, PySpark, and other dataframe libraries. Write the schema as a DataFrameModel class, [much like a Pydantic model](https://pandera.readthedocs.io/en/stable/dataframe_models.html), and add the `check_types()` decorator to validate at run time. To check an existing pipeline, put [`check_input()` and `check_output()`](https://pandera.readthedocs.io/en/stable/decorators.html) on its functions. To see every failure in one run instead of only the first, validate with [`lazy=True`](https://pandera.readthedocs.io/en/stable/lazy_validation.html).
+
+Pick by the shape of your data. Running a dataframe through a Pydantic model row by row [might not scale](https://pandera.readthedocs.io/en/stable/pydantic_integration.html) to larger datasets, so use Pandera there; a DataFrameModel can still be a field in a Pydantic model. Pydantic can [generate a JSON Schema](https://pydantic.dev/docs/validation/latest/concepts/json_schema/) from any model for tools that read the format. jsonschema works the other way: it validates data against a JSON Schema document you already have.

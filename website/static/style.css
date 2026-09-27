@@ -265,8 +265,7 @@ kbd {
 
 .hero-topbar-link:active,
 .hero-action:active,
-.tag:active,
-.filter-clear:active {
+.tag:active {
   transform: translateY(1px);
 }
 
@@ -436,8 +435,8 @@ kbd {
 .hero-topbar-link:focus-visible,
 .hero-category-link:focus-visible,
 .search:focus-visible,
-.filter-clear:focus-visible,
 .tag:focus-visible,
+.jump-link:focus-visible,
 .back-to-top:focus-visible,
 .no-results-clear:focus-visible,
 .table a:focus-visible,
@@ -459,9 +458,9 @@ kbd {
   z-index: 1;
   width: min(100%, calc(var(--shell-max) + (var(--shell-pad) * 2)));
   margin: 0 auto;
-  padding: 1.25rem var(--shell-pad) clamp(3.75rem, 8vw, 6.75rem);
+  padding: 1.25rem var(--shell-pad) clamp(2.25rem, 5vw, 3.5rem);
   display: grid;
-  gap: clamp(3rem, 8vw, 5.5rem);
+  gap: clamp(2rem, 5vw, 3rem);
 }
 
 .category-hero h1 {
@@ -496,15 +495,101 @@ kbd {
   text-wrap: pretty;
 }
 
-.category-subtitle a {
+.category-subtitle a,
+.category-intro a,
+.guide-body a,
+.jump-link {
   color: var(--hero-text);
   text-decoration: underline;
   text-decoration-color: oklch(100% 0 0 / 0.32);
   text-underline-offset: 0.2em;
 }
 
-.category-subtitle a:hover {
+.category-subtitle a:hover,
+.category-intro a:hover,
+.guide-body a:hover,
+.jump-link:hover {
   text-decoration-color: oklch(100% 0 0 / 0.7);
+}
+
+.category-intro {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+  color: var(--hero-muted);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  text-wrap: pretty;
+}
+
+.category-intro > p:first-child {
+  color: var(--hero-text);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+.category-intro ul {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: 1.25rem;
+}
+
+.category-intro code,
+.guide-body code {
+  font-size: 0.9em;
+}
+
+.jump-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.jump-link {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+/* The arrow marks an in-page jump; inline-block keeps it out of the underline */
+.jump-link::after {
+  content: "\2193";
+  display: inline-block;
+  margin-left: 0.3rem;
+  color: var(--hero-kicker);
+}
+
+.guide-band {
+  padding-block: clamp(3rem, 7vw, 5.5rem);
+  background: linear-gradient(140deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 58%, var(--hero-bg-end) 100%);
+  color: var(--hero-text);
+}
+
+.guide-section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.guide-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-weight: 600;
+  line-height: 0.94;
+  letter-spacing: -0.03em;
+}
+
+.guide-body {
+  display: grid;
+  gap: 1rem;
+  color: var(--hero-muted);
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.guide-body ul {
+  display: grid;
+  gap: 0.35rem;
+  padding-left: 1.25rem;
 }
 
 .sponsor-band {
@@ -624,6 +709,11 @@ kbd {
   padding-bottom: 1.75rem;
 }
 
+.order-note {
+  color: var(--ink-soft);
+  font-size: var(--text-base);
+}
+
 .results-note {
   color: var(--ink-soft);
   font-size: var(--text-sm);
@@ -677,51 +767,6 @@ kbd {
   box-shadow:
     inset 0 1px 0 var(--search-inset),
     0 1.6rem 3rem -2rem var(--search-focus-shadow);
-}
-
-.filter-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  min-height: 2.3rem;
-  font-size: var(--text-sm);
-  color: var(--ink-soft);
-  opacity: 0;
-  transform: translateY(-0.4rem);
-  pointer-events: none;
-  transition:
-    opacity 180ms ease,
-    transform 180ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.filter-bar.visible {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.filter-bar strong {
-  color: var(--ink);
-}
-
-.filter-clear {
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--bg-paper);
-  color: var(--ink-soft);
-  padding: 0.42rem 0.82rem;
-  cursor: pointer;
-  transition:
-    border-color 180ms ease,
-    color 180ms ease,
-    background-color 180ms ease,
-    transform 180ms ease;
-}
-
-.filter-clear:hover {
-  color: var(--ink);
-  background: var(--accent-soft);
-  border-color: oklch(68% 0.08 58 / 0.5);
 }
 
 .table-wrap {
@@ -790,6 +835,49 @@ kbd {
 
 .row {
   cursor: pointer;
+}
+
+.group-row th {
+  padding-top: 2.25rem;
+  padding-bottom: 0.85rem;
+  padding-left: max(var(--shell-pad), calc(50vw - (var(--shell-max) / 2) + var(--shell-pad)));
+  text-align: left;
+  border-bottom: 1px solid var(--line-strong);
+  background: var(--bg-paper);
+}
+
+.group-row h2 {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1;
+  scroll-margin-top: 4.5rem;
+}
+
+.group-row h2 a {
+  color: var(--ink);
+}
+
+.group-row h2 a:hover {
+  color: var(--accent-deep);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-underline);
+  text-underline-offset: 0.2em;
+}
+
+/* main.js adds .sorted once a column sort flattens the groups */
+.table:not(.sorted) .repeats-heading {
+  display: none;
+}
+
+.group-count {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-muted);
 }
 
 .row:not(.open):hover td {
@@ -1708,7 +1796,8 @@ th[data-sort].sort-asc::after {
   }
 
   .table thead th:first-child,
-  .table tbody td:first-child {
+  .table tbody td:first-child,
+  .group-row th {
     padding-left: 0.8rem;
   }
 
