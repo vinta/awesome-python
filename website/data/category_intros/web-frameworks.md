@@ -1,4 +1,4 @@
-When you want an ORM, an admin, and auth built in, use Django. Flask, a smaller Python web framework, gives you a core you extend.
+How much should a Python web framework build in? Django comes with an ORM, an admin, and auth; Flask gives you a small core to extend.
 
 How to choose:
 
