@@ -1,0 +1,32 @@
+PostgreSQL gets Psycopg, MySQL mysqlclient, and SQLite the built-in sqlite3. Elsewhere, use the Python database driver from your database's maker.
+
+How to choose:
+
+- PostgreSQL, from sync or async code: Psycopg
+- MySQL or MariaDB: mysqlclient, or PyMySQL for pure Python under the MIT license
+- SQLite in your app: sqlite3
+- PostgreSQL from asyncio code, when query speed comes first: asyncpg
+- Loading JSON or CSV into SQLite and reshaping its tables, from the shell or Python: sqlite-utils
+- ClickHouse: ClickHouse Connect, or clickhouse-driver for the native TCP protocol
+- Any other database with an ODBC driver: pyodbc
+- Oracle Database: python-oracledb
+- SQL Server or Azure SQL, with no driver manager to install: mssql-python
+- Redis: redis-py
+- MongoDB: PyMongo, or Django MongoDB Backend in a Django project
+- Apache Cassandra: cassandra-driver
+
+Psycopg keeps the [DB-API interface](https://www.psycopg.org/psycopg3/docs/) of the older Psycopg and adds asyncio support, so sync and async code share one driver. Open a connection [in a `with` block](https://www.psycopg.org/psycopg3/docs/basic/usage.html#connection-context): it commits when the block ends, rolls back if an exception is raised, and closes the connection either way. When several threads need connections, take them from a [`ConnectionPool`](https://www.psycopg.org/psycopg3/docs/advanced/pool.html#basic-connection-pool-usage), or an `AsyncConnectionPool` in async code. Django [recommends Psycopg](https://docs.djangoproject.com/en/stable/ref/databases/#postgresql-notes) for PostgreSQL.
+
+asyncpg is built for asyncio and [speaks PostgreSQL's protocol natively](https://github.com/MagicStack/asyncpg) instead of hiding it behind the DB-API, so its API is its own, down to `$1` placeholders. In a server, [use its connection pool](https://magicstack.github.io/asyncpg/current/usage.html#connection-pools): take a connection per request with `async with pool.acquire()`, and wrap writes in `async with connection.transaction()`. Outside a transaction, each statement commits right away.
+
+mysqlclient is a native driver that builds against the MySQL client library, and it's [Django's recommended choice](https://docs.djangoproject.com/en/stable/ref/databases/#mysql-db-api-drivers) for MySQL. PyMySQL is [pure Python](https://github.com/PyMySQL/PyMySQL), so it installs without that library. The licenses differ, too: mysqlclient is [GPL](https://github.com/PyMySQL/mysqlclient/blob/main/LICENSE), and PyMySQL is [MIT](https://github.com/PyMySQL/PyMySQL/blob/main/LICENSE).
+
+sqlite3 ships with Python, and its docs suggest SQLite for an app's internal storage, or for [a prototype you later port](https://docs.python.org/3/library/sqlite3.html) to a larger database like PostgreSQL. Use the connection [as a context manager](https://docs.python.org/3/library/sqlite3.html#sqlite3-connection-context-manager) to commit or roll back a transaction; it doesn't close the connection, so close it yourself. sqlite-utils is [not a full ORM](https://sqlite-utils.datasette.io/en/stable/) but a set of helpers for creating a SQLite database and filling it with data, from Python or its command line. [Pipe JSON or CSV into it](https://github.com/simonw/sqlite-utils), and it creates the table for you. It also runs schema changes that SQLite's `ALTER TABLE` can't, like changing a column's type.
+
+ClickHouse Connect is the Python driver that [ClickHouse's own docs](https://clickhouse.com/docs/integrations/language-clients/python/index) cover. It has a sync and an async client over the HTTP interface, which works through load balancers and proxies. clickhouse-driver talks ClickHouse's [native TCP protocol](https://clickhouse-driver.readthedocs.io/en/latest/) instead. To insert rows fast with it, [pass them separately](https://clickhouse-driver.readthedocs.io/en/latest/quickstart.html#inserting-data) and end the statement with `VALUES`.
+
+pyodbc connects to [any database with an ODBC driver](https://github.com/mkleehammer/pyodbc). On macOS and Linux, install an ODBC driver manager like unixODBC first; Windows has one built in. python-oracledb is Oracle's own driver and the [successor to cx_Oracle](https://python-oracledb.readthedocs.io/en/latest/user_guide/introduction.html). Its default Thin mode [connects without Oracle Client libraries](https://python-oracledb.readthedocs.io/en/latest/user_guide/initialization.html), which is enough for most apps. mssql-python is [Microsoft's own driver](https://learn.microsoft.com/en-us/sql/connect/python/mssql-python/migrate-from-pyodbc) for SQL Server and Azure SQL. It [connects without an external driver manager](https://learn.microsoft.com/en-us/sql/connect/python/mssql-python/python-sql-driver-mssql-python) and [pools connections by default](https://github.com/microsoft/mssql-python#connection-pooling).
+
+redis-py is [the Python client for Redis](https://redis.io/docs/latest/develop/clients/redis-py/), with asyncio support. PyMongo is [the recommended way](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/) to work with MongoDB from Python: use `MongoClient` in sync code and [`AsyncMongoClient`](https://www.mongodb.com/docs/languages/python/pymongo-driver/current/connect/mongoclient/) in async code. Django MongoDB Backend is [a Django database backend](https://github.com/mongodb/django-mongodb-backend) that uses PyMongo, so your Django models live in MongoDB. Joins [don't perform well on large tables](https://django-mongodb-backend.readthedocs.io/en/latest/faq/#performance) there, so model related data as embedded models. With cassandra-driver, [use prepared statements](https://docs.datastax.com/en/developer/python-driver/latest/getting_started/#prepared-statement) for queries you run often, so Cassandra doesn't parse them again each time.
+
+Whatever the database, create the client or pool once per process and share it. ClickHouse Connect's docs say to [create clients once at startup](https://clickhouse.com/docs/integrations/language-clients/python/driver-api#client-lifecycle-and-best-practices), and a PyMongo `MongoClient` or a redis-py `Redis` object already holds a pool. If your server forks worker processes, [create the client or pool after the fork](https://www.psycopg.org/psycopg3/docs/advanced/async.html#concurrent-operations). Pass values as query parameters. Building SQL strings yourself [opens the door to SQL injection](https://docs.python.org/3/library/sqlite3.html#sqlite3-placeholders).
