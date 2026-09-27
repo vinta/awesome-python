@@ -1,4 +1,4 @@
-With Django, Channels is the pick; with Flask and Socket.IO clients, Flask-SocketIO. Standalone apps run on websockets, a Python WebSocket library.
+Your Python WebSocket library follows your framework: Channels on Django, Flask-SocketIO on Flask with Socket.IO clients. websockets needs no framework.
 
 How to choose:
 
