@@ -754,7 +754,7 @@ _Libraries for working with task queues._
 - [rq](https://github.com/rq/rq) - Simple job queues for Python.
 - [dramatiq](https://github.com/Bogdanp/dramatiq) - A fast and reliable background task processing library for Python 3.
 - [huey](https://github.com/coleifer/huey) - A little task queue with multi-process, multi-thread, or greenlet workers.
-- [taskiq](https://github.com/taskiq-python/taskiq) - Distributed task queue with native asyncio support and pluggable brokers.
+- [pgqueuer](https://github.com/janbjorge/pgqueuer) - PostgreSQL-backed asyncio job queue with transactional enqueue.
 
 ### Messaging
 
