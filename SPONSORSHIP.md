@@ -46,7 +46,7 @@ Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?sub
 - **Tier:** Headline Sponsor ($500/mo), Featured Sponsor ($200/mo), or Indie Dev Sponsor ($99/mo or $249/quarter)
 - **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured or Indie Dev tier)
 - **Duration:** 1, 3, 6 months, or longer
-- **Payment method:** US bank transfer (ACH/wire) or PayPal
+- **Payment method:** card via [Open Collective](https://opencollective.com/awesome-python), US bank transfer (ACH/wire), or PayPal
 
 One upfront payment per term. Setup takes less than 24 hours.
 
