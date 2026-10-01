@@ -177,6 +177,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [unsloth](https://github.com/unslothai/unsloth) - Faster, lower-memory LLM fine-tuning, as a Python library or a desktop app.
   - [axolotl](https://github.com/axolotl-ai-cloud/axolotl) - A framework for fine-tuning and post-training large language models.
 - Speech
+  - [faster-whisper](https://github.com/SYSTRAN/faster-whisper) - A Whisper reimplementation on CTranslate2, up to 4 times faster than openai-whisper with less memory.
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [gTTS](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with speaker diarization and emotion detection.
