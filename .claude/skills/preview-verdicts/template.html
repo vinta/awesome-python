@@ -7,7 +7,7 @@
 <style>
   :root {
     --ink: #1c1917; --paper: #faf9f7; --muted: #78716c; --line: #e7e5e4;
-    --keep: #1d4ed8; --keep-bg: #eff4ff; --drop: #b42318; --drop-bg: #fdf1ef;
+    --keep: #1d4ed8; --keep-bg: #eff4ff; --add: #6d28d9; --add-bg: #f3efff; --drop: #b42318; --drop-bg: #fdf1ef;
     --changed: #fffbeb; --changed-line: #f5c518;
   }
   * { box-sizing: border-box; }
@@ -32,12 +32,14 @@
   .badge { display: inline-block; font-size: .78rem; font-weight: 700; letter-spacing: .03em; padding: .12em .5em; border-radius: 4px; }
   .badge.keep { color: var(--keep); background: var(--keep-bg); }
   .badge.drop { color: var(--drop); background: var(--drop-bg); }
+  .badge.add { color: var(--add); background: var(--add-bg); }
   td.reason { color: #44403c; font-size: .95rem; max-width: 34rem; }
   td.yours { white-space: nowrap; }
   .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
   .seg button { border: 0; background: #fff; padding: .3rem .8rem; font: inherit; font-size: .88rem; cursor: pointer; color: var(--muted); }
   .seg button + button { border-left: 1px solid var(--line); }
   .seg button.on.k { background: var(--keep); color: #fff; font-weight: 700; }
+  .seg button.on.a { background: var(--add); color: #fff; font-weight: 700; }
   .seg button.on.d { background: var(--drop); color: #fff; font-weight: 700; }
   td.fb input { width: 100%; min-width: 14rem; font: inherit; font-size: .92rem; padding: .3rem .5rem; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
   td.fb input:focus { outline: 2px solid var(--keep); outline-offset: 0; }
@@ -89,7 +91,9 @@ function render() {
         <td class="mine"><span class="badge ${mine}">${mine.toUpperCase()}</span></td>
         <td class="reason">${reason}</td>
         <td class="yours"><span class="seg">
-          <button class="k ${yours === "keep" ? "on" : ""}" onclick="setV('${esc(id)}','keep')">Keep</button>
+          ${mine === "add"
+            ? `<button class="a ${yours === "add" ? "on" : ""}" onclick="setV('${esc(id)}','add')">Add</button>`
+            : `<button class="k ${yours === "keep" ? "on" : ""}" onclick="setV('${esc(id)}','keep')">Keep</button>`}
           <button class="d ${yours === "drop" ? "on" : ""}" onclick="setV('${esc(id)}','drop')">Drop</button>
         </span></td>
         <td class="fb"><input value="${(s.feedback || "").replace(/"/g, "&quot;")}" oninput="setF('${esc(id)}', this.value)" placeholder="why…"></td>
@@ -133,15 +137,14 @@ function collect() {
 }
 
 function updateCounts() {
-  let keeps = 0, total = 0, changed = 0;
+  let keeps = 0, adds = 0, drops = 0, changed = 0;
   for (const [section, , rows] of DATA) for (const [name, , , mine] of rows) {
-    total++;
     const s = state[rowId(section, name)] || {};
     const yours = s.verdict || mine;
-    if (yours === "keep") keeps++;
+    if (yours === "keep") keeps++; else if (yours === "add") adds++; else drops++;
     if (yours !== mine) changed++;
   }
-  document.getElementById("counts").innerHTML = `<b>${keeps}</b> keep · <b>${total - keeps}</b> drop of <b>${total}</b> &nbsp;|&nbsp; <b>${changed}</b> verdicts flipped`;
+  document.getElementById("counts").innerHTML = `<b>${keeps}</b> keep · <b>${drops}</b> drop · <b>${adds}</b> add &nbsp;|&nbsp; <b>${changed}</b> verdicts flipped`;
 }
 
 function copyFeedback() {
