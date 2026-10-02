@@ -72,6 +72,7 @@ class EntryGroup(TypedDict):
     name: str  # empty for a page with a single unnamed group
     slug: str
     url: str  # links the group heading to its own page, empty when it has none
+    lead: str  # the section intro's first paragraph as HTML, shown under the heading on group pages
     entries: list[TemplateEntry]
 
 
@@ -249,16 +250,16 @@ def category_meta_description(name: str, entry_count: int, description: str, par
     return f"{count_sentence} Part of the Awesome Python catalog."
 
 
-def load_category_intro(path: Path) -> tuple[str, str, str]:
+def load_category_intro(path: Path) -> tuple[str, str, str, str]:
     """Render a category intro file to HTML, split at the end of its "How to choose:" list.
 
     Returns the part shown above the table, the guide shown below it, and the
-    first paragraph as plain text for the meta description. A file without the
-    list keeps everything above the table. Returns empty strings if the category
-    has no intro file.
+    first paragraph as plain text for the meta description and as HTML for
+    group pages. A file without the list keeps everything above the table.
+    Returns empty strings if the category has no intro file.
     """
     if not path.exists():
-        return "", "", ""
+        return "", "", "", ""
     md = MarkdownIt("commonmark")
     tokens = md.parse(path.read_text(encoding="utf-8"))
     for token in tokens:
@@ -273,7 +274,12 @@ def load_category_intro(path: Path) -> tuple[str, str, str]:
             split_at = next(j for j in range(i + 3, len(tokens)) if tokens[j].type == "bullet_list_close" and tokens[j].level == 0) + 1
             break
     render = md.renderer.render
-    return render(tokens[:split_at], md.options, {}), render(tokens[split_at:], md.options, {}), render_inline_text(lead.children[0].children)
+    return (
+        render(tokens[:split_at], md.options, {}),
+        render(tokens[split_at:], md.options, {}),
+        render_inline_text(lead.children[0].children),
+        render(lead.to_tokens(), md.options, {}),
+    )
 
 
 def group_section_entries(section: ParsedSection, entries_by_key: dict[tuple[str, str], TemplateEntry]) -> list[EntryGroup]:
@@ -282,12 +288,12 @@ def group_section_entries(section: ParsedSection, entries_by_key: dict[tuple[str
     for parsed in section["entries"]:
         name = parsed["subcategory"]
         slug = slugify(name) if name else ""
-        group = groups.setdefault(name, EntryGroup(name=name, slug=slug, url=subcategory_path(section["slug"], slug) if name else "", entries=[]))
+        group = groups.setdefault(name, EntryGroup(name=name, slug=slug, url=subcategory_path(section["slug"], slug) if name else "", lead="", entries=[]))
         group["entries"].append(entries_by_key[(parsed["url"], parsed["name"])])
     return list(groups.values())
 
 
-def group_entries_by_section(sections: Sequence[ParsedSection], entries_by_key: dict[tuple[str, str], TemplateEntry]) -> list[EntryGroup]:
+def group_entries_by_section(sections: Sequence[ParsedSection], entries_by_key: dict[tuple[str, str], TemplateEntry], intros_dir: Path) -> list[EntryGroup]:
     """Group a thematic group's entries by section, both in README order, listing each entry once."""
     placed: set[tuple[str, str]] = set()
     groups: list[EntryGroup] = []
@@ -298,7 +304,7 @@ def group_entries_by_section(sections: Sequence[ParsedSection], entries_by_key: 
             if key not in placed:
                 placed.add(key)
                 entries.append(entries_by_key[key])
-        groups.append(EntryGroup(name=section["name"], slug=section["slug"], url=category_path(section), entries=entries))
+        groups.append(EntryGroup(name=section["name"], slug=section["slug"], url=category_path(section), lead=load_category_intro(intros_dir / f"{section['slug']}.md")[3], entries=entries))
     return groups
 
 
@@ -753,7 +759,7 @@ def build(repo_root: Path) -> None:
         page_dir.mkdir(parents=True, exist_ok=True)
         parent_name = parent_category["name"] if parent_category else None
         category_title = category_meta_title(category["name"], parent_name)
-        intro_html, guide_html, intro_lead = load_category_intro(website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md")
+        intro_html, guide_html, intro_lead, _ = load_category_intro(website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md")
         category_description = intro_lead or category_meta_description(category["name"], len(entries), category["description"], parent_name)
         breadcrumbs = [("Awesome Python", SITE_URL)]
         if parent_category:
@@ -805,7 +811,7 @@ def build(repo_root: Path) -> None:
             current_path=group_path(group["slug"]),
             page_dir=categories_dir / group["slug"],
             group_categories=group["categories"],
-            entry_groups=group_entries_by_section(group["categories"], entries_by_key),
+            entry_groups=group_entries_by_section(group["categories"], entries_by_key, website / "data" / "category_intros"),
         )
 
     if builtin_entries:
@@ -855,7 +861,7 @@ def build(repo_root: Path) -> None:
             current_path=subcategory_path(cat_slug, sub_slug),
             page_dir=categories_dir / cat_slug / sub_slug,
             parent_category=cat_by_slug[cat_slug],
-            entry_groups=[EntryGroup(name="", slug="", url="", entries=group["entries"]) for group in section_groups[cat_by_slug[cat_slug]["name"]] if group["name"] == sub_name],
+            entry_groups=[EntryGroup(name="", slug="", url="", lead="", entries=group["entries"]) for group in section_groups[cat_by_slug[cat_slug]["name"]] if group["name"] == sub_name],
         )
 
     redirects_file = website / "data" / "redirects.json"

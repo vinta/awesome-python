@@ -845,7 +845,7 @@ kbd {
 .group-row th {
   padding-top: 2.25rem;
   padding-bottom: 0.85rem;
-  padding-left: max(var(--shell-pad), calc(50vw - (var(--shell-max) / 2) + var(--shell-pad)));
+  padding-inline: max(var(--shell-pad), calc(50vw - (var(--shell-max) / 2) + var(--shell-pad)));
   text-align: left;
   border-bottom: 1px solid var(--line-strong);
   background: var(--bg-paper);
@@ -876,6 +876,15 @@ kbd {
 /* main.js adds .sorted once a column sort flattens the groups */
 .table:not(.sorted) .repeats-heading {
   display: none;
+}
+
+.group-lead {
+  margin-top: 0.75rem;
+  font-size: var(--text-lg);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  text-wrap: pretty;
 }
 
 .group-count {
@@ -1074,11 +1083,13 @@ th[data-sort].sort-asc::after {
   max-width: none;
 }
 
-.desc-text a {
+.desc-text a,
+.group-lead a {
   color: var(--accent-deep);
 }
 
-.desc-text a:hover {
+.desc-text a:hover,
+.group-lead a:hover {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-color: var(--accent-underline);
@@ -1807,7 +1818,8 @@ th[data-sort].sort-asc::after {
   }
 
   .table thead th:last-child,
-  .table tbody td:last-child {
+  .table tbody td:last-child,
+  .group-row th {
     padding-right: 0.8rem;
   }
 
