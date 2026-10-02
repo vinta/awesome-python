@@ -1148,6 +1148,39 @@ class TestBuild:
         assert "repeats-heading" not in html
         assert 'class="jump-links"' not in html
 
+    def test_group_page_shows_section_intro_lead_under_section_heading(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **AI & ML**
+
+            ## Machine Learning
+
+            - [ml1](https://example.com/ml1) - ML.
+
+            ## Deep Learning
+
+            - [dl1](https://example.com/dl1) - DL.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "machine-learning.md").write_text("Start with [`ml1`](https://example.com/ml1).\n\nMore detail.\n", encoding="utf-8")
+        build(tmp_path)
+
+        html = (tmp_path / "website" / "output" / "categories" / "ai-ml" / "index.html").read_text(encoding="utf-8")
+        lead = html.index('<div class="group-lead"><p>Start with <a href="https://example.com/ml1" target="_blank" rel="noopener"><code>ml1</code></a>.</p>')
+        assert html.index('<a href="/categories/machine-learning/">Machine Learning</a>') < lead < html.index(">ml1</a")
+        assert "More detail." not in html
+        assert html.count('class="group-lead"') == 1
+
     def test_build_rejects_redirect_to_missing_page(self, tmp_path):
         self._copy_real_templates(tmp_path)
         (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
@@ -1500,17 +1533,18 @@ class TestLoadCategoryIntro:
     def test_splits_after_how_to_choose_list(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text("Use `w1` for most apps.\n\nHow to choose:\n\n- Small apps: w1\n- Big apps: w2\n\nConfigure w1 once.\n\nPin w2.\n", encoding="utf-8")
-        intro_html, guide_html, lead = load_category_intro(path)
+        intro_html, guide_html, lead, lead_html = load_category_intro(path)
         assert intro_html == "<p>Use <code>w1</code> for most apps.</p>\n<p>How to choose:</p>\n<ul>\n<li>Small apps: w1</li>\n<li>Big apps: w2</li>\n</ul>\n"
         assert guide_html == "<p>Configure w1 once.</p>\n<p>Pin w2.</p>\n"
         assert lead == "Use w1 for most apps."
+        assert lead_html == "<p>Use <code>w1</code> for most apps.</p>\n"
 
     def test_keeps_everything_above_table_without_how_to_choose_list(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text("Use w1.\n\n- Small apps: w1\n\nConfigure w1 once.\n", encoding="utf-8")
-        intro_html, guide_html, _ = load_category_intro(path)
+        intro_html, guide_html, _, _ = load_category_intro(path)
         assert "Configure w1 once." in intro_html
         assert guide_html == ""
 
     def test_returns_empty_strings_without_intro_file(self, tmp_path):
-        assert load_category_intro(tmp_path / "missing.md") == ("", "", "")
+        assert load_category_intro(tmp_path / "missing.md") == ("", "", "", "")

@@ -294,6 +294,9 @@
               {% if group.url %}<a href="{{ group.url }}">{{ group.name }}</a>{% else %}{{ group.name }}{% endif %}
               <span class="group-count">{{ group.entries | length }} project{{ "s" if group.entries | length != 1 }}</span>
             </h2>
+            {% if group.lead %}
+            <div class="group-lead">{{ group.lead | safe }}</div>
+            {% endif %}
           </th>
         </tr>
         {% endif %}
