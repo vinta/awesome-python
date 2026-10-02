@@ -43,7 +43,7 @@ jobs:
 
       - name: Restore star data cache
         id: cache-stars
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: website/data/github_stars.json
           key: github-stars-${{ steps.date.outputs.today }}
@@ -58,7 +58,7 @@ jobs:
 
       - name: Save star data cache
         if: steps.fetch-stars.outcome == 'success'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: website/data/github_stars.json
           key: github-stars-${{ steps.date.outputs.today }}
@@ -72,7 +72,7 @@ jobs:
           python -m json.tool website/data/github_stars.json > /dev/null
 
       - name: Restore PyPI download data cache
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@v6
         with:
           path: website/data/pypi_downloads.tsv
           key: pypi-downloads-${{ steps.date.outputs.today }}
@@ -85,7 +85,7 @@ jobs:
 
       - name: Save PyPI download data cache
         if: steps.fetch-downloads.outcome == 'success'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6
         with:
           path: website/data/pypi_downloads.tsv
           key: pypi-downloads-${{ steps.date.outputs.today }}
@@ -94,9 +94,9 @@ jobs:
         run: make build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: website/output/
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
