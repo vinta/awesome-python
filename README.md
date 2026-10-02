@@ -1084,6 +1084,7 @@ _Libraries for package and dependency management._
 
 _Local PyPI repository servers, proxies, and mirrors._
 
+- [pypiserver](https://github.com/pypiserver/pypiserver) - A minimal PyPI server for uploading and installing packages with pip.
 - [devpi](https://github.com/devpi/devpi) - PyPI server and packaging/testing/release tool.
 - [bandersnatch](https://github.com/pypa/bandersnatch/) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 
