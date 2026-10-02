@@ -518,7 +518,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 ### Data Validation
 
-_Libraries for validating data. Used for forms in many cases._
+_Libraries for validating data._
 
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
