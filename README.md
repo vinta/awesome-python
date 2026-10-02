@@ -424,6 +424,7 @@ _Libraries that implement Object-Relational Mapping or data mapping techniques._
   - [pynamodb](https://github.com/pynamodb/PynamoDB) - A Pythonic interface for [Amazon DynamoDB](https://aws.amazon.com/dynamodb/).
   - [mongoengine](https://github.com/MongoEngine/mongoengine) - A Python Object-Document-Mapper for working with MongoDB.
   - [beanie](https://github.com/BeanieODM/beanie) - An asynchronous Python object-document mapper (ODM) for MongoDB.
+  - [django-mongodb-backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
 
 ### Database Drivers
 
@@ -433,7 +434,7 @@ _Libraries for connecting and operating databases._
   - [pymysql](https://github.com/PyMySQL/PyMySQL) - A pure-Python MySQL and MariaDB client library, based on PEP 249.
   - [mysqlclient](https://github.com/PyMySQL/mysqlclient) - MySQL and MariaDB connector ([MySQLdb1](https://github.com/farcepest/MySQLdb1) fork).
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
-  - [psycopg](https://github.com/psycopg/psycopg) - The most popular PostgreSQL adapter for Python.
+  - [psycopg](https://github.com/psycopg/psycopg) - A PostgreSQL adapter for Python, the successor to psycopg2.
   - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
 - SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
@@ -449,7 +450,6 @@ _Libraries for connecting and operating databases._
   - [redis](https://github.com/redis/redis-py) - The Python client for Redis.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
   - [cassandra-driver](https://github.com/apache/cassandra-python-driver) - The Python Driver for Apache Cassandra.
-  - [django-mongodb-backend](https://github.com/mongodb/django-mongodb-backend) - Official MongoDB database backend for Django.
 
 ### Database
 
@@ -472,15 +472,15 @@ _Libraries for caching data._
 - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
 - [diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend, compatible with Django.
 - [hishel](https://github.com/karpetrosyan/hishel) - RFC 9111 compliant HTTP caching for clients like httpx and requests and servers like FastAPI, with sync and async support.
-- [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
+- [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
 
 ### Search
 
 _Libraries and software for indexing and performing search queries on data._
 
-- [elasticsearch](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/elasticsearch).
 - [opensearch-py](https://github.com/opensearch-project/opensearch-py) - The official low-level Python client for [OpenSearch](https://opensearch.org/).
+- [elasticsearch](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/elasticsearch).
 - [meilisearch](https://github.com/meilisearch/meilisearch-python) - The official Python client for the [Meilisearch](https://www.meilisearch.com/) search engine.
 - [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
 
