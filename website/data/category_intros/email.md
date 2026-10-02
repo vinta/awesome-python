@@ -1,4 +1,4 @@
-Sending from Django, you learn no new Python email library API: django-anymail runs send_mail(). aiosmtplib and yagmail handle async code and Gmail scripts.
+Sending from Django, you learn no new Python email library API: django-anymail runs send_mail(). Async code sends mail through aiosmtplib.
 
 How to choose:
 
