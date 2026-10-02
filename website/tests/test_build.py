@@ -745,6 +745,45 @@ class TestBuild:
         assert collection["url"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["description"] == "Explore 1 curated Python projects in AI & ML. Part of the Awesome Python catalog."
 
+    def test_category_title_skips_libraries_after_plural_noun(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **Web Development**
+
+            ## Web Frameworks
+
+            - [wf1](https://example.com/wf1) - WF.
+
+            ## Web APIs
+
+            - [api1](https://example.com/api1) - API.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        categories_dir = tmp_path / "website" / "output" / "categories"
+        frameworks_html = (categories_dir / "web-frameworks" / "index.html").read_text(encoding="utf-8")
+        apis_html = (categories_dir / "web-apis" / "index.html").read_text(encoding="utf-8")
+        parser = HeadMetadataParser()
+        parser.feed(frameworks_html)
+        marker = '<script type="application/ld+json">'
+        start = frameworks_html.index(marker) + len(marker)
+        end = frameworks_html.index("</script>", start)
+        graph = {node["@type"]: node for node in json.loads(frameworks_html[start:end])["@graph"]}
+
+        assert parser.title.strip() == "Python Web Frameworks - Awesome Python"
+        assert parser.meta_by_property["og:title"] == "Python Web Frameworks - Awesome Python"
+        assert graph["CollectionPage"]["name"] == "Python Web Frameworks"
+        assert "<title>Python Web APIs Libraries - Awesome Python</title>" in apis_html
+
     def test_build_creates_subcategory_pages(self, tmp_path):
         readme = textwrap.dedent("""\
             # T
