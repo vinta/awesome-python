@@ -1129,6 +1129,7 @@ _Frameworks and tools for penetration testing._
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
 - [impacket](https://github.com/fortra/impacket) - A collection of Python classes for working with network protocols, widely used for Windows and Active Directory testing.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
+- [pwntools](https://github.com/Gallopsled/pwntools) - A CTF framework and exploit development library.
 - [sherlock-project](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 
 ### Supply Chain Security
