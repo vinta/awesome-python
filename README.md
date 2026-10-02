@@ -459,10 +459,9 @@ _In-process databases usable directly from Python._
   - [duckdb](https://github.com/duckdb/duckdb) - An in-process SQL OLAP database management system; optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
   - [chdb](https://github.com/chdb-io/chdb) - In-process OLAP SQL engine with the full ClickHouse dialect, zero-copy pandas/Arrow interop, and federation to remote ClickHouse clusters via `remoteSecure()`.
 - Vector
-  - [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with embeddings and semantic search.
   - [lancedb](https://github.com/lancedb/lancedb) - A developer-friendly embedded retrieval database for multimodal AI.
+  - [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with embeddings and semantic search.
   - [zvec](https://github.com/alibaba/zvec) - A lightweight, in-process vector database that embeds directly into applications.
-  - [pixeltable](https://github.com/pixeltable/pixeltable) - Declarative multimodal AI data engine for tables, computed columns, and embedding search.
 - Key-Value & Document
   - [tinydb](https://github.com/msiemens/tinydb) - A tiny, document-oriented database.
 
