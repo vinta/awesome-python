@@ -687,7 +687,7 @@ _Libraries for debugging code._
   - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
   - [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
 - Tracing
-  - [hunter](https://github.com/ionelmc/python-hunter) - A flexible code tracing toolkit.
+  - [viztracer](https://github.com/gaogaotiantian/viztracer) - A low-overhead tool that traces and visualizes Python code execution.
 - Profiler
   - [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
   - [memray](https://github.com/bloomberg/memray) - A memory profiler that tracks allocations in Python code, native extensions, and the interpreter itself.
