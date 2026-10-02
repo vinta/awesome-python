@@ -1078,6 +1078,7 @@ _Libraries for package and dependency management._
 - Build Backends
   - [setuptools](https://github.com/pypa/setuptools) - The historical and still most widely used pyproject build backend.
   - [hatchling](https://github.com/pypa/hatch) - Modern, extensible build backend from the hatch project.
+  - [poetry-core](https://github.com/python-poetry/poetry-core) - Poetry's PEP 517 build backend, usable without Poetry itself.
   - [uv-build](https://github.com/astral-sh/uv) - uv's fast, minimal build backend for pure-Python projects.
 
 ### Package Repositories
