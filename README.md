@@ -1127,6 +1127,7 @@ _Libraries for cryptographic primitives and secure protocols._
 _Frameworks and tools for penetration testing._
 
 - [mitmproxy](https://github.com/mitmproxy/mitmproxy) - An interactive TLS-capable intercepting HTTP proxy for penetration testers and software developers.
+- [impacket](https://github.com/fortra/impacket) - A collection of Python classes for working with network protocols, widely used for Windows and Active Directory testing.
 - [sqlmap](https://github.com/sqlmapproject/sqlmap) - Automatic SQL injection and database takeover tool.
 - [sherlock-project](https://github.com/sherlock-project/sherlock) - Hunt down social media accounts by username across social networks.
 
