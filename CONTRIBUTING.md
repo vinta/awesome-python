@@ -31,6 +31,8 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 
 **Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
 
+**Python versions**: missing support for the newest Python releases is not by itself grounds for removal while the entry still has a large user base; it can place the entry in the Second Tier instead.
+
 **Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
 
 Looking for an exhaustive catalog instead? Follow the awesome-\* lists linked under individual entries (for example awesome-python-testing) — they exist precisely so this list doesn't have to be one.
