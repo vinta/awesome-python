@@ -535,8 +535,8 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [altair](https://github.com/vega/altair) - Declarative statistical visualization library for Python.
   - [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 - Specialized
+  - [graphviz](https://github.com/xflr6/graphviz) - Simple Python interface for creating and rendering Graphviz graphs.
   - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
-  - [pygraphviz](https://github.com/pygraphviz/pygraphviz/) - Python interface to [Graphviz](https://www.graphviz.org/).
   - [graphify](https://github.com/Graphify-Labs/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
 - Dashboards and Apps
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
