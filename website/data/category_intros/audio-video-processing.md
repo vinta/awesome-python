@@ -1,27 +1,30 @@
-Each job has its own pick: librosa is the Python audio processing library for music analysis, MoviePy edits video from a script, and Mutagen tags audio files.
+To track tempo and beats with a Python audio processing library, load music into librosa. MoviePy cuts and joins video in code. Mutagen reads and writes tags.
 
 How to choose:
 
-- Cutting, joining, and fading audio files: pydub
-- Music and audio analysis: librosa
-- Editing video or making GIFs from a script: MoviePy
-- Real-time video from cameras and network streams: VidGear
-- Reading and writing tags across formats: Mutagen
-- Reading tags only: tinytag
-- Tagging and organizing your music collection: beets
+- Tempo, beats, and other music analysis: librosa
+- Scripted video edits, titles, and compositing: MoviePy
+- Reading and writing tags: Mutagen
+- Reading and writing sound files as NumPy arrays: soundfile
+- Slicing, fading, and joining audio clips: pydub
+- Frame- and packet-level access to FFmpeg: PyAV
+- Reading tags only, without GPL code: tinytag
+- Organizing a music collection with MusicBrainz data: beets
 
-pydub gives you a simple, high-level interface to cut, join, and fade audio. It opens and saves WAV files in pure Python, but [other formats like MP3 need FFmpeg](https://github.com/jiaaro/pydub#dependencies), so install FFmpeg with it. An AudioSegment is [immutable](https://github.com/jiaaro/pydub#quickstart): every operation returns a new one, so you can chain them, and every length and position is in milliseconds.
+librosa is a Python library for [audio and music signal processing](https://librosa.org/doc/latest/index.html), with the building blocks for music information retrieval: spectrograms, chroma, onsets, tempo, and beats. Load each file with [`librosa.load()`](https://librosa.org/doc/latest/auto_tutorials/01-intro/01-load.html), which resamples it to a standard rate and mixes it down to mono, the defaults the rest of librosa is designed around.
 
-librosa gives you [the foundational algorithms and tools for music information retrieval](https://librosa.org/doc/latest/index.html). By default, `librosa.load` resamples the signal and mixes stereo down to mono, and those defaults [suit most analysis tasks](https://librosa.org/doc/latest/auto_tutorials/01-intro/01-load.html); pass `sr=None` to keep the file's own sampling rate. When you need more control than `load` gives you, such as writing files, [its docs recommend using its audio I/O backend directly](https://librosa.org/doc/latest/ioformats.html).
+soundfile reads and writes [any format libsndfile supports](https://python-soundfile.readthedocs.io/en/latest/#read-write-functions), like WAV, FLAC, and OGG: `sf.read()` returns the samples as a NumPy array along with the sample rate, and `sf.write()` saves them. librosa reads files through soundfile, and its docs [recommend using soundfile directly](https://librosa.org/doc/latest/ioformats.html) to write audio, or when you need more control than loading a whole recording into memory.
 
-MoviePy is for [automating video editing](https://zulko.github.io/moviepy/getting_started/quick_presentation.html): processing many videos, composing them in complicated ways, or making videos and GIFs on a web server. A script loads clips, modifies them, puts them together, and writes the result. Modifying a clip [returns a new clip and leaves the original alone](https://zulko.github.io/moviepy/user_guide/modifying.html), and the computation happens at the final render. Open file clips in a `with` block, or [call `close()`](https://zulko.github.io/moviepy/user_guide/loading.html) when you're done, since each one holds a subprocess and a lock on the file. MoviePy can't stream video. For frame-by-frame analysis, its docs send you to a computer vision library.
+pydub [does things in milliseconds](https://github.com/jiaaro/pydub): slice an `AudioSegment` like a list, add 6 to boost it by 6 dB, then join, crossfade, or fade clips. Load files with [`AudioSegment.from_file()`](https://github.com/jiaaro/pydub/blob/master/API.markdown), which the docs recommend over the format-specific wrappers. Every operation returns an `AudioSegment`, so you can chain them before `export()` writes the result.
 
-VidGear is a framework for [real-time media applications](https://abhitronix.github.io/vidgear/latest/) built on OpenCV and FFmpeg. All its APIs [keep OpenCV's coding syntax](https://abhitronix.github.io/vidgear/latest/switch_from_cv/). Each task has [its own gear](https://abhitronix.github.io/vidgear/latest/gears/): CamGear reads cameras, network streams, and streaming sites in multiple threads. WriteGear writes frames to a video file or network stream, and StreamGear transcodes video into adaptive streaming formats. [Install OpenCV first](https://abhitronix.github.io/vidgear/latest/installation/pip_install/), since the core functions need it.
+MoviePy is for [automating video edits](https://zulko.github.io/moviepy/getting_started/quick_presentation.html#do-i-need-moviepy): cutting scenes, adding titles and subtitles, or composing many videos into one. A [typical script](https://zulko.github.io/moviepy/getting_started/quick_presentation.html#example-code) loads videos as clips, modifies them, puts them together in a `CompositeVideoClip`, and writes the result with `write_videofile()`.
 
-Mutagen reads and writes tags with [roughly the same API across all tag formats](https://mutagen.readthedocs.io/en/latest/). `mutagen.File` [guesses the file type](https://mutagen.readthedocs.io/en/latest/user/gettingstarted.html). ID3 tags in MP3 files are highly structured; for common keys, use [the simpler EasyID3 interface](https://mutagen.readthedocs.io/en/latest/user/id3.html). Mutagen is GPL-licensed; if you only read tags, MIT-licensed tinytag avoids that.
+PyAV binds FFmpeg's libraries for [direct and precise access](https://pyav.basswood.io/docs/stable/) to your media's containers, streams, packets, codecs, and frames. Open a file with `av.open()` and loop over `container.decode(video=0)` to get frames, which [convert to NumPy arrays](https://pyav.basswood.io/docs/stable/cookbook/numpy.html) with `to_ndarray()` and back with `av.VideoFrame.from_ndarray()`.
 
-tinytag only reads metadata, and [writing support will not be added](https://github.com/tinytag/tinytag): its README points you to Mutagen for that. It's pure Python with no dependencies and gives you the same API for every format. `TinyTag.get()` returns an object with attributes like `artist` and `duration`.
+Mutagen reads and writes tags in many audio formats through [one API](https://mutagen.readthedocs.io/en/latest/#why-mutagen) that's roughly the same across them. `mutagen.File()` [guesses the file's type](https://mutagen.readthedocs.io/en/latest/user/gettingstarted.html), you set tags like dict keys, and `save()` writes them. Mutagen is GPL.
 
-beets is a command-line music library manager, not a library you import: it [catalogs your collection and improves its metadata](https://beets.io/) as it goes. Install it [as a standalone tool](https://beets.readthedocs.io/en/stable/guides/installation.html), isolated from your system Python and other packages. `beet import` can modify and move your files, so [back up first and import a few albums at a time](https://beets.readthedocs.io/en/stable/guides/main.html). [Plugins](https://beets.readthedocs.io/en/stable/plugins/index.html) add commands, fetch extra data during import, and add metadata sources.
+tinytag, which is MIT and pure Python, only reads: `TinyTag.get(path)` returns the [title, artist, album, duration, and more](https://github.com/tinytag/tinytag) as attributes.
 
-FFmpeg sits under most of these projects: pydub needs it for any format other than WAV, MoviePy runs on it, and VidGear's WriteGear and StreamGear wrap it. When you only want to convert a video file or turn images into a movie, [call FFmpeg directly](https://zulko.github.io/moviepy/getting_started/quick_presentation.html). MoviePy's own docs say it's faster and uses less memory than going through MoviePy.
+beets runs from the command line: it [catalogs your music collection](https://beets.io/) and improves its metadata from MusicBrainz as it goes. Point [`beet import`](https://beets.readthedocs.io/en/stable/guides/tagger.html) at a folder of albums, and it tags the files as it adds them to your library. The docs [recommend this autotagged import](https://beets.readthedocs.io/en/stable/guides/main.html#importing-your-music): it asks you questions along the way, but gets every song's tags right from the start.
+
+MoviePy and PyAV both run on FFmpeg. When the `ffmpeg` command [does the job](https://pyav.basswood.io/docs/stable/) on its own, call it directly: MoviePy's docs say that's [faster and more memory-efficient](https://zulko.github.io/moviepy/getting_started/quick_presentation.html#do-i-need-moviepy).
