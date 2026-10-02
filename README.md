@@ -990,9 +990,9 @@ _Awesome game development libraries._
 - 3D Engines
   - [panda3d](https://github.com/panda3d/panda3d) - 3D game engine developed jointly by Disney and contributors from around the world.
 - Game Frameworks
-  - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
   - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
   - [pygame-ce](https://github.com/pygame-community/pygame-ce) - An actively developed drop-in replacement with new features and performance improvements ([pygame](https://github.com/pygame/pygame) fork).
+  - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
   - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
 - Visual Novels
   - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
