@@ -1,13 +1,19 @@
-Not every Python hardware library needs a board: pynput drives your keyboard and mouse, Bleak your Bluetooth LE devices. Jumpstarter automates hardware tests.
+Serial ports open with pySerial. Past those, pick a Python hardware library by the device you talk to, like Bleak for Bluetooth LE sensors.
 
 How to choose:
 
-- Controlling or monitoring the keyboard and mouse: pynput
+- Serial ports on Windows, macOS, Linux, or BSD: pySerial
 - Bluetooth Low Energy devices, like sensors: Bleak
-- Automated tests on real or virtual hardware: Jumpstarter
+- Controlling or monitoring the keyboard and mouse: pynput
+- Global hotkeys: pynput
+- Automated tests on real or virtual hardware, shared across a team or CI: Jumpstarter
 
-pynput [controls and monitors input devices](https://pynput.readthedocs.io/en/latest/): the mouse and the keyboard. To send input, create a `Controller` and [call its methods](https://pynput.readthedocs.io/en/latest/keyboard.html#controlling-the-keyboard), like `press()`, `release()`, or `type()` for a whole string. To react to input, open a `Listener` with your callbacks in a `with` block and [call `join()`](https://pynput.readthedocs.io/en/latest/keyboard.html#monitoring-the-keyboard). In a GUI app with its own main loop, call `start()` instead, so your code keeps running.
+pySerial is imported as `serial`, and `serial.Serial` opens a port as a context manager. [Set a timeout when you open it](https://pyserial.readthedocs.io/en/latest/shortintro.html#readline), or `readline()` can block forever when no newline arrives. The docs also suggest [`serial_for_url()`](https://pyserial.readthedocs.io/en/latest/pyserial_api.html#serial.serial_for_url) over creating `Serial` directly, so the same code takes a local port, a remote one, or a `loop://` loopback for your tests.
 
-Bleak is a [GATT client](https://bleak.readthedocs.io/en/latest/): it connects to Bluetooth Low Energy devices, like sensors, through one asynchronous, cross-platform API. Connect in an `async with BleakClient(...)` block and start your program with `asyncio.run()`. That's [the recommended way](https://bleak.readthedocs.io/en/latest/api/client.html#connecting-and-disconnecting), and the device disconnects even when your program is interrupted or raises. Scan the same way, in an [`async with BleakScanner(...)` block](https://bleak.readthedocs.io/en/latest/api/scanner.html#starting-and-stopping).
+pynput sends input through a `Controller` and watches it through a `Listener`, for the keyboard and the mouse alike. A listener is a thread that runs your callbacks. On some platforms, notably Windows, a slow callback risks freezing input for every process, so [keep callbacks short](https://pynput.readthedocs.io/en/latest/keyboard.html#the-keyboard-listener-thread): hand events to a queue, and let another thread work through it.
 
-Jumpstarter is an [open source framework for hardware-in-the-loop testing](https://jumpstarter.dev/main/introduction/index.html#introduction) on physical hardware and virtual devices. A person in `jmp shell`, a pytest script, and a CI pipeline all use the same APIs. [Local mode](https://jumpstarter.dev/main/introduction/index.html#local-mode) needs no Kubernetes and suits one developer with the hardware at hand. [Distributed mode](https://jumpstarter.dev/main/introduction/index.html#distributed-mode) runs a Kubernetes-based controller that leases devices, so teams can share them, including from CI. Write tests on the `JumpstarterTest` base class from jumpstarter-testing, which [handles the connection](https://jumpstarter.dev/main/getting-started/guides/examples/testing.html#the-jumpstartertest-base-class) for you. Set a `selector` for the device you need: the class connects from inside `jmp shell`, or leases a matching device outside it.
+Bleak is async, so [call `asyncio.run()` once](https://bleak.readthedocs.io/en/latest/troubleshooting.html#calling-asyncio-run-more-than-once) and do all your Bluetooth work in one async main function. Scan with `BleakScanner` and connect with `BleakClient`, each [in an `async with` block](https://bleak.readthedocs.io/en/latest/api/client.html#connecting-and-disconnecting), so the device disconnects when the block exits.
+
+Jumpstarter puts your device behind an exporter, which manages its interfaces, and your tests reach it through a client. [Local mode](https://jumpstarter.dev/main/introduction/#local-mode) needs no Kubernetes or other infrastructure: run `jmp shell --exporter <name>`, then pytest inside it. When teams share hardware, especially in CI, distributed mode adds a Kubernetes-based controller that leases devices out. Write tests as subclasses of [`JumpstarterTest`](https://jumpstarter.dev/main/getting-started/guides/examples/testing.html), whose `client` fixture handles the connection.
+
+Jumpstarter builds on the other picks: its serial driver runs on pySerial and takes the port [in pySerial's format](https://jumpstarter.dev/main/reference/package-apis/drivers/pyserial.html), and its Bluetooth LE driver runs on Bleak.
