@@ -235,7 +235,7 @@ _Libraries for image and video analysis, object detection, and OCR._
 - General
   - [opencv-python](https://github.com/opencv/opencv-python) - Open Source Computer Vision Library.
   - [ultralytics](https://github.com/ultralytics/ultralytics) - Ultralytics YOLO for object detection, segmentation, pose estimation, classification, and tracking.
-  - [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
+  - [kornia](https://github.com/kornia/kornia) - Open Source Differentiable Computer Vision Library for PyTorch.
   - [fiftyone](https://github.com/voxel51/fiftyone) - The open-source tool for building high-quality datasets and computer vision models.
 - OCR
   - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) engine.
