@@ -233,7 +233,8 @@ def category_meta_title(name: str, parent_name: str | None = None) -> str:
         return f"{name} - Awesome Python"
     # Names ending in one of these nouns already say what the entries are.
     noun = "" if name.rsplit(" ", 1)[-1] in PLURAL_NOUNS else " Libraries"
-    title = f"Python {name}{noun} - Awesome Python"
+    prefix = "" if name.startswith("Python ") else "Python "
+    title = f"{prefix}{name}{noun} - Awesome Python"
     if len(title) <= 60:
         return title
     return f"{name} - Awesome Python"
