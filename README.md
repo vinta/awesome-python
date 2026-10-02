@@ -926,6 +926,7 @@ _Libraries for parsing and manipulating specific file formats._
   - [python-pptx](https://github.com/scanny/python-pptx) - Python library for creating and updating PowerPoint (.pptx) files.
 - PDF
   - [pypdf](https://github.com/py-pdf/pypdf) - A library capable of splitting, merging, cropping, and transforming PDF pages.
+  - [pymupdf](https://github.com/pymupdf/PyMuPDF) - A fast library for extracting, rendering, and editing PDF and other document formats, built on MuPDF.
   - [reportlab](https://docs.reportlab.com/) - Allowing Rapid creation of rich PDF documents.
   - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - A community-maintained fork of PDFMiner for extracting information from PDF documents.
 - HTML-to-PDF
