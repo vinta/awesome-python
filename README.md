@@ -235,10 +235,10 @@ _Libraries for image and video analysis, object detection, and OCR._
 - General
   - [opencv-python](https://github.com/opencv/opencv-python) - Open Source Computer Vision Library.
   - [ultralytics](https://github.com/ultralytics/ultralytics) - Ultralytics YOLO for object detection, segmentation, pose estimation, classification, and tracking.
-  - [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
+  - [kornia](https://github.com/kornia/kornia) - Open Source Differentiable Computer Vision Library for PyTorch.
   - [fiftyone](https://github.com/voxel51/fiftyone) - The open-source tool for building high-quality datasets and computer vision models.
 - OCR
-  - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for the [Tesseract OCR](https://github.com/tesseract-ocr) engine.
+  - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) engine.
   - [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 80+ languages supported.
   - [paddleocr](https://github.com/PaddlePaddle/PaddleOCR) - Multilingual OCR and document parsing toolkit based on PaddlePaddle.
 
@@ -405,7 +405,7 @@ _Libraries to automate web scraping and extract web content._
 _Libraries for sending email._
 
 - [aiosmtplib](https://github.com/cole/aiosmtplib) - An asyncio SMTP client.
-- [django-anymail](https://github.com/anymail/django-anymail) - Django email backends and webhooks for transactional email services such as Amazon SES, Mailgun, Postmark, Resend, and SendGrid.
+- [django-anymail](https://github.com/anymail/django-anymail) - Django email backends and webhooks for transactional email services such as Amazon SES, Brevo, Mailgun, Postmark, and Resend.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
 **Database & Storage**
@@ -518,7 +518,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 
 ### Data Validation
 
-_Libraries for validating data. Used for forms in many cases._
+_Libraries for validating data._
 
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
@@ -927,7 +927,7 @@ _Libraries for parsing and manipulating specific file formats._
 - PDF
   - [pypdf](https://github.com/py-pdf/pypdf) - A library capable of splitting, merging, cropping, and transforming PDF pages.
   - [pymupdf](https://github.com/pymupdf/PyMuPDF) - A fast library for extracting, rendering, and editing PDF and other document formats, built on MuPDF.
-  - [reportlab](https://docs.reportlab.com/) - Allowing Rapid creation of rich PDF documents.
+  - [reportlab](https://docs.reportlab.com/) - An open-source library for generating PDFs and graphics.
   - [pdfminer.six](https://github.com/pdfminer/pdfminer.six) - A community-maintained fork of PDFMiner for extracting information from PDF documents.
 - HTML-to-PDF
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
@@ -993,7 +993,7 @@ _Awesome game development libraries._
   - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
   - [pygame-ce](https://github.com/pygame-community/pygame-ce) - An actively developed drop-in replacement with new features and performance improvements ([pygame](https://github.com/pygame/pygame) fork).
   - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
-  - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
+  - [arcade](https://github.com/pythonarcade/arcade) - An easy-to-use library for creating 2D arcade games.
 - Visual Novels
   - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
