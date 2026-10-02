@@ -22,6 +22,7 @@ Display names follow the canonical PyPI package name. These entries keep a diffe
 - pytorch -- `torch`.
 - strawberry -- `strawberry-graphql`.
 - strawberry-django -- `strawberry-graphql-django`.
+- thealgorithms -- not on PyPI; its GitHub repo name is `Python`.
 
 ### Stability Exceptions
 
