@@ -14,6 +14,7 @@ from build import (
     TemplateEntry,
     annotate_entries_with_stats,
     build,
+    category_meta_title,
     detect_source_type,
     extract_entries,
     extract_github_repo,
@@ -783,6 +784,9 @@ class TestBuild:
         assert parser.meta_by_property["og:title"] == "Python Web Frameworks - Awesome Python"
         assert graph["CollectionPage"]["name"] == "Python Web Frameworks"
         assert "<title>Python Web APIs Libraries - Awesome Python</title>" in apis_html
+
+    def test_category_title_does_not_repeat_leading_python(self):
+        assert category_meta_title("Python Language") == "Python Language Libraries - Awesome Python"
 
     def test_build_creates_subcategory_pages(self, tmp_path):
         readme = textwrap.dedent("""\
