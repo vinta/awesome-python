@@ -1,6 +1,7 @@
 {
   "/categories/": "/",
   "/categories/ai-and-agents/pre-trained-models-and-inference/": "/categories/ai-and-agents/pre-trained-models/",
+  "/categories/cli-development/cli-development/": "/categories/cli-development/",
   "/categories/cli-tools/productivity-tools/": "/categories/cli-tools/",
   "/categories/code-analysis/code-analysis/": "/categories/code-analysis/",
   "/categories/code-analysis/code-linters/": "/categories/code-analysis/linters-and-formatters/",
@@ -9,5 +10,6 @@
   "/categories/distributed-computing/batch-processing/": "/categories/distributed-computing/",
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",
   "/categories/gui-development/wrappers/": "/categories/gui-development/",
+  "/categories/http-clients/clients/": "/categories/http-clients/",
   "/categories/web-servers/rpc/": "/categories/web-apis/rpc/"
 }

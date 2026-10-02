@@ -376,7 +376,7 @@ _Static site generator is a software that takes some text + templates as input a
 
 _Libraries for working with HTTP._
 
-- Clients
+- General
   - [requests](https://github.com/psf/requests) - HTTP Requests for Humans.
   - [aiohttp](https://github.com/aio-libs/aiohttp) - Asynchronous HTTP client/server framework for asyncio and Python.
   - [httpx2](https://github.com/pydantic/httpx2) - HTTP/1.1 and HTTP/2 client with sync and async APIs, maintained by Pydantic ([httpx](https://github.com/encode/httpx) fork).
@@ -810,7 +810,7 @@ _Tools and libraries for packet manipulation and network device automation._
 
 _Libraries for building command-line applications._
 
-- CLI Development
+- General
   - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click.
