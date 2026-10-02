@@ -404,6 +404,7 @@ _Libraries to automate web scraping and extract web content._
 
 _Libraries for sending email._
 
+- [aiosmtplib](https://github.com/cole/aiosmtplib) - An asyncio SMTP client.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
 **Database & Storage**
