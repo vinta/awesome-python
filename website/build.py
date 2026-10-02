@@ -4,6 +4,7 @@
 import json
 import re
 import shutil
+import subprocess
 import xml.etree.ElementTree as ET
 from collections import Counter
 from collections.abc import Sequence
@@ -399,6 +400,20 @@ def subcategory_public_url(category_slug: str, subcategory_slug: str) -> str:
 
 def synthetic_category(name: str, slug: str) -> SyntheticCategory:
     return {"name": name, "slug": slug, "description": "", "description_html": ""}
+
+
+def git_last_change_date(repo_root: Path, *log_args: str) -> str:
+    """Return the date of the last commit matching `git log` args, or "" without git history."""
+    result = subprocess.run(["git", "log", "-1", "--format=%cs", "--no-patch", *log_args], cwd=repo_root, capture_output=True, text=True)
+    return result.stdout.strip()
+
+
+def section_line_range(readme_text: str, name: str) -> str:
+    """Return a section's README lines as a `git log -L` range, from its heading to the line before the next heading."""
+    lines = readme_text.split("\n")
+    start = next(i for i, line in enumerate(lines) if re.fullmatch(rf"#+ {re.escape(name)}", line))
+    end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("#")), len(lines))
+    return f"{start + 1},{end}:README.md"
 
 
 def write_sitemap_xml(path: Path, urls: Sequence[tuple[str, str]]) -> None:
@@ -881,8 +896,6 @@ def build(repo_root: Path) -> None:
     if static_src.exists():
         shutil.copytree(static_src, static_dst, dirs_exist_ok=True)
 
-    sponsorship_md = repo_root / "SPONSORSHIP.md"
-    sponsorship_md_mtime = datetime.fromtimestamp(sponsorship_md.stat().st_mtime, tz=UTC).date().isoformat()
     llms_template = (website / "templates" / "llms.txt").read_text(encoding="utf-8")
     llms_txt = build_llms_txt(
         llms_template,
@@ -895,15 +908,25 @@ def build(repo_root: Path) -> None:
         total_entries=total_entries,
     )
     (site_dir / "robots.txt").write_text(build_robots_txt(), encoding="utf-8")
-    sitemap_date = build_date.date().isoformat()
-    sitemap_urls = [(SITE_URL, sitemap_date)]
-    sitemap_urls.extend((category_public_url(c), sitemap_date) for c in categories)
-    sitemap_urls.extend((group_public_url(g["slug"]), sitemap_date) for g in parsed_groups)
+    # Daily star and download refreshes are not significant changes, so lastmod follows commits to the page's own content.
+    build_day = build_date.date().isoformat()
+    readme_date = git_last_change_date(repo_root, "--", "README.md") or build_day
+    section_dates = {
+        c["slug"]: max(
+            git_last_change_date(repo_root, "-L", section_line_range(readme_text, c["name"])),
+            git_last_change_date(repo_root, "--", f"website/data/category_intros/{c['slug']}.md"),
+        )
+        or build_day
+        for c in categories
+    }
+    sitemap_urls = [(SITE_URL, readme_date)]
+    sitemap_urls.extend((category_public_url(c), section_dates[c["slug"]]) for c in categories)
+    sitemap_urls.extend((group_public_url(g["slug"]), max(section_dates[c["slug"]] for c in g["categories"])) for g in parsed_groups)
     if builtin_entries:
-        sitemap_urls.append((BUILTIN_PUBLIC_URL, sitemap_date))
+        sitemap_urls.append((BUILTIN_PUBLIC_URL, readme_date))
     for cat_slug, sub_slug, _ in sorted(subcat_meta.values()):
-        sitemap_urls.append((subcategory_public_url(cat_slug, sub_slug), sitemap_date))
-    sitemap_urls.append((SPONSORSHIP_PUBLIC_URL, sponsorship_md_mtime))
+        sitemap_urls.append((subcategory_public_url(cat_slug, sub_slug), section_dates[cat_slug]))
+    sitemap_urls.append((SPONSORSHIP_PUBLIC_URL, git_last_change_date(repo_root, "--", "SPONSORSHIP.md") or build_day))
     write_sitemap_xml(site_dir / "sitemap.xml", sitemap_urls)
     (site_dir / "llms.txt").write_text(llms_txt, encoding="utf-8")
 

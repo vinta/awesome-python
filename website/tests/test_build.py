@@ -2,7 +2,9 @@
 
 import json
 import os
+import re
 import shutil
+import subprocess
 import textwrap
 import xml.etree.ElementTree as ET
 from datetime import UTC, date, datetime
@@ -198,9 +200,6 @@ class TestBuild:
             Help!
         """)
         self._make_repo(tmp_path, readme)
-        sponsorship_mtime = datetime(2024, 1, 2, tzinfo=UTC).timestamp()
-        os.utime(tmp_path / "SPONSORSHIP.md", (sponsorship_mtime, sponsorship_mtime))
-        expected_sponsorship_lastmod = "2024-01-02"
         start_date = datetime.now(UTC).date()
         build(tmp_path)
         end_date = datetime.now(UTC).date()
@@ -214,7 +213,6 @@ class TestBuild:
         ns = {"sitemap": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         locs = [loc.text or "" for loc in root.findall("sitemap:url/sitemap:loc", ns)]
         lastmods = [lastmod.text or "" for lastmod in root.findall("sitemap:url/sitemap:lastmod", ns)]
-        lastmod_by_loc = dict(zip(locs, lastmods, strict=True))
 
         assert root.tag == "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset"
         assert locs == [
@@ -225,10 +223,62 @@ class TestBuild:
             "https://awesome-python.com/sponsorship/",
         ]
         assert len(lastmods) == len(locs)
-        assert lastmod_by_loc["https://awesome-python.com/sponsorship/"] == expected_sponsorship_lastmod
-        assert all(start_date <= date.fromisoformat(lastmod) <= end_date for loc, lastmod in lastmod_by_loc.items() if loc != "https://awesome-python.com/sponsorship/")
+        # Outside a git repository every page falls back to the build date
+        assert all(start_date <= date.fromisoformat(lastmod) <= end_date for lastmod in lastmods)
         assert all(loc.startswith("https://awesome-python.com/") for loc in locs)
         assert all("?" not in loc for loc in locs)
+
+    def test_sitemap_lastmod_follows_git_history_of_each_page(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## Projects
+
+            **Tools**
+
+            ### Widgets
+
+            - Sync
+
+                - [w1](https://example.com/w1) - A widget.
+
+            ### Gadgets
+
+            - [g1](https://example.com/g1) - A gadget.
+
+            ## Contributing
+
+            Help!
+        """)
+        self._make_repo(tmp_path, readme)
+
+        def commit(day, message):
+            env = {**os.environ, "GIT_AUTHOR_DATE": f"{day}T12:00:00Z", "GIT_COMMITTER_DATE": f"{day}T12:00:00Z"}
+            subprocess.run(["git", "add", "-A"], cwd=tmp_path, check=True)
+            subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", message], cwd=tmp_path, env=env, check=True)
+
+        subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+        commit("2024-01-01", "initial")
+        (tmp_path / "README.md").write_text(readme.replace("A gadget.", "A better gadget."), encoding="utf-8")
+        commit("2024-02-01", "edit gadgets")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use w1.\n", encoding="utf-8")
+        commit("2024-03-01", "add widgets intro")
+        build(tmp_path)
+
+        sitemap = (tmp_path / "website" / "output" / "sitemap.xml").read_text(encoding="utf-8")
+        lastmod_by_loc = dict(re.findall(r"<loc>https://awesome-python\.com(\S*?)</loc>\s*<lastmod>(\S+)</lastmod>", sitemap))
+        assert lastmod_by_loc == {
+            "/": "2024-02-01",
+            "/categories/widgets/": "2024-03-01",
+            "/categories/gadgets/": "2024-02-01",
+            "/categories/tools/": "2024-03-01",
+            "/categories/widgets/sync/": "2024-03-01",
+            "/sponsorship/": "2024-01-01",
+        }
 
     def test_build_creates_category_pages_with_metadata_and_links(self, tmp_path):
         readme = textwrap.dedent("""\
