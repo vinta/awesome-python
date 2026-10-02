@@ -1,6 +1,7 @@
 {
   "/categories/": "/",
   "/categories/ai-and-agents/pre-trained-models-and-inference/": "/categories/ai-and-agents/pre-trained-models/",
+  "/categories/cli-development/cli-development/": "/categories/cli-development/",
   "/categories/cli-tools/productivity-tools/": "/categories/cli-tools/",
   "/categories/code-analysis/code-analysis/": "/categories/code-analysis/",
   "/categories/code-analysis/code-linters/": "/categories/code-analysis/linters-and-formatters/",

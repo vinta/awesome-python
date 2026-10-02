@@ -810,7 +810,7 @@ _Tools and libraries for packet manipulation and network device automation._
 
 _Libraries for building command-line applications._
 
-- CLI Development
+- General
   - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click.
