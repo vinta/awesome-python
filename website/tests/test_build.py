@@ -794,7 +794,7 @@ class TestBuild:
         assert collection["name"] == "Python AI & ML Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["url"] == "https://awesome-python.com/categories/ai-ml/"
-        assert collection["description"] == "Explore 1 curated Python projects in AI & ML. Part of the Awesome Python catalog."
+        assert collection["description"] == "Explore 1 curated Python project in AI & ML. Part of the Awesome Python catalog."
 
     def test_category_title_skips_libraries_after_plural_noun(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -904,14 +904,14 @@ class TestBuild:
 
         parser = HeadMetadataParser()
         parser.feed(sync)
-        assert parser.title.strip() == "Synchronous for Web Frameworks - Awesome Python"
-        assert parser.meta_by_name["description"] == "Explore 1 curated Python projects in Synchronous for Web Frameworks. Part of the Awesome Python catalog."
+        assert parser.title.strip() == "Python Web Frameworks: Synchronous - Awesome Python"
+        assert parser.meta_by_name["description"] == "The Synchronous picks in Awesome Python's Web Frameworks list: django."
 
         marker = '<script type="application/ld+json">'
         start = sync.index(marker) + len(marker)
         end = sync.index("</script>", start)
         graph = {node["@type"]: node for node in json.loads(sync[start:end])["@graph"]}
-        assert graph["CollectionPage"]["name"] == "Synchronous for Web Frameworks"
+        assert graph["CollectionPage"]["name"] == "Python Web Frameworks: Synchronous"
         assert graph["BreadcrumbList"]["itemListElement"] == [
             {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
             {
