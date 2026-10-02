@@ -667,9 +667,9 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - Mock
   - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
-  - [freezegun](https://github.com/spulec/freezegun) - Travel through time by mocking the datetime module.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
   - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
+  - [time-machine](https://github.com/adamchainz/time-machine) - Travel through time in your tests by mocking the current time at the C level.
 - Object Factories
   - [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
   - [polyfactory](https://github.com/litestar-org/polyfactory) - A mock data generation library based on type hints (continuation of `pydantic-factories`).
