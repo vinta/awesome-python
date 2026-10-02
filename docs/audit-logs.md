@@ -14,6 +14,7 @@ Display names follow the canonical PyPI package name. These entries keep a diffe
 - django-rest-framework -- `djangorestframework`.
 - django-rules -- `rules`.
 - fasthtml -- `python-fasthtml`.
+- graphify -- `graphifyy`.
 - jinja -- `Jinja2`.
 - mem0 -- `mem0ai`.
 - pangu.py -- `pangu`.
