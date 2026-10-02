@@ -322,6 +322,7 @@ _Libraries for rendering text and HTML from templates._
 
 _Tools for managing, storing, compressing and minifying website assets._
 
+- [whitenoise](https://github.com/evansd/whitenoise) - Radically simplified static file serving for WSGI applications, with compression and caching headers.
 - [django-storages](https://github.com/jschneier/django-storages) - A collection of custom storage back ends for Django.
 - [django-compressor](https://github.com/django-compressor/django-compressor) - Compresses linked and inline JavaScript or CSS into a single cached file.
 
