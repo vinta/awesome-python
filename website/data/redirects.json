@@ -10,5 +10,6 @@
   "/categories/distributed-computing/batch-processing/": "/categories/distributed-computing/",
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",
   "/categories/gui-development/wrappers/": "/categories/gui-development/",
+  "/categories/http-clients/clients/": "/categories/http-clients/",
   "/categories/web-servers/rpc/": "/categories/web-apis/rpc/"
 }
