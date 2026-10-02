@@ -226,13 +226,10 @@ def build_homepage_json_ld(entries: Sequence[TemplateEntry], total_categories: i
 
 def category_meta_title(name: str, parent_name: str | None = None) -> str:
     if parent_name:
-        title = f"{name} for {parent_name} - Awesome Python"
-        if len(title) <= 60:
-            return title
-        title = f"{parent_name}: {name} - Awesome Python"
-        if len(title) <= 60:
-            return title
-        return f"{name} - Awesome Python"
+        # Lead with the section's title so the page matches searches like "python jwt library".
+        title = f"{category_meta_title(parent_name).removesuffix(' - Awesome Python')}: {name}"
+        # Google shows the site name above each result, so a long title drops it rather than get cut off.
+        return f"{title} - Awesome Python" if len(title) <= 43 else title
     # Names ending in one of these nouns already say what the entries are.
     noun = "" if name.rsplit(" ", 1)[-1] in PLURAL_NOUNS else " Libraries"
     prefix = "" if name.startswith("Python ") else "Python "
@@ -242,13 +239,17 @@ def category_meta_title(name: str, parent_name: str | None = None) -> str:
     return f"{name} - Awesome Python"
 
 
-def category_meta_description(name: str, entry_count: int, description: str, parent_name: str | None = None) -> str:
-    target = f"{name} for {parent_name}" if parent_name else name
-    count_sentence = f"Explore {entry_count} curated Python projects in {target}."
+def category_meta_description(name: str, entry_count: int, description: str) -> str:
+    count_sentence = f"Explore {entry_count} curated Python project{'s' if entry_count != 1 else ''} in {name}."
     if description:
         lead = description if description.endswith((".", "!", "?")) else f"{description}."
         return f"{lead} {count_sentence}"
     return f"{count_sentence} Part of the Awesome Python catalog."
+
+
+def subcategory_meta_description(name: str, parent_name: str, entry_names: Sequence[str]) -> str:
+    names = entry_names[0] if len(entry_names) == 1 else f"{', '.join(entry_names[:-1])}{',' if len(entry_names) > 2 else ''} and {entry_names[-1]}"
+    return f"The {name} picks in Awesome Python's {parent_name} list: {names}."
 
 
 def load_category_intro(path: Path) -> tuple[str, str, str, str]:
@@ -775,7 +776,12 @@ def build(repo_root: Path) -> None:
         parent_name = parent_category["name"] if parent_category else None
         category_title = category_meta_title(category["name"], parent_name)
         intro_html, guide_html, intro_lead, _ = load_category_intro(website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md")
-        category_description = intro_lead or category_meta_description(category["name"], len(entries), category["description"], parent_name)
+        if intro_lead:
+            category_description = intro_lead
+        elif parent_name:
+            category_description = subcategory_meta_description(category["name"], parent_name, [e["name"] for e in entries])
+        else:
+            category_description = category_meta_description(category["name"], len(entries), category["description"])
         breadcrumbs = [("Awesome Python", SITE_URL)]
         if parent_category:
             breadcrumbs.append((parent_category["name"], category_public_url(parent_category)))
