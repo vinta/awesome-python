@@ -665,7 +665,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - API Testing
   - [schemathesis](https://github.com/schemathesis/schemathesis) - A tool for automatic property-based testing of web APIs from OpenAPI or GraphQL schemas.
 - Mock
-  - [mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
+  - [unittest.mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
   - [vcrpy](https://github.com/kevin1024/vcrpy) - Record and replay HTTP interactions on your tests.
   - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
