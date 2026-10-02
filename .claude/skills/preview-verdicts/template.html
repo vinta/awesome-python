@@ -149,7 +149,7 @@ function updateCounts() {
 
 function copyFeedback() {
   const fb = collect();
-  const text = fb.length ? JSON.stringify(fb, null, 1) : "(no changes — all verdicts accepted as-is)";
+  const text = fb.length ? JSON.stringify(fb, null, 1) : `(no changes — all verdicts accepted as-is: ${document.title} — ${[...new Set(DATA.map(g => g[0]))].join(", ")})`;
   const hint = document.getElementById("hint");
   navigator.clipboard.writeText(text).then(
     () => { hint.textContent = `Copied ${fb.length ? fb.length + " row(s)" : "acceptance note"} — paste into the chat.`; },
