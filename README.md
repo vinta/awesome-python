@@ -151,13 +151,13 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [mcp](https://github.com/modelcontextprotocol/python-sdk) - The official Python SDK for building Model Context Protocol servers and clients.
   - [fastmcp](https://github.com/PrefectHQ/fastmcp) - A high-level, Pythonic framework for building MCP servers and clients.
 - Personal Assistants
-  - [hermes-agent](https://github.com/nousresearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
+  - [hermes-agent](https://github.com/NousResearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
   - [AstrBot](https://github.com/AstrBotDevs/AstrBot) - A multi-platform AI assistant that connects LLMs to chat apps like Telegram, Slack, and QQ, extensible with Python plugins.
 - Prompt Optimization
   - [dspy](https://github.com/stanfordnlp/dspy) - A framework for programming, not prompting, language models.
 - Data Layer
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
-  - [llama-index](https://github.com/run-llama/llama_index) - A data framework for your LLM application.
+  - [llama-index](https://github.com/run-llama/llama_index) - A toolkit for building RAG pipelines and agents over your data.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
   - [openviking](https://github.com/volcengine/OpenViking) - A context database for AI agents that unifies memory, resources, and skills.
   - [semantica](https://github.com/semantica-agi/semantica) - A graph-native context and knowledge layer for AI agents with reasoning, provenance, and governance.
@@ -391,7 +391,7 @@ _Libraries to automate web scraping and extract web content._
 
 - Frameworks
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
-  - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level screen scraping and web crawling framework.
+  - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level web crawling and scraping framework.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
   - [stagehand](https://github.com/browserbase/stagehand) - A fast and token-efficient browser automation SDK to extract data and perform self-healing actions on web pages.
   - [jev-ultrafast](https://github.com/browser-use/jev-ultrafast) - A fast browser agent that picks actions from an indexed table of page elements through TypeSafe's hosted Jev API, using a small LLM only to type text.
@@ -604,7 +604,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
   - [algorithms](https://github.com/keon/algorithms) - Minimal examples of data structures and algorithms.
   - [thealgorithms](https://github.com/TheAlgorithms/Python) - All Algorithms implemented in Python.
 - Design Patterns
-  - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns in Python.
+  - [python-patterns](https://github.com/faif/python-patterns) - A collection of design patterns and idioms in Python.
   - [python-statemachine](https://github.com/fgmacedo/python-statemachine) - Expressive statecharts and finite state machines with a declarative API, in sync and async codebases.
 
 ### Interactive Interpreter
@@ -614,7 +614,7 @@ _Interactive Python interpreters (REPL)._
 - [ipython](https://github.com/ipython/ipython) - A powerful interactive Python shell, and the kernel behind Jupyter notebooks.
 - [notebook](https://github.com/jupyter/notebook) - A web-based notebook environment for interactive computing.
   - [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
-- [marimo](https://github.com/marimo-team/marimo) - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
+- [marimo](https://github.com/marimo-team/marimo) - A reactive notebook for Python, stored as pure Python and runnable as a script or app.
 - [ptpython](https://github.com/prompt-toolkit/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit).
 
 ### Code Analysis
