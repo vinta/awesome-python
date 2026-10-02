@@ -405,7 +405,7 @@ _Libraries to automate web scraping and extract web content._
 _Libraries for sending email._
 
 - [aiosmtplib](https://github.com/cole/aiosmtplib) - An asyncio SMTP client.
-- [django-anymail](https://github.com/anymail/django-anymail) - Django email backends and webhooks for transactional email services such as Amazon SES, Mailgun, Postmark, Resend, and SendGrid.
+- [django-anymail](https://github.com/anymail/django-anymail) - Django email backends and webhooks for transactional email services such as Amazon SES, Brevo, Mailgun, Postmark, and Resend.
 - [yagmail](https://github.com/kootenpv/yagmail) - Yet another Gmail/SMTP client.
 
 **Database & Storage**
