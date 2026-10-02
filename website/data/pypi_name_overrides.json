@@ -16,6 +16,7 @@
   "google-cloud-python": { "package": null, "reason": "monorepo umbrella; ships as many google-cloud-* packages", "badge": "Multiple on PyPI" },
   "graphify": { "package": null, "reason": "GitHub-only so far; young project, remap if it publishes" },
   "httpx-url": { "package": null, "reason": "class in the httpx package, not a package" },
+  "jev-ultrafast": { "package": null, "reason": "not published on PyPI" },
   "jinja": { "package": "jinja2", "reason": "PyPI jinja is Jinja1; current releases publish as jinja2" },
   "mem0": { "package": "mem0ai", "reason": null },
   "micropython": { "package": null, "reason": "interpreter distributed as firmware builds, not pip" },
