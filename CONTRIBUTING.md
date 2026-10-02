@@ -8,7 +8,7 @@ All submissions must satisfy **ALL** of these:
 
 1. **Serves Python Developers**: Python developers use it in their Python work. Implementation language and packaging are irrelevant — uv and ty are written in Rust, and agent skill packs are markdown, yet all belong; a pure-Python project nobody uses in Python work does not.
 2. **Active**: Commits within the last 12 months
-3. **Stable**: Production-ready, not alpha/beta/experimental
+3. **Stable**: Production-ready, not alpha/beta/experimental. A PyPI "Development Status" classifier alone does not decide this; judge by releases, documentation, and production use.
 4. **Documented**: Clear README with examples and use cases
 5. **Established**: Repository at least 1 month old
 
@@ -30,6 +30,8 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 **Dual-listing**: a tool may hold entries in multiple use cases, but only when it earns its slot in each independently. List the full entry in each home with identical lines; never a "see X above" note, since the website only renders list items. Description edits update every copy in the same commit. Each slot is audited on its own: dropping one home keeps the other, and dropping the tool entirely removes all copies in one commit. Dual-listing is a maintainer decision; a PR adding a second home for an existing entry is treated as a duplicate.
 
 **Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
+
+**Python versions**: missing support for the newest Python releases is not by itself grounds for removal while the entry still has a large user base; it can place the entry in the Second Tier instead.
 
 **Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
 
