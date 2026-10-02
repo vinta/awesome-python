@@ -1,41 +1,45 @@
-Plain assert statements and fixtures make pytest the Python testing framework for new code. Add Hypothesis for property-based tests, Playwright for browsers.
+pytest runs your unittest suites unchanged, so switching Python testing frameworks costs no rewrite. Hypothesis and Playwright tests run inside it too.
 
 How to choose:
 
-- Writing tests: pytest, plus Hypothesis for edge cases; Robot Framework for non-programmers
-- Tests across Python versions: tox, or Nox to configure them in Python
-- Browser tests: Playwright; Selenium or SeleniumBase for WebDriver suites
-- Load tests written in Python: Locust
-- Tests generated from an OpenAPI or GraphQL schema: Schemathesis
-- Mocking: unittest.mock; responses, RESPX, or VCR.py for HTTP; FreezeGun for time
-- Test objects: factory_boy for ORM models, Polyfactory for type hints
+- Unit and integration tests: pytest
+- Tests that generate their own inputs: Hypothesis
+- End-to-end browser tests: Playwright
+- Acceptance tests that non-programmers can read: Robot Framework
+- Testing across Python versions: tox, or Nox to configure it in Python
+- WebDriver tests on remote machines: Selenium, or SeleniumBase with waits and reports built in
+- Load tests written as Python code: Locust
+- API tests generated from an OpenAPI or GraphQL schema: Schemathesis
+- Replacing objects in a test: unittest.mock, or time-machine for the clock
+- Faking HTTP calls: responses for Requests, RESPX for HTTPX, VCR.py to record real traffic
+- Test objects: factory_boy for ORM models, Polyfactory for typed classes
 - Code coverage: Coverage.py
-- Fake data: Faker or Mimesis
+- Fake names and addresses: Faker, or Mimesis for speed
 
-pytest lets you write tests with [plain `assert` statements](https://docs.pytest.org/en/stable/) and shows you what failed. It also runs your unittest suites as they are, so you can [move an old suite over bit by bit](https://docs.pytest.org/en/stable/how-to/unittest.html). Share setup through [fixtures](https://docs.pytest.org/en/stable/how-to/fixtures.html): use `yield` fixtures for teardown, and put the ones several test modules need in `conftest.py`. For a new project, pytest's docs recommend a src layout and the [importlib import mode](https://docs.pytest.org/en/stable/explanation/goodpractices.html).
+Write pytest tests as plain functions with plain `assert` statements: [pytest's assertion introspection](https://docs.pytest.org/en/stable/getting-started.html) reports the intermediate values when one fails, so there are no assert methods to remember. Share setup through [fixtures](https://docs.pytest.org/en/stable/explanation/fixtures.html#improvements-over-xunit-style-setup-teardown-functions), which a test requests by name, instead of xUnit-style setup and teardown. pytest also [runs unittest-based suites](https://docs.pytest.org/en/stable/how-to/unittest.html), so you can move an old suite over a test at a time.
 
-Hypothesis adds property-based tests to pytest or unittest. You describe the inputs with a strategy passed to [`@given`](https://hypothesis.readthedocs.io/en/latest/quickstart.html), and Hypothesis picks which ones to try, including edge cases you didn't think of. It's [an addition to unit tests, not always a replacement](https://hypothesis.readthedocs.io/en/latest/tutorial/introduction.html): start with round trips like encode/decode, and with tests you already parametrize. Use the [most general strategy](https://hypothesis.readthedocs.io/en/latest/explanation/domain.html) your test should pass for.
+Hypothesis tests take a [`@given` decorator](https://hypothesis.readthedocs.io/en/latest/quickstart.html#write-your-first-test) with a strategy describing the inputs, and Hypothesis picks which inputs to try, edge cases included. They're still regular functions that pytest or unittest runs.
 
-Robot Framework is a [keyword-driven framework for acceptance testing](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html). Tests are tables of keywords, and you build higher-level keywords out of existing ones. That suits teams where people who don't write Python read or write the tests.
+Playwright's docs call [its pytest plugin](https://playwright.dev/python/docs/intro#installing-playwright-pytest) the recommended way to write end-to-end tests, and every test gets a fresh browser context. Playwright [waits for elements to be actionable](https://playwright.dev/python/docs/actionability) before each action, and its assertions wait for the expected condition. [Locate elements by role](https://playwright.dev/python/docs/locators#quick-guide) and other user-facing attributes, not CSS or XPath, which break as the DOM changes.
 
-tox and Nox both run your tests in separate virtual environments, one per Python version or task. Configure tox [in TOML](https://tox.wiki/en/latest/tutorial/getting-started.html), in `tox.toml` or `pyproject.toml`. It tests the installed package, not your checkout, so it [catches packaging mistakes](https://docs.pytest.org/en/stable/explanation/goodpractices.html). Nox is configured in Python, in a `noxfile.py`, and tox's own docs point you to it [if tox configuration is too limiting](https://tox.wiki/en/latest/explanation.html).
+Robot Framework writes test cases in a [tabular, keyword-driven syntax](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#why-robot-framework), builds higher-level keywords from existing ones, and reports results in HTML. Custom keyword libraries are plain Python. In [behavior-driven style](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#behavior-driven-style), a test case reads as a requirement stakeholders who don't code can follow.
 
-Playwright was [created for end-to-end testing](https://playwright.dev/python/docs/intro) and runs Chromium, Firefox, and WebKit. Write your tests with its pytest plugin, which gives each test its own browser context. Playwright [waits for elements to be ready](https://playwright.dev/python/docs/actionability) before each action, so you don't add waits yourself. Find elements [by role, text, or test id](https://playwright.dev/python/docs/locators) rather than CSS or XPath, which break when the page changes.
+tox and Nox both create a virtual environment per Python version or dependency set and run your tests in each. tox defines its environments in [a config file](https://tox.wiki/en/latest/tutorial/getting-started.html#creating-your-first-configuration). Nox is [configured in a `noxfile.py`](https://nox.thea.codes/en/stable/tutorial.html#writing-the-configuration-file), where each session is a Python function, so any logic your test matrix needs is ordinary code.
 
-Selenium drives real browsers through WebDriver, on your machine or on remote ones through Selenium Grid. Keep it for the WebDriver suites you already have. It [doesn't structure your test suite for you](https://www.selenium.dev/documentation/test_practices/), so run it under a test runner like pytest, and use [explicit waits](https://www.selenium.dev/documentation/webdriver/waits/) for the exact condition you need. SeleniumBase builds on Selenium's WebDriver APIs and [runs under pytest](https://github.com/seleniumbase/SeleniumBase), and its methods wait for elements that need time to load.
+Selenium drives browsers through WebDriver, a W3C standard, and [Selenium Grid](https://www.selenium.dev/documentation/overview/) runs those tests on other machines and platforms. Its guidelines model each page as a [page object](https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/) that makes no assertions, and use [explicit waits](https://www.selenium.dev/documentation/webdriver/waits/#explicit-waits) for the exact condition each step needs. [SeleniumBase](https://github.com/seleniumbase/SeleniumBase) builds on Selenium and runs under pytest: its methods wait for an element before acting, and failing tests save screenshots.
 
-For load tests, Selenium's docs [advise against using it](https://www.selenium.dev/documentation/test_practices/discouraged/performance_testing/); use Locust. You [write the tests in regular Python code](https://docs.locust.io/en/stable/what-is-locust.html): a `User` class with `@task` methods. When you need more load, [run one worker per CPU core](https://docs.locust.io/en/stable/running-distributed.html).
+A Locust test is [a Python program](https://docs.locust.io/en/stable/quickstart.html): an `HttpUser` class whose tasks make requests, so complex user flows are just code.
 
-Schemathesis generates property-based tests from your OpenAPI or GraphQL schema, using Hypothesis under the hood. Its docs [recommend the CLI for most users](https://schemathesis.readthedocs.io/en/stable/faq/), since the pytest integration has fewer features.
+Schemathesis reads your OpenAPI or GraphQL schema and generates property-based tests from it, with no per-endpoint tests to maintain. Its FAQ [recommends the CLI](https://schemathesis.readthedocs.io/en/stable/faq/#how-should-i-run-schemathesis) for most users, with a pytest integration for existing suites.
 
-unittest.mock ships with Python. [Patch where an object is looked up](https://docs.python.org/3/library/unittest.mock.html), not where it's defined, and add `autospec=True` so your tests fail when the real API changes. For code you own, pytest's docs suggest you [pass dependencies in](https://docs.pytest.org/en/stable/how-to/monkeypatch.html) rather than patch them.
+With unittest.mock, [patch a name where it's looked up](https://docs.python.org/3/library/unittest.mock.html#where-to-patch), which isn't always where it's defined. [Autospec](https://docs.python.org/3/library/unittest.mock.html#autospeccing) your mocks, so a test fails when your code calls an API the real object lacks. For the clock, time-machine [mocks time functions everywhere they're referenced](https://time-machine.readthedocs.io/en/latest/comparison.html), where a patch only reaches the import location it targets.
 
-For HTTP, pick the mock that matches your client: responses for requests, and RESPX for HTTPX. Both raise an error on requests you didn't mock. VCR.py records real responses to a cassette file and replays them, with many clients including both. [Filter out credentials](https://vcrpy.readthedocs.io/en/latest/advanced.html) before you commit cassettes. For time, FreezeGun [freezes `datetime` and `time`](https://github.com/spulec/freezegun) at the moment you choose.
+For HTTP, pick by client. responses mocks Requests calls in a test [wrapped in `@responses.activate`](https://github.com/getsentry/responses#basics), and RESPX mocks HTTPX, with a [`respx_mock` fixture](https://lundberg.github.io/respx/) for pytest. VCR.py [records real HTTP interactions](https://vcrpy.readthedocs.io/en/latest/) to a cassette file on the first run and replays them after, across many client libraries.
 
-factory_boy [replaces static fixtures with factories](https://factoryboy.readthedocs.io/en/stable/) that set only the fields a test cares about, and works with Django, SQLAlchemy, and MongoDB models. Polyfactory [builds objects from type hints](https://polyfactory.litestar.dev/latest/): dataclasses, TypedDicts, Pydantic models, and more.
+factory_boy replaces static fixtures with factories, where a test declares only the fields it cares about. It has [base classes for Django, SQLAlchemy, and MongoEngine](https://factoryboy.readthedocs.io/en/stable/#orm-integration) models. Polyfactory instead [reads the type hints](https://polyfactory.litestar.dev/latest/getting-started.html#example) on dataclasses, TypedDicts, Pydantic models, and msgspec Structs to generate the data.
 
-For the data itself, Faker [generates localized fake data](https://faker.readthedocs.io/en/master/) and comes with a pytest fixture; factory_boy uses it too. Mimesis is [fully typed and generates data from schemas](https://mimesis.name/latest/about.html), in many languages.
+Run your suite under Coverage.py with [`coverage run -m pytest`](https://coverage.readthedocs.io/en/latest/#quick-start), then `coverage report` prints the results. For most purposes, you need no pytest plugin.
 
-Coverage.py measures which lines your tests run. Run pytest under it with [`coverage run -m pytest`](https://coverage.readthedocs.io/en/latest/), which its docs say is enough for most purposes, and include your tests in the measurement. It measures lines by default; add [`--branch`](https://coverage.readthedocs.io/en/latest/branch.html) to see which branches never ran.
+Faker generates names, addresses, and other data [per locale](https://faker.readthedocs.io/en/master/#localization). Mimesis covers the same ground, fully typed, and [its benchmarks](https://mimesis.name/latest/benchmarks.html) show it faster than Faker.
 
-Write each test so it [runs in any order](https://www.selenium.dev/documentation/test_practices/discouraged/test_dependency/), without relying on other tests. A [flaky test](https://docs.pytest.org/en/stable/explanation/flaky.html) usually means state the test doesn't control, and random data is one such state: seed Faker, Mimesis, factory_boy, and Polyfactory so a [failing build reproduces](https://factoryboy.readthedocs.io/en/stable/).
+Random test data makes a failing build hard to reproduce, so seed it: [Faker](https://faker.readthedocs.io/en/master/#seeding-the-generator), [factory_boy](https://factoryboy.readthedocs.io/en/stable/#reproducible-random-values), and [Mimesis](https://mimesis.name/latest/random_and_seed.html) all take a seed. For more tools, see [awesome-python-testing](https://github.com/cleder/awesome-python-testing).
