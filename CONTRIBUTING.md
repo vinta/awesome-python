@@ -98,7 +98,7 @@ Adding sections or subcategories is maintainer-only (see Admission). For maintai
 3. Add the section title to the Table of Contents under its group
 4. Order entries per Entry Ordering above
 
-Name a section's catch-all subcategory General, never the section's own name: a subcategory named like its section competes with the section page in search results.
+A subcategory never repeats its section's name: one named like its section competes with the section page in search results. Name the section's catch-all or main use case General instead.
 
 ## Review Process
 
