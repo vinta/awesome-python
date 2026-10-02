@@ -1143,6 +1143,7 @@ _Tools for auditing dependencies against known vulnerabilities._
 
 _Libraries for application-layer web security._
 
+- [nh3](https://github.com/messense/nh3) - Python binding to the ammonia HTML sanitizer, a fast replacement for bleach.
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Other**
