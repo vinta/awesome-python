@@ -1084,9 +1084,8 @@ _Libraries for package and dependency management._
 
 _Local PyPI repository servers, proxies, and mirrors._
 
-- [bandersnatch](https://github.com/pypa/bandersnatch/) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 - [devpi](https://github.com/devpi/devpi) - PyPI server and packaging/testing/release tool.
-- [warehouse](https://github.com/pypi/warehouse) - The software that powers PyPI.
+- [bandersnatch](https://github.com/pypa/bandersnatch/) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 
 ### Distribution
 
