@@ -726,7 +726,7 @@ _Software and libraries for DevOps._
 
 - Cloud Providers
   - [boto3](https://github.com/boto/boto3) - Python interface to Amazon Web Services.
-  - [awscli](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services.
+  - [awscli](https://github.com/aws/aws-cli) - Universal Command Line Interface for Amazon Web Services; the PyPI package is v1, in maintenance mode, while v2 ships as AWS's bundled installer.
   - [azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python) - Microsoft Azure SDK for Python, published as per-service packages.
   - [google-cloud-python](https://github.com/googleapis/google-cloud-python) - Google Cloud client libraries for Python, published as per-service packages.
 - Configuration Management
@@ -745,7 +745,6 @@ _Software and libraries for DevOps._
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 - Other
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
-  - [chaostoolkit](https://github.com/chaostoolkit/chaostoolkit) - A Chaos Engineering toolkit & Orchestration for Developers.
 
 ### Distributed Computing
 
