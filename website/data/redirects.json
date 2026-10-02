@@ -3,6 +3,7 @@
   "/categories/ai-and-agents/pre-trained-models-and-inference/": "/categories/ai-and-agents/pre-trained-models/",
   "/categories/cli-tools/productivity-tools/": "/categories/cli-tools/",
   "/categories/code-analysis/code-linters/": "/categories/code-analysis/linters-and-formatters/",
+  "/categories/code-analysis/type-annotations-generators/": "/categories/code-analysis/",
   "/categories/data-analysis/financial-data/": "/categories/data-ingestion-etl/financial-data/",
   "/categories/distributed-computing/batch-processing/": "/categories/distributed-computing/",
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",
