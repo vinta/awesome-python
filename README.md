@@ -993,7 +993,7 @@ _Awesome game development libraries._
   - [pyglet](https://github.com/pyglet/pyglet) - A cross-platform windowing and multimedia library for Python.
   - [pygame-ce](https://github.com/pygame-community/pygame-ce) - An actively developed drop-in replacement with new features and performance improvements ([pygame](https://github.com/pygame/pygame) fork).
   - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
-  - [arcade](https://github.com/pythonarcade/arcade) - Arcade is a modern Python framework for crafting games with compelling graphics and sound.
+  - [arcade](https://github.com/pythonarcade/arcade) - An easy-to-use library for creating 2D arcade games.
 - Visual Novels
   - [renpy](https://github.com/renpy/renpy) - A Visual Novel engine.
 
