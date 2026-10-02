@@ -24,6 +24,7 @@ ANCHOR_LINK_ATTRS_RE = re.compile(r'href="(#[^"]*)" target="_blank" rel="noopene
 SITE_URL = "https://awesome-python.com/"
 SITEMAP_URL = f"{SITE_URL}sitemap.xml"
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+PLURAL_NOUNS = {"Clients", "Drivers", "Engines", "Files", "Frameworks", "Generators", "Implementations", "Panels", "Queues", "Repositories", "Schedulers", "Servers", "Stdlib", "Tools"}
 
 BUILTIN_FILTER = "Stdlib"
 BUILTIN_SLUG = "built-in"
@@ -230,7 +231,9 @@ def category_meta_title(name: str, parent_name: str | None = None) -> str:
         if len(title) <= 60:
             return title
         return f"{name} - Awesome Python"
-    title = f"Python {name} Libraries - Awesome Python"
+    # Names ending in one of these nouns already say what the entries are.
+    noun = "" if name.rsplit(" ", 1)[-1] in PLURAL_NOUNS else " Libraries"
+    title = f"Python {name}{noun} - Awesome Python"
     if len(title) <= 60:
         return title
     return f"{name} - Awesome Python"
