@@ -703,6 +703,7 @@ _Libraries for debugging code._
 _Task runners and software build tools. If you're looking for Python packaging/build tools, see [Package Management](#package-management)._
 
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
+- [poethepoet](https://github.com/nat-n/poethepoet) - A task runner that defines tasks in pyproject.toml and works with poetry or uv.
 - [scons](https://github.com/SCons/scons) - A software construction tool.
 - [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 
