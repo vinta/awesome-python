@@ -1,26 +1,20 @@
-Offering one Requests-style API for sync and async code, HTTPX spares you a second Python HTTP client. Requests suits sync scripts, aiohttp busy asyncio apps.
+Requests makes synchronous HTTP calls simple. A Python HTTP client for async code or HTTP/2 means httpx2, whose API stays requests-compatible.
 
 How to choose:
 
-- Sync and async code from one API, or HTTP/2: HTTPX
-- Sync code with the simplest API: Requests
-- An asyncio app with many concurrent requests, WebSockets, or its own HTTP server: aiohttp
-- Connection pools and retries in your own hands, one layer below Requests: urllib3
-- HTTPX's API, verifying TLS with your OS's certificates: HTTPX2
+- Scripts and other synchronous code: Requests
+- One API for sync and async code, or HTTP/2: httpx2
+- Code already on HTTPX: httpx2, the same API under a new name
+- An asyncio app making many requests at once: aiohttp
+- Direct control over connection pools and retries: urllib3
 - Building and editing URLs: yarl
 
-HTTPX has a [broadly Requests-compatible API](https://www.python-httpx.org/#features), sync by default with async when you need it, and runs on [asyncio or Trio](https://www.python-httpx.org/async/#supported-async-environments). Coming from Requests, [`httpx.Client` takes the place of `requests.Session`](https://www.python-httpx.org/compatibility/#client-instances). HTTP/2 is opt-in: install `httpx[http2]` and pass [`http2=True`](https://www.python-httpx.org/http2/#enabling-http2) to the client, which pays off most when you send lots of concurrent async requests.
+Requests is an [HTTP library built for human beings](https://requests.readthedocs.io/en/latest/), with urllib3 pooling connections underneath. Nearly every call in production code should [pass a timeout](https://requests.readthedocs.io/en/latest/user/quickstart/#timeouts), since requests never time out unless you set one. For several calls to the same host, make them through a [Session used as a context manager](https://requests.readthedocs.io/en/latest/user/advanced/#session-objects): it reuses the TCP connection and closes when the block exits.
 
-Python's own docs [recommend Requests](https://docs.python.org/3/library/urllib.request.html) for a higher-level HTTP client. It's [sync only](https://requests.readthedocs.io/en/latest/user/advanced/#blocking-or-non-blocking), and its docs point to HTTPX, among others, for async.
+httpx2 has a [broadly requests-compatible API](https://pydantic.dev/docs/httpx2/get-started/) in both sync and async code, over HTTP/1.1 or HTTP/2. It's a fork of HTTPX with the [same public API](https://pydantic.dev/docs/httpx2/get-started/migration/#in-a-hurry) under a new name. Beyond one-off scripts, send requests through a [Client used as a context manager](https://pydantic.dev/docs/httpx2/advanced/clients/#why-use-a-client), which pools connections where the top-level functions open a new one per request. In async code, share [one AsyncClient](https://pydantic.dev/docs/httpx2/guides/async/#opening-and-closing-clients) instead of opening one inside a loop.
 
-aiohttp is an async client and server for asyncio, with [WebSockets on both sides](https://docs.aiohttp.org/en/stable/#key-features) and middleware for the client. Its API is wordier than Requests' by design, to [make the most of non-blocking operations](https://docs.aiohttp.org/en/stable/http_request_lifecycle.html#why-is-aiohttp-client-api-that-way). Each `async with` or `await` gives the event loop a chance to switch to other work. Install `aiohttp[speedups]` to get [aiodns for faster DNS resolving](https://docs.aiohttp.org/en/stable/#library-installation), which its docs highly recommend.
+aiohttp is async only, and its docs call that choice a trade of [more verbosity for better performance](https://docs.aiohttp.org/en/latest/http_request_lifecycle.html#using-a-session-as-a-best-practice). Create [one ClientSession per application](https://docs.aiohttp.org/en/latest/client_quickstart.html#make-a-request) and reuse it for every request, since each session holds its own connection pool.
 
-urllib3 is what gives Requests its [connection pooling](https://requests.readthedocs.io/en/latest/). Use it directly when you want the pool and the retry policy in your own code. It can [retry idempotent requests on its own](https://urllib3.readthedocs.io/en/stable/user-guide.html#retrying-requests): set the policy once on the `PoolManager` to cover every request.
+urllib3 is the layer Requests runs on, with [thread safety, connection pooling, and retries](https://urllib3.readthedocs.io/en/latest/) built in. Make requests through a [PoolManager you create](https://urllib3.readthedocs.io/en/latest/user-guide.html#making-requests): the top-level `urllib3.request()` uses a module-global one, so its side effects can reach other libraries that call it too.
 
-HTTPX2 has [the same public API as HTTPX](https://pydantic.dev/docs/httpx2/get-started/migration/#in-a-hurry) under a new name, so switching means renaming the dependency and the import. It [verifies TLS with your operating system's trust store](https://pydantic.dev/docs/httpx2/get-started/migration/#behavior-differences) instead of a bundled certificate list. The two packages [install side by side](https://pydantic.dev/docs/httpx2/get-started/migration/#you-can-have-both-installed), but their objects don't mix: when a library takes a client, [build it from the package that library uses](https://pydantic.dev/docs/httpx2/get-started/migration/#but-objects-dont-cross-the-boundary).
-
-yarl's `URL` is [immutable](https://yarl.aio-libs.org/en/latest/#introduction): every change returns a new URL, and strings you pass in get percent-encoded for you. Build paths with `/` and queries with `%`. Its docs pick immutability so you can [hand a URL to other code](https://yarl.aio-libs.org/en/latest/#comparison-with-other-url-libraries) without it being changed under you. aiohttp's request methods [take a yarl `URL`](https://docs.aiohttp.org/en/stable/client_quickstart.html#make-a-request) as well as a string.
-
-Whichever client you pick, create one session object and reuse it, since it holds the connection pool: Requests' `Session`, HTTPX's `Client` or `AsyncClient`, aiohttp's `ClientSession`, urllib3's `PoolManager`. [Don't create one per request](https://docs.aiohttp.org/en/stable/client_quickstart.html#make-a-request); make one per application and pass it around. Keep the shortcut functions for [one-off scripts](https://www.python-httpx.org/advanced/clients/#why-use-a-client): HTTPX's top-level API opens a new connection for every request, and `urllib3.request()` shares one global pool with your dependencies.
-
-Set timeouts, too. Requests [never times out unless you pass `timeout`](https://requests.readthedocs.io/en/latest/user/quickstart/#timeouts), and its docs say nearly all production code should. urllib3 [takes one on the `PoolManager`](https://urllib3.readthedocs.io/en/stable/user-guide.html#using-timeouts) to cover every request, and HTTPX [enforces timeouts by default](https://www.python-httpx.org/advanced/timeouts/).
+yarl's [URL objects are immutable](https://yarl.aio-libs.org/en/latest/#introduction): every change returns a new URL, and strings you pass in get encoded for you. aiohttp's requests [take a yarl URL](https://docs.aiohttp.org/en/latest/client_quickstart.html#make-a-request) as well as a plain string.
