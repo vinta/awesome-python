@@ -540,6 +540,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [graphify](https://github.com/Graphify-Labs/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
 - Dashboards and Apps
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
+  - [dash](https://github.com/plotly/dash) - A framework for building data apps and dashboards in pure Python, built on Plotly.
   - [gradio](https://github.com/gradio-app/gradio) - Build and share machine learning apps, all in Python.
 
 ### Geolocation
