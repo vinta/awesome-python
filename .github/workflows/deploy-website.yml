@@ -24,6 +24,9 @@ jobs:
       url: https://awesome-python.com/
     steps:
       - uses: actions/checkout@v7
+        with:
+          # build.py reads each page's last change from git history for the sitemap's lastmod
+          fetch-depth: 0
 
       - name: Install uv
         uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
