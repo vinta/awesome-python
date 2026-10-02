@@ -8,7 +8,7 @@ All submissions must satisfy **ALL** of these:
 
 1. **Serves Python Developers**: Python developers use it in their Python work. Implementation language and packaging are irrelevant — uv and ty are written in Rust, and agent skill packs are markdown, yet all belong; a pure-Python project nobody uses in Python work does not.
 2. **Active**: Commits within the last 12 months
-3. **Stable**: Production-ready, not alpha/beta/experimental
+3. **Stable**: Production-ready, not alpha/beta/experimental. A PyPI "Development Status" classifier alone does not decide this; judge by releases, documentation, and production use.
 4. **Documented**: Clear README with examples and use cases
 5. **Established**: Repository at least 1 month old
 
