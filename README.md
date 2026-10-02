@@ -566,8 +566,8 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - Statistics
   - [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
 - Biology and Chemistry
-  - [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
   - [rdkit](https://github.com/rdkit/rdkit) - Cheminformatics and Machine Learning Software.
+  - [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
 - Physics and Engineering
   - [pint](https://github.com/hgrecco/pint) - Operate and manipulate physical quantities with units and dimensional analysis.
   - [astropy](https://github.com/astropy/astropy) - A community Python library for Astronomy.
