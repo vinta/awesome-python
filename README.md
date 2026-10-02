@@ -750,9 +750,9 @@ _Software and libraries for DevOps._
 
 _Frameworks and libraries for Distributed Computing._
 
-- [ray](https://github.com/ray-project/ray/) - A unified framework for scaling AI and Python applications.
 - [pyspark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
 - [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
+- [ray](https://github.com/ray-project/ray/) - A unified framework for scaling AI and Python applications.
 - [joblib](https://github.com/joblib/joblib) - Parallel computing and disk-based caching for Python functions.
 - [mpi4py](https://github.com/mpi4py/mpi4py) - Python bindings for MPI.
 
@@ -783,9 +783,9 @@ _Libraries for scheduling jobs._
   - [apscheduler](https://github.com/agronholm/apscheduler) - A light but powerful in-process task scheduler that lets you schedule functions.
   - [schedule](https://github.com/dbader/schedule) - Python job scheduling for humans.
 - Workflow Orchestration
+  - [dagster](https://github.com/dagster-io/dagster) - An orchestration platform for the development, production, and observation of data assets.
   - [apache-airflow](https://github.com/apache/airflow) - Airflow is a platform to programmatically author, schedule and monitor workflows.
   - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
-  - [dagster](https://github.com/dagster-io/dagster) - An orchestration platform for the development, production, and observation of data assets.
 
 ### Logging
 
@@ -798,7 +798,7 @@ _Libraries for generating and working with logs._
 
 ### Network Virtualization
 
-_Tools and libraries for Virtual Networking and SDN (Software Defined Networking)._
+_Tools and libraries for packet manipulation and network device automation._
 
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
 - [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
