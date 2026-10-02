@@ -972,11 +972,10 @@ _Libraries for manipulating images._
 _Libraries for manipulating audio, video, and their metadata._
 
 - Audio
-  - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
   - [librosa](https://github.com/librosa/librosa) - Python library for audio and music analysis.
+  - [pydub](https://github.com/jiaaro/pydub) - Manipulate audio with a simple and easy high level interface.
 - Video
   - [moviepy](https://github.com/Zulko/moviepy) - A module for script-based movie editing with many formats, including animated GIFs.
-  - [vidgear](https://github.com/abhiTronix/vidgear) - A high-performance, cross-platform, multi-threaded video processing framework.
 - Metadata
   - [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
   - [tinytag](https://github.com/tinytag/tinytag) - A library for reading audio file metadata of MP3, MP4, WAV, OGG, FLAC, WMA, and AIFF files.
