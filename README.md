@@ -612,7 +612,7 @@ _Python implementation of data structures, algorithms and design patterns. Also 
 _Interactive Python interpreters (REPL)._
 
 - [ipython](https://github.com/ipython/ipython) - A powerful interactive Python shell, and the kernel behind Jupyter notebooks.
-- [jupyter](https://github.com/jupyter/notebook) - A web-based notebook environment for interactive computing.
+- [notebook](https://github.com/jupyter/notebook) - A web-based notebook environment for interactive computing.
   - [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter)
 - [marimo](https://github.com/marimo-team/marimo) - Transform data and train models, feels like a next-gen notebook, stored as Git-friendly Python.
 - [ptpython](https://github.com/prompt-toolkit/ptpython) - Advanced Python REPL built on top of the [python-prompt-toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit).
@@ -671,7 +671,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [respx](https://github.com/lundberg/respx) - Mock HTTPX with awesome request patterns and response side effects.
   - [time-machine](https://github.com/adamchainz/time-machine) - Travel through time in your tests by mocking the current time at the C level.
 - Object Factories
-  - [factory_boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
+  - [factory-boy](https://github.com/FactoryBoy/factory_boy) - A test fixtures replacement for Python.
   - [polyfactory](https://github.com/litestar-org/polyfactory) - A mock data generation library based on type hints (continuation of `pydantic-factories`).
 - Code Coverage
   - [coverage](https://github.com/coveragepy/coveragepy) - Code coverage measurement.
@@ -852,9 +852,9 @@ _Useful CLI-based tools._
 _Libraries for working with graphical user interface applications._
 
 - Desktop
-  - [pygobject](https://github.com/GNOME/pygobject) - Python Bindings for GLib/GObject/GIO/GTK.
+  - [PyGObject](https://github.com/GNOME/pygobject) - Python Bindings for GLib/GObject/GIO/GTK.
   - [dearpygui](https://github.com/hoffstadt/DearPyGui) - A simple GPU-accelerated Python GUI framework.
-  - [kivy](https://github.com/kivy/kivy) - An open-source framework for cross-platform GUI apps on desktop, mobile, and embedded platforms.
+  - [Kivy](https://github.com/kivy/kivy) - An open-source framework for cross-platform GUI apps on desktop, mobile, and embedded platforms.
   - [wxPython](https://github.com/wxWidgets/Phoenix) - A cross-platform GUI toolkit that wraps the wxWidgets C++ library.
   - [toga](https://github.com/beeware/toga) - A Python native, OS native GUI toolkit.
 - Qt
