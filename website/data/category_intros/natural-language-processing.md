@@ -5,6 +5,7 @@ How to choose:
 - Production NLP pipelines: spaCy
 - Learning NLP, or lexical resources like WordNet: NLTK
 - Many languages, or CoreNLP from Python: Stanza
+- Topic models and word embeddings: gensim
 - Chinese word segmentation: jieba
 - Chinese characters to pinyin: pypinyin
 - Spaces between CJK text and letters or digits: pangu.py
