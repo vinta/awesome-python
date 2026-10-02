@@ -817,8 +817,8 @@ _Libraries for building command-line applications._
   - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
 - Terminal Rendering
-  - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
   - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
+  - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
   - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
   - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of Progress Bar, with real-time throughput, eta and very cool animations.
 - TUI Frameworks
