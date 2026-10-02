@@ -7,5 +7,6 @@
   "/categories/data-analysis/financial-data/": "/categories/data-ingestion-etl/financial-data/",
   "/categories/distributed-computing/batch-processing/": "/categories/distributed-computing/",
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",
+  "/categories/gui-development/wrappers/": "/categories/gui-development/",
   "/categories/web-servers/rpc/": "/categories/web-apis/rpc/"
 }
