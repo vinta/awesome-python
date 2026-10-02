@@ -896,7 +896,6 @@ _Libraries for parsing and manipulating plain texts._
   - [unidecode](https://github.com/avian2/unidecode) - ASCII transliterations of Unicode text.
 - Unique identifiers
   - [shortuuid](https://github.com/skorokithakis/shortuuid) - A generator library for concise, unambiguous and URL-safe UUIDs.
-  - [sqids](https://github.com/sqids/sqids-python) - A library for generating short unique IDs from numbers.
 
 ### HTML Manipulation
 
