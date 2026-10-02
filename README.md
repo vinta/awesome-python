@@ -238,7 +238,7 @@ _Libraries for image and video analysis, object detection, and OCR._
   - [kornia](https://github.com/kornia/kornia/) - Open Source Differentiable Computer Vision Library for PyTorch.
   - [fiftyone](https://github.com/voxel51/fiftyone) - The open-source tool for building high-quality datasets and computer vision models.
 - OCR
-  - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for the [Tesseract OCR](https://github.com/tesseract-ocr) engine.
+  - [pytesseract](https://github.com/madmaze/pytesseract) - A wrapper for the [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) engine.
   - [easyocr](https://github.com/JaidedAI/EasyOCR) - Ready-to-use OCR with 80+ languages supported.
   - [paddleocr](https://github.com/PaddlePaddle/PaddleOCR) - Multilingual OCR and document parsing toolkit based on PaddlePaddle.
 
