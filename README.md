@@ -269,6 +269,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
   - [tornado](https://github.com/tornadoweb/tornado) - A web framework and asynchronous networking library.
   - [litestar](https://github.com/litestar-org/litestar) - Production-ready, capable and extensible ASGI Web framework.
   - [reflex](https://github.com/reflex-dev/reflex) - A framework for building reactive, full-stack web applications entirely with Python.
+  - [ikarem](https://github.com/nishantXnova/IKAREM) - Zero-dependency Python ASGI framework with compiled DI, JWT auth, OpenAPI, MCP tools, queues and NISH responses.
 
 ### Web APIs
 
