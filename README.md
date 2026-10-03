@@ -501,6 +501,7 @@ _Libraries for data analysis._
 
 - [pandas](https://github.com/pandas-dev/pandas) - A library providing high-performance, easy-to-use data structures and data analysis tools.
 - [polars](https://github.com/pola-rs/polars) - A fast DataFrame library implemented in Rust with a Python API.
+- [cloudsealed-jit](https://github.com/cloudsealed/JIT-Optimization-Engine) - JIT-compiled streaming anomaly detection and MAD profiling for FinOps and telemetry pipelines. LLVM under the hood via Numba, exposed as high-level primitives.
 - [ibis-framework](https://github.com/ibis-project/ibis) - A portable Python dataframe library with a single API for 20+ backends.
 
 ### Data Ingestion / ETL
