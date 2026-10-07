@@ -1083,7 +1083,7 @@ class TestBuild:
         stub = (site / "categories" / "old-widgets" / "index.html").read_text(encoding="utf-8")
         assert '<link rel="canonical" href="https://awesome-python.com/categories/widgets/">' in stub
         assert '<meta http-equiv="refresh" content="0; url=https://awesome-python.com/categories/widgets/">' in stub
-        assert '<meta name="robots" content="noindex">' in stub
+        assert "noindex" not in stub
         assert "old-widgets" not in (site / "sitemap.xml").read_text(encoding="utf-8")
 
     def test_build_renders_category_intro_and_uses_lead_as_meta_description(self, tmp_path):
