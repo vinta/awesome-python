@@ -6,6 +6,8 @@ An opinionated guide to the best Python frameworks, libraries, and tools.
 
 ## **Sponsors**
 
+- [iPulse AI](https://ipulseai.com) - Open Agentic Investment Research Platform. Inspect deep multi-agent market forecasts and stock picks.
+
 > The **#10 most-starred repo on GitHub**. Put your product in front of Python developers. [Become a sponsor](SPONSORSHIP.md).
 
 ## Categories
