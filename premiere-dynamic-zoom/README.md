@@ -30,21 +30,30 @@ the boxes, and a *constant-speed* zoom mode.
 > Premiere's CEP/ExtendScript support was only planned through September 2026,
 > so this is a UXP plugin, not a CEP extension.
 
-## Install
+## Install (Mac or Windows)
 
-### Option A: load it for development (quickest)
+### Easiest: the ready-made installer
 
-1. Install and open **UXP Developer Tool**, and click **Enable** when it asks for Developer Mode.
+1. Download **[DynamicZoom.ccx](https://github.com/ArtyzAudio/awesome-python/raw/claude/amazing-faraday-d3odj2/premiere-dynamic-zoom/dist/DynamicZoom.ccx)** (it is in `dist/`).
+2. Quit Premiere Pro.
+3. Double-click `DynamicZoom.ccx`. The Creative Cloud app opens and warns that the plugin
+   is not from the Marketplace. Click **Install**.
+4. Start Premiere Pro and open **Window › UXP Plugins › Dynamic Zoom**.
+
+To uninstall it: Creative Cloud app › **Stock & Marketplace › Plugins › Manage Plugins**, then **••• › Uninstall**.
+
+If double-clicking does nothing, install it from Terminal (Mac):
+
+```bash
+"/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/macOS/UnifiedPluginInstallerAgent" --install ~/Downloads/DynamicZoom.ccx
+```
+
+### For development: UXP Developer Tool
+
+1. Install **UXP Developer Tool** from the Creative Cloud app and click **Enable** when it asks for Developer Mode.
 2. Start Premiere Pro.
-3. In UDT click **Add Plugin…** and pick `premiere-dynamic-zoom/plugin/manifest.json`.
-4. In the plugin's **⋯** menu click **Load**.
-5. In Premiere open **Window › UXP Plugins › Dynamic Zoom**.
-
-### Option B: install it permanently (.ccx)
-
-1. In UDT, open the plugin's **⋯** menu and choose **Package**. You get a `.ccx` file.
-2. Double-click the `.ccx` file. The Creative Cloud app installs it.
-3. In Premiere open **Window › UXP Plugins › Dynamic Zoom**.
+3. In UDT click **Add Plugin…** and pick `premiere-dynamic-zoom/plugin/manifest.json`, then **••• › Load**.
+4. After editing the code, rebuild the installer with `npm run package`, or use UDT's **••• › Package**.
 
 ## Use
 
