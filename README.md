@@ -817,7 +817,7 @@ _Libraries for building command-line applications._
   - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click.
   - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
-  - [fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
+  - [cyclopts](https://github.com/BrianPugh/cyclopts) - Build CLIs from type-hinted functions, with docstring-based help.
 - Terminal Rendering
   - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
