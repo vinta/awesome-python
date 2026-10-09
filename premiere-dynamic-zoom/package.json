@@ -1,0 +1,12 @@
+{
+  "name": "premiere-dynamic-zoom",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DaVinci Resolve-style Dynamic Zoom panel for Adobe Premiere Pro (UXP plugin)",
+  "scripts": {
+    "test": "node --test \"test/*.test.js\""
+  },
+  "engines": {
+    "node": ">=21"
+  }
+}

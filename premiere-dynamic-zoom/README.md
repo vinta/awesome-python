@@ -1,0 +1,121 @@
+# Dynamic Zoom for Premiere Pro
+
+A UXP panel for **Adobe Premiere Pro 2026 (v26.x)** that does what **Dynamic Zoom**
+does in DaVinci Resolve. You set a green **START** box and a red **END** box over
+the frame, pick an ease, and the selected clips smoothly push in, pull out, or pan
+from one box to the other over their full length.
+
+It writes ordinary **Motion › Position / Scale keyframes**, so the result renders
+natively, exports anywhere, and can still be edited in Effect Controls.
+
+| Resolve                        | This panel                                    |
+| ------------------------------ | --------------------------------------------- |
+| Green / red boxes in viewer    | Green START / red END boxes in the panel viewer (drag, resize, wheel-zoom) |
+| Dynamic Zoom Ease              | Linear · Ease In · Ease Out · Ease In and Out |
+| Swap                           | Swap                                          |
+| Reset                          | Reset                                         |
+| Applies to the clip's duration | First frame → last frame of each selected clip |
+
+Extras: presets (Zoom In/Out, Punch In, pans, Ken Burns), numeric Zoom/X/Y
+fields, live preview of the move, "Grab Frame" to show the real picture behind
+the boxes, and a *constant-speed* zoom mode.
+
+---
+
+## Requirements
+
+* Premiere Pro **25.6 or later** (UXP plugins became official in 25.6; built for 26.0)
+* [UXP Developer Tool](https://developer.adobe.com/premiere-pro/uxp/introduction/essentials/dev-tools/) **2.2+** (from the Creative Cloud app) to load or package the plugin
+
+> Premiere's CEP/ExtendScript support was only planned through September 2026,
+> so this is a UXP plugin, not a CEP extension.
+
+## Install
+
+### Option A: load it for development (quickest)
+
+1. Install and open **UXP Developer Tool**, and click **Enable** when it asks for Developer Mode.
+2. Start Premiere Pro.
+3. In UDT click **Add Plugin…** and pick `premiere-dynamic-zoom/plugin/manifest.json`.
+4. In the plugin's **⋯** menu click **Load**.
+5. In Premiere open **Window › UXP Plugins › Dynamic Zoom**.
+
+### Option B: install it permanently (.ccx)
+
+1. In UDT, open the plugin's **⋯** menu and choose **Package**. You get a `.ccx` file.
+2. Double-click the `.ccx` file. The Creative Cloud app installs it.
+3. In Premiere open **Window › UXP Plugins › Dynamic Zoom**.
+
+## Use
+
+1. Select one or more clips in the Timeline. Linked audio is ignored.
+2. *(Optional)* Put the playhead on the clip and click **Grab Frame** to show that frame behind the boxes.
+3. Set the boxes:
+   * **Drag** a box to move it, **drag a corner** to resize it (the opposite corner stays put), or **scroll** over a box to zoom it about its centre.
+   * Or type **Zoom %**, **X %**, **Y %** (the box centre, as a percentage of the frame).
+   * Or pick a **Preset**.
+4. Pick **Dynamic Zoom Ease** and click **Preview** to see the move.
+5. Click **Apply to Selected Clips**. Undo with Ctrl/Cmd+Z.
+6. **Remove** deletes the zoom keyframes and puts back the clip's original Position/Scale.
+
+You can re-apply as often as you like. The panel remembers each clip's original
+framing, so applying again replaces the previous zoom instead of stacking on top of it.
+
+### Box semantics
+
+The boxes are drawn on the clip **as it currently looks** (its un-animated Motion
+settings = 100 %). The START box fills the screen on the first frame and the END
+box fills it on the last frame, exactly like Resolve. A box smaller than the frame
+zooms in. A box larger than the frame zooms out and needs
+*Advanced › Keep boxes inside the frame* turned off. Expect black edges in that case.
+
+### Advanced
+
+| Option | What it does |
+| ------ | ------------ |
+| **Zoom speed** | *Linear* interpolates the boxes linearly, like Resolve. Zoom-ins appear to accelerate. *Constant* interpolates the zoom geometrically so the speed looks even. The point being zoomed into stays perfectly still. |
+| **Keyframe every** | Eased moves (and any zoom) are baked as linear keyframes every N frames, so the ease is reproduced exactly. 1 = frame-accurate; 2 (default) is visually identical and lighter. A linear pan with no size change uses just 2 keyframes. |
+| **Keyframe time base** | Premiere stores effect keyframes in source-media time (in point + offset). Leave this on *Source media*. Switch to *Clip start* only if the keys land in the wrong place on your build. |
+| **Keep boxes inside the frame** | Stops the boxes from leaving the frame, so no black edges appear (assuming the clip fills the frame). |
+
+## How it works
+
+All maths runs in normalized frame space, the same space Premiere's UXP API uses
+for Motion › Position (the frame centre is `[0.5, 0.5]`). A box is `{cx, cy, size}`.
+To show box *r* full-screen, the panel applies the map `q → (q − c) / size + 0.5`
+to the whole picture, which in Motion terms is:
+
+```
+position = (basePosition − c) / size + 0.5
+scale    = baseScale / size            (and Scale Width, if Uniform Scale is off)
+```
+
+Rotation and Anchor Point are untouched, so rotated or re-anchored clips work too.
+Position is not linear in time while the size changes. That is why zooms are
+sampled into keyframes and not left to Premiere's two-keyframe interpolation,
+which would make the image drift sideways during the zoom.
+
+Code layout:
+
+```
+plugin/
+  manifest.json        UXP manifest (panel "Dynamic Zoom", Premiere ≥ 25.6)
+  index.html/.js       panel UI wiring
+  styles.css
+  src/zoomMath.js      easing, box interpolation, Motion mapping, keyframe timing (pure JS)
+  src/premiere.js      Premiere UXP calls: selection, Motion params, undoable transactions
+  src/rectEditor.js    draggable START/END boxes (DOM; UXP canvas cannot draw images)
+  src/frameGrab.js     Program-frame export for the viewer background
+test/                  Node tests: maths + a fake Premiere host for the keyframe writer
+```
+
+Run the tests with `npm test` (Node 21+).
+
+## Limitations
+
+* **Keyframes, not a live effect.** Like Resolve, the zoom spans the clip as it is when you apply it. After you trim or slip a clip, apply again.
+* Applying **replaces any existing Position/Scale keyframes** on the selected clips.
+* **Reversed** clips are skipped. **Time-remapped** clips are not handled specially.
+* Premiere's API cannot set *spatial* interpolation, so Position keys keep Premiere's default (auto-Bézier). With keys every 1 to 2 frames this has no visible effect.
+* **Grab Frame** shows the rendered frame at the playhead, including any zoom already applied. Grab before applying, or after **Remove**, to see the base framing.
+* The panel remembers original framing per sequence, clip name, and in point. After you move a clip's in point, **Remove** falls back to the clip's first-frame values.
