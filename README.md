@@ -713,7 +713,7 @@ _Task runners and software build tools. If you're looking for Python packaging/b
 
 _Libraries for generating project documentation._
 
-- [sphinx](https://github.com/sphinx-doc/sphinx/) - Python Documentation generator.
+- [sphinx](https://github.com/sphinx-doc/sphinx) - Python Documentation generator.
   - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
 - [mkdocs-material](https://github.com/squidfunk/mkdocs-material) - A documentation framework and Material Design theme built on MkDocs.
 - [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
@@ -754,7 +754,7 @@ _Frameworks and libraries for Distributed Computing._
 
 - [pyspark](https://github.com/apache/spark) - [Apache Spark](https://spark.apache.org/) Python API.
 - [dask](https://github.com/dask/dask) - A flexible parallel computing library for analytic computing.
-- [ray](https://github.com/ray-project/ray/) - A unified framework for scaling AI and Python applications.
+- [ray](https://github.com/ray-project/ray) - A unified framework for scaling AI and Python applications.
 - [joblib](https://github.com/joblib/joblib) - Parallel computing and disk-based caching for Python functions.
 - [mpi4py](https://github.com/mpi4py/mpi4py) - Python bindings for MPI.
 
@@ -814,7 +814,7 @@ _Libraries for building command-line applications._
 
 - General
   - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
-  - [click](https://github.com/pallets/click/) - A package for creating beautiful command line interfaces in a composable way.
+  - [click](https://github.com/pallets/click) - A package for creating beautiful command line interfaces in a composable way.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click.
   - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [fire](https://github.com/google/python-fire) - A library for creating command line interfaces from absolutely any Python object.
@@ -845,7 +845,7 @@ _Useful CLI-based tools._
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering project templates.
 - Shells
-  - [xonsh](https://github.com/xonsh/xonsh/) - A Python-powered shell. Full-featured and cross-platform.
+  - [xonsh](https://github.com/xonsh/xonsh) - A Python-powered shell. Full-featured and cross-platform.
 - Terminal Workflow
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
 
@@ -866,7 +866,7 @@ _Libraries for working with graphical user interface applications._
   - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
   - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
 - Web-based
-  - [pywebview](https://github.com/r0x0r/pywebview/) - A lightweight cross-platform native wrapper around a webview component.
+  - [pywebview](https://github.com/r0x0r/pywebview) - A lightweight cross-platform native wrapper around a webview component.
   - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
   - [flet](https://github.com/flet-dev/flet) - Cross-platform GUI framework for building modern apps in pure Python.
 
@@ -907,7 +907,7 @@ _Libraries for working with HTML and XML._
 - [beautifulsoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) - Providing Pythonic idioms for iterating, searching, and modifying HTML or XML.
 - [xmltodict](https://github.com/martinblech/xmltodict) - Working with XML feel like you are working with JSON.
 - [markupsafe](https://github.com/pallets/markupsafe) - Safely adds untrusted strings to HTML/XML markup.
-- [justhtml](https://github.com/EmilStenstrom/justhtml/) - A pure Python HTML5 parser that sanitizes untrusted HTML by default.
+- [justhtml](https://github.com/EmilStenstrom/justhtml) - A pure Python HTML5 parser that sanitizes untrusted HTML by default.
 
 ### File Format Processing
 
@@ -1026,7 +1026,7 @@ _Functional Programming with Python._
 
 - [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [more-itertools](https://github.com/more-itertools/more-itertools) - More routines for operating on iterables, beyond `itertools`.
-- [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz/) for Cython-accelerated performance.
+- [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz) for Cython-accelerated performance.
 - [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
 - [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 
@@ -1076,7 +1076,7 @@ _Libraries for package and dependency management._
   - [poetry](https://github.com/python-poetry/poetry) - Python dependency management and packaging made easy.
   - [hatch](https://github.com/pypa/hatch) - Modern, extensible Python project manager for environments, builds, and publishing.
   - [pipx](https://github.com/pypa/pipx) - Install and Run Python Applications in Isolated Environments. Like `npx` in Node.js.
-  - [conda](https://github.com/conda/conda/) - Cross-platform, Python-agnostic binary package manager.
+  - [conda](https://github.com/conda/conda) - Cross-platform, Python-agnostic binary package manager.
 - Build Backends
   - [setuptools](https://github.com/pypa/setuptools) - The historical and still most widely used pyproject build backend.
   - [hatchling](https://github.com/pypa/hatch) - Modern, extensible build backend from the hatch project.
@@ -1089,7 +1089,7 @@ _Local PyPI repository servers, proxies, and mirrors._
 
 - [pypiserver](https://github.com/pypiserver/pypiserver) - A minimal PyPI server for uploading and installing packages with pip.
 - [devpi](https://github.com/devpi/devpi) - PyPI server and packaging/testing/release tool.
-- [bandersnatch](https://github.com/pypa/bandersnatch/) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
+- [bandersnatch](https://github.com/pypa/bandersnatch) - PyPI mirroring tool provided by Python Packaging Authority (PyPA).
 
 ### Distribution
 
