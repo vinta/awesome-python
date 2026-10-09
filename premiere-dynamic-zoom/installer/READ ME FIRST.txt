@@ -1,0 +1,85 @@
+DYNAMIC ZOOM for Adobe Premiere Pro  (version 1.1.0)
+====================================================
+
+DaVinci Resolve-style dynamic zoom: set a green START box and a red END box,
+pick an ease, click Apply. The clip smoothly zooms/pans from one box to the
+other over its full length.
+
+Nothing to download: this folder contains everything. No internet and no
+Creative Cloud app needed.
+
+
+WORKS ON
+--------
+* Mac (Apple Silicon and Intel) and Windows 10 / 11
+* Adobe Premiere Pro 2020 (version 14) up to Premiere Pro 2026 (version 26)
+  - Tested on Premiere Pro 2026 (26.0) on a Mac.
+  - Note: Adobe is slowly retiring this type of extension ("CEP"). It works in
+    Premiere Pro 2026, but a future Premiere version could stop loading it.
+
+
+INSTALL ON A MAC
+----------------
+1. Quit Premiere Pro.
+2. Double-click  "Install on Mac.command".  A Terminal window opens and says Done.
+
+   If macOS says it "cannot verify" the file or "cannot be opened":
+     a) Click Done / OK.
+     b) Open System Settings > Privacy & Security, scroll down, and click
+        "Open Anyway" next to the message about "Install on Mac.command".
+     c) Confirm, and it runs.
+   Another way that always works: open the Terminal app, type  bash  and a
+   space, drag "Install on Mac.command" into the Terminal window, press Return.
+
+3. Open Premiere Pro, then: Window > Extensions > Dynamic Zoom
+
+
+INSTALL ON WINDOWS
+------------------
+1. Quit Premiere Pro.
+2. If you are looking inside the zip file: right-click the zip file,
+   choose "Extract All...", and open the extracted folder.
+   (The installer can't run from inside the zip.)
+3. Double-click  "Install on Windows.bat".
+   If you see "Windows protected your PC": click "More info", then "Run anyway".
+4. Open Premiere Pro, then: Window > Extensions > Dynamic Zoom
+
+
+HOW TO USE
+----------
+1. Select one or more clips in the Timeline.
+2. Put the playhead on the clip and click "Grab Frame" to see the picture.
+3. Move the boxes:  drag inside a box to move it,  drag a corner square to
+   resize it,  or scroll the mouse wheel over a box.  You can also type
+   Zoom %, X % and Y %, or choose a Preset.
+4. Choose "Dynamic Zoom Ease" (Linear, Ease In, Ease Out, Ease In and Out).
+5. Click "Apply to Selected Clips".  To undo it, click "Remove".
+
+Tip: a box that covers the whole frame can't be moved until you make it
+smaller (drag a corner), because "Keep boxes inside the frame" is on
+(see Advanced).
+
+
+UPDATE / UNINSTALL
+------------------
+* Update: run the installer from the newer version. It replaces the old one.
+* Uninstall: double-click "Uninstall on Mac.command" or
+  "Uninstall on Windows.bat", then restart Premiere Pro.
+
+
+TROUBLESHOOTING
+---------------
+* Not in the Window > Extensions menu:
+  - Make sure Premiere was fully quit and opened again.
+  - In newer versions the menu may be called "Extensions (Legacy)".
+  - Restart the computer once (the setting the installer turns on is
+    sometimes only read after a restart).
+* Mac "permission denied" or the .command opens as text: use the Terminal
+  method above ("bash" + drag the file in).
+
+
+KEEPING A COPY ON YOUR DRIVE
+----------------------------
+Keep the whole zip file (DynamicZoom-Installer.zip) on your drive, not the
+unzipped folder. Some cloud drives remove the Mac "double-clickable" flag
+from unzipped files. If that happens, use the Terminal method above.

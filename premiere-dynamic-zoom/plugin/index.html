@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="panel">
+      <div id="viewer" class="viewer">
+        <div class="viewer-placeholder">Click “Grab Frame” to show the playhead frame</div>
+        <img class="viewer-img" alt="" />
+        <div class="thirds thirds-v1"></div>
+        <div class="thirds thirds-v2"></div>
+        <div class="thirds thirds-h1"></div>
+        <div class="thirds thirds-h2"></div>
+      </div>
+
+      <div class="row">
+        <sp-button id="grab" variant="secondary" quiet>Grab Frame</sp-button>
+        <sp-button id="preview" variant="secondary" quiet>Preview</sp-button>
+        <sp-button id="swap" variant="secondary" quiet>Swap</sp-button>
+        <sp-button id="reset" variant="secondary" quiet>Reset</sp-button>
+      </div>
+
+      <div class="section">
+        <div class="grid-head">
+          <span></span><span>Zoom %</span><span>X %</span><span>Y %</span>
+        </div>
+        <div class="grid-row">
+          <span class="tag tag-start">Start</span>
+          <input id="start-zoom" type="number" step="1" />
+          <input id="start-x" type="number" step="0.5" />
+          <input id="start-y" type="number" step="0.5" />
+        </div>
+        <div class="grid-row">
+          <span class="tag tag-end">End</span>
+          <input id="end-zoom" type="number" step="1" />
+          <input id="end-x" type="number" step="0.5" />
+          <input id="end-y" type="number" step="0.5" />
+        </div>
+      </div>
+
+      <div class="section">
+        <label class="field">
+          <span>Dynamic Zoom Ease</span>
+          <select id="easing">
+            <option value="linear">Linear</option>
+            <option value="easeIn">Ease In</option>
+            <option value="easeOut">Ease Out</option>
+            <option value="easeInOut">Ease In and Out</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Preset</span>
+          <select id="preset"></select>
+        </label>
+      </div>
+
+      <div class="section">
+        <div id="advanced-toggle" class="toggle">▸ Advanced</div>
+        <div id="advanced" class="advanced" hidden>
+          <label class="field">
+            <span>Zoom speed</span>
+            <select id="zoomPath">
+              <option value="linear">Linear (same as Resolve)</option>
+              <option value="constant">Constant (perceptually even)</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Keyframe every</span>
+            <select id="stepFrames">
+              <option value="1">1 frame (exact)</option>
+              <option value="2">2 frames</option>
+              <option value="4">4 frames</option>
+              <option value="8">8 frames</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Keyframe time base</span>
+            <select id="timeBase">
+              <option value="media">Source media (default)</option>
+              <option value="clip">Clip start</option>
+            </select>
+          </label>
+          <label class="check">
+            <input id="keepInside" type="checkbox" />
+            <span>Keep boxes inside the frame (no black edges)</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="row actions">
+        <sp-button id="apply" variant="cta">Apply to Selected Clips</sp-button>
+        <sp-button id="remove" variant="secondary">Remove</sp-button>
+      </div>
+
+      <div id="status" class="status"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
