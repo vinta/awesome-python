@@ -90,6 +90,7 @@
     const editor = createRectEditor($("viewer"), {
       keepInside: () => !!state.keepInside,
       onChange: pullFromEditor,
+      onHint: (text) => setStatus(text),
     });
 
     function syncInputs() {

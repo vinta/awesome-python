@@ -20,7 +20,7 @@
   };
 
   function createRectEditor(viewer, options) {
-    const opts = Object.assign({ aspect: 16 / 9, keepInside: () => true, onChange: () => {} }, options);
+    const opts = Object.assign({ aspect: 16 / 9, keepInside: () => true, onChange: () => {}, onHint: () => {} }, options);
     let aspect = opts.aspect;
     const rects = { start: Z.fullFrameRect(), end: Z.fullFrameRect() };
     const boxes = {};
@@ -101,9 +101,18 @@
       return { x: (e.clientX - left) / w, y: (e.clientY - top) / h };
     }
 
-    function onDown(e) {
+    // --- Dragging -----------------------------------------------------------
+    // Premiere's CEP browser on macOS does not deliver pointer events to the
+    // page (a long-standing Adobe bug), while mouse events still arrive. UXP and
+    // current browsers send both. So both families are handled and whichever
+    // press arrives first starts the drag. Positions are absolute, so seeing one
+    // movement through both families is harmless; repeats within a pixel are
+    // skipped. Move/up are read from the whole document, so a drag keeps
+    // following the mouse outside the viewer and ends wherever it is released.
+
+    function beginDrag(e, kind) {
       const box = findBox(e.target);
-      if (!box) return;
+      if (!box) return false;
       const which = box.dataset.which;
       const corner = e.target.dataset ? e.target.dataset.corner : null;
       const r = rects[which];
@@ -114,17 +123,71 @@
         drag = { which, mode: "resize", sx, sy, ax: r.cx - (sx * r.size) / 2, ay: r.cy - (sy * r.size) / 2 };
       } else {
         drag = { which, mode: "move", dx: p.x - r.cx, dy: p.y - r.cy };
+        if (opts.keepInside() && r.size >= 1 - 1e-9) {
+          opts.onHint("This box covers the whole frame. Drag a corner to make it smaller first, " +
+            "or turn off Advanced › Keep boxes inside the frame.");
+        }
       }
+      drag.kind = kind;
+      drag.pointerId = kind === "pointer" ? e.pointerId : null;
+      drag.lastX = e.clientX;
+      drag.lastY = e.clientY;
+      drag.held = false; // seen a move that reported the button as held
+      if (kind === "pointer") {
+        try {
+          viewer.setPointerCapture(e.pointerId);
+        } catch (_) {
+          // not needed: move/up are read from the document
+        }
+      }
+      return true;
+    }
+
+    function endDrag() {
+      if (!drag) return;
+      const id = drag.pointerId;
+      drag = null;
+      if (id === null || id === undefined) return;
       try {
-        viewer.setPointerCapture(e.pointerId);
+        viewer.releasePointerCapture(id);
       } catch (_) {
-        // older UXP: events still reach the viewer while the pointer is over it
+        // ignore
       }
-      e.preventDefault();
+    }
+
+    function onPointerDown(e) {
+      if (e.button > 0) return; // right / middle button
+      // Not cancelled on purpose: cancelling pointerdown makes Chromium drop the
+      // mouse events of this press, which are the fallback if pointer events
+      // stop arriving. The mousedown is cancelled instead.
+      beginDrag(e, "pointer");
+    }
+
+    function onMouseDown(e) {
+      if (e.button > 0) return;
+      if (drag && drag.kind === "pointer") {
+        // The compatibility mousedown of a press already handled as a pointer.
+        e.preventDefault();
+        return;
+      }
+      // Cancelling mousedown stops text selection and native image drags.
+      if (beginDrag(e, "mouse")) e.preventDefault();
     }
 
     function onMove(e) {
       if (!drag) return;
+      if (typeof e.buttons === "number") {
+        if (e.buttons & 1) drag.held = true;
+        // Moves reported the button held and now one says it is up: the release
+        // happened where we could not see it (outside the panel). Stop instead
+        // of leaving the box stuck to the mouse.
+        else if (drag.held) return endDrag();
+      }
+      // Skip the twin of a move already handled (pointer coordinates can be
+      // fractional, mouse ones are whole pixels).
+      if (Math.abs(e.clientX - drag.lastX) < 1 && Math.abs(e.clientY - drag.lastY) < 1) return;
+      drag.lastX = e.clientX;
+      drag.lastY = e.clientY;
       const p = pointer(e);
       const keep = opts.keepInside();
       if (drag.mode === "move") {
@@ -142,16 +205,6 @@
       set(drag.which, Z.makeRect(ax + (sx * s) / 2, ay + (sy * s) / 2, s));
     }
 
-    function onUp(e) {
-      if (!drag) return;
-      drag = null;
-      try {
-        viewer.releasePointerCapture(e.pointerId);
-      } catch (_) {
-        // ignore
-      }
-    }
-
     function onWheel(e) {
       const box = findBox(e.target);
       if (!box) return;
@@ -161,13 +214,23 @@
       e.preventDefault();
     }
 
-    viewer.addEventListener("pointerdown", onDown);
-    viewer.addEventListener("pointermove", onMove);
-    viewer.addEventListener("pointerup", onUp);
-    viewer.addEventListener("pointercancel", onUp);
-    // Without pointer capture (older UXP) a release outside the viewer still ends the drag.
-    document.addEventListener("pointerup", onUp);
+    function cancel(e) {
+      e.preventDefault();
+    }
+
+    viewer.addEventListener("pointerdown", onPointerDown);
+    viewer.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("pointermove", onMove);
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("pointerup", endDrag);
+    document.addEventListener("pointercancel", endDrag);
+    document.addEventListener("mouseup", endDrag);
+    if (typeof window !== "undefined" && window.addEventListener) window.addEventListener("blur", endDrag);
     viewer.addEventListener("wheel", onWheel);
+    // Never start a text selection or a native image drag from the viewer.
+    viewer.addEventListener("selectstart", cancel);
+    viewer.addEventListener("dragstart", cancel);
+    if (img) img.setAttribute("draggable", "false");
 
     // --- Preview playback -------------------------------------------------
     let previewTimer = null;

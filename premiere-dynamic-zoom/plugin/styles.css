@@ -21,6 +21,10 @@ body {
   background-color: #111;
   border: 1px solid var(--uxp-host-border-color, #444);
   overflow: hidden;
+  /* Dragging a box must never select text or start a native drag. */
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: none;
 }
 
 .viewer-img {
@@ -30,6 +34,8 @@ body {
   width: 100%;
   height: 100%;
   display: none;
+  pointer-events: none;
+  -webkit-user-drag: none;
 }
 
 .viewer-placeholder {
@@ -40,11 +46,13 @@ body {
   text-align: center;
   color: #777;
   font-size: 11px;
+  pointer-events: none;
 }
 
 .thirds {
   position: absolute;
   background-color: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
 }
 .thirds-v1 { left: 33.333%; top: 0; bottom: 0; width: 1px; }
 .thirds-v2 { left: 66.666%; top: 0; bottom: 0; width: 1px; }
@@ -55,6 +63,7 @@ body {
   position: absolute;
   border: 2px solid #fff;
   box-sizing: border-box;
+  cursor: move;
 }
 .zrect-start {
   border-color: #3ddc5f;
@@ -67,17 +76,19 @@ body {
 .zrect-preview {
   border: 1px dashed #fff;
   z-index: 5;
+  pointer-events: none;
 }
 
 .zlabel {
   position: absolute;
-  left: 10px;
+  left: 14px;
   top: 1px;
   font-size: 9px;
   font-weight: bold;
+  pointer-events: none; /* presses go to the box underneath */
 }
 .zrect-start .zlabel { color: #3ddc5f; }
-.zrect-end .zlabel { left: auto; right: 10px; top: auto; bottom: 1px; color: #ff4d4d; }
+.zrect-end .zlabel { left: auto; right: 14px; top: auto; bottom: 1px; color: #ff4d4d; }
 
 .handle {
   position: absolute;
@@ -88,10 +99,11 @@ body {
 }
 .zrect-start .handle { background-color: #3ddc5f; }
 .zrect-end .handle { background-color: #ff4d4d; }
-.handle-tl { left: -6px; top: -6px; }
-.handle-tr { right: -6px; top: -6px; }
-.handle-bl { left: -6px; bottom: -6px; }
-.handle-br { right: -6px; bottom: -6px; }
+/* Inset so the handles stay fully visible when a box touches the frame edge. */
+.handle-tl { left: -2px; top: -2px; cursor: nwse-resize; }
+.handle-tr { right: -2px; top: -2px; cursor: nesw-resize; }
+.handle-bl { left: -2px; bottom: -2px; cursor: nesw-resize; }
+.handle-br { right: -2px; bottom: -2px; cursor: nwse-resize; }
 
 /* ---- Controls ------------------------------------------------------------ */
 
