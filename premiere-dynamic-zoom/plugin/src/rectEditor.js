@@ -26,6 +26,10 @@
     const boxes = {};
     let drag = null;
     let hintShown = false;
+    // Event families (pointer/mouse) whose moves have been seen to report the
+    // held button. Later drags trust them from the start, so a release lost
+    // before the first move (a fast flick out of the panel) is still caught.
+    const reportsButtons = {};
 
     const img = viewer.querySelector(".viewer-img");
     const placeholder = viewer.querySelector(".viewer-placeholder");
@@ -145,7 +149,7 @@
       drag.pointerId = kind === "pointer" ? e.pointerId : null;
       drag.lastX = e.clientX;
       drag.lastY = e.clientY;
-      drag.held = {}; // per event family: seen a move that reported the button held
+      drag.held = Object.assign({}, reportsButtons); // per family: button known to be held
       if (kind === "pointer") {
         try {
           viewer.setPointerCapture(e.pointerId);
@@ -193,7 +197,7 @@
         // Each family (pointer/mouse) is judged by its own reports, in case a
         // host fills in `buttons` for one family only.
         const family = e.type.charAt(0);
-        if (e.buttons & 1) drag.held[family] = true;
+        if (e.buttons & 1) drag.held[family] = reportsButtons[family] = true;
         // Moves reported the button held and now one says it is up: the release
         // happened where we could not see it (outside the panel). Stop instead
         // of leaving the box stuck to the mouse.
