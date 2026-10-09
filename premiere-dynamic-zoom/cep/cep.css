@@ -1,0 +1,38 @@
+/* CEP renders plain HTML controls (UXP uses Spectrum widgets instead). */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button {
+  margin-right: 4px;
+  margin-bottom: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: #ddd;
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  border-radius: 12px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #474747;
+}
+button.cta {
+  color: #fff;
+  background-color: #2d6fdb;
+  border-color: #2d6fdb;
+}
+button.cta:hover {
+  background-color: #3b7ef0;
+}
+
+select,
+input[type="number"] {
+  height: 22px;
+  font-size: 12px;
+  color: #ddd;
+  background-color: #1d1d1d;
+  border: 1px solid #555;
+  border-radius: 3px;
+  box-sizing: border-box;
+}

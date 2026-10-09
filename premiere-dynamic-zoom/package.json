@@ -5,7 +5,7 @@
   "description": "DaVinci Resolve-style Dynamic Zoom panel for Adobe Premiere Pro (UXP plugin)",
   "scripts": {
     "test": "node --test \"test/*.test.js\"",
-    "package": "mkdir -p dist && rm -f dist/DynamicZoom.ccx && cd plugin && zip -r -X ../dist/DynamicZoom.ccx . -x '.*' -x '*/.*'"
+    "package": "node scripts/build.js"
   },
   "engines": {
     "node": ">=21"

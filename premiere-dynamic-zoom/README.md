@@ -1,6 +1,6 @@
 # Dynamic Zoom for Premiere Pro
 
-A UXP panel for **Adobe Premiere Pro 2026 (v26.x)** that does what **Dynamic Zoom**
+A panel for **Adobe Premiere Pro 2026 (v26.x)** that does what **Dynamic Zoom**
 does in DaVinci Resolve. You set a green **START** box and a red **END** box over
 the frame, pick an ease, and the selected clips smoothly push in, pull out, or pan
 from one box to the other over their full length.
@@ -24,36 +24,54 @@ the boxes, and a *constant-speed* zoom mode.
 
 ## Requirements
 
-* Premiere Pro **25.6 or later** (UXP plugins became official in 25.6; built for 26.0)
-* [UXP Developer Tool](https://developer.adobe.com/premiere-pro/uxp/introduction/essentials/dev-tools/) **2.2+** (from the Creative Cloud app) to load or package the plugin
+* **CEP build:** Premiere Pro 2020 (14.0) or later, while Premiere still loads CEP extensions. 2026.0 does. No Creative Cloud app needed.
+* **UXP build:** Premiere Pro 25.6 or later and the Creative Cloud app (UXP plugins became official in 25.6).
 
-> Premiere's CEP/ExtendScript support was only planned through September 2026,
-> so this is a UXP plugin, not a CEP extension.
+## Install
 
-## Install (Mac or Windows)
+There are two builds of the same panel:
 
-### Easiest: the ready-made installer
+| Build | Needs Creative Cloud app? | Where it appears in Premiere |
+| ----- | ------------------------- | ---------------------------- |
+| **CEP** (`dist/DynamicZoom-CEP.zip`) | No | Window › Extensions › Dynamic Zoom |
+| **UXP** (`dist/DynamicZoom.ccx`) | Yes, to install | Window › UXP Plugins › Dynamic Zoom |
 
-1. Download **[DynamicZoom.ccx](https://github.com/ArtyzAudio/awesome-python/raw/claude/amazing-faraday-d3odj2/premiere-dynamic-zoom/dist/DynamicZoom.ccx)** (it is in `dist/`).
+### Mac without the Creative Cloud app (CEP build)
+
+1. Quit Premiere Pro.
+2. Open **Terminal** (press Cmd+Space, type `Terminal`, press Return).
+3. Paste this line and press Return:
+
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/ArtyzAudio/awesome-python/claude/amazing-faraday-d3odj2/premiere-dynamic-zoom/install-mac.sh | bash
+   ```
+
+4. Open Premiere Pro, then **Window › Extensions › Dynamic Zoom**. On some versions the menu is called **Extensions (Legacy)**.
+
+The script ([install-mac.sh](install-mac.sh)) does three things:
+
+1. Downloads `DynamicZoom-CEP.zip`.
+2. Unzips it into `~/Library/Application Support/Adobe/CEP/extensions/DynamicZoom`.
+3. Runs `defaults write com.adobe.CSXS.<9-14> PlayerDebugMode 1`, which lets Premiere load extensions that Adobe has not signed.
+
+To do the same by hand, unzip the file into that folder and run the `defaults` commands. To uninstall, delete the `DynamicZoom` folder.
+
+CEP note: Premiere records every keyframe as its own undo step. Use the panel's **Remove** button instead of Cmd+Z. Adobe is phasing CEP out, so a future Premiere release may stop loading this build. The UXP build is the long-term one.
+
+### With the Creative Cloud app (UXP build)
+
+1. Download **[DynamicZoom.ccx](https://github.com/ArtyzAudio/awesome-python/raw/claude/amazing-faraday-d3odj2/premiere-dynamic-zoom/dist/DynamicZoom.ccx)**.
 2. Quit Premiere Pro.
-3. Double-click `DynamicZoom.ccx`. The Creative Cloud app opens and warns that the plugin
-   is not from the Marketplace. Click **Install**.
-4. Start Premiere Pro and open **Window › UXP Plugins › Dynamic Zoom**.
+3. Double-click `DynamicZoom.ccx`. The Creative Cloud app asks for confirmation; click **Install**.
+4. Open **Window › UXP Plugins › Dynamic Zoom**.
 
-To uninstall it: Creative Cloud app › **Stock & Marketplace › Plugins › Manage Plugins**, then **••• › Uninstall**.
-
-If double-clicking does nothing, install it from Terminal (Mac):
+If double-clicking does nothing, install it from Terminal:
 
 ```bash
 "/Library/Application Support/Adobe/Adobe Desktop Common/RemoteComponents/UPI/UnifiedPluginInstallerAgent/UnifiedPluginInstallerAgent.app/Contents/macOS/UnifiedPluginInstallerAgent" --install ~/Downloads/DynamicZoom.ccx
 ```
 
-### For development: UXP Developer Tool
-
-1. Install **UXP Developer Tool** from the Creative Cloud app and click **Enable** when it asks for Developer Mode.
-2. Start Premiere Pro.
-3. In UDT click **Add Plugin…** and pick `premiere-dynamic-zoom/plugin/manifest.json`, then **••• › Load**.
-4. After editing the code, rebuild the installer with `npm run package`, or use UDT's **••• › Package**.
+For development, load `plugin/manifest.json` in **UXP Developer Tool** (Add Plugin › ••• › Load).
 
 ## Use
 
@@ -64,7 +82,7 @@ If double-clicking does nothing, install it from Terminal (Mac):
    * Or type **Zoom %**, **X %**, **Y %** (the box centre, as a percentage of the frame).
    * Or pick a **Preset**.
 4. Pick **Dynamic Zoom Ease** and click **Preview** to see the move.
-5. Click **Apply to Selected Clips**. Undo with Ctrl/Cmd+Z.
+5. Click **Apply to Selected Clips**. Undo with Cmd/Ctrl+Z (UXP build) or **Remove**.
 6. **Remove** deletes the zoom keyframes and puts back the clip's original Position/Scale.
 
 You can re-apply as often as you like. The panel remembers each clip's original
@@ -107,15 +125,23 @@ which would make the image drift sideways during the zoom.
 Code layout:
 
 ```
-plugin/
+plugin/                UXP build (also the source of the shared UI)
   manifest.json        UXP manifest (panel "Dynamic Zoom", Premiere ≥ 25.6)
-  index.html/.js       panel UI wiring
+  index.html/.js       panel markup + UXP bootstrap
   styles.css
-  src/zoomMath.js      easing, box interpolation, Motion mapping, keyframe timing (pure JS)
+  src/zoomMath.js      easing, box interpolation, Motion mapping, keyframe timing (shared)
+  src/rectEditor.js    draggable START/END boxes (shared)
+  src/panel.js         panel UI wiring (shared)
   src/premiere.js      Premiere UXP calls: selection, Motion params, undoable transactions
-  src/rectEditor.js    draggable START/END boxes (DOM; UXP canvas cannot draw images)
-  src/frameGrab.js     Program-frame export for the viewer background
-test/                  Node tests: maths + a fake Premiere host for the keyframe writer
+  src/frameGrab.js     Program-frame export for the viewer background (UXP)
+cep/                   CEP build
+  CSXS/manifest.xml    CEP manifest (Premiere 14.0+)
+  host/dynamicZoom.jsx ExtendScript: reads clips, writes keyframes, exports the frame
+  js/cepHost.js        panel-side adapter that calls the .jsx
+  main.js, cep.css
+scripts/build.js       builds dist/DynamicZoom.ccx and dist/DynamicZoom-CEP.zip (`npm run package`)
+install-mac.sh         one-line installer for the CEP build
+test/                  Node tests: maths, a fake UXP host, and the real .jsx on a fake ExtendScript DOM
 ```
 
 Run the tests with `npm test` (Node 21+).
