@@ -25,6 +25,7 @@
     const rects = { start: Z.fullFrameRect(), end: Z.fullFrameRect() };
     const boxes = {};
     let drag = null;
+    let hintShown = false;
 
     const img = viewer.querySelector(".viewer-img");
     const placeholder = viewer.querySelector(".viewer-placeholder");
@@ -61,6 +62,12 @@
       box.style.top = `${(r.cy - r.size / 2) * h}px`;
       box.style.width = `${r.size * w}px`;
       box.style.height = `${r.size * h}px`;
+      // Small boxes: handles move out to the corners (tiny ones: fully outside)
+      // so the middle can still be grabbed to move the box.
+      if (box.classList) {
+        box.classList.toggle("zrect-small", r.size * w < 40);
+        box.classList.toggle("zrect-tiny", Math.min(r.size * w, r.size * h) < 24);
+      }
     }
 
     function render() {
@@ -113,6 +120,16 @@
     function beginDrag(e, kind) {
       const box = findBox(e.target);
       if (!box) return false;
+      // The press is cancelled, so focus would stay in a number field: blur it
+      // first so a typed-but-uncommitted value is committed (change event).
+      const active = document.activeElement;
+      if (active && active !== document.body && !viewer.contains(active) && typeof active.blur === "function") {
+        active.blur();
+      }
+      if (hintShown) {
+        hintShown = false;
+        opts.onHint(null); // put back whatever the status line said before
+      }
       const which = box.dataset.which;
       const corner = e.target.dataset ? e.target.dataset.corner : null;
       const r = rects[which];
@@ -123,16 +140,12 @@
         drag = { which, mode: "resize", sx, sy, ax: r.cx - (sx * r.size) / 2, ay: r.cy - (sy * r.size) / 2 };
       } else {
         drag = { which, mode: "move", dx: p.x - r.cx, dy: p.y - r.cy };
-        if (opts.keepInside() && r.size >= 1 - 1e-9) {
-          opts.onHint("This box covers the whole frame. Drag a corner to make it smaller first, " +
-            "or turn off Advanced › Keep boxes inside the frame.");
-        }
       }
       drag.kind = kind;
       drag.pointerId = kind === "pointer" ? e.pointerId : null;
       drag.lastX = e.clientX;
       drag.lastY = e.clientY;
-      drag.held = false; // seen a move that reported the button as held
+      drag.held = {}; // per event family: seen a move that reported the button held
       if (kind === "pointer") {
         try {
           viewer.setPointerCapture(e.pointerId);
@@ -177,11 +190,14 @@
     function onMove(e) {
       if (!drag) return;
       if (typeof e.buttons === "number") {
-        if (e.buttons & 1) drag.held = true;
+        // Each family (pointer/mouse) is judged by its own reports, in case a
+        // host fills in `buttons` for one family only.
+        const family = e.type.charAt(0);
+        if (e.buttons & 1) drag.held[family] = true;
         // Moves reported the button held and now one says it is up: the release
         // happened where we could not see it (outside the panel). Stop instead
         // of leaving the box stuck to the mouse.
-        else if (drag.held) return endDrag();
+        else if (drag.held[family]) return endDrag();
       }
       // Skip the twin of a move already handled (pointer coordinates can be
       // fractional, mouse ones are whole pixels).
@@ -192,6 +208,11 @@
       const keep = opts.keepInside();
       if (drag.mode === "move") {
         const r = rects[drag.which];
+        if (!hintShown && keep && r.size >= 1 - 1e-9) {
+          hintShown = true;
+          opts.onHint("This box covers the whole frame. Drag a corner to make it smaller first, " +
+            "or turn off Advanced › Keep boxes inside the frame.");
+        }
         set(drag.which, Z.makeRect(p.x - drag.dx, p.y - drag.dy, r.size));
         return;
       }
@@ -224,7 +245,11 @@
     document.addEventListener("mousemove", onMove);
     document.addEventListener("pointerup", endDrag);
     document.addEventListener("pointercancel", endDrag);
-    document.addEventListener("mouseup", endDrag);
+    document.addEventListener("mouseup", (e) => {
+      // Releasing another button while the left one is still held is not the end.
+      if (e.button > 0 && e.buttons & 1) return;
+      endDrag();
+    });
     if (typeof window !== "undefined" && window.addEventListener) window.addEventListener("blur", endDrag);
     viewer.addEventListener("wheel", onWheel);
     // Never start a text selection or a native image drag from the viewer.

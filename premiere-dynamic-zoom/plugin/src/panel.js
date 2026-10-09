@@ -86,11 +86,24 @@
     // --- Editor + inputs ----------------------------------------------------
 
     const fmt = (v) => String(Math.round(v * 10) / 10);
+    let hintPrev = null; // status line to restore when the drag hint goes away
 
     const editor = createRectEditor($("viewer"), {
       keepInside: () => !!state.keepInside,
       onChange: pullFromEditor,
-      onHint: (text) => setStatus(text),
+      onHint: (text) => {
+        const el = $("status");
+        if (text) {
+          hintPrev = { text: el.textContent, className: el.className, hint: text };
+          setStatus(text);
+        } else if (hintPrev && el.textContent === hintPrev.hint) {
+          el.textContent = hintPrev.text;
+          el.className = hintPrev.className;
+          hintPrev = null;
+        } else {
+          hintPrev = null;
+        }
+      },
     });
 
     function syncInputs() {

@@ -2,7 +2,7 @@
   "manifestVersion": 5,
   "id": "com.dynamiczoom.premierepro",
   "name": "Dynamic Zoom",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.html",
   "host": {
     "app": "premierepro",

@@ -36,6 +36,21 @@ There are two builds of the same panel:
 | **CEP** (`dist/DynamicZoom-CEP.zip`) | No | Window › Extensions › Dynamic Zoom |
 | **UXP** (`dist/DynamicZoom.ccx`) | Yes, to install | Window › UXP Plugins › Dynamic Zoom |
 
+### Offline installer for Mac and Windows (no internet, no Creative Cloud app)
+
+Download **[DynamicZoom-Installer.zip](https://github.com/ArtyzAudio/awesome-python/raw/claude/amazing-faraday-d3odj2/premiere-dynamic-zoom/dist/DynamicZoom-Installer.zip)**
+and keep it anywhere, for example on a USB stick or a cloud drive. It contains the extension plus:
+
+* `Install on Mac.command` / `Uninstall on Mac.command`
+* `Install on Windows.bat` / `Uninstall on Windows.bat`
+* `READ ME FIRST.txt` with step-by-step instructions, supported versions and troubleshooting
+
+Unzip it and double-click the installer for your system. The scripts copy the bundled `DynamicZoom` folder into the
+per-user CEP extensions folder (`~/Library/Application Support/Adobe/CEP/extensions` on Mac,
+`%APPDATA%\Adobe\CEP\extensions` on Windows) and turn on `PlayerDebugMode`. On Windows that is a `REG_SZ` value
+under `HKCU\Software\Adobe\CSXS.<9-14>`. The scripts live in [`installer/`](installer/), and
+`npm run package` builds the zip.
+
 ### Mac without the Creative Cloud app (CEP build)
 
 1. Quit Premiere Pro.
@@ -139,8 +154,9 @@ cep/                   CEP build
   host/dynamicZoom.jsx ExtendScript: reads clips, writes keyframes, exports the frame
   js/cepHost.js        panel-side adapter that calls the .jsx
   main.js, cep.css
-scripts/build.js       builds dist/DynamicZoom.ccx and dist/DynamicZoom-CEP.zip (`npm run package`)
-install-mac.sh         one-line installer for the CEP build
+scripts/build.js       builds dist/DynamicZoom.ccx, DynamicZoom-CEP.zip and DynamicZoom-Installer.zip (`npm run package`)
+installer/             offline install/uninstall scripts for Mac and Windows + READ ME FIRST.txt
+install-mac.sh         one-line online installer for the CEP build
 test/                  Node tests: maths, a fake UXP host, and the real .jsx on a fake ExtendScript DOM
 ```
 

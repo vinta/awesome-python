@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 /*
- * Builds both packages into dist/:
- *   DynamicZoom.ccx       UXP plugin (needs the Creative Cloud app to install)
- *   DynamicZoom-CEP.zip   CEP extension (copy into the CEP extensions folder)
+ * Builds into dist/:
+ *   DynamicZoom.ccx            UXP plugin (needs the Creative Cloud app to install)
+ *   DynamicZoom-CEP.zip        CEP extension (copy into the CEP extensions folder)
+ *   DynamicZoom-Installer.zip  offline installer: the CEP extension plus
+ *                              double-click install scripts for Mac and Windows
  *
  * The CEP build reuses the UXP panel markup, styles and shared modules, swapping
  * Spectrum <sp-button>s for plain <button>s. Requires the `zip` command.
@@ -19,6 +21,8 @@ const CEP = path.join(ROOT, "cep");
 const DIST = path.join(ROOT, "dist");
 const BUILD = path.join(ROOT, "build");
 const CEP_NAME = "DynamicZoom";
+const INSTALLER = path.join(ROOT, "installer");
+const INSTALLER_NAME = "Dynamic Zoom Installer";
 
 const SHARED = ["src/zoomMath.js", "src/rectEditor.js", "src/panel.js"];
 const CEP_SCRIPTS = [...SHARED, "js/cepHost.js", "main.js"];
@@ -62,6 +66,25 @@ function buildCep() {
   return out;
 }
 
+/** Offline installer: the CEP extension plus install scripts and a read-me. */
+function buildInstaller(cepDir) {
+  const out = path.join(BUILD, INSTALLER_NAME);
+  fs.rmSync(out, { recursive: true, force: true });
+  copy(cepDir, path.join(out, CEP_NAME));
+  for (const name of fs.readdirSync(INSTALLER)) {
+    const from = path.join(INSTALLER, name);
+    const to = path.join(out, name);
+    if (/\.(bat|txt)$/i.test(name)) {
+      // Windows tools expect CRLF line endings.
+      fs.writeFileSync(to, fs.readFileSync(from, "utf8").replace(/\r?\n/g, "\r\n"));
+    } else {
+      copy(from, to);
+    }
+    if (/\.command$/i.test(name)) fs.chmodSync(to, 0o755); // double-clickable on macOS
+  }
+  zip(BUILD, path.join(DIST, "DynamicZoom-Installer.zip"), [INSTALLER_NAME]);
+}
+
 function buildUxp() {
   zip(PLUGIN, path.join(DIST, "DynamicZoom.ccx"), ["."]);
 }
@@ -70,7 +93,11 @@ if (require.main === module) {
   fs.mkdirSync(DIST, { recursive: true });
   buildUxp();
   const cepDir = buildCep();
-  console.log(`Built dist/DynamicZoom.ccx and dist/${CEP_NAME}-CEP.zip (unpacked CEP build: ${path.relative(ROOT, cepDir)})`);
+  buildInstaller(cepDir);
+  console.log(
+    `Built dist/DynamicZoom.ccx, dist/${CEP_NAME}-CEP.zip and dist/DynamicZoom-Installer.zip ` +
+      `(unpacked: ${path.relative(ROOT, BUILD)}/)`
+  );
 }
 
-module.exports = { cepHtml, buildCep, CEP_SCRIPTS };
+module.exports = { cepHtml, buildCep, buildInstaller, CEP_SCRIPTS };

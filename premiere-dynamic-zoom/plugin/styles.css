@@ -104,6 +104,14 @@ body {
 .handle-tr { right: -2px; top: -2px; cursor: nesw-resize; }
 .handle-bl { left: -2px; bottom: -2px; cursor: nesw-resize; }
 .handle-br { right: -2px; bottom: -2px; cursor: nwse-resize; }
+.zrect-small .handle-tl { left: -6px; top: -6px; }
+.zrect-small .handle-tr { right: -6px; top: -6px; }
+.zrect-small .handle-bl { left: -6px; bottom: -6px; }
+.zrect-small .handle-br { right: -6px; bottom: -6px; }
+.zrect-tiny .handle-tl { left: -12px; top: -12px; }
+.zrect-tiny .handle-tr { right: -12px; top: -12px; }
+.zrect-tiny .handle-bl { left: -12px; bottom: -12px; }
+.zrect-tiny .handle-br { right: -12px; bottom: -12px; }
 
 /* ---- Controls ------------------------------------------------------------ */
 
