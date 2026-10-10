@@ -33,7 +33,9 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 
 **Python versions**: missing support for the newest Python releases is not by itself grounds for removal while the entry still has a large user base; it can place the entry in the Second Tier instead.
 
-**Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
+**Second Tier**: a challenger slot held by a demoted former obvious choice instead of a rising successor. It counts against the two challenger slots, and the adoption-trajectory bar gates only new admissions, not demotions.
+
+**Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, projects used outside pip such as SDK downloads (renpy) or deployed services (thumbor), large-but-specific audiences misread as "niche"). The maintainer's decision is final.
 
 Looking for an exhaustive catalog instead? Follow the awesome-\* lists linked under individual entries (for example awesome-python-testing) — they exist precisely so this list doesn't have to be one.
 
@@ -77,6 +79,8 @@ A feature that ships inside a larger library, framework, or tool rather than as 
 - [project](https://github.com/owner/project) - Description.
   - [awesome-project](https://github.com/someone/awesome-project)
 ```
+
+Only awesome-\* lists go here, placed by the maintainer. A sub-item holds no slot, does not count against the cap, and moves or goes away with its parent. A companion project either earns its own entry or is not listed.
 
 ### Subcategory Format
 

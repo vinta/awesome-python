@@ -6,7 +6,7 @@ argument-hint: [all or specific sections]
 
 # Audit the list
 
-An Audit re-runs the admission test over live sections of README.md: every entry re-verified against current data, tiers reassessed, structure reconsidered, then the maintainer adjudicates and the result is committed. The rules live in CONTRIBUTING.md (Admission, Evidence, Entry Ordering) and CONTEXT.md (vocabulary) — this skill is the process that applies them, not a second copy of them. Entry changes land only on the maintainer's explicit go.
+An Audit re-runs the admission test over live sections of README.md: every entry re-verified against current data, tiers reassessed, structure reconsidered, then the maintainer adjudicates and the result is committed. The rules live in CONTRIBUTING.md (Admission, Evidence, Entry Ordering) — this skill is the process that applies them, not a second copy of them. Entry changes land only on the maintainer's explicit go.
 
 ## 1. Scope
 
@@ -37,4 +37,4 @@ One commit per section: body lists each removal with its reason and downloads fi
 
 ## 6. Record
 
-A conclusion that outlives the sitting goes into the repo before the audit ends: admission or evidence rules into CONTRIBUTING.md, repo process and environment facts into CLAUDE.md and AGENTS.md (kept in sync), vocabulary into CONTEXT.md. Done when nothing the next audit needs is stranded in conversation.
+A conclusion that outlives the sitting goes into the repo before the audit ends: admission or evidence rules into CONTRIBUTING.md, repo process and environment facts into CLAUDE.md and AGENTS.md (kept in sync). Done when nothing the next audit needs is stranded in conversation.

@@ -22,5 +22,3 @@ The list's scope test is "serves Python developers", replacing the old "primaril
 - awesome-python.com loses long-tail search traffic for the hundreds of niche tool names it will no longer carry. Accepted deliberately: reader trust over search surface.
 - Fast-moving domains (e.g. AI and Agents) list current leaders by usage and absorb churn through Displacement; an oversized Use Case is either trimmed or Split into finer Use Cases by the maintainer.
 - Linked awesome-* lists (e.g. awesome-python-testing) remain as the escape valve for readers who want exhaustive catalogs.
-
-See CONTEXT.md for the vocabulary (Use Case, Obvious Choice, Challenger, Displacement, Split).
