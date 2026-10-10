@@ -1,0 +1,19 @@
+# Awesome Python
+
+{{ subtitle }}
+
+{{ total_entries }} projects across {{ total_categories }} {% if total_categories == 1 %}category{% else %}categories{% endif %}, updated on {{ build_date }}.
+
+Scan the category index, then jump to the matching section for direct project links and short descriptions. Entries end with `PyPI downloads/month: N` (last 30 days, mirrors and CI included) and `GitHub stars: N` notes in parentheses where known; treat both as popularity context, not a quality guarantee. Use the homepage for project context outside the shortlist.
+
+## Primary Links
+
+- Homepage: {{ site_url }}
+- GitHub repository: {{ github_repo_url }}
+- Contributing guide: {{ contributing_url }}
+- Sponsorship: {{ sponsorship_url }}
+- Sitemap: {{ sitemap_url }}
+
+## Categories
+
+{{ categories_md }}

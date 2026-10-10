@@ -1,0 +1,358 @@
+{% extends "base.html" %}
+{% block title %}{{ category_title }}{% endblock %}
+{% block description %}{{ category_description }}{% endblock %}
+{% block canonical_url %}{{ category_url }}{% endblock %}
+{% block alternate_links %}{% endblock %}
+{% block extra_head %}
+<script type="application/ld+json">{{ category_json_ld | safe }}</script>
+{% endblock %}
+{% block header %}
+<header class="category-hero">
+  <div class="hero-sheen" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="category-hero-shell">
+    <nav class="hero-topbar category-topbar" aria-label="Site">
+      <a href="/" class="hero-brand-mini">Awesome Python</a>
+      <div class="hero-topbar-actions">
+        <a href="/#library-index" class="hero-topbar-link">All projects</a>
+        <a
+          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+          class="hero-topbar-link hero-topbar-link-strong"
+          target="_blank"
+          rel="noopener"
+          >Submit a project</a
+        >
+        <a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>
+      </div>
+    </nav>
+
+    <div class="category-hero-copy">
+      {% if parent_category %}
+      <p class="category-breadcrumb">
+        <a href="/categories/{{ parent_category.slug }}/">{{ parent_category.name }}</a>
+      </p>
+      {% endif %}
+      <h1>{{ category.name }}</h1>
+      {% if category.description_html %}
+      <p class="category-subtitle">{{ category.description_html | safe }}</p>
+      {% endif %}
+      {% if intro_html %}
+      <div class="category-intro">{{ intro_html | safe }}</div>
+      {% endif %}
+      {% set named_groups = entry_groups | selectattr("name") | list %}
+      {% if (named_groups and not group_categories) or guide_html %}
+      <nav class="jump-links" aria-label="On this page">
+        {% if not group_categories %}
+        {% for group in named_groups %}
+        <a class="jump-link" href="#{{ group.slug }}">{{ group.name }}</a>
+        {% endfor %}
+        {% endif %}
+        {% if guide_html %}
+        <a class="jump-link" href="#guide">{{ category.name }} guide</a>
+        {% endif %}
+      </nav>
+      {% endif %}
+    </div>
+
+    {% if group_categories %}
+    <nav class="hero-category-nav" aria-labelledby="hero-category-heading">
+      <div class="hero-category-meta">
+        <h2 id="hero-category-heading">Browse by category</h2>
+      </div>
+      <ul class="hero-category-links">
+        {% for sub in group_categories %}
+        <li>
+          <a class="hero-category-link" href="{{ category_urls[sub.name] }}"
+            >{{ sub.name }}</a
+          >
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    {% endif %}
+  </div>
+</header>
+{% endblock %}
+{% block content %}
+{% macro entry_rows(entry, index) %}
+        {# On section and subcategory pages the group heading already names the row's use case #}
+        {% set grouped_page = entry_groups and not group_categories %}
+        {% set section_path = "/categories/" ~ parent_category.slug ~ "/" if parent_category else current_path %}
+        <tr
+          class="row"
+          tabindex="0"
+          aria-expanded="false"
+          aria-controls="expand-{{ index }}"
+        >
+          <td class="col-num">{{ index }}</td>
+          <td class="col-name">
+            <a href="{{ entry.url }}" target="_blank" rel="noopener"
+              >{{ entry.name }}</a
+            >
+            <span class="mobile-cat{% if grouped_page and (not entry.subcategories or category_urls[entry.subcategories[0].value.split(' > ')[0]] == section_path) %} repeats-heading{% endif %}"
+              >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
+              else %}{{ category.name }}{% endif %}</span
+            >
+          </td>
+          <td class="col-downloads">
+            {% if entry.downloads is not none %}{{
+            "{:,}".format(entry.downloads) }}{% elif entry.source_type ==
+            'Stdlib' %}<span class="source-badge">Stdlib</span>{% elif
+            entry.bundled %}<span class="source-badge">Bundled</span>{% elif
+            entry.badge %}<span class="source-badge">{{ entry.badge }}</span>{%
+            else %}<span class="source-badge">Not on PyPI</span>{% endif %}
+          </td>
+          <td class="col-stars">
+            {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
+            elif entry.source_type %}<span class="source-badge"
+              >{{ entry.source_type }}</span
+            >{% else %}&mdash;{% endif %}
+          </td>
+          <td
+            class="col-commit"
+            {%
+            if
+            entry.last_commit_at
+            %}data-commit="{{ entry.last_commit_at }}"
+            {%
+            endif
+            %}
+          >
+            {% if entry.last_commit_at %}<time
+              datetime="{{ entry.last_commit_at }}"
+              >{{ entry.last_commit_at[:10] }}</time
+            >{% else %}&mdash;{% endif %}
+          </td>
+          <td class="col-cat">
+            {% for subcat in entry.subcategories %}
+            <a class="tag{% if subcat.url == current_path %} active{% endif %}{% if grouped_page and category_urls[subcat.value.split(' > ')[0]] == section_path %} repeats-heading{% endif %}" href="{{ category_urls[subcat.value.split(' > ')[0]] }}#{{ subcat.slug }}">
+              {{ subcat.name }}
+            </a>
+            {% endfor %}
+            {% for cat in entry.categories %}
+            <a
+              class="tag{% if category_urls[cat] == current_path %} active{% endif %}{% if grouped_page and category_urls[cat] == current_path %} repeats-heading{% endif %}"
+              href="{{ category_urls[cat] }}"
+              >{{ cat }}</a
+            >
+            {% endfor %}
+            {% if entry.groups %}
+            {% set group_url = filter_urls[entry.groups[0]] %}
+            <a
+              class="tag tag-group{% if group_url == current_path %} active{% endif %}"
+              href="{{ group_url }}"
+            >
+              {{ entry.groups[0] }}
+            </a>
+            {% endif %}
+            {% if entry.source_type == 'Stdlib' %}
+            <a
+              class="tag tag-source{% if '/categories/built-in/' == current_path %} active{% endif %}"
+              href="/categories/built-in/"
+            >
+              Stdlib
+            </a>
+            {% endif %}
+          </td>
+          <td class="col-arrow"><span class="arrow">&rarr;</span></td>
+        </tr>
+        {% if entry.description %}
+        <tr class="desc-row">
+          <td class="col-num"></td>
+          <td colspan="6">
+            <div class="desc-text">{{ entry.description | safe }}</div>
+          </td>
+        </tr>
+        {% endif %}
+        <tr class="expand-row" id="expand-{{ index }}">
+          <td></td>
+          <td colspan="5">
+            <div class="expand-content">
+              {% if entry.also_see %}
+              <div class="expand-also-see">
+                Also see: {% for see in entry.also_see %}<a
+                  href="{{ see.url }}"
+                  target="_blank"
+                  rel="noopener"
+                  >{{ see.name }}</a
+                >{% if not loop.last %}, {% endif %}{% endfor %}
+              </div>
+              {% endif %}
+              <div class="expand-meta">
+                {% if entry.owner %}<a
+                  href="https://github.com/{{ entry.owner }}"
+                  target="_blank"
+                  rel="noopener"
+                  >{{ entry.owner }}</a
+                ><span class="expand-sep">/</span>{% endif %}<a
+                  href="{{ entry.url }}"
+                  target="_blank"
+                  rel="noopener"
+                  >{{ entry.url | replace("https://", "") }}</a
+                >
+                {% if entry.last_commit_at %}<span class="expand-commit"
+                  ><span class="expand-sep">/</span
+                  ><time datetime="{{ entry.last_commit_at }}"
+                    >{{ entry.last_commit_at[:10] }}</time
+                  ></span
+                >{% endif %} {% if entry.downloads is not none %}<span
+                  class="expand-downloads"
+                  ><span class="expand-sep">/</span>{{
+                  "{:,}".format(entry.downloads) }} downloads/month</span
+                >{% endif %}
+              </div>
+            </div>
+          </td>
+          <td></td>
+        </tr>
+{% endmacro %}
+<section class="results-section" id="library-index">
+  <div class="results-intro section-shell" data-reveal>
+    {% if entry_groups %}
+    {% set named_groups = entry_groups | selectattr("name") | list %}
+    <p class="order-note">
+      {% if group_categories %}Listed by section, in editorial order.{% elif named_groups %}Listed in editorial order, grouped by use case.{% else %}Listed in editorial order.{% endif %}
+      <strong>Click a column</strong> to re-sort the whole list.
+    </p>
+    {% else %}
+    <div>
+      <h2>{{ entries | length }} {{ category.name }} projects</h2>
+    </div>
+    {% endif %}
+    <p class="results-note">
+      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      details.
+    </p>
+  </div>
+
+  <div class="controls section-shell" data-reveal>
+    <h2 class="sr-only">Search and filter</h2>
+    <div class="search-wrap">
+      <svg
+        class="search-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input
+        type="search"
+        class="search"
+        placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
+        aria-label="Search projects"
+      />
+    </div>
+  </div>
+
+  <h2 class="sr-only">Results</h2>
+  <div
+    class="table-wrap"
+    tabindex="0"
+    role="region"
+    aria-label="Libraries table"
+  >
+    <table class="table"{% if entry_groups %} data-default-sort="editorial"{% endif %}>
+      <thead>
+        <tr>
+          <th class="col-num"><span class="sr-only">Row number</span></th>
+          <th class="col-name" data-sort="name">
+            <button type="button" class="sort-btn">Project Name</button>
+          </th>
+          <th class="col-downloads" data-sort="downloads">
+            <button type="button" class="sort-btn">PyPI Downloads</button>
+          </th>
+          <th class="col-stars" data-sort="stars">
+            <button type="button" class="sort-btn">GitHub Stars</button>
+          </th>
+          <th class="col-commit" data-sort="commit-time">
+            <button type="button" class="sort-btn">Last Commit</button>
+          </th>
+          <th class="col-cat">Tags</th>
+          <th class="col-arrow">
+            <button class="back-to-top" aria-label="Back to top">
+              Top &uarr;
+            </button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if entry_groups %}
+        {% set row = namespace(index=0) %}
+        {% for group in entry_groups %}
+        {% if group.name %}
+        <tr class="group-row">
+          <th colspan="7" scope="rowgroup">
+            <h2 id="{{ group.slug }}">
+              {% if group.url %}<a href="{{ group.url }}">{{ group.name }}</a>{% else %}{{ group.name }}{% endif %}
+              <span class="group-count">{{ group.entries | length }} project{{ "s" if group.entries | length != 1 }}</span>
+            </h2>
+            {% if group.lead %}
+            <div class="group-lead">{{ group.lead | safe }}</div>
+            {% endif %}
+          </th>
+        </tr>
+        {% endif %}
+        {% for entry in group.entries %}
+        {% set row.index = row.index + 1 %}
+        {{ entry_rows(entry, row.index) }}
+        {% endfor %}
+        {% endfor %}
+        {% else %}
+        {% for entry in entries %}
+        {{ entry_rows(entry, loop.index) }}
+        {% endfor %}
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="no-results" hidden>
+    <p>No projects match your search or filter.</p>
+    <p class="no-results-hint">
+      Try a broader term, or
+      <button class="no-results-clear">browse all projects</button>.
+    </p>
+  </div>
+</section>
+
+{% if guide_html %}
+<section class="guide-band" id="guide">
+  <div class="guide-section section-shell">
+    <h2>{{ category.name }} guide</h2>
+    <div class="guide-body">{{ guide_html | safe }}</div>
+  </div>
+</section>
+{% endif %}
+
+<section class="final-cta" data-reveal>
+  <div class="section-shell">
+    <p class="section-label">Contribute</p>
+    <h2>Know a project that belongs here?</h2>
+    <p>Tell us what it does and why it stands out.</p>
+    <div class="final-cta-actions">
+      <a
+        href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+        class="hero-action hero-action-primary"
+        target="_blank"
+        rel="noopener"
+        >Submit a project</a
+      >
+      <a
+        href="https://github.com/vinta/awesome-python"
+        class="hero-action hero-action-secondary"
+        target="_blank"
+        rel="noopener"
+        >Star the repository</a
+      >
+    </div>
+  </div>
+</section>
+{% endblock %}

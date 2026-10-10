@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% set default_meta_title = "Awesome Python" %}
+    {% set default_meta_description = "An opinionated guide to the best Python frameworks, libraries, and tools. Explore " ~ (entries | length) ~ " curated projects across " ~ total_categories ~ " categories, from AI and agents to data science and web development." %}
+    {% set default_canonical_url = "https://awesome-python.com/" %}
+    {% set social_image_url = "https://awesome-python.com/static/og-image.png" %}
+    {% set meta_title %}{% block title %}{{ default_meta_title }}{% endblock %}{% endset %}
+    {% set meta_description %}{% block description %}{{ default_meta_description }}{% endblock %}{% endset %}
+    {% set canonical_url %}{% block canonical_url %}{{ default_canonical_url }}{% endblock %}{% endset %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ meta_title | trim }}</title>
+    <meta name="description" content="{{ meta_description | trim }}" />
+    <link rel="canonical" href="{{ canonical_url | trim }}" />
+    {% block alternate_links %}
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs text entry point" />
+    {% endblock %}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ meta_title | trim }}" />
+    <meta property="og:description" content="{{ meta_description | trim }}" />
+    <meta property="og:image" content="{{ social_image_url }}" />
+    <meta property="og:url" content="{{ canonical_url | trim }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ meta_title | trim }}" />
+    <meta name="twitter:description" content="{{ meta_description | trim }}" />
+    <meta name="twitter:image" content="{{ social_image_url }}" />
+    <meta name="theme-color" content="#1c1410" />
+    <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'"
+    />
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    /></noscript>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-0LMLYE0HER"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-0LMLYE0HER");
+    </script>
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+    <a href="#content" class="skip-link">Skip to content</a>
+
+    {% block header %}{% endblock %}
+    <main id="content">
+      <noscript
+        ><p class="noscript-msg">
+          Search and filtering require JavaScript.
+        </p></noscript
+      >
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+      <div class="footer-left">
+        <a href="/" class="footer-brand">Awesome Python</a>
+        <span class="footer-sep">/</span>
+        <a href="/sponsorship/">Sponsorship</a>
+      </div>
+      <div class="footer-links">
+        <span
+          >Made by
+          <a href="https://vinta.ws/" target="_blank" rel="noopener"
+            >Vinta</a
+          ></span
+        >
+        <span class="footer-sep">/</span>
+        <a href="https://github.com/vinta" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        <span class="footer-sep">/</span>
+        <a href="https://x.com/vinta" target="_blank" rel="noopener"
+          >X (Twitter)</a
+        >
+      </div>
+    </footer>
+
+    <script src="/static/main.js"></script>
+  </body>
+</html>

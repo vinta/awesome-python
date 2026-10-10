@@ -1,9 +1,21 @@
+# secrets
+.env*
+
+# macOS
 .DS_Store
 
+# python
+.venv/
+__pycache__/
 *.py[co]
 
-docs/index.md
-site/
+# website
+website/output/
+website/data/*
+!website/data/pypi_name_overrides.json
+!website/data/redirects.json
+!website/data/category_intros/
 
-# PyCharm IDE
-.idea
+# agents
+.playwright-cli/
+tmp/

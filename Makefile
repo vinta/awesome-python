@@ -1,14 +1,32 @@
-site_install:
-	pip install -r requirements.txt
+-include .env
+export
 
-site_link:
-	ln -sf $(CURDIR)/README.md $(CURDIR)/docs/index.md
+install:
+	uv sync --locked
 
-site_preview: site_link
-	mkdocs serve
+fetch_github_stars:
+	uv run python website/fetch_github_stars.py
 
-site_build: site_link
-	mkdocs build
+fetch_pypi_downloads:
+	uv run python website/fetch_pypi_downloads_via_clickpy.py
 
-site_deploy: site_link
-	mkdocs gh-deploy --clean
+test:
+	uv run pytest website/tests/ -v
+
+lint:
+	uv run ruff check .
+
+format:
+	uv run ruff format .
+
+typecheck:
+	uv run ty check website
+
+build:
+	uv run python website/build.py
+
+preview: build
+	uv run watchfiles \
+		'uv run python website/build.py' \
+		README.md website/templates website/static website/data & \
+	python -m http.server -b 127.0.0.1 -d website/output/ 8000
