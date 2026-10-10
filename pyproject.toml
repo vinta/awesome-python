@@ -13,10 +13,10 @@ Homepage = "https://awesome-python.com/"
 Repository = "https://github.com/vinta/awesome-python"
 
 [dependency-groups]
-build = ["httpx>=0.28.1", "jinja2>=3.1.6", "markdown-it-py>=4.0.0"]
-lint = ["ruff>=0.15.6", "ty>=0.0.33"]
-test = ["pytest>=9.0.3"]
-preview = ["watchfiles>=1.2.0"]
+build = ["httpx>=0.28.1", "jinja2>=3.1.6", "markdown-it-py>=4.2.0"]
+lint = ["ruff>=0.16.10", "ty>=0.0.85"]
+test = ["pytest>=9.1.1"]
+preview = ["watchfiles>=1.3.0"]
 dev = [
     { include-group = "build" },
     { include-group = "lint" },
@@ -33,6 +33,7 @@ only-binary = [":all:"]
 
 [tool.ruff]
 line-length = 200
+src = ["website"]
 
 [tool.ty.environment]
 python-version = "3.14"

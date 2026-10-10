@@ -33,10 +33,11 @@ Usage: python fetch_pypi_downloads_via_clickpy.py
 
 import json
 import re
-from datetime import date
+from datetime import UTC, datetime
 from pathlib import Path
 
 import httpx
+
 from readme_parser import parse_readme
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -97,7 +98,7 @@ def main() -> None:
     query_names = sorted({pkg for pkg in packages.values() if pkg})
     print(f"Querying {len(query_names)} package names...")
     counts = fetch_clickpy(query_names)
-    fetched_at = date.today().isoformat()
+    fetched_at = datetime.now(UTC).date().isoformat()
     rows = "\n".join(f"{name}\t{pkg or '-'}\t{counts.get(pkg, 'NOT_FOUND') if pkg else 'NOT_FOUND'}\t{fetched_at}" for name, pkg in packages.items())
     OUT_FILE.write_text(f"name\tpackage\tdownloads\tfetched_at\n{rows}\n")
     print(f"Done. {len(counts)}/{len(query_names)} names found on PyPI. Cached to {OUT_FILE}")

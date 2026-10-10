@@ -1,6 +1,7 @@
 """Tests for fetch_github_stars module."""
 
 import json
+from datetime import UTC
 
 from fetch_github_stars import (
     build_graphql_query,
@@ -161,7 +162,7 @@ class TestMainSkipsFreshCache:
     """Verify that main() skips fetching when all cache entries are fresh."""
 
     def test_skips_fetch_when_cache_is_fresh(self, tmp_path, monkeypatch, capsys):
-        from datetime import datetime, timedelta, timezone
+        from datetime import datetime, timedelta
 
         from fetch_github_stars import main
 
@@ -174,7 +175,7 @@ class TestMainSkipsFreshCache:
         data_dir = tmp_path / "data"
         data_dir.mkdir()
         cache_file = data_dir / "github_stars.json"
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         fresh_cache = {
             "psf/requests": {
                 "stars": 52000,
@@ -201,7 +202,7 @@ class TestMainSkipsFreshCache:
         assert "Cache is up to date" in output
 
     def test_fetches_when_cache_is_stale(self, tmp_path, monkeypatch, capsys):
-        from datetime import datetime, timedelta, timezone
+        from datetime import datetime, timedelta
         from unittest.mock import MagicMock
 
         from fetch_github_stars import main
@@ -215,7 +216,7 @@ class TestMainSkipsFreshCache:
         data_dir = tmp_path / "data"
         data_dir.mkdir()
         cache_file = data_dir / "github_stars.json"
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         stale_cache = {
             "psf/requests": {
                 "stars": 52000,
