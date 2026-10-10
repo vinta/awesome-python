@@ -24,7 +24,7 @@ jobs:
           enable-cache: true
 
       - name: Install dependencies
-        run: uv sync --group build --locked --python 3.14
+        run: uv sync --group build --locked
 
       - name: Run tests
         run: make test
