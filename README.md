@@ -183,7 +183,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [gTTS](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with speaker diarization and emotion detection.
-
+- Frameworks
+  - [apowerb](https://github.com/apowerb/apowerb) - Python library and CLI for serving a Data Agentic Platform - Text to SQL, RAG, Analytics, Eval and monitoring
 ### Deep Learning
 
 _Frameworks for Neural Networks and Deep Learning. Also see [awesome-deep-learning](https://github.com/ChristosChristofidis/awesome-deep-learning)._
