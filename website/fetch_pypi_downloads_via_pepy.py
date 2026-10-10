@@ -23,6 +23,7 @@ import time
 from pathlib import Path
 
 import httpx
+
 from fetch_pypi_downloads_via_clickpy import resolve
 
 ENV_FILE = Path(__file__).parent.parent / ".env"

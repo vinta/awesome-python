@@ -12,10 +12,11 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
 
-from fetch_pypi_downloads_via_clickpy import OVERRIDES_FILE, normalize
 from jinja2 import Environment, FileSystemLoader
 from markdown_it import MarkdownIt
 from markdown_it.tree import SyntaxTreeNode
+
+from fetch_pypi_downloads_via_clickpy import OVERRIDES_FILE, normalize
 from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, render_inline_text, slugify
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
@@ -405,7 +406,7 @@ def synthetic_category(name: str, slug: str) -> SyntheticCategory:
 
 def git_last_change_date(repo_root: Path, *log_args: str) -> str:
     """Return the date of the last commit matching `git log` args, or "" without git history."""
-    result = subprocess.run(["git", "log", "-1", "--format=%cs", "--no-patch", *log_args], cwd=repo_root, capture_output=True, text=True)
+    result = subprocess.run(["git", "log", "-1", "--format=%cs", "--no-patch", *log_args], cwd=repo_root, capture_output=True, text=True, check=False)
     return result.stdout.strip()
 
 

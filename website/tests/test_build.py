@@ -12,6 +12,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 import pytest
+
 from build import (
     TemplateEntry,
     annotate_entries_with_stats,

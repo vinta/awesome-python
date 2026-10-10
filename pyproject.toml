@@ -33,6 +33,7 @@ only-binary = [":all:"]
 
 [tool.ruff]
 line-length = 200
+src = ["website"]
 
 [tool.ty.environment]
 python-version = "3.14"

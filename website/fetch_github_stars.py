@@ -16,6 +16,7 @@ from itertools import batched
 from pathlib import Path
 
 import httpx
+
 from build import extract_github_repo, load_stars
 
 CACHE_MAX_AGE_HOURS = 12
