@@ -384,6 +384,7 @@ _Libraries for working with HTTP._
   - [httpx2](https://github.com/pydantic/httpx2) - HTTP/1.1 and HTTP/2 client with sync and async APIs, maintained by Pydantic ([httpx](https://github.com/encode/httpx) fork).
   - [urllib3](https://github.com/urllib3/urllib3) - An HTTP library with thread-safe connection pooling, file post, and more.
   - [httpx](https://github.com/encode/httpx) - A next generation HTTP client for Python.
+  - [aiosonic](https://github.com/sonic182/aiosonic) - Lightweight asyncio HTTP/1.1, HTTP/2, and WebSocket client.
 - URL Manipulation
   - [yarl](https://github.com/aio-libs/yarl) - Yet another URL library.
 
