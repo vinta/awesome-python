@@ -723,7 +723,6 @@ kbd {
   color: var(--ink-soft);
   font-size: var(--text-sm);
   justify-self: end;
-  max-width: 28rem;
 }
 
 .controls {
