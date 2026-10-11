@@ -41,7 +41,7 @@ Looking for an exhaustive catalog instead? Follow the awesome-\* lists linked un
 
 ## Entry Format Reference
 
-**Use GitHub repository URLs** whenever possible. Projects linked to a GitHub repo are ranked higher on [awesome-python.com](https://awesome-python.com/).
+**Use GitHub repository URLs** whenever possible. [awesome-python.com](https://awesome-python.com/) shows stars and last-commit dates only for GitHub repos, and ranks entries without PyPI downloads by stars.
 
 ### Naming Convention
 

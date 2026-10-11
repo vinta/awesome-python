@@ -6,7 +6,7 @@ description: Warm editorial Python index. Light cream canvas, brown-red interact
 
 # awesome-python.com DESIGN.md
 
-awesome-python.com is a searchable, filterable index of ~650 curated Python projects. It is a reference tool, not a landing page and not a GitHub README mirror.
+awesome-python.com is a searchable, filterable index of ~500 curated Python projects. It is a reference tool, not a landing page and not a GitHub README mirror.
 
 This file follows the [Google Stitch DESIGN.md format](https://stitch.withgoogle.com/docs/design-md/overview/). The source of truth for token values lives in `website/static/style.css`. Color tokens here are written in OKLCH because the project mandates OKLCH over hex, which is a deliberate divergence from the spec's hex-only token requirement.
 
@@ -19,7 +19,7 @@ Working Python developers (mid to senior) are the target reader. They write Pyth
 Jobs to be done:
 
 1. Find a library for a specific need fast (search + tag filter).
-2. Compare candidates at a glance (stars, last commit, tags, one-line description).
+2. Compare candidates at a glance (downloads, stars, last commit, tags, one-line description).
 3. Confirm a project is alive before clicking through.
 
 These users skim. They reward density and terse copy. They penalize marketing fluff.
