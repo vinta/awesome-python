@@ -18,4 +18,4 @@ website/data/*
 
 # agents
 .playwright-cli/
-tmp/
+local/
