@@ -678,6 +678,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [polyfactory](https://github.com/litestar-org/polyfactory) - A mock data generation library based on type hints (continuation of `pydantic-factories`).
 - Code Coverage
   - [coverage](https://github.com/coveragepy/coveragepy) - Code coverage measurement.
+  - [pytest-cov](https://github.com/pytest-dev/pytest-cov) - A pytest plugin for measuring code coverage.
 - Fake Data
   - [faker](https://github.com/joke2k/faker) - A Python package that generates fake data.
   - [mimesis](https://github.com/lk-geimfari/mimesis) - A Python library for generating fake but realistic data in multiple languages and locales.
