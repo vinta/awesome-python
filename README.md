@@ -161,7 +161,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [instructor](https://github.com/567-labs/instructor) - A library for extracting structured data from LLMs, powered by Pydantic.
   - [llama-index](https://github.com/run-llama/llama_index) - A toolkit for building RAG pipelines and agents over your data.
   - [mem0](https://github.com/mem0ai/mem0) - An intelligent memory layer for AI agents enabling personalized interactions.
-  - [openviking](https://github.com/volcengine/OpenViking) - A context database for AI agents that unifies memory, resources, and skills.
+  - [viento](https://github.com/abhinav00anand/viento) - Distributed AI inference runtime SDK connecting local LLMs to a cloud mesh.
+ - [openviking](https://github.com/volcengine/OpenViking) - A context database for AI agents that unifies memory, resources, and skills.
   - [semantica](https://github.com/semantica-agi/semantica) - A graph-native context and knowledge layer for AI agents with reasoning, provenance, and governance.
 - Pre-trained Models
   - [transformers](https://github.com/huggingface/transformers) - The model-definition framework for pretrained models in text, computer vision, audio, video, and multimodal tasks, for inference and training.
