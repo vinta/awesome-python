@@ -138,6 +138,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 
 - Agent Skills
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
+  - [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) - Agent skills for scientific research and analysis with Python libraries like scikit-learn, polars, and biopython.
   - [sentry-skills](https://github.com/getsentry/skills) - Agent skills the Sentry team uses for code review, pull requests, and Django reviews.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Security skills for vulnerability detection, auditing, and testing.
 - Orchestration
