@@ -167,8 +167,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [transformers](https://github.com/huggingface/transformers) - The model-definition framework for pretrained models in text, computer vision, audio, video, and multimodal tasks, for inference and training.
   - [sentence-transformers](https://github.com/huggingface/sentence-transformers) - Compute embeddings, run retrieval, and rerank results with pretrained and fine-tuned models.
 - LLM Inference and Serving
-  - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
+  - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
 - LLM Gateways
   - [litellm](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
