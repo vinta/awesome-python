@@ -2,8 +2,9 @@
 
 A section's last audit is the newest of: a commit whose subject starts with
 `audit: sweep`, `prune: sweep`, or `style: audit` and names the section or its
-Thematic Group, and its line under docs/audit-logs.md "Last Audited". Sections
-whose entries changed since then come first, most changes first; the rest
+Thematic Group, and its line under docs/audit-logs.md "Last Audited". A commit
+on a merged branch dates from that merge. Sections whose entries changed since
+then come first, most changes first; the rest
 follow by oldest audit, never-audited first.
 """
 
@@ -62,9 +63,13 @@ def main() -> None:
         if section not in last or timestamp > last[section][0]:
             last[section] = (timestamp, date, rev)
 
+    # Branch commit -> the merge that landed it, so an audit's follow-up `feat: add` commits count as audited.
+    landed = {commit: merge for merge in git("rev-list", "--first-parent", "--merges", f"{REFORM}..HEAD").split() for commit in git("rev-list", f"{merge}^1..{merge}").split()}
+
     unmatched = []
     for line in git("log", "--format=%H%x09%ct%x09%cs%x09%s", f"{REFORM}..HEAD").splitlines():
         rev, timestamp, date, subject = line.split("\t", 3)
+        rev = landed.get(rev, rev)
         if match := AUDIT_SUBJECT_RE.match(subject):
             sections = resolve(match.group(1), names)
             for section in sections:
