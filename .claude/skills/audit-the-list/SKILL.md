@@ -1,7 +1,7 @@
 ---
 name: audit-the-list
 description: Audit README.md sections against the shortlist rules — re-verify every entry's verdict with live data, promote or demote challengers, restructure oversized use cases, prune, and evaluate proposed additions. Fire when the maintainer asks to audit, sweep, prune, re-check, or maintain sections, or asks whether an entry (or a proposed one) deserves its slot.
-argument-hint: [all or specific sections]
+argument-hint: [all, specific sections, or none for a recommendation]
 ---
 
 # Audit the list
@@ -10,7 +10,9 @@ An Audit re-runs the admission test over live sections of README.md: every entry
 
 ## 1. Scope
 
-Resolve the scope from the arguments. Named sections mean exactly those, whether or not they were audited before (a re-run is how a past verdict gets rechecked). `all` is ambiguous — `AskUserQuestion` whether it means every section or only never-audited ones; prior audits are recorded in git history (`git log --oneline --grep="sweep\|audit"`). With no arguments, AskUserQuestion listing the never-audited Thematic Groups. Batch the work one Thematic Group per sitting. Done when the section list is settled.
+Resolve the scope from the arguments. Named sections mean exactly those, whether or not they were audited before (a re-run is how a past verdict gets rechecked). `all` is ambiguous — `AskUserQuestion` whether it means every section or only never-audited ones. Batch the work one Thematic Group per sitting. Done when the section list is settled.
+
+With no arguments, or to see which sections were never audited, run `uv run python .claude/skills/audit-the-list/scripts/audit_priority.py`. It dates each section's last audit from `audit:`/`prune: sweep` and `style: audit` commit subjects plus the Last Audited lines in `docs/audit-logs.md`, then ranks sections: entries added or removed since that audit first, most changes first, then unchanged sections by oldest audit, never-audited first. Print its ranking, then AskUserQuestion with the top four sections as options, the first marked Recommended, each description carrying its changed entries or its last-audit date. A renamed section loses its audit history and ranks as never audited; the script lists the orphaned subjects, so say so when that happens.
 
 ## 2. Evidence
 
@@ -33,7 +35,7 @@ Run the `preview-verdicts` skill: it generates the interactive review page and d
 
 ## 5. Execute
 
-One commit per section: body lists each removal with its reason and downloads figure, naming the figure's source and fetch date so a later audit can tell whether a trend compares like with like (ClickPy counts mirror traffic, pypistats does not); restructures, tier moves, and reorders ride the same commit. A restructure that renames or dissolves a category or subcategory adds `"old path": "new path"` to `website/data/redirects.json` in that commit, so the old URL keeps its search ranking; the build fails when a redirect target no longer exists, so a later rename also updates the entries pointing at the renamed path. Format-only outcomes (no removals) are a single style commit. `make test` before every commit. After the last add or rename, re-run the ClickPy sweep, since new names have no cache row and the build would count them without downloads, then `make build`. Generic commit helpers tend to split a section audit into structural and per-subcategory commits — if that happens, squash back to one commit per section. Done when the tree is clean, tests passed before each commit, and the build count reconciles with the adjudicated changes.
+One commit per section: body lists each removal with its reason and downloads figure, naming the figure's source and fetch date so a later audit can tell whether a trend compares like with like (ClickPy counts mirror traffic, pypistats does not); restructures, tier moves, and reorders ride the same commit. A restructure that renames or dissolves a category or subcategory adds `"old path": "new path"` to `website/data/redirects.json` in that commit, so the old URL keeps its search ranking; the build fails when a redirect target no longer exists, so a later rename also updates the entries pointing at the renamed path. Format-only outcomes (no removals) are a single style commit whose subject starts `style: audit <Section>`. A section whose audit changes nothing gets a line under Last Audited in `docs/audit-logs.md` instead (`- <Section> -- <yyyy-mm-dd>, no changes.`, replacing its earlier line), committed, since the ranking script reads an audit only from a commit or that line. `make test` before every commit. After the last add or rename, re-run the ClickPy sweep, since new names have no cache row and the build would count them without downloads, then `make build`. Generic commit helpers tend to split a section audit into structural and per-subcategory commits — if that happens, squash back to one commit per section. Done when the tree is clean, tests passed before each commit, and the build count reconciles with the adjudicated changes.
 
 ## 6. Record
 

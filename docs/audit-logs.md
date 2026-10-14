@@ -65,3 +65,7 @@ These entries sit past the 12-month activity requirement without an override. Ea
 - python-pptx -- kept 2026-10-02, last commit 2024-08-06, last release 1.0.2 on 2024-08-07. No successor for generating .pptx files.
 - schedule -- kept 2026-08-16, recorded 2026-10-02. Last commit 2024-05-25.
 - sortedcontainers
+
+## Last Audited
+
+An audit that changes nothing in a section leaves no commit, so its date is recorded here, one line per section, replaced on each re-audit.
