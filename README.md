@@ -138,8 +138,10 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 
 - Agent Skills
   - [django-ai-plugins](https://github.com/vintasoftware/django-ai-plugins) - Django backend agent skills for Django, DRF, Celery, and Django-specific code review.
+  - [scientific-agent-skills](https://github.com/K-Dense-AI/scientific-agent-skills) - Agent skills for scientific research and analysis with Python libraries like scikit-learn, polars, and biopython.
   - [sentry-skills](https://github.com/getsentry/skills) - Agent skills the Sentry team uses for code review, pull requests, and Django reviews.
   - [trailofbits-skills](https://github.com/trailofbits/skills) - Security skills for vulnerability detection, auditing, and testing.
+  - [wshobson-agents](https://github.com/wshobson/agents) - Plugins, agents, and skills for AI coding tools, including Python skills for testing, async, packaging, and uv.
 - Orchestration
   - [langchain](https://github.com/langchain-ai/langchain) - A framework for building agents and LLM-powered applications.
   - [langgraph](https://github.com/langchain-ai/langgraph) - Low-level orchestration framework for building stateful, long-running LLM agents.
@@ -167,8 +169,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [transformers](https://github.com/huggingface/transformers) - The model-definition framework for pretrained models in text, computer vision, audio, video, and multimodal tasks, for inference and training.
   - [sentence-transformers](https://github.com/huggingface/sentence-transformers) - Compute embeddings, run retrieval, and rerank results with pretrained and fine-tuned models.
 - LLM Inference and Serving
-  - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
+  - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
 - LLM Gateways
   - [litellm](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.

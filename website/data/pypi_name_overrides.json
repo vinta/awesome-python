@@ -30,6 +30,7 @@
   "python-patterns": { "package": null, "reason": "reference repo, not a package; PyPI name held by unrelated 2012 project" },
   "pytorch": { "package": "torch", "reason": "PyPI pytorch is a squatter; real package is torch" },
   "renpy": { "package": null, "reason": "distributed via renpy.org; PyPI name was squatted, now 404" },
+  "scientific-agent-skills": { "package": null, "reason": "agent skills repo, not a package" },
   "sentry-skills": { "package": null, "reason": "agent skills repo, not a package" },
   "social-engineer-toolkit": { "package": null, "reason": "GitHub-only, installed from source" },
   "sqlite3": { "package": null, "reason": "stdlib module" },
@@ -42,5 +43,6 @@
   "unittest-mock": { "package": null, "reason": "stdlib module" },
   "uv-audit": { "package": null, "reason": "part of uv (the `uv audit` subcommand); PyPI uv-audit is an unrelated third-party tool by rocshers" },
   "winpython": { "package": null, "reason": "distribution with its own installer; PyPI name is a 2012 relic" },
+  "wshobson-agents": { "package": null, "reason": "agent skills repo, not a package" },
   "zoneinfo": { "package": null, "reason": "stdlib module" }
 }
