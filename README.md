@@ -1176,6 +1176,7 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/pallets-eco/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+- [openbacktesting](https://github.com/lucidcog/openbacktesting) - Python framework for single-asset historical backtesting with pandas statistics, technical indicators, and parameter optimization.
 
 ## Resources
 
