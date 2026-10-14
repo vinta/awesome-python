@@ -30,15 +30,23 @@ def git(*args: str) -> str:
 
 
 @cache
-def entries_at(rev: str) -> dict[str, dict[str, str]]:
-    """Section -> {normalized entry name: display name}, so a recased or re-punctuated name is no change."""
+def entries_at(rev: str) -> dict[str, dict[str, set[str]]]:
+    """Section -> {display name: {normalized name, normalized URL}}.
+
+    An entry matches across revisions on either key, so a rename that keeps its link, or a link fix that keeps its name, is no change.
+    """
     sections = {}
     for group in parse_readme(git("show", f"{rev}:README.md")):
         for category in group["categories"]:
-            names = [entry["name"] for entry in category["entries"]]
-            names += [sub["name"] for entry in category["entries"] for sub in entry["also_see"]]
-            sections[category["name"]] = {re.sub(r"[-_.]+", "-", name).lower(): name for name in names}
+            links = [*category["entries"], *(sub for entry in category["entries"] for sub in entry["also_see"])]
+            sections[category["name"]] = {link["name"]: {re.sub(r"[-_.]+", "-", link["name"]).lower(), link["url"].rstrip("/").lower()} for link in links}
     return sections
+
+
+def missing(entries: dict[str, set[str]], other: dict[str, set[str]]) -> list[str]:
+    """Display names in entries that match no entry in other."""
+    keys = set().union(*other.values())
+    return [name for name, own in entries.items() if not own & keys]
 
 
 def resolve(text: str, groups: dict[str, list[str]]) -> list[str]:
@@ -94,8 +102,8 @@ def main() -> None:
     for section in group_of:
         _, date, rev = last.get(section, (0, "never", REFORM))
         before = entries_at(rev).get(section, {})
-        added = [head[section][n] for n in head[section].keys() - before.keys()]
-        removed = [before[n] for n in before.keys() - head[section].keys()]
+        added = missing(head[section], before)
+        removed = missing(before, head[section])
         row = (section, date, rev[:7] if section in last else "", added, removed)
         (changed if added or removed else unchanged).append(row)
 
