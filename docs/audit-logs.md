@@ -58,6 +58,7 @@ These entries sit past the 12-month activity requirement without an override. Ea
 - diskcache -- kept 2026-10-02, last push 2024-08-10, last release 5.6.3 (2023-08-31). Kept despite an unpatched pickle deserialization advisory, CVE-2025-69872 (GHSA-w8v5-vhqr-4h9v), on 25,526,045 downloads/month on ClickPy.
 - django-rules -- recorded 2026-10-02 ahead of its activity-line crossing on 2026-10-11 (last push 2025-10-11, last release 3.5 on 2024-09-02).
 - ftfy
+- gensim -- recorded 2026-10-15 ahead of its activity-line crossing on 2026-11-01 (last push 2025-11-01, last release 4.4.0 on 2025-10-18), on 2,904,015 downloads/month on ClickPy (2026-10-12).
 - httpie -- kept 2026-08-16, recorded 2026-10-02. Last commit 2024-12-17, last release 3.2.4 on 2024-11-01.
 - itsdangerous
 - jieba
