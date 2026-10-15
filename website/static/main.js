@@ -331,6 +331,7 @@ if (tbody) {
   // Keyboard: Enter or Space on focused .row toggles expand
   tbody.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
+    if (e.target.closest("a")) return;
     const row = e.target.closest("tr.row");
     if (!row) return;
     e.preventDefault();
