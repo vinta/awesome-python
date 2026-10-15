@@ -280,7 +280,6 @@ kbd {
 .hero-copy {
   width: 100%;
   max-width: none;
-  animation: hero-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-kicker,
@@ -354,7 +353,6 @@ kbd {
   align-items: start;
   padding-top: 1.35rem;
   border-top: 1px solid var(--hero-line);
-  animation: hero-rise 820ms cubic-bezier(0.22, 1, 0.36, 1) 110ms both;
 }
 
 .hero-category-meta h2 {
@@ -1656,17 +1654,6 @@ th[data-sort].sort-asc::after {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-@keyframes hero-rise {
-  from {
-    opacity: 0;
-    transform: translateY(1.3rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @keyframes expand-in {
