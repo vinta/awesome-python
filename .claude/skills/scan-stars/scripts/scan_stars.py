@@ -92,6 +92,7 @@ def main() -> None:
     print("repo\tlanguage\tstars\tpushed\ttopics\tdescription\tprior")
     for star in stars:
         repo = star["full_name"].lower()
+        verdict = prior.get(repo) or prior.get(f"{star['owner']['login'].lower()}/*")
         if repo in listed:
             dropped["already listed"] += 1
         elif star["owner"]["login"].lower() == login:
@@ -102,11 +103,11 @@ def main() -> None:
             dropped["no push in 12 months"] += 1
         elif datetime.fromisoformat(star["created_at"]) > now - timedelta(days=30):
             dropped["created under a month ago"] += 1
-        elif repo in prior and not args.full:
+        elif verdict and not args.full:
             dropped["judged before"] += 1
         else:
             description = " ".join((star["description"] or "").split())
-            print("\t".join([star["full_name"], star["language"] or "-", str(star["stargazers_count"]), star["pushed_at"][:10], ",".join(star["topics"]), description, prior.get(repo, "")]))
+            print("\t".join([star["full_name"], star["language"] or "-", str(star["stargazers_count"]), star["pushed_at"][:10], ",".join(star["topics"]), description, verdict or ""]))
 
     print(f"{len(stars)} stars; {len(stars) - dropped.total()} candidates", file=sys.stderr)
     for reason, count in dropped.most_common():
