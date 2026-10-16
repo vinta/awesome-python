@@ -10,7 +10,8 @@ How to choose:
 - Prompts tuned against a metric: DSPy
 - Agent data: Instructor for structured output, LlamaIndex for RAG, Mem0 for memory
 - Open models from the Hugging Face Hub: Transformers
-- Serving open models: vLLM or SGLang, or MLX LM on Apple silicon
+- Running open models locally: Ollama, llama-cpp-python in your own process, MLX LM on Apple silicon
+- Serving open models: vLLM or SGLang
 - One OpenAI-style API for many model providers: LiteLLM
 - Image and video generation: Diffusers
 - Fine-tuning: TRL with PEFT adapters, Unsloth for less GPU memory, Axolotl from YAML
@@ -44,7 +45,9 @@ Mem0 gives an agent [memory of each user](https://github.com/mem0ai/mem0): searc
 
 Transformers is the [model definition that most training frameworks and inference engines share](https://huggingface.co/docs/transformers/index), Axolotl, Unsloth, vLLM, and SGLang among them. Load a model from the Hugging Face Hub with [`from_pretrained()`](https://huggingface.co/docs/transformers/quicktour), then run it through `Pipeline` for inference or `Trainer` for training. For large production deployments, its docs [send you to vLLM or SGLang](https://huggingface.co/docs/transformers/serve-cli/serving).
 
-vLLM runs [batch inference offline or an OpenAI-compatible server](https://docs.vllm.ai/en/latest/getting_started/quickstart/), so apps written for the OpenAI API work unchanged. SGLang is [optimized for agentic workloads, RL rollouts, and large-scale serving](https://github.com/sgl-project/sglang). On a Mac, MLX LM [runs and fine-tunes models on Apple silicon](https://github.com/ml-explore/mlx-lm).
+The Ollama Python library talks to Ollama, which [runs models on your computer](https://docs.ollama.com/api/introduction). [Start Ollama and pull a model](https://github.com/ollama/ollama-python) with `ollama pull`, then pass the model's name to `chat()`. llama-cpp-python gives you [Python bindings for llama.cpp](https://github.com/abetlen/llama-cpp-python), so the model runs inside your program. Load a GGUF file with the `Llama` class, or fetch one from the Hugging Face Hub with `Llama.from_pretrained()`. Its completions come back in the OpenAI format. On a Mac, MLX LM [runs and fine-tunes models on Apple silicon](https://github.com/ml-explore/mlx-lm).
+
+vLLM runs [batch inference offline or an OpenAI-compatible server](https://docs.vllm.ai/en/latest/getting_started/quickstart/), so apps written for the OpenAI API work unchanged. SGLang is [optimized for agentic workloads, RL rollouts, and large-scale serving](https://github.com/sgl-project/sglang).
 
 LiteLLM [returns every provider's responses in the OpenAI format](https://docs.litellm.ai/docs/) and maps their errors to OpenAI's exception types, so one code path covers them all. Use its Python SDK inside your app, or run its proxy as a self-hosted gateway for your team.
 
