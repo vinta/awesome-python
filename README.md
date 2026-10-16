@@ -487,6 +487,7 @@ _Libraries for caching data._
 
 - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
 - [diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend, compatible with Django.
+- [django-redis](https://github.com/jazzband/django-redis) - Full-featured Redis cache backend for Django.
 - [hishel](https://github.com/karpetrosyan/hishel) - RFC 9111 compliant HTTP caching for clients like httpx and requests and servers like FastAPI, with sync and async support.
 - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 
