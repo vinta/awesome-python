@@ -1,8 +1,7 @@
 ---
 name: scan-github-stars
 description: Scan the maintainer's GitHub stars for README.md addition candidates; incremental by default, `full` rejudges stars judged before.
-argument-hint: [full]
-disable-model-invocation: true
+argument-hint: [incremental | full]
 ---
 
 # Scan GitHub stars
