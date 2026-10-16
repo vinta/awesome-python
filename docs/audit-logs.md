@@ -69,7 +69,14 @@ These entries sit past the 12-month activity requirement without an override. Ea
 
 ## Rejected Additions
 
-A proposed entry the maintainer turned down leaves no commit, so it is recorded here with the evidence at decision time, keyed by its GitHub `owner/repo`. Rejudge one only on new evidence.
+Projects the maintainer decided not to list, with the evidence at decision time, keyed by GitHub `owner/repo` (`owner/*` for a whole organization). PR reviews and star scans check here before proposing a project again. Rejudge one only on new evidence.
+
+- BrianPugh/autoregistry -- 2026-08-23, 16,758 downloads/month: 77 stars.
+- MarcBresson/schedium -- 2026-08-23, 381 downloads/month: repository created 2026-02-05.
+- ets-labs/python-dependency-injector -- 2026-08-23, 9,086,069 downloads/month: the Dependency Injection use case was declined, since FastAPI's Depends and pytest fixtures absorb most of the need, leaving a leader with no challenger field.
+- konradhalas/dacite -- 2026-08-23, 23,147,569 downloads/month: last push 2025-03-17, fails the activity rule.
+- reagento/dishka -- 2026-08-23, 769,893 downloads/month: declined with the Dependency Injection use case.
+- xberg-io/* -- 2026-08-16: coordinated multi-entry self-promotion; four planted entries were removed (xberg, liter-llm, tree-sitter-language-pack, html-to-markdown). Reject any project from this organization on sight.
 
 ## Last Audited
 
