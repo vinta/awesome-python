@@ -1163,10 +1163,13 @@ _Frameworks and tools for penetration testing._
 
 ### Supply Chain Security
 
-_Tools for auditing dependencies against known vulnerabilities._
+_Tools for auditing dependencies against known vulnerabilities and scanning for leaked secrets._
 
-- [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the Python Packaging Advisory Database or OSV.
-- [uv-audit](https://github.com/astral-sh/uv) - (part of uv) uv's [dependency vulnerability scanning](https://docs.astral.sh/uv/reference/cli/#uv-audit) backed by OSV.
+- Dependency Audits
+  - [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the Python Packaging Advisory Database or OSV.
+  - [uv-audit](https://github.com/astral-sh/uv) - (part of uv) uv's [dependency vulnerability scanning](https://docs.astral.sh/uv/reference/cli/#uv-audit) backed by OSV.
+- Secret Scanning
+  - [betterleaks](https://github.com/betterleaks/betterleaks) - Finds leaked secrets in git history, directories, and files, from the original author of gitleaks.
 
 ### Web Security
 
