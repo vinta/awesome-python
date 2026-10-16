@@ -1,5 +1,6 @@
 {
   "/categories/": "/",
+  "/categories/ai-and-agents/llm-inference-and-serving/": "/categories/ai-and-agents/llm-serving/",
   "/categories/ai-and-agents/pre-trained-models-and-inference/": "/categories/ai-and-agents/pre-trained-models/",
   "/categories/cli-development/cli-development/": "/categories/cli-development/",
   "/categories/cli-tools/productivity-tools/": "/categories/cli-tools/",
