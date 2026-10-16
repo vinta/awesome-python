@@ -11,7 +11,7 @@ How to choose:
 - Black's own formatting, with imports sorted to match: Black and isort
 - Checks Ruff can't run: Pylint for deeper inference, Flake8 for your own plugins
 - Security issues: Bandit
-- Renaming and moving code from your editor or a script: Rope
+- Refactoring: Rope from your editor or a script, ast-grep for pattern rewrites
 - Type checking Django or Pydantic code: mypy with its plugins, Pyrefly without
 - Adding types to a partly typed codebase: ty
 - Type checking in VS Code: Pyright, which Pylance runs on
@@ -37,6 +37,8 @@ Flake8 [wraps pyflakes, pycodestyle, and McCabe](https://github.com/PyCQA/flake8
 Bandit [finds common security issues](https://bandit.readthedocs.io/en/latest/) in Python code. Scan a whole tree with [`bandit -r`](https://bandit.readthedocs.io/en/latest/start.html).
 
 Rope is a refactoring library that [many IDEs and editors use](https://rope.readthedocs.io/en/latest/overview.html) to rename, extract, and move code, and scripts can run the same refactorings through [its library API](https://rope.readthedocs.io/en/latest/library.html).
+
+ast-grep matches code by its syntax tree, with [patterns you write like ordinary code](https://ast-grep.github.io/guide/quick-start.html#pattern). Start with a one-off rewrite on the command line: [`ast-grep run --pattern ... --rewrite ...`](https://ast-grep.github.io/guide/rewrite-code.html#using-ast-grep-run-p-pat-rewrite) shows you a diff of the changes. When the same code smell keeps coming back, its docs suggest you [write a YAML rule](https://ast-grep.github.io/guide/introduction.html#progressiveness) and run all your rules with `ast-grep scan`.
 
 mypy is [designed for gradual typing](https://mypy.readthedocs.io/en/stable/): by default, it [skips functions without annotations](https://mypy.readthedocs.io/en/stable/getting_started.html#dynamic-vs-static-typing), so you can add type hints slowly. Check in one config file, [run mypy in CI](https://mypy.readthedocs.io/en/stable/existing_code.html#run-mypy-consistently-and-prevent-regressions) so new type errors don't land, and aim for `--strict`. Its [plugins](https://mypy.readthedocs.io/en/stable/extending_mypy.html#extending-mypy-using-plugins) teach it libraries the standard type system can't describe.
 
