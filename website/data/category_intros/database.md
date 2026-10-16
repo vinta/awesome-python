@@ -5,6 +5,7 @@ How to choose:
 - Analytical SQL over Parquet, CSV, or DataFrames: DuckDB
 - Vector search in a prototype or notebook: Chroma
 - ClickHouse's SQL dialect, or pandas code that runs on ClickHouse: chDB
+- Similarity search over vectors you hold in NumPy arrays: Faiss
 - Vectors stored with their raw images and text, on disk: LanceDB
 - Vector search embedded in an app or an edge device: Zvec
 - A small JSON document store for one script: TinyDB
@@ -14,6 +15,8 @@ Start DuckDB with `duckdb.sql()`, which runs on an [in-memory database kept insi
 chDB runs ClickHouse inside your process, so you get its SQL dialect without a ClickHouse server. If you come from pandas, [start with the DataStore API](https://clickhouse.com/docs/chdb#for-pandas-users): change the import, and your pandas code works unchanged. For SQL, use the [connection-based API](https://clickhouse.com/docs/chdb/install/python#connection-based-api), and query DataFrames with the [`Python()` table engine](https://clickhouse.com/docs/chdb/install/python#python-table-engine-recommended).
 
 Chroma's [in-memory client](https://docs.trychroma.com/docs/run-chroma/clients) is the quick way to try it in a notebook, and `PersistentClient` keeps the data on disk. Add text documents, and Chroma [embeds and indexes them for you](https://docs.trychroma.com/docs/overview/getting-started), so you can query with text too.
+
+Faiss is a similarity search library, not a database. It [keeps no metadata with the vectors](https://arxiv.org/html/2401.08281#S6.SS1), only integer IDs, so you store your documents elsewhere and look them up by ID. Its [tutorial](https://github.com/facebookresearch/faiss/wiki/Getting-started) builds an index for the vector dimension, adds a float32 NumPy array, and calls `search()` for the nearest neighbors. `IndexFlatL2` returns exact results. To trade some accuracy for speed or memory, [pick an index by RAM and dataset size](https://github.com/facebookresearch/faiss/wiki/Guidelines-to-choose-an-index).
 
 LanceDB starts as an [embedded library pointed at a local directory](https://docs.lancedb.com/quickstart). Its indexes live on disk, and a table [stores the raw data, metadata, and embeddings together](https://docs.lancedb.com/faq/faq-oss), which suits images and other multimodal data. Its [embedding function registry](https://docs.lancedb.com/embedding) generates vectors as you insert rows, and Python code can then query with text.
 
