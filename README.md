@@ -449,6 +449,7 @@ _Libraries for connecting and operating databases._
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   - [psycopg](https://github.com/psycopg/psycopg) - A PostgreSQL adapter for Python, the successor to psycopg2.
   - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
+  - [pgvector](https://github.com/pgvector/pgvector-python) - pgvector support for Python, adding vector types and similarity search to psycopg, asyncpg, SQLAlchemy, and Django.
 - SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
   - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
