@@ -511,6 +511,7 @@ _Libraries for serializing complex data types._
   - [msgspec](https://github.com/msgspec/msgspec) - A fast serialization and validation library with built-in support for JSON, MessagePack, YAML, and TOML.
 - Object Pickling
   - [cloudpickle](https://github.com/cloudpipe/cloudpickle) - Extends pickle to functions, lambdas, and interactively defined classes, for shipping code to remote workers.
+  - [dill](https://github.com/uqfoundation/dill) - Extends pickle to serialize almost any Python object, including closures and whole interpreter sessions.
 
 **Data & Science**
 
