@@ -238,6 +238,7 @@ _Libraries for working with human languages._
 - Chinese
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
   - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
+  - [OpenCC](https://github.com/BYVoid/OpenCC) - Conversion between Traditional and Simplified Chinese, with regional variants and phrase-level rules.
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
 
 ### Computer Vision
