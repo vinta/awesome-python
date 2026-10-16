@@ -60,13 +60,16 @@ def listed_repos() -> set[str]:
     return repos
 
 
-def prior_verdicts() -> dict[str, str]:
-    """Repo -> earlier verdict. The ledger is append-only, so its last row per repo wins; a maintainer rejection outranks both."""
-    prior = {}
+def prior_verdicts() -> dict[str, str | None]:
+    """The last ledger row wins; `parked` reopens a repo. An exact registered rejection still wins."""
+    prior: dict[str, str | None] = {}
     if LEDGER.exists():
         for line in LEDGER.read_text().splitlines()[1:]:
             repo, date, reason = line.split("\t", 2)
-            prior[repo.lower()] = f"screened out {date}: {reason}"
+            if reason == "parked":
+                prior[repo.lower()] = None
+            else:
+                prior[repo.lower()] = f"screened out {date}: {reason}"
     register = REGISTER.read_text().splitlines()
     start = register.index("## Rejected Additions")
     for line in register[start + 1 :]:
@@ -92,7 +95,7 @@ def main() -> None:
     print("repo\tlanguage\tstars\tpushed\ttopics\tdescription\tprior")
     for star in stars:
         repo = star["full_name"].lower()
-        verdict = prior.get(repo) or prior.get(f"{star['owner']['login'].lower()}/*")
+        verdict = prior[repo] if repo in prior else prior.get(f"{star['owner']['login'].lower()}/*")
         if repo in listed:
             dropped["already listed"] += 1
         elif star["owner"]["login"].lower() == login:

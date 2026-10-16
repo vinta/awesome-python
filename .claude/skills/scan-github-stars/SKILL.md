@@ -7,7 +7,7 @@ disable-model-invocation: true
 
 # Scan GitHub stars
 
-A star scan turns the maintainer's GitHub stars into proposed additions. Every star the scan sees ends in one place: listed in README.md, screened out in `local/starred-scan.tsv`, or rejected under `docs/audit-logs.md` "Rejected Additions". Judgment belongs to `audit-the-list` and the rules to CONTRIBUTING.md; this skill only sources candidates and records outcomes.
+A star scan turns the maintainer's GitHub stars into proposed additions. Every star the scan sees ends in one place: listed in README.md, screened out in `local/starred-scan.tsv`, rejected under `docs/audit-logs.md` "Rejected Additions", or parked for another review. Judgment belongs to `audit-the-list` and the rules to CONTRIBUTING.md; this skill only sources candidates and records outcomes.
 
 ## 1. Scan
 
@@ -30,7 +30,7 @@ Run `preview-verdicts` over all groups: survivors with kind `candidate` and verd
 ## 5. Record
 
 - **Added**: follow `audit-the-list` step 5 for the README change, one commit per entry. When the entry links a different repo than the star (a Python binding or client of a starred engine), also append a ledger row `already listed as <entry> (<owner/repo>)` for the star, since the script only recognizes a star whose own repo is linked.
-- **Rejected**: a candidate that reached review and was not added gets one line under "Rejected Additions": `- owner/repo -- yyyy-mm-dd, <downloads>/month (<source>): <reason>.`, replacing its earlier line.
-- **Parked**: a row the maintainer parks gets no record, so it resurfaces next run.
+- **Rejected**: a candidate with verdict `reject` gets one line under "Rejected Additions": `- owner/repo -- yyyy-mm-dd, <downloads>/month (<source>): <reason>.`, replacing its earlier line. This exact rejection takes precedence over a parked ledger row.
+- **Parked**: leave listed entries in README.md. An unlisted repo with no prior decision needs no record. To reopen one screened out or rejected before, remove its exact "Rejected Additions" line and append `owner/repo<TAB>yyyy-mm-dd<TAB>parked` to the ledger. Its earlier screen-out rows stay as history. The marker also exempts this repo from an `owner/*` rejection; leave that organization line in place for its other repos. A later screen-out or exact rejection excludes the repo again. A new organization-wide rejection must explicitly resolve any parked exceptions it is intended to cover.
 
 Done when every candidate from step 1 is listed in README.md, a ledger row, a Rejected Additions line, or parked by the maintainer.
