@@ -6,6 +6,7 @@ How to choose:
 - ELF binaries and DWARF debug info: pyelftools
 - A table you import or export as CSV, JSON, YAML, or Excel: Tablib
 - Documents turned into Markdown for an LLM: MarkItDown, or Docling for complex layouts and scans
+- Documents converted between Markdown, Word, LaTeX, and HTML: pypandoc
 - Excel: openpyxl to edit a workbook, XlsxWriter to create one with charts and formatting
 - Word documents: python-docx
 - PowerPoint decks: python-pptx
@@ -24,6 +25,8 @@ Tablib is a [format-agnostic tabular dataset library](https://tablib.readthedocs
 MarkItDown converts PDF, Word, Excel, PowerPoint, HTML, and more into Markdown [for LLMs and text analysis](https://github.com/microsoft/markitdown). Its README says it may not be the best option for high-fidelity conversions that people read. Don't pass untrusted input straight to it, and when you only read local files, [call `convert_local()` instead of `convert()`](https://github.com/microsoft/markitdown#security-considerations), which also fetches URLs.
 
 Docling is for documents where layout matters: it [understands page layout, reading order, and tables, and runs OCR](https://docling-project.github.io/docling/) on scanned PDFs. It converts each file into a `DoclingDocument`, which you export to Markdown.
+
+pypandoc wraps pandoc, which [converts between Markdown, Word, LaTeX, HTML, and many other formats](https://pandoc.org/) in both directions. It needs pandoc on your machine, and the [`pypandoc_binary` package](https://github.com/JessicaTegner/pypandoc#installation) includes it. Pass a path to `convert_file()`, or a string and its `format` to `convert_text()`. For output formats like DOCX and EPUB, [pass an `outputfile`](https://github.com/JessicaTegner/pypandoc#usage), since that's the only way to convert to them.
 
 openpyxl reads and writes Excel workbooks, so it's the one to use when the file already exists. Install defusedxml when you open spreadsheets from other people, since openpyxl [doesn't guard against XML attacks](https://openpyxl.readthedocs.io/en/stable/#security) by default.
 
