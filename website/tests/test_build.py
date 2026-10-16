@@ -1100,7 +1100,7 @@ class TestBuild:
         parser.feed(category_html)
         assert parser.meta_by_name["description"] == "Use w1 for most apps."
         assert '<div class="category-intro"><p>Use <code>w1</code> for most apps.</p>' in category_html
-        assert "<li>Small apps: w1</li>" in category_html
+        assert '<li>Small apps: <a href="#entry-w1">w1</a></li>' in category_html
         assert '<a href="https://example.com/docs" target="_blank" rel="noopener">the docs</a>' in category_html
 
     def test_build_renders_category_guide_below_table(self, tmp_path):
@@ -1113,7 +1113,7 @@ class TestBuild:
 
         category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
         intro_html = category_html.split('<div class="category-intro">', 1)[1].split("</div>", 1)[0]
-        assert "<li>Small apps: w1</li>" in intro_html
+        assert '<li>Small apps: <a href="#entry-w1">w1</a></li>' in intro_html
         assert "Set up w1" not in intro_html
         guide_html = category_html.split('<section class="guide-band" id="guide">', 1)[1]
         assert "<h2>Widgets guide</h2>" in guide_html
@@ -1599,3 +1599,20 @@ class TestLoadCategoryIntro:
 
     def test_returns_empty_strings_without_intro_file(self, tmp_path):
         assert load_category_intro(tmp_path / "missing.md") == ("", "", "", "")
+
+    def test_links_picks_to_entry_rows(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text(
+            "Use w1.\n\nHow to choose:\n\n- Small apps: Django Ninja, or `uv tool` on uv\n- Big apps: Django\n- Old apps: The Algorithms - Python\n\nSee [w1](https://w1.example).\n", encoding="utf-8"
+        )
+        intro_html, guide_html, _, _ = load_category_intro(path, ["django-ninja", "Django", "uv", "TheAlgorithms"])
+        assert '<li>Small apps: <a href="#entry-django-ninja">Django Ninja</a>, or <code>uv tool</code> on <a href="#entry-uv">uv</a></li>' in intro_html
+        assert '<li>Big apps: <a href="#entry-django">Django</a></li>' in intro_html
+        assert '<li>Old apps: <a href="#entry-thealgorithms">The Algorithms</a> - Python</li>' in intro_html
+        assert '<a href="https://w1.example" target="_blank" rel="noopener">w1</a>' in guide_html
+
+    def test_links_pick_aliases_to_entry_rows(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\nHow to choose:\n\n- Vision: OpenCV\n", encoding="utf-8")
+        intro_html, _, _, _ = load_category_intro(path, ["opencv-python"])
+        assert '<li>Vision: <a href="#entry-opencv-python">OpenCV</a></li>' in intro_html

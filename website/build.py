@@ -39,6 +39,30 @@ SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and 
 
 BUNDLED_PREFIX_RE = re.compile(r"^\(part of ")
 
+# Category intros name projects as their docs do, README entries by their PyPI name
+PICK_ALIASES = {
+    "Airflow": "apache-airflow",
+    "Beautiful Soup": "beautifulsoup4",
+    "Cacheops": "django-cacheops",
+    "Chroma": "chromadb",
+    "Coverage.py": "coverage",
+    "Faiss": "faiss-cpu",
+    "gRPC": "grpcio",
+    "Grappelli": "django-grappelli",
+    "Hydra": "hydra-core",
+    "Ibis": "ibis-framework",
+    "Material for MkDocs": "mkdocs-material",
+    "OpenCV": "opencv-python",
+    "Playwright": "playwright-python",
+    "PyAV": "av",
+    "python-oracledb": "oracledb",
+    "Sherlock": "sherlock-project",
+    "Silk": "django-silk",
+    "Surprise": "scikit-surprise",
+    "Unfold": "django-unfold",
+    "Vega-Altair": "altair",
+}
+
 SOURCE_TYPE_DOMAINS = {
     "docs.python.org": BUILTIN_FILTER,
     "gitlab.com": "GitLab",
@@ -253,7 +277,52 @@ def subcategory_meta_description(name: str, parent_name: str, entry_names: Seque
     return f"The {name} picks in Awesome Python's {parent_name} list: {names}."
 
 
-def load_category_intro(path: Path) -> tuple[str, str, str, str]:
+def entry_name_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def link_pick_names(pick: str, slugs_by_key: dict[str, str]) -> str:
+    """Link entry names in a "How to choose" pick to their rows, preferring the longest match.
+
+    Names match ignoring case and punctuation, so the README's PyPI-style
+    "django-ninja" matches the intro's "Django Ninja".
+    """
+    words = list(re.finditer(r"`[^`]*`|[^\s,]+", pick))
+    parts, pos, i = [], 0, 0
+    while i < len(words):
+        for j in range(min(len(words), i + 4), i, -1):
+            start, end = words[i].start(), words[j - 1].end()
+            span = pick[start:end]
+            slug = slugs_by_key.get(entry_name_key(span))
+            # Code spans and dangling punctuation like "The Algorithms -" stay outside links
+            if slug and span[0].isalnum() and span[-1].isalnum() and "," not in span and "`" not in span:
+                parts.append(f"{pick[pos:start]}[{span}](#entry-{slug})")
+                pos, i = end, j
+                break
+        else:
+            i += 1
+    return "".join(parts) + pick[pos:]
+
+
+def link_intro_picks(text: str, entry_names: Sequence[str]) -> str:
+    """Link the picks in an intro's "How to choose:" list to their rows in the table below."""
+    head, marker, rest = text.partition("\nHow to choose:\n\n")
+    if not marker:
+        return text
+    slugs_by_key = {entry_name_key(name): slugify(name) for name in entry_names}
+    for alias, name in PICK_ALIASES.items():
+        if entry_name_key(name) in slugs_by_key:
+            slugs_by_key[entry_name_key(alias)] = slugs_by_key[entry_name_key(name)]
+    lines = rest.split("\n")
+    for i, line in enumerate(lines):
+        if not line.startswith("- "):
+            break
+        situation, _, pick = line.rpartition(": ")
+        lines[i] = f"{situation}: {link_pick_names(pick, slugs_by_key)}"
+    return head + marker + "\n".join(lines)
+
+
+def load_category_intro(path: Path, entry_names: Sequence[str] = ()) -> tuple[str, str, str, str]:
     """Render a category intro file to HTML, split at the end of its "How to choose:" list.
 
     Returns the part shown above the table, the guide shown below it, and the
@@ -264,10 +333,10 @@ def load_category_intro(path: Path) -> tuple[str, str, str, str]:
     if not path.exists():
         return "", "", "", ""
     md = MarkdownIt("commonmark")
-    tokens = md.parse(path.read_text(encoding="utf-8"))
+    tokens = md.parse(link_intro_picks(path.read_text(encoding="utf-8"), entry_names))
     for token in tokens:
         for child in token.children or []:
-            if child.type == "link_open":
+            if child.type == "link_open" and not str(child.attrGet("href")).startswith("#"):
                 child.attrSet("target", "_blank")
                 child.attrSet("rel", "noopener")
     lead = next(node for node in SyntaxTreeNode(tokens).children if node.type == "paragraph")
@@ -731,6 +800,7 @@ def build(repo_root: Path) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.filters["slugify"] = slugify
     site_dir = website / "output"
     if site_dir.exists():
         shutil.rmtree(site_dir)
@@ -776,7 +846,10 @@ def build(repo_root: Path) -> None:
         page_dir.mkdir(parents=True, exist_ok=True)
         parent_name = parent_category["name"] if parent_category else None
         category_title = category_meta_title(category["name"], parent_name)
-        intro_html, guide_html, intro_lead, _ = load_category_intro(website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md")
+        page_entries = [entry for group in entry_groups for entry in group["entries"]] if entry_groups else entries
+        intro_html, guide_html, intro_lead, _ = load_category_intro(
+            website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md", [e["name"] for e in page_entries]
+        )
         if intro_lead:
             category_description = intro_lead
         elif parent_name:
@@ -787,7 +860,6 @@ def build(repo_root: Path) -> None:
         if parent_category:
             breadcrumbs.append((parent_category["name"], category_public_url(parent_category)))
         breadcrumbs.append((category["name"], category_url))
-        page_entries = [entry for group in entry_groups for entry in group["entries"]] if entry_groups else entries
         category_json_ld = json.dumps(
             build_category_json_ld(category_title.removesuffix(" - Awesome Python"), category_url, category_description, page_entries, breadcrumbs),
             ensure_ascii=False,
