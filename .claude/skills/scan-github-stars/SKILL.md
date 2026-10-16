@@ -1,17 +1,17 @@
 ---
-name: scan-stars
+name: scan-github-stars
 description: Scan the maintainer's GitHub stars for README.md addition candidates; incremental by default, `full` rejudges stars judged before.
 argument-hint: [full]
 disable-model-invocation: true
 ---
 
-# Scan stars
+# Scan GitHub stars
 
 A star scan turns the maintainer's GitHub stars into proposed additions. Every star the scan sees ends in one place: listed in README.md, screened out in `local/starred-scan.tsv`, or rejected under `docs/audit-logs.md` "Rejected Additions". Judgment belongs to `audit-the-list` and the rules to CONTRIBUTING.md; this skill only sources candidates and records outcomes.
 
 ## 1. Scan
 
-Run `uv run python .claude/skills/scan-stars/scripts/scan_stars.py`, adding `--full` when the argument is `full`. With no ledger yet, a plain run already covers every star. Print the drop counts from stderr. Done when the candidate TSV is in hand.
+Run `uv run python .claude/skills/scan-github-stars/scripts/scan_github_stars.py`, adding `--full` when the argument is `full`. With no ledger yet, a plain run already covers every star. Print the drop counts from stderr. Done when the candidate TSV is in hand.
 
 ## 2. Screen
 
