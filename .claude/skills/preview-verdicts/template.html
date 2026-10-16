@@ -74,8 +74,7 @@ const KEY = "__KEY__";
 let state = {};
 try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
 
-// A row's seeded verdict picks its button set, so each verdict word names one outcome.
-const CHOICES = { keep: ["keep", "remove"], remove: ["keep", "remove"], add: ["add", "reject"], reject: ["add", "reject"], restructure: ["restructure", "park", "reject"], park: ["restructure", "park", "reject"] };
+const CHOICES = { listed: ["keep", "remove", "park"], candidate: ["add", "reject", "park"], structure: ["restructure", "park", "reject"] };
 const cap = v => v[0].toUpperCase() + v.slice(1);
 
 function rowId(section, name) { return section + "::" + name; }
@@ -83,13 +82,13 @@ function rowId(section, name) { return section + "::" + name; }
 function render() {
   const app = document.getElementById("app");
   let html = "", lastSection = "";
-  const hasSource = DATA.some(g => g[2].some(r => r.length > 5));
+  const hasSource = DATA.some(g => g[2].some(r => r.length > 6));
   for (const [section, subcat, rows] of DATA) {
     if (section !== lastSection) { html += `<h2>${section}</h2>`; lastSection = section; }
     const parts = subcat.split(" — ");
     html += `<h3>${parts[0]}${parts[1] ? ` <span class="note">— ${parts[1]}</span>` : ""}</h3>`;
     html += `<table><tr><th>Entry</th>${hasSource ? "<th>Source</th>" : ""}<th style="text-align:right">Downloads/mo</th><th>My verdict</th><th>My reason</th><th>Yours</th><th>Your reason (optional)</th></tr>`;
-    for (const [name, url, dl, mine, reason, source] of rows) {
+    for (const [name, url, dl, kind, mine, reason, source] of rows) {
       const id = rowId(section, name);
       const s = state[id] || {};
       const yours = s.verdict || mine;
@@ -101,7 +100,7 @@ function render() {
         <td class="mine"><span class="badge ${mine}">${mine.toUpperCase()}</span></td>
         <td class="reason">${reason}</td>
         <td class="yours"><span class="seg">
-          ${CHOICES[mine].map(v => `<button class="${v} ${yours === v ? "on" : ""}" onclick="setV('${esc(id)}','${v}')">${cap(v)}</button>`).join("")}
+          ${CHOICES[kind].map(v => `<button class="${v} ${yours === v ? "on" : ""}" onclick="setV('${esc(id)}','${v}')">${cap(v)}</button>`).join("")}
         </span></td>
         <td class="fb"><input value="${(s.feedback || "").replace(/"/g, "&quot;")}" oninput="setF('${esc(id)}', this.value)" placeholder="why…"></td>
       </tr>`;
@@ -125,19 +124,19 @@ function setF(id, f) {
   updateCounts();
 }
 function findMine(section, name) {
-  for (const [s, , rows] of DATA) if (s === section) for (const r of rows) if (r[0] === name) return r[3];
+  for (const [s, , rows] of DATA) if (s === section) for (const r of rows) if (r[0] === name) return r[4];
 }
 function save() { localStorage.setItem(KEY, JSON.stringify(state)); }
 
 function collect() {
   const out = [];
   for (const [section, subcat, rows] of DATA) {
-    for (const [name, , , mine] of rows) {
+    for (const [name, , , kind, mine] of rows) {
       const id = rowId(section, name);
       const s = state[id] || {};
       const yours = s.verdict || mine;
       const fb = (s.feedback || "").trim();
-      if (yours !== mine || fb) out.push({ section, subcategory: subcat.split(" — ")[0], entry: name, my_verdict: mine, your_verdict: yours, reason: fb });
+      if (yours !== mine || fb) out.push({ section, subcategory: subcat.split(" — ")[0], entry: name, kind, my_verdict: mine, your_verdict: yours, reason: fb });
     }
   }
   return out;
@@ -146,7 +145,7 @@ function collect() {
 function updateCounts() {
   const tally = {};
   let changed = 0;
-  for (const [section, , rows] of DATA) for (const [name, , , mine] of rows) {
+  for (const [section, , rows] of DATA) for (const [name, , , , mine] of rows) {
     const s = state[rowId(section, name)] || {};
     const yours = s.verdict || mine;
     tally[yours] = (tally[yours] || 0) + 1;

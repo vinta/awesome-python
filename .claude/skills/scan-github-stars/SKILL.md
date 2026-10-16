@@ -25,7 +25,7 @@ Group survivors by target use case. Per group, invoke `audit-the-list` with: "Ju
 
 ## 4. Review
 
-Run `preview-verdicts` over all groups: survivors as `add` or `reject` rows, displaced entries as `remove`, structure questions as `park` or `restructure` rows, and any `prior` verdict quoted in the row's reason. Seed `park` on any row whose verdict rests on a judgment call, except an add where only the tier is in doubt, so the page holds only settled calls. Done when the maintainer's feedback is processed and they gave the go.
+Run `preview-verdicts` over all groups: survivors with kind `candidate` and verdict `add` or `reject`, displaced entries with kind `listed` and verdict `remove`, and structure questions with kind `structure` and verdict `park` or `restructure`. Quote any `prior` verdict in the reason. Seed `park` on any row whose verdict rests on a judgment call, except an add where only the tier is in doubt; preserve its kind. Done when the maintainer's feedback is processed and they gave the go.
 
 ## 5. Record
 
