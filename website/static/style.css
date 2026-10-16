@@ -837,6 +837,7 @@ kbd {
 
 .row {
   cursor: pointer;
+  scroll-margin-top: 4.5rem;
 }
 
 .group-row th {
