@@ -10,6 +10,7 @@ How to choose:
 - A readable call tree of where your script spends wall-clock time: pyinstrument
 - CPU, GPU, and memory use, line by line: Scalene
 - SQL queries and request data on Django pages: Django Debug Toolbar
+- Every Django request and its SQL queries, recorded to inspect later: Silk
 - Print debugging that labels each value: IceCream
 - The same toolbar on Flask pages: Flask-DebugToolbar
 
@@ -28,6 +29,8 @@ pyinstrument measures wall-clock time, so time spent [downloading data, reading 
 Scalene profiles CPU, GPU, and memory [line by line and per function](https://github.com/plasma-umass/scalene#fast-and-accurate). It [separates time in Python from time in native code](https://github.com/plasma-umass/scalene#cpu-profiling), so you can focus on code you can change. Run [`scalene run your_prog.py`](https://github.com/plasma-umass/scalene#using-scalene), then `scalene view` opens the profile in your browser.
 
 Django Debug Toolbar adds [panels](https://django-debug-toolbar.readthedocs.io/en/latest/panels.html) to your pages for the current request's SQL queries, templates, cache calls, and more. [Its setup](https://django-debug-toolbar.readthedocs.io/en/latest/installation.html) adds the app, its URLs, and its middleware, and shows the toolbar only to IP addresses in `INTERNAL_IPS`.
+
+Silk [intercepts and stores HTTP requests and database queries](https://github.com/jazzband/django-silk), then shows them in its own UI: each request's time, query count, headers, and bodies. [Its setup](https://github.com/jazzband/django-silk#installation) adds its middleware and app to your settings, includes `silk.urls` in your URLconf, and runs `migrate`. The UI then lives at `/silk/`.
 
 IceCream's `ic()` [prints each expression along with its value](https://github.com/gruns/icecream). With no arguments, it prints [the file, line, and function it runs in](https://github.com/gruns/icecream#inspect-execution). Since `ic()` [returns its arguments](https://github.com/gruns/icecream#return-value), you can wrap an expression in existing code without rewriting the line.
 
