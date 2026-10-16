@@ -21,16 +21,16 @@ Append each screen-out to `local/starred-scan.tsv` as it is decided, one `repo<T
 
 ## 3. Judge
 
-Group survivors by target use case. Per group, invoke `audit-the-list` with: "Judge proposed entries <names, each with its GitHub repo> for the <section — subcategory> use case. Evidence and Verdicts steps only; report the verdicts back. No preview page, no README changes, no commits." Done when every survivor holds an add or drop verdict with a reason, and each add at cap names the entry it displaces.
+Group survivors by target use case. Per group, invoke `audit-the-list` with: "Judge proposed entries <names, each with its GitHub repo> for the <section — subcategory> use case. Evidence and Verdicts steps only; report the verdicts back. No preview page, no README changes, no commits." A reject whose reason names an unlisted project as the better pick turns that project into a candidate too: judge it in the same group and mark its source as found in the audit, not starred. Done when every survivor holds an add or reject verdict with a reason, and each add at cap names the entry it displaces.
 
 ## 4. Review
 
-Run `preview-verdicts` over all groups: survivors as `add` or `drop` rows, displaced entries as `drop`, structure questions noted on their group, and any `prior` verdict quoted in the row's reason. Done when the maintainer's feedback is processed and they gave the go.
+Run `preview-verdicts` over all groups: survivors as `add` or `reject` rows, displaced entries as `remove`, structure questions as `park` or `restructure` rows, and any `prior` verdict quoted in the row's reason. Seed `park` on any row whose verdict rests on a judgment call, except an add where only the tier is in doubt, so the page holds only settled calls. Done when the maintainer's feedback is processed and they gave the go.
 
 ## 5. Record
 
 - **Added**: follow `audit-the-list` step 5 for the README change, one commit per entry.
 - **Rejected**: a candidate that reached review and was not added gets one line under "Rejected Additions": `- owner/repo -- yyyy-mm-dd, <downloads>/month (<source>): <reason>.`, replacing its earlier line.
-- **Parked**: a structure question the maintainer leaves open gets no record, so it resurfaces next run.
+- **Parked**: a row the maintainer parks gets no record, so it resurfaces next run.
 
 Done when every candidate from step 1 is listed in README.md, a ledger row, a Rejected Additions line, or parked by the maintainer.

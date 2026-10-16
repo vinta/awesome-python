@@ -27,7 +27,7 @@ Done when every entry in scope has downloads (or a stated no-signal reason), rep
 
 ## 3. Verdicts
 
-Draft a verdict and reason for every entry, restructure before cap: decide Splits, mints, and re-homes first — cutting before restructuring destroys entries — then apply the cap tier by tier, including promotions and demotions between obvious choice and challenger. Ground every reason in the fetched evidence; label anything unverifiable as a judgment call. Where fresh evidence contradicts the standing verdict, say so in the reason instead of silently keeping the seed. A proposed addition under `docs/audit-logs.md` "Rejected Additions" seeds as drop from that line.
+Draft a verdict and reason for every entry, restructure before cap: decide Splits, mints, and re-homes first — cutting before restructuring destroys entries — then apply the cap tier by tier, including promotions and demotions between obvious choice and challenger. Ground every reason in the fetched evidence; label anything unverifiable as a judgment call. Where fresh evidence contradicts the standing verdict, say so in the reason instead of silently keeping the seed. A proposed addition under `docs/audit-logs.md` "Rejected Additions" seeds as reject from that line.
 
 ## 4. Review and go
 
