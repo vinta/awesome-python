@@ -1,4 +1,4 @@
-Expensive function calls get cached in memory by one cachetools decorator. On disk, with no server, no Python caching library asks less of you than DiskCache.
+Expensive function calls get cached in memory by one cachetools decorator. DiskCache stores cached data on local disk, with no server to run.
 
 How to choose:
 
