@@ -1151,6 +1151,7 @@ _Libraries for application-layer web security._
 
 - [nh3](https://github.com/messense/nh3) - Python binding to the ammonia HTML sanitizer, a fast replacement for bleach.
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
+- [fastapi-guard](https://github.com/Guard-Core/fastapi-guard) - Security middleware for FastAPI with IP and country filtering, rate limiting, automatic IP banning and attack pattern detection.
 
 **Other**
 
