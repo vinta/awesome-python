@@ -970,6 +970,7 @@ _Libraries for file manipulation._
 - File Type Detection
   - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
   - [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
+  - [magika](https://github.com/google/magika) - Detects file content types with a deep-learning model.
 
 **Media**
 
