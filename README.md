@@ -557,7 +557,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 - Specialized
   - [graphviz](https://github.com/xflr6/graphviz) - Simple Python interface for creating and rendering Graphviz graphs.
-  - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
+  - [cartopy](https://github.com/SciTools/cartopy) - A cartographic Python library with matplotlib support.
   - [graphify](https://github.com/Graphify-Labs/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
 - Dashboards and Apps
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
@@ -657,7 +657,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
     - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
   - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
 - Refactoring
-  - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
+  - [rope](https://github.com/python-rope/rope) - Rope is a Python refactoring library.
   - [ast-grep-cli](https://github.com/ast-grep/ast-grep) - A CLI tool for structural code search, linting, and rewriting based on syntax trees.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - A static type checker for Python.
@@ -885,7 +885,7 @@ _Libraries for working with graphical user interface applications._
   - [PyQt6](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
 - Tkinter
   - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
-  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
+  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable Python UI-library based on Tkinter.
 - Web-based
   - [pywebview](https://github.com/r0x0r/pywebview) - A lightweight cross-platform native wrapper around a webview component.
   - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
@@ -969,7 +969,7 @@ _Libraries for file manipulation._
 
 - Paths and File Watching
   - [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) A cross-platform, object-oriented path library.
-  - [watchfiles](https://github.com/samuelcolvin/watchfiles) - Simple, modern and fast file watching and code reload in python.
+  - [watchfiles](https://github.com/samuelcolvin/watchfiles) - Simple, modern and fast file watching and code reload in Python.
   - [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
 - File Type Detection
   - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
@@ -1128,7 +1128,7 @@ _Libraries to create packaged executables for release distribution._
   - [pex](https://github.com/pex-tool/pex) - A tool for building self-contained Python executable environments (PEP 441 zipapps).
   - [cx-Freeze](https://github.com/marcelotduarte/cx_Freeze) - Converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
 - Obfuscation
-  - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
+  - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate Python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
 
 ### Configuration Files
 
