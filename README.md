@@ -654,6 +654,7 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
   - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
 - Refactoring
   - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
+  - [ast-grep-cli](https://github.com/ast-grep/ast-grep) - A CLI tool for structural code search, linting, and rewriting based on syntax trees.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - A static type checker for Python.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
