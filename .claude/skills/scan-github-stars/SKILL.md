@@ -29,7 +29,7 @@ Run `preview-verdicts` over all groups: survivors as `add` or `reject` rows, dis
 
 ## 5. Record
 
-- **Added**: follow `audit-the-list` step 5 for the README change, one commit per entry.
+- **Added**: follow `audit-the-list` step 5 for the README change, one commit per entry. When the entry links a different repo than the star (a Python binding or client of a starred engine), also append a ledger row `already listed as <entry> (<owner/repo>)` for the star, since the script only recognizes a star whose own repo is linked.
 - **Rejected**: a candidate that reached review and was not added gets one line under "Rejected Additions": `- owner/repo -- yyyy-mm-dd, <downloads>/month (<source>): <reason>.`, replacing its earlier line.
 - **Parked**: a row the maintainer parks gets no record, so it resurfaces next run.
 
