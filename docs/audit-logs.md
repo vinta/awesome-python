@@ -40,6 +40,7 @@ Entries admitted as challengers without adoption-trajectory evidence, by maintai
 - seleniumbase -- admitted 2026-08-16 (PR #3284) as a Browser Automation challenger. It wraps selenium, the successor trajectory in the use case belongs to playwright, and its distinct value is its stealth/UC mode. Admitted because that stealth value counts toward Browser Automation.
 - semantica -- kept 2026-10-01 in the AI and Agents audit as a Data Layer challenger at 16,582 downloads/month on ClickPy, with no adoption-trajectory evidence found. Kept by maintainer decision.
 - jev-ultrafast -- kept 2026-09-24 as a Web Scraping Frameworks challenger, recorded 2026-10-02. Admitted while the repo was under a month old and not on PyPI, so it has no download signal and no adoption-trajectory evidence; its README calls it an MVP and it needs a hosted TypeSafe API key. Kept by maintainer decision.
+- hyperopt -- admitted 2026-10-16 as a Hyperparameter Optimization challenger at 1,793,872 downloads/month on ClickPy. Its 0.3.0 release came after a 4.5-year gap and it has no adoption-trajectory evidence. Admitted by maintainer decision.
 
 ### Cap Exceptions
 

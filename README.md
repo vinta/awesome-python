@@ -224,6 +224,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
   - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting, with non-commercial default weights.
 - Hyperparameter Optimization
   - [optuna](https://github.com/optuna/optuna) - A hyperparameter optimization framework with define-by-run search spaces and pruning of unpromising trials.
+  - [hyperopt](https://github.com/hyperopt/hyperopt) - Distributed asynchronous hyperparameter optimization with Tree-structured Parzen Estimators.
 
 ### Natural Language Processing
 
