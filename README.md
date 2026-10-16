@@ -1082,6 +1082,7 @@ _Libraries for Python version and virtual environment management._
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
+- [mise](https://github.com/jdx/mise) - A polyglot tool version manager that installs Python versions and reads .python-version files.
 
 ### Package Management
 

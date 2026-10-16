@@ -20,6 +20,7 @@
   "mem0": { "package": "mem0ai", "reason": null },
   "micropython": { "package": null, "reason": "interpreter distributed as firmware builds, not pip" },
   "mimetypes": { "package": null, "reason": "stdlib module" },
+  "mise": { "package": null, "reason": "not published on PyPI; PyPI mise is an unrelated package" },
   "odoo": { "package": null, "reason": "self-hosted suite installed from odoo.com, not pip" },
   "pangu-py": { "package": "pangu", "reason": null },
   "playwright-python": { "package": "playwright", "reason": null },
