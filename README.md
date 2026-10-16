@@ -935,6 +935,7 @@ _Libraries for parsing and manipulating specific file formats._
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 - File Conversion
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [pypandoc](https://github.com/JessicaTegner/pypandoc) - A thin wrapper for pandoc, the universal document converter.
   - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - Excel
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
