@@ -1232,6 +1232,7 @@ Where to discover learning resources or new Python libraries.
 
 ### Websites
 
+- [Coddy](https://coddy.tech/landing/python) - Free interactive Python course with in-browser coding challenges, from basics through OOP.
 - [Python Developer Tooling Handbook](https://pydevtools.com/) - Comprehensive guide to modern Python developer tools covering package management, linting, type checking, testing, and more.
 
 ## Contributing
