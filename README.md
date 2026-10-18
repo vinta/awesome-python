@@ -1194,6 +1194,7 @@ _Libraries for programming with hardware._
 - [pynput](https://github.com/moses-palmer/pynput) - A library to control and monitor input devices.
 - [bleak](https://github.com/hbldh/bleak) - A cross platform Bluetooth Low Energy Client for Python using asyncio.
 - [jumpstarter](https://github.com/jumpstarter-dev/jumpstarter) - A hardware-in-the-loop testing framework with a Python client library for automated testing on real and virtual hardware.
+- [extra-desktop](https://github.com/AIYantra/extra) - Sovereign desktop automation and computer-use engine with sub-3ms vision and hardware input injection across Linux, Windows, and macOS.
 
 ### Microsoft Windows
 
