@@ -81,6 +81,7 @@
         {% set section_path = "/categories/" ~ parent_category.slug ~ "/" if parent_category else current_path %}
         <tr
           class="row"
+          {% if not group_categories %}id="entry-{{ entry.name | slugify }}"{% endif %}
           tabindex="0"
           aria-expanded="false"
           aria-controls="expand-{{ index }}"

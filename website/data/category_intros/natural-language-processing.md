@@ -8,6 +8,7 @@ How to choose:
 - Topic models and word embeddings: gensim
 - Chinese word segmentation: jieba
 - Chinese characters to pinyin: pypinyin
+- Traditional/Simplified Chinese conversion: OpenCC
 - Spaces between CJK text and letters or digits: pangu.py
 
 spaCy is [designed for production use](https://spacy.io/usage/facts-figures#comparison-usage): you build and train NLP pipelines, then package them to deploy. Its trained pipelines are Python packages. In an automated build, [install them with pip from a direct link](https://spacy.io/usage/models#download-pip) instead of spaCy's download command, and put that link in your requirements.txt. In a larger code base, [import the pipeline as a module](https://spacy.io/usage/models#models-loading), so a missing one raises an ImportError right away. Run your texts through `nlp.pipe` [in batches](https://spacy.io/usage/processing-pipelines#processing), and disable the components you don't need. To train your own pipeline, run [`spacy train` with one config file](https://spacy.io/usage/training#quickstart).
@@ -19,6 +20,8 @@ Stanza is [designed to work across many languages, using the Universal Dependenc
 jieba [segments Chinese text into words](https://github.com/fxsjy/jieba): accurate mode suits text analysis, and search engine mode cuts long words into short ones for better recall. Add your own words with `jieba.load_userdict()` to get higher accuracy, and for Traditional Chinese, switch to its bigger dictionary with `jieba.set_dictionary()`. The other picks work with it: spaCy can [use jieba as its Chinese segmenter](https://spacy.io/usage/models#chinese), and Stanza [supports it as a tokenizer](https://stanfordnlp.github.io/stanza/pipeline.html).
 
 pypinyin [matches pinyin by whole words](https://github.com/mozillazg/python-pinyin), so it handles characters with more than one reading. It also writes zhuyin (Bopomofo) and Wade-Giles. When a wrong word split gives a wrong reading, [segment the text with jieba first](https://pypinyin.readthedocs.io/zh-cn/latest/faq.html) and pass in the list of words. For readings that are still wrong, [add your own](https://pypinyin.readthedocs.io/zh-cn/latest/usage.html#custom-dict) with `load_phrases_dict()` or `load_single_dict()`.
+
+OpenCC [converts between Traditional and Simplified Chinese, including the regional wording of Mainland China, Taiwan, and Hong Kong](https://github.com/BYVoid/OpenCC). It's dictionary-based, not a language model, so the results are predictable and it runs offline. Install it with `pip install opencc`, then [create a converter from a config file](https://github.com/BYVoid/OpenCC#python): `opencc.OpenCC('s2t.json').convert(text)`. [The config picks the direction and the variant](https://github.com/BYVoid/OpenCC#configurations-配置文件): `s2t.json` gives OpenCC's standard Traditional characters, `s2tw.json` gives Taiwan's, and `s2twp.json` also swaps in Taiwan's phrases.
 
 pangu.py [inserts spaces between CJK characters and letters, digits, and symbols](https://github.com/vinta/pangu.py). Call `pangu.space_text()` on a string or `pangu.space_file()` on a file. From the command line, `pangu-py -c` prints the corrected text and exits with 1 when the spacing needed fixing.
 

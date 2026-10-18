@@ -7,6 +7,7 @@ How to choose:
 - A file's type from its content, like the Unix `file` command: python-magic
 - Rerunning or reloading code when files change: watchfiles
 - Your own handler for each created, modified, or moved file: watchdog
+- Telling text file types apart, like source code from config files: Magika
 
 If you aren't sure which pathlib class you need, the docs say [`Path` is most likely it](https://docs.python.org/3/library/pathlib.html): it makes a concrete path for the platform your code runs on. [Join paths with the `/` operator](https://docs.python.org/3/library/pathlib.html#basic-use), and list a directory with `iterdir()` or `glob()`.
 
@@ -17,3 +18,5 @@ python-magic wraps libmagic, which [identifies file types by checking their head
 watchfiles is built for [file watching and code reload](https://watchfiles.helpmanual.io/), and its Rust core groups changes into batches instead of firing once per file. `watch()` is a generator that [yields sets of changes](https://watchfiles.helpmanual.io/api/watch/#watchfiles.watch), and `awatch()` is the async version. To restart code when files change, use [`run_process()`](https://watchfiles.helpmanual.io/api/run_process/#watchfiles.run_process) with a function or a command. From a shell, the [`watchfiles` CLI](https://watchfiles.helpmanual.io/cli/) does the same: `watchfiles --filter python 'pytest --lf' src tests`.
 
 watchdog gives you [an API and a shell tool](https://python-watchdog.readthedocs.io/en/latest/) for monitoring directories. Its [quickstart](https://python-watchdog.readthedocs.io/en/latest/quickstart.html) has you subclass `FileSystemEventHandler`, override methods like `on_created()` and `on_modified()`, schedule the handler on an `Observer`, and start that thread. An observer skips subdirectories unless you pass `recursive=True` to `schedule()`.
+
+Magika runs [a compact deep-learning model](https://securityresearch.google/magika/core-concepts/how-magika-works/) on a few chunks of a file, without loading large files entirely into memory. On its own test set, it [outperforms existing approaches, especially on textual content types](https://github.com/google/magika#highlights). Create a `Magika()` instance, then [call `identify_path()` on a file or `identify_bytes()` on bytes you already have](https://securityresearch.google/magika/cli-and-bindings/python/#instantiating-magika). Check `result.ok` before you read `result.output.label` or `result.output.mime_type`.

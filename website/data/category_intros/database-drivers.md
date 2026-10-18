@@ -4,9 +4,10 @@ How to choose:
 
 - PostgreSQL, from sync or async code: Psycopg
 - MySQL or MariaDB, Django projects included: mysqlclient
-- SQLite with nothing to install: sqlite3
+- SQLite with nothing to install, or with its full C API: sqlite3 or APSW
 - MySQL in pure Python: PyMySQL
 - An asyncio-only PostgreSQL service: asyncpg
+- Vector similarity search in PostgreSQL: pgvector
 - Loading JSON or CSV into SQLite, from Python or the shell: sqlite-utils
 - ClickHouse, even behind proxies and load balancers: clickhouse-connect
 - ClickHouse over its native TCP protocol: clickhouse-driver
@@ -19,9 +20,13 @@ Psycopg is the PostgreSQL driver [Django recommends](https://docs.djangoproject.
 
 asyncpg is built for asyncio only, and [skips DB-API on purpose](https://magicstack.github.io/asyncpg/current/faq.html) to fit PostgreSQL better. In a server, [create a pool](https://magicstack.github.io/asyncpg/current/usage.html#connection-pools) with `asyncpg.create_pool()` at startup, then take a connection per request with `async with pool.acquire()`.
 
+pgvector adds the vector types and distance operators of the pgvector Postgres extension to Psycopg, asyncpg, SQLAlchemy, and Django. Enable the extension with `CREATE EXTENSION IF NOT EXISTS vector`, then [register the types](https://github.com/pgvector/pgvector-python#psycopg-3) on each connection with `register_vector()`, or in your pool's connection hook. To find nearest neighbors, order by distance, with `<->` for L2.
+
 Django calls mysqlclient [the recommended choice](https://docs.djangoproject.com/en/stable/ref/databases/#mysql-db-api-drivers) for MySQL, and ships its own adapter for it. It's a native driver built against MySQL's client library. Where you can't install that library and its headers, use PyMySQL, which SQLAlchemy calls [a pure Python port](https://docs.sqlalchemy.org/en/latest/dialects/mysql.html#mysql-python-compatibility) of MySQLdb that targets full compatibility. The licenses differ too: mysqlclient is [GPL](https://github.com/PyMySQL/mysqlclient/blob/main/LICENSE), and PyMySQL is MIT.
 
 sqlite3 comes with Python, and SQLite needs no server. Use the connection as a [context manager](https://docs.python.org/3/library/sqlite3.html#sqlite3-connection-context-manager): it commits when the block succeeds and rolls back when it raises.
+
+APSW wraps SQLite's complete C API. Unlike sqlite3, it [makes no effort to hide](https://rogerbinns.github.io/apsw/pysqlite.html) how SQLite differs from other databases. Its docs suggest it when you want SQLite's own features, and sqlite3 when you want DB-API and an easy switch to another database. At startup, call [`apsw.bestpractice.apply(apsw.bestpractice.recommended)`](https://rogerbinns.github.io/apsw/bestpractice.html) before opening any connection. It configures SQLite for best performance and catches common mistakes.
 
 sqlite-utils sits on top of sqlite3 to create and fill databases, not to be a full ORM. Pass [`insert_all()`](https://sqlite-utils.datasette.io/en/latest/python-api.html#bulk-inserts) a list of dicts, and it creates the table and columns for you. Its command-line tool pipes JSON or CSV straight into a new database file.
 

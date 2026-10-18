@@ -168,10 +168,13 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Pre-trained Models
   - [transformers](https://github.com/huggingface/transformers) - The model-definition framework for pretrained models in text, computer vision, audio, video, and multimodal tasks, for inference and training.
   - [sentence-transformers](https://github.com/huggingface/sentence-transformers) - Compute embeddings, run retrieval, and rerank results with pretrained and fine-tuned models.
-- LLM Inference and Serving
+- Local LLM Inference
+  - [ollama](https://github.com/ollama/ollama-python) - Python client for Ollama, which downloads and runs open-weight LLMs locally.
+  - [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) - Python bindings for llama.cpp, for running GGUF models locally.
+  - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
+- LLM Serving
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
-  - [mlx-lm](https://github.com/ml-explore/mlx-lm) - Run and fine-tune large language models on Apple Silicon with MLX.
 - LLM Gateways
   - [litellm](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
 - Image and Video Generation
@@ -207,6 +210,7 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
 
 - General
   - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for Machine Learning with extensive documentation and community support.
+  - [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) - Resampling techniques for datasets with imbalanced classes, compatible with scikit-learn.
   - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for causal and probabilistic reasoning with graphical models.
   - [feature-engine](https://github.com/feature-engine/feature_engine) - sklearn compatible API with the widest toolset for feature engineering and selection.
 - Gradient Boosting
@@ -218,6 +222,9 @@ _Libraries for Machine Learning. Also see [awesome-machine-learning](https://git
   - [statsforecast](https://github.com/Nixtla/statsforecast) - Fast statistical forecasting models such as ARIMA, ETS, and Theta, compiled with numba.
   - [sktime](https://github.com/sktime/sktime) - A unified scikit-learn-style framework for forecasting and other time-series learning tasks.
   - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting, with non-commercial default weights.
+- Hyperparameter Optimization
+  - [optuna](https://github.com/optuna/optuna) - A hyperparameter optimization framework with define-by-run search spaces and pruning of unpromising trials.
+  - [hyperopt](https://github.com/hyperopt/hyperopt) - Distributed asynchronous hyperparameter optimization with Tree-structured Parzen Estimators.
 
 ### Natural Language Processing
 
@@ -231,6 +238,7 @@ _Libraries for working with human languages._
 - Chinese
   - [jieba](https://github.com/fxsjy/jieba) - The most popular Chinese text segmentation library.
   - [pypinyin](https://github.com/mozillazg/python-pinyin) - Convert Chinese hanzi (漢字) to pinyin (拼音).
+  - [OpenCC](https://github.com/BYVoid/OpenCC) - Conversion between Traditional and Simplified Chinese, with regional variants and phrase-level rules.
   - [pangu.py](https://github.com/vinta/pangu.py) - Paranoid text spacing.
 
 ### Computer Vision
@@ -399,7 +407,7 @@ _Libraries to automate web scraping and extract web content._
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level web crawling and scraping framework.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
   - [stagehand](https://github.com/browserbase/stagehand) - A fast and token-efficient browser automation SDK to extract data and perform self-healing actions on web pages.
-  - [jev-ultrafast](https://github.com/browser-use/jev-ultrafast) - A fast browser agent that picks actions from an indexed table of page elements through TypeSafe's hosted Jev API, using a small LLM only to type text.
+  - [scrapling](https://github.com/D4Vinci/Scrapling) - An adaptive scraping framework whose selectors relocate elements after page changes, with stealth fetchers and spiders.
 - Content Extraction
   - [markdownify](https://github.com/matthewwithanm/python-markdownify) - Convert HTML to Markdown, with customizable tag handling.
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
@@ -441,8 +449,10 @@ _Libraries for connecting and operating databases._
 - PostgreSQL - [awesome-postgres](https://github.com/dhamaniasad/awesome-postgres)
   - [psycopg](https://github.com/psycopg/psycopg) - A PostgreSQL adapter for Python, the successor to psycopg2.
   - [asyncpg](https://github.com/MagicStack/asyncpg) - A fast PostgreSQL Database Client Library for Python/asyncio.
+  - [pgvector](https://github.com/pgvector/pgvector-python) - pgvector support for Python, adding vector types and similarity search to psycopg, asyncpg, SQLAlchemy, and Django.
 - SQLite - [awesome-sqlite](https://github.com/planetopendata/awesome-sqlite)
   - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - (Python standard library) SQLite interface compliant with DB-API 2.0.
+  - [apsw](https://github.com/rogerbinns/apsw) - Another Python SQLite Wrapper, exposing the complete SQLite C API.
   - [sqlite-utils](https://github.com/simonw/sqlite-utils) - Python CLI utility and library for manipulating SQLite databases.
 - ClickHouse
   - [clickhouse-connect](https://github.com/ClickHouse/clickhouse-connect) - The official ClickHouse client, with SQLAlchemy and Superset connectors.
@@ -474,29 +484,40 @@ _In-process databases usable directly from Python._
 
 _Libraries for caching data._
 
-- [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
-- [diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend, compatible with Django.
-- [hishel](https://github.com/karpetrosyan/hishel) - RFC 9111 compliant HTTP caching for clients like httpx and requests and servers like FastAPI, with sync and async support.
-- [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
-- [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - dogpile.cache is a next generation replacement for Beaker made by the same authors.
+- General
+  - [cachetools](https://github.com/tkem/cachetools) - Extensible memoizing collections and decorators.
+  - [diskcache](https://github.com/grantjenks/python-diskcache) - SQLite and file backed cache backend, compatible with Django.
+  - [dogpile.cache](https://github.com/sqlalchemy/dogpile.cache) - A caching API for Redis, Memcached, and other backends, with coordinated value regeneration.
+- HTTP Responses
+  - [hishel](https://github.com/karpetrosyan/hishel) - RFC 9111 compliant HTTP caching for clients like httpx and requests and servers like FastAPI, with sync and async support.
+- Django
+  - [django-redis](https://github.com/jazzband/django-redis) - Full-featured Redis cache backend for Django.
+  - [django-cacheops](https://github.com/Suor/django-cacheops) - A slick ORM cache with automatic granular event-driven invalidation.
 
 ### Search
 
 _Libraries and software for indexing and performing search queries on data._
 
-- [opensearch-py](https://github.com/opensearch-project/opensearch-py) - The official low-level Python client for [OpenSearch](https://opensearch.org/).
-- [elasticsearch](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/elasticsearch).
-- [meilisearch](https://github.com/meilisearch/meilisearch-python) - The official Python client for the [Meilisearch](https://www.meilisearch.com/) search engine.
-- [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
+- Full-Text Search
+  - [opensearch-py](https://github.com/opensearch-project/opensearch-py) - The official low-level Python client for [OpenSearch](https://opensearch.org/).
+  - [elasticsearch](https://github.com/elastic/elasticsearch-py) - The official low-level Python client for [Elasticsearch](https://www.elastic.co/elasticsearch).
+  - [meilisearch](https://github.com/meilisearch/meilisearch-python) - The official Python client for the [Meilisearch](https://www.meilisearch.com/) search engine.
+  - [django-haystack](https://github.com/django-haystack/django-haystack) - Modular search for Django.
+- Vector Search
+  - [faiss-cpu](https://github.com/facebookresearch/faiss) - A library for efficient similarity search and clustering of dense vectors.
 
 ### Serialization
 
 _Libraries for serializing complex data types._
 
-- [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
-- [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
-- [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
-- [msgspec](https://github.com/msgspec/msgspec) - A fast serialization and validation library with built-in support for JSON, MessagePack, YAML, and TOML.
+- Data Formats
+  - [msgpack](https://github.com/msgpack/msgpack-python) - MessagePack serializer implementation for Python.
+  - [orjson](https://github.com/ijl/orjson) - Fast, correct JSON library.
+  - [marshmallow](https://github.com/marshmallow-code/marshmallow) - A lightweight library for converting complex objects to and from simple Python datatypes.
+  - [msgspec](https://github.com/msgspec/msgspec) - A fast serialization and validation library with built-in support for JSON, MessagePack, YAML, and TOML.
+- Object Pickling
+  - [cloudpickle](https://github.com/cloudpipe/cloudpickle) - Extends pickle to functions, lambdas, and interactively defined classes, for shipping code to remote workers.
+  - [dill](https://github.com/uqfoundation/dill) - Extends pickle to serialize almost any Python object, including closures and whole interpreter sessions.
 
 **Data & Science**
 
@@ -542,7 +563,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [bokeh](https://github.com/bokeh/bokeh) - Interactive Web Plotting for Python.
 - Specialized
   - [graphviz](https://github.com/xflr6/graphviz) - Simple Python interface for creating and rendering Graphviz graphs.
-  - [cartopy](https://github.com/SciTools/cartopy) - A cartographic python library with matplotlib support.
+  - [cartopy](https://github.com/SciTools/cartopy) - A cartographic Python library with matplotlib support.
   - [graphify](https://github.com/Graphify-Labs/graphify) - Turn any folder of code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
 - Dashboards and Apps
   - [streamlit](https://github.com/streamlit/streamlit) - A framework which lets you build dashboards, generate reports, or create chat apps in minutes.
@@ -642,7 +663,8 @@ _Tools of static analysis, linters and code quality checkers. Also see [awesome-
     - [awesome-flake8-extensions](https://github.com/DmytroLitvinov/awesome-flake8-extensions)
   - [bandit](https://github.com/PyCQA/bandit) - A tool designed to find common security issues in Python code.
 - Refactoring
-  - [rope](https://github.com/python-rope/rope) - Rope is a python refactoring library.
+  - [rope](https://github.com/python-rope/rope) - Rope is a Python refactoring library.
+  - [ast-grep-cli](https://github.com/ast-grep/ast-grep) - A CLI tool for structural code search, linting, and rewriting based on syntax trees.
 - Type Checkers - [awesome-python-typing](https://github.com/typeddjango/awesome-python-typing)
   - [mypy](https://github.com/python/mypy) - A static type checker for Python.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
@@ -700,6 +722,7 @@ _Libraries for debugging code._
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
 - Others
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
+  - [django-silk](https://github.com/jazzband/django-silk) - Live profiling and inspection of HTTP requests and database queries for Django.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to flask.
 
@@ -868,7 +891,7 @@ _Libraries for working with graphical user interface applications._
   - [PyQt6](https://www.riverbankcomputing.com/static/Docs/PyQt6/) - Python bindings for the [Qt](https://www.qt.io/) cross-platform application and UI framework.
 - Tkinter
   - [tkinter](https://docs.python.org/3/library/tkinter.html) - (Python standard library) The standard Python interface to the Tcl/Tk GUI toolkit.
-  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable python UI-library based on Tkinter.
+  - [customtkinter](https://github.com/tomschimansky/customtkinter) - A modern and customizable Python UI-library based on Tkinter.
 - Web-based
   - [pywebview](https://github.com/r0x0r/pywebview) - A lightweight cross-platform native wrapper around a webview component.
   - [nicegui](https://github.com/zauberzeug/nicegui) - An easy-to-use, Python-based UI framework, which shows up in your web browser.
@@ -922,6 +945,7 @@ _Libraries for parsing and manipulating specific file formats._
   - [tablib](https://github.com/jazzband/tablib) - A module for Tabular Datasets in XLS, CSV, JSON, YAML.
 - File Conversion
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
+  - [pypandoc](https://github.com/JessicaTegner/pypandoc) - A thin wrapper for pandoc, the universal document converter.
   - [docling](https://github.com/docling-project/docling) - Library for converting documents into structured data.
 - Excel
   - [openpyxl](https://openpyxl.readthedocs.io/en/stable/) - A library for reading and writing Excel 2010 xlsx/xlsm/xltx/xltm files.
@@ -949,11 +973,14 @@ _Libraries for parsing and manipulating specific file formats._
 
 _Libraries for file manipulation._
 
-- [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
-- [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) A cross-platform, object-oriented path library.
-- [watchfiles](https://github.com/samuelcolvin/watchfiles) - Simple, modern and fast file watching and code reload in python.
-- [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
-- [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
+- Paths and File Watching
+  - [pathlib](https://docs.python.org/3/library/pathlib.html) - (Python standard library) A cross-platform, object-oriented path library.
+  - [watchfiles](https://github.com/samuelcolvin/watchfiles) - Simple, modern and fast file watching and code reload in Python.
+  - [watchdog](https://github.com/gorakhargosh/watchdog) - API and shell utilities to monitor file system events.
+- File Type Detection
+  - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
+  - [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
+  - [magika](https://github.com/google/magika) - Detects file content types with a deep-learning model.
 
 **Media**
 
@@ -1069,6 +1096,7 @@ _Libraries for Python version and virtual environment management._
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
+- [mise](https://github.com/jdx/mise) - A polyglot tool version manager that installs Python versions and reads .python-version files.
 
 ### Package Management
 
@@ -1085,6 +1113,7 @@ _Libraries for package and dependency management._
   - [setuptools](https://github.com/pypa/setuptools) - The historical and still most widely used pyproject build backend.
   - [hatchling](https://github.com/pypa/hatch) - Modern, extensible build backend from the hatch project.
   - [poetry-core](https://github.com/python-poetry/poetry-core) - Poetry's PEP 517 build backend, usable without Poetry itself.
+  - [flit-core](https://github.com/pypa/flit) - Minimal, dependency-free build backend for pure-Python packages.
   - [uv-build](https://github.com/astral-sh/uv) - uv's fast, minimal build backend for pure-Python projects.
 
 ### Package Repositories
@@ -1105,7 +1134,7 @@ _Libraries to create packaged executables for release distribution._
   - [pex](https://github.com/pex-tool/pex) - A tool for building self-contained Python executable environments (PEP 441 zipapps).
   - [cx-Freeze](https://github.com/marcelotduarte/cx_Freeze) - Converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
 - Obfuscation
-  - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
+  - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate Python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
 
 ### Configuration Files
 
@@ -1140,10 +1169,13 @@ _Frameworks and tools for penetration testing._
 
 ### Supply Chain Security
 
-_Tools for auditing dependencies against known vulnerabilities._
+_Tools for auditing dependencies against known vulnerabilities and scanning for leaked secrets._
 
-- [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the Python Packaging Advisory Database or OSV.
-- [uv-audit](https://github.com/astral-sh/uv) - (part of uv) uv's [dependency vulnerability scanning](https://docs.astral.sh/uv/reference/cli/#uv-audit) backed by OSV.
+- Dependency Audits
+  - [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the Python Packaging Advisory Database or OSV.
+  - [uv-audit](https://github.com/astral-sh/uv) - (part of uv) uv's [dependency vulnerability scanning](https://docs.astral.sh/uv/reference/cli/#uv-audit) backed by OSV.
+- Secret Scanning
+  - [betterleaks](https://github.com/betterleaks/betterleaks) - Finds leaked secrets in git history, directories, and files, from the original author of gitleaks.
 
 ### Web Security
 

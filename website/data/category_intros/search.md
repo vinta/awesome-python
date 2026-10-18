@@ -1,4 +1,4 @@
-The engine comes first, then its official Python search library. Meilisearch keeps a search bar simple, while analytics call for Elasticsearch or OpenSearch.
+For document search, pick an engine and its official Python search library. Faiss searches vectors directly in your process.
 
 How to choose:
 
@@ -6,6 +6,7 @@ How to choose:
 - Log analytics and aggregations beyond search: elasticsearch
 - The same under Apache instead of the AGPL, or on Amazon OpenSearch Service: opensearch-py
 - Search over Django models, with a backend you can swap later: django-haystack
+- Similarity search over vectors you hold in NumPy arrays: Faiss
 
 Meilisearch is [an open-source search engine](https://github.com/meilisearch/meilisearch-python), and meilisearch is its Python client. Its docs call it [a perfect choice for a typo-tolerant search bar](https://www.meilisearch.com/docs/resources/comparisons/alternatives), built for instant search aimed at end users. Meilisearch [queues writes and processes them asynchronously](https://www.meilisearch.com/docs/capabilities/indexing/tasks_and_batches/async_operations), so after `add_documents()`, the Python quick start [waits for indexing to complete](https://www.meilisearch.com/docs/getting_started/sdks/python) with `client.wait_for_task(task.task_uid)`.
 
@@ -14,5 +15,7 @@ For log analytics and aggregations beyond search, Meilisearch's own docs point y
 OpenSearch is [a fork of Elasticsearch, and all of its software is Apache-licensed](https://opensearch.org/faq/). The Elasticsearch server is available [under the AGPL or source-available licenses](https://www.elastic.co/pricing/faq/licensing). OpenSearch's Python client is opensearch-py, [a fork of elasticsearch-py](https://github.com/opensearch-project/opensearch-py) that [wraps the OpenSearch REST API in Python methods](https://docs.opensearch.org/latest/clients/python-low-level/#low-level-python-client). Use it for any OpenSearch cluster, as OpenSearch's docs [recommend OpenSearch clients for OpenSearch clusters](https://docs.opensearch.org/latest/clients/#legacy-clients). On Amazon OpenSearch Service, [sign requests with `AWSV4SignerAuth`](https://docs.opensearch.org/latest/clients/python-low-level/#connecting-to-amazon-opensearch-service) and your IAM credentials.
 
 django-haystack gives Django [one API over pluggable search backends](https://django-haystack.readthedocs.io/en/latest/), such as Elasticsearch, so you can switch engines without rewriting your search code. Its FAQ [advises against it](https://django-haystack.readthedocs.io/en/latest/faq.html#when-should-i-not-be-using-haystack) for data that isn't in Django models and for ultra-high volume, since the abstraction costs performance and some engine features. [Create a `SearchIndex` for each model](https://django-haystack.readthedocs.io/en/latest/tutorial.html#creating-searchindexes) you index, in a `search_indexes.py` file in its app. Load your data with [`./manage.py rebuild_index`](https://django-haystack.readthedocs.io/en/latest/tutorial.html#reindex), then keep the index current with a cron job running `update_index`.
+
+Faiss is a similarity search library, not a database. It [keeps no metadata with the vectors](https://arxiv.org/html/2401.08281#S6.SS1), only integer IDs, so you store your documents elsewhere and look them up by ID. Its [tutorial](https://github.com/facebookresearch/faiss/wiki/Getting-started) builds an index for the vector dimension, adds a float32 NumPy array, and calls `search()` for the nearest neighbors. `IndexFlatL2` returns exact results. To trade some accuracy for speed or memory, [pick an index by RAM and dataset size](https://github.com/facebookresearch/faiss/wiki/Guidelines-to-choose-an-index).
 
 Keep your data in your database, and send the search engine a copy of what people search for. Meilisearch [wasn't designed to be your main data container](https://www.meilisearch.com/docs/capabilities/indexing/advanced/indexing_best_practices#do-not-use-meilisearch-as-your-main-database), and django-haystack's docs call the database [authoritative and the search index non-authoritative](https://django-haystack.readthedocs.io/en/latest/signal_processors.html).

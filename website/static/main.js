@@ -331,6 +331,7 @@ if (tbody) {
   // Keyboard: Enter or Space on focused .row toggles expand
   tbody.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
+    if (e.target.closest("a")) return;
     const row = e.target.closest("tr.row");
     if (!row) return;
     e.preventDefault();
@@ -367,12 +368,25 @@ sortHeaders.forEach(function (th) {
   });
 });
 
+function openEntryRow(row) {
+  if (row.hidden && searchInput) {
+    searchInput.value = "";
+    applyFilters();
+  }
+  row.classList.add("open");
+  row.setAttribute("aria-expanded", "true");
+}
+
 // Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
 document.addEventListener("click", function (e) {
   const link = e.target.closest('a[href*="#"]');
   if (!link || link.pathname !== location.pathname) return;
-  const heading = document.getElementById(decodeURIComponent(link.hash.slice(1)));
-  const groupRow = heading ? heading.closest(".group-row") : null;
+  const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+  if (target && target.matches("tr.row")) {
+    openEntryRow(target);
+    return;
+  }
+  const groupRow = target ? target.closest(".group-row") : null;
   if (!groupRow) return;
   if (activeSort.col !== "editorial") {
     activeSort = defaultSort;
@@ -384,6 +398,11 @@ document.addEventListener("click", function (e) {
     applyFilters();
   }
 });
+
+if (location.hash) {
+  const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
+}
 
 if (searchInput) {
   let searchTimer;
