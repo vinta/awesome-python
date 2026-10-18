@@ -773,6 +773,7 @@ _Software and libraries for DevOps._
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
 - Other
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
+  - [driftcheck](https://github.com/yunaremaia/driftcheck) - Detects configuration and code drift across Python projects, CI gates, and infrastructure.
 
 ### Distributed Computing
 
@@ -1174,6 +1175,7 @@ _Tools for auditing dependencies against known vulnerabilities and scanning for 
 - Dependency Audits
   - [pip-audit](https://github.com/pypa/pip-audit) - Audits Python environments and dependency trees for known vulnerabilities, using the Python Packaging Advisory Database or OSV.
   - [uv-audit](https://github.com/astral-sh/uv) - (part of uv) uv's [dependency vulnerability scanning](https://docs.astral.sh/uv/reference/cli/#uv-audit) backed by OSV.
+  - [taintrace](https://github.com/yunaremaia/taintrace) - Taints and traces data flow through Python and Rust dependency chains, identifying supply-chain risks.
 - Secret Scanning
   - [betterleaks](https://github.com/betterleaks/betterleaks) - Finds leaked secrets in git history, directories, and files, from the original author of gitleaks.
 
