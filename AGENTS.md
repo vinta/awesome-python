@@ -17,7 +17,4 @@ Apply [CONTRIBUTING.md](CONTRIBUTING.md) (admission, entry format, ordering) whe
 
 ## Website
 
-- Model the layout on https://www.placestoread.xyz: the whole list on one page, dense rows, a row that expands inline with its content aligned to the Name column, sorting by column headers, full-text search, tags that filter, a divider under the header row instead of a strong top border, a solid dark footer, and minimal decoration. Keep that model (no card grid, modal details, or pagination) unless the maintainer asks, and keep green out of the palette.
-- `.section-shell` (`--shell-max: 84rem`) is the only width cap: sections, tables, rows, CTAs, and paragraphs stay uncapped, since the maintainer reads on wide screens and prose-width advice like 65-75ch doesn't apply. Remove inner `max-width` rules you come across, and ask with a concrete reason before adding one.
-- Pick font sizes one step larger than feels right (`--text-base` over `--text-sm`, 1.75rem over 1.5rem for a heading), and shrink an existing size only when the maintainer asks: they asked for bigger type 11 times across 8 sessions and never for smaller.
-- When you style one link, tag, or label, give its peers the same style in the same change: hero, nav, footer, project, and sponsor links share hover styles, and tag variants build on `.tag`.
+Read [DESIGN.md](DESIGN.md) before changing anything under `website/templates/` or `website/static/`.

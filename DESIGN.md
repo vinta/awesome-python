@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: awesome-python.com
-description: Warm editorial Python index. Light cream canvas, brown-red interactive accent, Cormorant Garamond plus Manrope, table-driven single-page reference.
+description: Warm editorial Python index. Light cream canvas, brown-red interactive accent, Cormorant Garamond plus Manrope, table-driven reference.
 ---
 
 # awesome-python.com DESIGN.md
@@ -35,7 +35,7 @@ Emotional goals: trust, efficiency, craft. The reader should feel the list was e
 
 Reference points (stay close to these):
 
-- **https://www.placestoread.xyz** is the primary visual model for the table, expand row, sorting, and footer. "Like placestoread" means dense single-page list, inline click-to-expand rows that indent under the Name column, sortable headers, minimum decoration. When in doubt about a table or row treatment, check placestoread first.
+- **https://www.placestoread.xyz** is the primary visual model for the table, expand row, sorting, and footer. "Like placestoread" means a dense list (the home page holds every project in one table), inline click-to-expand rows that indent under the Name column, sortable headers, a divider under the header row instead of a strong top border, minimum decoration. When in doubt about a table or row treatment, check placestoread first.
 - Magazine reference pages (The Economist, FT Weekend, Monocle).
 - Field-guide books. Curated, functional, hand-made.
 - Library card catalogs. Dense tabular information, excellent typography, no decoration for decoration's sake.
@@ -115,7 +115,7 @@ Hard-won sizing rules (do not relax):
 
 - **Body type floor is 16px.** Do not go smaller.
 - **Absolute minimum font size is 12px (`0.75rem`) for ANY text**, including pills, badges, tags, captions, footnotes. Anything smaller hits Chrome's default minimum-font-size floor and renders inconsistently across browsers and user accessibility settings. Use `var(--text-xs)` (`0.8rem`) as the smallest token in code.
-- **When in doubt, pick one step larger** than what generic scale references suggest. The user has corrected sizes upward 11+ times across 8 sessions. Footer, meta rows, expand content, labels, and headings all trend too small by default. **Never reduce an existing size unprompted.**
+- **When in doubt, pick one step larger** than what generic scale references suggest (`--text-base` over `--text-sm`, 1.75rem over 1.5rem for a heading). The user has corrected sizes upward 11+ times across 8 sessions. Footer, meta rows, expand content, labels, and headings all trend too small by default. **Never reduce an existing size unprompted.**
 - Adjacent heading levels differ by at least 0.25rem of rendered size.
 - Row numbers in the table: left-align, no leading zeros. Zero-padding was tried and rejected.
 - **Never `text-transform`.** Write the casing in the markup.
@@ -123,7 +123,7 @@ Hard-won sizing rules (do not relax):
 ## Layout
 
 - **Single width cap: `--shell-max: 84rem` (~1344px) applied via `.section-shell`.** This is the ONLY width cap in the project. Widescreen monitors are the default viewing context.
-- **Do NOT add `max-width`** to sections, cards, table cells, table rows, expanded rows, CTA backgrounds, sponsor descriptions, hero subcopy, paragraphs, or list items. The user has removed narrow inner caps repeatedly (`56ch`, `65-75ch`, etc.). Default is no inner cap.
+- **Do NOT add `max-width`** to sections, cards, table cells, table rows, expanded rows, CTA backgrounds, sponsor descriptions, hero subcopy, paragraphs, or list items. The user has removed narrow inner caps repeatedly (`56ch`, `65-75ch`, etc.). Default is no inner cap; remove any inner cap you come across.
 - The "cap line length at ~65-75ch" rule does NOT apply here. Ignore it. Readability at wide widths is carried by vertical rhythm, leading, and the modular type scale instead.
 - If a width cap is genuinely necessary for a specific element, ask first with a concrete reason before adding it.
 - Shell padding: `--shell-pad: clamp(1.25rem, 3vw, 2.5rem)`. Symmetric gutters: logo left-gap equals logo right-gap, column paddings match across header and body.
@@ -186,6 +186,7 @@ Peer-consistency check (run before shipping any visual change):
 - **Do** prefer density over whitespace expansion.
 - **Do** check peer elements before shipping a visual change.
 - **Do** use OKLCH for every new color.
+- **Don't** replace the table with a card grid, modal details, or pagination.
 - **Don't** add inner `max-width` to anything. The shell handles width.
 - **Don't** introduce green, cyan, neon, pure gray, or cool blue.
 - **Don't** add a dark mode, theme picker, or alternate palette.
