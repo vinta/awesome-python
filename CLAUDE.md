@@ -6,7 +6,7 @@ An opinionated guide to the best Python frameworks, libraries, and tools.
 
 ## Entry Rules
 
-[CONTRIBUTING.md](CONTRIBUTING.md) holds the admission rules, quality requirements, rejection rules, entry format, and ordering. Apply it whenever adding or removing an entry — direct commits included, not only PR reviews.
+[CONTRIBUTING.md](CONTRIBUTING.md) holds the admission rules, quality requirements, rejection rules, entry format, and ordering. Apply it whenever adding, removing, or rewording an entry — direct commits included, not only PR reviews.
 
 - Every keep/drop reason must be verified against current online data at decision time — download counts, repo activity and archived status, PyPI metadata, project docs. Judging tiers — obvious choice vs challenger — also requires WebSearch evidence (adoption trajectory, community sentiment), not download counts alone. Training-data recollections are not evidence; label anything unverifiable as a judgment call.
 - Checks stay read-only: judge whether a listed project installs or works from its PyPI metadata (`requires_python`, classifiers, wheel tags) and issue tracker, never by installing or running it, since that runs untrusted code.
