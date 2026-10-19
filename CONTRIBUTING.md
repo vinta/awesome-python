@@ -53,6 +53,10 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 - [pypi-name](https://github.com/owner/repo) - Description ending with period.
 ```
 
+### Description Length
+
+Aim for a rendered line of 100 characters or fewer: the name, ` - `, and the description, not counting the URL. Lines that long fit on one line in the GitHub README, which starts wrapping them around 105. This is a soft cap. When a draft lands near 105, cut filler words to get under it; when the content needs more room, let the line wrap rather than drop meaning.
+
 ### Standard Library Module
 
 ```markdown

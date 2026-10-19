@@ -16,7 +16,7 @@ With no arguments, or to see which sections were never audited, run `uv run pyth
 
 ## 2. Evidence
 
-Fetch live evidence for every entry in scope before judging anything (CLAUDE.md verification rule):
+Fetch live evidence for every entry in scope before judging anything (AGENTS.md verification rule):
 
 - **Downloads/month**: `cd website && uv run python fetch_pypi_downloads_via_clickpy.py` — free keyless ClickPy sweep of the full README, sole writer of `data/pypi_downloads.tsv` (rewritten from scratch each run; header row, every row stamped with its `fetched_at` date). A cache whose `fetched_at` is within the last 7 days is current enough for verdicts — skip the sweep; older than that, re-run it (costs ~1s). Cross-checks print to stdout, take explicit names, and never touch the cache: `fetch_pypi_downloads_via_bigquery.py <name> ...` (canonical source, maintainer's own GCP account, `--dry-run` first — the docstring carries the cost constraints; full-README sweeps exceed the free tier, keep name lists small), `fetch_pypi_downloads_via_pepy.py <name> ...` (needs `PEPY_TECH_API_KEY` in repo-root `.env`, throttled to 5 requests/minute), or `https://pypistats.org/api/packages/{name}/recent` paced 8s or slower. pypistats excludes mirror/CI traffic; ClickPy, BigQuery, and pepy include it — never mix sources within one comparison.
 - **Repo state**: archived flag, last push, created date, stars, description — `gh api repos/{owner}/{repo}`, GitLab API for GitLab-hosted projects.
@@ -39,4 +39,4 @@ One commit per section: body lists each removal with its reason and downloads fi
 
 ## 6. Record
 
-A conclusion that outlives the sitting goes into the repo before the audit ends: admission or evidence rules into CONTRIBUTING.md, repo process and environment facts into CLAUDE.md and AGENTS.md (kept in sync). Done when nothing the next audit needs is stranded in conversation.
+A conclusion that outlives the sitting goes into the repo before the audit ends: admission or evidence rules into CONTRIBUTING.md, repo process and environment facts into AGENTS.md. Done when nothing the next audit needs is stranded in conversation.
