@@ -195,7 +195,7 @@ kbd {
   z-index: 1;
   width: min(100%, calc(var(--shell-max) + (var(--shell-pad) * 2)));
   margin: 0 auto;
-  padding: 1.25rem var(--shell-pad) 2.4rem;
+  padding: 1.25rem var(--shell-pad);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -486,7 +486,8 @@ kbd {
   z-index: 1;
   width: min(100%, calc(var(--shell-max) + (var(--shell-pad) * 2)));
   margin: 0 auto;
-  padding: 1.25rem var(--shell-pad) clamp(2.25rem, 5vw, 3.5rem);
+  /* The bottom is a little smaller because the jump links' text sits inside its line box */
+  padding: 1.25rem var(--shell-pad) 1.1rem;
   display: grid;
   gap: clamp(2rem, 5vw, 3rem);
 }
@@ -1311,7 +1312,7 @@ th[data-sort].sort-asc::after {
 }
 
 .sponsorship-hero .category-hero-shell {
-  padding-bottom: clamp(3.25rem, 6vw, 5rem);
+  padding-bottom: 1.25rem;
   gap: clamp(2rem, 5vw, 3.5rem);
 }
 
@@ -1727,10 +1728,6 @@ th[data-sort].sort-asc::after {
 }
 
 @media (max-width: 960px) {
-  .hero-shell {
-    padding-bottom: 2rem;
-  }
-
   .hero-grid,
   .results-intro,
   .sponsor-shell,
