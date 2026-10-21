@@ -36,7 +36,7 @@ BUILTIN_PUBLIC_URL = f"{SITE_URL}categories/{BUILTIN_SLUG}/"
 
 SPONSORSHIP_PATH = "/sponsorship/"
 SPONSORSHIP_PUBLIC_URL = f"{SITE_URL}sponsorship/"
-SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+SPONSORSHIP_DESCRIPTION = "Sponsorship for Awesome Python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
 
 BUNDLED_PREFIX_RE = re.compile(r"^\(part of ")
 
@@ -280,7 +280,7 @@ def category_meta_description(name: str, entry_count: int, description: str) -> 
     if description:
         lead = description if description.endswith((".", "!", "?")) else f"{description}."
         return f"{lead} {count_sentence}"
-    return f"{count_sentence} Part of the Awesome Python catalog."
+    return f"{count_sentence} Part of the Awesome Python list."
 
 
 def subcategory_meta_description(name: str, parent_name: str, entry_names: Sequence[str]) -> str:

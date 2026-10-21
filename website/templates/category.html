@@ -215,7 +215,7 @@
     {% set named_groups = entry_groups | selectattr("name") | list %}
     <p class="order-note">
       {% if group_categories %}Listed by section, in editorial order.{% elif named_groups %}Listed in editorial order, grouped by use case.{% else %}Listed in editorial order.{% endif %}
-      <strong>Click a column</strong> to re-sort the whole list.
+      <strong>Click a column header</strong> to re-sort the whole list.
     </p>
     {% else %}
     <div>
@@ -223,7 +223,7 @@
     </div>
     {% endif %}
     <p class="results-note">
-      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      Press <kbd>/</kbd> to search. Tags open their category. Click a row for
       details.
     </p>
   </div>
@@ -248,8 +248,8 @@
       <input
         type="search"
         class="search"
-        placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
-        data-short-placeholder="Search {{ entries | length }} projects..."
+        placeholder="Search {{ entries | length }} projects in {{ category.name }}…"
+        data-short-placeholder="Search {{ entries | length }} projects…"
         aria-label="Search projects"
       />
     </div>
@@ -260,7 +260,7 @@
     class="table-wrap"
     tabindex="0"
     role="region"
-    aria-label="Libraries table"
+    aria-label="Projects table"
   >
     <table class="table"{% if entry_groups %} data-default-sort="editorial"{% endif %}>
       <thead>
@@ -270,7 +270,7 @@
             <button type="button" class="sort-btn">Project Name</button>
           </th>
           <th class="col-downloads" data-sort="downloads">
-            <button type="button" class="sort-btn">PyPI Downloads</button>
+            <button type="button" class="sort-btn" title="PyPI downloads, last 30 days">PyPI Downloads</button>
           </th>
           <th class="col-stars" data-sort="stars">
             <button type="button" class="sort-btn">GitHub Stars</button>
@@ -318,7 +318,7 @@
   </div>
 
   <div class="no-results" hidden>
-    <p>No projects match your search or filter.</p>
+    <p>No projects match your search.</p>
     <p class="no-results-hint">
       Try a broader term, or
       <button class="no-results-clear">browse all projects</button>.

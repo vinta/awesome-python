@@ -23,7 +23,7 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="hero-kicker">The definitive list that answers "I want to do X in Python, which tool should I use?"</p>
+        <p class="hero-kicker">Answers “I want to do X in Python. Which tool should I use?”</p>
         <h1>Awesome Python</h1>
         <p class="hero-sub">{{ subtitle }}</p>
         <p class="hero-proof">
@@ -37,7 +37,7 @@
             href="#library-index"
             class="hero-action hero-action-primary"
             data-scroll-to="library-index"
-            >Browse the List</a
+            >Browse the list</a
           >
           <a
             href="https://github.com/vinta/awesome-python"
@@ -84,7 +84,7 @@
       <h2>Search every project in one place</h2>
     </div>
     <p class="results-note">
-      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      Press <kbd>/</kbd> to search. Tags open their category. Click a row for
       details.
     </p>
   </div>
@@ -109,8 +109,8 @@
       <input
         type="search"
         class="search"
-        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories..."
-        data-short-placeholder="Search {{ entries | length }} projects..."
+        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories…"
+        data-short-placeholder="Search {{ entries | length }} projects…"
         aria-label="Search projects"
       />
     </div>
@@ -121,7 +121,7 @@
     class="table-wrap"
     tabindex="0"
     role="region"
-    aria-label="Libraries table"
+    aria-label="Projects table"
   >
     <table class="table">
       <thead>
@@ -131,7 +131,7 @@
             <button type="button" class="sort-btn">Project Name</button>
           </th>
           <th class="col-downloads" data-sort="downloads">
-            <button type="button" class="sort-btn">PyPI Downloads</button>
+            <button type="button" class="sort-btn" title="PyPI downloads, last 30 days">PyPI Downloads</button>
           </th>
           <th class="col-stars" data-sort="stars">
             <button type="button" class="sort-btn">GitHub Stars</button>
@@ -280,7 +280,7 @@
   </div>
 
   <div class="no-results" hidden>
-    <p>No projects match your search or filter.</p>
+    <p>No projects match your search.</p>
     <p class="no-results-hint">
       Try a broader term, or
       <button class="no-results-clear">browse all projects</button>.

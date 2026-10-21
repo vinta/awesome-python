@@ -861,7 +861,7 @@ class TestBuild:
         assert collection["name"] == "Python AI & ML Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["url"] == "https://awesome-python.com/categories/ai-ml/"
-        assert collection["description"] == "Explore 1 curated Python project in AI & ML. Part of the Awesome Python catalog."
+        assert collection["description"] == "Explore 1 curated Python project in AI & ML. Part of the Awesome Python list."
 
     def test_category_title_skips_libraries_after_plural_noun(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -1025,7 +1025,7 @@ class TestBuild:
 
         assert parser.title.strip() == "Sponsor Awesome Python"
         assert parser.meta_by_name["description"] == (
-            "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+            "Sponsorship for Awesome Python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
         )
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/sponsorship/"
         assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
