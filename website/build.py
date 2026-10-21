@@ -894,6 +894,7 @@ def build(repo_root: Path) -> None:
                 parent_category=parent_category,
                 group_categories=group_categories,
                 category_json_ld=category_json_ld,
+                sponsors=sponsors,
             ),
             encoding="utf-8",
         )

@@ -490,6 +490,37 @@ class TestBuild:
         assert 'href="https://sponsor.example.com/?ref=x&amp;utm_source=awesome-python&amp;utm_content=website"' in index_html
         assert "utm_content=readme" not in index_html
 
+    def test_category_page_shows_sponsor_band(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com"' in category_html
+        assert '<span class="sponsor-name">Sponsor</span>' in category_html
+
     def test_build_cleans_stale_output(self, tmp_path):
         readme = textwrap.dedent("""\
             # T
