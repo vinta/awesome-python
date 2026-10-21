@@ -1859,6 +1859,9 @@ th[data-sort].sort-asc::after {
 
   .table thead th:first-child,
   .table tbody td:first-child,
+  .table thead th.col-name,
+  .table tbody td.col-name,
+  .table .desc-row td[colspan],
   .group-row th {
     padding-left: 0.8rem;
   }
