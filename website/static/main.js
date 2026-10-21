@@ -399,6 +399,13 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// Mailto clicks leave no page view, so the sponsor funnel needs its own event
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[href^="mailto:sponsorship@"]');
+  if (!link || typeof gtag !== "function") return;
+  gtag("event", "sponsor_contact", { tier: link.dataset.tier });
+});
+
 if (location.hash) {
   const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
   if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
