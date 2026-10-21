@@ -746,7 +746,7 @@ kbd {
 
 .results-intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(18rem, 28rem);
+  grid-template-columns: minmax(0, 1fr) max-content;
   gap: 1.25rem;
   align-items: end;
   padding-bottom: 1.75rem;
