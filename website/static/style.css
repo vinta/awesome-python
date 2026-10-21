@@ -157,7 +157,6 @@ kbd {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 100svh;
   overflow: clip;
   background:
     radial-gradient(circle at 18% 18%, oklch(55% 0.14 45 / 0.34), transparent 22rem),
@@ -209,12 +208,10 @@ kbd {
   position: relative;
   z-index: 1;
   width: min(100%, calc(var(--shell-max) + (var(--shell-pad) * 2)));
-  min-height: 100svh;
   margin: 0 auto;
   padding: 1.25rem var(--shell-pad) 2.4rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 2rem;
 }
 
@@ -1739,7 +1736,6 @@ th[data-sort].sort-asc::after {
 
 @media (max-width: 960px) {
   .hero-shell {
-    min-height: auto;
     padding-bottom: 2rem;
   }
 
@@ -1802,10 +1798,6 @@ th[data-sort].sort-asc::after {
 }
 
 @media (max-width: 680px) {
-  .hero {
-    min-height: auto;
-  }
-
   .hero-topbar {
     gap: 0.75rem;
   }
