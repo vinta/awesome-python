@@ -101,16 +101,22 @@ Pairing (do not swap):
 
 Scale:
 
-| Role             | Token             | Size                          | Family             | Weight    | Notes                                          |
-| ---------------- | ----------------- | ----------------------------- | ------------------ | --------- | ---------------------------------------------- |
-| Hero headline    | (literal `clamp`) | `clamp(4.5rem, 11vw, 8.5rem)` | Cormorant Garamond | 600       | Magazine-cover scale, single use on the hero   |
-| Body large       | `--text-lg`       | `1.125rem`                    | Manrope            | 400       | Content-heavy passages                         |
-| Body             | `--text-base`     | `1rem` (16px)                 | Manrope            | 400       | Body floor                                     |
-| Meta / secondary | `--text-sm`       | `0.95rem`                     | Manrope            | 400 / 600 | Meta rows, secondary copy                      |
-| Caption / pill   | `--text-xs`       | `0.8rem` (12.8px)             | Manrope            | 600 / 700 | Smallest token, pills, badges, tags, footnotes |
+| Role             | Token             | Size                             | Family             | Weight    | Notes                                           |
+| ---------------- | ----------------- | -------------------------------- | ------------------ | --------- | ----------------------------------------------- |
+| Hero headline    | (literal `clamp`) | `clamp(4.5rem, 11vw, 8.5rem)`    | Cormorant Garamond | 600       | Magazine-cover scale, single use on the hero    |
+| Page title       | `--display-lg`    | `clamp(3.6rem, 9vw, 7rem)`       | Cormorant Garamond | 600       | Category and sponsorship `h1`                   |
+| Section heading  | `--display-md`    | `clamp(2.25rem, 4.2vw, 3.3rem)`  | Cormorant Garamond | 600       | Guide, results, CTA `h2`, sponsor name          |
+| Display small    | `--display-sm`    | `clamp(1.75rem, 2.8vw, 2.25rem)` | Cormorant Garamond | 600       | Group-row `h2`, sponsorship lede, past sponsors |
+| Lede             | `--text-2xl`      | `1.5rem`                         | Manrope            | 400       | First paragraph of a category intro             |
+| Subtitle         | `--text-xl`       | `1.25rem`                        | Manrope            | 400       | Hero and category subtitles, category intro     |
+| Body large       | `--text-lg`       | `1.125rem`                       | Manrope            | 400       | Content-heavy passages, project names, search   |
+| Body             | `--text-base`     | `1rem` (16px)                    | Manrope            | 400       | Body floor                                      |
+| Meta / secondary | `--text-sm`       | `0.95rem`                        | Manrope            | 400 / 600 | Meta rows, secondary copy                       |
+| Caption / pill   | `--text-xs`       | `0.8rem` (12.8px)                | Manrope            | 600 / 700 | Smallest token, pills, badges, tags, footnotes  |
 
 Hard-won sizing rules (do not relax):
 
+- **Every `font-size` uses a scale token.** The literal exceptions are the hero headline, `.tier-amount`, the sort `.arrow` glyph, and `em` sizes on inline code and `kbd`. Body tokens are fixed `rem`; only display tokens are fluid, because `vw` in body text does not grow with browser zoom. Round a new size up to the next token instead of adding an in-between step: sizes 1 to 2px apart read as noise, not hierarchy.
 - **Body type floor is 16px.** Do not go smaller.
 - **Absolute minimum font size is 12px (`0.75rem`) for ANY text**, including pills, badges, tags, captions, footnotes. Anything smaller hits Chrome's default minimum-font-size floor and renders inconsistently across browsers and user accessibility settings.
 - **When in doubt, pick one step larger** than what generic scale references suggest (`--text-base` over `--text-sm`, 1.75rem over 1.5rem for a heading). The maintainer has corrected sizes upward 11+ times across 8 sessions. Footer, meta rows, expand content, labels, and headings all trend too small by default. **Never reduce an existing size unprompted.**

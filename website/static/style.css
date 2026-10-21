@@ -61,6 +61,12 @@
   --text-sm: 0.95rem;
   --text-base: 1rem;
   --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+
+  --display-sm: clamp(1.75rem, 2.8vw, 2.25rem);
+  --display-md: clamp(2.25rem, 4.2vw, 3.3rem);
+  --display-lg: clamp(3.6rem, 9vw, 7rem);
 
   --footer-bg: oklch(16% 0.025 35);
   --footer-text: oklch(72% 0.02 75);
@@ -306,7 +312,7 @@ kbd {
 .hero-sub {
   margin-top: 2rem;
   color: var(--hero-muted);
-  font-size: clamp(1rem, 2vw, 1.18rem);
+  font-size: var(--text-xl);
   text-wrap: pretty;
 }
 
@@ -372,7 +378,7 @@ kbd {
 
 .hero-category-link {
   color: var(--hero-muted);
-  font-size: 0.72rem;
+  font-size: var(--text-xs);
   font-weight: 700;
   line-height: 1.35;
   text-decoration: underline;
@@ -463,7 +469,7 @@ kbd {
 
 .category-hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3.6rem, 9vw, 7rem);
+  font-size: var(--display-lg);
   line-height: 0.9;
   font-weight: 600;
   text-wrap: balance;
@@ -472,7 +478,7 @@ kbd {
 .category-breadcrumb {
   margin: 0 0 1rem;
   color: var(--hero-muted);
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-size: var(--text-lg);
 }
 
 .category-breadcrumb a {
@@ -489,7 +495,7 @@ kbd {
 .category-subtitle {
   margin-top: 1.1rem;
   color: var(--hero-muted);
-  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  font-size: var(--text-xl);
   text-wrap: pretty;
 }
 
@@ -515,13 +521,13 @@ kbd {
   display: grid;
   gap: 0.9rem;
   color: var(--hero-muted);
-  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-size: var(--text-xl);
   text-wrap: pretty;
 }
 
 .category-intro > p:first-child {
   color: var(--hero-text);
-  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  font-size: var(--text-2xl);
   line-height: 1.45;
 }
 
@@ -574,7 +580,7 @@ kbd {
 
 .guide-section h2 {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-size: var(--display-md);
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.03em;
@@ -667,7 +673,7 @@ kbd {
 
 .sponsor-name {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 4.2vw, 3.25rem);
+  font-size: var(--display-md);
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.025em;
@@ -675,7 +681,7 @@ kbd {
 
 .sponsor-desc {
   color: var(--ink-soft);
-  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-size: var(--text-lg);
   line-height: 1.55;
 }
 
@@ -693,7 +699,7 @@ kbd {
 .results-intro h2,
 .final-cta h2 {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  font-size: var(--display-md);
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.03em;
@@ -750,7 +756,7 @@ kbd {
   border-radius: 999px;
   background: linear-gradient(180deg, oklch(100% 0 0 / 0.82), var(--bg-paper));
   color: var(--ink);
-  font-size: clamp(1rem, 1.4vw, 1.06rem);
+  font-size: var(--text-lg);
   box-shadow:
     inset 0 1px 0 var(--search-inset),
     0 1.4rem 2.6rem -2.1rem var(--search-shadow);
@@ -854,7 +860,7 @@ kbd {
   align-items: baseline;
   gap: 0.75rem;
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+  font-size: var(--display-sm);
   font-weight: 600;
   line-height: 1;
   scroll-margin-top: 4.5rem;
@@ -927,7 +933,7 @@ kbd {
 
 .col-name > a {
   color: var(--ink);
-  font-size: clamp(1rem, 1.5vw, 1.08rem);
+  font-size: var(--text-lg);
   font-weight: 700;
   overflow-wrap: break-word;
   word-break: break-word;
@@ -1265,7 +1271,7 @@ th[data-sort].sort-asc::after {
 }
 
 .sponsorship-hero-copy h1 {
-  font-size: clamp(3.4rem, 8.5vw, 6.5rem);
+  font-size: var(--display-lg);
 }
 
 .sponsorship-proof {
@@ -1362,7 +1368,7 @@ th[data-sort].sort-asc::after {
 
 .sponsorship-lede {
   font-family: var(--font-display);
-  font-size: clamp(1.55rem, 2.6vw, 2rem);
+  font-size: var(--display-sm);
   line-height: 1.25;
   color: var(--ink);
   letter-spacing: -0.01em;
@@ -1518,7 +1524,7 @@ th[data-sort].sort-asc::after {
 
 .past-sponsors a {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 2.8vw, 2.1rem);
+  font-size: var(--display-sm);
   font-weight: 600;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -1564,7 +1570,7 @@ th[data-sort].sort-asc::after {
 
 .final-cta p {
   color: var(--ink-soft);
-  font-size: clamp(1rem, 1.6vw, 1.08rem);
+  font-size: var(--text-lg);
 }
 
 .final-cta .hero-action-primary {
@@ -1783,10 +1789,6 @@ th[data-sort].sort-asc::after {
   .hero-category-links {
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     column-gap: 0.75rem;
-  }
-
-  .hero-category-link {
-    font-size: 0.68rem;
   }
 
   .search {
