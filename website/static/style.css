@@ -177,23 +177,10 @@ kbd {
   pointer-events: none;
 }
 
-.hero-sheen,
 .hero-noise {
   position: absolute;
   inset: 0;
   pointer-events: none;
-}
-
-.hero-sheen {
-  background:
-    linear-gradient(118deg, transparent 35%, oklch(100% 0 0 / 0.09) 49%, transparent 63%);
-  transform: translateX(-30%);
-  animation: sheen-drift 18s linear 3;
-}
-
-.hero.offscreen .hero-sheen,
-.hero.offscreen .hero-noise {
-  animation-play-state: paused;
 }
 
 .hero-noise {
@@ -1722,15 +1709,6 @@ th[data-sort].sort-asc::after {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes sheen-drift {
-  from {
-    transform: translateX(-30%);
-  }
-  to {
-    transform: translateX(35%);
   }
 }
 

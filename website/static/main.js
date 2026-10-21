@@ -78,16 +78,6 @@ if (window.location.hash === "#library-index") {
   );
 }
 
-// Pause hero animations when scrolled out of view
-(function () {
-  const hero = document.querySelector(".hero");
-  if (!hero || !("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver(function (entries) {
-    hero.classList.toggle("offscreen", !entries[0].isIntersecting);
-  });
-  observer.observe(hero);
-})();
-
 function relativeTime(isoStr) {
   const date = new Date(isoStr);
   const now = new Date();
