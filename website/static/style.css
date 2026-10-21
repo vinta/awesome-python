@@ -772,7 +772,8 @@ kbd {
 .controls {
   display: grid;
   gap: 0.85rem;
-  padding-bottom: 1.35rem;
+  /* Matches the visible gap above the section's first line of text */
+  padding-bottom: calc(var(--shell-pad) + 0.5rem);
 }
 
 .search-wrap {
