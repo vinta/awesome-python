@@ -326,7 +326,7 @@ kbd {
   letter-spacing: 0.02em;
 }
 
-/* Keeps a stat whole, so the date never breaks at its hyphens */
+/* Keeps each stat whole when the line wraps */
 .proof-stat {
   white-space: nowrap;
 }

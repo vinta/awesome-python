@@ -833,7 +833,6 @@ def build(repo_root: Path) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=build_date.date().isoformat(),
             sponsors=sponsors,
             category_urls=category_urls,
             filter_urls=filter_urls,
@@ -937,7 +936,6 @@ def build(repo_root: Path) -> None:
     hero_stats: list[str] = []
     if repo_stars:
         hero_stats.append(f"{repo_stars}+ stars on GitHub")
-    hero_stats.append(f"Updated on {build_date.date().isoformat()}")
     (sponsorship_dir / "index.html").write_text(
         tpl_sponsorship.render(
             hero_stats=hero_stats,

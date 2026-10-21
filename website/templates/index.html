@@ -27,8 +27,7 @@
         <h1>Awesome Python</h1>
         <p class="hero-sub">{{ subtitle }}</p>
         <p class="hero-proof">
-          {% if repo_stars %}<span class="proof-stat">{{ repo_stars }}+ stars on GitHub</span>{% endif %} {% if repo_stars and build_date %}<span class="proof-sep">/</span>{% endif %} {% if build_date %}<span class="proof-stat">Updated on {{ build_date }}</span>{% endif %} {% if repo_stars or
-          build_date %}<span class="proof-sep">/</span>{% endif %} <span class="proof-stat">Maintained by
+          {% if repo_stars %}<span class="proof-stat">{{ repo_stars }}+ stars on GitHub</span> <span class="proof-sep">/</span>{% endif %} <span class="proof-stat">Maintained by
           <a href="https://github.com/vinta" target="_blank" rel="noopener">@vinta</a>
           and
           <a href="https://github.com/JinyangWang27" target="_blank" rel="noopener">@JinyangWang27</a></span>
