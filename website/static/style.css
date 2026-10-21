@@ -949,10 +949,11 @@ kbd {
 
 .row:has(+ .desc-row:not([hidden])) td {
   border-bottom-color: transparent;
-  padding-bottom: 0.35rem;
+  padding-bottom: 0.4rem;
 }
 
 .row.open td {
+  padding-bottom: 0.35rem;
   background: var(--row-open);
   border-bottom-color: transparent;
 }
@@ -1091,7 +1092,7 @@ th[data-sort].sort-asc::after {
   transform: rotate(90deg);
 }
 
-.desc-row td {
+.table .desc-row td {
   padding-top: 0;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--line);
@@ -1119,6 +1120,7 @@ th[data-sort].sort-asc::after {
 }
 
 .row.open + .desc-row td {
+  padding-bottom: 0;
   background: var(--row-open);
   border-bottom-color: transparent;
 }
@@ -1153,9 +1155,8 @@ th[data-sort].sort-asc::after {
   display: none;
 }
 
-.expand-row td {
-  padding-top: 0.1rem;
-  padding-bottom: 1.15rem;
+.table .expand-row td {
+  padding-top: 0;
   background: var(--row-open);
   border-bottom: 1px solid var(--line);
 }
@@ -1189,7 +1190,7 @@ th[data-sort].sort-asc::after {
 
 .expand-also-see,
 .expand-meta {
-  margin-top: 0.45rem;
+  margin-top: 0.3rem;
   font-size: var(--text-sm);
   color: var(--ink-muted);
 }
