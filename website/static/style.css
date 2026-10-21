@@ -177,23 +177,10 @@ kbd {
   pointer-events: none;
 }
 
-.hero-sheen,
 .hero-noise {
   position: absolute;
   inset: 0;
   pointer-events: none;
-}
-
-.hero-sheen {
-  background:
-    linear-gradient(118deg, transparent 35%, oklch(100% 0 0 / 0.09) 49%, transparent 63%);
-  transform: translateX(-30%);
-  animation: sheen-drift 18s linear 3;
-}
-
-.hero.offscreen .hero-sheen,
-.hero.offscreen .hero-noise {
-  animation-play-state: paused;
 }
 
 .hero-noise {
@@ -337,6 +324,11 @@ kbd {
   color: var(--hero-proof);
   font-size: var(--text-sm);
   letter-spacing: 0.02em;
+}
+
+/* Keeps each stat whole when the line wraps */
+.proof-stat {
+  white-space: nowrap;
 }
 
 .hero-proof a {
@@ -1417,6 +1409,11 @@ th[data-sort].sort-asc::after {
   color: var(--accent);
 }
 
+/* With the <wbr> after "@", the address breaks only there, never at the domain's hyphen */
+.email-domain {
+  white-space: nowrap;
+}
+
 .sponsorship-lede {
   font-size: var(--text-2xl);
   line-height: 1.45;
@@ -1725,15 +1722,6 @@ th[data-sort].sort-asc::after {
   }
 }
 
-@keyframes sheen-drift {
-  from {
-    transform: translateX(-30%);
-  }
-  to {
-    transform: translateX(35%);
-  }
-}
-
 @media (max-width: 960px) {
   .hero-shell {
     padding-bottom: 2rem;
@@ -1744,6 +1732,16 @@ th[data-sort].sort-asc::after {
   .sponsor-shell,
   .sponsorship-shell {
     grid-template-columns: 1fr;
+  }
+
+  .sponsor-meta {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .sponsor-link {
+    margin-block-start: 0;
   }
 
   .sponsorship-meta {
@@ -1798,6 +1796,14 @@ th[data-sort].sort-asc::after {
 }
 
 @media (max-width: 680px) {
+  .proof-stat {
+    display: block;
+  }
+
+  .proof-sep {
+    display: none;
+  }
+
   .hero-topbar {
     gap: 0.75rem;
   }

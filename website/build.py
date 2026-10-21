@@ -833,7 +833,6 @@ def build(repo_root: Path) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=build_date.strftime("%B %d, %Y"),
             sponsors=sponsors,
             category_urls=category_urls,
             filter_urls=filter_urls,
@@ -937,7 +936,6 @@ def build(repo_root: Path) -> None:
     hero_stats: list[str] = []
     if repo_stars:
         hero_stats.append(f"{repo_stars}+ stars on GitHub")
-    hero_stats.append(f"Updated {build_date.strftime('%B %d, %Y')}")
     (sponsorship_dir / "index.html").write_text(
         tpl_sponsorship.render(
             hero_stats=hero_stats,
@@ -994,7 +992,7 @@ def build(repo_root: Path) -> None:
         llms_template,
         readme_text=readme_text,
         subtitle=subtitle,
-        build_date=build_date.strftime("%Y/%m/%d"),
+        build_date=build_date.date().isoformat(),
         stars_data=stars_data,
         downloads_data=downloads_data,
         categories=categories,

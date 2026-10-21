@@ -4,7 +4,6 @@
 {% endblock %}
 {% block header %}
 <header class="hero">
-  <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="hero-shell">
@@ -28,11 +27,10 @@
         <h1>Awesome Python</h1>
         <p class="hero-sub">{{ subtitle }}</p>
         <p class="hero-proof">
-          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{ build_date }}{% endif %} {% if repo_stars or
-          build_date %}/{% endif %} Maintained by
+          {% if repo_stars %}<span class="proof-stat">{{ repo_stars }}+ stars on GitHub</span> <span class="proof-sep">/</span>{% endif %} <span class="proof-stat">Maintained by
           <a href="https://github.com/vinta" target="_blank" rel="noopener">@vinta</a>
           and
-          <a href="https://github.com/JinyangWang27" target="_blank" rel="noopener">@JinyangWang27</a>
+          <a href="https://github.com/JinyangWang27" target="_blank" rel="noopener">@JinyangWang27</a></span>
         </p>
         <div class="hero-actions">
           <a

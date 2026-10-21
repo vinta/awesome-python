@@ -8,7 +8,6 @@
 {% endblock %}
 {% block header %}
 <header class="category-hero sponsorship-hero">
-  <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="category-hero-shell">
@@ -38,7 +37,7 @@
 
       {% if hero_stats %}
       <p class="hero-proof sponsorship-proof">
-        {% for stat in hero_stats %}{{ stat }}{% if not loop.last %}
+        {% for stat in hero_stats %}<span class="proof-stat">{{ stat }}</span>{% if not loop.last %}
         <span class="proof-sep">/</span> {% endif %}{% endfor %}
       </p>
       {% endif %}
@@ -48,7 +47,7 @@
           href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship"
           data-tier="general"
           class="hero-action hero-action-primary"
-          >Email sponsorship@awesome-python.com</a
+          >Email us</a
         >
         <a
           href="https://github.com/vinta/awesome-python/blob/master/SPONSORSHIP.md"
@@ -234,7 +233,7 @@
         <a
           href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship"
           data-tier="general"
-          >sponsorship@awesome-python.com</a
+          >sponsorship@<wbr /><span class="email-domain">awesome-python.com</span></a
         >
         with the four items below.
       </p>
@@ -274,7 +273,7 @@
           href="mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship"
           data-tier="general"
           class="hero-action hero-action-primary"
-          >Email sponsorship@awesome-python.com</a
+          >Email us</a
         >
       </div>
     </div>
