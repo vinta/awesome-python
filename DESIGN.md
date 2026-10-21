@@ -162,7 +162,7 @@ The component vocabulary is small and table-led. Source of truth: `website/stati
 - **Hero**. Magazine-cover headline, dark earthy ground, kicker and proof microcopy, primary CTA button using `--hero-btn-start` / `--hero-btn-end`. Subtle grid plus slow sheen. Respects `prefers-reduced-motion`.
 - **Jump links**. One per use case in a category hero, plus one for the guide. Underlined like the intro's links, with a trailing ↓. Never tag-styled: tags filter the table or open another page, jump links only scroll.
 - **Guide band**. Everything in a category intro after its "How to choose" list. It sits below the table on the hero's dark gradient, with its H2 above the text.
-- **Sponsor band**. Sits below the hero on the home page, on `--bg-paper-strong`. Editorial layout, not a logo wall. Sponsor links share the global accent treatment.
+- **Sponsor band**. Sits below the hero on the home page and category pages, on `--bg-paper-strong`. Editorial layout, not a logo wall. Sponsor links share the global accent treatment.
 - **CTA**. Warm `--cta-bg`, full-bleed within shell. The button itself uses accent tokens.
 - **Footer**. Dark warm charcoal, part of the same system. Footer links share the global hover and focus treatment.
 - **Search**. Pill input with `--search-inset` interior and `--search-focus-ring` focus ring. Focus shadow uses `--search-focus-shadow`.

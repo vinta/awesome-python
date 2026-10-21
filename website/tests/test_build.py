@@ -26,6 +26,7 @@ from build import (
     load_pypi_badges,
     load_stars,
     sort_entries,
+    sponsor_website_url,
     subcategory_path,
 )
 from readme_parser import parse_readme, slugify
@@ -457,6 +458,68 @@ class TestBuild:
         assert "- [w2](https://github.com/owner/w2) - A starred widget. (GitHub stars: 42)" in llms_txt
         assert llms_txt != readme
         assert "# Contributing" not in llms_txt
+
+    def test_homepage_sponsor_link_tags_website_clicks(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com/?ref=x&utm_source=awesome-python&utm_content=readme) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        index_html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com/?ref=x&amp;utm_source=awesome-python&amp;utm_content=website"' in index_html
+        assert "utm_content=readme" not in index_html
+
+    def test_category_page_shows_sponsor_band(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com"' in category_html
+        assert '<span class="sponsor-name">Sponsor</span>' in category_html
 
     def test_build_cleans_stale_output(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -1276,6 +1339,23 @@ class TestExtractGithubRepo:
 
     def test_org_only(self):
         assert extract_github_repo("https://github.com/org") is None
+
+
+# ---------------------------------------------------------------------------
+# sponsor_website_url
+# ---------------------------------------------------------------------------
+
+
+class TestSponsorWebsiteUrl:
+    def test_replaces_readme_utm_content(self):
+        url = "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=readme"
+        assert sponsor_website_url(url) == "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=website"
+
+    def test_keeps_path_and_other_params(self):
+        assert sponsor_website_url("https://example.com/landing?ref=x&utm_content=readme") == "https://example.com/landing?ref=x&utm_content=website"
+
+    def test_leaves_untagged_url_unchanged(self):
+        assert sponsor_website_url("https://example.com") == "https://example.com"
 
 
 # ---------------------------------------------------------------------------
