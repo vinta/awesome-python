@@ -1251,6 +1251,9 @@ th[data-sort].sort-asc::after {
 }
 
 .back-to-top {
+  /* Grows the tap target past 24px without changing the header row height */
+  padding-block: 0.5rem;
+  margin-block: -0.5rem;
   border: 0;
   background: none;
   color: var(--accent-deep);
