@@ -116,6 +116,7 @@ Hard-won sizing rules (do not relax):
 - **When in doubt, pick one step larger** than what generic scale references suggest (`--text-base` over `--text-sm`, 1.75rem over 1.5rem for a heading). The maintainer has corrected sizes upward 11+ times across 8 sessions. Footer, meta rows, expand content, labels, and headings all trend too small by default. **Never reduce an existing size unprompted.**
 - Adjacent heading levels differ by at least 0.25rem of rendered size.
 - Row numbers in the table: left-align, no leading zeros. Zero-padding was tried and rejected.
+- **Cormorant Garamond numerals use lining figures** (`font-variant-numeric: lining-nums`). Its default old-style figures shrink zeros to x-height and drop 3/4/5/7/9 below the baseline, so a price like `$500` reads as `$5oo`.
 - **Never `text-transform`.** Write the casing in the markup.
 
 ## Layout
