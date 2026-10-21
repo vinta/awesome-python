@@ -1367,11 +1367,9 @@ th[data-sort].sort-asc::after {
 }
 
 .sponsorship-lede {
-  font-family: var(--font-display);
-  font-size: var(--display-sm);
-  line-height: 1.25;
+  font-size: var(--text-2xl);
+  line-height: 1.45;
   color: var(--ink);
-  letter-spacing: -0.01em;
   text-wrap: pretty;
 }
 
@@ -1516,9 +1514,9 @@ th[data-sort].sort-asc::after {
 
 .past-sponsors li {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.65rem;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.35rem;
   padding-block: 0.4rem;
 }
 
@@ -1537,8 +1535,8 @@ th[data-sort].sort-asc::after {
 }
 
 .past-sponsor-desc {
-  color: var(--ink-muted);
-  font-size: var(--text-base);
+  color: var(--ink-soft);
+  font-size: var(--text-lg);
 }
 
 .sponsorship-cta-row {

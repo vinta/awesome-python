@@ -99,20 +99,22 @@ Pairing (do not swap):
 - **Display**: `Cormorant Garamond` (serif, 600 only).
 - **Body**: `Manrope` (sans, 400 / 600 / 700 / 800).
 
+Cormorant Garamond sets headings and standalone names only, never running sentences, and never on the same line as Manrope. Its short x-height and thin strokes tire the eye across a paragraph, and next to Manrope on one baseline the two x-heights clash. Ledes and other multi-line copy use Manrope (`--text-2xl`); a display name with a description stacks the name above it, as in the sponsor band.
+
 Scale:
 
-| Role             | Token             | Size                             | Family             | Weight    | Notes                                           |
-| ---------------- | ----------------- | -------------------------------- | ------------------ | --------- | ----------------------------------------------- |
-| Hero headline    | (literal `clamp`) | `clamp(4.5rem, 11vw, 8.5rem)`    | Cormorant Garamond | 600       | Magazine-cover scale, single use on the hero    |
-| Page title       | `--display-lg`    | `clamp(3.6rem, 9vw, 7rem)`       | Cormorant Garamond | 600       | Category and sponsorship `h1`                   |
-| Section heading  | `--display-md`    | `clamp(2.25rem, 4.2vw, 3.3rem)`  | Cormorant Garamond | 600       | Guide, results, CTA `h2`, sponsor name          |
-| Display small    | `--display-sm`    | `clamp(1.75rem, 2.8vw, 2.25rem)` | Cormorant Garamond | 600       | Group-row `h2`, sponsorship lede, past sponsors |
-| Lede             | `--text-2xl`      | `1.5rem`                         | Manrope            | 400       | First paragraph of a category intro             |
-| Subtitle         | `--text-xl`       | `1.25rem`                        | Manrope            | 400       | Hero and category subtitles, category intro     |
-| Body large       | `--text-lg`       | `1.125rem`                       | Manrope            | 400       | Content-heavy passages, project names, search   |
-| Body             | `--text-base`     | `1rem` (16px)                    | Manrope            | 400       | Body floor                                      |
-| Meta / secondary | `--text-sm`       | `0.95rem`                        | Manrope            | 400 / 600 | Meta rows, secondary copy                       |
-| Caption / pill   | `--text-xs`       | `0.8rem` (12.8px)                | Manrope            | 600 / 700 | Smallest token, pills, badges, tags, footnotes  |
+| Role             | Token             | Size                             | Family             | Weight    | Notes                                             |
+| ---------------- | ----------------- | -------------------------------- | ------------------ | --------- | ------------------------------------------------- |
+| Hero headline    | (literal `clamp`) | `clamp(4.5rem, 11vw, 8.5rem)`    | Cormorant Garamond | 600       | Magazine-cover scale, single use on the hero      |
+| Page title       | `--display-lg`    | `clamp(3.6rem, 9vw, 7rem)`       | Cormorant Garamond | 600       | Category and sponsorship `h1`                     |
+| Section heading  | `--display-md`    | `clamp(2.25rem, 4.2vw, 3.3rem)`  | Cormorant Garamond | 600       | Guide, results, CTA `h2`, sponsor name            |
+| Display small    | `--display-sm`    | `clamp(1.75rem, 2.8vw, 2.25rem)` | Cormorant Garamond | 600       | Group-row `h2`, past sponsor names                |
+| Lede             | `--text-2xl`      | `1.5rem`                         | Manrope            | 400       | Category intro first paragraph, sponsorship ledes |
+| Subtitle         | `--text-xl`       | `1.25rem`                        | Manrope            | 400       | Hero and category subtitles, category intro       |
+| Body large       | `--text-lg`       | `1.125rem`                       | Manrope            | 400       | Content-heavy passages, project names, search     |
+| Body             | `--text-base`     | `1rem` (16px)                    | Manrope            | 400       | Body floor                                        |
+| Meta / secondary | `--text-sm`       | `0.95rem`                        | Manrope            | 400 / 600 | Meta rows, secondary copy                         |
+| Caption / pill   | `--text-xs`       | `0.8rem` (12.8px)                | Manrope            | 600 / 700 | Smallest token, pills, badges, tags, footnotes    |
 
 Hard-won sizing rules (do not relax):
 
