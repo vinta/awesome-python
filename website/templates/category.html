@@ -210,20 +210,21 @@
 {% include "_sponsor_band.html" %}
 
 <section class="results-section" id="library-index">
+  {% set single_entry = entries | length == 1 %}
   <div class="results-intro section-shell" data-reveal>
-    {% if entry_groups %}
+    {% if entry_groups and not single_entry %}
     {% set named_groups = entry_groups | selectattr("name") | list %}
     <p class="order-note">
       {% if group_categories %}Listed by section, in editorial order.{% elif named_groups %}Listed in editorial order, grouped by use case.{% else %}Listed in editorial order.{% endif %}
       <strong>Click a column header</strong> to re-sort the whole list.
     </p>
-    {% else %}
+    {% elif not entry_groups %}
     <div>
-      <h2>{{ entries | length }} {{ category.name }} projects</h2>
+      <h2>{{ entries | length }} {{ category.name }} project{{ "s" if not single_entry }}</h2>
     </div>
     {% endif %}
     <p class="results-note">
-      Press <kbd>/</kbd> to search. Tags open their category. Click a row for
+      {% if not single_entry %}Press <kbd>/</kbd> to search. {% endif %}Tags open their category. Click a row for
       details.
     </p>
   </div>
@@ -248,8 +249,8 @@
       <input
         type="search"
         class="search"
-        placeholder="Search {{ entries | length }} projects in {{ category.name }}…"
-        data-short-placeholder="Search {{ entries | length }} projects…"
+        placeholder="Search {{ entries | length }} project{{ "s" if not single_entry }} in {{ category.name }}…"
+        data-short-placeholder="Search {{ entries | length }} project{{ "s" if not single_entry }}…"
         aria-label="Search projects"
       />
     </div>

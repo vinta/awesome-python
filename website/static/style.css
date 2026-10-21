@@ -761,6 +761,11 @@ kbd {
   justify-self: end;
 }
 
+/* Single-project pages drop the order note, so keep the note in the last column */
+.results-note:only-child {
+  grid-column: -2 / -1;
+}
+
 .controls {
   display: grid;
   gap: 0.85rem;
