@@ -493,7 +493,8 @@ kbd {
 }
 
 .category-subtitle {
-  margin-top: 1.1rem;
+  /* Cormorant descenders hang ~0.28em below the h1's 0.9 line box, so the gap scales with the h1. */
+  margin-top: max(1.1rem, var(--display-lg) * 0.3);
   color: var(--hero-muted);
   font-size: var(--text-xl);
   text-wrap: pretty;
