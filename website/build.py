@@ -47,23 +47,32 @@ PICK_ALIASES = {
     "Cacheops": "django-cacheops",
     "Chroma": "chromadb",
     "Coverage.py": "coverage",
+    "Django AI Skills": "django-ai-plugins",
+    "Django ORM": "django.db.models",
     "Faiss": "faiss-cpu",
     "gRPC": "grpcio",
+    "Google Cloud client libraries": "google-cloud-python",
     "Grappelli": "django-grappelli",
     "Hydra": "hydra-core",
     "Ibis": "ibis-framework",
+    "Jupyter Notebook": "notebook",
     "Material for MkDocs": "mkdocs-material",
+    "MCP Python SDK": "mcp",
     "Odoo Community": "odoo",
     "Odoo Enterprise": "odoo",
     "Odoo Online": "odoo",
+    "OpenAI Agents SDK": "openai-agents",
     "OpenCV": "opencv-python",
     "Playwright": "playwright-python",
     "PyAV": "av",
+    "Python-Markdown": "markdown",
     "python-oracledb": "oracledb",
     "Ray Core": "ray",
+    "redis-py": "redis",
     "Sherlock": "sherlock-project",
     "Silk": "django-silk",
     "Surprise": "scikit-surprise",
+    "The Algorithms - Python": "thealgorithms",
     "Unfold": "django-unfold",
     "Vega-Altair": "altair",
 }
@@ -309,7 +318,7 @@ def link_pick_names(pick: str, slugs_by_key: dict[str, str]) -> str:
             start, end = words[i].start(), words[j - 1].end()
             span = pick[start:end]
             slug = slugs_by_key.get(entry_name_key(span))
-            # Code spans and dangling punctuation like "The Algorithms -" stay outside links
+            # Code spans and dangling punctuation like "Django -" stay outside links
             if slug and span[0].isalnum() and span[-1].isalnum() and "," not in span and "`" not in span:
                 parts.append(f"{pick[pos:start]}[{span}](#entry-{slug})")
                 pos, i = end, j

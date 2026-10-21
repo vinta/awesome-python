@@ -1686,12 +1686,12 @@ class TestLoadCategoryIntro:
     def test_links_picks_to_entry_rows(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text(
-            "Use w1.\n\nHow to choose:\n\n- Small apps: Django Ninja, or `uv tool` on uv\n- Big apps: Django\n- Old apps: The Algorithms - Python\n\nSee [w1](https://w1.example).\n", encoding="utf-8"
+            "Use w1.\n\nHow to choose:\n\n- Small apps: Django Ninja, or `uv tool` on uv\n- Big apps: Django\n- Old apps: Django - LTS releases\n\nSee [w1](https://w1.example).\n", encoding="utf-8"
         )
-        intro_html, guide_html, _, _ = load_category_intro(path, ["django-ninja", "Django", "uv", "TheAlgorithms"])
+        intro_html, guide_html, _, _ = load_category_intro(path, ["django-ninja", "Django", "uv"])
         assert '<li>Small apps: <a href="#entry-django-ninja">Django Ninja</a>, or <code>uv tool</code> on <a href="#entry-uv">uv</a></li>' in intro_html
         assert '<li>Big apps: <a href="#entry-django">Django</a></li>' in intro_html
-        assert '<li>Old apps: <a href="#entry-thealgorithms">The Algorithms</a> - Python</li>' in intro_html
+        assert '<li>Old apps: <a href="#entry-django">Django</a> - LTS releases</li>' in intro_html
         assert '<a href="https://w1.example" target="_blank" rel="noopener">w1</a>' in guide_html
 
     def test_links_pick_aliases_to_entry_rows(self, tmp_path):
