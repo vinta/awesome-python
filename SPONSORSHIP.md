@@ -43,9 +43,9 @@ Indie Dev Sponsor is available only to founder-led (one-person company) products
 
 Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship) with:
 
-- **Tier:** Headline Sponsor ($500/mo or $4,500/year), Featured Sponsor ($200/mo or $1,800/year), or Indie Dev Sponsor ($99/mo, $249/quarter, or $891/year)
-- **Content:** Product name, URL, logo, and description (Headline tier), logo and `[Name](URL) - Description.` entry (Featured tier), or `[Name](URL) - Description.` entry (Indie Dev tier)
-- **Duration:** 1, 3, or 6 months, or 1 year (3 months free)
+- **Tier:** Headline, Featured, or Indie Dev Sponsor
+- **Content:** a `[Name](URL) - Description.` entry, plus a logo for Headline and Featured
+- **Duration:** 1, 3, 6, or 12 months (a year gets 3 months free)
 - **Payment method:** card via [Open Collective](https://opencollective.com/awesome-python), US bank transfer (ACH/wire), or PayPal
 
 One upfront payment per term. Setup takes less than 24 hours.
