@@ -90,7 +90,7 @@ function relativeTime(isoStr) {
   if (diffDays === 1) return "yesterday";
   if (diffDays < 30) return diffDays + " days ago";
   const diffMonths = Math.floor(diffDays / 30);
-  if (diffMonths < 12)
+  if (diffDays < 365)
     return diffMonths === 1 ? "1 month ago" : diffMonths + " months ago";
   const diffYears = Math.floor(diffDays / 365);
   return diffYears === 1 ? "1 year ago" : diffYears + " years ago";
