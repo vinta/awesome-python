@@ -1673,12 +1673,12 @@ class TestLoadCategoryIntro:
         assert lead == "Use w1 for most apps."
         assert lead_html == "<p>Use <code>w1</code> for most apps.</p>\n"
 
-    def test_keeps_everything_above_table_without_how_to_choose_list(self, tmp_path):
+    def test_splits_after_lead_without_how_to_choose_list(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text("Use w1.\n\n- Small apps: w1\n\nConfigure w1 once.\n", encoding="utf-8")
         intro_html, guide_html, _, _ = load_category_intro(path)
-        assert "Configure w1 once." in intro_html
-        assert guide_html == ""
+        assert intro_html == "<p>Use w1.</p>\n"
+        assert guide_html == "<ul>\n<li>Small apps: w1</li>\n</ul>\n<p>Configure w1 once.</p>\n"
 
     def test_returns_empty_strings_without_intro_file(self, tmp_path):
         assert load_category_intro(tmp_path / "missing.md") == ("", "", "", "")

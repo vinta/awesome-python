@@ -351,7 +351,8 @@ def load_category_intro(path: Path, entry_names: Sequence[str] = ()) -> tuple[st
 
     Returns the part shown above the table, the guide shown below it, and the
     first paragraph as plain text for the meta description and as HTML for
-    group pages. A file without the list keeps everything above the table.
+    group pages. A file without the list, like a one-project category's,
+    keeps only its lead above the table.
     Returns empty strings if the category has no intro file.
     """
     if not path.exists():
@@ -364,7 +365,7 @@ def load_category_intro(path: Path, entry_names: Sequence[str] = ()) -> tuple[st
                 child.attrSet("target", "_blank")
                 child.attrSet("rel", "noopener")
     lead = next(node for node in SyntaxTreeNode(tokens).children if node.type == "paragraph")
-    split_at = len(tokens)
+    split_at = next(j for j, token in enumerate(tokens) if token.type == "paragraph_close" and token.level == 0) + 1
     for i, token in enumerate(tokens):
         if token.type == "inline" and token.level == 1 and token.content == "How to choose:" and i + 2 < len(tokens) and tokens[i + 2].type == "bullet_list_open":
             split_at = next(j for j in range(i + 3, len(tokens)) if tokens[j].type == "bullet_list_close" and tokens[j].level == 0) + 1
