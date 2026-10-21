@@ -1457,8 +1457,9 @@ th[data-sort].sort-asc::after {
 
 .tier-price {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.55rem;
+  gap: 0.35rem 0.55rem;
   margin-bottom: 0.25rem;
 }
 
