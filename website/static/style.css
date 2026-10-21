@@ -590,7 +590,7 @@ kbd {
 }
 
 .guide-band {
-  padding-block: clamp(3rem, 7vw, 5.5rem);
+  padding-block: calc(var(--shell-pad) * 1.2) clamp(3rem, 7vw, 5.5rem);
   background: linear-gradient(140deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 58%, var(--hero-bg-end) 100%);
   color: var(--hero-text);
 }
@@ -737,7 +737,7 @@ kbd {
 }
 
 .results-section {
-  padding-block: clamp(2.5rem, 6vw, 4.5rem) 0;
+  padding-block: var(--shell-pad) 0;
   contain: layout style;
 }
 
@@ -750,6 +750,7 @@ kbd {
 }
 
 .order-note {
+  align-self: start;
   color: var(--ink-soft);
   font-size: var(--text-base);
 }
