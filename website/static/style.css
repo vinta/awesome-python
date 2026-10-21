@@ -56,6 +56,7 @@
   --tag-active-end: oklch(74% 0.11 58);
 
   --cta-bg: oklch(94% 0.025 72);
+  --sponsor-bg: oklch(91% 0.04 68);
 
   --text-xs: 0.8rem;
   --text-sm: 0.95rem;
@@ -625,9 +626,8 @@ kbd {
 
 .sponsor-band {
   padding-block: clamp(2.5rem, 5.5vw, 4rem);
-  background:
-    linear-gradient(180deg, var(--bg-paper-strong), var(--bg-paper));
-  border-bottom: 1px solid var(--line);
+  background: var(--sponsor-bg);
+  border-bottom: 1px solid var(--line-strong);
 }
 
 .sponsor-shell {
@@ -699,6 +699,16 @@ kbd {
   font-weight: 600;
   line-height: 0.95;
   letter-spacing: -0.025em;
+}
+
+.sponsor-name::after {
+  content: "\2197" / "";
+  margin-left: 0.25em;
+  font-family: var(--font-body);
+  font-size: 0.45em;
+  /* Centers the arrow on the name's cap height */
+  vertical-align: 0.33em;
+  color: var(--accent-deep);
 }
 
 .sponsor-desc {

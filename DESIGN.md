@@ -62,7 +62,8 @@ Surfaces:
 
 - `--bg-page`. Cream/ivory canvas, the body floor. The body uses a vertical gradient from `--bg-page-top` through `--bg-page` (at 24rem) to `--bg-page-end`, with a soft radial highlight in the top-left corner.
 - `--bg-paper`. Warm white for the content shell.
-- `--bg-paper-strong`. Tinted paper for sponsor band, CTA backgrounds, static decoration.
+- `--bg-paper-strong`. Tinted paper for CTA backgrounds and static decoration.
+- `--sponsor-bg`. Deeper warm tint for the sponsor band only, so it reads as its own block between the hero and the table.
 - `--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`. Dark earthy hero gradient.
 - `--footer-bg`. Dark warm charcoal footer, part of the same system.
 
@@ -145,7 +146,7 @@ Hard-won sizing rules (do not relax):
 
 Depth comes from **tonal layers**, not heavy shadows.
 
-- The page is a quiet warm canvas (`--bg-page`). The content shell is slightly brighter paper (`--bg-paper`). The sponsor band, CTA backgrounds, and inline decorative blocks step up to `--bg-paper-strong`.
+- The page is a quiet warm canvas (`--bg-page`). The content shell is slightly brighter paper (`--bg-paper`). CTA backgrounds and inline decorative blocks step up to `--bg-paper-strong`; the sponsor band steps further, to `--sponsor-bg`.
 - The hero and the category guide band are the only places with real atmosphere: warm gradients on a dark earthy ground (`--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`). Only the hero adds the subtle grid and slow sheen. The sheen and any other motion respect `prefers-reduced-motion`.
 - The footer is a single tonal block in `--footer-bg`, no internal gradients.
 - Two depth treatments are allowed and only these two. The search input combines a 1px inset highlight (`--search-inset`) with a soft warm drop shadow (`--search-shadow`, intensified by `--search-focus-shadow` on focus). The primary CTA button (`.hero-action-primary`) carries a warm drop shadow for press affordance. Both shadows are soft, warm-tinted, and tied to interactive elements. No new drop shadows on cards, panels, rows, or static decoration.
@@ -171,7 +172,7 @@ The component vocabulary is small and table-led. Source of truth: `website/stati
 - **Hero**. Magazine-cover headline, dark earthy ground, kicker and proof microcopy, primary CTA button using `--hero-btn-start` / `--hero-btn-end`. Subtle grid plus slow sheen. Respects `prefers-reduced-motion`.
 - **Jump links**. One per use case in a category hero, plus one for the guide. Underlined like the intro's links, with a trailing ↓. Never tag-styled: tags filter the table or open another page, jump links only scroll.
 - **Guide band**. Everything in a category intro after its "How to choose" list. It sits below the table on the hero's dark gradient, with its H2 above the text.
-- **Sponsor band**. Sits below the hero on the home page and category pages, on `--bg-paper-strong`. Editorial layout, not a logo wall. Sponsor links share the global accent treatment.
+- **Sponsor band**. Sits below the hero on the home page and category pages, on `--sponsor-bg` with a `--line-strong` bottom border. Editorial layout, not a logo wall. Sponsor links share the global accent treatment; each sponsor name ends in a small ↗ in `--accent-deep` to mark it as an outbound link.
 - **CTA**. Warm `--cta-bg`, full-bleed within shell. The button itself uses accent tokens.
 - **Footer**. Dark warm charcoal, part of the same system. Footer links share the global hover and focus treatment.
 - **Search**. Pill input with `--search-inset` interior and `--search-focus-ring` focus ring. Focus shadow uses `--search-focus-shadow`.
