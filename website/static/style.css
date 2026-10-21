@@ -1409,6 +1409,11 @@ th[data-sort].sort-asc::after {
   color: var(--accent);
 }
 
+/* With the <wbr> after "@", the address breaks only there, never at the domain's hyphen */
+.email-domain {
+  white-space: nowrap;
+}
+
 .sponsorship-lede {
   font-size: var(--text-2xl);
   line-height: 1.45;
