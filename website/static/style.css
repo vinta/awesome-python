@@ -1610,7 +1610,8 @@ th[data-sort].sort-asc::after {
 }
 
 .final-cta {
-  padding-block: var(--shell-pad);
+  /* The extra 0.5rem matches the space above the label's first line */
+  padding-block: var(--shell-pad) calc(var(--shell-pad) + 0.5rem);
   background: var(--cta-bg);
 }
 
