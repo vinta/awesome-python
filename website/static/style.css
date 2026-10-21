@@ -326,6 +326,11 @@ kbd {
   letter-spacing: 0.02em;
 }
 
+/* Keeps a stat whole, so the date never breaks at its hyphens */
+.proof-stat {
+  white-space: nowrap;
+}
+
 .hero-proof a {
   color: var(--hero-text);
   text-decoration: underline;

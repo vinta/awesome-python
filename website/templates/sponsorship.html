@@ -37,7 +37,7 @@
 
       {% if hero_stats %}
       <p class="hero-proof sponsorship-proof">
-        {% for stat in hero_stats %}{{ stat }}{% if not loop.last %}
+        {% for stat in hero_stats %}<span class="proof-stat">{{ stat }}</span>{% if not loop.last %}
         <span class="proof-sep">/</span> {% endif %}{% endfor %}
       </p>
       {% endif %}
