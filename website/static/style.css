@@ -903,9 +903,13 @@ kbd {
   background: var(--row-hover);
 }
 
+.row:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
 .row:focus-visible td {
   background: var(--row-focus);
-  box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .row:has(+ .desc-row:not([hidden])) td {
