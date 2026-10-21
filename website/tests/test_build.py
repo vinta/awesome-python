@@ -229,7 +229,10 @@ class TestBuild:
         assert all(loc.startswith("https://awesome-python.com/") for loc in locs)
         assert all("?" not in loc for loc in locs)
 
-    def test_sitemap_lastmod_follows_git_history_of_each_page(self, tmp_path):
+    def test_sitemap_lastmod_follows_git_history_of_each_page(self, tmp_path, monkeypatch):
+        # Inside a git hook or `git rebase --exec`, inherited GIT_DIR points every git call below at the real repo
+        for key in [k for k in os.environ if k.startswith("GIT_")]:
+            monkeypatch.delenv(key)
         readme = textwrap.dedent("""\
             # Awesome Python
 
