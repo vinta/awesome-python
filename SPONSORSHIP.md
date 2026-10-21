@@ -50,6 +50,8 @@ Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?sub
 
 One upfront payment per term. Setup takes less than 24 hours.
 
+Sponsor links carry UTM tags, so clicks show up in your own analytics as `awesome-python / sponsorship`.
+
 ## Previously Sponsored By
 
 - [Warp](https://www.warp.dev/) - The terminal for modern developers.

@@ -11,6 +11,7 @@ from collections.abc import Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from jinja2 import Environment, FileSystemLoader
 from markdown_it import MarkdownIt
@@ -128,6 +129,16 @@ def extract_github_repo(url: str) -> str | None:
     """Extract owner/repo from a GitHub repo URL. Returns None for non-GitHub URLs."""
     m = GITHUB_REPO_URL_RE.match(url)
     return m.group(1) if m else None
+
+
+def sponsor_website_url(url: str) -> str:
+    """Set utm_content=website so sponsors can tell website clicks from README clicks."""
+    parts = urlsplit(url)
+    pairs = parse_qsl(parts.query, keep_blank_values=True)
+    if not any(k == "utm_content" for k, _ in pairs):
+        return url
+    query = [(k, "website" if k == "utm_content" else v) for k, v in pairs]
+    return urlunsplit(parts._replace(query=urlencode(query)))
 
 
 def load_stars(path: Path) -> dict[str, dict]:
@@ -749,6 +760,8 @@ def build(repo_root: Path) -> None:
 
     parsed_groups = parse_readme(readme_text)
     sponsors = parse_sponsors(readme_text)
+    for sponsor in sponsors:
+        sponsor["url"] = sponsor_website_url(sponsor["url"])
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     cat_slugs = [cat["slug"] for cat in categories]
