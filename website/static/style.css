@@ -593,7 +593,7 @@ kbd {
 }
 
 .guide-band {
-  padding-block: calc(var(--shell-pad) * 1.2) clamp(3rem, 7vw, 5.5rem);
+  padding-block: calc(var(--shell-pad) * 1.2);
   background: linear-gradient(140deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 58%, var(--hero-bg-end) 100%);
   color: var(--hero-text);
 }
@@ -627,7 +627,9 @@ kbd {
 }
 
 .sponsor-band {
-  padding-block: clamp(2.5rem, 5.5vw, 4rem);
+  --band-pad: clamp(2.5rem, 5.5vw, 4rem);
+  /* The sponsor name's glyphs rise above its line box, so the top gap reads 1rem smaller than the padding */
+  padding-block: var(--band-pad) calc(var(--band-pad) - 1rem);
   background: var(--sponsor-bg);
   border-bottom: 1px solid var(--line-strong);
 }
@@ -1335,17 +1337,23 @@ th[data-sort].sort-asc::after {
 }
 
 .sponsorship-section {
-  padding-block: clamp(2.75rem, 5.5vw, 4.25rem);
+  --section-pad: clamp(2.75rem, 5.5vw, 4.25rem);
+  padding-block: var(--section-pad);
   border-bottom: 1px solid var(--line);
 }
 
-.sponsorship-section:first-of-type {
-  padding-top: clamp(3.25rem, 6vw, 4.75rem);
+/* Sections that open with a label but end with a box get the space the label's line adds above its text */
+.sponsorship-audience,
+.sponsorship-getstarted {
+  padding-bottom: calc(var(--section-pad) + 0.5rem);
+}
+
+.sponsorship-independence {
+  padding-bottom: calc(var(--section-pad) + 0.25rem);
 }
 
 .sponsorship-section:last-of-type {
   border-bottom: 0;
-  padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
 }
 
 .sponsorship-getstarted {
@@ -1728,6 +1736,16 @@ th[data-sort].sort-asc::after {
   .sponsor-shell,
   .sponsorship-shell {
     grid-template-columns: 1fr;
+  }
+
+  /* Stacked, the band opens with its label instead of the sponsor name */
+  .sponsor-band {
+    padding-bottom: var(--band-pad);
+  }
+
+  /* Stacked, the tiers open with their label instead of a tier box */
+  .sponsorship-tiers {
+    padding-bottom: calc(var(--section-pad) + 0.5rem);
   }
 
   .sponsor-meta {
