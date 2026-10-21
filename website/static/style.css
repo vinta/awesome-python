@@ -1151,10 +1151,6 @@ th[data-sort].sort-asc::after {
   display: table-row;
 }
 
-.desc-row:not([hidden]) + .expand-row .expand-desc {
-  display: none;
-}
-
 .table .expand-row td {
   padding-top: 0;
   background: var(--row-open);
@@ -1172,14 +1168,12 @@ th[data-sort].sort-asc::after {
   animation: expand-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.expand-desc a,
 .expand-also-see a,
 .expand-meta a,
 .footer a {
   color: var(--accent-deep);
 }
 
-.expand-desc a:hover,
 .expand-also-see a:hover,
 .expand-meta a:hover {
   color: var(--accent);

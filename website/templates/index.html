@@ -235,9 +235,7 @@
           <td></td>
           <td colspan="5">
             <div class="expand-content">
-              {% if entry.description %}
-              <div class="expand-desc">{{ entry.description | safe }}</div>
-              {% endif %} {% if entry.also_see %}
+              {% if entry.also_see %}
               <div class="expand-also-see">
                 Also see: {% for see in entry.also_see %}<a
                   href="{{ see.url }}"

@@ -123,12 +123,18 @@ rows.forEach(function (row, i) {
   row._expandRow = next;
 });
 
+function setRowOpen(row, open) {
+  row.classList.toggle("open", open);
+  row.setAttribute("aria-expanded", String(open));
+  // The homepage shows a row's description only while the row is open
+  if (isIndexDocument && row._descRow) row._descRow.hidden = !open;
+}
+
 function collapseAll() {
   if (!tbody) return;
   const openRows = tbody.querySelectorAll("tr.row.open");
   openRows.forEach(function (row) {
-    row.classList.remove("open");
-    row.setAttribute("aria-expanded", "false");
+    setRowOpen(row, false);
   });
 }
 
@@ -312,14 +318,7 @@ if (tbody) {
     }
     if (!row) return;
 
-    const isOpen = row.classList.contains("open");
-    if (isOpen) {
-      row.classList.remove("open");
-      row.setAttribute("aria-expanded", "false");
-    } else {
-      row.classList.add("open");
-      row.setAttribute("aria-expanded", "true");
-    }
+    setRowOpen(row, !row.classList.contains("open"));
   });
 
   // Keyboard: Enter or Space on focused .row toggles expand
@@ -367,8 +366,7 @@ function openEntryRow(row) {
     searchInput.value = "";
     applyFilters();
   }
-  row.classList.add("open");
-  row.setAttribute("aria-expanded", "true");
+  setRowOpen(row, true);
 }
 
 // Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
