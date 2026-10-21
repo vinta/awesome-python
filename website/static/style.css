@@ -1734,6 +1734,16 @@ th[data-sort].sort-asc::after {
     grid-template-columns: 1fr;
   }
 
+  .sponsor-meta {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .sponsor-link {
+    margin-block-start: 0;
+  }
+
   .sponsorship-meta {
     position: static;
   }
