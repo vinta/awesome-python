@@ -21,40 +21,6 @@ const rows = document.querySelectorAll(".table tbody tr.row");
 const tbody = document.querySelector(".table tbody");
 const groupRows = document.querySelectorAll(".table tbody tr.group-row");
 
-function initRevealSections() {
-  const sections = document.querySelectorAll("[data-reveal]");
-  if (!sections.length) return;
-
-  if (!("IntersectionObserver" in window)) {
-    sections.forEach(function (section) {
-      section.classList.add("is-visible");
-    });
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -8% 0px",
-    },
-  );
-
-  sections.forEach(function (section, index) {
-    section.classList.add("will-reveal");
-    section.style.transitionDelay = Math.min(index * 70, 180) + "ms";
-    observer.observe(section);
-  });
-}
-
-initRevealSections();
-
 // Smooth scroll without hash in URL
 document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
   link.addEventListener("click", function (e) {

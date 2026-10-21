@@ -211,7 +211,7 @@
 
 <section class="results-section" id="library-index">
   {% set single_entry = entries | length == 1 %}
-  <div class="results-intro section-shell" data-reveal>
+  <div class="results-intro section-shell">
     {% if entry_groups and not single_entry %}
     {% set named_groups = entry_groups | selectattr("name") | list %}
     <p class="order-note">
@@ -229,7 +229,7 @@
     </p>
   </div>
 
-  <div class="controls section-shell" data-reveal>
+  <div class="controls section-shell">
     <h2 class="sr-only">Search and filter</h2>
     <div class="search-wrap">
       <svg
