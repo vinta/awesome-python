@@ -57,6 +57,7 @@ PICK_ALIASES = {
     "Playwright": "playwright-python",
     "PyAV": "av",
     "python-oracledb": "oracledb",
+    "Ray Core": "ray",
     "Sherlock": "sherlock-project",
     "Silk": "django-silk",
     "Surprise": "scikit-surprise",
