@@ -1786,6 +1786,14 @@ th[data-sort].sort-asc::after {
 }
 
 @media (max-width: 680px) {
+  .proof-stat {
+    display: block;
+  }
+
+  .proof-sep {
+    display: none;
+  }
+
   .hero-topbar {
     gap: 0.75rem;
   }
