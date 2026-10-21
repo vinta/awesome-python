@@ -1893,13 +1893,13 @@ th[data-sort].sort-asc::after {
     padding-right: 0.8rem;
   }
 
-  /* Start the commit time on its own line instead of wrapping mid-phrase after the URL */
-  .expand-commit::before {
+  /* Start the stars and commit time on their own line instead of wrapping mid-phrase after the URL */
+  .expand-stars::before {
     content: "\A";
     white-space: pre;
   }
 
-  .expand-commit > .expand-sep {
+  .expand-stars > .expand-sep {
     display: none;
   }
 
