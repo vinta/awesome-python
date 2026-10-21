@@ -1606,7 +1606,7 @@ th[data-sort].sort-asc::after {
 }
 
 .final-cta {
-  padding-block: clamp(3rem, 7vw, 5.5rem);
+  padding-block: var(--shell-pad);
   background: var(--cta-bg);
 }
 
