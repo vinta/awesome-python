@@ -1391,9 +1391,9 @@ th[data-sort].sort-asc::after {
 }
 
 .sponsorship-facts dt {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--ink);
 }
 
@@ -1421,9 +1421,9 @@ th[data-sort].sort-asc::after {
 }
 
 .tier-eyebrow {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   color: var(--ink);
 }
 
