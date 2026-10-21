@@ -42,8 +42,7 @@
 
   --row-hover: oklch(96.2% 0.02 76);
   --row-focus: oklch(95.7% 0.026 68);
-  --row-open-start: oklch(96.2% 0.03 76);
-  --row-open-end: oklch(95.4% 0.026 74);
+  --row-open: oklch(95.8% 0.028 75);
   --thead-bg: oklch(98.2% 0.012 80 / 0.97);
 
   --search-inset: oklch(100% 0 0 / 0.75);
@@ -954,7 +953,7 @@ kbd {
 }
 
 .row.open td {
-  background: linear-gradient(180deg, var(--row-open-start), var(--row-open-end));
+  background: var(--row-open);
   border-bottom-color: transparent;
 }
 
@@ -1120,7 +1119,7 @@ th[data-sort].sort-asc::after {
 }
 
 .row.open + .desc-row td {
-  background: linear-gradient(180deg, var(--row-open-start), var(--row-open-end));
+  background: var(--row-open);
   border-bottom-color: transparent;
 }
 
@@ -1157,7 +1156,7 @@ th[data-sort].sort-asc::after {
 .expand-row td {
   padding-top: 0.1rem;
   padding-bottom: 1.15rem;
-  background: linear-gradient(180deg, var(--row-open-start), var(--row-open-end));
+  background: var(--row-open);
   border-bottom: 1px solid var(--line);
 }
 
