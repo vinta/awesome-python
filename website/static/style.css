@@ -467,7 +467,18 @@ kbd {
 .no-results-clear:focus-visible,
 .table a:focus-visible,
 .footer a:focus-visible,
-.sort-btn:focus-visible {
+.sort-btn:focus-visible,
+.hero-sub a:focus-visible,
+.hero-proof a:focus-visible,
+.category-breadcrumb a:focus-visible,
+.category-subtitle a:focus-visible,
+.category-intro a:focus-visible,
+.guide-body a:focus-visible,
+.group-lead a:focus-visible,
+.sponsor-become:focus-visible,
+.sponsor-link:focus-visible,
+.sponsor-desc a:focus-visible,
+.sponsorship-body a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
