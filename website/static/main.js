@@ -12,6 +12,10 @@ const defaultSort =
     : { col: "downloads", order: "desc" };
 let activeSort = defaultSort;
 const searchInput = document.querySelector(".search");
+// The full placeholder is cut off on phones
+if (searchInput && window.matchMedia("(max-width: 680px)").matches) {
+  searchInput.placeholder = searchInput.dataset.shortPlaceholder;
+}
 const noResults = document.querySelector(".no-results");
 const rows = document.querySelectorAll(".table tbody tr.row");
 const tbody = document.querySelector(".table tbody");
