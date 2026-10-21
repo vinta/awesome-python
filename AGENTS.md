@@ -18,3 +18,5 @@ Apply [CONTRIBUTING.md](CONTRIBUTING.md) (admission, entry format, ordering) whe
 ## Website
 
 Read [DESIGN.md](DESIGN.md) before changing anything under `website/templates/` or `website/static/`.
+
+When showing the user a website change, keep a desktop view and a phone view of the same branch build open at the same time, in separate browser tabs, so the user never has to switch the viewport. An emulated viewport can reset between turns, so build the phone view as a page of 375px-wide iframes (home, sponsorship, one category page) pointing at that build. Show each visual change as before/after images at both widths.
