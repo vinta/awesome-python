@@ -197,10 +197,10 @@
                   ><time datetime="{{ entry.last_commit_at }}"
                     >{{ entry.last_commit_at[:10] }}</time
                   ></span
-                >{% endif %} {% if entry.downloads is not none %}<span
-                  class="expand-downloads"
+                >{% endif %} {% if entry.stars is not none %}<span
+                  class="expand-stars"
                   ><span class="expand-sep">/</span>{{
-                  "{:,}".format(entry.downloads) }} downloads/month</span
+                  "{:,}".format(entry.stars) }} stars</span
                 >{% endif %}
               </div>
             </div>

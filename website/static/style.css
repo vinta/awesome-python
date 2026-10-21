@@ -1174,7 +1174,7 @@ th[data-sort].sort-asc::after {
 }
 
 .expand-commit,
-.expand-downloads {
+.expand-stars {
   display: none;
 }
 
@@ -1732,12 +1732,12 @@ th[data-sort].sort-asc::after {
   }
 
   .col-commit,
-  .col-downloads {
+  .col-stars {
     display: none;
   }
 
   .expand-commit,
-  .expand-downloads {
+  .expand-stars {
     display: inline;
   }
 
@@ -1847,8 +1847,8 @@ th[data-sort].sort-asc::after {
     padding-right: 0.8rem;
   }
 
-  .col-stars {
-    width: 5.4rem;
+  .col-downloads {
+    width: 7.5rem;
   }
 
   .col-arrow {
