@@ -379,10 +379,13 @@ kbd {
 
 .hero-category-links {
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  columns: 13rem;
   column-gap: clamp(1.25rem, 3vw, 2.5rem);
-  row-gap: 0.28rem;
+}
+
+.hero-category-links li {
+  break-inside: avoid;
+  padding-bottom: 0.28rem;
 }
 
 .hero-category-link {
@@ -1755,7 +1758,7 @@ th[data-sort].sort-asc::after {
   }
 
   .hero-category-links {
-    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    columns: 10rem;
   }
 
   .results-note {
@@ -1829,7 +1832,7 @@ th[data-sort].sort-asc::after {
   }
 
   .hero-category-links {
-    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    columns: 8rem;
     column-gap: 0.75rem;
   }
 
