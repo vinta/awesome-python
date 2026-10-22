@@ -268,6 +268,8 @@ _Libraries for building recommender systems._
 
 _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
 
+
+
 - Synchronous
   - [flask](https://github.com/pallets/flask) - A microframework for Python.
     - [awesome-flask](https://github.com/humiaozuzu/awesome-flask)
@@ -283,7 +285,7 @@ _Traditional full stack web frameworks. Also see [Web APIs](#web-apis)._
   - [reflex](https://github.com/reflex-dev/reflex) - A framework for building reactive, full-stack web applications entirely with Python.
 
 ### Web APIs
-
+* [DevBoost Utility Suite](https://rapidapi.com/optimiziapycloud/api/devboost-utility-suite) - Next-gen utility API for AI agents and Python developers, providing prompt injection guardrails, LLM context sanitization, and web scraping endpoints.
 _Libraries for building RESTful, GraphQL, and RPC APIs._
 
 - Django
