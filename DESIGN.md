@@ -62,7 +62,8 @@ Surfaces:
 
 - `--bg-page`. Cream/ivory canvas, the body floor. The body uses a vertical gradient from `--bg-page-top` through `--bg-page` (at 24rem) to `--bg-page-end`, with a soft radial highlight in the top-left corner.
 - `--bg-paper`. Warm white for the content shell.
-- `--bg-paper-strong`. Tinted paper for sponsor band, CTA backgrounds, static decoration.
+- `--bg-paper-strong`. Tinted paper for CTA backgrounds and static decoration.
+- `--sponsor-bg`. Deeper warm tint for the sponsor band only, so it reads as its own block between the hero and the table.
 - `--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`. Dark earthy hero gradient.
 - `--footer-bg`. Dark warm charcoal footer, part of the same system.
 
@@ -99,23 +100,32 @@ Pairing (do not swap):
 - **Display**: `Cormorant Garamond` (serif, 600 only).
 - **Body**: `Manrope` (sans, 400 / 600 / 700 / 800).
 
+Cormorant Garamond sets headings and standalone names only, never running sentences, and never on the same line as Manrope. Its short x-height and thin strokes tire the eye across a paragraph, and next to Manrope on one baseline the two x-heights clash. Ledes and other multi-line copy use Manrope (`--text-2xl`); a display name with a description stacks the name above it, as in the sponsor band.
+
 Scale:
 
-| Role             | Token             | Size                          | Family             | Weight    | Notes                                          |
-| ---------------- | ----------------- | ----------------------------- | ------------------ | --------- | ---------------------------------------------- |
-| Hero headline    | (literal `clamp`) | `clamp(4.5rem, 11vw, 8.5rem)` | Cormorant Garamond | 600       | Magazine-cover scale, single use on the hero   |
-| Body large       | `--text-lg`       | `1.125rem`                    | Manrope            | 400       | Content-heavy passages                         |
-| Body             | `--text-base`     | `1rem` (16px)                 | Manrope            | 400       | Body floor                                     |
-| Meta / secondary | `--text-sm`       | `0.95rem`                     | Manrope            | 400 / 600 | Meta rows, secondary copy                      |
-| Caption / pill   | `--text-xs`       | `0.8rem` (12.8px)             | Manrope            | 600 / 700 | Smallest token, pills, badges, tags, footnotes |
+| Role             | Token             | Size                             | Family             | Weight    | Notes                                             |
+| ---------------- | ----------------- | -------------------------------- | ------------------ | --------- | ------------------------------------------------- |
+| Hero headline    | (literal `clamp`) | `clamp(4.5rem, 11vw, 8.5rem)`    | Cormorant Garamond | 600       | Magazine-cover scale, single use on the hero      |
+| Page title       | `--display-lg`    | `clamp(3.6rem, 9vw, 7rem)`       | Cormorant Garamond | 600       | Category and sponsorship `h1`                     |
+| Section heading  | `--display-md`    | `clamp(2.25rem, 4.2vw, 3.3rem)`  | Cormorant Garamond | 600       | Guide, results, CTA `h2`, sponsor name            |
+| Display small    | `--display-sm`    | `clamp(1.75rem, 2.8vw, 2.25rem)` | Cormorant Garamond | 600       | Group-row `h2`, past sponsor names                |
+| Lede             | `--text-2xl`      | `1.5rem`                         | Manrope            | 400       | Category intro first paragraph, sponsorship ledes |
+| Subtitle         | `--text-xl`       | `1.25rem`                        | Manrope            | 400       | Hero and category subtitles, category intro       |
+| Body large       | `--text-lg`       | `1.125rem`                       | Manrope            | 400       | Content-heavy passages, project names, search     |
+| Body             | `--text-base`     | `1rem` (16px)                    | Manrope            | 400       | Body floor                                        |
+| Meta / secondary | `--text-sm`       | `0.95rem`                        | Manrope            | 400 / 600 | Meta rows, secondary copy                         |
+| Caption / pill   | `--text-xs`       | `0.8rem` (12.8px)                | Manrope            | 600 / 700 | Smallest token, pills, badges, tags, footnotes    |
 
 Hard-won sizing rules (do not relax):
 
+- **Every `font-size` uses a scale token.** The literal exceptions are the hero headline, `.tier-amount`, the sort `.arrow` glyph, and `em` sizes on inline code and `kbd`. Body tokens are fixed `rem`; only display tokens are fluid, because `vw` in body text does not grow with browser zoom. Round a new size up to the next token instead of adding an in-between step: sizes 1 to 2px apart read as noise, not hierarchy.
 - **Body type floor is 16px.** Do not go smaller.
 - **Absolute minimum font size is 12px (`0.75rem`) for ANY text**, including pills, badges, tags, captions, footnotes. Anything smaller hits Chrome's default minimum-font-size floor and renders inconsistently across browsers and user accessibility settings.
 - **When in doubt, pick one step larger** than what generic scale references suggest (`--text-base` over `--text-sm`, 1.75rem over 1.5rem for a heading). The maintainer has corrected sizes upward 11+ times across 8 sessions. Footer, meta rows, expand content, labels, and headings all trend too small by default. **Never reduce an existing size unprompted.**
 - Adjacent heading levels differ by at least 0.25rem of rendered size.
 - Row numbers in the table: left-align, no leading zeros. Zero-padding was tried and rejected.
+- **Cormorant Garamond numerals use lining figures** (`font-variant-numeric: lining-nums`). Its default old-style figures shrink zeros to x-height and drop 3/4/5/7/9 below the baseline, so a price like `$500` reads as `$5oo`.
 - **Never `text-transform`.** Write the casing in the markup.
 
 ## Layout
@@ -136,8 +146,8 @@ Hard-won sizing rules (do not relax):
 
 Depth comes from **tonal layers**, not heavy shadows.
 
-- The page is a quiet warm canvas (`--bg-page`). The content shell is slightly brighter paper (`--bg-paper`). The sponsor band, CTA backgrounds, and inline decorative blocks step up to `--bg-paper-strong`.
-- The hero and the category guide band are the only places with real atmosphere: warm gradients on a dark earthy ground (`--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`). Only the hero adds the subtle grid and slow sheen. The sheen and any other motion respect `prefers-reduced-motion`.
+- The page is a quiet warm canvas (`--bg-page`). The content shell is slightly brighter paper (`--bg-paper`). CTA backgrounds and inline decorative blocks step up to `--bg-paper-strong`; the sponsor band steps further, to `--sponsor-bg`.
+- The hero and the category guide band are the only places with real atmosphere: warm gradients on a dark earthy ground (`--hero-bg-start` → `--hero-bg-mid` → `--hero-bg-end`). Only the hero adds the subtle grid. The hero background holds still: a moving stripe on a narrow phone hero reads as a loading bar. Any motion elsewhere respects `prefers-reduced-motion`.
 - The footer is a single tonal block in `--footer-bg`, no internal gradients.
 - Two depth treatments are allowed and only these two. The search input combines a 1px inset highlight (`--search-inset`) with a soft warm drop shadow (`--search-shadow`, intensified by `--search-focus-shadow` on focus). The primary CTA button (`.hero-action-primary`) carries a warm drop shadow for press affordance. Both shadows are soft, warm-tinted, and tied to interactive elements. No new drop shadows on cards, panels, rows, or static decoration.
 - No glassmorphism as default decoration.
@@ -159,10 +169,10 @@ The component vocabulary is small and table-led. Source of truth: `website/stati
 - **Table-driven index** (the hero of the page). Sticky header, sortable columns, click-to-expand rows that indent under the Name column. Modeled on placestoread.xyz. Not a card grid.
 - **Group rows**. Section, subcategory, and group pages list rows in README order. Section pages add one H2 row per use case; group pages add one per section, linking to that section's page. A note replaces the sort arrow until someone sorts a column, which flattens the list and hides the group rows.
 - **Filter tags** (`.tag`). `--accent-soft` background with `--accent-deep` text. Pill shape. Hover swaps to `--highlight` background with `--tag-hover-border` border and ink text. Active state uses the warm `--tag-active-start` → `--tag-active-end` gradient with hero-ink text. Tag variants (`tag-group`, `tag-source`) inherit the base `.tag` style today and differ only at narrow widths (`tag-group` hides under 960px). Add a new variant only when a real visual difference is needed.
-- **Hero**. Magazine-cover headline, dark earthy ground, kicker and proof microcopy, primary CTA button using `--hero-btn-start` / `--hero-btn-end`. Subtle grid plus slow sheen. Respects `prefers-reduced-motion`.
+- **Hero**. Magazine-cover headline, dark earthy ground, kicker and proof microcopy, primary CTA button using `--hero-btn-start` / `--hero-btn-end`. Subtle grid on a still background.
 - **Jump links**. One per use case in a category hero, plus one for the guide. Underlined like the intro's links, with a trailing ↓. Never tag-styled: tags filter the table or open another page, jump links only scroll.
 - **Guide band**. Everything in a category intro after its "How to choose" list. It sits below the table on the hero's dark gradient, with its H2 above the text.
-- **Sponsor band**. Sits below the hero on the home page, on `--bg-paper-strong`. Editorial layout, not a logo wall. Sponsor links share the global accent treatment.
+- **Sponsor band**. Sits below the hero on the home page and category pages, on `--sponsor-bg` with a `--line-strong` bottom border. Editorial layout, not a logo wall. Sponsor links share the global accent treatment; each sponsor name ends in a small ↗ in `--accent-deep` to mark it as an outbound link.
 - **CTA**. Warm `--cta-bg`, full-bleed within shell. The button itself uses accent tokens.
 - **Footer**. Dark warm charcoal, part of the same system. Footer links share the global hover and focus treatment.
 - **Search**. Pill input with `--search-inset` interior and `--search-focus-ring` focus ring. Focus shadow uses `--search-focus-shadow`.

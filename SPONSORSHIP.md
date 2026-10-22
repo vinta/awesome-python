@@ -21,17 +21,17 @@ Your sponsorship puts your product in front of developers at the exact moment th
 
 ## Sponsorship Tiers
 
-### Headline Sponsor - $500/month
+### Headline Sponsor - $500/month or $4,500/year
 
 - Large logo and one-line description (max 120 characters) pinned at the very top of the README, above all project entries
 - Logo link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
-### Featured Sponsor - $200/month
+### Featured Sponsor - $200/month or $1,800/year
 
-- Text entry (`[Name](URL) - Description.`, max 120 characters) pinned at the top of the README, directly below Headline sponsors
-- Text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
+- Small logo and text entry (`[Name](URL) - Description.`, max 120 characters) pinned at the top of the README, directly below Headline sponsors
+- Logo and text link in the sponsor section of [awesome-python.com](https://awesome-python.com/)
 
-### Indie Dev Sponsor - $99/month or $249/quarter
+### Indie Dev Sponsor - $99/month, $249/quarter, or $891/year
 
 - Lower-cost tier for indie developers, solo founders, and one-person companies only
 - Text entry (`[Name](URL) - Description.`, max 120 characters) in the README sponsor section, directly below Featured sponsors
@@ -43,12 +43,14 @@ Indie Dev Sponsor is available only to founder-led (one-person company) products
 
 Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?subject=Awesome%20Python%20Sponsorship) with:
 
-- **Tier:** Headline Sponsor ($500/mo), Featured Sponsor ($200/mo), or Indie Dev Sponsor ($99/mo or $249/quarter)
-- **Content:** Product name, URL, logo, and description (Headline tier) or `[Name](URL) - Description.` entry (Featured or Indie Dev tier)
-- **Duration:** 1, 3, 6 months, or longer
+- **Tier:** Headline, Featured, or Indie Dev Sponsor
+- **Content:** a `[Name](URL) - Description.` entry, plus a logo for Headline and Featured
+- **Duration:** 1, 3, 6, or 12 months (a year gets 3 months free)
 - **Payment method:** card via [Open Collective](https://opencollective.com/awesome-python), US bank transfer (ACH/wire), or PayPal
 
 One upfront payment per term. Setup takes less than 24 hours.
+
+Sponsor links carry UTM tags, so clicks show up in your own analytics as `awesome-python / sponsorship`.
 
 ## Previously Sponsored By
 

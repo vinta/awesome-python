@@ -6,9 +6,9 @@ An opinionated guide to the best Python frameworks, libraries, and tools.
 
 ## **Sponsors**
 
-- [iPulse AI](https://ipulseai.com) - Open Agentic Investment Research Platform. Inspect deep multi-agent market forecasts and stock picks.
+- [iPulse AI](https://ipulseai.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=readme) - Open Agentic Investment Research Platform. Inspect deep multi-agent market forecasts and stock picks.
 
-> The **#10 most-starred repo on GitHub**. Put your product in front of Python developers. [Become a sponsor](SPONSORSHIP.md).
+> Sponsor slots open, from $99/month. The **#10 most-starred repo on GitHub**. Put your product in front of Python developers. [Become a sponsor](https://awesome-python.com/sponsorship/).
 
 ## Categories
 
@@ -175,8 +175,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - LLM Serving
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
-- LLM Gateways
-  - [litellm](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
+  - [deepinfer](https://github.com/deepseek-ai/DeepInfer) - DeepSeek's production inference engine for DeepSeek models, with MoE expert parallelism.
 - Image and Video Generation
   - [diffusers](https://github.com/huggingface/diffusers) - Pre-trained diffusion models for generating and editing images, audio, and video.
 - Fine-tuning

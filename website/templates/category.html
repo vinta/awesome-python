@@ -8,7 +8,6 @@
 {% endblock %}
 {% block header %}
 <header class="category-hero">
-  <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="category-hero-shell">
@@ -192,15 +191,15 @@
                   rel="noopener"
                   >{{ entry.url | replace("https://", "") }}</a
                 >
-                {% if entry.last_commit_at %}<span class="expand-commit"
+                {% if entry.stars is not none %}<span
+                  class="expand-stars"
+                  ><span class="expand-sep">/</span>{{
+                  "{:,}".format(entry.stars) }} stars</span
+                >{% endif %} {% if entry.last_commit_at %}<span class="expand-commit"
                   ><span class="expand-sep">/</span
                   ><time datetime="{{ entry.last_commit_at }}"
                     >{{ entry.last_commit_at[:10] }}</time
                   ></span
-                >{% endif %} {% if entry.downloads is not none %}<span
-                  class="expand-downloads"
-                  ><span class="expand-sep">/</span>{{
-                  "{:,}".format(entry.downloads) }} downloads/month</span
                 >{% endif %}
               </div>
             </div>
@@ -208,26 +207,29 @@
           <td></td>
         </tr>
 {% endmacro %}
+{% include "_sponsor_band.html" %}
+
 <section class="results-section" id="library-index">
-  <div class="results-intro section-shell" data-reveal>
-    {% if entry_groups %}
+  {% set single_entry = entries | length == 1 %}
+  <div class="results-intro section-shell">
+    {% if entry_groups and not single_entry %}
     {% set named_groups = entry_groups | selectattr("name") | list %}
     <p class="order-note">
       {% if group_categories %}Listed by section, in editorial order.{% elif named_groups %}Listed in editorial order, grouped by use case.{% else %}Listed in editorial order.{% endif %}
-      <strong>Click a column</strong> to re-sort the whole list.
+      <strong>Click a column header</strong> to re-sort the whole list.
     </p>
-    {% else %}
+    {% elif not entry_groups %}
     <div>
-      <h2>{{ entries | length }} {{ category.name }} projects</h2>
+      <h2>{{ entries | length }} {{ category.name }} project{{ "s" if not single_entry }}</h2>
     </div>
     {% endif %}
     <p class="results-note">
-      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      {% if not single_entry %}Press <kbd>/</kbd> to search. {% endif %}Tags open their category. Click a row for
       details.
     </p>
   </div>
 
-  <div class="controls section-shell" data-reveal>
+  <div class="controls section-shell">
     <h2 class="sr-only">Search and filter</h2>
     <div class="search-wrap">
       <svg
@@ -247,7 +249,8 @@
       <input
         type="search"
         class="search"
-        placeholder="Search {{ entries | length }} projects in {{ category.name }}..."
+        placeholder="Search {{ entries | length }} project{{ "s" if not single_entry }} in {{ category.name }}…"
+        data-short-placeholder="Search {{ entries | length }} project{{ "s" if not single_entry }}…"
         aria-label="Search projects"
       />
     </div>
@@ -258,7 +261,7 @@
     class="table-wrap"
     tabindex="0"
     role="region"
-    aria-label="Libraries table"
+    aria-label="Projects table"
   >
     <table class="table"{% if entry_groups %} data-default-sort="editorial"{% endif %}>
       <thead>
@@ -268,7 +271,7 @@
             <button type="button" class="sort-btn">Project Name</button>
           </th>
           <th class="col-downloads" data-sort="downloads">
-            <button type="button" class="sort-btn">PyPI Downloads</button>
+            <button type="button" class="sort-btn" title="PyPI downloads, last 30 days">PyPI Downloads</button>
           </th>
           <th class="col-stars" data-sort="stars">
             <button type="button" class="sort-btn">GitHub Stars</button>
@@ -316,7 +319,7 @@
   </div>
 
   <div class="no-results" hidden>
-    <p>No projects match your search or filter.</p>
+    <p>No projects match your search.</p>
     <p class="no-results-hint">
       Try a broader term, or
       <button class="no-results-clear">browse all projects</button>.
@@ -333,7 +336,7 @@
 </section>
 {% endif %}
 
-<section class="final-cta" data-reveal>
+<section class="final-cta">
   <div class="section-shell">
     <p class="section-label">Contribute</p>
     <h2>Know a project that belongs here?</h2>

@@ -26,6 +26,7 @@ from build import (
     load_pypi_badges,
     load_stars,
     sort_entries,
+    sponsor_website_url,
     subcategory_path,
 )
 from readme_parser import parse_readme, slugify
@@ -229,7 +230,10 @@ class TestBuild:
         assert all(loc.startswith("https://awesome-python.com/") for loc in locs)
         assert all("?" not in loc for loc in locs)
 
-    def test_sitemap_lastmod_follows_git_history_of_each_page(self, tmp_path):
+    def test_sitemap_lastmod_follows_git_history_of_each_page(self, tmp_path, monkeypatch):
+        # Inside a git hook or `git rebase --exec`, inherited GIT_DIR points every git call below at the real repo
+        for key in [k for k in os.environ if k.startswith("GIT_")]:
+            monkeypatch.delenv(key)
         readme = textwrap.dedent("""\
             # Awesome Python
 
@@ -454,6 +458,68 @@ class TestBuild:
         assert "- [w2](https://github.com/owner/w2) - A starred widget. (GitHub stars: 42)" in llms_txt
         assert llms_txt != readme
         assert "# Contributing" not in llms_txt
+
+    def test_homepage_sponsor_link_tags_website_clicks(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com/?ref=x&utm_source=awesome-python&utm_content=readme) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        index_html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com/?ref=x&amp;utm_source=awesome-python&amp;utm_content=website"' in index_html
+        assert "utm_content=readme" not in index_html
+
+    def test_category_page_shows_sponsor_band(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com"' in category_html
+        assert '<span class="sponsor-name">Sponsor</span>' in category_html
 
     def test_build_cleans_stale_output(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -795,7 +861,7 @@ class TestBuild:
         assert collection["name"] == "Python AI & ML Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["url"] == "https://awesome-python.com/categories/ai-ml/"
-        assert collection["description"] == "Explore 1 curated Python project in AI & ML. Part of the Awesome Python catalog."
+        assert collection["description"] == "Explore 1 curated Python project in AI & ML. Part of the Awesome Python list."
 
     def test_category_title_skips_libraries_after_plural_noun(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -959,7 +1025,7 @@ class TestBuild:
 
         assert parser.title.strip() == "Sponsor Awesome Python"
         assert parser.meta_by_name["description"] == (
-            "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+            "Sponsorship for Awesome Python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
         )
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/sponsorship/"
         assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
@@ -1273,6 +1339,23 @@ class TestExtractGithubRepo:
 
     def test_org_only(self):
         assert extract_github_repo("https://github.com/org") is None
+
+
+# ---------------------------------------------------------------------------
+# sponsor_website_url
+# ---------------------------------------------------------------------------
+
+
+class TestSponsorWebsiteUrl:
+    def test_replaces_readme_utm_content(self):
+        url = "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=readme"
+        assert sponsor_website_url(url) == "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=website"
+
+    def test_keeps_path_and_other_params(self):
+        assert sponsor_website_url("https://example.com/landing?ref=x&utm_content=readme") == "https://example.com/landing?ref=x&utm_content=website"
+
+    def test_leaves_untagged_url_unchanged(self):
+        assert sponsor_website_url("https://example.com") == "https://example.com"
 
 
 # ---------------------------------------------------------------------------
@@ -1590,12 +1673,12 @@ class TestLoadCategoryIntro:
         assert lead == "Use w1 for most apps."
         assert lead_html == "<p>Use <code>w1</code> for most apps.</p>\n"
 
-    def test_keeps_everything_above_table_without_how_to_choose_list(self, tmp_path):
+    def test_splits_after_lead_without_how_to_choose_list(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text("Use w1.\n\n- Small apps: w1\n\nConfigure w1 once.\n", encoding="utf-8")
         intro_html, guide_html, _, _ = load_category_intro(path)
-        assert "Configure w1 once." in intro_html
-        assert guide_html == ""
+        assert intro_html == "<p>Use w1.</p>\n"
+        assert guide_html == "<ul>\n<li>Small apps: w1</li>\n</ul>\n<p>Configure w1 once.</p>\n"
 
     def test_returns_empty_strings_without_intro_file(self, tmp_path):
         assert load_category_intro(tmp_path / "missing.md") == ("", "", "", "")
@@ -1603,12 +1686,12 @@ class TestLoadCategoryIntro:
     def test_links_picks_to_entry_rows(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text(
-            "Use w1.\n\nHow to choose:\n\n- Small apps: Django Ninja, or `uv tool` on uv\n- Big apps: Django\n- Old apps: The Algorithms - Python\n\nSee [w1](https://w1.example).\n", encoding="utf-8"
+            "Use w1.\n\nHow to choose:\n\n- Small apps: Django Ninja, or `uv tool` on uv\n- Big apps: Django\n- Old apps: Django - LTS releases\n\nSee [w1](https://w1.example).\n", encoding="utf-8"
         )
-        intro_html, guide_html, _, _ = load_category_intro(path, ["django-ninja", "Django", "uv", "TheAlgorithms"])
+        intro_html, guide_html, _, _ = load_category_intro(path, ["django-ninja", "Django", "uv"])
         assert '<li>Small apps: <a href="#entry-django-ninja">Django Ninja</a>, or <code>uv tool</code> on <a href="#entry-uv">uv</a></li>' in intro_html
         assert '<li>Big apps: <a href="#entry-django">Django</a></li>' in intro_html
-        assert '<li>Old apps: <a href="#entry-thealgorithms">The Algorithms</a> - Python</li>' in intro_html
+        assert '<li>Old apps: <a href="#entry-django">Django</a> - LTS releases</li>' in intro_html
         assert '<a href="https://w1.example" target="_blank" rel="noopener">w1</a>' in guide_html
 
     def test_links_pick_aliases_to_entry_rows(self, tmp_path):

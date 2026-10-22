@@ -11,6 +11,7 @@ from collections.abc import Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 from jinja2 import Environment, FileSystemLoader
 from markdown_it import MarkdownIt
@@ -35,7 +36,7 @@ BUILTIN_PUBLIC_URL = f"{SITE_URL}categories/{BUILTIN_SLUG}/"
 
 SPONSORSHIP_PATH = "/sponsorship/"
 SPONSORSHIP_PUBLIC_URL = f"{SITE_URL}sponsorship/"
-SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+SPONSORSHIP_DESCRIPTION = "Sponsorship for Awesome Python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
 
 BUNDLED_PREFIX_RE = re.compile(r"^\(part of ")
 
@@ -46,19 +47,29 @@ PICK_ALIASES = {
     "Cacheops": "django-cacheops",
     "Chroma": "chromadb",
     "Coverage.py": "coverage",
+    "Django AI Skills": "django-ai-plugins",
+    "Django ORM": "django.db.models",
     "Faiss": "faiss-cpu",
     "gRPC": "grpcio",
+    "Google Cloud client libraries": "google-cloud-python",
     "Grappelli": "django-grappelli",
     "Hydra": "hydra-core",
     "Ibis": "ibis-framework",
+    "Jupyter Notebook": "notebook",
     "Material for MkDocs": "mkdocs-material",
+    "MCP Python SDK": "mcp",
+    "OpenAI Agents SDK": "openai-agents",
     "OpenCV": "opencv-python",
     "Playwright": "playwright-python",
     "PyAV": "av",
+    "Python-Markdown": "markdown",
     "python-oracledb": "oracledb",
+    "Ray Core": "ray",
+    "redis-py": "redis",
     "Sherlock": "sherlock-project",
     "Silk": "django-silk",
     "Surprise": "scikit-surprise",
+    "The Algorithms - Python": "thealgorithms",
     "Unfold": "django-unfold",
     "Vega-Altair": "altair",
 }
@@ -128,6 +139,16 @@ def extract_github_repo(url: str) -> str | None:
     """Extract owner/repo from a GitHub repo URL. Returns None for non-GitHub URLs."""
     m = GITHUB_REPO_URL_RE.match(url)
     return m.group(1) if m else None
+
+
+def sponsor_website_url(url: str) -> str:
+    """Set utm_content=website so sponsors can tell website clicks from README clicks."""
+    parts = urlsplit(url)
+    pairs = parse_qsl(parts.query, keep_blank_values=True)
+    if not any(k == "utm_content" for k, _ in pairs):
+        return url
+    query = [(k, "website" if k == "utm_content" else v) for k, v in pairs]
+    return urlunsplit(parts._replace(query=urlencode(query)))
 
 
 def load_stars(path: Path) -> dict[str, dict]:
@@ -269,7 +290,7 @@ def category_meta_description(name: str, entry_count: int, description: str) -> 
     if description:
         lead = description if description.endswith((".", "!", "?")) else f"{description}."
         return f"{lead} {count_sentence}"
-    return f"{count_sentence} Part of the Awesome Python catalog."
+    return f"{count_sentence} Part of the Awesome Python list."
 
 
 def subcategory_meta_description(name: str, parent_name: str, entry_names: Sequence[str]) -> str:
@@ -294,7 +315,7 @@ def link_pick_names(pick: str, slugs_by_key: dict[str, str]) -> str:
             start, end = words[i].start(), words[j - 1].end()
             span = pick[start:end]
             slug = slugs_by_key.get(entry_name_key(span))
-            # Code spans and dangling punctuation like "The Algorithms -" stay outside links
+            # Code spans and dangling punctuation like "Django -" stay outside links
             if slug and span[0].isalnum() and span[-1].isalnum() and "," not in span and "`" not in span:
                 parts.append(f"{pick[pos:start]}[{span}](#entry-{slug})")
                 pos, i = end, j
@@ -327,7 +348,8 @@ def load_category_intro(path: Path, entry_names: Sequence[str] = ()) -> tuple[st
 
     Returns the part shown above the table, the guide shown below it, and the
     first paragraph as plain text for the meta description and as HTML for
-    group pages. A file without the list keeps everything above the table.
+    group pages. A file without the list, like a one-project category's,
+    keeps only its lead above the table.
     Returns empty strings if the category has no intro file.
     """
     if not path.exists():
@@ -340,7 +362,7 @@ def load_category_intro(path: Path, entry_names: Sequence[str] = ()) -> tuple[st
                 child.attrSet("target", "_blank")
                 child.attrSet("rel", "noopener")
     lead = next(node for node in SyntaxTreeNode(tokens).children if node.type == "paragraph")
-    split_at = len(tokens)
+    split_at = next(j for j, token in enumerate(tokens) if token.type == "paragraph_close" and token.level == 0) + 1
     for i, token in enumerate(tokens):
         if token.type == "inline" and token.level == 1 and token.content == "How to choose:" and i + 2 < len(tokens) and tokens[i + 2].type == "bullet_list_open":
             split_at = next(j for j in range(i + 3, len(tokens)) if tokens[j].type == "bullet_list_close" and tokens[j].level == 0) + 1
@@ -749,6 +771,8 @@ def build(repo_root: Path) -> None:
 
     parsed_groups = parse_readme(readme_text)
     sponsors = parse_sponsors(readme_text)
+    for sponsor in sponsors:
+        sponsor["url"] = sponsor_website_url(sponsor["url"])
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     cat_slugs = [cat["slug"] for cat in categories]
@@ -820,7 +844,6 @@ def build(repo_root: Path) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=build_date.strftime("%B %d, %Y"),
             sponsors=sponsors,
             category_urls=category_urls,
             filter_urls=filter_urls,
@@ -881,6 +904,7 @@ def build(repo_root: Path) -> None:
                 parent_category=parent_category,
                 group_categories=group_categories,
                 category_json_ld=category_json_ld,
+                sponsors=sponsors,
             ),
             encoding="utf-8",
         )
@@ -923,7 +947,6 @@ def build(repo_root: Path) -> None:
     hero_stats: list[str] = []
     if repo_stars:
         hero_stats.append(f"{repo_stars}+ stars on GitHub")
-    hero_stats.append(f"Updated {build_date.strftime('%B %d, %Y')}")
     (sponsorship_dir / "index.html").write_text(
         tpl_sponsorship.render(
             hero_stats=hero_stats,
@@ -980,7 +1003,7 @@ def build(repo_root: Path) -> None:
         llms_template,
         readme_text=readme_text,
         subtitle=subtitle,
-        build_date=build_date.strftime("%Y/%m/%d"),
+        build_date=build_date.date().isoformat(),
         stars_data=stars_data,
         downloads_data=downloads_data,
         categories=categories,

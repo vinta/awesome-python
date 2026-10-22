@@ -4,7 +4,6 @@
 {% endblock %}
 {% block header %}
 <header class="hero">
-  <div class="hero-sheen" aria-hidden="true"></div>
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="hero-shell">
@@ -24,22 +23,21 @@
 
     <div class="hero-grid">
       <div class="hero-copy">
-        <p class="hero-kicker">The definitive list that answers "I want to do X in Python, which tool should I use?"</p>
+        <p class="hero-kicker">Answers “I want to do X in Python. Which tool should I use?”</p>
         <h1>Awesome Python</h1>
         <p class="hero-sub">{{ subtitle }}</p>
         <p class="hero-proof">
-          {% if repo_stars %}{{ repo_stars }}+ stars on GitHub{% endif %} {% if repo_stars and build_date %}/{% endif %} {% if build_date %}Updated {{ build_date }}{% endif %} {% if repo_stars or
-          build_date %}/{% endif %} Maintained by
+          {% if repo_stars %}<span class="proof-stat">{{ repo_stars }}+ stars on GitHub</span> <span class="proof-sep">/</span>{% endif %} <span class="proof-stat">Maintained by
           <a href="https://github.com/vinta" target="_blank" rel="noopener">@vinta</a>
           and
-          <a href="https://github.com/JinyangWang27" target="_blank" rel="noopener">@JinyangWang27</a>
+          <a href="https://github.com/JinyangWang27" target="_blank" rel="noopener">@JinyangWang27</a></span>
         </p>
         <div class="hero-actions">
           <a
             href="#library-index"
             class="hero-action hero-action-primary"
             data-scroll-to="library-index"
-            >Browse the List</a
+            >Browse the list</a
           >
           <a
             href="https://github.com/vinta/awesome-python"
@@ -53,61 +51,45 @@
     </div>
 
     <nav class="hero-category-nav" aria-labelledby="hero-category-heading">
-      <div class="hero-category-meta">
-        <h2 id="hero-category-heading">Browse by category</h2>
-      </div>
-      <ul class="hero-category-links">
-        {% for category in categories %}
-        <li>
-          <a class="hero-category-link" href="{{ category_urls[category.name] }}"
-            >{{ category.name }}</a
-          >
-        </li>
-        {% endfor %}
-      </ul>
+      <details class="hero-category-details" open>
+        <summary class="hero-category-meta">
+          <h2 id="hero-category-heading">Browse by category</h2>
+        </summary>
+        <ul class="hero-category-links">
+          {% for category in categories %}
+          <li>
+            <a class="hero-category-link" href="{{ category_urls[category.name] }}"
+              >{{ category.name }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </details>
+      <script>
+        // Collapse before first paint on phones, where the open list pushes the table about 1.5 screens down
+        if (matchMedia("(max-width: 680px)").matches) {
+          document.currentScript.previousElementSibling.open = false;
+        }
+      </script>
     </nav>
   </div>
 </header>
 {% endblock %}
 {% block content %}
-{% if sponsors %}
-<section class="sponsor-band" aria-labelledby="sponsor-heading" data-reveal>
-  <div class="section-shell sponsor-shell">
-    <header class="sponsor-meta">
-      <p class="section-label" id="sponsor-heading">Sponsors</p>
-      <a class="sponsor-become" href="/sponsorship/"> Become a sponsor </a>
-    </header>
-    <ul class="sponsor-list">
-      {% for sponsor in sponsors %}
-      <li class="sponsor">
-        <a
-          class="sponsor-link"
-          href="{{ sponsor.url }}"
-          target="_blank"
-          rel="noopener"
-        >
-          <span class="sponsor-name">{{ sponsor.name }}</span>
-        </a>
-        <p class="sponsor-desc">{{ sponsor.description | safe }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-{% endif %}
+{% include "_sponsor_band.html" %}
 
 <section class="results-section" id="library-index">
-  <div class="results-intro section-shell" data-reveal>
+  <div class="results-intro section-shell">
     <div>
-      <h2>Search every project in one place</h2>
+      <h2>Search projects in one place</h2>
     </div>
     <p class="results-note">
-      Press <kbd>/</kbd> to search. Tap a tag to filter. Click any row for
+      Press <kbd>/</kbd> to search. Tags open their category. Click a row for
       details.
     </p>
   </div>
 
-  <div class="controls section-shell" data-reveal>
+  <div class="controls section-shell">
     <h2 class="sr-only">Search and filter</h2>
     <div class="search-wrap">
       <svg
@@ -127,7 +109,8 @@
       <input
         type="search"
         class="search"
-        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories..."
+        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories…"
+        data-short-placeholder="Search {{ entries | length }} projects…"
         aria-label="Search projects"
       />
     </div>
@@ -138,7 +121,7 @@
     class="table-wrap"
     tabindex="0"
     role="region"
-    aria-label="Libraries table"
+    aria-label="Projects table"
   >
     <table class="table">
       <thead>
@@ -148,7 +131,7 @@
             <button type="button" class="sort-btn">Project Name</button>
           </th>
           <th class="col-downloads" data-sort="downloads">
-            <button type="button" class="sort-btn">PyPI Downloads</button>
+            <button type="button" class="sort-btn" title="PyPI downloads, last 30 days">PyPI Downloads</button>
           </th>
           <th class="col-stars" data-sort="stars">
             <button type="button" class="sort-btn">GitHub Stars</button>
@@ -252,9 +235,7 @@
           <td></td>
           <td colspan="5">
             <div class="expand-content">
-              {% if entry.description %}
-              <div class="expand-desc">{{ entry.description | safe }}</div>
-              {% endif %} {% if entry.also_see %}
+              {% if entry.also_see %}
               <div class="expand-also-see">
                 Also see: {% for see in entry.also_see %}<a
                   href="{{ see.url }}"
@@ -276,15 +257,15 @@
                   rel="noopener"
                   >{{ entry.url | replace("https://", "") }}</a
                 >
-                {% if entry.last_commit_at %}<span class="expand-commit"
+                {% if entry.stars is not none %}<span
+                  class="expand-stars"
+                  ><span class="expand-sep">/</span>{{
+                  "{:,}".format(entry.stars) }} stars</span
+                >{% endif %} {% if entry.last_commit_at %}<span class="expand-commit"
                   ><span class="expand-sep">/</span
                   ><time datetime="{{ entry.last_commit_at }}"
                     >{{ entry.last_commit_at[:10] }}</time
                   ></span
-                >{% endif %} {% if entry.downloads is not none %}<span
-                  class="expand-downloads"
-                  ><span class="expand-sep">/</span>{{
-                  "{:,}".format(entry.downloads) }} downloads/month</span
                 >{% endif %}
               </div>
             </div>
@@ -297,7 +278,7 @@
   </div>
 
   <div class="no-results" hidden>
-    <p>No projects match your search or filter.</p>
+    <p>No projects match your search.</p>
     <p class="no-results-hint">
       Try a broader term, or
       <button class="no-results-clear">browse all projects</button>.
@@ -305,7 +286,7 @@
   </div>
 </section>
 
-<section class="final-cta" data-reveal>
+<section class="final-cta">
   <div class="section-shell">
     <p class="section-label">Contribute</p>
     <h2>Know a project that belongs here?</h2>

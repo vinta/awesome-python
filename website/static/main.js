@@ -12,44 +12,14 @@ const defaultSort =
     : { col: "downloads", order: "desc" };
 let activeSort = defaultSort;
 const searchInput = document.querySelector(".search");
+// The full placeholder is cut off on phones
+if (searchInput && window.matchMedia("(max-width: 680px)").matches) {
+  searchInput.placeholder = searchInput.dataset.shortPlaceholder;
+}
 const noResults = document.querySelector(".no-results");
 const rows = document.querySelectorAll(".table tbody tr.row");
 const tbody = document.querySelector(".table tbody");
 const groupRows = document.querySelectorAll(".table tbody tr.group-row");
-
-function initRevealSections() {
-  const sections = document.querySelectorAll("[data-reveal]");
-  if (!sections.length) return;
-
-  if (!("IntersectionObserver" in window)) {
-    sections.forEach(function (section) {
-      section.classList.add("is-visible");
-    });
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -8% 0px",
-    },
-  );
-
-  sections.forEach(function (section, index) {
-    section.classList.add("will-reveal");
-    section.style.transitionDelay = Math.min(index * 70, 180) + "ms";
-    observer.observe(section);
-  });
-}
-
-initRevealSections();
 
 // Smooth scroll without hash in URL
 document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
@@ -74,16 +44,6 @@ if (window.location.hash === "#library-index") {
   );
 }
 
-// Pause hero animations when scrolled out of view
-(function () {
-  const hero = document.querySelector(".hero");
-  if (!hero || !("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver(function (entries) {
-    hero.classList.toggle("offscreen", !entries[0].isIntersecting);
-  });
-  observer.observe(hero);
-})();
-
 function relativeTime(isoStr) {
   const date = new Date(isoStr);
   const now = new Date();
@@ -96,7 +56,7 @@ function relativeTime(isoStr) {
   if (diffDays === 1) return "yesterday";
   if (diffDays < 30) return diffDays + " days ago";
   const diffMonths = Math.floor(diffDays / 30);
-  if (diffMonths < 12)
+  if (diffDays < 365)
     return diffMonths === 1 ? "1 month ago" : diffMonths + " months ago";
   const diffYears = Math.floor(diffDays / 365);
   return diffYears === 1 ? "1 year ago" : diffYears + " years ago";
@@ -129,12 +89,18 @@ rows.forEach(function (row, i) {
   row._expandRow = next;
 });
 
+function setRowOpen(row, open) {
+  row.classList.toggle("open", open);
+  row.setAttribute("aria-expanded", String(open));
+  // The homepage shows a row's description only while the row is open
+  if (isIndexDocument && row._descRow) row._descRow.hidden = !open;
+}
+
 function collapseAll() {
   if (!tbody) return;
   const openRows = tbody.querySelectorAll("tr.row.open");
   openRows.forEach(function (row) {
-    row.classList.remove("open");
-    row.setAttribute("aria-expanded", "false");
+    setRowOpen(row, false);
   });
 }
 
@@ -318,14 +284,7 @@ if (tbody) {
     }
     if (!row) return;
 
-    const isOpen = row.classList.contains("open");
-    if (isOpen) {
-      row.classList.remove("open");
-      row.setAttribute("aria-expanded", "false");
-    } else {
-      row.classList.add("open");
-      row.setAttribute("aria-expanded", "true");
-    }
+    setRowOpen(row, !row.classList.contains("open"));
   });
 
   // Keyboard: Enter or Space on focused .row toggles expand
@@ -373,8 +332,7 @@ function openEntryRow(row) {
     searchInput.value = "";
     applyFilters();
   }
-  row.classList.add("open");
-  row.setAttribute("aria-expanded", "true");
+  setRowOpen(row, true);
 }
 
 // Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
@@ -397,6 +355,13 @@ document.addEventListener("click", function (e) {
     searchInput.value = "";
     applyFilters();
   }
+});
+
+// Mailto clicks leave no page view, so the sponsor funnel needs its own event
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[href^="mailto:sponsorship@"]');
+  if (!link || typeof gtag !== "function") return;
+  gtag("event", "sponsor_contact", { tier: link.dataset.tier });
 });
 
 if (location.hash) {
