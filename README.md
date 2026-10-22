@@ -176,8 +176,6 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [vllm](https://github.com/vllm-project/vllm) - A high-throughput and memory-efficient inference and serving engine for LLMs.
   - [sglang](https://github.com/sgl-project/sglang) - A high-performance serving framework for large language models and multimodal models.
   - [deepinfer](https://github.com/deepseek-ai/DeepInfer) - DeepSeek's production inference engine for DeepSeek models, with MoE expert parallelism.
-- LLM Gateways
-  - [litellm](https://github.com/BerriAI/litellm) - Call 100+ LLMs using OpenAI format.
 - Image and Video Generation
   - [diffusers](https://github.com/huggingface/diffusers) - Pre-trained diffusion models for generating and editing images, audio, and video.
 - Fine-tuning
