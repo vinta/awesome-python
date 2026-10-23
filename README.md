@@ -870,6 +870,7 @@ _Useful CLI-based tools._
 - Project Scaffolding
   - [cookiecutter](https://github.com/cookiecutter/cookiecutter) - A command-line utility that creates projects from cookiecutters (project templates).
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering project templates.
+  - [CookiePyStarter](https://github.com/mramitdas/CookiePyStarter) - Modern Python cookiecutter template: uv, ruff, mypy, pytest, pre-commit; green on first render.
 - Shells
   - [xonsh](https://github.com/xonsh/xonsh) - A Python-powered shell. Full-featured and cross-platform.
 - Terminal Workflow
