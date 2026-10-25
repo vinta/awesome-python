@@ -378,11 +378,11 @@ kbd {
 }
 
 .hero-category-meta h2::after {
-  content: " ↓";
+  content: " ↓" / "";
 }
 
 .hero-category-details[open] .hero-category-meta h2::after {
-  content: " ↑";
+  content: " ↑" / "";
 }
 
 .hero-category-links {
@@ -594,7 +594,7 @@ kbd {
 
 /* The arrow marks an in-page jump; inline-block keeps it out of the underline */
 .jump-link::after {
-  content: "\2193";
+  content: "\2193" / "";
   display: inline-block;
   margin-left: 0.3rem;
   color: var(--hero-kicker);
@@ -1022,13 +1022,13 @@ th[data-sort]:hover {
 }
 
 th[data-sort]::after {
-  content: " \2193";
+  content: " \2193" / "";
   opacity: 0;
   transition: opacity 180ms ease;
 }
 
 th[data-sort="name"]::after {
-  content: " \2191";
+  content: " \2191" / "";
 }
 
 th[data-sort]:hover::after,
@@ -1038,11 +1038,11 @@ th[data-sort].sort-desc::after {
 }
 
 th[data-sort].sort-desc::after {
-  content: " \2193";
+  content: " \2193" / "";
 }
 
 th[data-sort].sort-asc::after {
-  content: " \2191";
+  content: " \2191" / "";
 }
 
 .col-stars {
