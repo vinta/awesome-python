@@ -617,6 +617,7 @@ kbd {
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .guide-body {
@@ -747,6 +748,7 @@ kbd {
   font-weight: 600;
   line-height: 0.94;
   letter-spacing: -0.03em;
+  text-wrap: balance;
 }
 
 .results-section {
