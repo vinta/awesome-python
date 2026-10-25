@@ -47,7 +47,7 @@
 
   --search-inset: oklch(100% 0 0 / 0.75);
   --search-shadow: oklch(18% 0.03 45 / 0.24);
-  --search-focus-ring: oklch(61% 0.14 48 / 0.45);
+  --search-focus-ring: oklch(61% 0.14 48);
   --search-focus-shadow: oklch(34% 0.08 42 / 0.28);
 
   --tag-hover-border: oklch(71% 0.09 62 / 0.45);
@@ -826,6 +826,7 @@ kbd {
 }
 
 .search:focus {
+  outline: none;
   border-color: var(--search-focus-ring);
   box-shadow:
     inset 0 1px 0 var(--search-inset),
