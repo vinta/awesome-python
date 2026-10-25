@@ -1185,7 +1185,6 @@ th[data-sort].sort-asc::after {
   overflow-wrap: break-word;
   word-break: break-word;
   contain: layout style paint;
-  animation: expand-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .expand-also-see a,
@@ -1737,17 +1736,6 @@ th[data-sort].sort-asc::after {
   border: 0;
 }
 
-@keyframes expand-in {
-  from {
-    opacity: 0;
-    transform: translateY(-0.4rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 960px) {
   .hero-grid,
   .results-intro,
@@ -1961,8 +1949,6 @@ th[data-sort].sort-asc::after {
   }
 
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }
