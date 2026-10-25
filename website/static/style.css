@@ -727,7 +727,6 @@ kbd {
   color: var(--ink-soft);
   font-size: var(--text-lg);
   line-height: 1.55;
-  text-wrap: pretty;
 }
 
 .sponsor-desc a {
@@ -768,14 +767,12 @@ kbd {
   align-self: start;
   color: var(--ink-soft);
   font-size: var(--text-base);
-  text-wrap: pretty;
 }
 
 .results-note {
   color: var(--ink-soft);
   font-size: var(--text-sm);
   justify-self: end;
-  text-wrap: pretty;
 }
 
 /* Single-project pages drop the order note, so keep the note in the last column */
@@ -1401,7 +1398,6 @@ th[data-sort].sort-asc::after {
   color: var(--ink-muted);
   font-size: var(--text-sm);
   line-height: 1.55;
-  text-wrap: pretty;
 }
 
 .sponsorship-body {
@@ -1476,7 +1472,6 @@ th[data-sort].sort-asc::after {
   color: var(--ink-soft);
   font-size: var(--text-base);
   line-height: 1.65;
-  text-wrap: pretty;
 }
 
 .tier-list {
@@ -1552,7 +1547,6 @@ th[data-sort].sort-asc::after {
   color: var(--ink-soft);
   font-size: var(--text-base);
   line-height: 1.6;
-  text-wrap: pretty;
 }
 
 .tier-includes li::before {
@@ -1617,7 +1611,6 @@ th[data-sort].sort-asc::after {
 .past-sponsor-desc {
   color: var(--ink-soft);
   font-size: var(--text-lg);
-  text-wrap: pretty;
 }
 
 .sponsorship-cta-row {
@@ -1655,7 +1648,6 @@ th[data-sort].sort-asc::after {
 .final-cta p {
   color: var(--ink-soft);
   font-size: var(--text-lg);
-  text-wrap: pretty;
 }
 
 .final-cta .hero-action-primary {
