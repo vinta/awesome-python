@@ -962,7 +962,7 @@ _Libraries for parsing and manipulating specific file formats._
   - [weasyprint](https://github.com/Kozea/WeasyPrint) - A visual rendering engine for HTML and CSS that can export to PDF.
 - Markdown
   - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) - Markdown parser with 100% CommonMark support, extensions, and syntax plugins.
-  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber’s Markdown.
+  - [markdown](https://github.com/Python-Markdown/markdown) - A Python implementation of John Gruber's Markdown.
   - [mistune](https://github.com/lepture/mistune) - A fast yet powerful Python Markdown parser with renderers and plugins.
 - Data Formats
   - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
