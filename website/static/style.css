@@ -889,7 +889,7 @@ kbd {
   vertical-align: middle;
   border-bottom: 1px solid var(--line);
   transition:
-    background-color 180ms ease,
+    background-color 150ms ease-out,
     border-color 180ms ease;
 }
 
@@ -1122,7 +1122,7 @@ th[data-sort].sort-asc::after {
   text-wrap: pretty;
   overflow-wrap: break-word;
   transition:
-    background-color 180ms ease,
+    background-color 150ms ease-out,
     border-color 180ms ease;
 }
 
@@ -1239,9 +1239,9 @@ th[data-sort].sort-asc::after {
   letter-spacing: 0.02em;
   cursor: pointer;
   transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
+    color 150ms ease-out,
+    background-color 150ms ease-out,
+    border-color 150ms ease-out,
     transform 180ms ease;
 }
 
