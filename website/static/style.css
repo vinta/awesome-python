@@ -47,7 +47,7 @@
 
   --search-inset: oklch(100% 0 0 / 0.75);
   --search-shadow: oklch(18% 0.03 45 / 0.24);
-  --search-focus-ring: oklch(61% 0.14 48 / 0.45);
+  --search-focus-ring: oklch(61% 0.14 48);
   --search-focus-shadow: oklch(34% 0.08 42 / 0.28);
 
   --tag-hover-border: oklch(71% 0.09 62 / 0.45);
@@ -233,6 +233,7 @@ kbd {
 }
 
 .hero-topbar-link {
+  position: relative;
   padding: 0.45rem 0.8rem;
   border: 1px solid var(--hero-line);
   border-radius: 999px;
@@ -247,6 +248,13 @@ kbd {
     transform 180ms ease;
 }
 
+/* Grows the tap target to 44px without changing the pill */
+.hero-topbar-link::after {
+  content: "";
+  position: absolute;
+  inset: -0.25rem 0;
+}
+
 .hero-topbar-link-strong,
 .hero-topbar-link:hover {
   border-color: oklch(100% 0 0 / 0.28);
@@ -254,9 +262,8 @@ kbd {
 }
 
 .hero-topbar-link:active,
-.hero-action:active,
-.tag:active {
-  transform: translateY(1px);
+.hero-action:active {
+  transform: scale(0.96);
 }
 
 .hero-grid {
@@ -370,11 +377,11 @@ kbd {
 }
 
 .hero-category-meta h2::after {
-  content: " ↓";
+  content: " ↓" / "";
 }
 
 .hero-category-details[open] .hero-category-meta h2::after {
-  content: " ↑";
+  content: " ↑" / "";
 }
 
 .hero-category-links {
@@ -451,7 +458,6 @@ kbd {
 .hero-topbar-link:focus-visible,
 .hero-category-link:focus-visible,
 .hero-category-meta:focus-visible,
-.search:focus-visible,
 .tag:focus-visible,
 .jump-link:focus-visible,
 .back-to-top:focus-visible,
@@ -587,7 +593,7 @@ kbd {
 
 /* The arrow marks an in-page jump; inline-block keeps it out of the underline */
 .jump-link::after {
-  content: "\2193";
+  content: "\2193" / "";
   display: inline-block;
   margin-left: 0.3rem;
   color: var(--hero-kicker);
@@ -815,6 +821,7 @@ kbd {
 }
 
 .search:focus {
+  outline: none;
   border-color: var(--search-focus-ring);
   box-shadow:
     inset 0 1px 0 var(--search-inset),
@@ -876,9 +883,7 @@ kbd {
   padding-bottom: 1rem;
   vertical-align: middle;
   border-bottom: 1px solid var(--line);
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease;
+  transition: background-color 150ms ease-out;
 }
 
 .table tbody tr[hidden] {
@@ -1015,13 +1020,13 @@ th[data-sort]:hover {
 }
 
 th[data-sort]::after {
-  content: " \2193";
+  content: " \2193" / "";
   opacity: 0;
   transition: opacity 180ms ease;
 }
 
 th[data-sort="name"]::after {
-  content: " \2191";
+  content: " \2191" / "";
 }
 
 th[data-sort]:hover::after,
@@ -1031,11 +1036,11 @@ th[data-sort].sort-desc::after {
 }
 
 th[data-sort].sort-desc::after {
-  content: " \2193";
+  content: " \2193" / "";
 }
 
 th[data-sort].sort-asc::after {
-  content: " \2191";
+  content: " \2191" / "";
 }
 
 .col-stars {
@@ -1109,9 +1114,7 @@ th[data-sort].sort-asc::after {
   line-height: 1.6;
   text-wrap: pretty;
   overflow-wrap: break-word;
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease;
+  transition: background-color 150ms ease-out;
 }
 
 .row:not(.open) + .desc-row td {
@@ -1172,8 +1175,7 @@ th[data-sort].sort-asc::after {
   text-wrap: pretty;
   overflow-wrap: break-word;
   word-break: break-word;
-  contain: layout style paint;
-  animation: expand-in 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  contain: layout style;
 }
 
 .expand-also-see a,
@@ -1228,22 +1230,26 @@ th[data-sort].sort-asc::after {
   letter-spacing: 0.02em;
   cursor: pointer;
   transition:
-    color 180ms ease,
-    background-color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
+    color 150ms ease-out,
+    background-color 150ms ease-out,
+    border-color 150ms ease-out;
 }
 
 .tag + .tag {
   margin-left: 0.2rem;
 }
 
+/* The focus ring reaches past the gap, so lift it above the next tag */
+.tag:focus-visible {
+  z-index: 1;
+}
+
+/* A 44px-tall target centered on the pill, kept clear of the neighbouring tags */
 .tag::after {
   content: "";
   position: absolute;
-  inset: -0.5rem -0.25rem;
-  min-height: 44px;
-  min-width: 44px;
+  inset-block: calc((100% - 44px) / 2);
+  inset-inline: -0.1rem;
 }
 
 .tag:hover {
@@ -1269,14 +1275,18 @@ th[data-sort].sort-asc::after {
   letter-spacing: 0.03em;
   cursor: pointer;
   opacity: 0;
+  /* Keeps the hidden button out of the tab order; stays visible for the whole fade */
+  visibility: hidden;
   pointer-events: none;
   transition:
     opacity 180ms ease,
+    visibility 180ms ease,
     color 180ms ease;
 }
 
 .back-to-top.visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -1716,17 +1726,6 @@ th[data-sort].sort-asc::after {
   border: 0;
 }
 
-@keyframes expand-in {
-  from {
-    opacity: 0;
-    transform: translateY(-0.4rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 960px) {
   .hero-grid,
   .results-intro,
@@ -1853,6 +1852,16 @@ th[data-sort].sort-asc::after {
     column-gap: 0.75rem;
   }
 
+  /* Meets the 24px minimum touch target */
+  .hero-category-links li {
+    padding-bottom: 0;
+  }
+
+  .hero-category-link {
+    display: inline-block;
+    padding-block: 0.35rem;
+  }
+
   .search {
     min-height: 3.5rem;
     border-radius: 1.25rem;
@@ -1930,8 +1939,6 @@ th[data-sort].sort-asc::after {
   }
 
   *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
 }

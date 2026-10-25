@@ -94,6 +94,7 @@
     <div class="search-wrap">
       <svg
         class="search-icon"
+        aria-hidden="true"
         width="16"
         height="16"
         viewBox="0 0 24 24"
@@ -221,7 +222,7 @@
             </a>
             {% endif %}
           </td>
-          <td class="col-arrow"><span class="arrow">&rarr;</span></td>
+          <td class="col-arrow"><span class="arrow" aria-hidden="true">&rarr;</span></td>
         </tr>
         {% if entry.description %}
         <tr class="desc-row" hidden>
