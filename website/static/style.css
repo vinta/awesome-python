@@ -233,6 +233,7 @@ kbd {
 }
 
 .hero-topbar-link {
+  position: relative;
   padding: 0.45rem 0.8rem;
   border: 1px solid var(--hero-line);
   border-radius: 999px;
@@ -245,6 +246,13 @@ kbd {
     border-color 180ms ease,
     background-color 180ms ease,
     transform 180ms ease;
+}
+
+/* Grows the tap target to 44px without changing the pill */
+.hero-topbar-link::after {
+  content: "";
+  position: absolute;
+  inset: -0.25rem 0;
 }
 
 .hero-topbar-link-strong,
