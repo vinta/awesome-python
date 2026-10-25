@@ -27,19 +27,20 @@
     <meta name="twitter:image" content="{{ social_image_url }}" />
     <meta name="theme-color" content="#1c1410" />
     <link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media = 'all'"
+      rel="preload"
+      href="/static/fonts/cormorant-garamond-600-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <noscript
-      ><link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Manrope:wght@400;600;700;800&display=swap"
-        rel="stylesheet"
-    /></noscript>
+    <link
+      rel="preload"
+      href="/static/fonts/manrope-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="/static/style.css" />
     <script
       async
