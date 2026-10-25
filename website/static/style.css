@@ -1269,14 +1269,18 @@ th[data-sort].sort-asc::after {
   letter-spacing: 0.03em;
   cursor: pointer;
   opacity: 0;
+  /* Keeps the hidden button out of the tab order; stays visible for the whole fade */
+  visibility: hidden;
   pointer-events: none;
   transition:
     opacity 180ms ease,
+    visibility 180ms ease,
     color 180ms ease;
 }
 
 .back-to-top.visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
