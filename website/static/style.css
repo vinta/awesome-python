@@ -1857,6 +1857,16 @@ th[data-sort].sort-asc::after {
     column-gap: 0.75rem;
   }
 
+  /* Meets the 24px minimum touch target */
+  .hero-category-links li {
+    padding-bottom: 0;
+  }
+
+  .hero-category-link {
+    display: inline-block;
+    padding-block: 0.35rem;
+  }
+
   .search {
     min-height: 3.5rem;
     border-radius: 1.25rem;
