@@ -1179,7 +1179,7 @@ th[data-sort].sort-asc::after {
   text-wrap: pretty;
   overflow-wrap: break-word;
   word-break: break-word;
-  contain: layout style paint;
+  contain: layout style;
 }
 
 .expand-also-see a,
