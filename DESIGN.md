@@ -198,7 +198,7 @@ Run this audit after generating or modifying a screen. Failure on any item means
 3. **Shape language.** Containers are square or pill. Anything in the 4px-to-16px radius range is suspect. The `0.4rem` on inline code is the only allowed exception.
 4. **Type sizes.** Confirm no rendered text falls below 12px. If a size feels small to a mid-senior reader on a 27-inch display, bump one step up. Never reduce an existing size.
 5. **Peer consistency.** Compare against the closest peer element. Peer links (hero topbar, footer, project names, sponsor names, expand-meta) share hover and focus treatment; tag variants inherit the base `.tag` style; labels that play the same role share size, weight, and letter-spacing. Color token and gutter must match unless there is a stated reason to differ.
-6. **Browser check.** Run the `playwright-cli` skill at full width, `< 960px`, and `< 680px`. Check layout and interactive behavior; sort affordance, filter chips, and sticky header must remain functional. Do not claim a UI change works based on code alone.
+6. **Browser check.** Check in a real browser at full width, `< 960px`, and `< 680px`. Check layout and interactive behavior; sort affordance, filter chips, and sticky header must remain functional. Do not claim a UI change works based on code alone.
 
 ## Known Gaps
 
