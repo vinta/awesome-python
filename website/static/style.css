@@ -262,8 +262,7 @@ kbd {
 }
 
 .hero-topbar-link:active,
-.hero-action:active,
-.tag:active {
+.hero-action:active {
   transform: scale(0.96);
 }
 
@@ -1237,8 +1236,7 @@ th[data-sort].sort-asc::after {
   transition:
     color 150ms ease-out,
     background-color 150ms ease-out,
-    border-color 150ms ease-out,
-    transform 180ms ease;
+    border-color 150ms ease-out;
 }
 
 .tag + .tag {
