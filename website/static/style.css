@@ -1243,6 +1243,11 @@ th[data-sort].sort-asc::after {
   margin-left: 0.2rem;
 }
 
+/* The focus ring reaches past the gap, so lift it above the next tag */
+.tag:focus-visible {
+  z-index: 1;
+}
+
 /* A 44px-tall target centered on the pill, kept clear of the neighbouring tags */
 .tag::after {
   content: "";
