@@ -888,9 +888,7 @@ kbd {
   padding-bottom: 1rem;
   vertical-align: middle;
   border-bottom: 1px solid var(--line);
-  transition:
-    background-color 150ms ease-out,
-    border-color 180ms ease;
+  transition: background-color 150ms ease-out;
 }
 
 .table tbody tr[hidden] {
@@ -1121,9 +1119,7 @@ th[data-sort].sort-asc::after {
   line-height: 1.6;
   text-wrap: pretty;
   overflow-wrap: break-word;
-  transition:
-    background-color 150ms ease-out,
-    border-color 180ms ease;
+  transition: background-color 150ms ease-out;
 }
 
 .row:not(.open) + .desc-row td {
