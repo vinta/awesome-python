@@ -264,7 +264,7 @@ kbd {
 .hero-topbar-link:active,
 .hero-action:active,
 .tag:active {
-  transform: translateY(1px);
+  transform: scale(0.96);
 }
 
 .hero-grid {
