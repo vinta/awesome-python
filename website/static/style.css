@@ -1905,7 +1905,8 @@ th[data-sort].sort-asc::after {
   }
 
   .col-num,
-  .col-cat {
+  .col-cat,
+  .group-count {
     display: none;
   }
 
