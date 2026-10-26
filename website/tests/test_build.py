@@ -1445,6 +1445,32 @@ class TestDetectSourceType:
     def test_github_non_repo_returns_none(self):
         assert detect_source_type("https://github.com/org/repo/wiki") is None
 
+    @pytest.mark.parametrize(
+        "url",
+        [
+            "https://docs.python.org.lookalike.example/3/library/asyncio.html",
+            "https://gitlab.com.lookalike.example/org/repo",
+            "https://bitbucket.org@lookalike.example/org/repo",
+            "https://lookalike.example/?next=https://docs.python.org/3/library/",
+            "https://github.com.lookalike.example/owner/repo",
+            "https://lookalike.example/github.com/owner/repo",
+        ],
+    )
+    def test_lookalike_domains_and_url_text_are_external(self, url):
+        assert detect_source_type(url) == "External"
+
+    @pytest.mark.parametrize(
+        ("url", "source_type"),
+        [
+            ("https://docs.python.org/3/library/asyncio.html", "Stdlib"),
+            ("https://subdomain.gitlab.com/org/repo", "GitLab"),
+            ("https://bitbucket.org./org/repo", "Bitbucket"),
+            ("https://gist.github.com/owner/gist", None),
+        ],
+    )
+    def test_real_domain_and_subdomain_detection(self, url, source_type):
+        assert detect_source_type(url) == source_type
+
 
 class TestExtractEntries:
     def test_basic_extraction(self):

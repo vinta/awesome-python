@@ -125,14 +125,19 @@ TemplateCategory = ParsedSection | SyntheticCategory
 
 def detect_source_type(url: str) -> str | None:
     """Detect source type from URL domain. Returns None for GitHub URLs."""
-    if GITHUB_REPO_URL_RE.match(url):
+    try:
+        hostname = urlsplit(url).hostname
+    except ValueError:
+        hostname = None
+    if not hostname:
+        return "External"
+    hostname = hostname.rstrip(".")
+    if hostname == "github.com" or hostname.endswith(".github.com"):
         return None
     for domain, source_type in SOURCE_TYPE_DOMAINS.items():
-        if domain in url:
+        if hostname == domain or hostname.endswith(f".{domain}"):
             return source_type
-    if "github.com" not in url:
-        return "External"
-    return None
+    return "External"
 
 
 def extract_github_repo(url: str) -> str | None:
