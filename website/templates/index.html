@@ -50,28 +50,7 @@
       </div>
     </div>
 
-    <nav class="hero-category-nav" aria-labelledby="hero-category-heading">
-      <details class="hero-category-details" open>
-        <summary class="hero-category-meta">
-          <h2 id="hero-category-heading">Browse by category</h2>
-        </summary>
-        <ul class="hero-category-links">
-          {% for category in categories %}
-          <li>
-            <a class="hero-category-link" href="{{ category_urls[category.name] }}"
-              >{{ category.name }}</a
-            >
-          </li>
-          {% endfor %}
-        </ul>
-      </details>
-      <script>
-        // Collapse before first paint on phones, where the open list pushes the table about 1.5 screens down
-        if (matchMedia("(max-width: 680px)").matches) {
-          document.currentScript.previousElementSibling.open = false;
-        }
-      </script>
-    </nav>
+    {%+ with nav_categories = categories %}{% include "_category_nav.html" %}{% endwith +%}
   </div>
 </header>
 {% endblock %}
