@@ -1948,6 +1948,7 @@ th[data-sort].sort-asc::after {
 
   .col-arrow {
     width: 1.8rem;
+    text-align: right;
   }
 }
 
