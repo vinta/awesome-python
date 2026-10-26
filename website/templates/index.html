@@ -9,19 +9,7 @@
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="hero-shell">
-    <nav class="hero-topbar" aria-label="Site">
-      <span class="hero-brand-mini">Awesome Python</span>
-      <div class="hero-topbar-actions">
-        <a
-          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
-          class="hero-topbar-link hero-topbar-link-strong"
-          target="_blank"
-          rel="noopener"
-          >Submit a project</a
-        >
-        <a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>
-      </div>
-    </nav>
+    {%+ with home = true %}{% include "_topbar.html" %}{% endwith +%}
 
     <div class="hero-grid">
       <div class="hero-copy">

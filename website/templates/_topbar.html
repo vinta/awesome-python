@@ -1,0 +1,20 @@
+<nav class="hero-topbar{% if not home %} category-topbar{% endif %}" aria-label="Site">
+      {% if home %}
+      <span class="hero-brand-mini">Awesome Python</span>
+      {% else %}
+      <a href="/" class="hero-brand-mini">Awesome Python</a>
+      {% endif %}
+      <div class="hero-topbar-actions">
+        {% if all_projects %}
+        <a href="/#library-index" class="hero-topbar-link">All projects</a>
+        {% endif %}
+        <a
+          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
+          class="hero-topbar-link hero-topbar-link-strong"
+          target="_blank"
+          rel="noopener"
+          >Submit a project</a
+        >
+        <a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>
+      </div>
+    </nav>
