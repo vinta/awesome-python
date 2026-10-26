@@ -271,10 +271,8 @@ function updateSortIndicators() {
   });
 }
 
-// Expand/collapse: event delegation on tbody
 if (tbody) {
   tbody.addEventListener("click", function (e) {
-    // Don't toggle if clicking a link
     if (e.target.closest("a")) return;
 
     let row = e.target.closest("tr.row");
@@ -287,7 +285,6 @@ if (tbody) {
     setRowOpen(row, !row.classList.contains("open"));
   });
 
-  // Keyboard: Enter or Space on focused .row toggles expand
   tbody.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
     if (e.target.closest("a")) return;

@@ -114,13 +114,11 @@ def main() -> None:
     cache = load_stars(CACHE_FILE)
     now = datetime.now(UTC)
 
-    # Prune entries not in current README
     pruned = {k: v for k, v in cache.items() if k in current_repos}
     if len(pruned) < len(cache):
         print(f"Pruned {len(cache) - len(pruned)} stale cache entries")
     cache = pruned
 
-    # Determine which repos need fetching (missing or stale)
     max_age = timedelta(hours=CACHE_MAX_AGE_HOURS)
     to_fetch = []
     for repo in sorted(current_repos):
@@ -138,7 +136,6 @@ def main() -> None:
         print("Cache is up to date.")
         return
 
-    # Fetch in batches
     fetched_count = 0
     skipped_repos: list[str] = []
 

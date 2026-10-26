@@ -65,11 +65,6 @@ class HeadMetadataParser(HTMLParser):
             self.title += data
 
 
-# ---------------------------------------------------------------------------
-# slugify
-# ---------------------------------------------------------------------------
-
-
 class TestSlugify:
     def test_simple(self):
         assert slugify("Admin Panels") == "admin-panels"
@@ -87,11 +82,6 @@ class TestSlugify:
 class TestSubcategoryPath:
     def test_builds_path(self):
         assert subcategory_path("web-frameworks", "synchronous") == "/categories/web-frameworks/synchronous/"
-
-
-# ---------------------------------------------------------------------------
-# build (integration)
-# ---------------------------------------------------------------------------
 
 
 class TestBuild:
@@ -563,12 +553,10 @@ class TestBuild:
         """)
         (tmp_path / "README.md").write_text(readme, encoding="utf-8")
 
-        # Copy real templates
         real_tpl = Path(__file__).parent / ".." / "templates"
         tpl_dir = tmp_path / "website" / "templates"
         shutil.copytree(real_tpl, tpl_dir)
 
-        # Create mock star data
         data_dir = tmp_path / "website" / "data"
         data_dir.mkdir(parents=True)
         stars = {
@@ -583,10 +571,8 @@ class TestBuild:
         # Star-sorted: high-stars (5000) before low-stars (100) before no-stars (None)
         assert html.index("high-stars") < html.index("low-stars")
         assert html.index("low-stars") < html.index("no-stars")
-        # Formatted star counts
         assert "5,000" in html
         assert "100" in html
-        # Expand content present
         assert "expand-content" in html
 
     def test_build_with_downloads_renders_column(self, tmp_path):
@@ -1313,11 +1299,6 @@ class TestBuild:
             build(tmp_path)
 
 
-# ---------------------------------------------------------------------------
-# extract_github_repo
-# ---------------------------------------------------------------------------
-
-
 class TestExtractGithubRepo:
     def test_github_url(self):
         assert extract_github_repo("https://github.com/psf/requests") == "psf/requests"
@@ -1341,11 +1322,6 @@ class TestExtractGithubRepo:
         assert extract_github_repo("https://github.com/org") is None
 
 
-# ---------------------------------------------------------------------------
-# sponsor_website_url
-# ---------------------------------------------------------------------------
-
-
 class TestSponsorWebsiteUrl:
     def test_replaces_readme_utm_content(self):
         url = "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=readme"
@@ -1356,11 +1332,6 @@ class TestSponsorWebsiteUrl:
 
     def test_leaves_untagged_url_unchanged(self):
         assert sponsor_website_url("https://example.com") == "https://example.com"
-
-
-# ---------------------------------------------------------------------------
-# load_stars
-# ---------------------------------------------------------------------------
 
 
 class TestLoadStars:
@@ -1380,11 +1351,6 @@ class TestLoadStars:
         f.write_text("not json", encoding="utf-8")
         result = load_stars(f)
         assert result == {}
-
-
-# ---------------------------------------------------------------------------
-# sort_entries
-# ---------------------------------------------------------------------------
 
 
 class TestLoadPypiBadges:
@@ -1460,11 +1426,6 @@ class TestSortEntries:
         assert [e["name"] for e in result] == ["starred", "builtin", "unstarred"]
 
 
-# ---------------------------------------------------------------------------
-# detect_source_type
-# ---------------------------------------------------------------------------
-
-
 class TestDetectSourceType:
     def test_github_repo_returns_none(self):
         assert detect_source_type("https://github.com/psf/requests") is None
@@ -1483,11 +1444,6 @@ class TestDetectSourceType:
 
     def test_github_non_repo_returns_none(self):
         assert detect_source_type("https://github.com/org/repo/wiki") is None
-
-
-# ---------------------------------------------------------------------------
-# extract_entries
-# ---------------------------------------------------------------------------
 
 
 class TestExtractEntries:
@@ -1592,11 +1548,6 @@ class TestExtractEntries:
         ]
 
 
-# ---------------------------------------------------------------------------
-# annotate_entries_with_stats
-# ---------------------------------------------------------------------------
-
-
 class TestAnnotateEntriesWithStats:
     def test_appends_star_count_to_bullet(self):
         markdown = "- [foo](https://github.com/owner/foo) - A foo.\n"
@@ -1656,11 +1607,6 @@ class TestLoadDownloads:
 
     def test_missing_file_returns_empty(self, tmp_path):
         assert load_downloads(tmp_path / "nope.tsv") == {}
-
-
-# ---------------------------------------------------------------------------
-# load_category_intro
-# ---------------------------------------------------------------------------
 
 
 class TestLoadCategoryIntro:

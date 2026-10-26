@@ -53,8 +53,6 @@ class ParsedSponsor(TypedDict):
     description: str  # inline HTML, properly escaped
 
 
-# --- Slugify ----------------------------------------------------------------
-
 _SLUG_NON_ALNUM_RE = re.compile(r"[^a-z0-9\s-]")
 _SLUG_WHITESPACE_RE = re.compile(r"[\s]+")
 _SLUG_MULTI_DASH_RE = re.compile(r"-+")
@@ -67,9 +65,6 @@ def slugify(name: str) -> str:
     slug = _SLUG_WHITESPACE_RE.sub("-", slug.strip())
     slug = _SLUG_MULTI_DASH_RE.sub("-", slug)
     return slug
-
-
-# --- Inline renderers -------------------------------------------------------
 
 
 def _render_inline(children: list[SyntaxTreeNode], *, html: bool) -> str:
@@ -112,9 +107,6 @@ def render_inline_text(children: list[SyntaxTreeNode]) -> str:
     return _render_inline(children, html=False)
 
 
-# --- AST helpers -------------------------------------------------------------
-
-
 def _heading_text(node: SyntaxTreeNode) -> str:
     """Extract plain text from a heading node."""
     for child in node.children:
@@ -147,8 +139,6 @@ def _extract_description_children(nodes: list[SyntaxTreeNode]) -> list[SyntaxTre
                 return em.children
     return []
 
-
-# --- Entry extraction --------------------------------------------------------
 
 _DESC_SEP_RE = re.compile(r"^\s*[-\u2013\u2014]\s*")
 _SUBCAT_TRAILING_RE = re.compile(r"[\s,\-\u2013\u2014]+(also\s+see\s*)?$", re.IGNORECASE)
@@ -217,7 +207,6 @@ def _parse_list_entries(
         first_link = _find_child(inline, "link")
 
         if first_link is None or inline.children[0] is not first_link:
-            # Subcategory label: take text before the first link, strip trailing separators
             pre_link = []
             for child in inline.children:
                 if child.type == "link":
@@ -229,12 +218,10 @@ def _parse_list_entries(
                 entries.extend(_parse_list_entries(nested, subcategory=label))
             continue
 
-        # Entry with a link
         name = render_inline_text(first_link.children)
         url = _href(first_link)
         desc_html = _extract_description_html(inline, first_link)
 
-        # Collect also_see from nested bullet_list
         also_see: list[AlsoSee] = []
         nested = _find_child(list_item, "bullet_list")
         if nested:
@@ -272,9 +259,6 @@ def _parse_section_entries(content_nodes: list[SyntaxTreeNode]) -> list[ParsedEn
         if node.type == "bullet_list":
             entries.extend(_parse_list_entries(node))
     return entries
-
-
-# --- Section splitting -------------------------------------------------------
 
 
 def _build_section(name: str, body: list[SyntaxTreeNode]) -> ParsedSection:
@@ -454,7 +438,6 @@ def parse_readme(text: str) -> list[ParsedGroup]:
     root = SyntaxTreeNode(tokens)
     children = root.children
 
-    # Find Projects and section boundaries in one pass.
     projects_idx = None
     cat_end_idx = None
     for i, node in enumerate(children):

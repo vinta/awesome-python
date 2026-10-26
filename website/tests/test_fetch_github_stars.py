@@ -166,7 +166,6 @@ class TestMainSkipsFreshCache:
 
         from fetch_github_stars import main
 
-        # Set up a minimal README with one repo
         readme = tmp_path / "README.md"
         readme.write_text("* [req](https://github.com/psf/requests) - HTTP.\n")
         monkeypatch.setattr("fetch_github_stars.README_PATH", readme)
@@ -207,7 +206,6 @@ class TestMainSkipsFreshCache:
 
         from fetch_github_stars import main
 
-        # Set up a minimal README with one repo
         readme = tmp_path / "README.md"
         readme.write_text("* [req](https://github.com/psf/requests) - HTTP.\n")
         monkeypatch.setattr("fetch_github_stars.README_PATH", readme)
@@ -236,7 +234,6 @@ class TestMainSkipsFreshCache:
         monkeypatch.setattr("fetch_github_stars.DATA_DIR", data_dir)
         monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
 
-        # Mock httpx.Client to avoid real API calls
         mock_response = MagicMock()
         mock_response.json.return_value = {
             "data": {
