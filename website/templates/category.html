@@ -324,27 +324,5 @@
 </section>
 {% endif %}
 
-<section class="final-cta">
-  <div class="section-shell">
-    <p class="section-label">Contribute</p>
-    <h2>Know a project that belongs here?</h2>
-    <p>Tell us what it does and why it stands out.</p>
-    <div class="final-cta-actions">
-      <a
-        href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
-        class="hero-action hero-action-primary"
-        target="_blank"
-        rel="noopener"
-        >Submit a project</a
-      >
-      <a
-        href="https://github.com/vinta/awesome-python"
-        class="hero-action hero-action-secondary"
-        target="_blank"
-        rel="noopener"
-        >Star the repository</a
-      >
-    </div>
-  </div>
-</section>
+{% include "_final_cta.html" +%}
 {% endblock %}
