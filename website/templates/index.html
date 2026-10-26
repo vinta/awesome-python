@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% from "_projects_table.html" import projects_table %}
+{% from "_entry_rows.html" import entry_rows with context %}
 {% block extra_head %}
 <script type="application/ld+json">{{ homepage_json_ld | safe }}</script>
 {% endblock %}
@@ -71,129 +72,7 @@
 
   {% call projects_table(entries | length, "across " ~ total_categories ~ " categories") %}
         {% for entry in entries %}
-        <tr
-          class="row"
-          tabindex="0"
-          aria-expanded="false"
-          aria-controls="expand-{{ loop.index }}"
-        >
-          <td class="col-num">{{ loop.index }}</td>
-          <td class="col-name">
-            <a href="{{ entry.url }}" target="_blank" rel="noopener"
-              >{{ entry.name }}</a
-            >
-            <span class="mobile-cat"
-              >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
-              else %}{{ entry.categories[0] }}{% endif %}</span
-            >
-          </td>
-          <td class="col-downloads">
-            {% if entry.downloads is not none %}{{
-            "{:,}".format(entry.downloads) }}{% elif entry.source_type ==
-            'Stdlib' %}<span class="source-badge">Stdlib</span>{% elif
-            entry.bundled %}<span class="source-badge">Bundled</span>{% elif
-            entry.badge %}<span class="source-badge">{{ entry.badge }}</span>{%
-            else %}<span class="source-badge">Not on PyPI</span>{% endif %}
-          </td>
-          <td class="col-stars">
-            {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
-            elif entry.source_type %}<span class="source-badge"
-              >{{ entry.source_type }}</span
-            >{% else %}&mdash;{% endif %}
-          </td>
-          <td
-            class="col-commit"
-            {%
-            if
-            entry.last_commit_at
-            %}data-commit="{{ entry.last_commit_at }}"
-            {%
-            endif
-            %}
-          >
-            {% if entry.last_commit_at %}<time
-              datetime="{{ entry.last_commit_at }}"
-              >{{ entry.last_commit_at[:10] }}</time
-            >{% else %}&mdash;{% endif %}
-          </td>
-          <td class="col-cat">
-            {% for subcat in entry.subcategories %}
-            <a class="tag" href="{{ category_urls[subcat.value.split(' > ')[0]] }}#{{ subcat.slug }}">
-              {{ subcat.name }}
-            </a>
-            {% endfor %} {% for cat in entry.categories %}
-            <a
-              class="tag"
-              href="{{ category_urls[cat] }}"
-              >{{ cat }}</a
-            >
-            {% endfor %}
-            <a
-              class="tag tag-group"
-              href="{{ filter_urls[entry.groups[0]] }}"
-            >
-              {{ entry.groups[0] }}
-            </a>
-            {% if entry.source_type == 'Stdlib' %}
-            <a
-              class="tag tag-source"
-              href="/categories/built-in/"
-            >
-              Stdlib
-            </a>
-            {% endif %}
-          </td>
-          <td class="col-arrow"><span class="arrow" aria-hidden="true">&rarr;</span></td>
-        </tr>
-        {% if entry.description %}
-        <tr class="desc-row" hidden>
-          <td class="col-num"></td>
-          <td colspan="6">
-            <div class="desc-text">{{ entry.description | safe }}</div>
-          </td>
-        </tr>
-        {% endif %}
-        <tr class="expand-row" id="expand-{{ loop.index }}">
-          <td></td>
-          <td colspan="5">
-            <div class="expand-content">
-              {% if entry.also_see %}
-              <div class="expand-also-see">
-                Also see: {% for see in entry.also_see %}<a
-                  href="{{ see.url }}"
-                  target="_blank"
-                  rel="noopener"
-                  >{{ see.name }}</a
-                >{% if not loop.last %}, {% endif %}{% endfor %}
-              </div>
-              {% endif %}
-              <div class="expand-meta">
-                {% if entry.owner %}<a
-                  href="https://github.com/{{ entry.owner }}"
-                  target="_blank"
-                  rel="noopener"
-                  >{{ entry.owner }}</a
-                ><span class="expand-sep">/</span>{% endif %}<a
-                  href="{{ entry.url }}"
-                  target="_blank"
-                  rel="noopener"
-                  >{{ entry.url | replace("https://", "") }}</a
-                >
-                {% if entry.stars is not none %}<span
-                  class="expand-stars"
-                  ><span class="expand-sep">/</span>{{
-                  "{:,}".format(entry.stars) }} stars</span
-                >{% endif %} {% if entry.last_commit_at %}<span class="expand-commit"
-                  ><span class="expand-sep">/</span
-                  ><time datetime="{{ entry.last_commit_at }}"
-                    >{{ entry.last_commit_at[:10] }}</time
-                  ></span
-                >{% endif %}
-              </div>
-            </div>
-          </td>
-          <td></td>
-        </tr>
+        {{ entry_rows(entry, loop.index, home=true) }}
         {% endfor %}
   {% endcall %}
 </section>
