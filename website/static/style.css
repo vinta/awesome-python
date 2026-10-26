@@ -1906,7 +1906,9 @@ th[data-sort].sort-asc::after {
 
   .col-num,
   .col-cat,
-  .group-count {
+  .group-count,
+  /* Leaves the arrow column as narrow as the row arrows */
+  .back-to-top-label {
     display: none;
   }
 
