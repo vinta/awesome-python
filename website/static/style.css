@@ -508,8 +508,7 @@ kbd {
   z-index: 1;
   width: min(100%, calc(var(--shell-max) + (var(--shell-pad) * 2)));
   margin: 0 auto;
-  /* The bottom is a little smaller because the jump links' text sits inside its line box */
-  padding: 1.25rem var(--shell-pad) 1.1rem;
+  padding: 1.25rem var(--shell-pad) 1.75rem;
   display: grid;
   gap: clamp(2rem, 5vw, 3rem);
 }
