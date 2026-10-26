@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% from "_projects_table.html" import projects_table %}
+{% from "_entry_rows.html" import entry_rows with context %}
 {% block extra_head %}
 <script type="application/ld+json">{{ homepage_json_ld | safe }}</script>
 {% endblock %}
@@ -7,19 +9,7 @@
   <div class="hero-noise" aria-hidden="true"></div>
 
   <div class="hero-shell">
-    <nav class="hero-topbar" aria-label="Site">
-      <span class="hero-brand-mini">Awesome Python</span>
-      <div class="hero-topbar-actions">
-        <a
-          href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
-          class="hero-topbar-link hero-topbar-link-strong"
-          target="_blank"
-          rel="noopener"
-          >Submit a project</a
-        >
-        <a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>
-      </div>
-    </nav>
+    {%+ with home = true %}{% include "_topbar.html" %}{% endwith +%}
 
     <div class="hero-grid">
       <div class="hero-copy">
@@ -50,28 +40,7 @@
       </div>
     </div>
 
-    <nav class="hero-category-nav" aria-labelledby="hero-category-heading">
-      <details class="hero-category-details" open>
-        <summary class="hero-category-meta">
-          <h2 id="hero-category-heading">Browse by category</h2>
-        </summary>
-        <ul class="hero-category-links">
-          {% for category in categories %}
-          <li>
-            <a class="hero-category-link" href="{{ category_urls[category.name] }}"
-              >{{ category.name }}</a
-            >
-          </li>
-          {% endfor %}
-        </ul>
-      </details>
-      <script>
-        // Collapse before first paint on phones, where the open list pushes the table about 1.5 screens down
-        if (matchMedia("(max-width: 680px)").matches) {
-          document.currentScript.previousElementSibling.open = false;
-        }
-      </script>
-    </nav>
+    {%+ with nav_categories = categories %}{% include "_category_nav.html" %}{% endwith +%}
   </div>
 </header>
 {% endblock %}
@@ -89,225 +58,12 @@
     </p>
   </div>
 
-  <div class="controls section-shell">
-    <h2 class="sr-only">Search and filter</h2>
-    <div class="search-wrap">
-      <svg
-        class="search-icon"
-        aria-hidden="true"
-        width="16"
-        height="16"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <circle cx="11" cy="11" r="8" />
-        <line x1="21" y1="21" x2="16.65" y2="16.65" />
-      </svg>
-      <input
-        type="search"
-        class="search"
-        placeholder="Search {{ entries | length }} projects across {{ total_categories }} categories…"
-        data-short-placeholder="Search {{ entries | length }} projects…"
-        aria-label="Search projects"
-      />
-    </div>
-  </div>
-
-  <h2 class="sr-only">Results</h2>
-  <div
-    class="table-wrap"
-    tabindex="0"
-    role="region"
-    aria-label="Projects table"
-  >
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="col-num"><span class="sr-only">Row number</span></th>
-          <th class="col-name" data-sort="name">
-            <button type="button" class="sort-btn">Project Name</button>
-          </th>
-          <th class="col-downloads" data-sort="downloads">
-            <button type="button" class="sort-btn" title="PyPI downloads, last 30 days">PyPI Downloads</button>
-          </th>
-          <th class="col-stars" data-sort="stars">
-            <button type="button" class="sort-btn">GitHub Stars</button>
-          </th>
-          <th class="col-commit" data-sort="commit-time">
-            <button type="button" class="sort-btn">Last Commit</button>
-          </th>
-          <th class="col-cat">Tags</th>
-          <th class="col-arrow">
-            <button class="back-to-top" aria-label="Back to top">
-              Top &uarr;
-            </button>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
+  {% call projects_table(entries | length, "across " ~ total_categories ~ " categories") %}
         {% for entry in entries %}
-        <tr
-          class="row"
-          tabindex="0"
-          aria-expanded="false"
-          aria-controls="expand-{{ loop.index }}"
-        >
-          <td class="col-num">{{ loop.index }}</td>
-          <td class="col-name">
-            <a href="{{ entry.url }}" target="_blank" rel="noopener"
-              >{{ entry.name }}</a
-            >
-            <span class="mobile-cat"
-              >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
-              else %}{{ entry.categories[0] }}{% endif %}</span
-            >
-          </td>
-          <td class="col-downloads">
-            {% if entry.downloads is not none %}{{
-            "{:,}".format(entry.downloads) }}{% elif entry.source_type ==
-            'Stdlib' %}<span class="source-badge">Stdlib</span>{% elif
-            entry.bundled %}<span class="source-badge">Bundled</span>{% elif
-            entry.badge %}<span class="source-badge">{{ entry.badge }}</span>{%
-            else %}<span class="source-badge">Not on PyPI</span>{% endif %}
-          </td>
-          <td class="col-stars">
-            {% if entry.stars is not none %}{{ "{:,}".format(entry.stars) }}{%
-            elif entry.source_type %}<span class="source-badge"
-              >{{ entry.source_type }}</span
-            >{% else %}&mdash;{% endif %}
-          </td>
-          <td
-            class="col-commit"
-            {%
-            if
-            entry.last_commit_at
-            %}data-commit="{{ entry.last_commit_at }}"
-            {%
-            endif
-            %}
-          >
-            {% if entry.last_commit_at %}<time
-              datetime="{{ entry.last_commit_at }}"
-              >{{ entry.last_commit_at[:10] }}</time
-            >{% else %}&mdash;{% endif %}
-          </td>
-          <td class="col-cat">
-            {% for subcat in entry.subcategories %}
-            <a class="tag" href="{{ category_urls[subcat.value.split(' > ')[0]] }}#{{ subcat.slug }}">
-              {{ subcat.name }}
-            </a>
-            {% endfor %} {% for cat in entry.categories %}
-            <a
-              class="tag"
-              href="{{ category_urls[cat] }}"
-              >{{ cat }}</a
-            >
-            {% endfor %}
-            <a
-              class="tag tag-group"
-              href="{{ filter_urls[entry.groups[0]] }}"
-            >
-              {{ entry.groups[0] }}
-            </a>
-            {% if entry.source_type == 'Stdlib' %}
-            <a
-              class="tag tag-source"
-              href="/categories/built-in/"
-            >
-              Stdlib
-            </a>
-            {% endif %}
-          </td>
-          <td class="col-arrow"><span class="arrow" aria-hidden="true">&rarr;</span></td>
-        </tr>
-        {% if entry.description %}
-        <tr class="desc-row" hidden>
-          <td class="col-num"></td>
-          <td colspan="6">
-            <div class="desc-text">{{ entry.description | safe }}</div>
-          </td>
-        </tr>
-        {% endif %}
-        <tr class="expand-row" id="expand-{{ loop.index }}">
-          <td></td>
-          <td colspan="5">
-            <div class="expand-content">
-              {% if entry.also_see %}
-              <div class="expand-also-see">
-                Also see: {% for see in entry.also_see %}<a
-                  href="{{ see.url }}"
-                  target="_blank"
-                  rel="noopener"
-                  >{{ see.name }}</a
-                >{% if not loop.last %}, {% endif %}{% endfor %}
-              </div>
-              {% endif %}
-              <div class="expand-meta">
-                {% if entry.owner %}<a
-                  href="https://github.com/{{ entry.owner }}"
-                  target="_blank"
-                  rel="noopener"
-                  >{{ entry.owner }}</a
-                ><span class="expand-sep">/</span>{% endif %}<a
-                  href="{{ entry.url }}"
-                  target="_blank"
-                  rel="noopener"
-                  >{{ entry.url | replace("https://", "") }}</a
-                >
-                {% if entry.stars is not none %}<span
-                  class="expand-stars"
-                  ><span class="expand-sep">/</span>{{
-                  "{:,}".format(entry.stars) }} stars</span
-                >{% endif %} {% if entry.last_commit_at %}<span class="expand-commit"
-                  ><span class="expand-sep">/</span
-                  ><time datetime="{{ entry.last_commit_at }}"
-                    >{{ entry.last_commit_at[:10] }}</time
-                  ></span
-                >{% endif %}
-              </div>
-            </div>
-          </td>
-          <td></td>
-        </tr>
+        {{ entry_rows(entry, loop.index, home=true) }}
         {% endfor %}
-      </tbody>
-    </table>
-  </div>
-
-  <div class="no-results" hidden>
-    <p>No projects match your search.</p>
-    <p class="no-results-hint">
-      Try a broader term, or
-      <button class="no-results-clear">browse all projects</button>.
-    </p>
-  </div>
+  {% endcall %}
 </section>
 
-<section class="final-cta">
-  <div class="section-shell">
-    <p class="section-label">Contribute</p>
-    <h2>Know a project that belongs here?</h2>
-    <p>Tell us what it does and why it stands out.</p>
-    <div class="final-cta-actions">
-      <a
-        href="https://github.com/vinta/awesome-python/blob/master/CONTRIBUTING.md"
-        class="hero-action hero-action-primary"
-        target="_blank"
-        rel="noopener"
-        >Submit a project</a
-      >
-      <a
-        href="https://github.com/vinta/awesome-python"
-        class="hero-action hero-action-secondary"
-        target="_blank"
-        rel="noopener"
-        >Star the repository</a
-      >
-    </div>
-  </div>
-</section>
+{% include "_final_cta.html" +%}
 {% endblock %}

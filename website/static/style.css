@@ -1905,7 +1905,10 @@ th[data-sort].sort-asc::after {
   }
 
   .col-num,
-  .col-cat {
+  .col-cat,
+  .group-count,
+  /* Leaves the arrow column as narrow as the row arrows */
+  .back-to-top-label {
     display: none;
   }
 
@@ -1947,6 +1950,7 @@ th[data-sort].sort-asc::after {
 
   .col-arrow {
     width: 1.8rem;
+    text-align: right;
   }
 }
 
