@@ -349,7 +349,6 @@ kbd {
   letter-spacing: 0.02em;
 }
 
-/* Keeps each stat whole when the line wraps */
 .proof-stat {
   white-space: nowrap;
 }
