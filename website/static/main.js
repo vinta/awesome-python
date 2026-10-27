@@ -361,11 +361,6 @@ document.addEventListener("click", function (e) {
   gtag("event", "sponsor_contact", { tier: link.dataset.tier });
 });
 
-if (location.hash) {
-  const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-  if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
-}
-
 if (searchInput) {
   let searchTimer;
   searchInput.addEventListener("input", function () {
@@ -451,4 +446,9 @@ if (backToTop) {
     sortRows();
   }
   updateSortIndicators();
+  // Filtering collapses rows, so open a linked entry after restoring URL state.
+  if (location.hash) {
+    const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
+  }
 })();
