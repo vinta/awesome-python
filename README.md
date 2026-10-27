@@ -377,7 +377,7 @@ _Enterprise resource planning frameworks._
 
 ### Static Site Generators
 
-_Static site generator is a software that takes some text + templates as input and produces HTML files on the output._
+_A static site generator is software that takes text and templates as input and produces HTML files as output._/Suor/funcy) - Fancy and practical functional tools.
 
 - [pelican](https://github.com/getpelican/pelican) - Static site generator that supports Markdown and reST syntax.
 - [nikola](https://github.com/getnikola/nikola) - A static website and blog generator.
@@ -821,7 +821,7 @@ _Libraries for generating and working with logs._
 
 - [logging](https://docs.python.org/3/library/logging.html) - (Python standard library) Logging facility for Python.
 - [structlog](https://github.com/hynek/structlog) - Structured logging made easy.
-- [loguru](https://github.com/Delgan/loguru) - Library which aims to bring enjoyable logging in Python.
+- [loguru](https://github.com/Delgan/loguru) - A library which aims to bring enjoyable logging in Python.
 - [logfire](https://github.com/pydantic/logfire) - The observability platform for Python, from the makers of Pydantic.
 
 ### Network Virtualization
@@ -1057,7 +1057,7 @@ _Functional Programming with Python._
 - [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [more-itertools](https://github.com/more-itertools/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 - [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz) for Cython-accelerated performance.
-- [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
+- [funcy](https://github.com/Suor/funcy) - Fancy and practical functional tools.
 - [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 
 ### Asynchronous Programming
