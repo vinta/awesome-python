@@ -332,6 +332,14 @@ function openEntryRow(row) {
   setRowOpen(row, true);
 }
 
+function openHashedRow() {
+  const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
+}
+
+// Editing the hash or going back/forward on the same page does not reload it
+window.addEventListener("hashchange", openHashedRow);
+
 // Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
 document.addEventListener("click", function (e) {
   const link = e.target.closest('a[href*="#"]');
@@ -447,8 +455,5 @@ if (backToTop) {
   }
   updateSortIndicators();
   // Filtering collapses rows, so open a linked entry after restoring URL state.
-  if (location.hash) {
-    const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
-    if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
-  }
+  if (location.hash) openHashedRow();
 })();
