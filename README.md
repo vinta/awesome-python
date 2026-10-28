@@ -377,7 +377,7 @@ _Enterprise resource planning frameworks._
 
 ### Static Site Generators
 
-_Static site generator is a software that takes some text + templates as input and produces HTML files on the output._
+_A static site generator is software that takes text and templates as input and produces HTML files as output._
 
 - [pelican](https://github.com/getpelican/pelican) - Static site generator that supports Markdown and reST syntax.
 - [nikola](https://github.com/getnikola/nikola) - A static website and blog generator.
@@ -1057,7 +1057,7 @@ _Functional Programming with Python._
 - [functools](https://docs.python.org/3/library/functools.html) - (Python standard library) Higher-order functions and operations on callable objects.
 - [more-itertools](https://github.com/more-itertools/more-itertools) - More routines for operating on iterables, beyond `itertools`.
 - [toolz](https://github.com/pytoolz/toolz) - A collection of functional utilities for iterators, functions, and dictionaries. Also available as [cytoolz](https://github.com/pytoolz/cytoolz) for Cython-accelerated performance.
-- [funcy](https://github.com/Suor/funcy) - A fancy and practical functional tools.
+- [funcy](https://github.com/Suor/funcy) - Fancy and practical functional tools.
 - [returns](https://github.com/dry-python/returns) - A set of type-safe monads, transformers, and composition utilities.
 
 ### Asynchronous Programming
@@ -1133,7 +1133,7 @@ _Libraries to create packaged executables for release distribution._
   - [pex](https://github.com/pex-tool/pex) - A tool for building self-contained Python executable environments (PEP 441 zipapps).
   - [cx-Freeze](https://github.com/marcelotduarte/cx_Freeze) - Converts Python scripts into standalone executables and installers for Windows, macOS, and Linux.
 - Obfuscation
-  - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate Python scripts, bind obfuscated scripts to fixed machine or expire obfuscated scripts.
+  - [pyarmor](https://github.com/dashingsoft/pyarmor) - A tool used to obfuscate Python scripts, bind obfuscated scripts to a fixed machine or expire obfuscated scripts.
 
 ### Configuration Files
 
