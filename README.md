@@ -917,6 +917,7 @@ _Libraries for parsing and manipulating plain texts._
   - [pygments](https://github.com/pygments/pygments) - A generic syntax highlighter.
   - [pyparsing](https://github.com/pyparsing/pyparsing) - A Python library for creating PEG parsers.
   - [sqlparse](https://github.com/andialbrecht/sqlparse) - A non-validating SQL parser.
+  - [sqlglot](https://github.com/tobymao/sqlglot) - A no-dependency SQL parser, transpiler, optimizer, and engine.
   - [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) - Parsing, formatting, storing and validating international phone numbers.
   - [parsy](https://github.com/python-parsy/parsy) - Easy, generic parser combinator library for creating parsers.
 - Transliteration and Slugs
