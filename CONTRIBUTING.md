@@ -57,6 +57,10 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 
 Aim for a rendered line of 100 characters or fewer: the name, ` - `, and the description, not counting the URL. Lines that long fit on one line in the GitHub README, which starts wrapping them around 105. This is a soft cap. When a draft lands near 105, cut filler words to get under it; when the content needs more room, let the line wrap rather than drop meaning.
 
+### Description Style
+
+Write descriptions in sentence case with correct grammar. Proper nouns keep their capitals, and compound modifiers before a noun take hyphens: "A cross-platform Bluetooth Low Energy client", not "A cross platform Bluetooth Low Energy Client". A project's own tagline is no exception: when it breaks these rules, fix it instead of copying it.
+
 ### Standard Library Module
 
 ```markdown
