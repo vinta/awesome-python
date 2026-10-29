@@ -217,7 +217,7 @@ _Libraries for machine learning. Also see [awesome-machine-learning](https://git
   - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high-performance gradient boosting framework.
   - [catboost](https://github.com/catboost/catboost) - A fast, scalable, high-performance gradient boosting on decision trees library.
 - Time Series Forecasting
-  - [prophet](https://github.com/facebook/prophet) - A tool for producing forecasts for time series with multiple seasonality and trend changes.
+  - [prophet](https://github.com/meta/prophet) - A tool for producing forecasts for time series with multiple seasonality and trend changes.
   - [statsforecast](https://github.com/Nixtla/statsforecast) - Fast statistical forecasting models such as ARIMA, ETS, and Theta, compiled with numba.
   - [sktime](https://github.com/sktime/sktime) - A unified scikit-learn-style framework for forecasting and other time-series learning tasks.
   - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting, with non-commercial default weights.
@@ -668,7 +668,7 @@ _Tools for static analysis, linters and code quality checkers. Also see [awesome
   - [mypy](https://github.com/python/mypy) - A static type checker for Python.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [pyright](https://github.com/microsoft/pyright) - Full-featured static type checker for Python from Microsoft, the engine behind Pylance.
-  - [pyrefly](https://github.com/facebook/pyrefly) - A fast type checker and language server for Python.
+  - [pyrefly](https://github.com/meta/pyrefly) - A fast type checker and language server for Python.
 
 ### Testing
 
