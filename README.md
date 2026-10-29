@@ -540,6 +540,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
   - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, with data provided for academic research only.
   - [edgartools](https://github.com/dgunning/edgartools) - Downloads SEC EDGAR filings and XBRL financial statements as structured data.
   - [openbb](https://github.com/openbq-org/OpenBB) - A financial data platform for analysts, quants and AI agents.
+  - [polars-anta](https://github.com/huuan26/polars-anta) - Technical analysis, alpha factors, and backtesting powered natively by Polars.
 
 ### Data Validation
 
