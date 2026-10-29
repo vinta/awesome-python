@@ -1,21 +1,21 @@
-# secrets
+# Secrets
 .env*
 
 # macOS
 .DS_Store
 
-# python
+# Python
 .venv/
 __pycache__/
 *.py[co]
 
-# website
+# Website
 website/output/
 website/data/*
 !website/data/pypi_name_overrides.json
 !website/data/redirects.json
 !website/data/category_intros/
 
-# agents
+# Agents
 .playwright-cli/
 local/
