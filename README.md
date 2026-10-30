@@ -535,6 +535,7 @@ _Libraries for data extraction, transformation, and loading pipelines across mul
 - General
   - [awswrangler](https://github.com/aws/aws-sdk-pandas) - Pandas integration with AWS services like Athena, Glue, Redshift, S3, and DynamoDB.
   - [dlt](https://github.com/dlt-hub/dlt) - A Python library for building data pipelines with automatic schema inference, incremental loading, and support for multiple sources and destinations.
+  - [quarantine-py](https://github.com/halcyon-past/quarantine) - Isolates failing loop items to disk and replays them without restarting.
 - Financial Data
   - [yfinance](https://github.com/ranaroussi/yfinance) - Easy Pythonic way to download market and financial data from Yahoo Finance.
   - [akshare](https://github.com/akfamily/akshare) - A financial data interface library, with data provided for academic research only.
