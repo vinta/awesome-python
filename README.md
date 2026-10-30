@@ -872,6 +872,8 @@ _Useful CLI-based tools._
   - [copier](https://github.com/copier-org/copier) - A library and command-line utility for rendering project templates.
 - Shells
   - [xonsh](https://github.com/xonsh/xonsh) - A Python-powered shell. Full-featured and cross-platform.
+- System & Monitoring
+  - [NetSpecter](https://github.com/MrHackerCharlie/netspecter) - Real-time system exposure and process monitor for network protection.
 - Terminal Workflow
   - [tmuxp](https://github.com/tmux-python/tmuxp) - A [tmux](https://github.com/tmux/tmux) session manager.
 
