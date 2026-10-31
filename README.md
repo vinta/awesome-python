@@ -1209,6 +1209,7 @@ _Useful libraries or tools that don't fit in the categories above._
 
 - [blinker](https://github.com/pallets-eco/blinker) - A fast Python in-process signal/event dispatching system.
 - [boltons](https://github.com/mahmoud/boltons) - A set of pure-Python utilities.
+- [SkyPackages](https://github.com/skytech-alt/SkyPackages) - 100+ cross-ecosystem utilities (Python, JS, or SkyForge) featuring Russian data validation (INN, SNILS, MIR cards), cryptography, and JSON handling.
 
 ## Resources
 
