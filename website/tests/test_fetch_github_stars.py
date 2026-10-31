@@ -254,7 +254,7 @@ class TestMainSkipsFreshCache:
         mock_client.__enter__ = MagicMock(return_value=mock_client)
         mock_client.__exit__ = MagicMock(return_value=False)
         mock_client.post.return_value = mock_response
-        monkeypatch.setattr("fetch_github_stars.httpx.Client", lambda **kwargs: mock_client)
+        monkeypatch.setattr("fetch_github_stars.httpx2.Client", lambda **kwargs: mock_client)
 
         main()
 

@@ -22,7 +22,7 @@ import sys
 import time
 from pathlib import Path
 
-import httpx
+import httpx2
 
 from fetch_pypi_downloads_via_clickpy import resolve
 
@@ -60,7 +60,7 @@ def main() -> None:
             print(f"{arg}: not pip-installable per pypi_name_overrides.json, skipping", file=sys.stderr)
         else:
             names.append(pkg)
-    with httpx.Client(headers={"X-API-Key": load_api_key()}, timeout=30) as client:
+    with httpx2.Client(headers={"X-API-Key": load_api_key()}, timeout=30) as client:
         for i, name in enumerate(names):
             if i:
                 time.sleep(SECONDS_BETWEEN_REQUESTS)

@@ -36,7 +36,7 @@ import re
 from datetime import UTC, datetime
 from pathlib import Path
 
-import httpx
+import httpx2
 
 from readme_parser import parse_readme
 
@@ -86,7 +86,7 @@ def collect_names(readme_text: str) -> list[str]:
 def fetch_clickpy(names: list[str]) -> dict[str, int]:
     in_list = ", ".join(f"'{name}'" for name in names)
     query = f"SELECT project, sum(count) AS downloads FROM pypi.pypi_downloads_per_day WHERE project IN ({in_list}) AND date >= today() - 30 GROUP BY project FORMAT JSON"
-    resp = httpx.post(CLICKPY_URL, content=query, timeout=60)
+    resp = httpx2.post(CLICKPY_URL, content=query, timeout=60)
     resp.raise_for_status()
     return {row["project"]: int(row["downloads"]) for row in resp.json()["data"]}
 

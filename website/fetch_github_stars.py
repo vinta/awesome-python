@@ -15,7 +15,7 @@ from datetime import UTC, datetime, timedelta
 from itertools import batched
 from pathlib import Path
 
-import httpx
+import httpx2
 
 from build import extract_github_repo, load_stars
 
@@ -84,7 +84,7 @@ def parse_graphql_response(
     return result
 
 
-def fetch_batch(repos: Sequence[str], client: httpx.Client) -> dict[str, dict]:
+def fetch_batch(repos: Sequence[str], client: httpx2.Client) -> dict[str, dict]:
     """Fetch star data for a batch of repos via GitHub GraphQL API."""
     query = build_graphql_query(repos)
     if not query:
@@ -142,9 +142,9 @@ def main() -> None:
     now_iso = now.isoformat()
     total_batches = (len(to_fetch) + BATCH_SIZE - 1) // BATCH_SIZE
 
-    with httpx.Client(
+    with httpx2.Client(
         headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
-        transport=httpx.HTTPTransport(retries=2, proxy=os.environ.get("HTTPS_PROXY") or None),
+        transport=httpx2.HTTPTransport(retries=2, proxy=os.environ.get("HTTPS_PROXY") or None),
         timeout=30,
     ) as client:
         for batch_num, batch in enumerate(batched(to_fetch, BATCH_SIZE), 1):
@@ -152,7 +152,7 @@ def main() -> None:
 
             try:
                 results = fetch_batch(batch, client)
-            except httpx.HTTPStatusError as e:
+            except httpx2.HTTPStatusError as e:
                 print(f"HTTP error {e.response.status_code}", file=sys.stderr)
                 if e.response.status_code == 401:
                     print("Error: Invalid GITHUB_TOKEN.", file=sys.stderr)
