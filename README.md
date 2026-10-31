@@ -188,6 +188,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
   - [openai-whisper](https://github.com/openai/whisper) - A general-purpose automatic speech recognition model trained on 680k hours of multilingual and multitask supervised data.
   - [gTTS](https://github.com/pndurette/gTTS) - Python library and CLI tool for converting text to speech using Google Translate TTS.
   - [funasr](https://github.com/modelscope/FunASR) - Industrial-grade speech recognition toolkit with speaker diarization and emotion detection.
+  - [whisper-ctranslate2](https://github.com/Softcatala/whisper-ctranslate2) - OpenAI Whisper-compatible CLI using faster-whisper.
 
 ### Deep Learning
 
