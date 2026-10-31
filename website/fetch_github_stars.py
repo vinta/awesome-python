@@ -144,7 +144,7 @@ def main() -> None:
 
     with httpx.Client(
         headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
-        transport=httpx.HTTPTransport(retries=2),
+        transport=httpx.HTTPTransport(retries=2, proxy=os.environ.get("HTTPS_PROXY") or None),
         timeout=30,
     ) as client:
         for batch_num, batch in enumerate(batched(to_fetch, BATCH_SIZE), 1):
