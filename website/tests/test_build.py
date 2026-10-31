@@ -250,7 +250,7 @@ class TestBuild:
         self._make_repo(tmp_path, readme)
 
         def commit(day, message):
-            env = {**os.environ, "GIT_AUTHOR_DATE": f"{day}T12:00:00Z", "GIT_COMMITTER_DATE": f"{day}T12:00:00Z"}
+            env = {**os.environ, "GIT_CONFIG_GLOBAL": "/dev/null", "GIT_AUTHOR_DATE": f"{day}T12:00:00Z", "GIT_COMMITTER_DATE": f"{day}T12:00:00Z"}
             subprocess.run(["git", "add", "-A"], cwd=tmp_path, check=True)
             subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", message], cwd=tmp_path, env=env, check=True)
 
