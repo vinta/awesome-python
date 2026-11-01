@@ -5,7 +5,7 @@ install:
 	uv sync --locked
 
 fetch_github_stars:
-	GITHUB_TOKEN="$${GITHUB_TOKEN:-$$(gh auth token)}" uv run python website/fetch_github_stars.py
+	uv run python website/fetch_github_stars.py
 
 fetch_pypi_downloads:
 	uv run python website/fetch_pypi_downloads_via_clickpy.py
