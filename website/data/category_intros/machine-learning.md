@@ -27,7 +27,7 @@ LightGBM is designed for [faster training, lower memory use, and large-scale dat
 
 CatBoost aims for [great results with default parameters](https://catboost.ai/), and it takes non-numeric features without you turning them into numbers. Name the category columns in `cat_features`, and [don't one-hot encode them](https://catboost.ai/docs/en/features/categorical-features), which hurts both training speed and quality.
 
-Prophet fits an additive model of the trend, yearly, weekly, and daily seasonality, and holiday effects. It [works best with series that have strong seasonal effects](https://facebook.github.io/prophet/) and several seasons of history. It [follows the scikit-learn model API](https://facebook.github.io/prophet/docs/quick_start.html): pass `fit` a DataFrame with `ds` and `y` columns, then call `predict`.
+Prophet fits an additive model of the trend, yearly, weekly, and daily seasonality, and holiday effects. It [works best with series that have strong seasonal effects](https://meta.github.io/prophet/) and several seasons of history. It [follows the scikit-learn model API](https://meta.github.io/prophet/docs/quick_start.html): pass `fit` a DataFrame with `ds` and `y` columns, then call `predict`.
 
 StatsForecast offers [widely used univariate models](https://github.com/Nixtla/statsforecast), like automatic ARIMA, ETS, and Theta, optimized for speed, plus benchmark models for baselines. Data goes in as a long-format DataFrame with `unique_id`, `ds`, and `y` columns, and for many series the docs [recommend the `forecast` method](https://nixtlaverse.nixtla.io/statsforecast/docs/getting-started/getting_started_short.html).
 

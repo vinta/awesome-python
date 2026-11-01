@@ -16,7 +16,7 @@ How to choose:
 
 FastAPI is [based on standard Python type hints](https://fastapi.tiangolo.com/). Declare path, query, and body parameters as typed function arguments, and it validates them and serves interactive docs at `/docs`. As the app grows, split it into modules with [`APIRouter`, a "mini FastAPI"](https://fastapi.tiangolo.com/tutorial/bigger-applications/).
 
-Django Ninja was [heavily inspired by FastAPI](https://django-ninja.dev/) and integrates with Django's core and ORM. You declare parameter and body types once, as function arguments, and the interactive docs show up at `/api/docs`. For a bigger project, [create an `api.py` with a `Router` in each Django app](https://django-ninja.dev/guides/routers/).
+Django Ninja was [heavily inspired by FastAPI](https://django-ninja.dev/) and integrates with Django's core and ORM. You declare parameter and body types once, as function arguments, and the interactive docs show up at `/api/docs`. For a bigger project, [create an `api.py` with a `Router` in each Django app](https://django-ninja.dev/guide/routers/).
 
 Django REST framework [splits an API into](https://www.django-rest-framework.org/) serializers for the representation, viewsets for the behavior, and routers for the URLs. [Viewsets get you running quickly](https://www.django-rest-framework.org/api-guide/viewsets/) and keep URLs consistent across a large API, while plain views are more explicit. For OpenAPI schemas, its docs [recommend drf-spectacular](https://www.django-rest-framework.org/topics/documenting-your-api/).
 
