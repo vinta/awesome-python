@@ -46,7 +46,7 @@ Email [sponsorship@awesome-python.com](mailto:sponsorship@awesome-python.com?sub
 - **Tier:** Headline, Featured, or Indie Dev Sponsor
 - **Content:** a `[Name](URL) - Description.` entry, plus a logo for Headline and Featured
 - **Duration:** 1, 3, 6, or 12 months (a year gets 3 months free)
-- **Payment method:** card via [Open Collective](https://opencollective.com/awesome-python), US bank transfer (ACH/wire), or PayPal
+- **Payment method:** PayPal, US bank transfer (ACH/wire), or card via [Open Collective](https://opencollective.com/awesome-python)
 
 One upfront payment per term. Setup takes less than 24 hours.
 
