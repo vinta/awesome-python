@@ -6,7 +6,6 @@ How to choose:
 - Nested commands, or subcommands loaded lazily: Click
 - Options declared once as type-hinted function parameters: Typer
 - Interactive prompts and REPLs: prompt_toolkit
-- CLI from existing code without writing a parser: Python Fire
 - Progress bar for a loop: tqdm, or alive-progress for animated bars
 - Colored text, tables, and logs: Rich, or colorama for ANSI colors on Windows
 - Full-screen app in the terminal or a browser: Textual
@@ -20,8 +19,6 @@ Click builds a CLI from [commands declared with decorators](https://click.pallet
 Typer builds a CLI from your function signatures: you [declare each argument and option once](https://typer.tiangolo.com/), as a type-hinted function parameter. Write those hints with `Annotated`, which its tutorial [recommends wherever possible](https://typer.tiangolo.com/tutorial/arguments/optional/). Its docs say you get [the best results by pairing it with Rich](https://typer.tiangolo.com/tutorial/printing/): Typer structures the commands and options, and Rich displays the output.
 
 prompt_toolkit is for interactive input. It can [replace GNU readline](https://python-prompt-toolkit.readthedocs.io/en/stable/) or build full-screen apps. For a REPL, use a [`PromptSession`](https://python-prompt-toolkit.readthedocs.io/en/stable/pages/asking_for_input.html), which keeps the history for the whole session.
-
-Python Fire turns any Python object into a CLI: [call `fire.Fire()`](https://github.com/google/python-fire/blob/master/docs/guide.md) at the end of your program. Its README pitches it for [developing and debugging your code](https://github.com/google/python-fire), exploring existing code, and turning other people's code into a CLI. It takes each argument's type from the value you pass, not from the function signature.
 
 tqdm adds a progress bar to any loop: [wrap the iterable in `tqdm()`](https://github.com/tqdm/tqdm). Import it from `tqdm.auto`, which picks the console bar or the Jupyter widget for you. alive-progress wraps the loop in an [`alive_bar` context manager](https://github.com/rsalmei/alive-progress) instead, with a spinner that speeds up and slows down with your throughput.
 
