@@ -740,12 +740,15 @@ _Task runners and software build tools. If you're looking for Python packaging/b
 
 _Libraries for generating project documentation._
 
-- [sphinx](https://github.com/sphinx-doc/sphinx) - Python documentation generator.
-  - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
-- [mkdocs-material](https://github.com/squidfunk/mkdocs-material) - A documentation framework and Material Design theme built on MkDocs.
-- [diagrams](https://github.com/mingrammer/diagrams) - Diagram as Code.
-- [pdoc](https://github.com/mitmproxy/pdoc) - Auto-generates API documentation for Python projects.
-- [zensical](https://github.com/zensical/zensical) - A modern static site generator for technical documentation.
+- Site Generators
+  - [sphinx](https://github.com/sphinx-doc/sphinx) - A Python documentation generator.
+    - [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc)
+  - [mkdocs-material](https://github.com/squidfunk/mkdocs-material) - A documentation framework and Material Design theme built on MkDocs.
+  - [zensical](https://github.com/zensical/zensical) - A static site generator for documentation, from the Material for MkDocs team.
+- API Reference
+  - [pdoc](https://github.com/mitmproxy/pdoc) - Auto-generates API documentation for Python projects.
+- Diagrams
+  - [diagrams](https://github.com/mingrammer/diagrams) - Diagrams as code for prototyping cloud system architectures.
 
 **DevOps**
 
