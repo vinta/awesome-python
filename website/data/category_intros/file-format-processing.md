@@ -4,7 +4,6 @@ How to choose:
 
 - Merging, splitting, cropping, or encrypting PDFs: pypdf
 - ELF binaries and DWARF debug info: pyelftools
-- A table you import or export as CSV, JSON, YAML, or Excel: Tablib
 - Documents turned into Markdown for an LLM: MarkItDown, or Docling for complex layouts and scans
 - Documents converted between Markdown, Word, LaTeX, and HTML: pypandoc
 - Excel: openpyxl to edit a workbook, XlsxWriter to create one with charts and formatting
@@ -15,12 +14,11 @@ How to choose:
 - PDFs from HTML and CSS: WeasyPrint
 - Markdown to HTML: markdown-it-py for CommonMark, Python-Markdown for its extensions, Mistune for speed
 - Config files: tomllib for TOML, PyYAML for YAML
+- A table you import or export as CSV, JSON, YAML, or Excel: Tablib
 
 pypdf is a [pure-Python PDF library](https://pypdf.readthedocs.io/en/stable/) for splitting, merging, cropping, and transforming pages, and it adds passwords too. To merge files, [`append()` each one to a `PdfWriter`](https://pypdf.readthedocs.io/en/stable/user/merging-pdfs.html) and write it out. With [no C dependency](https://pypdf.readthedocs.io/en/stable/meta/comparisons.html), it's easy to install, but it doesn't generate new PDFs. It reads text with `page.extract_text()`, while a scanned page needs [OCR software](https://pypdf.readthedocs.io/en/stable/user/extract-text.html).
 
 pyelftools [parses ELF files and DWARF debug info](https://github.com/eliben/pyelftools) in pure Python. Pass an open file to [`ELFFile`](https://github.com/eliben/pyelftools/blob/main/doc/user-guide.md), its main entry point, and stay on the high-level API: its guide says to use the low-level structs at your own peril.
-
-Tablib is a [format-agnostic tabular dataset library](https://tablib.readthedocs.io/en/stable/). `Dataset().load(fh)` [detects the format of the file](https://tablib.readthedocs.io/en/stable/tutorial.html) you load, and `export()` writes the same data as CSV, JSON, or another format.
 
 MarkItDown converts PDF, Word, Excel, PowerPoint, HTML, and more into Markdown [for LLMs and text analysis](https://github.com/microsoft/markitdown). Its README says it may not be the best option for high-fidelity conversions that people read. Don't pass untrusted input straight to it, and when you only read local files, [call `convert_local()` instead of `convert()`](https://github.com/microsoft/markitdown#security-considerations), which also fetches URLs.
 
@@ -53,5 +51,7 @@ Mistune is a [fast parser with renderers and plugins](https://mistune.lepture.co
 tomllib comes with Python and parses TOML, but doesn't write it. With untrusted input, [limit its size](https://docs.python.org/3/library/tomllib.html), since a malicious TOML string can use a lot of CPU and memory.
 
 PyYAML parses and emits YAML. Load it with `yaml.safe_load()`, since [`yaml.load` can call any Python function](https://pyyaml.org/wiki/PyYAMLDocumentation) when the data comes from an untrusted source.
+
+Tablib is a [format-agnostic tabular dataset library](https://tablib.readthedocs.io/en/stable/). `Dataset().load(fh)` [detects the format of the file](https://tablib.readthedocs.io/en/stable/tutorial.html) you load, and `export()` writes the same data as CSV, JSON, or another format.
 
 Markdown your users write can carry HTML, so give each parser its safe setting. With markdown-it-py, use the [`js-default` preset](https://markdown-it-py.readthedocs.io/en/latest/security.html), which its docs strongly recommend for user content in web apps. Python-Markdown [doesn't sanitize its output](https://python-markdown.github.io/sanitization/), so run a sanitizer over the HTML. With Mistune, build your parser with [`mistune.create_markdown()`](https://mistune.lepture.com/en/latest/guide.html), which escapes HTML, instead of `mistune.html()`, which doesn't.

@@ -4,23 +4,28 @@ How to choose:
 
 - pdb with tab completion and syntax highlighting: ipdb
 - Finding where a running program spends its time, without changing it: py-spy
+- Debugging from your editor, or attaching to a running or remote process: debugpy
 - A full-screen debugger in your terminal: PuDB
 - A timeline of every function call: VizTracer
+- Print debugging that labels each value: IceCream
 - Memory use and leaks, native extensions included: Memray
 - A readable call tree of where your script spends wall-clock time: pyinstrument
 - CPU, GPU, and memory use, line by line: Scalene
 - SQL queries and request data on Django pages: Django Debug Toolbar
 - Every Django request and its SQL queries, recorded to inspect later: Silk
-- Print debugging that labels each value: IceCream
 - The same toolbar on Flask pages: Flask-DebugToolbar
 
 ipdb gives you IPython's debugger, with [tab completion, syntax highlighting, and better tracebacks](https://github.com/gotcha/ipdb), behind the same interface as pdb. Drop into it with `import ipdb; ipdb.set_trace()`, or call `ipdb.pm()` for post-mortem debugging after an exception.
 
 py-spy is a sampling profiler that shows what a program spends its time on [without restarting it or modifying its code](https://github.com/benfred/py-spy). It runs outside the profiled process, which makes it safe to use on production code. `py-spy record` writes a [flame graph](https://github.com/benfred/py-spy#record) of a process ID or a command you hand it, and `py-spy dump` prints [the call stack where a program is hung](https://github.com/benfred/py-spy#dump).
 
+debugpy implements the [Debug Adapter Protocol](https://github.com/microsoft/debugpy), so an editor that speaks it, like VS Code, drives the debugging session. Start your script with [`python -m debugpy --listen 5678 --wait-for-client myfile.py`](https://github.com/microsoft/debugpy#debugging-a-script-file) and attach from your editor, or [attach to a process that's already running](https://github.com/microsoft/debugpy#attaching-to-a-running-process-by-id) with `--pid`.
+
 PuDB keeps the source, the stack, breakpoints, and variables [all visible at once](https://documen.tician.de/pudb/) in one full-screen terminal view. Start it from your code with `from pudb import set_trace; set_trace()`, or [run a whole script](https://documen.tician.de/pudb/starting.html#starting-the-debugger) with `python -m pudb my-script.py`.
 
 VizTracer records every function's entry and exit time across a whole run, which [helps catch sporadic performance issues](https://viztracer.readthedocs.io/en/latest/). Run your script [with `viztracer my_script.py`](https://viztracer.readthedocs.io/en/latest/basic_usage.html#command-line) instead of `python`, then open the `result.json` it writes with `vizviewer`.
+
+IceCream's `ic()` [prints each expression along with its value](https://github.com/gruns/icecream). With no arguments, it prints [the file, line, and function it runs in](https://github.com/gruns/icecream#inspect-execution). Since `ic()` [returns its arguments](https://github.com/gruns/icecream#return-value), you can wrap an expression in existing code without rewriting the line.
 
 Memray tracks allocations [in Python code, native extension modules, and the interpreter itself](https://bloomberg.github.io/memray/overview.html), to find memory leaks and the code behind high memory use. Profiling [takes two steps](https://bloomberg.github.io/memray/getting_started.html): `memray run` saves the allocations to a file, then `memray flamegraph` builds a report from it.
 
@@ -32,8 +37,6 @@ Django Debug Toolbar adds [panels](https://django-debug-toolbar.readthedocs.io/e
 
 Silk [intercepts and stores HTTP requests and database queries](https://github.com/jazzband/django-silk), then shows them in its own UI: each request's time, query count, headers, and bodies. [Its setup](https://github.com/jazzband/django-silk#installation) adds its middleware and app to your settings, includes `silk.urls` in your URLconf, and runs `migrate`. The UI then lives at `/silk/`.
 
-IceCream's `ic()` [prints each expression along with its value](https://github.com/gruns/icecream). With no arguments, it prints [the file, line, and function it runs in](https://github.com/gruns/icecream#inspect-execution). Since `ic()` [returns its arguments](https://github.com/gruns/icecream#return-value), you can wrap an expression in existing code without rewriting the line.
-
 Flask-DebugToolbar is [a port of Django Debug Toolbar](https://github.com/pallets-eco/flask-debugtoolbar) to Flask. Wrap your app in `DebugToolbarExtension(app)`, and the toolbar [shows up in HTML responses while debug mode is on](https://flask-debugtoolbar.readthedocs.io/en/latest/).
 
-Both debuggers also open from the built-in `breakpoint()`: set the [`PYTHONBREAKPOINT` environment variable](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONBREAKPOINT) to `ipdb.set_trace` or `pudb.set_trace`. Among profilers, sampling ones like py-spy, pyinstrument, and Scalene [cost much less overhead than tracing ones](https://pyinstrument.readthedocs.io/en/latest/how-it-works.html#statistical-profiling-not-tracing), while a tracer like VizTracer records every call and [gives you more information](https://github.com/gaogaotiantian/viztracer#performance).
+ipdb and PuDB also open from the built-in `breakpoint()`: set the [`PYTHONBREAKPOINT` environment variable](https://docs.python.org/3/using/cmdline.html#envvar-PYTHONBREAKPOINT) to `ipdb.set_trace` or `pudb.set_trace`. Among profilers, sampling ones like py-spy, pyinstrument, and Scalene [cost much less overhead than tracing ones](https://pyinstrument.readthedocs.io/en/latest/how-it-works.html#statistical-profiling-not-tracing), while a tracer like VizTracer records every call and [gives you more information](https://github.com/gaogaotiantian/viztracer#performance).

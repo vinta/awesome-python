@@ -561,7 +561,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
   - [altair](https://github.com/vega/altair) - Declarative statistical visualization library for Python.
   - [bokeh](https://github.com/bokeh/bokeh) - Interactive web plotting for Python.
-- Specialized
+- Graphs and Maps
   - [graphviz](https://github.com/xflr6/graphviz) - Simple Python interface for creating and rendering Graphviz graphs.
   - [cartopy](https://github.com/SciTools/cartopy) - A cartographic Python library with matplotlib support.
   - [graphify](https://github.com/Graphify-Labs/graphify) - Turns code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
@@ -711,21 +711,21 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 
 _Libraries for debugging code._
 
-- pdb-like Debugger
+- Debuggers
+  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code for remote debugging.
   - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
   - [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
 - Tracing
   - [viztracer](https://github.com/gaogaotiantian/viztracer) - A low-overhead tool that traces and visualizes Python code execution.
+  - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
 - Profiler
   - [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
   - [memray](https://github.com/bloomberg/memray) - Tracks memory allocations in Python code, native extensions, and the interpreter itself.
   - [pyinstrument](https://github.com/joerick/pyinstrument) - A statistical wall-clock profiler with low overhead and readable call-tree output.
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
-- Others
-  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code for remote debugging.
+- Web Framework Toolbars
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
   - [django-silk](https://github.com/jazzband/django-silk) - Live profiling and inspection of HTTP requests and database queries for Django.
-  - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to Flask.
 
 ### Build Tools
@@ -776,7 +776,7 @@ _Software and libraries for DevOps._
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
   - [flower](https://github.com/mher/flower) - A real-time monitor and web admin for Celery task queues.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
-- Other
+- Backup
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
 
 ### Distributed Computing
@@ -844,19 +844,20 @@ _Tools and libraries for packet manipulation and network device automation._
 
 _Libraries for building command-line applications._
 
-- General
+- Argument Parsing
   - [argparse](https://docs.python.org/3/library/argparse.html) - (Python standard library) Command-line option and argument parsing.
   - [click](https://github.com/pallets/click) - A package for creating beautiful command-line interfaces in a composable way.
   - [typer](https://github.com/fastapi/typer) - Modern CLI framework that uses Python type hints. Built on Click.
-  - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [cyclopts](https://github.com/BrianPugh/cyclopts) - Build CLIs from type-hinted functions, with docstring-based help.
 - Terminal Rendering
   - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
   - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
+  - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
   - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of progress bar, with real-time throughput, ETA and very cool animations.
 - TUI Frameworks
   - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
+  - [prompt_toolkit](https://github.com/prompt-toolkit/python-prompt-toolkit) - A library for building powerful interactive command lines.
   - [urwid](https://github.com/urwid/urwid) - A library for creating terminal GUI applications with strong support for widgets, events, rich colors, etc.
   - [asciimatics](https://github.com/peterbrittain/asciimatics) - A package to create full-screen text UIs (from interactive forms to ASCII animations).
 
@@ -908,15 +909,14 @@ _Libraries for working with graphical user interface applications._
 
 _Libraries for parsing and manipulating plain text._
 
+- Diffs
+  - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
 - Encoding and Unicode
   - [charset-normalizer](https://github.com/jawah/charset_normalizer) - Universal character encoding detector, and a dependency of requests.
   - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
 - Fuzzy Matching
   - [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) - Rapid fuzzy string matching using various string metrics, with a C++ core.
-- General
-  - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
-  - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
 - Internationalization
   - [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
 - Parser
@@ -945,9 +945,8 @@ _Libraries for working with HTML and XML._
 
 _Libraries for parsing and manipulating specific file formats._
 
-- General
+- Binary Formats
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
-  - [tablib](https://github.com/jazzband/tablib) - A module for tabular datasets in XLS, CSV, JSON, YAML.
 - File Conversion
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
   - [pypandoc](https://github.com/JessicaTegner/pypandoc) - A thin wrapper for pandoc, the universal document converter.
@@ -973,6 +972,7 @@ _Libraries for parsing and manipulating specific file formats._
 - Data Formats
   - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
   - [pyyaml](https://github.com/yaml/pyyaml) - A full-featured YAML framework for Python.
+  - [tablib](https://github.com/jazzband/tablib) - A module for tabular datasets in XLS, CSV, JSON, YAML.
 
 ### File Manipulation
 
