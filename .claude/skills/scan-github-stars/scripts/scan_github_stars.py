@@ -61,16 +61,18 @@ def listed_repos() -> set[str]:
     return repos
 
 
+def ledger_repo(row: str) -> str:
+    """A ledger row starts with the repo's GitHub URL, or a bare owner/repo in older rows."""
+    return row.split("\t", 1)[0].removeprefix("https://github.com/").lower()
+
+
 def prior_verdicts() -> dict[str, str | None]:
     """The last ledger row wins; `parked` reopens a repo. An exact registered rejection still wins."""
     prior: dict[str, str | None] = {}
     if LEDGER.exists():
         for line in LEDGER.read_text().splitlines()[1:]:
-            repo, date, reason = line.split("\t", 2)
-            if reason == "parked":
-                prior[repo.lower()] = None
-            else:
-                prior[repo.lower()] = f"screened out {date}: {reason}"
+            _, date, reason = line.split("\t", 2)
+            prior[ledger_repo(line)] = None if reason == "parked" else f"screened out {date}: {reason}"
     register = REGISTER.read_text().splitlines()
     start = register.index("## Rejected Additions")
     for line in register[start + 1 :]:
@@ -85,7 +87,7 @@ def prune_ledger(starred: set[str]) -> int:
     if not LEDGER.exists():
         return 0
     header, *rows = LEDGER.read_text().splitlines()
-    kept = [row for row in rows if row.split("\t", 1)[0].lower() in starred]
+    kept = [row for row in rows if ledger_repo(row) in starred]
     if len(kept) < len(rows):
         LEDGER.write_text("\n".join([header, *kept]) + "\n")
     return len(rows) - len(kept)

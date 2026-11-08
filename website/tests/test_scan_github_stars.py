@@ -111,6 +111,17 @@ def test_unstarred_repos_are_pruned_from_ledger(scan):
     assert module.LEDGER.read_text() == kept
 
 
+def test_ledger_rows_keyed_by_github_url(scan):
+    module, _, run = scan
+    kept = "url\tdate\treason\nhttps://github.com/Example/Project\t2026-10-16\tno use case\n"
+    module.LEDGER.write_text(kept + "https://github.com/gone/repo\t2026-10-16\tno use case\n")
+
+    result = run()
+    assert "Example/Project" not in result.out
+    assert "pruned 1" in result.err
+    assert module.LEDGER.read_text() == kept
+
+
 def test_parking_keeps_other_exclusions(scan):
     module, star, run = scan
     now = datetime.now(UTC)
