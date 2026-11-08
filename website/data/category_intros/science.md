@@ -6,7 +6,7 @@ How to choose:
 - Optimization, integration, interpolation, and linear algebra: SciPy
 - Numeric loops that won't vectorize: Numba
 - Exact, symbolic math: SymPy
-- Regression, time series, and hypothesis tests: statsmodels
+- Regression, time series, and hypothesis tests: statsmodels; causal graphs and Bayesian networks: pgmpy
 - Biological sequences and file formats: Biopython; molecules: RDKit
 - Physical units: Pint; astronomy: Astropy; seismology: ObsPy
 - Bayesian models: PyMC
@@ -24,6 +24,8 @@ Numba is a just-in-time compiler that [works best on code that uses NumPy arrays
 SymPy does symbolic math: expressions stay [exact, not approximate](https://docs.sympy.org/latest/tutorials/intro-tutorial/intro.html#what-is-symbolic-computation), and it's written entirely in Python. Its best practices keep symbolic and numeric code apart: [model the problem in SymPy, then turn the result into a function with `lambdify()`](https://docs.sympy.org/latest/explanation/best-practices.html#separate-symbolic-and-numeric-code) that runs on NumPy arrays. Define symbols with `symbols()` and [the assumptions you know](https://docs.sympy.org/latest/explanation/best-practices.html#defining-symbols), like `positive=True`, so more expressions simplify. Build expressions from those symbols, [not from strings](https://docs.sympy.org/latest/explanation/best-practices.html#avoid-string-inputs).
 
 statsmodels [estimates statistical models, runs hypothesis tests, and explores data](https://www.statsmodels.org/stable/index.html), and [most of its results are verified](https://www.statsmodels.org/stable/about.html#testing) against another statistical package. SciPy's stats docs [send regression, linear models, and time series analysis to statsmodels](https://docs.scipy.org/doc/scipy/reference/stats.html), while `scipy.stats` keeps the probability distributions and statistical tests. Write your model as an [R-style formula](https://www.statsmodels.org/stable/example_formulas.html) on a pandas DataFrame, like `smf.ols("y ~ x", data=df).fit()`, and read the fit with `summary()`.
+
+pgmpy does [causal and probabilistic reasoning with graphical models](https://pgmpy.org/). Its [quickstart](https://pgmpy.org/started/quickstart.html) follows the tasks: learn a graph's structure from data, fit the distributions for a graph you know, then query the model for probabilities or causal effects.
 
 Biopython [parses bioinformatics file formats](https://biopython.org/docs/latest/Tutorial/chapter_introduction.html) like FASTA and GenBank, queries online services like NCBI, and gives you a standard sequence class. Read sequence files with `Bio.SeqIO.parse()`, or [`Bio.SeqIO.read()` when a file holds one record](https://biopython.org/docs/latest/Tutorial/chapter_seqio.html#parsing-or-reading-sequences). When you query NCBI through `Bio.Entrez`, [pass your email](https://biopython.org/docs/latest/Tutorial/chapter_entrez.html#entrez-guidelines) so NCBI can contact you if there's a problem. RDKit is a [cheminformatics toolkit with its core in C++](https://www.rdkit.org/docs/Overview.html), for 2D and 3D molecular operations and descriptors for machine learning. To compare molecules, [create a fingerprint generator](https://www.rdkit.org/docs/GettingStartedInPython.html#fingerprinting-and-molecular-similarity) for the fingerprint type you want, the docs' most consistent way to get fingerprints.
 
