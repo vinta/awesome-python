@@ -9,6 +9,7 @@ How to choose:
 - Testing across Python versions: tox, or Nox to configure it in Python
 - WebDriver tests on remote machines: Selenium, or SeleniumBase with waits and reports built in
 - Load tests written as Python code: Locust
+- Timing a function and catching slowdowns: pytest-benchmark
 - API tests generated from an OpenAPI or GraphQL schema: Schemathesis
 - Replacing objects in a test: unittest.mock, or time-machine for the clock
 - Faking HTTP calls: responses for Requests, RESPX for HTTPX, VCR.py to record real traffic
@@ -29,6 +30,8 @@ tox and Nox both create a virtual environment per Python version or dependency s
 Selenium drives browsers through WebDriver, a W3C standard, and [Selenium Grid](https://www.selenium.dev/documentation/overview/) runs those tests on other machines and platforms. Its guidelines model each page as a [page object](https://www.selenium.dev/documentation/test_practices/encouraged/page_object_models/) that makes no assertions, and use [explicit waits](https://www.selenium.dev/documentation/webdriver/waits/#explicit-waits) for the exact condition each step needs. [SeleniumBase](https://github.com/seleniumbase/SeleniumBase) builds on Selenium and runs under pytest: its methods wait for an element before acting, and failing tests save screenshots.
 
 A Locust test is [a Python program](https://docs.locust.io/en/stable/quickstart.html): an `HttpUser` class whose tasks make requests, so complex user flows are just code.
+
+pytest-benchmark runs microbenchmarks as pytest tests. A test requests [the `benchmark` fixture](https://pytest-benchmark.readthedocs.io/en/latest/) and calls it with the function to measure and its arguments. The plugin calibrates the runs on its own and returns the function's result, so the test can still assert it's correct. Save a run, then [compare later runs against it](https://pytest-benchmark.readthedocs.io/en/latest/comparing.html), and add `--benchmark-compare-fail` to fail the suite when a test slows down past a threshold you set.
 
 Schemathesis reads your OpenAPI or GraphQL schema and generates property-based tests from it, with no per-endpoint tests to maintain. Its FAQ [recommends the CLI](https://schemathesis.readthedocs.io/en/stable/faq/#how-should-i-run-schemathesis) for most users, with a pytest integration for existing suites.
 
