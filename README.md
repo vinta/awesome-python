@@ -213,7 +213,6 @@ _Libraries for machine learning. Also see [awesome-machine-learning](https://git
 - General
   - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for machine learning with extensive documentation and community support.
   - [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) - Resampling techniques for imbalanced datasets, compatible with scikit-learn.
-  - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for causal and probabilistic reasoning with graphical models.
   - [feature-engine](https://github.com/feature-engine/feature_engine) - sklearn-compatible API with the widest toolset for feature engineering and selection.
 - Gradient Boosting
   - [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
@@ -599,6 +598,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
   - [sympy](https://github.com/sympy/sympy) - A Python library for symbolic mathematics.
 - Statistics
   - [statsmodels](https://github.com/statsmodels/statsmodels) - Statistical modeling and econometrics in Python.
+  - [pgmpy](https://github.com/pgmpy/pgmpy) - A Python library for causal and probabilistic reasoning with graphical models.
 - Biology and Chemistry
   - [rdkit](https://github.com/rdkit/rdkit) - Cheminformatics and machine learning software.
   - [biopython](https://github.com/biopython/biopython) - Biopython is a set of freely available tools for biological computation.
