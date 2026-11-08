@@ -8,6 +8,8 @@ How to choose:
 - Rerunning or reloading code when files change: watchfiles
 - Your own handler for each created, modified, or moved file: watchdog
 - Telling text file types apart, like source code from config files: Magika
+- Listing, globbing, and copying files on cloud or remote storage: fsspec
+- Streaming one large remote file through a drop-in `open()`: smart_open
 
 If you aren't sure which pathlib class you need, the docs say [`Path` is most likely it](https://docs.python.org/3/library/pathlib.html): it makes a concrete path for the platform your code runs on. [Join paths with the `/` operator](https://docs.python.org/3/library/pathlib.html#basic-use), and list a directory with `iterdir()` or `glob()`.
 
@@ -20,3 +22,7 @@ watchfiles is built for [file watching and code reload](https://watchfiles.helpm
 watchdog gives you [an API and a shell tool](https://python-watchdog.readthedocs.io/en/latest/) for monitoring directories. Its [quickstart](https://python-watchdog.readthedocs.io/en/latest/quickstart.html) has you subclass `FileSystemEventHandler`, override methods like `on_created()` and `on_modified()`, schedule the handler on an `Observer`, and start that thread. An observer skips subdirectories unless you pass `recursive=True` to `schedule()`.
 
 Magika runs [a compact deep-learning model](https://securityresearch.google/magika/core-concepts/how-magika-works/) on a few chunks of a file, without loading large files entirely into memory. On its own test set, it [outperforms existing approaches, especially on textual content types](https://github.com/google/magika#highlights). Create a `Magika()` instance, then [call `identify_path()` on a file or `identify_bytes()` on bytes you already have](https://securityresearch.google/magika/cli-and-bindings/python/#instantiating-magika). Check `result.ok` before you read `result.output.label` or `result.output.mime_type`.
+
+fsspec gives you [one API for local, remote, and embedded file systems](https://filesystem-spec.readthedocs.io/en/latest/), and it works the same whatever the storage backend. Get a file system by protocol name, like `fsspec.filesystem("s3")`, then call methods that [follow posix naming and the `os` module](https://filesystem-spec.readthedocs.io/en/latest/usage.html#use-a-file-system): `ls()`, `glob()`, `cp()`, and `rm()`. For one file, [`fsspec.open()` picks the backend from the URL](https://filesystem-spec.readthedocs.io/en/latest/usage.html#higher-level), and opens the file only when you enter its `with` block.
+
+smart_open is [a drop-in replacement for Python's built-in `open()`](https://github.com/piskvorky/smart_open#what) that streams very large files from and to S3, GCS, Azure Blob Storage, HDFS, HTTP, and SFTP. Import its `open` in place of the built-in, and pass it a URL like `s3://bucket/key`. A file name ending in `.gz`, `.bz2`, or `.zst` gets [compressed or decompressed on the fly](https://github.com/piskvorky/smart_open#compression-handling). To use your own credentials or settings, [pass the storage service's client object in `transport_params`](https://github.com/piskvorky/smart_open#transport-specific-options).

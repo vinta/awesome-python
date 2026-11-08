@@ -12,6 +12,7 @@ How to choose:
 - C or C++ extension modules: setuptools
 - Build hooks, or a layout uv-build doesn't expect: Hatchling
 - Building a Poetry project without Poetry installed: poetry-core
+- Taking the version and description from your module: flit_core
 
 uv is [a single tool](https://docs.astral.sh/uv/) for Python versions, virtual environments, dependencies, and command-line tools. Start a project with `uv init`, add packages with `uv add`, and run code with `uv run`, which [checks that the lockfile and environment are up to date](https://docs.astral.sh/uv/guides/projects/#running-commands) before every run. The `uv pip` commands are [for projects not ready to move away from pip](https://docs.astral.sh/uv/pip/), not the main interface.
 
@@ -30,5 +31,7 @@ pipx installs command-line apps [each in its own virtual environment](https://pi
 conda manages [packages and environments for any language](https://docs.conda.io/projects/conda/en/latest/), and [its packages](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/packages.html) can hold system libraries and programs, not only Python modules. Keep your requirements in a file, and [use pip only after conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env) has installed everything it can.
 
 setuptools [builds C and C++ extension modules](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html), and Hatch's docs [recommend it](https://hatch.pypa.io/latest/why/#build-backend) for them. Keep its configuration in pyproject.toml and `setup.py` [minimal, if you need one at all](https://setuptools.pypa.io/en/latest/userguide/quickstart.html#setuppy-discouraged), and don't run `setup.py` as a script.
+
+flit_core is Flit's build backend, made for [pure Python packages with no build steps](https://flit.pypa.io/en/latest/rationale.html). List `version` and `description` under `dynamic`, and it [reads them from your module's `__version__` and docstring](https://flit.pypa.io/en/latest/pyproject_toml.html#project-metadata). To start, `flit init` [writes the pyproject.toml](https://flit.pypa.io/en/latest/) for your module.
 
 Whichever tool writes your lockfile, commit it to version control, as [uv](https://docs.astral.sh/uv/guides/projects/#uvlock) and [Poetry](https://python-poetry.org/docs/basic-usage/#committing-your-poetrylock-file-to-version-control) both recommend, so every machine installs the same versions.
