@@ -6,7 +6,6 @@ How to choose:
 - Bytes in an unknown encoding: charset-normalizer
 - Fuzzy matching against a long list of strings: RapidFuzz
 - Diffs, or close matches with nothing to install: difflib
-- ASCII-art banners: pyfiglet
 - Translations, plus dates and numbers in each user's locale: Babel
 - Syntax highlighting: Pygments
 - A grammar written in Python code: pyparsing, or parsy for small languages
@@ -22,8 +21,6 @@ charset-normalizer [reads text from an unknown charset encoding](https://github.
 RapidFuzz [does fuzzy string matching with various string metrics](https://rapidfuzz.github.io/RapidFuzz/), mostly in C++, with a pure Python fallback for every algorithm. To compare one string against a list, [use the `process` module](https://github.com/rapidfuzz/RapidFuzz#process), like `process.extractOne()`.
 
 difflib comes with Python and [compares sequences](https://docs.python.org/3/library/difflib.html), mostly lines of text, producing unified, context, and HTML diffs like the ones `diff` and `git diff` print. For a "did you mean" suggestion, [`get_close_matches()`](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) returns the best "good enough" matches for a word.
-
-pyfiglet is [a full port of FIGlet into pure Python](https://github.com/pwaller/pyfiglet): it renders text in ASCII-art fonts, as in `pyfiglet.figlet_format("text", font="slant")`.
 
 Babel [does two jobs](https://babel.pocoo.org/en/latest/intro.html): it builds gettext message catalogs without the GNU gettext tools for common tasks, and it formats dates, numbers, and locale names from CLDR data. Run catalogs through the `pybabel` command: [`extract` messages, `init` a catalog per language, `update` it, and `compile` it](https://babel.pocoo.org/en/latest/cmdline.html).
 
