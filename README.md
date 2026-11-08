@@ -722,6 +722,7 @@ _Libraries for debugging code._
   - [pyinstrument](https://github.com/joerick/pyinstrument) - A statistical wall-clock profiler with low overhead and readable call-tree output.
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
 - Others
+  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code for remote debugging.
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
   - [django-silk](https://github.com/jazzband/django-silk) - Live profiling and inspection of HTTP requests and database queries for Django.
   - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
@@ -1190,6 +1191,7 @@ _Tools for auditing dependencies against known vulnerabilities and scanning for 
 _Libraries for application-layer web security._
 
 - [nh3](https://github.com/messense/nh3) - Python binding to the ammonia HTML sanitizer, a fast replacement for bleach.
+- [django-cors-headers](https://github.com/adamchainz/django-cors-headers) - Handles Cross-Origin Resource Sharing (CORS) headers for Django apps.
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Other**
