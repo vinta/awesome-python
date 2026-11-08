@@ -6,7 +6,8 @@ recomputed every run, so a repo that becomes active again resurfaces. An
 incremental run also drops stars already judged: model screen-outs in
 local/starred-scan.tsv and maintainer rejections under docs/audit-logs.md
 "Rejected Additions". `--full` keeps them and shows the earlier verdict in the
-`prior` column. Prints survivors as TSV on stdout, drop counts on stderr.
+`prior` column. Ledger rows for repos no longer starred are pruned each run.
+Prints survivors as TSV on stdout, drop and prune counts on stderr.
 """
 
 import argparse
@@ -80,6 +81,16 @@ def prior_verdicts() -> dict[str, str | None]:
     return prior
 
 
+def prune_ledger(starred: set[str]) -> int:
+    if not LEDGER.exists():
+        return 0
+    header, *rows = LEDGER.read_text().splitlines()
+    kept = [row for row in rows if row.split("\t", 1)[0].lower() in starred]
+    if len(kept) < len(rows):
+        LEDGER.write_text("\n".join([header, *kept]) + "\n")
+    return len(rows) - len(kept)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--full", action="store_true", help="rejudge stars already screened out or rejected")
@@ -91,6 +102,7 @@ def main() -> None:
     prior = prior_verdicts()
 
     stars: list[Star] = [json.loads(line) for line in gh("api", "--paginate", "user/starred?per_page=100", "--jq", ".[]").splitlines()]
+    pruned = prune_ledger({star["full_name"].lower() for star in stars})
     dropped = Counter()
     print("repo\tlanguage\tstars\tpushed\ttopics\tdescription\tprior")
     for star in stars:
@@ -115,6 +127,8 @@ def main() -> None:
     print(f"{len(stars)} stars; {len(stars) - dropped.total()} candidates", file=sys.stderr)
     for reason, count in dropped.most_common():
         print(f"  dropped {count}: {reason}", file=sys.stderr)
+    if pruned:
+        print(f"  pruned {pruned} ledger rows for repos no longer starred", file=sys.stderr)
 
 
 if __name__ == "__main__":

@@ -102,6 +102,15 @@ def test_parking_reopens_one_repo_from_rejected_organization(scan):
     assert "rejected again" in run("--full").out
 
 
+def test_unstarred_repos_are_pruned_from_ledger(scan):
+    module, _, run = scan
+    kept = "repo\tdate\treason\nexample/project\t2026-10-16\tno use case\n"
+    module.LEDGER.write_text(kept + "gone/repo\t2026-10-16\tno use case\ngone/repo\t2026-10-17\tparked\n")
+
+    assert "pruned 2" in run().err
+    assert module.LEDGER.read_text() == kept
+
+
 def test_parking_keeps_other_exclusions(scan):
     module, star, run = scan
     now = datetime.now(UTC)

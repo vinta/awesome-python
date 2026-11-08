@@ -10,13 +10,13 @@ A star scan turns the maintainer's GitHub stars into proposed additions. Every s
 
 ## 1. Scan
 
-Run `uv run python .claude/skills/scan-github-stars/scripts/scan_github_stars.py`, adding `--full` when the argument is `full`. With no ledger yet, a plain run already covers every star. Print the drop counts from stderr. Done when the candidate TSV is in hand.
+Run `uv run python .claude/skills/scan-github-stars/scripts/scan_github_stars.py`, adding `--full` when the argument is `full`. With no ledger yet, a plain run already covers every star. Print the drop and prune counts from stderr. Done when the candidate TSV is in hand.
 
 ## 2. Screen
 
 Judge each candidate from its name, description, topics, and language against CONTRIBUTING Quality Requirement 1 (Serves Python Developers), and name the current use case it would compete in. The screen is loose: drop only what plainly fails, and pass anything uncertain on, since `audit-the-list` is the real judge. In a full scan, read the `prior` column as context and overturn a rejection only on new evidence.
 
-Append each screen-out to `local/starred-scan.tsv` as it is decided, one `repo<TAB>yyyy-mm-dd<TAB>reason` row (create the file with header `repo	date	reason`), so an interrupted run keeps its work. The file is append-only; the script reads the last row per repo. A survivor no current use case fits is a structure question: carry it to review with its evidence. Done when every candidate is a ledger row, holds a target use case, or is a structure question.
+Append each screen-out to `local/starred-scan.tsv` as it is decided, one `repo<TAB>yyyy-mm-dd<TAB>reason` row (create the file with header `repo	date	reason`), so an interrupted run keeps its work. Only append rows: the script reads the last row per repo, and it prunes rows for repos the maintainer no longer stars. A survivor no current use case fits is a structure question: carry it to review with its evidence. Done when every candidate is a ledger row, holds a target use case, or is a structure question.
 
 ## 3. Judge
 
