@@ -711,21 +711,21 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 
 _Libraries for debugging code._
 
-- pdb-like Debugger
+- Debuggers
+  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code for remote debugging.
   - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
   - [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
 - Tracing
   - [viztracer](https://github.com/gaogaotiantian/viztracer) - A low-overhead tool that traces and visualizes Python code execution.
+  - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
 - Profiler
   - [py-spy](https://github.com/benfred/py-spy) - A sampling profiler for Python programs. Written in Rust.
   - [memray](https://github.com/bloomberg/memray) - Tracks memory allocations in Python code, native extensions, and the interpreter itself.
   - [pyinstrument](https://github.com/joerick/pyinstrument) - A statistical wall-clock profiler with low overhead and readable call-tree output.
   - [scalene](https://github.com/plasma-umass/scalene) - A high-performance, high-precision CPU, GPU, and memory profiler for Python.
-- Others
-  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code for remote debugging.
+- Web Framework Toolbars
   - [django-debug-toolbar](https://github.com/django-commons/django-debug-toolbar) - Display various debug information for Django.
   - [django-silk](https://github.com/jazzband/django-silk) - Live profiling and inspection of HTTP requests and database queries for Django.
-  - [icecream](https://github.com/gruns/icecream) - Inspect variables, expressions, and program execution with a single, simple function call.
   - [flask-debugtoolbar](https://github.com/pallets-eco/flask-debugtoolbar) - A port of the django-debug-toolbar to Flask.
 
 ### Build Tools
