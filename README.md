@@ -988,6 +988,8 @@ _Libraries for file manipulation._
   - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
   - [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
   - [magika](https://github.com/google/magika) - Detects file content types with a deep-learning model.
+- Remote Files
+  - [smart-open](https://github.com/piskvorky/smart_open) - Stream files from S3, GCS, Azure, HDFS, and HTTP as a drop-in replacement for open().
 
 **Media**
 
