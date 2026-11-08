@@ -669,6 +669,7 @@ _Tools for static analysis, linters and code quality checkers. Also see [awesome
   - [mypy](https://github.com/python/mypy) - A static type checker for Python.
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [pyright](https://github.com/microsoft/pyright) - Full-featured static type checker for Python from Microsoft, the engine behind Pylance.
+  - [basedpyright](https://github.com/DetachHead/basedpyright) - A pyright fork with stricter defaults and Pylance features in its language server.
   - [pyrefly](https://github.com/meta/pyrefly) - A fast type checker and language server for Python.
 
 ### Testing

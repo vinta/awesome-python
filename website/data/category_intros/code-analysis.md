@@ -14,7 +14,7 @@ How to choose:
 - Refactoring: Rope from your editor or a script, ast-grep for pattern rewrites
 - Type checking Django or Pydantic code: mypy with its plugins, Pyrefly without
 - Adding types to a partly typed codebase: ty
-- Type checking in VS Code: Pyright, which Pylance runs on
+- Type checking in your editor: Pyright in VS Code via Pylance, basedpyright in other editors
 
 Ruff [can replace Flake8, Black, and isort](https://docs.astral.sh/ruff/), plus dozens of Flake8 plugins. Its docs suggest you [start with a small rule set](https://docs.astral.sh/ruff/linter/#rule-selection), add one group at a time, and list them explicitly in `select`. Ruff is [a linter, not a type checker](https://docs.astral.sh/ruff/faq/#how-does-ruff-compare-to-ty-mypy-pyright-or-pyre), so run a type checker alongside it.
 
@@ -47,5 +47,7 @@ Pyrefly is a type checker and language server with [built-in support for Pydanti
 ty is a type checker and language server [designed for adoption](https://docs.astral.sh/ty/) on partly typed code. Unlike mypy, it [checks the bodies of unannotated functions](https://docs.astral.sh/ty/coming-from-mypy-or-pyright/), and it leaves [missing-annotation checks](https://docs.astral.sh/ty/reference/typing-faq/#why-doesnt-ty-warn-about-missing-type-annotations) to Ruff's `ANN` rules.
 
 Pyright [checks all code by default](https://github.com/microsoft/pyright/blob/main/docs/mypy-comparison.md#type-checking-unannotated-code), annotated or not, which its language server features rely on. In VS Code, its docs [recommend Pylance](https://github.com/microsoft/pyright/blob/main/docs/installation.md), which includes Pyright. Run it [in CI to keep the project type clean](https://github.com/microsoft/pyright/blob/main/docs/getting-started.md), then turn on `# pyright: strict` file by file.
+
+basedpyright is a fork of Pyright that [re-implements some of Pylance's features](https://docs.basedpyright.com/latest/benefits-over-pyright/pylance-features/) in its language server, so you get them in any editor. It [turns on every rule by default](https://docs.basedpyright.com/latest/benefits-over-pyright/better-defaults/). On an existing project, run `basedpyright --writebaseline` and commit the file it writes, so it [reports errors only in new or changed code](https://docs.basedpyright.com/latest/benefits-over-pyright/baseline/).
 
 Pylint, Prospector, Import Linter, and ty all need to see your project's dependencies, so run them [from the project's own environment](https://pylint.readthedocs.io/en/latest/user_guide/installation/pre-commit-integration.html), not a separate one. For more Python code analysis tools, see [awesome-static-analysis](https://github.com/analysis-tools-dev/static-analysis).
