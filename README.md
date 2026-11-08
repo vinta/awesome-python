@@ -1191,6 +1191,7 @@ _Tools for auditing dependencies against known vulnerabilities and scanning for 
 _Libraries for application-layer web security._
 
 - [nh3](https://github.com/messense/nh3) - Python binding to the ammonia HTML sanitizer, a fast replacement for bleach.
+- [django-cors-headers](https://github.com/adamchainz/django-cors-headers) - Handles Cross-Origin Resource Sharing (CORS) headers for Django apps.
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
 
 **Other**
