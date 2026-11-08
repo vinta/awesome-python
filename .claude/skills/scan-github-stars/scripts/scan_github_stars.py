@@ -6,7 +6,8 @@ recomputed every run, so a repo that becomes active again resurfaces. An
 incremental run also drops stars already judged: model screen-outs in
 local/starred-scan.tsv and maintainer rejections under docs/audit-logs.md
 "Rejected Additions". `--full` keeps them and shows the earlier verdict in the
-`prior` column. Ledger rows for repos no longer starred are pruned each run.
+`prior` column. Ledger rows and Rejected Additions lines for repos no longer
+starred are pruned each run.
 Prints survivors as TSV on stdout, drop and prune counts on stderr.
 """
 
@@ -93,6 +94,22 @@ def prune_ledger(starred: set[str]) -> int:
     return len(rows) - len(kept)
 
 
+def prune_register(starred: set[str]) -> int:
+    """Drop Rejected Additions lines for repos no longer starred; `owner/*` patterns stay."""
+    lines = REGISTER.read_text().splitlines(keepends=True)
+    start = lines.index("## Rejected Additions\n")
+    end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
+    kept = []
+    for line in lines[start:end]:
+        match = REJECTED_LINE_RE.match(line)
+        if match and not match.group(1).endswith("/*") and match.group(1).lower() not in starred:
+            continue
+        kept.append(line)
+    if len(kept) < end - start:
+        REGISTER.write_text("".join(lines[:start] + kept + lines[end:]))
+    return end - start - len(kept)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--full", action="store_true", help="rejudge stars already screened out or rejected")
@@ -104,7 +121,9 @@ def main() -> None:
     prior = prior_verdicts()
 
     stars: list[Star] = [json.loads(line) for line in gh("api", "--paginate", "user/starred?per_page=100", "--jq", ".[]").splitlines()]
-    pruned = prune_ledger({star["full_name"].lower() for star in stars})
+    starred = {star["full_name"].lower() for star in stars}
+    pruned = prune_ledger(starred)
+    pruned_rejections = prune_register(starred)
     dropped = Counter()
     print("repo\tlanguage\tstars\tpushed\ttopics\tdescription\tprior")
     for star in stars:
@@ -131,6 +150,8 @@ def main() -> None:
         print(f"  dropped {count}: {reason}", file=sys.stderr)
     if pruned:
         print(f"  pruned {pruned} ledger rows for repos no longer starred", file=sys.stderr)
+    if pruned_rejections:
+        print(f"  pruned {pruned_rejections} Rejected Additions lines for repos no longer starred", file=sys.stderr)
 
 
 if __name__ == "__main__":

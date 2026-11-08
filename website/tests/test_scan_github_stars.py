@@ -122,6 +122,15 @@ def test_ledger_rows_keyed_by_github_url(scan):
     assert module.LEDGER.read_text() == kept
 
 
+def test_unstarred_repos_are_pruned_from_rejected_additions(scan):
+    module, _, run = scan
+    kept = "## Rejected Additions\n- Example/Project -- 2026-10-16: kept\n- gone/* -- 2026-10-16: organization pattern\n"
+    module.REGISTER.write_text(kept + "- gone/repo -- 2026-10-16: unstarred\n\n## Last Audited\n")
+
+    assert "pruned 1 Rejected Additions" in run("--full").err
+    assert module.REGISTER.read_text() == kept + "\n## Last Audited\n"
+
+
 def test_parking_keeps_other_exclusions(scan):
     module, star, run = scan
     now = datetime.now(UTC)

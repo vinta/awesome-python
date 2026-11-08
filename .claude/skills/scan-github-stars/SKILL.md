@@ -10,7 +10,7 @@ A star scan turns the maintainer's GitHub stars into proposed additions. Every s
 
 ## 1. Scan
 
-Run `uv run python .claude/skills/scan-github-stars/scripts/scan_github_stars.py`, adding `--full` when the argument is `full`. With no ledger yet, a plain run already covers every star. Print the drop and prune counts from stderr. Done when the candidate TSV is in hand.
+Run `uv run python .claude/skills/scan-github-stars/scripts/scan_github_stars.py`, adding `--full` when the argument is `full`. With no ledger yet, a plain run already covers every star. Print the drop and prune counts from stderr. When it pruned Rejected Additions lines, commit `docs/audit-logs.md` on its own, since unlike the ledger it is tracked. Done when the candidate TSV is in hand.
 
 ## 2. Screen
 
