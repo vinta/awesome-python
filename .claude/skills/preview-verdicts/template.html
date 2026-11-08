@@ -25,8 +25,8 @@
   td { padding: .5rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; }
   tr.changed td { background: var(--changed); border-bottom-color: var(--changed-line); }
   td.name { white-space: nowrap; font-weight: 600; }
-  td.name a { color: var(--ink); text-decoration: none; border-bottom: 1px solid #c8c4c0; }
-  td.name a:hover { border-bottom-color: var(--ink); }
+  td.name a, td.source a { color: var(--ink); text-decoration: none; border-bottom: 1px solid #c8c4c0; }
+  td.name a:hover, td.source a:hover { border-bottom-color: var(--ink); }
   td.source { font-size: .95rem; color: var(--muted); max-width: 14rem; }
   td.dl { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--muted); text-align: right; }
   td.mine { white-space: nowrap; }
@@ -78,6 +78,11 @@ const CHOICES = { listed: ["keep", "remove", "park"], candidate: ["add", "reject
 const cap = v => v[0].toUpperCase() + v.slice(1);
 
 function rowId(section, name) { return section + "::" + name; }
+// Each owner/repo in a Source cell links to its GitHub repo.
+function linkRepos(text) {
+  return (text || "").replace(/(^|[\s(,;])([A-Za-z0-9][\w.-]*\/[\w.-]*[\w])(?=$|[\s),;])/g,
+    (_, pre, repo) => `${pre}<a href="https://github.com/${repo}" target="_blank" rel="noopener">${repo}</a>`);
+}
 
 function render() {
   const app = document.getElementById("app");
@@ -94,8 +99,8 @@ function render() {
       const yours = s.verdict || mine;
       const changed = yours !== mine || (s.feedback || "").trim() !== "";
       html += `<tr id="${cssId(id)}" class="${changed ? "changed" : ""}">
-        <td class="name"><a href="${url}" target="_blank" rel="noopener">${name}</a></td>
-        ${hasSource ? `<td class="source">${source || ""}</td>` : ""}
+        <td class="name">${url ? `<a href="${url}" target="_blank" rel="noopener">${name}</a>` : name}</td>
+        ${hasSource ? `<td class="source">${linkRepos(source)}</td>` : ""}
         <td class="dl">${dl}</td>
         <td class="mine"><span class="badge ${mine}">${mine.toUpperCase()}</span></td>
         <td class="reason">${reason}</td>

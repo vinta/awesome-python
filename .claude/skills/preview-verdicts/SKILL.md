@@ -10,7 +10,7 @@ Maintainer review happens through an interactive HTML page: one row per entry wi
 ## Generate the preview
 
 1. Build the `DATA` array. A group is `[section, subcategory, rows]`; a row is `[entry, url, downloads, kind, verdict, reason]`, plus an optional seventh `source` field.
-   - `source` says where a row came from when that is not obvious, such as the starred repo behind a scan candidate or an incumbent pulled in during the audit. The page shows a Source column only when a row has one.
+   - `source` says where a row came from when that is not obvious, such as the starred repo behind a scan candidate or an incumbent pulled in during the audit. Name each repo as `owner/repo` (`starred: piskvorky/smart_open`), which the page turns into a GitHub link. The page shows a Source column only when a row has one.
    - `subcategory` may carry a note after ` — ` (rendered muted): use it for proposed splits, re-homes, or anything the maintainer should weigh for the whole group.
    - `downloads` is PyPI last-month as a comma-formatted string; use `—` when no signal exists (e.g. agent skill packs), `stdlib` for standard-library modules, `fetch failed` when the lookup failed. State the fetch date in the sub-header.
    - `kind` sets the buttons independently of the seeded `verdict`:
