@@ -15,7 +15,7 @@
               >{{ entry.name }}</a
             >
             <span class="mobile-cat{% if grouped_page and (not entry.subcategories or category_urls[entry.subcategories[0].value.split(' > ')[0]] == section_path) %} repeats-heading{% endif %}"
-              >{% if entry.subcategories %}{{ entry.subcategories[0].name }}{%
+              >{% if entry.subcategories %}{{ entry.subcategories[0].value.split(' > ')[0] }}{%
               else %}{{ entry.categories[0] if home else category.name }}{% endif %}</span
             >
           </td>
