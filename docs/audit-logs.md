@@ -160,6 +160,33 @@ Projects the maintainer decided not to list, with the evidence at decision time,
 - Yelp/detect-secrets -- 2026-10-16, 9,698,855 downloads/month (ClickPy): Weak maintenance: last release 2024-05, last code commit 2025-01, and only a CI commit in 2026. Demand rose 6.6x with no explained cause.
 - youssofal/MTPLX -- 2026-10-16, 7,276 downloads/month (ClickPy): Narrow: its own summary is "Native MTP speculative decoding for Qwen3-Next on Apple Silicon". Repo created 2026-05-02, and it hard-requires mlx-lm, which is already listed, so it is an add-on rather than a separate pick.
 - ytdl-org/youtube-dl -- 2026-10-16, 164,180 downloads/month (ClickPy): The 2026-03-21 removal (f50bd8f, replaced by yt-dlp) still holds: no release since 2021.12.17, commits stopped 2025-11, and downloads are falling.
+- adamchainz/django-mysql -- 2026-11-08, 598,170 downloads/month (pypistats): MySQL-specific features for the Django ORM: neither an ORM nor a driver.
+- cactus-compute/cactus -- 2026-11-08, 1,012 downloads/month (pypistats, package cactus-compute): Far below the smallest Local LLM Inference entry (llama-cpp-python, 519,085), and its 4.x line centres on Cactus's own small models rather than running open-weight LLMs.
+- carltongibson/django-filter -- 2026-11-08, 13,792,807 downloads/month (pypistats): A queryset-filtering add-on for DRF or Django views, not an API framework, as with drf-extensions.
+- charles-001/dolphie -- 2026-11-08, 2,341 downloads/month (pypistats): A top-style MySQL monitor, not a query shell like the Database CLIs entries, at a fifth of the smallest one's demand (iredis, 11,965).
+- cloudflare/security-audit-skill -- 2026-11-08, no PyPI download signal: A language-agnostic security-audit skill, and trailofbits-skills already covers security. Not Python work.
+- DietrichGebert/ponytail -- 2026-11-08, no PyPI download signal: A language-agnostic anti-over-engineering prompt pack. Not Python work.
+- django-hijack/django-hijack -- 2026-11-08, 2,698,297 downloads/month (pypistats): User impersonation, not an admin panel, and no Authentication use case covers it.
+- django-import-export/django-import-export -- 2026-11-08, 2,316,201 downloads/month (pypistats): An import/export add-on with admin integration, not an admin panel; tablib, which it wraps, is already listed.
+- firecrawl/anydoc -- 2026-11-08, 6,181,793 downloads/month (pypistats, package firecrawl-anydoc): Its downloads look automated: 80.7% come from Python 3.14, against about 7% for markitdown and docling. Version 0.2.x with no release since 2026-08-27. Re-check at 1.0.
+- garrytan/gstack -- 2026-11-08, no PyPI download signal: Product and role skills (CEO, design, QA, deploy). Not Python work.
+- ghostsecurity/skills -- 2026-11-08, no PyPI download signal: Language-agnostic AppSec skills with 439 stars. Not Python work.
+- goauthentik/authentik -- 2026-11-08, no PyPI download signal: A self-hosted identity provider deployed with Docker or Helm, not a library; Python apps integrate through OIDC libraries like the listed authlib.
+- google/skills -- 2026-11-08, no PyPI download signal: A Google product skill pack: 171 of its 192 skills are for Cloud, and one is for Python.
+- hankcs/HanLP -- 2026-11-08, 9,596 downloads/month (pypistats, package hanlp): 0.2% of jieba's demand (4,787,084); its 36.5k stars don't show up as installs.
+- jazzband/django-categories -- 2026-11-08, 2,890 downloads/month (pypistats): Fails Active: last default-branch commit 2024-05-23. It depends on django-mptt, which declares itself unmaintained.
+- JohnSnowLabs/spark-nlp -- 2026-11-08, 691,866 downloads/month (pypistats): Below the smallest NLP General entry (stanza, 765,627), and a Spark-only niche.
+- lightseekorg/tokenspeed -- 2026-11-08, 136 downloads/month (pypistats): Fails Stable: version 0.1.1, with production hardening still planned in its launch post. Re-check at 1.0.
+- mattpocock/skills -- 2026-11-08, no PyPI download signal: General engineering skills whose only language-specific ones are for TypeScript. Not Python work.
+- microsoft/SynapseML -- 2026-11-08, 1,161,151 downloads/month (pypistats, package synapseml): Spark-only and Beta, with a count of unexplained origin; Distributed Computing, its natural home, is at cap with pyspark.
+- MikeChongCan/scylla -- 2026-11-08, 121 downloads/month (pypistats): Last PyPI release 2019-08, pinning requests 2.22.0 and Python 3.6. A proxy pool, not a scraping framework.
+- obra/superpowers -- 2026-11-08, no PyPI download signal: A language-agnostic engineering methodology pack with no Python content. Not Python work.
+- ollaya-dev/ollaya -- 2026-11-08, no PyPI download signal: A Rust server for decision models that never generates text, so not LLM inference, and it has no Python surface.
+- openclaw/openclaw -- 2026-11-08, no PyPI download signal: A TypeScript/Node assistant with TypeScript plugins. Not Python work.
+- paradigmxyz/flood -- 2026-11-08, 13 downloads/month (pypistats, package paradigm-flood): Fails Active: last commit on main 2023-08-30. It benchmarks Ethereum nodes only.
+- planetscale/database-skills -- 2026-11-08, no PyPI download signal: Four database-vendor skills for any language. Not Python work.
+- revsys/django-friendship -- 2026-11-08, 2,797 downloads/month (pypistats): Negligible demand, and no use case.
+- yutiansut/QUANTAXIS -- 2026-11-08, 1,396 downloads/month (pypistats, package quantaxis): Fails Stable: last PyPI upload 2.0.0.dev33 in 2021-12. A trading and backtesting platform, not a financial-data library.
 
 ## Last Audited
 
