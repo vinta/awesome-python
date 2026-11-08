@@ -11,6 +11,7 @@
   "/categories/data-analysis/financial-data/": "/categories/data-ingestion-etl/financial-data/",
   "/categories/debugging-tools/others/": "/categories/debugging-tools/web-framework-toolbars/",
   "/categories/debugging-tools/pdb-like-debugger/": "/categories/debugging-tools/debuggers/",
+  "/categories/devops-tools/other/": "/categories/devops-tools/backup/",
   "/categories/distributed-computing/batch-processing/": "/categories/distributed-computing/",
   "/categories/file-format-processing/general/": "/categories/file-format-processing/binary-formats/",
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",

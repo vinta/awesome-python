@@ -776,7 +776,7 @@ _Software and libraries for DevOps._
   - [supervisor](https://github.com/Supervisor/supervisor) - Supervisor process control system for UNIX.
   - [flower](https://github.com/mher/flower) - A real-time monitor and web admin for Celery task queues.
   - [sh](https://github.com/amoffat/sh) - A full-fledged subprocess replacement for Python.
-- Other
+- Backup
   - [borgbackup](https://github.com/borgbackup/borg) - A deduplicating archiver with compression and encryption.
 
 ### Distributed Computing
