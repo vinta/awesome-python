@@ -945,9 +945,8 @@ _Libraries for working with HTML and XML._
 
 _Libraries for parsing and manipulating specific file formats._
 
-- General
+- Binary Formats
   - [pyelftools](https://github.com/eliben/pyelftools) - Parsing and analyzing ELF files and DWARF debugging information.
-  - [tablib](https://github.com/jazzband/tablib) - A module for tabular datasets in XLS, CSV, JSON, YAML.
 - File Conversion
   - [markitdown](https://github.com/microsoft/markitdown) - Python tool for converting files and office documents to Markdown.
   - [pypandoc](https://github.com/JessicaTegner/pypandoc) - A thin wrapper for pandoc, the universal document converter.
@@ -973,6 +972,7 @@ _Libraries for parsing and manipulating specific file formats._
 - Data Formats
   - [tomllib](https://docs.python.org/3/library/tomllib.html) - (Python standard library) Parse TOML files.
   - [pyyaml](https://github.com/yaml/pyyaml) - A full-featured YAML framework for Python.
+  - [tablib](https://github.com/jazzband/tablib) - A module for tabular datasets in XLS, CSV, JSON, YAML.
 
 ### File Manipulation
 

@@ -11,6 +11,7 @@
   "/categories/debugging-tools/others/": "/categories/debugging-tools/web-framework-toolbars/",
   "/categories/debugging-tools/pdb-like-debugger/": "/categories/debugging-tools/debuggers/",
   "/categories/distributed-computing/batch-processing/": "/categories/distributed-computing/",
+  "/categories/file-format-processing/general/": "/categories/file-format-processing/binary-formats/",
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",
   "/categories/gui-development/wrappers/": "/categories/gui-development/",
   "/categories/http-clients/clients/": "/categories/http-clients/",
