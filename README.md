@@ -321,10 +321,13 @@ _ASGI and WSGI compatible web servers._
 
 _Libraries for working with WebSocket._
 
-- [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
-- [channels](https://github.com/django/channels) - Brings WebSocket, long-poll HTTP, and other async support to Django.
-- [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
-- [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+- General
+  - [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
+  - [channels](https://github.com/django/channels) - Brings WebSocket, long-poll HTTP, and other async support to Django.
+  - [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
+  - [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+- WebRTC
+  - [aiortc](https://github.com/aiortc/aiortc) - A WebRTC and ORTC implementation for asyncio, with audio, video, and data channels.
 
 ### Template Engines
 
