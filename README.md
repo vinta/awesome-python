@@ -1005,15 +1005,15 @@ _Libraries for file manipulation._
 
 _Libraries for manipulating images._
 
-- Barcodes and QR Codes
-  - [qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
-  - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 - General
   - [pillow](https://github.com/python-pillow/Pillow) - Pillow is the friendly [PIL](https://pillow.readthedocs.io/en/stable/about.html) fork.
   - [scikit-image](https://github.com/scikit-image/scikit-image) - A Python library for (scientific) image processing.
   - [rembg](https://github.com/danielgatis/rembg) - A tool to remove image backgrounds.
   - [wand](https://github.com/emcconville/wand) - Python bindings for [MagickWand](https://imagemagick.org/magick-wand/), C API for ImageMagick.
   - [pyvips](https://github.com/libvips/pyvips) - A binding for libvips, a fast image processing library with low memory needs.
+- Barcodes and QR Codes
+  - [qrcode](https://github.com/lincolnloop/python-qrcode) - A pure Python QR Code generator.
+  - [python-barcode](https://github.com/WhyNotHugo/python-barcode) - Create barcodes in Python with no extra dependencies.
 - Image Serving
   - [thumbor](https://github.com/thumbor/thumbor) - A smart imaging service. It enables on-demand crop, resizing and flipping of images.
 
