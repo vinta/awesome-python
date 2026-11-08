@@ -225,6 +225,8 @@ _Libraries for machine learning. Also see [awesome-machine-learning](https://git
 - Hyperparameter Optimization
   - [optuna](https://github.com/optuna/optuna) - A hyperparameter optimization framework with define-by-run search spaces and pruning of unpromising trials.
   - [hyperopt](https://github.com/hyperopt/hyperopt) - Distributed asynchronous hyperparameter optimization with Tree-structured Parzen Estimators.
+- Experiment Tracking
+  - [mlflow](https://github.com/mlflow/mlflow) - An open-source platform for tracking experiments, managing models, and evaluating LLM apps.
 
 ### Natural Language Processing
 
