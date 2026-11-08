@@ -5,8 +5,8 @@ How to choose:
 - API docs straight from docstrings, with no configuration: pdoc
 - Handwritten docs plus an API reference, as HTML, PDF, and more: Sphinx
 - A searchable Markdown site, with no HTML, CSS, or JavaScript to learn: Material for MkDocs
-- Architecture diagrams as code, kept in version control: Diagrams
 - A Material for MkDocs site, new or existing, on its team's own generator: Zensical
+- Architecture diagrams as code, kept in version control: Diagrams
 
 pdoc [aims to do one thing and do it well](https://pdoc.dev/docs/pdoc.html#what-is-pdoc): API documentation that follows your module hierarchy, with no configuration. Docstrings are Markdown, and it understands Google and numpydoc styles too. Run `pdoc ./demo.py` or `pdoc my_module_name` for a [preview in your browser that reloads](https://pdoc.dev/docs/pdoc.html#quickstart) when you edit the code, then `pdoc ./demo.py -o ./docs` to export the HTML. Its output is self-contained HTML, and for substantially more complex documentation needs, [pdoc's docs recommend Sphinx](https://pdoc.dev/docs/pdoc.html#limitations).
 
