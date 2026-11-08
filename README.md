@@ -155,6 +155,7 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Model Context Protocol
   - [mcp](https://github.com/modelcontextprotocol/python-sdk) - The official Python SDK for building Model Context Protocol servers and clients.
   - [fastmcp](https://github.com/PrefectHQ/fastmcp) - A high-level, Pythonic framework for building MCP servers and clients.
+  - [mcp4api](https://github.com/smusali/mcp4api) - Generates an MCP Server from an OpenAPI Spec and verifies every tool against the API.
 - Personal Assistants
   - [hermes-agent](https://github.com/NousResearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
   - [AstrBot](https://github.com/AstrBotDevs/AstrBot) - A multi-platform AI assistant that connects LLMs to chat apps like Telegram, Slack, and QQ, extensible with Python plugins.
@@ -652,6 +653,7 @@ _Tools for static analysis, linters and code quality checkers. Also see [awesome
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
   - [complexipy](https://github.com/rohaquinlop/complexipy) - Cognitive complexity analysis for Python code, written in Rust.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
+  - [checkowners](https://github.com/smusali/checkOwners) - Infers Code Ownership from git history and reports CODEOWNERS drift.
 - Git Hooks
   - [pre-commit](https://github.com/pre-commit/pre-commit) - A framework for managing and maintaining multi-language pre-commit hooks.
 - Linters and Formatters
@@ -692,6 +694,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
 - API Testing
   - [schemathesis](https://github.com/schemathesis/schemathesis) - Automatic property-based testing of web APIs from OpenAPI or GraphQL schemas.
+  - [mcp-cross-exam](https://github.com/smusali/mcp-cross-exam) - Audit an MCP Server's transport, session, and tool schemas against its behavior.
 - Mock
   - [unittest.mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
