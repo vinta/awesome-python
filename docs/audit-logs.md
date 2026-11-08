@@ -77,6 +77,7 @@ Projects the maintainer decided not to list, with the evidence at decision time,
 - ets-labs/python-dependency-injector -- 2026-08-23, 9,086,069 downloads/month: the Dependency Injection use case was declined, since FastAPI's Depends and pytest fixtures absorb most of the need, leaving a leader with no challenger field.
 - konradhalas/dacite -- 2026-08-23, 23,147,569 downloads/month: last push 2025-03-17, fails the activity rule.
 - reagento/dishka -- 2026-08-23, 769,893 downloads/month: declined with the Dependency Injection use case.
+- voicute/onnx-wakeword -- 2026-08-16 (PR #3283), no PyPI download signal: the Speech use case was at its 5-entry cap and the PR made no displacement argument. 89 stars on 2026-11-08. Rejudge if a wake-word or keyword-spotting subcategory is minted.
 - xberg-io/* -- 2026-08-16: coordinated multi-entry self-promotion; four planted entries were removed (xberg, liter-llm, tree-sitter-language-pack, html-to-markdown). Reject any project from this organization on sight.
 - AbstractUmbra/audioop -- 2026-10-16, 7,714,737 downloads/month (ClickPy): gradio and discord.py require it on Python 3.13+, so the count is transitive. It is a backport of a removed stdlib module, not an audio tool readers choose.
 - alteryx/featuretools -- 2026-10-16, 106,521 downloads/month (ClickPy): Fails Active: last commit 2024-11-13, last release 2024-05-14.
