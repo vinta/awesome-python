@@ -692,6 +692,8 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [seleniumbase](https://github.com/seleniumbase/SeleniumBase) - Python framework for web automation & testing, with stealth options.
 - Load Testing
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+- Benchmarking
+  - [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - A pytest fixture for benchmarking code.
 - API Testing
   - [schemathesis](https://github.com/schemathesis/schemathesis) - Automatic property-based testing of web APIs from OpenAPI or GraphQL schemas.
 - Mock
