@@ -14,5 +14,6 @@
   "/categories/gui-development/terminal/": "/categories/cli-development/tui-frameworks/",
   "/categories/gui-development/wrappers/": "/categories/gui-development/",
   "/categories/http-clients/clients/": "/categories/http-clients/",
+  "/categories/text-processing/general/": "/categories/text-processing/diffs/",
   "/categories/web-servers/rpc/": "/categories/web-apis/rpc/"
 }

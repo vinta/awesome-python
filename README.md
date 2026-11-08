@@ -854,6 +854,7 @@ _Libraries for building command-line applications._
   - [rich](https://github.com/Textualize/rich) - Python library for rich text and beautiful formatting in the terminal. Also provides a great `RichHandler` log handler.
   - [tqdm](https://github.com/tqdm/tqdm) - Fast, extensible progress bar for loops and CLI.
   - [colorama](https://github.com/tartley/colorama) - Cross-platform colored terminal text.
+  - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
   - [alive-progress](https://github.com/rsalmei/alive-progress) - A new kind of progress bar, with real-time throughput, ETA and very cool animations.
 - TUI Frameworks
   - [textual](https://github.com/Textualize/textual) - A framework for building interactive user interfaces that run in the terminal and the browser.
@@ -908,15 +909,14 @@ _Libraries for working with graphical user interface applications._
 
 _Libraries for parsing and manipulating plain text._
 
+- Diffs
+  - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
 - Encoding and Unicode
   - [charset-normalizer](https://github.com/jawah/charset_normalizer) - Universal character encoding detector, and a dependency of requests.
   - [chardet](https://github.com/chardet/chardet) - Python character encoding detector.
   - [ftfy](https://github.com/rspeer/python-ftfy) - Makes Unicode text less broken and more consistent automagically.
 - Fuzzy Matching
   - [rapidfuzz](https://github.com/rapidfuzz/RapidFuzz) - Rapid fuzzy string matching using various string metrics, with a C++ core.
-- General
-  - [difflib](https://docs.python.org/3/library/difflib.html) - (Python standard library) Helpers for computing deltas.
-  - [pyfiglet](https://github.com/pwaller/pyfiglet) - An implementation of figlet written in Python.
 - Internationalization
   - [babel](https://github.com/python-babel/babel) - An internationalization library for Python.
 - Parser
