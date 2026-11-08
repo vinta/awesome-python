@@ -561,7 +561,7 @@ _Libraries for visualizing data. Also see [awesome-javascript](https://github.co
   - [seaborn](https://github.com/mwaskom/seaborn) - Statistical data visualization using Matplotlib.
   - [altair](https://github.com/vega/altair) - Declarative statistical visualization library for Python.
   - [bokeh](https://github.com/bokeh/bokeh) - Interactive web plotting for Python.
-- Specialized
+- Graphs and Maps
   - [graphviz](https://github.com/xflr6/graphviz) - Simple Python interface for creating and rendering Graphviz graphs.
   - [cartopy](https://github.com/SciTools/cartopy) - A cartographic Python library with matplotlib support.
   - [graphify](https://github.com/Graphify-Labs/graphify) - Turns code, SQL schemas, docs, papers, images, or videos into a queryable knowledge graph.
