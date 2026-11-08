@@ -188,6 +188,25 @@ Projects the maintainer decided not to list, with the evidence at decision time,
 - planetscale/database-skills -- 2026-11-08, no PyPI download signal: Four database-vendor skills for any language. Not Python work.
 - revsys/django-friendship -- 2026-11-08, 2,797 downloads/month (pypistats): Negligible demand, and no use case.
 - yutiansut/QUANTAXIS -- 2026-11-08, 1,396 downloads/month (pypistats, package quantaxis): Fails Stable: last PyPI upload 2.0.0.dev33 in 2021-12. A trading and backtesting platform, not a financial-data library.
+- anomalyco/opencode -- 2026-11-08, no PyPI download signal: A language-agnostic terminal coding agent. Not Python work.
+- disqus/django-bitfield -- 2026-11-08, 308,195 downloads/month (pypistats): Declined: no Django model add-ons use case, since these single-purpose tools don't compete.
+- django-cms/django-filer -- 2026-11-08, 98,545 downloads/month (pypistats): A django-cms companion app with no use case.
+- django-extensions/django-extensions -- 2026-11-08, 12,769,974 downloads/month (pypistats): A grab-bag of Django management commands, not a debugging tool. Its latest release (4.1, 2025-04) declares Django only through 5.2.
+- django-mptt/django-mptt -- 2026-11-08, 1,061,690 downloads/month (pypistats): Its own README says it is unmaintained and points new projects to django-tree-queries.
+- django-treebeard/django-treebeard -- 2026-11-08, 1,130,171 downloads/month (pypistats): Django trees have no clear leader: about 450K of its count is its own after wagtail and django-cms, django-mptt is unmaintained, and django-tree-queries has 173K.
+- google-gemini/gemini-cli -- 2026-11-08, no PyPI download signal: A language-agnostic terminal coding agent written in TypeScript. Not Python work.
+- jazzband/django-embed-video -- 2026-11-08, 27,356 downloads/month (pypistats): A small single-purpose app with no use case; last release 2024-05.
+- jazzband/django-model-utils -- 2026-11-08, 4,634,168 downloads/month (pypistats): Declined: no Django model add-ons use case, since these single-purpose tools don't compete. Last release 2024-09.
+- jazzband/django-push-notifications -- 2026-11-08, 237,516 downloads/month (pypistats): Push notifications have no use case (see xtrinch/fcm-django). Its classifiers stop at Django 4.0.
+- jieter/django-tables2 -- 2026-11-08, 810,345 downloads/month (pypistats): A Django HTML-tables use case would hold one leader and no challengers, like the declined Dependency Injection use case.
+- llazzaro/django-scheduler -- 2026-11-08, 19,627 downloads/month (pypistats): A small single-purpose calendar app with no use case.
+- m-bain/whisperX -- 2026-11-08, 342,919 downloads/month (pypistats, package whisperx): A wrapper over faster-whisper for word timestamps and diarization, not a successor to any Speech entry. Its monthly downloads dipped instead of rising, and its release line pins torch~=2.8.0 with requires_python <3.14.
+- makinacorpus/django-safedelete -- 2026-11-08, 1,906,926 downloads/month (pypistats): Declined: no Django model add-ons use case, since these single-purpose tools don't compete. Beta classifier.
+- olucurious/PyFCM -- 2026-11-08, 199,324 downloads/month (pypistats, package pyfcm): A thin client for Google's FCM API; firebase-admin is the obvious choice, and vendor clients were declined (2d98426).
+- openai/codex -- 2026-11-08, no PyPI download signal: A language-agnostic terminal coding agent written in Rust. Not Python work.
+- openai/openai-python -- 2026-11-08, 295,856,631 downloads/month (pypistats, package openai): A vendor API client, declined with Third-party APIs (2d98426); OpenAI is already listed through openai-agents. Much of its count is pulled in by other libraries.
+- saxix/django-concurrency -- 2026-11-08, 147,466 downloads/month (pypistats): Declined: no Django model add-ons use case, since these single-purpose tools don't compete.
+- xtrinch/fcm-django -- 2026-11-08, 304,945 downloads/month (pypistats): Push notifications have no use case: Google's firebase-admin (14.86M) is the obvious choice, and vendor SDKs were declined with Third-party APIs (2d98426).
 
 ## Last Audited
 

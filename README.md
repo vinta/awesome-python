@@ -155,6 +155,8 @@ _Libraries for building AI applications, LLM integrations, and autonomous agents
 - Model Context Protocol
   - [mcp](https://github.com/modelcontextprotocol/python-sdk) - The official Python SDK for building Model Context Protocol servers and clients.
   - [fastmcp](https://github.com/PrefectHQ/fastmcp) - A high-level, Pythonic framework for building MCP servers and clients.
+- Code Sandboxes
+  - [pydantic-monty](https://github.com/pydantic/monty) - A secure Python sandbox written in Rust for running AI-written code.
 - Personal Assistants
   - [hermes-agent](https://github.com/NousResearch/hermes-agent) - An adaptive personal AI assistant that grows with you.
   - [AstrBot](https://github.com/AstrBotDevs/AstrBot) - A multi-platform AI assistant that connects LLMs to chat apps like Telegram, Slack, and QQ, extensible with Python plugins.
@@ -225,6 +227,8 @@ _Libraries for machine learning. Also see [awesome-machine-learning](https://git
 - Hyperparameter Optimization
   - [optuna](https://github.com/optuna/optuna) - A hyperparameter optimization framework with define-by-run search spaces and pruning of unpromising trials.
   - [hyperopt](https://github.com/hyperopt/hyperopt) - Distributed asynchronous hyperparameter optimization with Tree-structured Parzen Estimators.
+- Experiment Tracking
+  - [mlflow](https://github.com/mlflow/mlflow) - An open-source platform for tracking experiments, managing models, and evaluating LLM apps.
 
 ### Natural Language Processing
 
@@ -319,10 +323,13 @@ _ASGI and WSGI compatible web servers._
 
 _Libraries for working with WebSocket._
 
-- [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
-- [channels](https://github.com/django/channels) - Brings WebSocket, long-poll HTTP, and other async support to Django.
-- [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
-- [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+- General
+  - [websockets](https://github.com/python-websockets/websockets) - A library for building WebSocket servers and clients with a focus on correctness and simplicity.
+  - [channels](https://github.com/django/channels) - Brings WebSocket, long-poll HTTP, and other async support to Django.
+  - [flask-socketio](https://github.com/miguelgrinberg/Flask-SocketIO) - Socket.IO integration for Flask applications.
+  - [autobahn-python](https://github.com/crossbario/autobahn-python) - WebSocket & WAMP for Python on Twisted and [asyncio](https://docs.python.org/3/library/asyncio.html).
+- WebRTC
+  - [aiortc](https://github.com/aiortc/aiortc) - A WebRTC and ORTC implementation for asyncio, with audio, video, and data channels.
 
 ### Template Engines
 
@@ -690,6 +697,8 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [seleniumbase](https://github.com/seleniumbase/SeleniumBase) - Python framework for web automation & testing, with stealth options.
 - Load Testing
   - [locust](https://github.com/locustio/locust) - Scalable user load testing tool written in Python.
+- Benchmarking
+  - [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - A pytest fixture for benchmarking code.
 - API Testing
   - [schemathesis](https://github.com/schemathesis/schemathesis) - Automatic property-based testing of web APIs from OpenAPI or GraphQL schemas.
 - Mock
@@ -986,6 +995,9 @@ _Libraries for file manipulation._
   - [mimetypes](https://docs.python.org/3/library/mimetypes.html) - (Python standard library) Map filenames to MIME types.
   - [python-magic](https://github.com/ahupp/python-magic) - A Python interface to the libmagic file type identification library.
   - [magika](https://github.com/google/magika) - Detects file content types with a deep-learning model.
+- Remote Files
+  - [fsspec](https://github.com/fsspec/filesystem_spec) - A unified filesystem interface for local, cloud, and remote storage.
+  - [smart-open](https://github.com/piskvorky/smart_open) - Stream files from S3, GCS, Azure, HDFS, and HTTP as a drop-in replacement for open().
 
 **Media**
 
@@ -1190,6 +1202,7 @@ _Tools for auditing dependencies against known vulnerabilities and scanning for 
 
 _Libraries for application-layer web security._
 
+- [flask-cors](https://github.com/corydolphin/flask-cors) - A Flask extension for handling Cross-Origin Resource Sharing (CORS).
 - [nh3](https://github.com/messense/nh3) - Python binding to the ammonia HTML sanitizer, a fast replacement for bleach.
 - [django-cors-headers](https://github.com/adamchainz/django-cors-headers) - Handles Cross-Origin Resource Sharing (CORS) headers for Django apps.
 - [secure](https://github.com/TypeError/secure) - HTTP security headers for Python web applications with ASGI and WSGI middleware.
