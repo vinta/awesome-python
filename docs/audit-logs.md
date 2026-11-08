@@ -58,15 +58,15 @@ These entries sit past the 12-month activity requirement without an override. Ea
 - blinker -- recorded 2026-10-02 ahead of its activity-line crossing on 2026-11-19 (last push 2025-11-19, last release 1.9.0 on 2024-11-08). Flask requires it.
 - diskcache -- kept 2026-10-02, last push 2024-08-10, last release 5.6.3 (2023-08-31). Kept despite an unpatched pickle deserialization advisory, CVE-2025-69872 (GHSA-w8v5-vhqr-4h9v), on 25,526,045 downloads/month on ClickPy.
 - django-rules -- recorded 2026-10-02 ahead of its activity-line crossing on 2026-10-11 (last push 2025-10-11, last release 3.5 on 2024-09-02).
-- ftfy
+- ftfy -- kept 2026-08-16, recorded 2026-11-08. Last commit 2024-10-30, last release 6.3.1 on 2024-10-26, 16,751,554 downloads/month on ClickPy. The listed encoding detectors only guess an encoding, while ftfy repairs text already decoded wrong. The one alternative found, plsfix, a Rust port, has 7,914 downloads/month and no release since 2025-01-31.
 - gensim -- recorded 2026-10-15 ahead of its activity-line crossing on 2026-11-01 (last push 2025-11-01, last release 4.4.0 on 2025-10-18), on 2,904,015 downloads/month on ClickPy (2026-10-12).
 - httpie -- kept 2026-08-16, recorded 2026-10-02. Last commit 2024-12-17, last release 3.2.4 on 2024-11-01.
-- itsdangerous
-- jieba
-- jinja
+- itsdangerous -- kept 2026-08-16, recorded 2026-11-08. Last commit 2025-06-14, last release 2.2.0 on 2024-04-16. Flask requires it, so most of its 240,311,557 downloads/month on ClickPy are Flask's 207,244,698.
+- jieba -- re-added 2026-04-19 (ba96331) after its 2026-03-26 removal, by maintainer decision: still useful and works on Python 3.13. Recorded 2026-11-08. Last commit 2020-02-15, last release 0.42.1 on 2020-01-20, 6,036,440 downloads/month on ClickPy. Of the segmenters claimed more accurate, pkuseg (last release 2020) and THULAC (2022) are inactive, and HanLP, a full NLP toolkit, has 15,140 downloads/month.
+- jinja -- kept 2026-08-16, recorded 2026-11-08. Last commit 2025-06-14, last release 3.1.6 on 2025-03-05, 687,554,650 downloads/month on ClickPy. Flask requires it.
 - python-pptx -- kept 2026-10-02, last commit 2024-08-06, last release 1.0.2 on 2024-08-07. No successor for generating .pptx files.
 - schedule -- kept 2026-08-16, recorded 2026-10-02. Last commit 2024-05-25.
-- sortedcontainers
+- sortedcontainers -- kept 2026-08-16, recorded 2026-11-08. Last commit 2024-03-01, last release 2.4.0 on 2021-05-16, 244,848,345 downloads/month on ClickPy. hypothesis requires it, but hypothesis's 66,969,835 downloads/month cover only about a quarter of that. No successor found.
 
 ## Rejected Additions
 
