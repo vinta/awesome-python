@@ -1051,6 +1051,7 @@ _Implementations of Python._
 _Libraries for enhancing Python built-in classes._
 
 - Class Boilerplate
+  - [dataclasses](https://docs.python.org/3/library/dataclasses.html) - (Python standard library) Adds generated special methods such as `__init__()` and `__repr__()` to your classes.
   - [attrs](https://github.com/python-attrs/attrs) - Writes `__init__`, `__eq__`, `__repr__`, and other boilerplate methods for your classes.
 - Mappings
   - [python-box](https://github.com/cdgriffith/Box) - Python dictionaries with advanced dot-notation access.
