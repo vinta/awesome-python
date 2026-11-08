@@ -4,8 +4,11 @@ How to choose:
 
 - Classes with generated dunder methods, validators, and converters: attrs
 - Dicts read with dot notation, nested ones included: python-box
+- Generated dunder methods with nothing to install: dataclasses
 - Looking up a key by its value, with both directions in sync: bidict
 - A faster drop-in for the `uuid` module: uuid-utils
+
+The standard library's dataclasses [adds generated special methods](https://docs.python.org/3/library/dataclasses.html) such as `__init__()` and `__repr__()` to your classes. Put `@dataclass` on a class, and every class variable with a type annotation becomes a field. Pass `frozen=True` for [read-only instances](https://docs.python.org/3/library/dataclasses.html#frozen-instances).
 
 attrs [writes the dunder methods](https://www.attrs.org/en/latest/) that implement object protocols, so you don't have to. For new code, its docs [recommend the modern API](https://www.attrs.org/en/latest/names.html#tl-dr): `@define` on the class and `field()` for an attribute, or `@frozen` for immutable instances, with slots on by default. Type annotations stay optional. The standard library's dataclasses [gave up features for simplicity](https://www.attrs.org/en/latest/why.html#data-classes), like validators and converters, so a class that needs them goes to attrs. It [isn't a full serialization library](https://www.attrs.org/en/latest/overview.html#what-attrs-is-not), though: to serialize and validate your attrs classes, its docs point you to its sibling project, cattrs.
 
