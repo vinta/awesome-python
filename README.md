@@ -419,6 +419,7 @@ _Libraries to automate web scraping and extract web content._
   - [markdownify](https://github.com/matthewwithanm/python-markdownify) - Convert HTML to Markdown, with customizable tag handling.
   - [feedparser](https://github.com/kurtmckee/feedparser) - Universal feed parser.
   - [trafilatura](https://github.com/adbar/trafilatura) - A tool for gathering text and metadata from the web, with built-in content filtering.
+  - [2scraper](https://github.com/2scraper) - 66 site-specific Python scrapers that run end to end; structured JSON/CSV output.
 
 ### Email
 
