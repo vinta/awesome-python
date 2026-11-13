@@ -845,6 +845,7 @@ _Libraries for generating and working with logs._
 _Tools and libraries for packet manipulation and network device automation._
 
 - [scapy](https://github.com/secdev/scapy) - A brilliant packet manipulation library.
+- [netcfg-vault](https://github.com/BG8CFB/netcfg-vault) - Batch backup network device configs with encrypted vaults and scheduled tasks.
 - [netmiko](https://github.com/ktbyers/netmiko) - Multi-vendor library to simplify CLI connections to network devices.
 - [napalm](https://github.com/napalm-automation/napalm) - Cross-vendor API to manipulate network devices.
 
