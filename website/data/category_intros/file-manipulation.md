@@ -14,6 +14,8 @@ How to choose:
 - Reading and writing .gz files: gzip
 - Denser compression than gzip at a similar speed: brotli
 - Compressing and decompressing as fast as possible: lz4
+- Tar and ZIP archives: tarfile and zipfile, or pyzipper for AES-encrypted ZIP files
+- 7-Zip and RAR archives: py7zr, or rarfile to read .rar files
 
 If you aren't sure which pathlib class you need, the docs say [`Path` is most likely it](https://docs.python.org/3/library/pathlib.html): it makes a concrete path for the platform your code runs on. [Join paths with the `/` operator](https://docs.python.org/3/library/pathlib.html#basic-use), and list a directory with `iterdir()` or `glob()`.
 
@@ -40,3 +42,13 @@ zstandard is [the most feature-rich zstd binding](https://python-zstandard.readt
 brotli is the Python module of the Brotli project, whose format is [similar in speed to deflate but denser](https://github.com/google/brotli#introduction). Call `brotli.compress()` and `brotli.decompress()` on bytes, or [feed a `brotli.Compressor` piece by piece](https://github.com/google/brotli/blob/master/python/brotli.py) with `process()`, then call `finish()`.
 
 lz4 binds the LZ4 library, built for [extremely fast compression and an extremely fast decoder](https://github.com/lz4/lz4). Its docs recommend [the `lz4.frame` bindings](https://python-lz4.readthedocs.io/en/stable/quickstart.html#simple-usage), since the frame format works with other LZ4 implementations and language bindings. `lz4.frame.open()` is [the most convenient way to work with compressed files](https://python-lz4.readthedocs.io/en/stable/quickstart.html#working-with-compressed-files), and it works like `gzip.open()`.
+
+tarfile reads and writes tar archives through [`tarfile.open()`](https://docs.python.org/3/library/tarfile.html#tarfile.open), and a mode like `'r:gz'` or `'w:zst'` picks the compression. To extract, use `extractall()` with the [`'data'` filter](https://docs.python.org/3/library/tarfile.html#extraction-filters), which is meant for cross-platform data archives. Still, never extract an archive from an untrusted source without inspecting it first.
+
+zipfile works through [`ZipFile` as a context manager](https://docs.python.org/3/library/zipfile.html#zipfile-objects): `ZipFile('spam.zip', 'w')` to write, then `write()` each file. Before you call `extractall()` on an archive you didn't make, [inspect it first](https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.extractall), since members with absolute paths or `..` can land outside the target folder.
+
+py7zr opens 7-Zip archives with [`SevenZipFile` in a `with` block](https://github.com/miurahr/py7zr#sevenzipfile-class-usage): call `extractall()` in `'r'` mode, or `writeall()` in `'w'` mode to pack a whole folder.
+
+pyzipper is [a replacement for `zipfile` that reads and writes AES-encrypted ZIP files](https://github.com/danifus/pyzipper#usage), with the same API. Open the archive with `pyzipper.AESZipFile`, pass `encryption=pyzipper.WZ_AES` when writing, and call `setpassword()` with a bytes password.
+
+rarfile reads RAR archives through [an interface in the style of `zipfile`](https://github.com/markokr/rarfile). It parses archives in pure Python, but extracts compressed files with an external tool, so install unrar, the one it recommends.
