@@ -122,6 +122,9 @@ An opinionated guide to the best Python frameworks, libraries, and tools.
 - [Penetration Testing](#penetration-testing)
 - [Supply Chain Security](#supply-chain-security)
 - [Web Security](#web-security)
+- [Veracust](https://github.com/veracust-HQ) - An acoustic authenticity engine exploring how to detect AI-cloned voices through physical audio signals.
+
+
 
 **Other**
 
