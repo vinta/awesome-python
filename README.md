@@ -1001,6 +1001,7 @@ _Libraries for file manipulation._
   - [smart-open](https://github.com/piskvorky/smart_open) - Stream files from S3, GCS, Azure, HDFS, and HTTP as a drop-in replacement for open().
 - Compression
   - [compression.zstd](https://docs.python.org/3/library/compression.zstd.html) - (Python standard library) Compress and decompress data in the Zstandard format.
+  - [gzip](https://docs.python.org/3/library/gzip.html) - (Python standard library) Read and write gzip-compressed files and data.
 
 **Media**
 
