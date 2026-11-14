@@ -1007,6 +1007,7 @@ _Libraries for file manipulation._
   - [lz4](https://github.com/python-lz4/python-lz4) - Python bindings for the LZ4 fast compression library.
 - Archives
   - [tarfile](https://docs.python.org/3/library/tarfile.html) - (Python standard library) Read and write tar archives, including gzip, bz2, lzma, and zstd compressed ones.
+  - [zipfile](https://docs.python.org/3/library/zipfile.html) - (Python standard library) Read and write ZIP archives.
 
 **Media**
 
