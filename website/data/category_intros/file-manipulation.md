@@ -10,6 +10,10 @@ How to choose:
 - Telling text file types apart, like source code from config files: Magika
 - Listing, globbing, and copying files on cloud or remote storage: fsspec
 - Streaming one large remote file through a drop-in `open()`: smart_open
+- Zstandard files and data: compression.zstd, or zstandard for multi-threaded compression
+- Reading and writing .gz files: gzip
+- Denser compression than gzip at a similar speed: brotli
+- Compressing and decompressing as fast as possible: lz4
 
 If you aren't sure which pathlib class you need, the docs say [`Path` is most likely it](https://docs.python.org/3/library/pathlib.html): it makes a concrete path for the platform your code runs on. [Join paths with the `/` operator](https://docs.python.org/3/library/pathlib.html#basic-use), and list a directory with `iterdir()` or `glob()`.
 
@@ -26,3 +30,13 @@ Magika runs [a compact deep-learning model](https://securityresearch.google/magi
 fsspec gives you [one API for local, remote, and embedded file systems](https://filesystem-spec.readthedocs.io/en/latest/), and it works the same whatever the storage backend. Get a file system by protocol name, like `fsspec.filesystem("s3")`, then call methods that [follow posix naming and the `os` module](https://filesystem-spec.readthedocs.io/en/latest/usage.html#use-a-file-system): `ls()`, `glob()`, `cp()`, and `rm()`. For one file, [`fsspec.open()` picks the backend from the URL](https://filesystem-spec.readthedocs.io/en/latest/usage.html#higher-level), and opens the file only when you enter its `with` block.
 
 smart_open is [a drop-in replacement for Python's built-in `open()`](https://github.com/piskvorky/smart_open#what) that streams very large files from and to S3, GCS, Azure Blob Storage, HDFS, HTTP, and SFTP. Import its `open` in place of the built-in, and pass it a URL like `s3://bucket/key`. A file name ending in `.gz`, `.bz2`, or `.zst` gets [compressed or decompressed on the fly](https://github.com/piskvorky/smart_open#compression-handling). To use your own credentials or settings, [pass the storage service's client object in `transport_params`](https://github.com/piskvorky/smart_open#transport-specific-options).
+
+compression.zstd covers files, bytes, and streams. [`compression.zstd.open()`](https://docs.python.org/3/library/compression.zstd.html#compression.zstd.open) reads and writes .zst files as file objects, `compress()` and `decompress()` handle bytes in one call, and `ZstdCompressor` and `ZstdDecompressor` work through data a chunk at a time.
+
+gzip [opens .gz files like regular files](https://docs.python.org/3/library/gzip.html#gzip.open): `gzip.open()` takes `'rb'` or `'wb'` for bytes, and `'rt'` or `'wt'` for text. For data already in memory, call `gzip.compress()` and `gzip.decompress()`.
+
+zstandard is [the most feature-rich zstd binding](https://python-zstandard.readthedocs.io/en/latest/projectinfo.html#comparison-to-other-python-bindings). Still, its own docs say the standard library is probably the easiest way to use zstd, if it works for you. Use its one-shot APIs for data that fits in memory, and [its streaming APIs for large inputs](https://python-zstandard.readthedocs.io/en/latest/api_usage.html#choosing-an-api). Pass `threads` to `ZstdCompressor` to [compress on several cores](https://python-zstandard.readthedocs.io/en/latest/multithreaded.html), in C threads that run outside the GIL.
+
+brotli is the Python module of the Brotli project, whose format is [similar in speed to deflate but denser](https://github.com/google/brotli#introduction). Call `brotli.compress()` and `brotli.decompress()` on bytes, or [feed a `brotli.Compressor` piece by piece](https://github.com/google/brotli/blob/master/python/brotli.py) with `process()`, then call `finish()`.
+
+lz4 binds the LZ4 library, built for [extremely fast compression and an extremely fast decoder](https://github.com/lz4/lz4). Its docs recommend [the `lz4.frame` bindings](https://python-lz4.readthedocs.io/en/stable/quickstart.html#simple-usage), since the frame format works with other LZ4 implementations and language bindings. `lz4.frame.open()` is [the most convenient way to work with compressed files](https://python-lz4.readthedocs.io/en/stable/quickstart.html#working-with-compressed-files), and it works like `gzip.open()`.

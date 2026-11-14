@@ -104,6 +104,15 @@ Projects the maintainer decided not to list, with the evidence at decision time,
 - m-bain/whisperX -- 2026-11-08, 342,919 downloads/month (pypistats, package whisperx): A wrapper over faster-whisper for word timestamps and diarization, not a successor to any Speech entry. Its monthly downloads dipped instead of rising, and its release line pins torch~=2.8.0 with requires_python <3.14.
 - openai/codex -- 2026-11-08, no PyPI download signal: A language-agnostic terminal coding agent written in Rust. Not Python work.
 - openai/openai-python -- 2026-11-08, 295,856,631 downloads/month (pypistats, package openai): A vendor API client, declined with Third-party APIs (2d98426); OpenAI is already listed through openai-agents. Much of its count is pulled in by other libraries.
+- milesgranger/cramjam -- 2026-11-15, 31,936,738 downloads/month (pypistats): fastparquet and python-snappy require it, and few people pick it directly. Compression is at cap.
+- intake/python-snappy -- 2026-11-15, 11,089,388 downloads/month (pypistats): Now a thin wrapper over cramjam. Snappy is mostly used inside Parquet and Kafka libraries, not called directly.
+- Rogdham/backports.zstd -- 2026-11-15, 57,800,006 downloads/month (pypistats, package backports-zstd): A backport of the listed compression.zstd for Python 3.10–3.13 that won't install on 3.14. The stdlib entry covers it.
+- Rogdham/pyzstd -- 2026-11-15, 6,838,415 downloads/month (pypistats): compression.zstd was built from it, and its own docs guide users to the stdlib. Its only remaining edge is the seekable format.
+- pycompression/python-zlib-ng -- 2026-11-15, 3,387,853 downloads/month (pypistats, package zlib-ng): A faster drop-in for zlib and gzip with a niche audience (16 stars).
+- pycompression/python-isal -- 2026-11-15, 2,960,582 downloads/month (pypistats, package isal): A faster drop-in for zlib and gzip using Intel ISA-L, with a niche audience (61 stars).
+- python-hyper/brotlicffi -- 2026-11-15, 1,946,691 downloads/month (pypistats): The PyPy version of the listed brotli. HTTP clients pick it automatically on non-CPython.
+- uktrade/stream-zip -- 2026-11-15, 980,636 downloads/month (pypistats): Builds ZIP files as a stream. Niche (21 stars), and no archives use case exists.
+- Changaco/python-libarchive-c -- 2026-11-15, 824,581 downloads/month (pypistats, package libarchive-c): A libarchive binding with low demand (85 stars) that needs the system library. No archives use case exists.
 
 ## Last Audited
 
