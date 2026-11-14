@@ -1010,6 +1010,7 @@ _Libraries for file manipulation._
   - [zipfile](https://docs.python.org/3/library/zipfile.html) - (Python standard library) Read and write ZIP archives.
   - [py7zr](https://github.com/miurahr/py7zr) - A pure-Python library for reading and writing 7-Zip archives.
   - [pyzipper](https://github.com/danifus/pyzipper) - Read and write AES-encrypted ZIP files ([zipfile](https://docs.python.org/3/library/zipfile.html) fork).
+  - [rarfile](https://github.com/markokr/rarfile) - A RAR archive reader with a zipfile-like API.
 
 **Media**
 
