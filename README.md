@@ -999,6 +999,8 @@ _Libraries for file manipulation._
 - Remote Files
   - [fsspec](https://github.com/fsspec/filesystem_spec) - A unified filesystem interface for local, cloud, and remote storage.
   - [smart-open](https://github.com/piskvorky/smart_open) - Stream files from S3, GCS, Azure, HDFS, and HTTP as a drop-in replacement for open().
+- Compression
+  - [compression.zstd](https://docs.python.org/3/library/compression.zstd.html) - (Python standard library) Compress and decompress data in the Zstandard format.
 
 **Media**
 
