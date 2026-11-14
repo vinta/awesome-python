@@ -111,8 +111,8 @@ Projects the maintainer decided not to list, with the evidence at decision time,
 - pycompression/python-zlib-ng -- 2026-11-15, 3,387,853 downloads/month (pypistats, package zlib-ng): A faster drop-in for zlib and gzip with a niche audience (16 stars).
 - pycompression/python-isal -- 2026-11-15, 2,960,582 downloads/month (pypistats, package isal): A faster drop-in for zlib and gzip using Intel ISA-L, with a niche audience (61 stars).
 - python-hyper/brotlicffi -- 2026-11-15, 1,946,691 downloads/month (pypistats): The PyPy version of the listed brotli. HTTP clients pick it automatically on non-CPython.
-- uktrade/stream-zip -- 2026-11-15, 980,636 downloads/month (pypistats): Builds ZIP files as a stream. Niche (21 stars), and no archives use case exists.
-- Changaco/python-libarchive-c -- 2026-11-15, 824,581 downloads/month (pypistats, package libarchive-c): A libarchive binding with low demand (85 stars) that needs the system library. No archives use case exists.
+- uktrade/stream-zip -- 2026-11-15, 980,636 downloads/month (pypistats): Builds ZIP files as a stream. Niche (21 stars), and Archives is at cap.
+- Changaco/python-libarchive-c -- 2026-11-15, 824,581 downloads/month (pypistats, package libarchive-c): A libarchive binding with low demand (85 stars) that needs the system library. Archives is at cap.
 
 ## Last Audited
 
