@@ -1005,6 +1005,8 @@ _Libraries for file manipulation._
   - [zstandard](https://github.com/indygreg/python-zstandard) - Python bindings to the Zstandard (zstd) compression library.
   - [brotli](https://github.com/google/brotli) - Python bindings for Google's Brotli compression library.
   - [lz4](https://github.com/python-lz4/python-lz4) - Python bindings for the LZ4 fast compression library.
+- Archives
+  - [tarfile](https://docs.python.org/3/library/tarfile.html) - (Python standard library) Read and write tar archives, including gzip, bz2, lzma, and zstd compressed ones.
 
 **Media**
 
