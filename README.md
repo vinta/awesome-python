@@ -1009,6 +1009,7 @@ _Libraries for file manipulation._
   - [tarfile](https://docs.python.org/3/library/tarfile.html) - (Python standard library) Read and write tar archives, including gzip, bz2, lzma, and zstd compressed ones.
   - [zipfile](https://docs.python.org/3/library/zipfile.html) - (Python standard library) Read and write ZIP archives.
   - [py7zr](https://github.com/miurahr/py7zr) - A pure-Python library for reading and writing 7-Zip archives.
+  - [pyzipper](https://github.com/danifus/pyzipper) - Read and write AES-encrypted ZIP files ([zipfile](https://docs.python.org/3/library/zipfile.html) fork).
 
 **Media**
 
