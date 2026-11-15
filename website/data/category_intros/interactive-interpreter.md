@@ -1,18 +1,29 @@
-Exploring code is easier in IPython than in the default Python interactive interpreter. Jupyter Notebook mixes code with notes and plots.
+IPython is the Python interactive interpreter for a terminal prompt with magic commands. Notebooks go in Jupyter Notebook, or marimo for cells that rerun themselves.
 
 How to choose:
 
-- A better terminal prompt, with help on any object and magic commands: IPython
-- Code, notes, and plots in one shareable document: Jupyter Notebook
-- A reactive notebook saved as a Python file you can run as a script or app: marimo
-- A terminal REPL with syntax highlighting, multiline editing, and Vi or Emacs keys: ptpython
+- A terminal prompt with magic commands and shell access: IPython
+- A browser notebook, in Python or another language: Jupyter Notebook
+- A notebook that reruns dependent cells and saves as a .py file: marimo
+- A notebook you also serve as a web app: marimo
+- A REPL you set up through a menu instead of magic commands: ptpython
 
-IPython takes whatever you'd type at the standard Python prompt and adds [tab completion, object introspection, and system shell access](https://ipython.readthedocs.io/en/stable/overview.html). Its tutorial covers [the everyday commands](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html): `object?` shows an object's details, Tab after `object_name.` lists its attributes, and `!` runs a shell command. Magic commands start with `%`: `%timeit` times a statement, `%run` runs a script and loads its variables into your session, and `%debug` opens the debugger after an exception.
+### IPython
 
-Start Jupyter Notebook with [`jupyter notebook`](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#starting-the-notebook-server), which runs a server on your machine and opens the app in your browser. Its docs suggest you [work on a problem in pieces](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#basic-workflow): put related ideas into cells, and move on once the earlier ones work. Python code runs in IPython, the default kernel. Notebooks are saved as `.ipynb` files, and nbconvert [turns them into HTML, PDF, or slides](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#notebook-documents).
+Pick IPython for a terminal prompt built for exploring code. Besides Python, it takes its own commands. `object?` [prints details about any object](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#the-four-most-helpful-commands), [magic commands](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#magic-functions) like `%run` start with `%`, and `!` [runs a line in your system shell](https://ipython.readthedocs.io/en/stable/interactive/tutorial.html#system-shell-commands). IPython is also [the Jupyter kernel](https://ipython.readthedocs.io/en/stable/) that runs Python in notebooks, with the same main features as the shell. Run `ipython` and type `?` for an overview.
 
-marimo is [a reactive notebook](https://docs.marimo.io/): run a cell, and marimo runs the cells that depend on it, so code and outputs stay consistent. Each notebook is [stored as a plain Python file](https://docs.marimo.io/faq/#how-is-marimo-different-from-jupyter), so you can diff it in Git, run it as a script with `python`, or serve it as an app with `marimo run`. That model comes with two rules. [Each global variable is defined in only one cell](https://docs.marimo.io/guides/reactivity/#global-variable-names-must-be-unique), so prefix a scratch variable with `_` to keep it local to its cell. And since marimo doesn't track mutations, [mutate an object only in the cell that creates it](https://docs.marimo.io/guides/best_practices/). Unlike a Jupyter notebook, a marimo file [doesn't store outputs like plots](https://docs.marimo.io/guides/coming_from/jupyter/), and IPython magic commands and `!` shell commands don't work in it.
+### Jupyter Notebook
 
-ptpython is [a better Python REPL](https://github.com/prompt-toolkit/ptpython) for the terminal, built on prompt_toolkit. It adds syntax highlighting, multiline editing where the up arrow works, autocompletion, Vi or Emacs key bindings, and a configuration menu. Run `ptpython` to start it, or `ptipython` to add IPython's magic functions and shell integration.
+Pick Jupyter Notebook for a browser notebook that holds code, text, and charts in one document. Stay on it when you need [kernels for other languages](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#installing-kernels). It offers [a lightweight, simplified experience compared to JupyterLab](https://jupyter-notebook.readthedocs.io/en/stable/), and since it's based on JupyterLab, it [supports many JupyterLab extensions](https://jupyter-notebook.readthedocs.io/en/stable/notebook_7_features.html#support-for-many-jupyterlab-extensions). Run `jupyter notebook` from [the top-level directory that holds your notebooks](https://docs.jupyter.org/en/latest/running.html). Each notebook is saved as an `.ipynb` file, JSON that keeps [the inputs and outputs](https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#notebook-documents) of your session.
 
-Both terminal REPLs can also open inside your program, with that scope's variables at hand: call [`IPython.embed()`](https://ipython.readthedocs.io/en/stable/interactive/reference.html#embedding-ipython), or ptpython's [`embed(globals(), locals())`](https://github.com/prompt-toolkit/ptpython#embedding-the-repl). For more Jupyter tools, see [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter).
+### marimo
+
+Pick marimo when a notebook's outputs should stay consistent with its code. Run a cell, and marimo [automatically runs every cell that references the variables it defines](https://docs.marimo.io/guides/reactivity/#how-marimo-runs-cells). It stores each notebook [as Python, not JSON](https://docs.marimo.io/guides/coming_from/jupyter/#marimos-file-format), so you can version it with git and run it as a script, but outputs like plots aren't saved in the file. Open a notebook with `marimo edit`, and [serve it as an app](https://docs.marimo.io/getting_started/quickstart/#deploy-as-apps) with `marimo run`, which hides the code. Stay on Jupyter Notebook if you rely on IPython magic commands or `!` lines, since [marimo notebooks are just Python](https://docs.marimo.io/guides/coming_from/jupyter/#magic-commands). The same goes if you want to run cells in your own order: marimo [allows each variable in only one cell](https://docs.marimo.io/guides/coming_from/jupyter/#redefining-variables), so it can work out the order itself.
+
+### ptpython
+
+Pick ptpython if you'd rather set up your prompt through a configuration menu than type IPython's magic commands. It's [an advanced Python REPL](https://github.com/prompt-toolkit/ptpython). Start it by typing `ptpython`. For IPython's magic functions with ptpython's interface, run [`ptipython`](https://github.com/prompt-toolkit/ptpython#ipython-support).
+
+### More Jupyter resources
+
+For more Jupyter projects, see [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter).
