@@ -1,32 +1,51 @@
-SQLAlchemy maps classes to tables in apps outside Django, which has its own ORM. Write Python instead of raw SQL, and a Python ORM returns rows as objects.
+Pick SQLAlchemy as your Python ORM unless you're on Django, which ships its own. In a FastAPI app, SQLModel adds Pydantic models on top of SQLAlchemy.
 
 How to choose:
 
-- An app outside Django, sync or async: SQLAlchemy
+- Any app outside Django: SQLAlchemy
 - A Django project: Django ORM
-- A small app, with few concepts to learn: Peewee
-- One set of model classes for Pydantic and SQLAlchemy, as in FastAPI: SQLModel
-- Amazon DynamoDB tables: PynamoDB
+- A FastAPI app, with one class for both the table and the API schema: SQLModel
+- A small app, with no required dependencies: Peewee
+- Amazon DynamoDB: PynamoDB
 - MongoDB from synchronous code: MongoEngine
-- MongoDB from async code, with Pydantic models: Beanie
-- A Django project on MongoDB: Django MongoDB Backend
+- MongoDB from asyncio code, with Pydantic models: Beanie
+- MongoDB in a Django project, through Django models: Django MongoDB Backend
 
-SQLAlchemy builds its ORM [on top of Core](https://docs.sqlalchemy.org/en/latest/tutorial/index.html), its SQL toolkit, which you can also use alone. The ORM follows the [data mapper pattern](https://www.sqlalchemy.org/philosophy.html), so your classes and your database schema can change independently of each other. Declare models with typed `Mapped[]` attributes, as in the [ORM Quick Start](https://docs.sqlalchemy.org/en/latest/orm/quickstart.html#declare-models). Keep the session [outside the functions that query data](https://docs.sqlalchemy.org/en/latest/orm/session_basics.html#session-faq-whentocreate). Open it with `with Session(engine) as session:` around one unit of work, like a web request, and keep transactions short. For schema changes over time, its docs point you to [Alembic](https://docs.sqlalchemy.org/en/latest/tutorial/metadata.html#tutorial-emitting-ddl). In asyncio code, the [asyncio extension](https://docs.sqlalchemy.org/en/latest/orm/extensions/asyncio.html) covers both Core and the ORM.
+### SQLAlchemy
 
-Django comes with an ORM in which you [describe your database layout in Python code](https://docs.djangoproject.com/en/stable/intro/overview/). It follows [the Active Record pattern](https://docs.djangoproject.com/en/stable/misc/design-philosophies/#include-all-relevant-domain-logic), so a model holds its domain logic along with its fields. Change a model, then run `makemigrations` and `migrate`, and [migrations](https://docs.djangoproject.com/en/stable/topics/migrations/) carry the change into your schema. In async code, every QuerySet method that runs a query has [an `a`-prefixed variant](https://docs.djangoproject.com/en/stable/topics/async/#queries-the-orm), like `afirst()`.
+Pick SQLAlchemy for any Python app that isn't built on Django. It gives you [the full power and flexibility of SQL](https://www.sqlalchemy.org/), and automates the repetitive work while [you stay in control](https://www.sqlalchemy.org/philosophy.html) of how the SQL is built. New users [should start with the Unified Tutorial](https://docs.sqlalchemy.org/en/latest/intro.html). Your models subclass [`DeclarativeBase`](https://docs.sqlalchemy.org/en/latest/orm/quickstart.html), and each column takes its type from its `Mapped[...]` annotation. For async code, the ORM also runs through [the asyncio extension](https://docs.sqlalchemy.org/en/latest/orm/extensions/asyncio.html). Migrations come from [Alembic](https://alembic.sqlalchemy.org/en/latest/), the migration tool built for SQLAlchemy.
 
-Peewee is [a simple and small ORM](https://docs.peewee-orm.com/en/latest/) with few concepts, in a single module with no required dependencies. It works with SQLite, MySQL, MariaDB, and PostgreSQL. As in [its README](https://github.com/coleifer/peewee), set the database once in a `BaseModel`'s `Meta.database` and subclass that for every model. A [`with db:` block](https://docs.peewee-orm.com/en/latest/peewee/database.html#context-managers) opens a connection and a transaction, commits when the block exits normally, rolls back on an exception, and closes the connection.
+### Django ORM
 
-SQLModel is [a thin layer on top of Pydantic and SQLAlchemy](https://sqlmodel.tiangolo.com/): each model is both a Pydantic model and a SQLAlchemy model. FastAPI's author built it for FastAPI apps, but it [works in any other kind of app](https://sqlmodel.tiangolo.com/features/) too. Mark the classes that are tables with `table=True`, and keep what your API reads and returns in [data models](https://sqlmodel.tiangolo.com/tutorial/fastapi/multiple-models/#multiple-models-with-inheritance), which are only Pydantic models.
+Use the Django ORM in a Django project, where it comes built in. Its models live in apps listed in [`INSTALLED_APPS`](https://docs.djangoproject.com/en/stable/topics/db/models/), so outside a Django project, pick SQLAlchemy instead. Each model class follows [the Active Record pattern](https://docs.djangoproject.com/en/stable/misc/design-philosophies/#include-all-relevant-domain-logic) and holds both the data and the logic about it. Run [`makemigrations` and `migrate`](https://docs.djangoproject.com/en/stable/intro/overview/#install-it), and Django creates the migrations and tables from your models, with no extra tool. In async code, every query method that might block has [an async variant](https://docs.djangoproject.com/en/stable/topics/db/queries/#asynchronous-queries), like `aget()`.
 
-PynamoDB wraps DynamoDB's verbose API in [a simple, elegant one](https://github.com/pynamodb/PynamoDB). Write [a model per table](https://pynamodb.readthedocs.io/en/latest/tutorial.html#defining-a-model), with the table's name in `Meta.table_name` and its hash key marked `hash_key=True`, since every DynamoDB table has one.
+### SQLModel
 
-MongoEngine is [an ORM-like layer on top of PyMongo](https://github.com/MongoEngine/mongoengine), and synchronous: it's [based on PyMongo alone](https://mongoengine-odm.readthedocs.io/faq.html), not on async drivers. Your document classes define a schema that MongoDB never sees, since it's [enforced at the application level](https://mongoengine-odm.readthedocs.io/tutorial.html#defining-our-documents). Store data that belongs to one document, like a post's comments, [as embedded documents](https://mongoengine-odm.readthedocs.io/tutorial.html#comments) on it.
+Pick SQLModel for a FastAPI app, so you [don't duplicate models in SQLAlchemy and Pydantic](https://sqlmodel.tiangolo.com/). FastAPI's author built it as a thin layer on both, and every SQLModel model is also a SQLAlchemy model. Mark the class that maps to a table with `table=True`, keep the API input and output classes as plain data models, and [only inherit from data models](https://sqlmodel.tiangolo.com/tutorial/fastapi/multiple-models/#only-inherit-from-data-models). SQLModel covers [the most common use cases](https://sqlmodel.tiangolo.com/features/#based-on-sqlalchemy); when you need more, plug SQLAlchemy in directly.
 
-Beanie is [an asynchronous ODM whose data models are based on Pydantic](https://beanie-odm.dev/). [Setting it up](https://beanie-odm.dev/getting-started/) takes three steps: subclass `beanie.Document` instead of `pydantic.BaseModel`, create PyMongo's async client, and call `init_beanie()` with your database and models inside your event loop. That call also [creates the collections and sets up the indexes](https://beanie-odm.dev/tutorial/initialization/) your models define.
+### Peewee
 
-Django MongoDB Backend is [a Django database backend that uses PyMongo](https://github.com/mongodb/django-mongodb-backend). MongoDB's docs say it [translates Django ORM methods into MongoDB queries](https://www.mongodb.com/docs/drivers/odm/), so your project keeps Django's models and ORM. Start from [its project template](https://django-mongodb-backend.readthedocs.io/en/latest/intro/configure/), which sets `ObjectIdAutoField` as the default primary key.
+Pick Peewee for a small app where SQLAlchemy's concepts are more than you need. It's [a simple and small ORM](https://docs.peewee-orm.com/en/latest/) with few concepts, in a single module with no required dependencies. An app starts with [a `Database` object and `Model` classes](https://docs.peewee-orm.com/en/latest/peewee/quickstart.html), and a `BaseModel` carries the database setting for every model.
+### PynamoDB
 
-With SQLAlchemy, the Django ORM, or Peewee, load related rows up front instead of running one query per row in a loop. SQLAlchemy calls [`selectinload()` the best strategy](https://docs.sqlalchemy.org/en/latest/orm/queryguide/relationships.html#what-kind-of-loading-to-use) for collections and `joinedload()` the most general one for many-to-one. Django has [`select_related()` and `prefetch_related()`](https://docs.djangoproject.com/en/stable/topics/db/optimization/#use-queryset-select-related-and-prefetch-related), and Peewee [joins or eager-loads](https://docs.peewee-orm.com/en/latest/peewee/relationships.html#the-n-1-problem) depending on which way the relationship goes.
+PynamoDB is the pick for Amazon DynamoDB, and it [supports the entire DynamoDB API](https://pynamodb.readthedocs.io/en/latest/quickstart.html). Define each table as a `Model` subclass, with the table name in its `Meta` class and `hash_key=True` on the key attribute.
 
-For more SQLAlchemy extensions and resources, see [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy).
+### MongoEngine
+
+Pick MongoEngine for MongoDB from synchronous code, and Beanie for asyncio code. MongoEngine is [an object-document mapper based on PyMongo](https://docs.mongoengine.org/). Connect with `connect()`, then define your documents as classes: MongoDB never sees that schema, since MongoEngine [enforces it at the application level](https://docs.mongoengine.org/tutorial.html).
+
+### Beanie
+
+Pick Beanie for MongoDB from asyncio code. It's [an asynchronous object-document mapper](https://beanie-odm.dev/) whose models are Pydantic classes, with data and schema migrations built in. Subclass `beanie.Document` instead of `pydantic.BaseModel`, then call [`init_beanie()`](https://beanie-odm.dev/getting-started/#initialization) with your database and the list of models. It creates the collections if needed and sets up the indexes you defined.
+
+### Django MongoDB Backend
+
+Pick Django MongoDB Backend to run a Django project on MongoDB. It's MongoDB's [official Django database backend](https://www.mongodb.com/docs/languages/python/django-mongodb/current/), so you keep writing Django models. Start a new project from [its project template](https://django-mongodb-backend.readthedocs.io/en/latest/intro/configure/), which comes configured for MongoDB.
+
+### Loading related data
+
+In SQLAlchemy and the Django ORM, load related rows up front instead of running one query per object. SQLAlchemy's docs call [`selectinload()`](https://docs.sqlalchemy.org/en/latest/orm/queryguide/relationships.html#what-kind-of-loading-to-use) generally the best strategy for collections and `joinedload()` the most general one for many-to-one. Django's docs say to [use `select_related()` and `prefetch_related()`](https://docs.djangoproject.com/en/stable/topics/db/optimization/#use-queryset-select-related-and-prefetch-related). On MongoDB, embed data that belongs to a parent document instead of joining. MongoEngine's tutorial stores comments as an [`EmbeddedDocument`](https://docs.mongoengine.org/tutorial.html#comments) inside a post, and Django MongoDB Backend's FAQ calls [embedded models](https://django-mongodb-backend.readthedocs.io/en/latest/faq/#querying-across-relational-fields-like-foreignkey-and-manytomanyfield-is-really-slow-is-there-a-way-to-improve-the-speed-of-these-joins) the best practice for relational data.
+
+### More SQLAlchemy resources
+
+For more SQLAlchemy tools, see [awesome-sqlalchemy](https://github.com/dahlia/awesome-sqlalchemy).
