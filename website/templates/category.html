@@ -22,7 +22,7 @@
       </p>
       {% endif %}
       <h1>{{ category.name }}</h1>
-      {% if category.description_html %}
+      {% if category.description_html and not intro_html %}
       <p class="category-subtitle">{{ category.description_html | safe }}</p>
       {% endif %}
       {% if intro_html %}

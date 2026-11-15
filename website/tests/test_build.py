@@ -1155,6 +1155,19 @@ class TestBuild:
         assert '<li>Small apps: <a href="#entry-w1">w1</a></li>' in category_html
         assert '<a href="https://example.com/docs" target="_blank" rel="noopener">the docs</a>' in category_html
 
+    def test_build_shows_readme_subtitle_only_without_intro(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README.replace("### Widgets\n", "### Widgets\n\n_Widget libraries._\n"), encoding="utf-8")
+        build(tmp_path)
+        category_path = tmp_path / "website" / "output" / "categories" / "widgets" / "index.html"
+        assert '<p class="category-subtitle">Widget libraries.</p>' in category_path.read_text(encoding="utf-8")
+
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use w1.\n", encoding="utf-8")
+        build(tmp_path)
+        assert "category-subtitle" not in category_path.read_text(encoding="utf-8")
+
     def test_build_renders_category_guide_below_table(self, tmp_path):
         self._copy_real_templates(tmp_path)
         (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
