@@ -1,40 +1,64 @@
-Desktop apps with room to grow start on Qt, through PySide6. A small tool needs no third-party Python GUI library, since tkinter is in the standard library.
+Build a full desktop app with PySide6, and a small tool with tkinter, the Python GUI library bundled with Python. NiceGUI puts a Python-only UI in a browser.
 
 How to choose:
 
-- A desktop app that will grow, even a closed-source one: PySide6
-- A small tool, built with the standard library: tkinter
-- GNOME apps, or anything else on GTK: PyGObject
-- Fast, GPU-drawn tools and live plots: Dear PyGui
-- Touch UIs that also run on Android and iOS: Kivy
-- Native widgets on Windows, macOS, and Linux: wxPython
-- Native widgets on desktop and mobile: Toga
-- A Qt app under the GPL, or with a commercial license: PyQt6
-- A modern look and dark mode for tkinter apps: CustomTkinter
-- Your own HTML, CSS, and JavaScript in a desktop window: pywebview
-- A pure Python UI in the browser or a desktop window: NiceGUI
-- One Python codebase for desktop, mobile, and web: Flet
+- A full desktop app, with Qt's widgets and tools: PySide6
+- A small tool with nothing to install: tkinter
+- A dashboard or small tool in the browser, written only in Python: NiceGUI
+- A GTK app, or an app for GNOME: PyGObject
+- Fast, GPU-drawn tools for data, science, and engineering: Dear PyGui
+- Touch apps that run on desktop, Android, and iOS: Kivy
+- Code already built on wxPython: wxPython
+- OS-native widgets from one Python API, on desktop and mobile: Toga
+- Existing PyQt code, or an app you release under the GPL: PyQt6
+- A tkinter app with a modern look and light and dark modes: CustomTkinter
+- A desktop window around the HTML and JavaScript you write: pywebview
+- One Python codebase for desktop, web, and mobile apps: Flet
 
-PySide6 is [the official Python binding for Qt](https://doc.qt.io/qtforpython-6/), under the LGPL, which [lets your app's code stay closed](https://www.qt.io/licensing/open-source-lgpl-obligations) as long as you meet its terms. Build the UI with Qt Widgets for an app that [looks native](https://doc.qt.io/qtforpython-6/faq/whatisqt.html#widgets), or with QML, which was [first made for mobile apps](https://doc.qt.io/qtforpython-6/faq/whatisqt.html#qml) and runs on desktop too. To lay out forms visually, draw them in Qt Widgets Designer, and pyside6-uic [turns the .ui files into Python](https://doc.qt.io/qtforpython-6/tutorials/basictutorial/uifiles.html).
+### PySide6
 
-PyQt6 binds the same Qt, and PySide6 [aims to be API compatible with PyQt](https://doc.qt.io/qtforpython-6/considerations.html#api-changes), with some exceptions. The license is what splits them: PyQt6 is [GPL or commercial, never LGPL](https://www.riverbankcomputing.com/static/Docs/PyQt6/introduction.html#license), so with the GPL version your own code must use a compatible license.
+Pick PySide6 for a full desktop app. It's [the official Python bindings for Qt](https://doc.qt.io/qtforpython-6/), available under the LGPL. PyQt6 wraps the same Qt, and PySide6 aims to be [API compatible with PyQt](https://doc.qt.io/qtforpython-6/considerations.html), so the license is the main reason to pick one over the other. The wheels [already include the Qt binaries](https://doc.qt.io/qtforpython-6/gettingstarted.html), so installing PySide6 brings Qt with it. The same page walks you through [your first Qt Widgets app](https://doc.qt.io/qtforpython-6/gettingstarted.html#create-your-first-qt-application-with-qt-widgets), the imperative way to build a UI. Qt Quick is the declarative way, written in QML.
 
-tkinter is part of the standard library. Use the themed `tkinter.ttk` widgets, which [adapt to each platform's native theme](https://docs.python.org/3/library/tkinter.ttk.html). Most tutorials online still teach the old API, so [the docs point you to TkDocs](https://docs.python.org/3/library/tkinter.html), which teaches the modern one.
+### tkinter
 
-CustomTkinter widgets [work like normal Tkinter widgets](https://github.com/TomSchimansky/CustomTkinter) and mix with them, and they follow the system's light or dark mode.
+Use tkinter for a small tool when you don't want to install anything. It's [the standard Python interface to Tcl/Tk](https://docs.python.org/3/library/tkinter.html), and it [usually comes bundled with Python](https://docs.python.org/3/library/tk.html). Build with the themed widgets in `tkinter.ttk`, which the docs say give [a much better appearance on different platforms](https://docs.python.org/3/library/tkinter.html#architecture) than classic Tk's dated look. Most tkinter docs online still use the old API, so learn from [the docs' Hello World program](https://docs.python.org/3/library/tkinter.html#a-hello-world-program) and [TkDocs](https://tkdocs.com/), which teach the modern one.
 
-PyGObject is [the way to go](https://pygobject.gnome.org/) for a GNOME app or any GTK app. Start with the GNOME Developer Documentation's [beginner lessons](https://developer.gnome.org/documentation/tutorials/beginners.html). In code, subclass `Gtk.Application` and build your window in `do_activate()`, as [the getting-started example](https://pygobject.gnome.org/getting_started.html) does.
+### NiceGUI
 
-Dear PyGui is built on Dear ImGui and [draws in immediate mode on your GPU](https://github.com/hoffstadt/DearPyGui), for [scientific, engineering, and data science apps](https://dearpygui.readthedocs.io/en/latest/) that need fast, interactive interfaces. Every main script [runs the same steps](https://dearpygui.readthedocs.io/en/latest/tutorials/first-steps.html#first-run): create the context and the viewport, set up, show the viewport, start, then destroy the context.
+Pick NiceGUI for a UI that shows up in the browser while all your code stays in Python. It's [great for micro web apps, dashboards, robotics projects](https://github.com/zauberzeug/nicegui), and similar tools. [Three lines make a running app](https://nicegui.io/): create elements like `ui.label()`, then call `ui.run()` to serve them. To open the same app in a desktop window, NiceGUI's native mode [runs it through pywebview](https://nicegui.io/documentation/section_configuration_deployment).
 
-Kivy was built [from scratch for multi-touch](https://kivy.org/doc/stable/philosophy.html), and the same code runs on Windows, macOS, Linux, Android, and iOS. Subclass `App` and [return your root widget from `build()`](https://kivy.org/doc/stable/guide/basic.html#create-an-application). As the UI grows, move it into the KV language, which [separates your app's logic from its interface](https://kivy.org/doc/stable/guide/lang.html#concept-behind-the-language).
+### PyGObject
 
-wxPython wraps the wxWidgets C++ library and, in most cases, [uses each platform's native widgets](https://wxpython.org/pages/overview/#what-is-wxpython). Its [Hello World](https://wxpython.org/pages/overview/#hello-world) subclasses `wx.Frame`, puts the widgets on a `wx.Panel`, and lays them out with a sizer.
+Pick PyGObject for an app built on GTK or meant for GNOME: its docs say [PyGObject is the way to go](https://pygobject.gnome.org/) for both. It's licensed under the LGPL, while Kivy, Toga, and Dear PyGui use permissive licenses. Its getting-started page has you write [a `Gtk.Application` subclass](https://pygobject.gnome.org/getting_started.html) that opens a window when it activates. For a full GNOME app, its docs point to the [GNOME tutorials](https://developer.gnome.org/documentation/tutorials/beginners.html).
 
-Toga [uses native system widgets, not themes](https://toga.beeware.org/en/latest/about/philosophy/#native-widgets-not-themes), on macOS, Windows, Linux, Android, and iOS. It's part of BeeWare, whose [tutorial](https://tutorial.beeware.org/) builds an app with Toga.
+### Dear PyGui
 
-pywebview [shows your HTML, CSS, and JavaScript in a native window](https://pywebview.flowrl.com/). It doesn't bundle a GUI toolkit or web renderer, so a frozen app [stays small](https://pywebview.flowrl.com/guide/). Point the window at a web server you already run, or call Python from JavaScript through its [JS API bridge](https://pywebview.flowrl.com/guide/architecture.html#js-api-with-internal-http-server) and serve static files from the built-in HTTP server.
+Pick Dear PyGui for [scientific, engineering, gaming, and data science apps](https://dearpygui.readthedocs.io/en/latest/) that need fast, interactive interfaces. It's built on Dear ImGui, but [gives you a retained mode API](https://dearpygui.readthedocs.io/en/latest/about/what-why.html), and it doesn't use native widgets: your graphics card draws them. Every main script follows [the same steps](https://dearpygui.readthedocs.io/en/latest/tutorials/first-steps.html): create the context and the viewport, set up, show, and start Dear PyGui, then clean up the context.
 
-NiceGUI keeps [all UI logic in Python](https://github.com/zauberzeug/nicegui#architecture) on a FastAPI backend and handles the web details for you. The UI shows up in your browser, or in a native desktop window.
+### Kivy
 
-Flet makes [web, desktop, and mobile apps](https://flet.dev/docs/) without HTML, CSS, or JavaScript, and [builds them with Flutter](https://flet.dev/docs/publish/). `flet run` [opens your app](https://github.com/flet-dev/flet) in a desktop window, and `flet run --web` in the browser. As the app gets more interactive, its docs [favor the declarative style](https://flet.dev/docs/cookbook/declarative-vs-imperative/), where the UI is derived from your app's state.
+Pick Kivy for touch apps that run on desktop, Android, and iOS. It was created from scratch [for multi-touch](https://kivy.org/doc/stable/philosophy.html), and it [draws all its widgets](https://kivy.org/doc/stable/guide/architecture.html) with its own graphics API on top of OpenGL. An app [subclasses `App`](https://kivy.org/doc/stable/guide/basic.html) and returns its root widget from `build()`. Lay out the widget tree in [the KV language](https://kivy.org/doc/stable/guide/lang.html), which keeps your app's logic apart from its interface.
+
+### wxPython
+
+Keep wxPython for an app already built on it. It wraps the wxWidgets C++ library and [uses each platform's native widgets in most cases](https://wxpython.org/pages/overview/). The same page's Hello World creates a `wx.App` and a `wx.Frame`, shows the frame, and runs `MainLoop()`.
+
+### Toga
+
+Pick Toga when your app should use each OS's own widgets from one Python API, on desktop and mobile. It uses [native system widgets, not themes](https://toga.beeware.org/en/latest/about/philosophy/), and follows an 80% rule: its API covers most use cases and exposes enough internals for the rest. Its [tutorial](https://toga.beeware.org/en/latest/tutorial/tutorial-0/) builds a `toga.App` whose startup function returns a box of widgets. Its companion in BeeWare is Briefcase, which [turns your project into a standalone native app](https://briefcase.beeware.org/en/latest/).
+
+### PyQt6
+
+Keep PyQt6 for existing PyQt code, or for an app you release under the GPL. It's [GPL or commercial, and not available under the LGPL](https://www.riverbankcomputing.com/static/Docs/PyQt6/introduction.html), so under the GPL your own code must use a compatible license. If yours doesn't, you [need a commercial PyQt license](https://www.riverbankcomputing.com/commercial/license-faq).
+
+### CustomTkinter
+
+Pick CustomTkinter when a tkinter app should look modern, with [a consistent look across Windows, macOS, and Linux](https://customtkinter.tomschimansky.com/). Its widgets [work like normal tkinter widgets](https://github.com/TomSchimansky/CustomTkinter) and mix with them, and they follow the system's light or dark mode, or the one you set. [Every app starts with a `CTk` window](https://customtkinter.tomschimansky.com/tutorial/first-app) and ends with `mainloop()`.
+
+### pywebview
+
+Pick pywebview to build the GUI with JavaScript, HTML, and CSS, and [show it in its own native window](https://pywebview.flowrl.com/). Its [Hello world](https://pywebview.flowrl.com/guide/) passes a URL to `webview.create_window()`, then calls `webview.start()`. To call Python from your JavaScript without a web server, use [the JS API bridge](https://pywebview.flowrl.com/guide/architecture.html).
+
+### Flet
+
+Pick Flet when one Python codebase should run on desktop, web, and mobile. It builds apps [without HTML, CSS, or JavaScript](https://flet.dev/docs/), and on desktop [a Flutter client displays the UI](https://flet.dev/docs/getting-started/running-app) your Python code describes. [`flet create`](https://flet.dev/docs/getting-started/create-flet-app) makes a small counter app to start from, and `flet run` opens it.
