@@ -26,6 +26,7 @@ Pick SQLModel for a FastAPI app, so you [don't duplicate models in SQLAlchemy an
 ### Peewee
 
 Pick Peewee for a small app where SQLAlchemy's concepts are more than you need. It's [a simple and small ORM](https://docs.peewee-orm.com/en/latest/) in a single module, with no required dependencies. An app starts with [a `Database` object and `Model` classes](https://docs.peewee-orm.com/en/latest/peewee/quickstart.html), and a `BaseModel` carries the database setting for every model.
+
 ### PynamoDB
 
 PynamoDB is the pick for Amazon DynamoDB, and it [supports the entire DynamoDB API](https://pynamodb.readthedocs.io/en/latest/quickstart.html). Define each table as a `Model` subclass, with the table name in its `Meta` class and `hash_key=True` on the key attribute.
