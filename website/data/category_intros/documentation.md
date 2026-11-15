@@ -1,21 +1,33 @@
-Write only docstrings, and pdoc is all the Python documentation generator you need. Write guides too, and build the site with Sphinx or Material for MkDocs.
+Sphinx is the Python documentation generator for docs built around an API reference. Docs that are mostly guides start on Zensical, or stay on Material for MkDocs.
 
 How to choose:
 
-- API docs straight from docstrings, with no configuration: pdoc
-- Handwritten docs plus an API reference, as HTML, PDF, and more: Sphinx
-- A searchable Markdown site, with no HTML, CSS, or JavaScript to learn: Material for MkDocs
-- A Material for MkDocs site, new or existing, on its team's own generator: Zensical
-- Architecture diagrams as code, kept in version control: Diagrams
+- Docs built around an API reference: Sphinx
+- A new docs site, mostly guides: Zensical
+- An existing MkDocs site: Material for MkDocs
+- An API reference alone, with no config: pdoc
+- Architecture diagrams kept as code: Diagrams
 
-pdoc [aims to do one thing and do it well](https://pdoc.dev/docs/pdoc.html#what-is-pdoc): API documentation that follows your module hierarchy, with no configuration. Docstrings are Markdown, and it understands Google and numpydoc styles too. Run `pdoc ./demo.py` or `pdoc my_module_name` for a [preview in your browser that reloads](https://pdoc.dev/docs/pdoc.html#quickstart) when you edit the code, then `pdoc ./demo.py -o ./docs` to export the HTML. Its output is self-contained HTML, and for substantially more complex documentation needs, [pdoc's docs recommend Sphinx](https://pdoc.dev/docs/pdoc.html#limitations).
+### Sphinx
 
-Sphinx [focuses on handwritten documentation](https://www.sphinx-doc.org/en/stable/usage/quickstart.html) and turns one set of source files into HTML, a PDF via LaTeX, man pages, and more. Its default markup is reStructuredText, and it can [read Markdown through MyST-Parser](https://www.sphinx-doc.org/en/stable/usage/markdown.html). Run `sphinx-quickstart` to set up a source directory with a `conf.py`, then list your pages in the root document's toctree. `make html` builds the site, and `make latexpdf` the PDF. To document your code, [autodoc](https://www.sphinx-doc.org/en/stable/usage/extensions/autodoc.html) pulls in its docstrings, which you mix with your handwritten pages.
+Pick Sphinx when the API reference is the heart of your docs. It generates [API documentation from docstrings](https://www.sphinx-doc.org/en/stable/), cross-references other projects' docs, and builds HTML, LaTeX for PDF, and ePub. Pages are reStructuredText by default, and [MyST-Parser](https://www.sphinx-doc.org/en/stable/usage/markdown.html) lets you write them in Markdown. Start with [`sphinx-quickstart`](https://www.sphinx-doc.org/en/stable/usage/quickstart.html#setting-up-the-documentation-sources), which sets up the source directory from a few questions. Then turn on [autodoc](https://www.sphinx-doc.org/en/stable/usage/extensions/autodoc.html) to pull docstrings into your handwritten pages.
 
-Material for MkDocs is [a documentation framework on top of MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/), and `pip install mkdocs-material` installs MkDocs with it. You write Markdown and get a searchable static site, with [no HTML, CSS, or JavaScript to know](https://squidfunk.github.io/mkdocs-material/). Run `mkdocs new .`, then [set `site_name`, `site_url`, and `theme: name: material`](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) in `mkdocs.yml`, and `mkdocs serve` previews the site as you write. For reference docs from docstrings, try [mkdocstrings](https://squidfunk.github.io/mkdocs-material/alternatives/#sphinx) before switching to Sphinx: Material's alternatives page says it builds on MkDocs and adds Sphinx-like functionality.
+### Zensical
 
-Zensical is [a static site generator from the creators of Material for MkDocs](https://zensical.org/docs/get-started/), with the same batteries-included approach. After `pip install zensical`, [`zensical new .`](https://zensical.org/docs/create-your-site/) creates a `docs/` folder, a `zensical.toml` config, and a GitHub Actions workflow. `zensical serve` previews as you write, and `zensical build` writes the static site. It also [builds existing MkDocs projects without changes](https://zensical.org/docs/compatibility/mkdocs/) from their `mkdocs.yml`, and its classic theme variant keeps the Material for MkDocs look.
+Pick Zensical to start a new docs site that's mostly guides, written in Markdown. It's a static site generator [built by the creators of Material for MkDocs](https://zensical.org/docs/get-started/), with the same batteries-included approach. Run [`zensical new .`](https://zensical.org/docs/create-your-site/) to create the project, then `zensical serve` to preview the site as you write. An existing MkDocs site can move over too, since Zensical [can build MkDocs projects without changes](https://zensical.org/docs/compatibility/mkdocs/).
 
-Diagrams [draws cloud system architecture in Python code](https://diagrams.mingrammer.com/), so you can track changes to a diagram in version control. It renders with Graphviz, so [install Graphviz first](https://diagrams.mingrammer.com/docs/getting-started/installation), then `pip install diagrams`. Describe the system in a `with Diagram("Web Service", show=False):` block and chain nodes with `>>`. Running `python diagram.py` saves it as a PNG in your working directory.
+### Material for MkDocs
 
-Install [Sphinx](https://www.sphinx-doc.org/en/stable/usage/installation.html), [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/#with-pip), or [Zensical](https://zensical.org/docs/get-started/#install-with-pip) into your project's virtual environment, as each one's docs recommend. The documentation generators here all write static HTML, so publish it from CI. All four document a GitHub Actions workflow that deploys to GitHub Pages: [Sphinx](https://www.sphinx-doc.org/en/stable/tutorial/deploying.html#publishing-your-html-documentation), [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/publishing-your-site/), [Zensical](https://zensical.org/docs/publish-your-site/), and [pdoc](https://pdoc.dev/docs/pdoc.html#deploying-to-github-pages).
+Use Material for MkDocs on an existing MkDocs site. It's [a documentation framework built on MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/): you write Markdown, and it needs no HTML, CSS, or JavaScript from you. A plain MkDocs site switches over once you [set `theme: name: material`](https://squidfunk.github.io/mkdocs-material/creating-your-site/#minimal-configuration) in `mkdocs.yml`. Its own docs name [Zensical as its successor from the same team](https://squidfunk.github.io/mkdocs-material/alternatives/#zensical), and send both new projects and existing Material sites there. Before you move, Zensical's migration guide says to [check that every MkDocs plugin you depend on is supported](https://zensical.org/docs/compatibility/mkdocs/migration/#adopt-zensical-gradually).
+
+### pdoc
+
+Pick pdoc when your docs are the API reference alone. For substantially more complex needs, its own docs [recommend Sphinx](https://pdoc.dev/docs/pdoc.html#limitations). pdoc [requires no configuration](https://pdoc.dev/), follows your module hierarchy, links between identifiers, and understands numpydoc or Google-style docstrings. [Run `pdoc my_module`](https://pdoc.dev/docs/pdoc.html#quickstart) to preview the docs in your browser, and they reload as you edit.
+
+### Diagrams
+
+Use Diagrams to draw your cloud architecture in Python code instead of a design tool, so [version control tracks the diagram's changes](https://diagrams.mingrammer.com/) like any other code. Connect nodes with `>>` inside a `with Diagram("Web Service"):` block and [run the script](https://diagrams.mingrammer.com/docs/getting-started/installation#quick-start): Graphviz renders the diagram to an image file.
+
+### More Sphinx resources
+
+For Sphinx extensions, themes, and tutorials, see [awesome-sphinxdoc](https://github.com/ygzgxyz/awesome-sphinxdoc).
