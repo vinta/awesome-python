@@ -1,50 +1,85 @@
-Server setup goes in YAML playbooks that Ansible runs, unless you'd rather write Python with pyinfra. Neither Python DevOps tool needs an agent: SSH is enough.
+Configure servers with Ansible's YAML playbooks, or with pyinfra if you'd rather write Python. Fabric just runs your deploy commands over SSH.
 
 How to choose:
 
-- Server setup over SSH: Ansible in YAML, pyinfra in Python
-- Cloud APIs: Boto3, Azure SDK for Python, Google Cloud client libraries, and the AWS CLI from your shell
-- First-boot setup of a new cloud instance: cloud-init
-- Large fleets, with an agent on every host: Salt
-- Shell commands on remote servers, run from Python: Fabric
-- Serverless apps on AWS Lambda: Chalice
-- CPU, memory, disk, and process stats: psutil
-- Errors from your app, sent to Sentry: Sentry SDK
-- Processes kept running and restarted after a crash: Supervisor
-- Celery workers and tasks in a browser: Flower
-- Shell programs called as Python functions: sh
-- Deduplicated, encrypted backups: BorgBackup
+- Server setup in YAML, with ready-made modules for many devices: ansible
+- Server setup written in Python, on hosts with only a shell: pyinfra
+- Deploy steps and one-off commands over SSH, as Python functions: fabric
+- Your cloud from Python code: boto3, azure-sdk-for-python, or google-cloud-python
+- AWS from the terminal and shell scripts: awscli
+- A new cloud instance, set up on its first boot: cloud-init
+- Servers that respond to events on their own: salt
+- A serverless app on AWS Lambda: chalice
+- Process and system stats on any major OS: psutil
+- Errors and crashes from production, reported to Sentry: sentry-sdk
+- Unix processes kept running, or commands called as functions: supervisor, sh
+- Celery workers and tasks, watched in a browser: flower
+- Encrypted, deduplicated backups, local or over SSH: borgbackup
 
-Ansible is [agentless](https://github.com/ansible/ansible): it uses the SSH daemon your servers already run. You install it on one control node and [declare the desired state](https://docs.ansible.com/projects/ansible/latest/getting_started/introduction.html) of each machine in a playbook. When a machine already matches, Ansible changes nothing, however many times the playbook runs.
+### Ansible
 
-pyinfra calls itself ["ansible but Python instead of YAML"](https://github.com/pyinfra-dev/pyinfra). Its getting-started guide puts your hosts in an `inventory.py` and your operations in a `deploy.py`, then runs `pyinfra inventory.py deploy.py`. The target hosts [need nothing but an SSH daemon](https://docs.pyinfra.com/en/latest/getting-started.html). Most operations describe an end state: pyinfra [checks the host first](https://docs.pyinfra.com/en/latest/using-operations.html) and runs commands only if reality doesn't match.
+Pick Ansible to configure servers when you'd rather describe the result in YAML than program it, and want ready-made modules to do it. You [declare the desired state](https://docs.ansible.com/projects/ansible/latest/getting_started/introduction.html) of your machines in a playbook, and when a machine is already in that state, a rerun changes nothing. Ansible connects over SSH with your existing credentials, so there's no agent to install, and the machines it manages [need Python but not Ansible](https://docs.ansible.com/projects/ansible/latest/installation_guide/intro_installation.html). Its getting-started guide has you install it and [create a project folder](https://docs.ansible.com/projects/ansible/latest/getting_started/get_started_ansible.html) for your inventory and playbooks, which keeps them easy to put under version control.
 
-Boto3 is the AWS SDK for Python. Its [clients](https://docs.aws.amazon.com/boto3/latest/guide/clients.html) map close to 1:1 onto AWS service APIs and support every service operation. Resources are a higher-level, object-oriented layer on top.
+### pyinfra
 
-The AWS CLI gives you [direct access to AWS's public APIs](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) from your terminal, to explore a service or write shell scripts.
+Pick pyinfra over Ansible when you'd rather write your server setup as Python code than as YAML. It [turns Python code into shell commands](https://github.com/pyinfra-dev/pyinfra) and runs them over SSH. Target hosts [need nothing but the SSH daemon](https://docs.pyinfra.com/en/latest/getting-started.html), while Ansible's managed nodes also need Python. Most deploys use its declarative operations, which check what's already on the host and [emit only the commands needed](https://docs.pyinfra.com/en/latest/using-operations.html), so a rerun changes nothing. A deploy is an `inventory.py` listing your hosts and a `deploy.py` of operations, run with `pyinfra inventory.py deploy.py`.
 
-The Azure SDK for Python is a set of per-service packages, so you install only what you use. [Management libraries](https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview), named `azure-mgmt-*`, create and configure Azure resources, while client libraries work with services already provisioned.
+### Fabric
 
-The Google Cloud client libraries are [the recommended way](https://docs.cloud.google.com/python/docs/reference) to call Google Cloud APIs from code.
+Pick Fabric to script deploy steps and one-off commands over SSH as plain Python functions. It's a library that [executes shell commands remotely over SSH](https://www.fabfile.org/) and returns each result as a Python object. Fabric runs exactly the commands you write, where Ansible and pyinfra describe the state a server should end up in and are safe to rerun. Start with a `Connection` to one host, then [use a `Group`](https://docs.fabfile.org/en/latest/getting-started.html) to run the same command on several. The `fab` command calls your functions as tasks, like `fab deploy`.
 
-cloud-init handles a new instance's first boot. It [takes an initial configuration you supply](https://docs.cloud-init.io/en/latest/explanation/introduction.html) and applies it when the instance is created, from the hostname and network to user accounts and scripts. [Most clouds and Linux distributions ship it](https://github.com/canonical/cloud-init), so there's nothing to install. Write that configuration as [cloud-config](https://docs.cloud-init.io/en/latest/explanation/format/cloud-config.html), YAML that describes the state you want.
+### Boto3
 
-Salt has [a master managing minions](https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html): an agent runs on each host and listens on an event bus. One command can reach thousands of systems in seconds.
+Use Boto3 to call AWS from Python code, and the AWS CLI from the terminal. Boto3 has low-level clients and higher-level resources; start with clients, whose methods map close to 1:1 to service APIs and [support every service operation](https://docs.aws.amazon.com/boto3/latest/guide/clients.html). Create one with `boto3.client()` and the name of the service you call.
 
-Fabric runs shell commands on remote servers over SSH and [hands you back Python objects](https://www.fabfile.org/). A [`Connection`](https://docs.fabfile.org/en/latest/getting-started.html#run-commands-via-connections-and-run) is the core of its API: `run()` a command on it, and `put()` or `get()` files. For deploys and sysadmin jobs, write `@task` functions in a `fabfile.py` and [run them with `fab -H web1,web2`](https://docs.fabfile.org/en/latest/getting-started.html#addendum-the-fab-command-line-tool).
+### AWS CLI
 
-Chalice deploys Python apps to AWS Lambda. You write handlers with [a decorator-based API](https://github.com/aws/chalice) for API Gateway, S3, SQS, and other AWS services. Then `chalice deploy` provisions what your app needs, including its IAM policy.
+Use the AWS CLI to work with AWS from your terminal. It gives you direct access to the public APIs of AWS services. You can explore what a service does and [develop shell scripts](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html) to manage your resources.
 
-psutil reads process and system information, like CPU, memory, disks, and network, across platforms. It covers [what tools like `ps`, `top`, and `netstat` show](https://github.com/giampaolo/psutil).
+### Azure SDK for Python
 
-The Sentry SDK reports your app's errors to Sentry. [Call `sentry_sdk.init()`](https://docs.sentry.io/platforms/python/#initialize-the-sentry-sdk) with your DSN as early as possible, in your app's entry point. Its [integrations](https://docs.sentry.io/platforms/python/integrations/) for Django, Flask, Celery, and many other libraries turn on by themselves.
+Use the Azure SDK for Python to work with Azure from Python. It's not one big package: each service has [its own set of libraries](https://github.com/Azure/azure-sdk-for-python), and you install only the ones you use. Packages named `azure-mgmt-*` [create and configure Azure resources](https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-overview), and client libraries named just `azure-*` [connect your app code](https://learn.microsoft.com/en-us/azure/developer/python/sdk/azure-sdk-install) to resources that already exist. Sign in through the Azure Identity library, since Microsoft [recommends token-based authentication](https://learn.microsoft.com/en-us/azure/developer/python/sdk/authentication/overview) over connection strings or keys. Its `DefaultAzureCredential` is [generally the quickest way](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/identity/azure-identity/README.md) to authenticate.
 
-Supervisor runs your programs as its subprocesses on UNIX-like systems and [can restart them after a crash](https://supervisord.org/introduction.html). Add a [`[program:x]` section](https://supervisord.org/running.html#adding-a-program) per program to its INI-style config, start `supervisord`, and control processes with `supervisorctl`.
+### Cloud Client Libraries for Python
 
-Flower is Celery's [recommended monitor](https://docs.celeryq.dev/en/stable/userguide/monitoring.html): a web app that shows workers and tasks in real time, and can restart worker pools or shut workers down. Start it with your app's configuration, [`celery -A tasks.app flower`](https://flower.readthedocs.io/en/latest/install.html).
+Use Google's Cloud Client Libraries for Python, [the recommended way](https://docs.cloud.google.com/python/docs/reference) to call Google Cloud APIs from code. Each API has its own package, so for Cloud Storage you'd [install `google-cloud-storage`](https://docs.cloud.google.com/python/docs/setup). Authenticate through Application Default Credentials. On your own machine, `gcloud auth application-default login` creates them, and your code [runs in development or production](https://docs.cloud.google.com/docs/authentication/application-default-credentials) without changing how it authenticates.
 
-sh lets you [call any program as if it were a function](https://sh.readthedocs.io/en/latest/): `from sh import git`, then `git("status", "--short")`. It runs the real binary on your `$PATH`, and a non-zero exit code raises an exception like `sh.ErrorReturnCode_2`.
+### cloud-init
 
-BorgBackup is a [deduplicating backup program](https://borgbackup.readthedocs.io/en/stable/). It stores only changes, so it suits daily backups, and its authenticated encryption suits backup targets you don't fully trust. Initialize an encrypted repository, create an archive per backup, and prune old ones on a schedule. The repository is useless without its key, so the quick start says to [back up the key](https://borgbackup.readthedocs.io/en/stable/quickstart.html#repository-encryption) and test your backups.
+Use cloud-init to set up a new cloud instance on its first boot. It runs on the instance itself, finds out which cloud it's on, and [applies the configuration you supply](https://docs.cloud-init.io/en/latest/explanation/introduction.html) as user-data when the instance is created. Write it as cloud-config: [YAML whose keys describe the desired instance state](https://docs.cloud-init.io/en/latest/explanation/format/cloud-config.html), starting with a `#cloud-config` line. For more complex configuration, cloud-init works with tools like Ansible, and its Ansible module [installs Ansible during boot](https://docs.cloud-init.io/en/latest/reference/modules.html) and runs your playbook repository with ansible-pull.
 
-Keep secrets out of your code and plain files, whichever tool you pick. Let each cloud's SDK find credentials: Boto3 [searches a chain of locations](https://docs.aws.amazon.com/boto3/latest/guide/credentials.html#configuring-credentials), Azure recommends [token-based authentication through Microsoft Entra ID](https://learn.microsoft.com/en-us/azure/developer/python/sdk/authentication/overview#recommended-approach-for-app-authentication), and Google's client libraries pick up [Application Default Credentials](https://docs.cloud.google.com/docs/authentication/application-default-credentials). In config management, encrypt secrets with [Ansible Vault](https://docs.ansible.com/projects/ansible/latest/tips_tricks/ansible_tips_tricks.html#keep-vaulted-variables-safely-visible) or keep them in [Salt's pillar](https://docs.saltproject.io/en/latest/topics/best_practices.html#storing-secure-data).
+### Salt
+
+Pick Salt for servers that should react to events on their own: its README describes [self-healing systems](https://github.com/saltstack/salt) that respond to outages and other important events. Its standard setup is a Salt master managing minions, each running the salt-minion service, with an event system between them. Salt SSH and proxy minions can [manage machines without an agent](https://docs.saltproject.io/salt/user-guide/en/latest/topics/overview.html). Still, Salt's install guide [recommends the standard installation](https://docs.saltproject.io/salt/install-guide/en/latest/topics/overview.html) for most organizations, especially if you're just starting out. Its state files are YAML by default.
+
+### Chalice
+
+Pick Chalice to build a serverless Python app on AWS Lambda. You write routes with [decorators](https://aws.github.io/chalice/), and Chalice generates your app's policies by scanning your source code. `chalice new-project` [creates a sample app](https://aws.github.io/chalice/quickstart.html), and `chalice deploy` puts it on Lambda behind API Gateway.
+
+### psutil
+
+Use psutil to read CPU, memory, disk, network, and process information from Python on Linux, Windows, macOS, and the BSDs. It's [useful mainly for](https://psutil.io/) system monitoring, profiling, limiting process resources, and managing running processes. Its docs call it [fragile](https://psutil.io/alternatives/) to run `ps` or `top` through subprocess and parse their output, since output formats differ across OS versions and locales. psutil reads the same data directly.
+
+### Sentry Python SDK
+
+Use the Sentry Python SDK to report your app's errors and crashes to Sentry. With a Sentry account and project set up, error monitoring [starts as soon as you call `sentry_sdk.init()`](https://docs.sentry.io/platforms/python/). Call it as early as possible, in your app's entry point.
+
+### Supervisor
+
+Use Supervisor to keep a project's processes running. It [works on just about everything except Windows](https://supervisord.org/introduction.html). Its supervisord process starts your programs as subprocesses and can restart them when they crash. You set it all up in one INI-style config file. It's [not meant to replace init](https://supervisord.org/) as process ID 1. It controls one project's processes and starts at boot like any other program.
+
+### sh
+
+Pick sh to call programs from Python as if they were functions, in place of subprocess calls: after `from sh import git`, `git("status")` runs `git status`. It finds each program by [resolving your `$PATH`](https://sh.readthedocs.io/en/latest/), much like your shell does. sh only works on Unix-like systems, and Windows isn't supported.
+
+### Flower
+
+Use Flower to watch your Celery workers and tasks in a browser. It's [a web app for monitoring and managing Celery clusters](https://flower.readthedocs.io/en/latest/), with real-time status of each worker and task, and Celery's docs call it [the recommended monitor](https://docs.celeryq.dev/en/stable/userguide/monitoring.html). [Run it as a Celery subcommand](https://flower.readthedocs.io/en/latest/install.html) pointed at your app, like `celery -A tasks.app flower`.
+
+### BorgBackup
+
+Pick BorgBackup for backups to a local disk or to any host you can reach over SSH. It's [a deduplicating backup program](https://borgbackup.readthedocs.io/en/stable/) with optional compression and authenticated encryption. Since only changes are stored, it suits daily backups, and the encryption makes it suitable for targets you don't fully trust. Start by initializing an encrypted repository, as [its quickstart](https://borgbackup.readthedocs.io/en/stable/quickstart.html) shows, and keep a backup of the key: without it, the repository's data is totally inaccessible.
+
+### Sharing AWS credentials
+
+Boto3, the AWS CLI, and Chalice read the same AWS credentials, so a machine [set up for Boto3 or the AWS CLI](https://aws.github.io/chalice/quickstart.html) is ready for Chalice too. Run `aws configure` to [write your credentials file](https://docs.aws.amazon.com/boto3/latest/guide/quickstart.html), and keep credentials out of your source code, as [Boto3's docs advise](https://docs.aws.amazon.com/boto3/latest/guide/credentials.html).
