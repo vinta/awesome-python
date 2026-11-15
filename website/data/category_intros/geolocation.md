@@ -1,20 +1,30 @@
-Addresses become coordinates with geopy, whose Python geolocation API covers many geocoding services. GeoPandas analyzes map data, and GeoDjango serves it.
+From Python, geopy calls a geolocation API to turn addresses into coordinates and back. GeoPandas analyzes map data, and GeoDjango stores it in a Django app.
 
 How to choose:
 
-- Addresses to coordinates, and coordinates back to addresses: geopy
-- The distance between two points: geopy
-- Geographic data in tables and files, like shapefiles and GeoJSON: GeoPandas
-- Web apps that store and query geographic data: GeoDjango
-- A visitor's country or city from their IP address, in a Django project: GeoDjango
-- Building, encoding, and validating GeoJSON objects by hand: geojson
+- Addresses to coordinates, or coordinates to addresses: geopy
+- Distance between two latitude and longitude points: geopy
+- Map data files, like shapefiles or GeoJSON, analyzed as a table: GeoPandas
+- A Django site that stores, queries, or edits map data: GeoDjango
+- A visitor's location from their IP address, in a Django project: GeoDjango
+- GeoJSON objects built and validated in plain Python: geojson
 
-geopy is [a client for geocoding services, not a service itself](https://geopy.readthedocs.io/en/stable/#geopy-is-not-a-service), and each service has its own terms of use, quotas, and pricing. Every geocoder has a `geocode()` method that turns an address into a location, and most also have `reverse()` for the other way around. For OpenStreetMap's Nominatim, [set a `user_agent` that names your app](https://geopy.readthedocs.io/en/stable/#geopy.geocoders.Nominatim) and follow [its usage policy](https://operations.osmfoundation.org/policies/nominatim/). The policy bans heavy use, auto-complete, and systematic queries. It also asks you to cache results and show attribution, and it discourages bulk geocoding. To geocode a DataFrame, [wrap the call in `RateLimiter`](https://geopy.readthedocs.io/en/stable/#usage-with-pandas), which adds delays between requests and retries failed ones. Check first that your service allows bulk requests at all. For distances, `geopy.distance.distance` [computes the geodesic distance](https://geopy.readthedocs.io/en/stable/#module-geopy.distance) between two points.
+### geopy
 
-GeoPandas adds geometry columns to pandas, so you can [do in Python what would otherwise take a spatial database such as PostGIS](https://geopandas.org/en/stable/). Load a shapefile, GeoJSON, or GeoPackage with `read_file()`, which [detects the file type and returns a GeoDataFrame](https://geopandas.org/en/stable/getting_started/introduction.html), and write it back with `to_file()`. For a table of latitudes and longitudes, [build the points with `points_from_xy()`](https://geopandas.org/en/stable/gallery/create_geopandas_from_pandas.html) and set `crs="EPSG:4326"`. To geocode a column of addresses, GeoPandas [calls geopy for you](https://geopandas.org/en/stable/docs/user_guide/geocoding.html), so the geocoding service's terms still apply.
+Pick geopy to turn addresses into coordinates from your code, or the other way around. It's [a Python client for several popular geocoding web services](https://geopy.readthedocs.io/en/latest/), with one class per service in `geopy.geocoders`. Which service it calls is your second choice, since [geopy is not a service](https://geopy.readthedocs.io/en/latest/#geopy-is-not-a-service). Services have different terms of use, quotas, and pricing, so read the terms of the one you pick, and try another when it doesn't work for you. Create the geocoder for your service, call `geocode()` with an address, and read `.latitude` and `.longitude` from the result. Services that define `reverse()` turn a coordinate pair back into an address.
 
-GeoDjango is [a contrib module that ships with Django](https://docs.djangoproject.com/en/stable/ref/contrib/gis/tutorial/). It adds model fields for geometries, spatial queries to the ORM, and geometry editing to the admin. Its tutorial assumes you already know Django. Run it on PostGIS, which its docs recommend as [the most mature and feature-rich open source spatial database](https://docs.djangoproject.com/en/stable/ref/contrib/gis/install/#spatial-database). To load a shapefile, [`ogrinspect` writes the model and a `LayerMapping` imports the rows](https://docs.djangoproject.com/en/stable/ref/contrib/gis/tutorial/#importing-spatial-data). For IP geolocation, [GeoIP2](https://docs.djangoproject.com/en/stable/ref/contrib/gis/geoip2/) looks up a country or city in a MaxMind or DB-IP database file you download.
+### GeoPandas
 
-geojson has [a class for every object in the GeoJSON spec](https://github.com/jazzband/geojson), and `geojson.dumps()` and `geojson.loads()` [wrap the standard json functions](https://github.com/jazzband/geojson#geojson-encodingdecoding) to encode and decode them. Check an object with [its `is_valid` property and `errors()` method](https://github.com/jazzband/geojson#validation). To encode your own classes the same way, [give them a `__geo_interface__`](https://github.com/jazzband/geojson#custom-classes), which GeoPandas' `from_features()` [also accepts](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.from_features.html).
+Pick GeoPandas to analyze map data in a script or notebook, with each shape as a row in a table. It [extends the datatypes used by pandas to allow spatial operations on geometric types](https://geopandas.org/en/latest/), with Shapely running the geometry. That lets you do work in Python that would otherwise need a spatial database. Load a file with [`geopandas.read_file()`](https://geopandas.org/en/latest/getting_started/introduction.html), which detects the file type and returns a GeoDataFrame, and write it back with `to_file()`. For a column of addresses, `geopandas.geocode()` [geocodes through geopy](https://geopandas.org/en/latest/docs/user_guide/geocoding.html).
 
-Latitude and longitude are angles, so measure distance and area in a projected coordinate system, in meters or feet. In GeoPandas, you [always need one](https://geopandas.org/en/stable/getting_started/introduction.html#Projections) for those operations, so reproject with `to_crs()` first. GeoDjango calls choosing a geometry field's SRID [an important decision](https://docs.djangoproject.com/en/stable/ref/contrib/gis/model-api/#selecting-an-srid), since projected systems ease distance calculations. geopy's `distance` works on an ellipsoidal model of the earth, so it takes latitudes and longitudes as they are.
+### GeoDjango
+
+Pick GeoDjango when a Django site stores, queries, or edits map data. It's [a contrib module that turns Django into a geographic web framework](https://docs.djangoproject.com/en/stable/ref/contrib/gis/tutorial/), with model fields for geometries, spatial lookups in the ORM, and geometry editing in the admin. Since it's part of Django, it's a pick only inside a Django project. Its docs [recommend PostGIS](https://docs.djangoproject.com/en/stable/ref/contrib/gis/install/) as the spatial database. Add `django.contrib.gis` to `INSTALLED_APPS`, define geometry fields from `django.contrib.gis.db.models`, and filter on them with spatial lookups like `contains`. To locate a visitor, its [GeoIP2 object](https://docs.djangoproject.com/en/stable/ref/contrib/gis/geoip2/) looks up the city and coordinates of an IP address in a GeoIP database file you supply.
+
+### geojson
+
+Pick geojson to build, validate, and serialize GeoJSON objects in plain Python. If your data already lives in GeoPandas, skip it, since GeoPandas [reads and writes GeoJSON files](https://geopandas.org/en/latest/docs/user_guide/io.html) on its own. It has [classes for all GeoJSON objects](https://github.com/jazzband/geojson), like `Point`, `Feature`, and `FeatureCollection`, and its `dumps()` and `loads()` wrap the `json` functions of the same name. Check an object with its `is_valid` property.
+
+### Distance between coordinates
+
+Latitude and longitude are degrees on a curved Earth, so measuring the distance between two points needs math that accounts for the curve. For two points, geopy's [`geodesic()`](https://geopy.readthedocs.io/en/latest/#module-geopy.distance) is accurate to round-off. GeoPandas operations are planar, so [re-project to a projected CRS](https://geopandas.org/en/latest/getting_started/introduction.html#Projections) in meters or feet with `to_crs()` before you measure distance or area.
