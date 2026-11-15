@@ -410,6 +410,7 @@ _Libraries for working with HTTP._
 _Libraries to automate web scraping and extract web content._
 
 - Frameworks
+  - [aerobrowse](https://github.com/k39139215-gif/aerobrowse) - A featherweight dual-engine browser for AI agents that slashes LLM token bloat by 88% with semantic AST pruning.
   - [browser-use](https://github.com/browser-use/browser-use) - Make websites accessible for AI agents with easy browser automation.
   - [scrapy](https://github.com/scrapy/scrapy) - A fast high-level web crawling and scraping framework.
   - [crawl4ai](https://github.com/unclecode/crawl4ai) - An open-source, LLM-friendly web crawler that provides lightning-fast, structured data extraction specifically designed for AI agents.
