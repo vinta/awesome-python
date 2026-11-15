@@ -1,24 +1,34 @@
-dlt loads data from APIs, databases, and files into your warehouse. You pip install the Python ETL library into your own code, with no platform to run.
+AWS SDK for pandas reads and writes DataFrames on AWS services. To load APIs, databases, and files into a warehouse, pip install dlt as your Python ETL library.
 
 How to choose:
 
-- Data from APIs, databases, or files, loaded into a warehouse or DuckDB: dlt
-- pandas DataFrames in and out of S3, Athena, Redshift, and other AWS services: awswrangler
-- Stock prices, financials, and options from Yahoo Finance, for personal research: yfinance
-- Chinese stocks, futures, and funds, for academic research: AKShare
-- US company filings and financial statements from SEC EDGAR: EdgarTools
-- Many data providers behind one Python API, also served over REST and MCP: OpenBB
+- pandas DataFrames in and out of S3, Athena, Glue, or Redshift: AWS SDK for pandas
+- APIs, databases, or files loaded into a warehouse, lake, or database: dlt
+- Yahoo Finance prices and fundamentals, for personal or research use: yfinance
+- Data from Chinese finance sites, for academic research: AKShare
+- SEC filings and financial statements as Python objects: EdgarTools
+- Many data providers, like FRED, the IMF, and Cboe, behind one interface: OpenBB
 
-dlt [loads data from messy sources into well-structured datasets](https://dlthub.com/docs/intro): it infers the schema and data types, normalizes the data, and handles nested structures. Start a project with [`dlt init rest_api duckdb`](https://dlthub.com/docs/tutorial/rest-api), which sets up a pipeline script with a REST API source and a DuckDB destination. Build and test on DuckDB, then [switch out the destination](https://dlthub.com/docs/reference/explainers/how-dlt-works) when you deploy. Beyond the built-in sources, any Python iterable can feed it, since [a resource is just a generator](https://github.com/dlt-hub/dlt). dlt [runs anywhere Python runs](https://dlthub.com/docs/walkthroughs/deploy-a-pipeline), so schedule it with the orchestrator you already have.
+### AWS SDK for pandas
 
-AWS SDK for pandas [extends pandas to AWS](https://aws-sdk-pandas.readthedocs.io/en/stable/about.html): import it as `awswrangler`, and it connects DataFrames to S3, Athena, Glue, Redshift, and DynamoDB. Its [quick start](https://github.com/aws/aws-sdk-pandas) stores a DataFrame on S3 as a Parquet dataset with `wr.s3.to_parquet()`, passing a database and table name. Then `wr.athena.read_sql_query()` queries that table with SQL.
+Pick AWS SDK for pandas when your data sits in AWS and your code works in pandas. It [connects DataFrames to AWS data and analytics services](https://aws-sdk-pandas.readthedocs.io/en/latest/about.html), from S3 and Athena to Glue, Redshift, and DynamoDB. You install and import it as `awswrangler`. Its main pattern is one call: `wr.s3.to_parquet()` with `dataset=True`, a database, and a table [writes the DataFrame to S3 as Parquet and registers it in the Glue Catalog](https://aws-sdk-pandas.readthedocs.io/en/latest/tutorials/005%20-%20Glue%20Catalog.html). Then `wr.athena.read_sql_query()` queries that table with SQL.
 
-yfinance offers [a Pythonic way to fetch financial and market data](https://github.com/ranaroussi/yfinance) from Yahoo Finance. Its [quick start](https://ranaroussi.github.io/yfinance/) uses `Ticker` for one symbol's prices, financial statements, and options, and `download` for prices across several symbols at once.
+### dlt
 
-AKShare [aims to simplify fetching financial data](https://github.com/akfamily/akshare), with one function call per dataset, like `ak.stock_zh_a_hist()` for the daily history of a Chinese stock. Its README credits mostly Chinese exchanges and finance sites as its sources. Its [docs are in Chinese](https://akshare.akfamily.xyz/introduction.html), and each data interface comes with an example you can copy and paste.
+Pick dlt to load data from REST APIs, SQL databases, cloud storage, or your own Python generators into a warehouse, lake, or database. [It's a library, not a platform](https://github.com/dlt-hub/dlt#why-dlt): you pip install it into your existing code. When a pipeline runs, dlt [infers the schema, unnests nested data into child tables](https://dlthub.com/docs/reference/explainers/how-dlt-works#normalize), and evolves it when new columns show up. [Build and test your pipeline locally with DuckDB](https://dlthub.com/docs/reference/explainers/how-dlt-works#other-notable-dlt-features), then switch the destination when you deploy.
 
-EdgarTools [turns any SEC filing into a typed Python object](https://github.com/dgunning/edgartools), so a 10-K's revenue is one line instead of an afternoon of XBRL parsing. EDGAR requires an email with every request, so [set your identity](https://edgartools.readthedocs.io/en/latest/configuration/) with `set_identity()` before anything else. Everything starts with a `Company` or a `Filing`. `Company("AAPL").get_financials().income_statement()` returns a standardized income statement, and `.obj()` turns a filing into an object built for its form, with its data as pandas DataFrames.
+### yfinance
 
-OpenBB is a ["connect once, consume everywhere" layer](https://docs.openbb.co/odp) over financial data sources. [Each provider package](https://docs.openbb.co/odp/python) connects one source and adds its own namespace to the `obb` client. The same commands run from Python, as a REST API, and as MCP tools. A call returns an OBBject, and [`to_dataframe()`](https://docs.openbb.co/odp/python/quickstart/user) turns it into a pandas DataFrame.
+Pick yfinance for Yahoo Finance data in personal or research work. It [isn't affiliated with Yahoo](https://ranaroussi.github.io/yfinance/) and is meant for research and education. Its docs say the Yahoo Finance API is for personal use only, and Yahoo's terms decide your rights to the data, so read them before you build anything commercial. `yf.Ticker("MSFT")` gets one symbol's prices, financials, and options, and `yf.download()` fetches price history for several tickers at once.
 
-Before you build on financial data, check whose terms you're under. yfinance [isn't affiliated with Yahoo](https://ranaroussi.github.io/yfinance/) and is meant for research and education, and Yahoo's API is for personal use only. AKShare's data is [for academic research](https://github.com/akfamily/akshare#statement) only. OpenBB [hosts no data itself](https://docs.openbb.co/odp/python/extensions/providers): each provider sets its own coverage and terms of use.
+### AKShare
+
+Pick AKShare for financial data from Chinese sites like East Money and Sina Finance. It [collects stocks, futures, options, funds, bonds, FX, and macro data](https://akshare.akfamily.xyz/introduction.html) from those public sources and exchange websites, and returns pandas DataFrames with Chinese column names. Its docs are in Chinese, and [its statement](https://github.com/akfamily/akshare/blob/main/README_EN.md#statement) says all its data is for academic research only. To find an interface, [search the offline registry by keyword](https://github.com/akfamily/akshare/blob/main/README_EN.md#search) with `ak.search()`.
+
+### EdgarTools
+
+Pick EdgarTools for SEC EDGAR filings as structured data: it [turns a filing into a typed Python object](https://github.com/dgunning/edgartools), from financial statements to insider trades and fund holdings. The SEC asks automated tools to [declare who they are and keep to its request rate](https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data). EdgarTools keeps to the rate for you, and you [identify yourself once with `set_identity()`](https://edgartools.readthedocs.io/en/latest/quickstart/), passing your name and email. Then `Company("AAPL").get_financials()` loads the annual financials from its 10-K, and `.income_statement()` returns the income statement.
+
+### OpenBB
+
+Pick OpenBB when you pull from several data providers and want one interface to all of them. You call it from Python, or [serve it as a REST API, MCP tools, and OpenBB Workspace widgets](https://docs.openbb.co/odp/python). Each data source comes as its own provider package. Import it with `from openbb import obb`, and a call returns an OBBject: [`to_dataframe()` turns it into a pandas DataFrame](https://docs.openbb.co/odp/python/quickstart/user#3-make-a-call). OpenBB's license covers its code, not the data: [each source's own terms](https://docs.openbb.co/odp/python/faqs/license) may restrict storage, redistribution, or commercial use, so check them before you pass the data on.
