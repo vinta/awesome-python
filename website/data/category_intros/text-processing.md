@@ -1,41 +1,76 @@
-Mojibake like "cafÃ©" is ftfy's to fix, and charset-normalizer detects encodings. For fuzzy matching, add RapidFuzz to your Python text processing libraries.
+Decode bytes of unknown encoding with Charset Normalizer, and fix mis-decoded text with ftfy. RapidFuzz fuzzy-matches at scale; small jobs need only difflib.
 
 How to choose:
 
-- Text decoded with the wrong encoding: ftfy
-- Bytes in an unknown encoding: charset-normalizer
-- Fuzzy matching against a long list of strings: RapidFuzz
-- Diffs, or close matches with nothing to install: difflib
-- Translations, plus dates and numbers in each user's locale: Babel
-- Syntax highlighting: Pygments
-- A grammar written in Python code: pyparsing, or parsy for small languages
+- Bytes in an unknown encoding: Charset Normalizer
+- Text already decoded with the wrong encoding (mojibake): ftfy
+- Fuzzy matching across many strings, or with words in a different order: RapidFuzz
+- Diffs, or close matches from a short list with no dependency: difflib
+- Bytes that may not be text, identified by MIME type: chardet
+- Translating an app, or formatting numbers and dates for a locale: Babel
+- Syntax highlighting for source code: Pygments
+- A grammar of your own: pyparsing to pull data from well-formatted text, parsy for a small language
 - Splitting and formatting SQL: sqlparse
 - Phone numbers: phonenumbers
-- URL slugs: python-slugify, or Unidecode for plain ASCII
-- Short IDs that users will read: shortuuid
+- URL slugs: python-slugify, or Unidecode for plain ASCII text
+- Short, URL-safe IDs: shortuuid
 
-ftfy [fixes Unicode that's broken in various ways](https://ftfy.readthedocs.io/en/latest/): bad Unicode goes in, good Unicode comes out. It's [a mojibake detector and fixer, not an encoding detector](https://ftfy.readthedocs.io/en/latest/detect.html#is-ftfy-an-encoding-detector), so give it text you've already tried to decode, never bytes. The function you'll call most is [`ftfy.fix_text()`](https://ftfy.readthedocs.io/en/latest/explain.html), which applies every fix it can. ftfy aims never to change text that was decoded correctly.
+### Charset Normalizer
 
-charset-normalizer [reads text from an unknown charset encoding](https://github.com/jawah/charset_normalizer). Call `from_bytes(data).best()`, or `from_path(path).best()` for a file, and [`str()` of the result is your decoded text](https://charset-normalizer.readthedocs.io/en/latest/user/getstarted.html). chardet does the job differently: charset-normalizer decodes candidate encodings and scores the text, while chardet [scores raw bytes against per-language models](https://chardet.readthedocs.io/en/latest/faq.html#how-is-chardet-different-from-charset-normalizer).
+Pick Charset Normalizer to read bytes whose encoding you don't know. Requests depends on it, so it's often installed already. It [doesn't try to uncover the originating encoding](https://charset-normalizer.readthedocs.io/en/latest/): it finds the one that best suits the content. Pass your bytes to [`from_bytes()`](https://charset-normalizer.readthedocs.io/en/latest/user/getstarted.html), or a file to `from_path()`, and call `.best()` on the result for the most likely decoding.
 
-RapidFuzz [does fuzzy string matching with various string metrics](https://rapidfuzz.github.io/RapidFuzz/), mostly in C++, with a pure Python fallback for every algorithm. To compare one string against a list, [use the `process` module](https://github.com/rapidfuzz/RapidFuzz#process), like `process.extractOne()`.
+### chardet
 
-difflib comes with Python and [compares sequences](https://docs.python.org/3/library/difflib.html), mostly lines of text, producing unified, context, and HTML diffs like the ones `diff` and `git diff` print. For a "did you mean" suggestion, [`get_close_matches()`](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) returns the best "good enough" matches for a word.
+Pick chardet when some of your bytes may not be text and you want to know what they are. Besides the encoding, [every result carries a MIME type](https://chardet.readthedocs.io/en/latest/faq.html), so it can tell you a file is an image or an archive. Start with [`chardet.detect()`](https://chardet.readthedocs.io/en/latest/usage.html), which returns the encoding with a confidence score.
 
-Babel [does two jobs](https://babel.pocoo.org/en/latest/intro.html): it builds gettext message catalogs without the GNU gettext tools for common tasks, and it formats dates, numbers, and locale names from CLDR data. Run catalogs through the `pybabel` command: [`extract` messages, `init` a catalog per language, `update` it, and `compile` it](https://babel.pocoo.org/en/latest/cmdline.html).
+### ftfy
 
-Pygments is [a generic syntax highlighter](https://github.com/pygments/pygments) for code hosting, forums, wikis, and other apps that show source code. If you highlight code your users submit, its docs recommend you [stop the Pygments process after a short timeout](https://pygments.org/docs/security/#security-considerations).
+Use ftfy on text that was already decoded with the wrong encoding, like `âœ”` where `✔` belongs. It's [a mojibake detector and fixer, not an encoding detector](https://ftfy.readthedocs.io/en/latest/detect.html), so it takes a `str`, never bytes. Call [`ftfy.fix_text()`](https://ftfy.readthedocs.io/en/latest/explain.html), which applies every fix it can and returns the repaired text.
 
-pyparsing [builds a grammar directly in Python code](https://github.com/pyparsing/pyparsing) from a library of classes, instead of lex/yacc or regular expressions. It handles whitespace, quoted strings, and embedded comments for you. Its best practices start with [writing a BNF](https://github.com/pyparsing/pyparsing/wiki/Best-Practices) before any code. [Use results names](https://pyparsing-docs.readthedocs.io/en/latest/HowToUsePyparsing.html#usage-notes) to get tokens by field name rather than by position. parsy [combines small parsers into larger ones](https://github.com/python-parsy/parsy) and gives you building blocks only. Its docs say it [excels at easy-to-read parsers for relatively small languages](https://parsy.readthedocs.io/en/latest/overview.html#other-python-projects).
+### RapidFuzz
 
-sqlparse is [a non-validating SQL parser](https://github.com/andialbrecht/sqlparse): it splits scripts into statements, formats them, and walks their token tree, whatever the dialect. Its [three module-level functions](https://github.com/andialbrecht/sqlparse#usage), `split()`, `format()`, and `parse()`, cover most needs.
+Pick RapidFuzz to fuzzy-match strings in bulk, or when the same words can come in a different order. Scorers like [`token_sort_ratio()`](https://rapidfuzz.github.io/RapidFuzz/Usage/fuzz.html#rapidfuzz.fuzz.token_sort_ratio) sort the words before comparing. To match a string against a list, use [the `process` module](https://github.com/rapidfuzz/RapidFuzz#process), whose `extractOne()` returns the best match.
 
-phonenumbers is [a Python port of Google's libphonenumber](https://github.com/daviddrysdale/python-phonenumbers). Parse a number together with [the country it's dialed from](https://github.com/daviddrysdale/python-phonenumbers#example-usage), unless it's in E.164 format. Then check it with `is_possible_number()` or `is_valid_number()`, and print it with `format_number()`.
+### difflib
 
-python-slugify [makes Unicode-aware slugs](https://github.com/un33k/python-slugify) with your choice of transliteration backend: by default, Unidecode if it's installed, otherwise text-unidecode. Its own code is MIT, while [Unidecode is GPL](https://github.com/un33k/python-slugify#licensing), so check that license before you install Unidecode next to it.
+Use difflib, in the standard library, for diffs and for small fuzzy-matching jobs that shouldn't add a dependency. [`unified_diff()`](https://docs.python.org/3/library/difflib.html#difflib.unified_diff) shows just the lines that changed plus a few lines of context. [`get_close_matches()`](https://docs.python.org/3/library/difflib.html#difflib.get_close_matches) returns the best "good enough" matches for a word from a list.
 
-Unidecode makes [lossy ASCII transliterations of Unicode text](https://github.com/avian2/unidecode), close to what someone on a US keyboard would type. Use it for ASCII machine identifiers. Its README says it's best kept off strings your users see.
+### Babel
 
-shortuuid [generates concise, unambiguous, URL-safe UUIDs](https://github.com/skorokithakis/shortuuid) for IDs users will see: it takes UUIDs from Python's `uuid` module, writes them in base57, and drops look-alike characters such as l, 1, I, O, and 0. Call `shortuuid.uuid()` for a new ID.
+Pick Babel to translate a Python app, or to format numbers and dates for each user's locale. It works with [gettext message catalogs and the CLDR locale data](https://babel.pocoo.org/en/latest/intro.html). Formatting functions like [`format_decimal()`](https://babel.pocoo.org/en/latest/numbers.html) take a locale argument. Translations go through [the `pybabel` command](https://babel.pocoo.org/en/latest/cmdline.html), which extracts your messages, keeps a catalog per language, and compiles it for your app.
 
-Decode with the encoding you were told whenever there is one. charset-normalizer's FAQ calls detection [a last resort](https://charset-normalizer.readthedocs.io/en/latest/community/faq.html#should-i-bother-using-detection), and ftfy's docs say to [assume UTF-8](https://ftfy.readthedocs.io/en/latest/avoid.html#assume-utf-8) unless you have a specific reason to believe otherwise.
+### Pygments
+
+Pick Pygments to syntax-highlight source code, for [code hosting, forums, wikis](https://pygments.org/), or any app that shows code. Pass your code, a lexer for its language, and a formatter to [`highlight()`](https://pygments.org/docs/quickstart/) to get HTML, and generate the matching CSS with `get_style_defs()`. Pygments [makes no guarantees on execution time](https://pygments.org/docs/security/), so on user input, run it in a process you stop after a short timeout.
+
+### pyparsing
+
+Pick pyparsing to pull data out of text in a known format, such as reports or command strings: its docs say to [use it on strings assumed to be well-formatted](https://pyparsing-docs.readthedocs.io/en/latest/HowToUsePyparsing.html). You build the grammar in Python code, and it [handles whitespace, quoted strings, and comments](https://github.com/pyparsing/pyparsing) for you. Name the parts you want, and [read them back by name](https://github.com/pyparsing/pyparsing/blob/master/pyparsing/ai/best_practices.md) from the results.
+
+### parsy
+
+Pick parsy to write a parser for a small language as readable code. It [excels at easy-to-read parsers for relatively small languages](https://parsy.readthedocs.io/en/latest/overview.html), with a minimal core and no built-in helpers for specific grammars. Its docs also say projects with demanding speed or error-message needs may have to look elsewhere. Start [from primitives like `regex()`](https://parsy.readthedocs.io/en/latest/tutorial.html), combine them into larger parsers, and call `.parse()` on your input.
+
+### sqlparse
+
+Pick sqlparse to split, format, or parse SQL without validating it. It [makes no assumptions about a particular SQL dialect](https://sqlparse.readthedocs.io/en/latest/), so vendor extensions and templated SQL parse too. Its [three main functions](https://sqlparse.readthedocs.io/en/latest/intro.html) are `split()`, `format()`, and `parse()`.
+
+### phonenumbers
+
+Pick phonenumbers to parse, validate, and format phone numbers. It's [a Python port of Google's libphonenumber](https://github.com/daviddrysdale/python-phonenumbers). Call `parse()` with the number and the country it's dialed from, check the result with `is_valid_number()`, and format it with `format_number()`, such as E.164.
+
+### python-slugify
+
+Pick python-slugify to turn a title into a URL slug: [`slugify("C'est déjà l'été.")`](https://github.com/un33k/python-slugify) returns `c-est-deja-l-ete`.
+
+### Unidecode
+
+Pick Unidecode to turn Unicode text into plain ASCII, for legacy code that can't handle Unicode or for machine identifiers that stay readable. [`unidecode('kožušček')`](https://github.com/avian2/unidecode) returns `kozuscek`. Unidecode is GPL, and for URL slugs, python-slugify is the pick.
+
+### shortuuid
+
+Pick shortuuid for short, non-sequential IDs that users see, like in URLs. It makes a UUID with the standard library's `uuid` module and [translates it to base57](https://github.com/skorokithakis/shortuuid), leaving out look-alike characters such as l, 1, I, O, and 0. Call `shortuuid.uuid()` for a new ID.
+
+### Declared encodings first
+
+Before you hand bytes to Charset Normalizer or chardet, decode them with the encoding they declare. Charset Normalizer's FAQ says to [use the detector as a last resort](https://charset-normalizer.readthedocs.io/en/latest/community/faq.html), when you're left with no clue.
