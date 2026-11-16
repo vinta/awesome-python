@@ -1,21 +1,33 @@
-In production, Gunicorn serves WSGI apps like Django, and Uvicorn ASGI apps like FastAPI. Need a Python web server on Windows? Waitress runs WSGI there.
+In production, run Django and Flask apps on Gunicorn and FastAPI apps on Uvicorn. Gunicorn doesn't run on Windows, so serve WSGI apps there with Waitress.
 
 How to choose:
 
-- A WSGI app (Flask, Django) on Linux or macOS: Gunicorn
-- An ASGI app (FastAPI, Starlette): Uvicorn
-- A WSGI app on Windows, or a server in pure Python: Waitress
-- One server for both ASGI and WSGI apps, or throughput above all: Granian
-- An app on Trio, or HTTP/3 from the Python server: Hypercorn
+- WSGI apps like Django and Flask: Gunicorn
+- ASGI apps like FastAPI: Uvicorn
+- A WSGI app on Windows, or pure Python with no dependencies: Waitress
+- One server for both ASGI and WSGI apps: Granian
+- An async app built on Trio: Hypercorn
 
-Gunicorn is a [pre-fork server](https://gunicorn.org/design/#server-model): one process manages a pool of worker processes. It's [built for Unix](https://gunicorn.org/). With its default sync workers, your proxy must [buffer slow clients](https://gunicorn.org/deploy/#nginx-configuration), or Gunicorn is open to denial-of-service attacks. Start with (2 × CPU cores) + 1 workers and [adjust under load](https://gunicorn.org/design/#how-many-workers). For long blocking calls, streaming, or WebSockets, switch to [async workers](https://gunicorn.org/design/#when-to-use-async-workers) like gevent.
+### Gunicorn
 
-Uvicorn is an [ASGI web server](https://uvicorn.dev/). In production, run it under a [process manager](https://uvicorn.dev/deployment/#using-a-process-manager). Its [built-in one](https://uvicorn.dev/deployment/#built-in) starts workers with `--workers` and restarts any that die, and its docs also cover [running Uvicorn workers under Gunicorn](https://uvicorn.dev/deployment/#gunicorn). In a container, run a single Uvicorn process and [let your orchestrator scale](https://uvicorn.dev/deployment/docker/) the number of containers.
+Pick Gunicorn for a WSGI app on Linux or another Unix. Start it with [`gunicorn app:app`](https://gunicorn.org/quickstart/). It also ships a [native ASGI worker](https://gunicorn.org/asgi/) with the same process management, logging, and config you use for WSGI. So if you run Gunicorn already, it can serve your FastAPI apps too. On Windows, Gunicorn [runs only under WSL](https://flask.palletsprojects.com/en/stable/deploying/gunicorn/).
 
-Granian is a [Rust HTTP server](https://github.com/emmett-framework/granian) that serves ASGI, WSGI, and RSGI apps from one package. Its README [suggests it](https://github.com/emmett-framework/granian#rationale) when you care about throughput above all, and not when you want pure Python or your app relies on Trio or gevent. Pass [`--interface asgi` or `--interface wsgi`](https://github.com/emmett-framework/granian#options), since the default is RSGI. Start with [one worker per CPU core](https://github.com/emmett-framework/granian#workers-and-threads), or one per container on Docker or Kubernetes, rather than numbers suggested for other servers.
+### Uvicorn
 
-Hypercorn is an ASGI server [inspired by Gunicorn](https://hypercorn.readthedocs.io/en/latest/). It speaks HTTP/1 and HTTP/2, with WebSockets over both, and runs on [Trio](https://hypercorn.readthedocs.io/en/latest/discussion/workers.html#trio) as well as asyncio. For HTTP/3, install its [`h3` extra](https://github.com/pgjones/hypercorn). Its docs recommend setting [`server_names`](https://hypercorn.readthedocs.io/en/latest/how_to_guides/server_names.html#dns-rebinding-attacks) to the hosts you serve, to block DNS rebinding attacks.
+Pick Uvicorn for an ASGI app. It's the server [FastAPI uses by default](https://fastapi.tiangolo.com/deployment/manually/), and Django's ASGI app runs on it too. Start it with [`uvicorn main:app`](https://uvicorn.dev/). For production, run Uvicorn's own [worker manager](https://uvicorn.dev/deployment/), which restarts workers that die, or Uvicorn's worker class [under Gunicorn](https://docs.djangoproject.com/en/stable/howto/deployment/asgi/uvicorn/), as Uvicorn's and Django's docs show. FastAPI's docs use the first.
 
-Waitress is a [pure-Python WSGI server](https://docs.pylonsproject.org/projects/waitress/en/latest/index.html) with no dependencies outside the standard library, and it runs on both Unix and Windows. Waitress [doesn't support TLS](https://docs.pylonsproject.org/projects/waitress/en/latest/reverse-proxy.html) itself, so put a reverse proxy in front of it for HTTPS.
+### Waitress
 
-Put a proxy like Nginx in front: Gunicorn's docs [strongly recommend it](https://gunicorn.org/deploy/), and Uvicorn's recommend it [for resilience](https://uvicorn.dev/deployment/#running-behind-nginx). Behind a proxy, tell your server which proxies to trust for `X-Forwarded-*` headers, since any client can set them. [Uvicorn](https://uvicorn.dev/deployment/#proxies-and-forwarded-headers) and Gunicorn take `--forwarded-allow-ips`, Granian [`trusted_hosts`](https://github.com/emmett-framework/granian#proxies-and-forwarded-headers), Hypercorn [`ProxyFixMiddleware`](https://hypercorn.readthedocs.io/en/latest/how_to_guides/proxy_fix.html), and Waitress [`trusted_proxy`](https://docs.pylonsproject.org/projects/waitress/en/latest/reverse-proxy.html#passing-the-proxy-headers-to-setup-the-wsgi-environment). In Uvicorn, Gunicorn, Granian, and Waitress, trust every address with `*` only when [no client can reach the server directly](https://gunicorn.org/deploy/#nginx-configuration).
+Pick Waitress for a WSGI app that has to run on Windows. It's pure Python with no dependencies outside the standard library. Start it from Python with [`serve(wsgiapp)`](https://docs.pylonsproject.org/projects/waitress/en/latest/usage.html). Pyramid's starter project serves through it.
+
+### Granian
+
+Pick Granian when you want one dependency that serves both ASGI and WSGI apps. It's written in Rust. Its README says to [pass on it](https://github.com/emmett-framework/granian) when you want a pure Python server, need advanced debugging, or rely on Trio or gevent. You tell it which interface to serve: `granian --interface asgi main:app`. If you switch for speed, measure your own app first: independent comparisons found little speed difference from Uvicorn once the database is the bottleneck.
+
+### Hypercorn
+
+Pick Hypercorn when your ASGI app runs on Trio: it can use asyncio, uvloop, or [Trio workers](https://hypercorn.readthedocs.io/en/latest/discussion/workers.html). It started as part of Quart, which installs it. Start it with [`hypercorn hello_world:app`](https://hypercorn.readthedocs.io/en/latest/tutorials/quickstart.html).
+
+### Running in production
+
+Put a reverse proxy in front of your server. Gunicorn's docs [strongly recommend one](https://gunicorn.org/deploy/), since its default sync workers need a proxy that buffers slow clients. Uvicorn's docs recommend one too, and Waitress has no TLS of its own. In containers, run one server process per container and [let your orchestrator scale the containers](https://uvicorn.dev/deployment/docker/), as Uvicorn's and Granian's docs advise.
