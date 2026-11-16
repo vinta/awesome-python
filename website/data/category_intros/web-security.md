@@ -2,14 +2,14 @@ Clean user-submitted HTML with nh3, and define HTTP security headers once with s
 
 How to choose:
 
-- HTML your users write, like rich-text comments, or code moving off Bleach: nh3
+- HTML your users write, like rich-text comments or rendered Markdown, or code moving off Bleach: nh3
 - One set of security headers across ASGI or WSGI apps: secure
 - CORS headers for a Flask app: flask-cors
 - CORS headers for a Django app: django-cors-headers
 
 ### nh3
 
-Pick nh3 to clean HTML your users write, like posts from a rich-text editor. It wraps ammonia, a Rust sanitizer. Bleach's original author calls the pair [fantastic, fast alternatives](https://github.com/mozilla/bleach/issues/698#issuecomment-1658600990) to Bleach. Start with [`nh3.clean()`](https://nh3.readthedocs.io/en/latest/#usage), which strips the tags and attributes it doesn't allow from an HTML fragment. Narrow its allowlist to the tags and attributes your editor actually produces.
+Pick nh3 to clean HTML your users write, like posts from a rich-text editor or Markdown rendered to HTML, since [Python-Markdown doesn't sanitize its output](https://python-markdown.github.io/sanitization/#sanitizing-html-output). It wraps ammonia, a Rust sanitizer. Bleach's original author calls the pair [fantastic, fast alternatives](https://github.com/mozilla/bleach/issues/698#issuecomment-1658600990) to Bleach. Start with [`nh3.clean()`](https://nh3.readthedocs.io/en/latest/#usage), which strips the tags and attributes it doesn't allow from an HTML fragment. Narrow its allowlist to the tags and attributes your editor actually produces.
 
 ### secure
 
