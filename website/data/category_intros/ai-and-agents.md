@@ -1,58 +1,126 @@
-Build a typed agent in Pydantic AI. Long-running, stateful agents suit LangGraph. Apps tied to one model vendor can use that vendor's Python AI agent library.
+Committed to one model vendor? Use its agent SDK. Otherwise, build Python AI agents with Pydantic AI, or LangGraph when you need explicit control over state.
 
 How to choose:
 
-- Typed agents: Pydantic AI, or LangGraph for long-running, stateful ones
-- Agents on Claude, OpenAI, or Gemini models: Claude Agent SDK, OpenAI Agents SDK, or Google ADK
-- Skills for your coding agent: Django AI Skills, Sentry Skills, or Trail of Bits Skills
-- MCP servers and clients: MCP Python SDK, or FastMCP to compose and proxy servers
-- Sandboxing AI-written code: Monty
-- A personal assistant in your chat apps: Hermes Agent, or AstrBot for QQ, Feishu, and DingTalk
-- Prompts tuned against a metric: DSPy
-- Agent data: Instructor for structured output, LlamaIndex for RAG, Mem0 for memory
-- Open models from the Hugging Face Hub: Transformers
-- Running open models locally: Ollama, llama-cpp-python in your own process, MLX LM on Apple silicon
-- Serving open models: vLLM or SGLang
-- Image and video generation: Diffusers
-- Fine-tuning: TRL with PEFT adapters, Unsloth for less GPU memory, Axolotl from YAML
-- Speech: faster-whisper, FunASR for Chinese, gTTS for text to speech
+- Agent frameworks: pydantic-ai across model providers, langgraph for control over state, crewai for role-based teams
+- One model vendor: claude-agent-sdk, openai-agents, or google-adk, whichever matches it
+- Skills for your coding agent: django-ai-plugins for Django, trailofbits-skills for security, scientific-agent-skills for research
+- MCP servers: fastmcp, or mcp for protocol-level control
+- Running AI-written code without a container: pydantic-monty
+- A personal agent that learns from use: hermes-agent, or AstrBot for a chatbot across chat apps
+- Tuning prompts against a metric: dspy
+- Agent data: instructor for structured output, llama-index for RAG, mem0 for long-term memory
+- Pretrained models: transformers, or sentence-transformers for embeddings and reranking
+- Local models: ollama for a shared server, llama-cpp-python for GGUF files, mlx-lm on Apple Silicon
+- Serving open models: vllm, or benchmark sglang when requests share long prefixes
+- Generating images and video: diffusers
+- Fine-tuning: peft and trl in code, unsloth for speed and memory, axolotl for multi-GPU runs from YAML
+- Speech: faster-whisper for transcription, gTTS for text to speech through Google Translate
 
-Pydantic AI comes from the Pydantic team and is [typed end to end](https://pydantic.dev/docs/ai/overview/). Outputs, tools, and dependencies all carry types, so your type checker knows what an agent returns. Switching models takes one string. [Give an agent an output type and tools](https://github.com/pydantic/pydantic-ai), and every run comes back validated.
+### Pydantic AI
 
-LangGraph is a [low-level orchestration framework](https://docs.langchain.com/oss/python/langgraph/overview) for long-running, stateful agents, and it can mix hand-coded steps with LLM-driven ones in one graph. For your first agent, its docs suggest LangChain's agents instead: [a minimal harness](https://docs.langchain.com/oss/python/langchain/overview) built on LangGraph, which you extend through middleware.
+Pick Pydantic AI when you want agents in plain, typed Python and the freedom to change model vendors, since it puts [every model a string swap away](https://pydantic.dev/docs/ai/overview/). Outputs, dependencies, and tools are all typed, so your type checker knows what an agent returns. Start with the `Agent` class.
 
-The Claude Agent SDK gives you [the tools and agent loop behind Claude Code](https://code.claude.com/docs/en/agent-sdk/overview), so it fits agents that read files, run commands, and edit code. Call `query()` for a one-off task, and switch to [`ClaudeSDKClient`](https://code.claude.com/docs/en/agent-sdk/python#choosing-between-query-and-claudesdkclient) when the next step depends on Claude's reply, as in a chat.
+### LangGraph
 
-The OpenAI Agents SDK keeps to [a small set of primitives](https://openai.github.io/openai-agents-python/): use it when you want the runtime to handle turns, tool calls, handoffs, and guardrails for you. Despite the name, it [isn't limited to OpenAI models](https://github.com/openai/openai-agents-python).
+Pick LangGraph for stateful, long-running agents where you need [explicit control over state and control flow](https://docs.langchain.com/oss/python/langgraph/overview). You build a `StateGraph` that mixes fixed steps with model calls, and it can checkpoint state, resume after a failure, and pause for a person to approve. For a straightforward agent, the LangChain team's own chooser [picks LangChain](https://docs.langchain.com/oss/python/concepts/products), which runs on LangGraph.
 
-Google ADK is [optimized for Gemini but model-agnostic](https://github.com/google/adk-python). Start a project with [`adk create`](https://adk.dev/get-started/python/).
+### CrewAI
 
-All three skill collections install from a Claude Code plugin marketplace. Django AI Skills and Sentry Skills follow the open [Agent Skills](https://agentskills.io/) format, so other coding agents can load them too. Sentry Skills is [written for Sentry's own engineers](https://github.com/getsentry/skills), so some of its skills follow Sentry's internal standards.
+Pick CrewAI when your problem splits into specialist roles: a crew of role-playing agents gets a team running with little code. For a production app, its docs say to [start with a Flow](https://docs.crewai.com/en/introduction), which holds the app's structure and state. Run a Crew inside a Flow step only where the task needs autonomous agents.
 
-CrewAI splits an app into Flows, which manage state and control execution, and Crews, teams of agents that work on one task together. For a production app, [start with a Flow](https://docs.crewai.com/en/introduction), and hand a Crew only the steps that need autonomy.
+### OpenAI Agents SDK
 
-The MCP Python SDK reads each tool's schema [from its type hints and docstring](https://py.sdk.modelcontextprotocol.io/get-started/first-steps/), so you write no JSON Schema or request handlers. FastMCP wrote the high-level API that the SDK [took in](https://gofastmcp.com/docs/getting-started/welcome). The standalone project is a fuller framework: it can [mount several servers into one](https://gofastmcp.com/docs/servers/composition) and [proxy another MCP server](https://gofastmcp.com/docs/servers/providers/proxy) through your own.
+Pick the OpenAI Agents SDK when you build on OpenAI's models and want the smallest loop to learn: it has [very few abstractions](https://openai.github.io/openai-agents-python/), mainly agents, handoffs, and guardrails. Define an `Agent` with instructions and tools, and the SDK runs the turns for you.
 
-Monty is [a Python sandbox written in Rust for code written by AI](https://pydantic.dev/docs/monty/get-started/). It [runs Code Mode in Pydantic AI](https://pydantic.dev/docs/ai/harness/code-mode/), where the model writes one Python program that calls your tools, instead of one tool call per action. The sandbox has no filesystem, environment variables, or network, so the code reaches your host only through the functions and mounts you pass in. [Open a pool of workers and check out a session](https://pydantic.dev/docs/monty/quickstart/python/), setting memory and time limits on the checkout. A host function runs with your process's full authority, so [validate its arguments](https://pydantic.dev/docs/monty/concepts/security/) like any untrusted input. Monty implements only enough Python for a model to express what it wants, so [turn on type checking](https://pydantic.dev/docs/monty/limitations/) to catch most unsupported code before it runs.
+### Claude Agent SDK
 
-Hermes Agent talks to you on Telegram, Discord, Slack, WhatsApp, and Signal [from one gateway process](https://github.com/NousResearch/hermes-agent), and writes itself new skills as it works. Since it runs commands for whoever it lets in, allow only your own account on its gateway with an [allowlist](https://hermes-agent.nousresearch.com/docs/user-guide/security#user-authorization-gateway), and leave approval prompts on for dangerous commands. AstrBot covers chat apps such as QQ, Feishu, and DingTalk. It's AGPL, while Hermes Agent is MIT.
+Pick the Claude Agent SDK when the agent you want is Claude Code inside your own app: it gives you [the same tools, agent loop, and context management that power Claude Code](https://code.claude.com/docs/en/agent-sdk/overview). Call `query()` for a one-off task.
 
-DSPy has you write [structured signatures, not prompts](https://dspy.ai/current/), and its optimizers tune the prompts for you. Before they can, [define a metric and score a baseline](https://dspy.ai/current/getting-started/metrics/) to beat.
+### Agent Development Kit
 
-Instructor [turns an LLM's reply into a validated Pydantic model](https://github.com/567-labs/instructor), and when validation fails, it retries with the error message. Its docs draw the line at [extraction versus agents](https://python.useinstructor.com/): Instructor for the first, Pydantic AI for the second.
+Pick ADK when your team builds on Google Cloud and Gemini: it's [optimized for Google's Gemini models](https://adk.dev/get-started/about/) and reaches other models through connectors. Its workflow agents run steps in sequence, in parallel, or in a loop without asking the model. Run `adk create` to start a project.
 
-LlamaIndex builds [agents over your own data](https://developers.llamaindex.ai/python/framework/). Its high-level API goes from documents to answers in a few lines, and its lower-level API lets you replace any part.
+### Agent skill collections
 
-Mem0 gives an agent [memory of each user](https://github.com/mem0ai/mem0): search their memories before the model answers, then add the new exchange. Run it [as a library in your app](https://docs.mem0.ai/open-source/overview), or as a self-hosted server for a team.
+Pick a skill collection by your work: django-ai-plugins for Django, DRF, and Celery, scientific-agent-skills for research with scientific Python packages, and trailofbits-skills for security audits and testing. sentry-skills holds the code review and pull request skills Sentry's own engineers use, and wshobson-agents covers Python, Django, FastAPI, testing, and packaging among many other plugins. Most of them follow the open [Agent Skills format](https://agentskills.io/): each skill is a folder your coding agent can use, with a `SKILL.md` file of instructions plus any scripts.
 
-Transformers is the [model definition that most training frameworks and inference engines share](https://huggingface.co/docs/transformers/index), Axolotl, Unsloth, vLLM, and SGLang among them. Load a model from the Hugging Face Hub with [`from_pretrained()`](https://huggingface.co/docs/transformers/quicktour), then run it through `Pipeline` for inference or `Trainer` for training. For large production deployments, its docs [send you to vLLM or SGLang](https://huggingface.co/docs/transformers/serve-cli/serving).
+### FastMCP
 
-The Ollama Python library talks to Ollama, which [runs models on your computer](https://docs.ollama.com/api/introduction). [Start Ollama and pull a model](https://github.com/ollama/ollama-python) with `ollama pull`, then pass the model's name to `chat()`. llama-cpp-python gives you [Python bindings for llama.cpp](https://github.com/abetlen/llama-cpp-python), so the model runs inside your program. Load a GGUF file with the `Llama` class, or fetch one from the Hugging Face Hub with `Llama.from_pretrained()`. Its completions come back in the OpenAI format. On a Mac, MLX LM [runs and fine-tunes models on Apple silicon](https://github.com/ml-explore/mlx-lm).
+Pick FastMCP to build an MCP server for production. It builds on the official SDK and [adds composition, middleware, proxying, and authentication providers](https://gofastmcp.com/docs/getting-started/upgrading/from-mcp-sdk-v2), plus a client. A server is a `FastMCP` instance, and each tool is a decorated Python function.
 
-vLLM runs [batch inference offline or an OpenAI-compatible server](https://docs.vllm.ai/en/latest/getting_started/quickstart/), so apps written for the OpenAI API work unchanged. SGLang is [optimized for agentic workloads, RL rollouts, and large-scale serving](https://github.com/sgl-project/sglang).
+### MCP Python SDK
 
-Diffusers centers on the [`DiffusionPipeline`](https://huggingface.co/docs/diffusers/index): a few lines generate an image, video, or audio clip.
+Use the official MCP Python SDK when you need protocol-level control, as when you build a gateway or a test harness around MCP. While you build, run your server with [`mcp dev`](https://py.sdk.modelcontextprotocol.io/), which opens it in the MCP Inspector.
 
-Start fine-tuning with LoRA or QLoRA rather than training every weight, as both [PEFT](https://huggingface.co/docs/peft/methods/overview) and [Unsloth](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide) advise. TRL trains with methods from SFT to DPO and GRPO, and every TRL trainer takes a [`peft_config`](https://huggingface.co/docs/trl/peft_integration) for PEFT adapters. Axolotl keeps the whole pipeline, from dataset preprocessing to inference, in [one YAML file](https://github.com/axolotl-ai-cloud/axolotl).
+### Monty
 
-faster-whisper reimplements Whisper on CTranslate2 for [the same accuracy in less time and memory](https://github.com/SYSTRAN/faster-whisper). For Chinese audio, FunASR's `AutoModel` [chains speech recognition with voice activity detection, punctuation, and speaker models](https://github.com/modelscope/FunASR) in one call. gTTS speaks through [Google Translate's undocumented speech feature](https://github.com/pndurette/gTTS), so upstream changes can break it without notice.
+Pick Monty to run the Python a model writes inside your app, without the latency and cost of a container. Filesystem, environment variables, and network don't exist inside it: the code [reaches the host only through the functions you pass in](https://github.com/pydantic/monty). Run code through the `Monty` class.
+
+### Hermes Agent and AstrBot
+
+Pick Hermes Agent for one personal agent that gets better with use, and AstrBot to put a chatbot into the chat apps people already use. Hermes Agent [creates skills from experience](https://hermes-agent.nousresearch.com/docs) and builds a model of you across sessions, and you can talk to it from Telegram while it works on a server. AstrBot is [an all-in-one chatbot platform](https://github.com/AstrBotDevs/AstrBot) for messaging apps like QQ, Feishu, Telegram, and Slack, extended with plugins.
+
+### DSPy
+
+Pick DSPy when you want prompts tuned by data instead of by hand. You describe each task as a [signature, not a prompt](https://dspy.ai/current/), and run it through a module like `dspy.ChainOfThought`. Then you [give DSPy a training set and a metric](https://dspy.ai/current/getting-started/gepa-optimization/), and its optimizer rewrites your instructions.
+
+### Instructor
+
+Pick Instructor when all you need is structured data out of an LLM call. Its own docs draw the line at [Instructor for extraction, Pydantic AI for agents](https://python.useinstructor.com/), so move to Pydantic AI once the job needs tools. Describe the output as a Pydantic model, and create a client with `instructor.from_provider()`.
+
+### LlamaIndex
+
+Pick LlamaIndex to build RAG and agents over your own documents: it's [a toolkit for building LLM-powered agents over your data](https://developers.llamaindex.ai/python/framework/). Load your documents into a `VectorStoreIndex` and query it.
+
+### Mem0
+
+Pick Mem0 to give agents [long-term memory that persists across sessions](https://docs.mem0.ai/introduction), as a library you call through `Memory()` or as a self-hosted server. OpenViking instead lays out knowledge, memory, and skills as [a virtual filesystem agents browse](https://github.com/volcengine/OpenViking). It runs as a server under the AGPL. Semantica builds a knowledge graph with provenance, for teams that must [explain why an agent made a decision](https://github.com/semantica-agi/semantica).
+
+### Transformers
+
+Use Transformers to run or train a pretrained model. It's [the model-definition framework](https://huggingface.co/docs/transformers/index) that training tools like Axolotl and serving engines like vLLM build on. Start inference with `Pipeline`. For search, Sentence Transformers computes embeddings on top of it, and its docs [retrieve candidates with a bi-encoder, then rerank them with a cross-encoder](https://sbert.net/examples/sentence_transformer/applications/retrieve_rerank/README.html).
+
+### Ollama
+
+Pick Ollama for the easiest local model server that your scripts and tools can share. The Python package is only a client: [Ollama must be installed and running](https://github.com/ollama/ollama-python) with a model pulled, and then you call `chat()`.
+
+### llama-cpp-python
+
+Pick llama-cpp-python to load a GGUF model file straight into your Python process. It's [Python bindings for llama.cpp](https://llama-cpp-python.readthedocs.io/en/latest/), which runs on the widest range of hardware, and the `Llama` class runs a model file.
+
+### MLX LM
+
+Pick MLX LM on an Apple Silicon Mac, where it [generates text and fine-tunes models with MLX](https://github.com/ml-explore/mlx-lm). It runs MLX-compatible models from the Hugging Face Hub. Load one with `load()`.
+
+### vLLM
+
+Start serving open models with vLLM. Its server [implements the OpenAI API](https://docs.vllm.ai/en/latest/getting_started/quickstart/), so apps written for OpenAI work against it, and `vllm serve` starts it. DeepInfer is the engine behind DeepSeek's own services, and its open release runs [offline inference for DeepSeek's models](https://github.com/deepseek-ai/DeepInfer), so pick it only for those.
+
+### SGLang
+
+Benchmark SGLang against vLLM when many requests share a long prefix, like one big system prompt, or agents replay long conversations. SGLang is [designed for low-latency serving with RadixAttention](https://docs.sglang.io/), which reuses shared prefixes, and it's compatible with OpenAI's API too. Start a server with `sglang serve`.
+
+### Diffusers
+
+Use Diffusers to generate images, video, or audio from pretrained diffusion models. [`DiffusionPipeline`](https://huggingface.co/docs/diffusers/index) runs a checkpoint in a few lines.
+
+### TRL and PEFT
+
+Write fine-tuning code with TRL and PEFT, the Hugging Face libraries that Unsloth and Axolotl build on. TRL supplies trainers for [SFT, DPO, GRPO, and reward modeling](https://huggingface.co/docs/trl/index), starting with `SFTTrainer`. PEFT adapts a model by training [a small number of extra parameters](https://huggingface.co/docs/peft/index), with methods like LoRA, and [every TRL trainer supports PEFT](https://huggingface.co/docs/trl/peft_integration).
+
+### Unsloth
+
+Pick Unsloth to fine-tune faster and with less GPU memory on your own hardware, as a Python library or a desktop app. Its docs [recommend starting with QLoRA](https://unsloth.ai/docs/get-started/fine-tuning-llms-guide) on an Instruct model. Load the model with `FastLanguageModel`.
+
+### Axolotl
+
+Pick Axolotl for reproducible runs across several GPUs or nodes. [One YAML file](https://docs.axolotl.ai/) drives dataset preprocessing, training, evaluation, quantization, and inference, and `axolotl train` runs it.
+
+### faster-whisper
+
+Transcribe with faster-whisper on an NVIDIA GPU. It's [a reimplementation of OpenAI's Whisper model](https://github.com/SYSTRAN/faster-whisper) that runs the same models with the same accuracy, only faster. Load a model with `WhisperModel`. openai-whisper is OpenAI's original code for those models. FunASR is a toolkit where you [choose the task, checkpoint, and runtime separately](https://github.com/modelscope/FunASR), with streaming transcription, speaker pipelines, and emotion tags.
+
+### gTTS
+
+Pick gTTS for quick text to speech, from Python or its command-line tool. It sends text to [Google Translate's text-to-speech API](https://gtts.readthedocs.io/en/latest/) and writes back MP3 audio. Create a `gTTS` object with your text, then save it.
