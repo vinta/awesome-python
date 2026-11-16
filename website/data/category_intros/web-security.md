@@ -1,18 +1,28 @@
-A Python web security library like nh3 sanitizes HTML your users write. Flask-CORS and django-cors-headers add CORS headers to Flask and Django apps.
+Clean user-submitted HTML with nh3, and define HTTP security headers once with secure. For CORS, add Flask-CORS to Flask or django-cors-headers to Django.
 
 How to choose:
 
-- User-written HTML, like comments and posts, or code moving off bleach: nh3
-- HTML rendered from user Markdown: nh3, run on the rendered output
-- Letting a frontend on another origin call your API: Flask-CORS on Flask, django-cors-headers on Django
-- Security headers like CSP and HSTS, one policy across ASGI and WSGI apps: secure
+- HTML your users write, like rich-text comments, or code moving off Bleach: nh3
+- One set of security headers across ASGI or WSGI apps: secure
+- CORS headers for a Flask app: flask-cors
+- CORS headers for a Django app: django-cors-headers
 
-nh3 is a Python binding to ammonia, an allowlist-based HTML sanitizer built to stop cross-site scripting from untrusted user HTML. It parses fragments the same way browsers do. Call [`nh3.clean()` on each fragment](https://nh3.readthedocs.io/en/latest/#usage), and pass `tags` and `attributes` to set what it allows, like `tags={"b"}`. When you use the same options everywhere, create an [`nh3.Cleaner`](https://nh3.readthedocs.io/en/latest/#nh3.Cleaner) once and reuse it. ammonia won't linkify bare URLs or add line breaks, so its docs say to [run a markup processor before the sanitizer](https://github.com/rust-ammonia/ammonia#html-sanitization): render Markdown first, then clean the HTML it outputs.
+### nh3
 
-Flask-CORS is a Flask extension built on one idea: when you enable CORS, you enable it for every use case on a domain. [`CORS(app)`](https://flask-cors.corydolphin.com/#getting-started) turns it on for all routes and all origins. To scope it to part of the app, pass [`resources`](https://github.com/corydolphin/flask-cors#resource-specific-cors) to map path patterns like `r"/api/*"` to their own options, such as `origins`. To cover a single route, decorate it with [`@cross_origin()`](https://flask-cors.corydolphin.com/decorator/). Cross-origin cookies stay off until you set `supports_credentials=True`, and its docs ask you to [add CSRF protection before you do](https://flask-cors.corydolphin.com/#using-cors-with-cookies).
+Pick nh3 to clean HTML your users write, like posts from a rich-text editor. It wraps ammonia, a Rust sanitizer. Bleach's original author calls the pair [fantastic, fast alternatives](https://github.com/mozilla/bleach/issues/698#issuecomment-1658600990) to Bleach. Start with [`nh3.clean()`](https://nh3.readthedocs.io/en/latest/#usage), which strips the tags and attributes it doesn't allow from an HTML fragment. Narrow its allowlist to the tags and attributes your editor actually produces.
 
-django-cors-headers is a Django app that adds CORS headers to responses, so browsers let pages on other origins call your site. Add `corsheaders` to `INSTALLED_APPS`, and put `CorsMiddleware` in `MIDDLEWARE` [as high as possible](https://github.com/adamchainz/django-cors-headers#setup), above any middleware that can return a response, like Django's `CommonMiddleware`. Otherwise those responses go out without CORS headers. Then list the sites you trust in [`CORS_ALLOWED_ORIGINS`](https://github.com/adamchainz/django-cors-headers#cors_allowed_origins-sequencestr). Its docs warn that `CORS_ALLOW_ALL_ORIGINS = True` [can be dangerous](https://github.com/adamchainz/django-cors-headers#cors_allow_all_origins-bool), since any website could then make cross-origin requests to yours.
+### secure
 
-secure keeps all your security headers in one policy object, instead of header strings copied across handlers and hooks. Start from `Secure.with_default_headers()`, which its docs call [the recommended starting point](https://github.com/TypeError/secure/blob/main/docs/usage.md#start-with-a-preset), configure it once, and reuse it everywhere. [Prefer its ASGI or WSGI middleware](https://github.com/TypeError/secure/blob/main/docs/frameworks.md#how-to-choose-an-integration-style) to cover the whole app, and set headers per response when you're inside an existing hook or view. The defaults are only a starting point: [adjust the Content Security Policy](https://github.com/TypeError/secure#why-use-secure) for the scripts, styles, and third-party services your app really uses. Then [test a stricter policy against the real app](https://github.com/TypeError/secure/blob/main/docs/usage.md#build-an-explicit-configuration) before rollout.
+Pick secure to [define HTTP security headers once](https://typeerror.com/secure/) and apply the same policy across Python web apps, through its ASGI or WSGI middleware or a framework's response hook. On Django, the framework's [built-in middleware](https://docs.djangoproject.com/en/stable/ref/middleware/) can already set headers like HSTS, X-Frame-Options, and Content Security Policy, so check what it covers first. Start from [`Secure.with_default_headers()`](https://github.com/TypeError/secure/blob/main/docs/usage.md), the preset its docs recommend. Then [adjust its Content Security Policy](https://github.com/TypeError/secure#why-use-secure) to the scripts, styles, and third-party services your app actually uses. Headers [don't replace output encoding](https://github.com/TypeError/secure/blob/main/docs/security_considerations.md), so sanitize user HTML with nh3 too.
 
-Against cross-site scripting, use both a sanitizer and a CSP, with sanitizing as the main defense. OWASP says to [sanitize HTML when users author it](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#html-sanitization), and to treat CSP as [an additional layer of defense](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#other-controls), never the primary one.
+### Flask-CORS
+
+Pick Flask-CORS when JavaScript on another domain calls your Flask app. Initialize the extension with [`CORS(app)`](https://flask-cors.corydolphin.com/), which by default turns CORS on for every route, origin, and method.
+
+### django-cors-headers
+
+Pick django-cors-headers for CORS in a Django app: Django [doesn't include CORS support](https://docs.djangoproject.com/en/stable/topics/security/#cross-origin-resource-sharing-cors) and lists this package on its [ecosystem page](https://www.djangoproject.com/community/ecosystem/). Put its [`CorsMiddleware`](https://github.com/adamchainz/django-cors-headers#setup) as high as possible in your middleware list, before anything that can return a response, or those responses go out without CORS headers.
+
+### Locking down CORS
+
+Apps on FastAPI or Starlette need neither pick, since both ship [CORS middleware](https://fastapi.tiangolo.com/tutorial/cors/). Whichever you use, list the origins allowed to call you instead of allowing all of them. django-cors-headers warns that allowing every origin [can be dangerous](https://github.com/adamchainz/django-cors-headers#cors_allow_all_origins-bool), and Flask-CORS allows every origin until you pass your own list. Both picks leave cookies off by default, so keep them off unless your frontend needs them. When you turn them on, [add CSRF protection](https://flask-cors.corydolphin.com/#using-cors-with-cookies), as Flask-CORS's docs advise. [Django's CSRF checks don't read your CORS settings](https://github.com/adamchainz/django-cors-headers#csrf-integration), so add those sites to Django's CSRF trusted origins too.
