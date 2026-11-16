@@ -1,32 +1,48 @@
-Most crawls you build with a Python web scraping library fit Scrapy: you write selectors, it schedules requests. Crawl4AI hands pages to an LLM as Markdown.
+Crawl a site and extract structured data with Scrapy. Crawl4AI turns pages into Markdown for an LLM, and browser-use lets an AI agent do a task in a browser.
 
 How to choose:
 
-- Crawling a site with selectors you write: Scrapy
-- Pages an LLM will read, as Markdown: Crawl4AI
-- A goal in plain words that an LLM carries out in a browser: Browser Use
-- A browser script with plain-word steps where selectors would break: Stagehand
-- Selectors that survive a site redesign, without AI: Scrapling
-- A whole HTML page or fragment as Markdown: markdownify
+- Crawling a site for structured data: Scrapy
+- Pages turned into Markdown for an LLM or RAG pipeline: Crawl4AI
+- A goal an AI agent works out in a real browser: browser-use
+- A scripted browser flow with AI for the steps that break: Stagehand
+- Selectors that still find elements after a redesign: Scrapling
+- HTML you already have, converted to Markdown: markdownify
 - RSS, Atom, and JSON feeds: feedparser
-- An article's main text, without menus and ads: Trafilatura
+- An article's main text and metadata: Trafilatura
 
-Scrapy is [an application framework for crawling web sites and extracting structured data](https://docs.scrapy.org/en/latest/intro/overview.html). It schedules and processes requests asynchronously, so one slow page doesn't hold up the crawl. Start with [`scrapy startproject`](https://docs.scrapy.org/en/latest/intro/tutorial.html#creating-a-project), write a spider class whose callbacks yield items, and send those items through [item pipelines](https://docs.scrapy.org/en/latest/topics/item-pipeline.html) that clean, validate, deduplicate, or store them.
+### Scrapy
 
-Crawl4AI [turns any website into clean, LLM-ready Markdown](https://docs.crawl4ai.com/) for RAG, AI agents, and data pipelines. Its `AsyncWebCrawler` [launches a headless browser](https://docs.crawl4ai.com/core/quickstart/) and converts each page's HTML to Markdown. Give `arun()` one URL, or give [`arun_many()`](https://docs.crawl4ai.com/advanced/multi-url-crawling/) a list, which it crawls with concurrency control.
+Pick Scrapy when the crawl itself is the job: following links across many pages and exporting the items you extract from each. Start with `scrapy startproject`, then write a spider. When a page fills in its content with JavaScript, Scrapy's docs say to [find the data source](https://docs.scrapy.org/en/latest/topics/dynamic-content.html#finding-the-data-source) and request it directly. When you can't, [fall back to a headless browser through scrapy-playwright](https://docs.scrapy.org/en/latest/topics/dynamic-content.html#using-a-headless-browser).
 
-Browser Use [runs its agent locally from Python](https://github.com/browser-use/browser-use#user-content-path-3-python-library), with your choice of model and a local or cloud browser. Create an `Agent` with a task and an LLM, then `await agent.run()`.
+### Crawl4AI
 
-Stagehand lets you [mix AI steps with deterministic browser control](https://docs.stagehand.dev/v4/first-steps/introduction) in one script and decide how much AI each step uses. Call `page` methods like `goto` and `click` when you know the selector, and the self-healing `act()`, `extract()`, and `observe()` where a selector would break when the site changes.
+Pick Crawl4AI when the pages you crawl go into an LLM or a RAG pipeline: it [turns any website into clean, LLM-ready Markdown](https://docs.crawl4ai.com/). `AsyncWebCrawler` loads each page in a headless browser, and `arun()` returns it as Markdown. For repeated, structured data, its docs say to [try a schema or regex before an LLM](https://docs.crawl4ai.com/extraction/no-llm-strategies/), which is faster and cheaper.
 
-Scrapling is [an adaptive web scraping framework that handles everything from a single request to a full-scale crawl](https://scrapling.readthedocs.io/en/latest/). Turn on `adaptive` in its fetcher and select elements with `auto_save=True`. When a redesign breaks a selector, run it again with `adaptive=True`, and Scrapling [finds the element most similar to the one it saved](https://scrapling.readthedocs.io/en/latest/parsing/adaptive.html), without AI. [Use `Fetcher`](https://scrapling.readthedocs.io/en/latest/fetching/choosing.html#fetchers-overview) when HTTP requests alone can get the page, and a browser fetcher for dynamically loaded sites. For a crawl, [write a `Spider`](https://scrapling.readthedocs.io/en/latest/spiders/getting-started.html#your-first-spider) with `start_urls` and an async `parse()` that yields items, a pattern familiar from Scrapy.
+### browser-use
 
-markdownify [converts HTML to Markdown](https://github.com/matthewwithanm/python-markdownify#user-content-usage): call `markdownify()` on an HTML string. It converts all the HTML you give it, so for an article's main text, use Trafilatura.
+Pick browser-use when you know the goal but not the steps: you give it a task, and [the agent completes it in a real browser](https://docs.browser-use.com/open-source/introduction). If you can script most of the flow yourself, Stagehand fits better. Start with `Agent('<task>').run_sync()`. [The task is the agent's only instruction](https://docs.browser-use.com/open-source/agent#writing-tasks), so say where to start and what done looks like. Keep passwords out of the task text, and [pass them as secrets the agent types without seeing](https://docs.browser-use.com/open-source/secrets).
 
-feedparser has [one main function, `parse()`](https://feedparser.readthedocs.io/en/latest/introduction/), which takes a URL, a local file, or a string and reads RSS, Atom, and JSON feeds. When you poll a feed, [pass its last ETag and Last-Modified values back](https://feedparser.readthedocs.io/en/latest/http-etag/): without them you download unchanged feeds again, and the publisher may ban you.
+### Stagehand
 
-Trafilatura [returns a page's main text](https://trafilatura.readthedocs.io/en/latest/faq.html#how-does-trafilatura-compare-to-beautifulsoup-or-scrapy) without the navigation, ads, and boilerplate, with no selectors to write. Its FAQ pairs it with Scrapy: Scrapy crawls, Trafilatura extracts. [`extract()` is the default choice](https://trafilatura.readthedocs.io/en/latest/faq.html#which-extraction-function-should-i-use) among its functions.
+Pick Stagehand when you can script a browser flow and want AI only for the steps that break when a page changes. [One script mixes AI calls like `act()` and `extract()` with plain page calls](https://docs.stagehand.dev/first-steps/introduction). Its docs recommend [one instruction per action](https://docs.stagehand.dev/best-practices/prompting-best-practices#break-work-into-steps), so you can debug and cache each step by itself. [Pass passwords as variables](https://docs.stagehand.dev/best-practices/prompting-best-practices#protect-sensitive-data), so the model sees only their names.
 
-Let sites know who's crawling. Scrapy's tutorial says to [set `USER_AGENT`](https://docs.scrapy.org/en/latest/intro/tutorial.html#creating-a-project) to a project name plus a URL or an email address, so site owners can ask you to adjust your crawler instead of blocking it. feedparser's docs also say to [set the User-Agent](https://feedparser.readthedocs.io/en/latest/http-useragent/) to your application's name and URL.
+### Scrapling
 
-With a browser agent, keep passwords away from the model: Browser Use [shows the LLM only placeholders](https://docs.browser-use.com/open-source/examples/templates/sensitive-data), and Stagehand [fills in variables after the model picks the action](https://docs.stagehand.dev/v4/best-practices/prompting-best-practices#protect-sensitive-data). Then check the agent's work: Browser Use's docs say to [verify important outcomes against the destination system](https://docs.browser-use.com/open-source/customize/agent/output-format).
+Pick Scrapling when your selectors keep breaking as a site changes. Turn on its [adaptive feature](https://scrapling.readthedocs.io/en/latest/parsing/adaptive.html), and Scrapling remembers the properties of an element you tell it to save. After a redesign, it finds the most similar element, without AI. It also ships fast HTTP requests, stealth browsers, and concurrent crawling in one library. Start with `Fetcher.get()`. On an existing Scrapy project, [Scrapy keeps handling the crawling while Scrapling handles the parsing](https://scrapling.readthedocs.io/en/latest/integrations/scrapy.html).
+
+### markdownify
+
+Pick markdownify when you already have the HTML and want to decide how each tag becomes Markdown. `md(html)` converts it. To change one tag's output, [subclass `MarkdownConverter` and override its `convert_<tag>` method](https://github.com/matthewwithanm/python-markdownify#creating-custom-converters).
+
+### feedparser
+
+Pick feedparser to read RSS, Atom, and JSON feeds: its one main function, `feedparser.parse()`, takes a URL, a file, or a string. It sanitizes the HTML inside feeds, but [content marked as plain text isn't sanitized](https://feedparser.readthedocs.io/en/latest/html-sanitization/), so check each entry's content type and escape plain text before you render it.
+
+### Trafilatura
+
+Pick Trafilatura to pull an article's main text and metadata from pages you don't control: it [focuses on the actual content](https://trafilatura.readthedocs.io/en/latest/) and drops headers, footers, and boilerplate. Pass the page from `fetch_url()` to `extract()`.
+
+### Crawling politely
+
+Where a site allows crawling, [set a User-Agent that names you and lets the site's owners reach you](https://docs.scrapy.org/en/latest/topics/practices.html#avoiding-getting-banned), so they can ask you to slow down instead of blocking you. Read each site's robots.txt, drop the URLs it disallows, and [respect its crawl delay](https://trafilatura.readthedocs.io/en/latest/downloads.html).
