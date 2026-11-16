@@ -17,15 +17,15 @@ How to choose:
 
 ### pathlib
 
-Use pathlib, in the standard library, for any path you build, join, or read. Its docs say [`Path` is most likely what you need](https://docs.python.org/3/library/pathlib.html): it makes a path for the platform your code runs on.
+Use pathlib, in the standard library, for any path you build, join, or read. Its docs say [`Path` is most likely what you need](https://docs.python.org/3/library/pathlib.html): it makes a path for the platform your code runs on. Join parts with the `/` operator.
 
 ### zipfile
 
-Use zipfile, in the standard library, to [create, read, write, append, and list](https://docs.python.org/3/library/zipfile.html) ZIP archives.
+Use zipfile, in the standard library, to [create, read, write, append, and list](https://docs.python.org/3/library/zipfile.html) ZIP archives. Open an archive with the `ZipFile` class to read, write, or extract it.
 
 ### pyzipper
 
-Pick pyzipper to write password-protected ZIP files, since zipfile [can decrypt them but cannot create an encrypted file](https://docs.python.org/3/library/zipfile.html). It's a fork of zipfile that [reads and writes AES-encrypted ZIP files](https://github.com/danifus/pyzipper) and keeps zipfile's API from when it forked.
+Pick pyzipper to write password-protected ZIP files, since zipfile [can decrypt them but cannot create an encrypted file](https://docs.python.org/3/library/zipfile.html). It's a fork of zipfile that [reads and writes AES-encrypted ZIP files](https://github.com/danifus/pyzipper) and keeps zipfile's API from when it forked. Open archives with its `AESZipFile` class.
 
 ### tarfile
 
@@ -45,7 +45,7 @@ Use mimetypes, in the standard library, when a file's name is all you need. It [
 
 ### python-magic
 
-Pick python-magic to identify a file by its content. It wraps libmagic, which [identifies file types by checking their headers](https://github.com/ahupp/python-magic) and powers the Unix `file` command. You install that C library separately.
+Pick python-magic to identify a file by its content. It wraps libmagic, which [identifies file types by checking their headers](https://github.com/ahupp/python-magic) and powers the Unix `file` command. You install that C library separately. `magic.from_file()` returns a file's type.
 
 ### Magika
 
@@ -61,7 +61,7 @@ Pick smart_open to stream a large file to or from S3, GCS, Azure, HDFS, or HTTP 
 
 ### compression.zstd
 
-Use compression.zstd, in the standard library, as your default for compressing data and files. Zstandard is [a fast lossless compression algorithm](https://docs.python.org/3/library/compression.zstd.html) built for real-time compression.
+Use compression.zstd, in the standard library, as your default for compressing data and files. Zstandard is [a fast lossless compression algorithm](https://docs.python.org/3/library/compression.zstd.html) built for real-time compression. Read and write `.zst` files with `zstd.open()`.
 
 ### gzip
 
@@ -69,7 +69,7 @@ Use gzip, in the standard library, when the other side expects gzip, like a tool
 
 ### python-zstandard
 
-Pick python-zstandard only when compression.zstd lacks something you need. Its own docs say the standard library has fewer features, but is [probably the easiest way](https://python-zstandard.readthedocs.io/en/latest/projectinfo.html) to use Zstandard in Python.
+Pick python-zstandard only when compression.zstd lacks something you need. Its own docs say the standard library has fewer features, but is [probably the easiest way](https://python-zstandard.readthedocs.io/en/latest/projectinfo.html) to use Zstandard in Python. Start from its [`ZstdCompressor` class](https://python-zstandard.readthedocs.io/en/latest/compressor.html).
 
 ### python-lz4
 
@@ -81,7 +81,7 @@ Pick Brotli for output denser than gzip's: its README says it [offers more dense
 
 ### py7zr
 
-Pick py7zr to read or write 7z archives. For archives you create, rarfile's FAQ suggests [Zip for better compatibility and 7z for better compression](https://rarfile.readthedocs.io/faq.html#will-it-support-creating-rar-archives), so reach for py7zr when size matters more than who can open the file.
+Pick py7zr to read or write 7z archives. For archives you create, rarfile's FAQ suggests [Zip for better compatibility and 7z for better compression](https://rarfile.readthedocs.io/faq.html#will-it-support-creating-rar-archives), so reach for py7zr when size matters more than who can open the file. Open archives with its `SevenZipFile` class.
 
 ### rarfile
 
