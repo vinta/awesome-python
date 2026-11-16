@@ -1,4 +1,4 @@
-Python audio processing often pairs two libraries: soundfile reads and writes audio files, and librosa analyzes them, loading each file through soundfile.
+Python audio processing often pairs two libraries: soundfile reads and writes audio files, and librosa analyzes them. MoviePy edits video from a script.
 
 How to choose:
 
