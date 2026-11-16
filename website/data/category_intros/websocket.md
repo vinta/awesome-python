@@ -1,24 +1,29 @@
-Your Python WebSocket library follows your framework: Channels on Django, Flask-SocketIO on Flask with Socket.IO clients. websockets needs no framework.
+Use websockets for a standalone WebSocket server or client, Channels in a Django app, and Flask-SocketIO in a Flask app whose clients speak Socket.IO.
 
 How to choose:
 
-- A Django project: Channels
-- A Flask app with Socket.IO clients: Flask-SocketIO
-- Plain WebSocket servers and clients: websockets
-- A few real-time features next to a Django project: websockets as a separate server
-- RPC and pub/sub over WAMP, or a Twisted app: Autobahn|Python
-- Real-time audio, video, and data channels over WebRTC: aiortc
+- A standalone WebSocket server or client: websockets
+- WebSockets in a Django app: Channels
+- A Flask app whose clients speak Socket.IO: Flask-SocketIO
+- WAMP RPC and PubSub, or Twisted code: autobahn-python
+- Audio, video, or data channels over WebRTC: aiortc
 
-Channels [extends Django beyond HTTP](https://channels.readthedocs.io/en/latest/) to handle WebSockets, and it [integrates with Django's auth and sessions](https://channels.readthedocs.io/en/latest/introduction.html). Write [sync consumers by default](https://channels.readthedocs.io/en/latest/topics/consumers.html#basic-layout). Switch to async ones only when async handling helps and every library you call is async-native. Serve everything with Daphne, or [keep HTTP on your WSGI server](https://channels.readthedocs.io/en/latest/deploying.html#http-and-websocket) and send only WebSockets to Daphne.
+### websockets
 
-Flask-SocketIO speaks Socket.IO, which is [not a WebSocket implementation](https://socket.io/docs/v4/#what-socketio-is-not): a plain WebSocket client can't connect to it. Pick it when your clients use [a Socket.IO client library](https://flask-socketio.readthedocs.io/en/latest/intro.html#requirements). In return, you get events, [rooms, and broadcasting](https://flask-socketio.readthedocs.io/en/latest/getting_started.html#rooms). Start the server with `socketio.run()`, since `flask run` [lacks WebSocket support](https://flask-socketio.readthedocs.io/en/latest/getting_started.html#initialization).
+Pick websockets for a standalone WebSocket server or client. Its [default asyncio implementation](https://websockets.readthedocs.io/en/latest/) suits servers that handle many connections, and its threading implementation is a good alternative for clients. Start with [`serve()`](https://websockets.readthedocs.io/en/latest/intro/examples.html) for a server, or `connect()` for a client. An app on FastAPI, Starlette, or Litestar can skip this choice: use the framework's [built-in WebSocket routes](https://starlette.dev/websockets/).
 
-websockets runs on asyncio by default, which is [ideal for servers with many connections](https://websockets.readthedocs.io/en/stable/). For clients, its threading implementation is a good alternative. It [isn't an HTTP server](https://websockets.readthedocs.io/en/stable/faq/server.html#how-do-i-run-http-and-websocket-servers-on-the-same-port), so [run it as its own program](https://websockets.readthedocs.io/en/stable/deploy/index.html#how-do-i-start-a-process) that calls `serve()`, not under a WSGI or ASGI server. For a few real-time features in a Django project, like notifications, its docs find [a separate websockets server next to Django](https://websockets.readthedocs.io/en/stable/howto/django.html) well suited, where Channels means switching to a new deployment architecture.
+### Channels
 
-Autobahn|Python implements [both WebSocket and WAMP, on Twisted or asyncio](https://autobahn.readthedocs.io/en/latest/). WAMP adds [RPC and pub/sub over WebSocket](https://github.com/crossbario/autobahn-python), and every WAMP client [needs a WAMP router to talk to](https://autobahn.readthedocs.io/en/latest/wamp/programming.html#wamp-programming-1). Write components with functions and decorators, [the recommended approach](https://autobahn.readthedocs.io/en/latest/wamp/programming.html#creating-components-1).
+Pick Channels to add WebSockets to a Django app. It [extends Django beyond HTTP](https://channels.readthedocs.io/en/latest/) on ASGI, and works with Django's auth and sessions. You write a consumer class, the Channels version of a Django view. Its docs [recommend sync consumers by default](https://channels.readthedocs.io/en/latest/topics/consumers.html). Running it takes an ASGI server, plus a channel layer once instances need to talk to each other. For a small set of real-time features, like notifications, websockets' docs suggest [a separate WebSocket server](https://websockets.readthedocs.io/en/latest/howto/django.html) next to Django instead.
 
-aiortc implements [WebRTC and ORTC on asyncio](https://aiortc.readthedocs.io/en/latest/), with an API that closely follows the JavaScript one: promises become coroutines. Since it's plain Python, one server can [handle both signaling and data channels](https://aiortc.readthedocs.io/en/latest/#why-should-i-use-aiortc), or run computer vision on incoming video frames.
+### Flask-SocketIO
 
-Always [secure WebSocket connections with TLS](https://websockets.readthedocs.io/en/stable/topics/security.html#encryption) in production. Any site can open a WebSocket to yours, with your users' cookies attached. If you serve private data, [restrict the allowed origins](https://channels.readthedocs.io/en/latest/topics/security.html#websockets): Channels has `AllowedHostsOriginValidator`, websockets has the [`origins` argument](https://websockets.readthedocs.io/en/stable/reference/asyncio/server.html#websockets.asyncio.server.serve), and Flask-SocketIO [allows only the same origin by default](https://flask-socketio.readthedocs.io/en/latest/deployment.html#cross-origin-controls).
+Pick Flask-SocketIO for real-time features in a Flask app whose clients speak Socket.IO. Socket.IO adds rooms, automatic reconnection, and an HTTP long-polling fallback on top of WebSocket. But it isn't plain WebSocket: a plain WebSocket client [can't connect to a Socket.IO server](https://socket.io/docs/v4/), so Flask-SocketIO doesn't fit those clients. Start by wrapping your app in [`SocketIO(app)`](https://flask-socketio.readthedocs.io/en/latest/getting_started.html). Its docs call the standard library's threading [the most compatible option](https://flask-socketio.readthedocs.io/en/latest/intro.html) to run it on.
 
-Broadcasting across processes needs a message broker such as Redis. Channels' [production channel layer](https://channels.readthedocs.io/en/latest/topics/channel_layers.html#redis-channel-layer) runs on it, Flask-SocketIO [takes it as a message queue](https://flask-socketio.readthedocs.io/en/latest/deployment.html#using-multiple-workers), with sticky sessions at the load balancer, and websockets' docs [suggest it for pub/sub](https://websockets.readthedocs.io/en/stable/faq/server.html#how-do-i-send-a-message-to-a-channel-a-topic-or-some-users).
+### Autobahn|Python
+
+Pick Autobahn|Python for WAMP, or when your code runs on Twisted. It [runs on both Twisted and asyncio](https://autobahn.readthedocs.io/en/stable/overview.html). WAMP adds routed RPC and PubSub on top of WebSocket, and every WAMP client [needs a WAMP router](https://autobahn.readthedocs.io/en/stable/wamp/programming.html), such as Crossbar.io. Its plain WebSocket API uses callbacks, which websockets doesn't offer: you write a protocol class and override [`onMessage`](https://autobahn.readthedocs.io/en/stable/websocket/programming.html).
+
+### aiortc
+
+Pick aiortc to exchange audio, video, and data channels over WebRTC from Python. Its API [follows the JavaScript one](https://aiortc.readthedocs.io/en/latest/), with coroutines in place of promises, so start with [`RTCPeerConnection`](https://aiortc.readthedocs.io/en/latest/api.html#aiortc.RTCPeerConnection). You can plug in your own media processing, like running OpenCV on video frames.
