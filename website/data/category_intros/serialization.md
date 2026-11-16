@@ -1,4 +1,4 @@
-orjson decodes JSON into dicts, and msgspec into typed, validated objects. Pickle functions for remote workers with cloudpickle, or whole sessions with dill.
+orjson decodes JSON into plain dicts, and msgspec into typed, validated objects. Pickle functions for remote workers with cloudpickle, or whole sessions with dill.
 
 How to choose:
 

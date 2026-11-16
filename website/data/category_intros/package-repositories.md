@@ -1,4 +1,4 @@
-Self-host a Python package repository with pypiserver for private packages, devpi to cache PyPI as well, or bandersnatch to copy PyPI to an offline network.
+Self-host a Python package repository with pypiserver for private packages, devpi to cache PyPI alongside them, or bandersnatch to copy PyPI to an offline network.
 
 How to choose:
 
