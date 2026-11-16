@@ -18,7 +18,7 @@ Pick Django when your app needs logins, an admin, and relational models, since i
 
 ### Flask
 
-Pick Flask for a small app where you'd rather choose each library yourself. Flask [won't make many decisions for you](https://flask.palletsprojects.com/en/latest/design/), and leaves the database layer and form validation to extensions you add. Start with an [application factory](https://flask.palletsprojects.com/en/latest/patterns/appfactories/): a function that creates the app, so your tests can build it with different settings.
+Pick Flask for a small app where you'd rather choose each library yourself. Flask [won't make many decisions for you](https://flask.palletsprojects.com/en/stable/design/), and leaves the database layer and form validation to extensions you add. Start with an [application factory](https://flask.palletsprojects.com/en/stable/patterns/appfactories/): a function that creates the app, so your tests can build it with different settings.
 
 ### Litestar
 
@@ -42,7 +42,7 @@ Pick FastHTML for [hypermedia apps](https://fastht.ml/about/tech), where your ha
 
 ### Tornado
 
-Pick Tornado for connections held open to each user, served by [its own HTTP server](https://www.tornadoweb.org/en/latest/guide/running.html) instead of a WSGI container. Its docs call it [ideal for long polling and WebSockets](https://www.tornadoweb.org/en/latest/). Start with a `RequestHandler` subclass for each URL.
+Pick Tornado for connections held open to each user, served by [its own HTTP server](https://www.tornadoweb.org/en/stable/guide/running.html) instead of a WSGI container. Its docs call it [ideal for long polling and WebSockets](https://www.tornadoweb.org/en/stable/). Start with a `RequestHandler` subclass for each URL.
 
 ### Reflex
 
