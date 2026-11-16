@@ -1,37 +1,63 @@
-uv manages your project with a lockfile, and doubles as a Python package manager. Its uv-build backend packages pure-Python code with reasonable defaults.
+Manage a new project with uv. Use pip where you can't install more tools, and conda when your packages need non-Python libraries.
 
 How to choose:
 
-- A new project, from installing Python to locking dependencies: uv
-- Packaging pure-Python code in a uv project: uv-build
-- Installing packages with only what ships with Python: pip
-- A project already on Poetry, or one that relies on its plugins: Poetry
-- Tests across a matrix of Python versions: Hatch
-- Command-line apps, each in its own environment: pipx, or `uv tool` on uv
-- Scientific stacks with non-Python libraries: conda
-- C or C++ extension modules: setuptools
-- Build hooks, or a layout uv-build doesn't expect: Hatchling
-- Building a Poetry project without Poetry installed: poetry-core
-- Taking the version and description from your module: flit_core
+- A new project: uv
+- Learning Python, or no tools beyond a standard install: pip
+- Non-Python libraries, as scientific stacks often need: conda
+- A project already on Poetry, or one built around its plugins: Poetry
+- Testing a library across Python versions: Hatch
+- Command-line apps, when you don't already use uv: pipx
+- A build backend for C or C++ extensions: setuptools
+- A build backend for a pure-Python package: Hatchling
+- A build backend for a Poetry project: poetry-core
+- A minimal build backend with no plugins: flit-core
+- A build backend for a pure-Python uv project: uv-build
 
-uv is [a single tool](https://docs.astral.sh/uv/) for Python versions, virtual environments, dependencies, and command-line tools. Start a project with `uv init`, add packages with `uv add`, and run code with `uv run`, which [checks that the lockfile and environment are up to date](https://docs.astral.sh/uv/guides/projects/#running-commands) before every run. The `uv pip` commands are [for projects not ready to move away from pip](https://docs.astral.sh/uv/pip/), not the main interface.
+### uv
 
-uv-build is uv's own build backend, and `uv init` [sets it up](https://docs.astral.sh/uv/concepts/projects/init/) with your code in `src/<project_name>/`. When you need build scripts or a more flexible layout, uv's docs [suggest Hatchling instead](https://docs.astral.sh/uv/concepts/build-backend/#choosing-a-build-backend).
+Pick uv for a new project. It [manages your project's dependencies and environments](https://docs.astral.sh/uv/) and keeps a lockfile. Its docs pitch it as one tool to replace pip, pipx, and Poetry, among others. Add each dependency with [`uv add`](https://docs.astral.sh/uv/guides/projects/#managing-dependencies), which writes it to pyproject.toml and updates the lockfile and the project's environment.
 
-pip [installs packages](https://pip.pypa.io/en/stable/) from PyPI and other indexes. It comes with Python, but managing environments, the interpreter, and the project as a whole is [outside its scope](https://pip.pypa.io/en/stable/topics/workflow/). Run it as `python -m pip`, so you [know which Python](https://pip.pypa.io/en/stable/user_guide/#running-pip) gets the package.
+### pip
 
-Poetry [manages your dependencies and builds your package](https://python-poetry.org/docs/), with a lockfile for repeatable installs. For a project you won't publish, [turn off package mode](https://python-poetry.org/docs/basic-usage/#operating-modes) and use Poetry for dependencies only. Its build backend, poetry-core, lets pip [build and install your project](https://github.com/python-poetry/poetry-core) without Poetry.
+Use pip when you're learning Python, or where you can't install tools beyond a standard Python setup. It's [the standard tool to install packages from PyPI](https://packaging.python.org/en/latest/guides/tool-recommendations/#installing-packages), and it comes with most Python installations. Pip manages the packages in an environment, and leaves creating environments and [managing the overall project](https://pip.pypa.io/en/latest/topics/workflow/) to other tools. To repeat an install on another machine, [`pip freeze`](https://pip.pypa.io/en/latest/topics/repeatable-installs/#pinning-the-package-versions) writes a requirements file that pins every package, dependencies included.
 
-Hatch [manages environments, builds, and Python installs](https://hatch.pypa.io/latest/) for your project. `hatch run test:pytest` [runs pytest in a `test` environment](https://hatch.pypa.io/latest/tutorials/environment/basic-usage/) without activating it, and creates that environment on first use. A [matrix](https://hatch.pypa.io/latest/environment/#matrix) repeats an environment across Python versions.
+### conda
 
-Hatchling is Hatch's build backend, [developed with Hatch but separate from it](https://packaging.python.org/en/latest/guides/tool-recommendations/). It [takes the files to ship from your `.gitignore`](https://hatch.pypa.io/latest/why/#build-backend) and builds reproducible wheels and sdists by default.
+Pick conda when your packages need non-Python libraries, as scientific stacks often do. Conda manages packages [for any language](https://packaging.python.org/en/latest/key_projects/#conda), but installs only those built for conda, not the ones on PyPI. Start with `conda create` to make an environment. When you also need PyPI packages, [install as much as you can with conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#using-pip-in-an-environment), then use pip for the rest.
 
-pipx installs command-line apps [each in its own virtual environment](https://pipx.pypa.io/latest/), so their dependencies never collide, and puts their commands on your PATH. To try an app once, [`pipx run`](https://pipx.pypa.io/latest/tutorial/getting-started.html) runs it in a temporary environment. `uv tool` does the same job on uv, and pipx's docs say [running both is fine](https://pipx.pypa.io/latest/explanation/comparisons.html#picking-one).
+### Poetry
 
-conda manages [packages and environments for any language](https://docs.conda.io/projects/conda/en/latest/), and [its packages](https://docs.conda.io/projects/conda/en/latest/user-guide/concepts/packages.html) can hold system libraries and programs, not only Python modules. Keep your requirements in a file, and [use pip only after conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env) has installed everything it can.
+Keep Poetry on a project already built on it, especially one that relies on a plugin: Poetry [supports plugins](https://python-poetry.org/docs/plugins/) that alter or expand what it does. On such a project, [`poetry install`](https://python-poetry.org/docs/basic-usage/#installing-with-poetrylock) installs the exact versions listed in poetry.lock.
 
-setuptools [builds C and C++ extension modules](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html), and Hatch's docs [recommend it](https://hatch.pypa.io/latest/why/#build-backend) for them. Keep its configuration in pyproject.toml and `setup.py` [minimal, if you need one at all](https://setuptools.pypa.io/en/latest/userguide/quickstart.html#setuppy-discouraged), and don't run `setup.py` as a script.
+### Hatch
 
-flit_core is Flit's build backend, made for [pure Python packages with no build steps](https://flit.pypa.io/en/latest/rationale.html). List `version` and `description` under `dynamic`, and it [reads them from your module's `__version__` and docstring](https://flit.pypa.io/en/latest/pyproject_toml.html#project-metadata). To start, `flit init` [writes the pyproject.toml](https://flit.pypa.io/en/latest/) for your module.
+Pick Hatch to test a library across Python versions. Its environments can define [a matrix](https://hatch.pypa.io/latest/config/environment/advanced/#matrix) of Python versions, and [`hatch test`](https://hatch.pypa.io/latest/tutorials/testing/overview/#environment-selection) runs your tests in one of them or in all of them.
 
-Whichever tool writes your lockfile, commit it to version control, as [uv](https://docs.astral.sh/uv/guides/projects/#uvlock) and [Poetry](https://python-poetry.org/docs/basic-usage/#committing-your-poetrylock-file-to-version-control) both recommend, so every machine installs the same versions.
+### pipx
+
+Use pipx to install command-line apps when you don't already use uv. Its own docs [point you to `uv tool`](https://pipx.pypa.io/latest/explanation/comparisons.html#picking-one) when you already run uv for Python installs or scripts and want one binary for everything. [`pipx install`](https://pipx.pypa.io/latest/) puts each app in its own virtual environment, so their dependencies never collide.
+
+### setuptools
+
+Pick setuptools to build C or C++ extension modules, which Hatch's docs [leave to setuptools](https://hatch.pypa.io/latest/why/#build-backend) or a backend built for compilers. Declare each module as a [`setuptools.Extension`](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html) in setup.py, and keep everything else in pyproject.toml.
+
+### Hatchling
+
+Pick Hatchling for a pure-Python package. For such a package, the backend matters little. The Python Packaging User Guide's tutorial [uses Hatchling by default](https://packaging.python.org/en/latest/tutorials/packaging-projects/#choosing-a-build-backend), and says its steps work the same with any backend that reads the standard `[project]` table. Name `hatchling.build` as the build backend in pyproject.toml.
+
+### poetry-core
+
+Use poetry-core as the build backend of a Poetry project, where `poetry new` sets it up. With it in place, [pip can build and install your project](https://github.com/python-poetry/poetry-core) without Poetry installed.
+
+### flit-core
+
+Pick flit-core for plain Python code with no build step, when you want [a minimal backend with no plugins](https://packaging.python.org/en/latest/guides/tool-recommendations/#build-backends). It [takes the version number](https://flit.pypa.io/en/latest/rationale.html) from your package's `__version__`, and includes subpackages and data files automatically.
+
+### uv-build
+
+Use uv-build for a pure-Python package in a uv project, where `uv init` sets it up. It checks your metadata and project layout to catch common mistakes. When you need build scripts or a more flexible layout, uv's docs [suggest Hatchling instead](https://docs.astral.sh/uv/concepts/build-backend/).
+
+### Committing the lockfile
+
+In a uv or Poetry project, commit the lockfile, so every machine installs the same versions. uv's docs say [uv.lock should be checked into version control](https://docs.astral.sh/uv/guides/projects/#uvlock), and Poetry's tell app developers to [commit poetry.lock](https://python-poetry.org/docs/basic-usage/#committing-your-poetrylock-file-to-version-control).
