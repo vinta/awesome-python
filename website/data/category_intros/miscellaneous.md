@@ -1,10 +1,15 @@
-Some helpers aren't in the standard library, so before writing your own Python utility library, check boltons. Blinker dispatches signals between modules.
+For helpers the standard library lacks, like atomic file saves, use boltons. Blinker sends signals between modules that don't import each other.
 
 How to choose:
 
-- Helpers the standard library lacks, like atomic file saves and chunked iteration: boltons
-- Events inside one process, between modules that don't import each other: Blinker
+- Helpers missing from the standard library, with no dependencies: boltons
+- Signals between modules that don't import each other: Blinker
+- Your own signals in a Flask app: Blinker
 
-boltons is a set of [pure-Python utilities missing from the standard library](https://boltons.readthedocs.io/en/latest/), like atomic file saves and chunked iteration. Run `pip install boltons`, then [import what you need from its modules](https://boltons.readthedocs.io/en/latest/#installation-and-integration), e.g. `from boltons.cacheutils import LRU`. It depends on no other packages and its modules are self-contained, so you can also [copy the whole package into your project, or just one module](https://boltons.readthedocs.io/en/latest/architecture.html#integration). Most modules aim to be good enough for basic uses. When you outgrow one, [its docs often point to a third-party alternative](https://boltons.readthedocs.io/en/latest/#third-party-packages).
+### boltons
 
-Blinker lets [any number of interested parties subscribe to events, or signals](https://github.com/pallets-eco/blinker), inside one Python process. Create a named signal with [`signal('name')`](https://blinker.readthedocs.io/en/latest/#decoupling-with-named-signals): every call with that name returns the same object, so modules and plugins share it without importing each other. Register receivers with `connect()`, and when you call `send()`, [pass the object that emits the signal](https://blinker.readthedocs.io/en/latest/#emitting-signals), usually `self`. A receiver can then [subscribe to one sender only](https://blinker.readthedocs.io/en/latest/#subscribing-to-specific-senders).
+Pick boltons for the small helpers [conspicuously missing from the standard library](https://boltons.readthedocs.io/en/latest/), like atomic file saving, a multi-value dict, and recursive transforms of nested data. It [depends on no packages](https://boltons.readthedocs.io/en/latest/architecture.html#integration), and nearly every module stands on its own. When you need only one or two functions, copy that one module into your project instead of adding the dependency. Most helpers aim to be [good enough for basic uses](https://boltons.readthedocs.io/en/latest/#third-party-packages), and a module's docs often name the specialized library to move to once you outgrow it. Each helper is one import away, like `from boltons.cacheutils import LRU`.
+
+### Blinker
+
+Pick Blinker when one part of your code announces an event and other parts react to it, all inside one process. [Every call to `signal('name')` returns the same signal object](https://blinker.readthedocs.io/en/latest/#decoupling-with-named-signals), so a plugin can subscribe by name without importing the module that sends it. A receiver can [listen to one sender only](https://blinker.readthedocs.io/en/latest/#subscribing-to-specific-senders), and it disconnects itself once it's garbage-collected. Flask's own signals [are built on Blinker](https://flask.palletsprojects.com/en/latest/signals/). Flask suggests signals for testing, metrics, and auditing, since a receiver can subscribe temporarily and can't directly affect the app.
