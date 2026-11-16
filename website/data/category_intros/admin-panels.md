@@ -1,18 +1,30 @@
-Django saves you from building a Python admin panel: its admin comes built in. Flask-Admin and SQLAdmin add one to Flask and FastAPI apps.
+Django ships its own admin panel, and Unfold and Grappelli theme it. Use Flask-Admin for Flask, and SQLAdmin for SQLAlchemy models in FastAPI or Starlette.
 
 How to choose:
 
+- Django's admin with dashboards and custom pages: Unfold
+- Django's admin with a grid layout and drag-and-drop inlines: Grappelli
 - A Flask app: Flask-Admin
-- SQLAlchemy models in FastAPI or Starlette: SQLAdmin
-- A Django admin grown into dashboards and internal tools: Unfold
-- A new look for the Django admin, on your stock ModelAdmin classes: Grappelli
+- A FastAPI or Starlette app with SQLAlchemy models: SQLAdmin
 
-Flask-Admin [gives each model a `ModelView`](https://flask-admin.readthedocs.io/en/latest/introduction/#adding-model-views): one `admin.add_view(ModelView(User, db.session))` line gets you list, create, and edit pages for it. To fit a model, [subclass `ModelView`](https://flask-admin.readthedocs.io/en/latest/introduction/#customizing-built-in-views) and set class attributes like `can_delete` or `column_list`. Expect fewer defaults than in Django's admin: [it's up to you to tell Flask-Admin](https://flask-admin.readthedocs.io/en/latest/advanced/#design-philosophy) what to display and how. Besides SQLAlchemy, it has [backends](https://flask-admin.readthedocs.io/en/latest/advanced/#using-different-database-backends) for Peewee, pymongo, and MongoEngine.
+### Unfold
 
-SQLAdmin brings Flask-Admin's approach to SQLAlchemy models on FastAPI or Starlette: Flask-Admin [inspired most of its features and configuration](https://smithyhq.github.io/sqladmin/#related-projects-and-inspirations). Create an `Admin` from your app and engine, then [write one `ModelView` subclass per model](https://smithyhq.github.io/sqladmin/#quickstart), declared with `model=User`, and register it with `admin.add_view`.
+Pick Unfold when you want more from Django's admin than a new look: it adds dashboards, custom pages, and widgets. After installing it, [switch your admin classes to `unfold.admin.ModelAdmin`](https://unfoldadmin.com/docs/installation/quickstart/), since the default class leaves forms unstyled.
 
-Unfold is a theme for Django's own admin, [made for building dashboards, internal tools, and business applications](https://github.com/unfoldadmin/django-unfold). Put `"unfold"` [before `django.contrib.admin`](https://unfoldadmin.com/docs/installation/quickstart/) in `INSTALLED_APPS`, then make your admin classes inherit from `unfold.admin.ModelAdmin`: the stock `ModelAdmin` leaves forms unstyled.
+### Grappelli
 
-Grappelli is [a jazzy skin for the Django admin](https://django-grappelli.readthedocs.io/en/latest/) that also adds collapsibles, sortable inlines, and related and autocomplete lookups. Put `'grappelli'` [before `django.contrib.admin`](https://django-grappelli.readthedocs.io/en/latest/quickstart.html) in `INSTALLED_APPS`, and include `grappelli.urls`, which the lookups need. You switch features on with [attributes on your `admin.ModelAdmin` classes](https://django-grappelli.readthedocs.io/en/latest/customization.html#autocomplete-lookups), like `autocomplete_lookup_fields`.
+Pick Grappelli for a grid-based admin with a customizable dashboard, TinyMCE integration, and inlines you reorder by drag and drop. Its FAQ says that if you like how Django's admin already looks, [you probably shouldn't use it](https://django-grappelli.readthedocs.io/en/latest/faq.html). To start, [add `grappelli` to `INSTALLED_APPS` before `django.contrib.admin`](https://django-grappelli.readthedocs.io/en/latest/quickstart.html) and include its URLs.
 
-By default, Django's admin [lets in only users with `is_staff` set](https://docs.djangoproject.com/en/stable/ref/contrib/admin/#overview). Flask-Admin and SQLAdmin leave access control to you: in Flask-Admin, [override `is_accessible`](https://flask-admin.readthedocs.io/en/latest/introduction/#rolling-your-own) on your views, and SQLAdmin [enforces no authentication](https://smithyhq.github.io/sqladmin/authentication/) until you pass it an `AuthenticationBackend`. Django's docs limit its admin to [an internal management tool](https://docs.djangoproject.com/en/stable/ref/contrib/admin/), and once you need a process-centric interface, they say to write your own views.
+### Flask-Admin
+
+Pick Flask-Admin for a Flask app. It works with SQLAlchemy, other databases, and file stores. [Create a `ModelView` for each model](https://flask-admin.readthedocs.io/en/latest/introduction/#adding-model-views), and you get list, create, and edit pages for it.
+
+### SQLAdmin
+
+Pick SQLAdmin for SQLAlchemy models in a FastAPI or Starlette app, with sync or async engines. [Flask-Admin inspired it](https://smithyhq.github.io/sqladmin/#related-projects-and-inspirations), and most features and options work the same: subclass `ModelView` for each model and add it to the admin.
+
+### Keeping the admin internal
+
+Django's admin is for [an organization's internal management tool](https://docs.djangoproject.com/en/stable/ref/contrib/admin/), not your site's front end, and when your staff need a process instead of tables, write your own views.
+
+Django has logins built in, but Flask-Admin and SQLAdmin leave them to you. Protect your data with Flask-Admin's [`is_accessible`](https://flask-admin.readthedocs.io/en/latest/introduction/#authorization-permissions) or SQLAdmin's [`AuthenticationBackend`](https://smithyhq.github.io/sqladmin/authentication/).
