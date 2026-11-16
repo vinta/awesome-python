@@ -1,21 +1,37 @@
-Beyond functools, install more-itertools, as the itertools docs suggest. toolz is a fuller Python functional programming library, and returns adds typed errors.
+Past the built-in functools, pick more-itertools for iterator tools, toolz for curried pipelines, funcy for decorators like retry, and returns for typed errors.
 
 How to choose:
 
-- Partial application, decorators, and caching: functools
-- More iterator tools, the itertools recipes included: more-itertools
-- Composing functions into pipelines, currying, and dict helpers: toolz, or cytoolz for speed
-- Everyday helpers for collections, decorators, retries, and debugging: funcy
-- Errors and missing values as typed containers checked by mypy: returns
+- Partial application, caching, and dispatch by type, with nothing to install: functools
+- Chunking, windowing, or peeking at iterators, plus the itertools recipes: more-itertools
+- Curried pipelines over iterators and dicts, with a compiled drop-in for speed: toolz
+- Decorators that retry or silence errors, and transforms that keep a collection's type: funcy
+- Errors and missing values as typed results that mypy checks: returns
 
-functools is the standard library's module [for higher-order functions](https://docs.python.org/3/library/functools.html), functions that act on or return other functions. Python's Functional Programming HOWTO calls `partial()` [the most useful tool in the module](https://docs.python.org/3/howto/functional.html#the-functools-module): it fills in some of a function's arguments and gives you a new function. When you write a decorator, wrap its inner function with [`wraps`](https://docs.python.org/3/library/functools.html#functools.wraps), so the decorated function keeps its name and docstring. The same HOWTO finds many uses of `reduce()` [clearer as a `for` loop](https://docs.python.org/3/howto/functional.html#small-functions-and-the-lambda-expression).
+### functools
 
-The itertools docs point you to more-itertools for [their recipes and many more](https://docs.python.org/3/library/itertools.html#itertools-recipes). It collects [building blocks beyond itertools](https://more-itertools.readthedocs.io/en/stable/), for grouping, windowing, lookahead, and more. The itertools recipes sit in its top-level package, so `from more_itertools import flatten` works.
+Start with functools, the standard library's module for [higher-order functions: functions that act on or return other functions](https://docs.python.org/3/library/functools.html). Call `partial()` to [freeze some of a function's arguments](https://docs.python.org/3/library/functools.html#functools.partial) and get back a new function with a simpler signature.
 
-toolz [extends itertools and functools](https://toolz.readthedocs.io/en/latest/) with functions that are composable, pure, and lazy, and its API [follows Clojure's standard library](https://toolz.readthedocs.io/en/latest/heritage.html). Each function takes and returns only iterables, dictionaries, and functions, so they [compose to solve your own problems](https://toolz.readthedocs.io/en/latest/composition.html). [`pipe`](https://toolz.readthedocs.io/en/latest/api.html#toolz.functoolz.pipe) runs a value through a sequence of functions, like pipes in Unix. Stick with `partial` at first, and once it shows up several times in your code, [switch to the `toolz.curried` namespace](https://toolz.readthedocs.io/en/latest/curry.html#curry). toolz is a general-purpose library, and for data analytics its docs say [a library built for it](https://toolz.readthedocs.io/en/latest/streaming-analytics.html#disclaimer) may serve you better. [cytoolz](https://github.com/pytoolz/cytoolz) implements the same API in Cython, as a drop-in replacement when you need more speed.
+### more-itertools
 
-funcy is a collection of functional tools [focused on practicality](https://github.com/Suor/funcy), inspired by Clojure and underscore. Next to sequence tools, it has [collection functions that keep the type](https://funcy.readthedocs.io/en/stable/overview.html) of a dict or set. It also has control flow helpers, like `@retry` and `silent`, and debugging helpers, like `tap` and `log_calls`. Many of its functions take a regex, a mapping, or a set [where you'd pass a function](https://funcy.readthedocs.io/en/stable/extended_fns.html#extended-function-semantics).
+Add more-itertools when the iterator tool you need isn't in itertools. CPython's own itertools docs [point to it](https://docs.python.org/3/library/itertools.html#itertools-recipes) for their recipes "and many, many others". The recipes [come in its top-level package](https://more-itertools.readthedocs.io/en/latest/), next to new tools like `chunked()`, which [breaks an iterable into lists of length n](https://more-itertools.readthedocs.io/en/latest/api.html#more_itertools.chunked).
 
-returns puts results in typed containers: [`Maybe` for None and `Result` for exceptions](https://returns.readthedocs.io/en/latest/pages/quickstart.html#why), plus `IO` for impure code and `Future` for async code. Its docs [really recommend mypy](https://returns.readthedocs.io/en/latest/pages/quickstart.html#typechecking-and-other-integrations), and typing [only works correctly with its mypy plugin](https://returns.readthedocs.io/en/latest/pages/result.html). So it fits projects that check types with mypy. Turn functions that raise into ones that return a `Result` with [`@safe`](https://returns.readthedocs.io/en/latest/pages/result.html#safe), and chain the steps with [`flow`](https://returns.readthedocs.io/en/latest/pages/pipeline.html#flow), which its docs call the recommended way to write code with returns.
+### toolz
 
-Mix functional style with the rest of your code: Python's HOWTO says functional-style programs usually [give a functional-appearing interface](https://docs.python.org/3/howto/functional.html) and use non-functional features inside. For a plain map or filter, toolz's own docs call comprehensions [more Pythonic](https://toolz.readthedocs.io/en/latest/streaming-analytics.html). Learn a core set of functions; toolz says [about a dozen covers most tasks](https://toolz.readthedocs.io/en/latest/control.html), and the right word only helps when your readers know it too.
+Pick toolz to build pipelines out of small functions over iterators and dicts. Each toolz function [consumes and produces just iterables, dictionaries, and functions](https://toolz.readthedocs.io/en/latest/composition.html), so one function's output feeds the next. Once partial application shows up several times in your code, its docs suggest [switching your imports to `toolz.curried`](https://toolz.readthedocs.io/en/latest/curry.html#the-curried-namespace), where every function curries. When speed matters, cytoolz [implements the same API](https://github.com/pytoolz/cytoolz) in compiled code.
+
+### funcy
+
+Pick funcy for everyday helpers that reach past iterators and function composition. It's [a collection of functional tools focused on practicality](https://github.com/Suor/funcy), and it has decorators that [retry a call](https://funcy.readthedocs.io/en/latest/flow.html#retry) or silence its errors. Its [`walk()`](https://funcy.readthedocs.io/en/latest/colls.html#walk) works like map but keeps the collection's type, so walking a dict returns a dict. Many of its functions also [take a string as a regex, or a dict as a lookup](https://funcy.readthedocs.io/en/latest/extended_fns.html), where they expect a function.
+
+### returns
+
+Pick returns when you'd rather get failures and missing values back as typed values than catch exceptions or check for None. Its containers [work with exceptions and None in a type-safe way](https://returns.readthedocs.io/en/latest/pages/quickstart.html#why). Start by decorating a function that can raise with [`@safe`](https://returns.readthedocs.io/en/latest/pages/result.html#safe), which makes it return a result container instead. Its docs [really recommend type-checking with mypy](https://returns.readthedocs.io/en/latest/pages/quickstart.html#typechecking-and-other-integrations) and their plugin.
+
+### When plain Python reads better
+
+Python's Functional Programming HOWTO finds [many uses of `reduce()` clearer as for loops](https://docs.python.org/3/howto/functional.html#small-functions-and-the-lambda-expression), and toolz's own docs call comprehensions [the more Pythonic syntax](https://toolz.readthedocs.io/en/latest/streaming-analytics.html#selecting-with-map-and-filter) for simple map and filter.
+
+### More functional Python resources
+
+For more libraries, books, and talks, see [awesome-functional-python](https://github.com/sfermigier/awesome-functional-python).
