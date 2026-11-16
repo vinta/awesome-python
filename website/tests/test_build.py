@@ -1645,3 +1645,16 @@ class TestLoadCategoryIntro:
         path.write_text("Use w1.\n\nHow to choose:\n\n- Vision: OpenCV\n", encoding="utf-8")
         intro_html, _, _, _ = load_category_intro(path, ["opencv-python"])
         assert '<li>Vision: <a href="#entry-opencv-python">OpenCV</a></li>' in intro_html
+
+    def test_links_every_pick_on_a_line_pairing_several_situations(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\nHow to choose:\n\n- Physical units: Pint; astronomy: Astropy; seismology: ObsPy\n- Colour science: Colour; math animations: Manim\n", encoding="utf-8")
+        intro_html, _, _, _ = load_category_intro(path, ["pint", "astropy", "obspy", "colour-science", "manim"])
+        assert '<li>Physical units: <a href="#entry-pint">Pint</a>; astronomy: <a href="#entry-astropy">Astropy</a>; seismology: <a href="#entry-obspy">ObsPy</a></li>' in intro_html
+        assert '<li>Colour science: <a href="#entry-colour-science">Colour</a>; math animations: <a href="#entry-manim">Manim</a></li>' in intro_html
+
+    def test_leaves_a_pick_line_without_a_situation_unchanged(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\nHow to choose:\n\n- Django for everything\n", encoding="utf-8")
+        intro_html, _, _, _ = load_category_intro(path, ["Django"])
+        assert "<li>Django for everything</li>" in intro_html
