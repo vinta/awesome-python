@@ -1,35 +1,53 @@
-How much should a Python web framework build in? Django comes with an ORM, an admin, and auth; Flask gives you a small core to extend.
+Pick Django when an app needs an ORM, admin, and logins, or Flask to choose each piece. For async apps, use Litestar, or Starlette for a minimal toolkit.
 
 How to choose:
 
-- ORM, admin, and auth built in: Django
-- A small core you extend with your own picks: Flask
-- One file with no dependencies: Bottle
-- An app that starts small and may grow large: Pyramid
-- HTML from the server with HTMX: FastHTML
-- A minimal async toolkit to build on: Starlette
-- Long polling, WebSockets, and other long-lived connections: Tornado
-- Async with sessions, caching, and ORM integration built in: Litestar
-- Frontend and backend in pure Python: Reflex
+- An app that needs an ORM, admin, and logins built in: Django
+- A small app where you pick each library: Flask
+- An async app with dependency injection and OpenAPI built in: Litestar
+- A small async service on a minimal toolkit: Starlette
+- A prototype in one file with no dependencies: Bottle
+- A small app that may grow large without a rewrite: Pyramid
+- HTML pages driven by HTMX, if you know HTML and HTTP: FastHTML
+- Long-lived connections on Tornado's own server: Tornado
+- An interactive UI in pure Python, no web experience needed: Reflex
 
-Django comes with [a full stack for convenience](https://docs.djangoproject.com/en/stable/misc/design-philosophies/), and its pieces stay independent where possible. You describe your database layout as models in Python, and Django [builds an admin interface from them](https://docs.djangoproject.com/en/stable/intro/overview/). [User authentication](https://docs.djangoproject.com/en/stable/topics/auth/) with accounts, groups, and permissions is built in too. A project holds your settings and [one or more apps](https://docs.djangoproject.com/en/stable/intro/tutorial01/#creating-the-polls-app), and an app can move between projects. Before you deploy, run [`manage.py check --deploy`](https://docs.djangoproject.com/en/stable/howto/deployment/checklist/#run-manage-py-check-deploy) against your production settings. Async views work under WSGI, but for slow streaming and long polling, [deploy Django under ASGI](https://docs.djangoproject.com/en/stable/topics/async/#async-views).
+### Django
 
-Flask keeps [the core simple but extensible](https://flask.palletsprojects.com/en/stable/design/#what-does-micro-mean): it doesn't pick your database or form library, and extensions add them. Create the app in an [application factory](https://flask.palletsprojects.com/en/stable/patterns/appfactories/) and bind each extension with `init_app`, so tests can build instances with their own settings. Flask runs each async view on a separate thread, not an event loop, which [costs performance compared with ASGI frameworks](https://flask.palletsprojects.com/en/stable/design/#async-await-and-asgi-support). For a mainly async codebase, its docs point you to an async-first framework.
+Pick Django when your app needs logins, an admin, and relational models, since it ships all three. Describe your tables as Python models, and Django [builds a production-ready admin](https://docs.djangoproject.com/en/stable/intro/overview/) from them, where your staff can add, change, and delete records. Start with [`django-admin startproject`](https://docs.djangoproject.com/en/stable/intro/tutorial01/).
 
-Bottle is [a single file module](https://bottlepy.org/docs/stable/) with no dependencies outside the standard library. Its FAQ pitches it for [prototyping, weekend projects, and small applications](https://bottlepy.org/docs/stable/faq.html#is-bottle-suitable-for-complex-applications), and suggests a full-stack framework like Django when you have tight deadlines. In production, have [Gunicorn or another WSGI server load your app](https://bottlepy.org/docs/stable/deployment.html) instead of calling `run()`.
+### Flask
 
-Pyramid is built so you [don't have to rewrite a small app in another framework](https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/introduction.html#what-makes-pyramid-unique) when it gets too big. Its core maps URLs to code, handles security, and serves static assets, and it makes no assertions about which database or template system you use. Start from [its cookiecutter](https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/project.html), which asks for your template language, persistence, and URL mapping. Deploy with the `production.ini` it generates, which turns off the interactive debugger.
+Pick Flask for a small app where you'd rather choose each library yourself. Flask [won't make many decisions for you](https://flask.palletsprojects.com/en/latest/design/), and leaves the database layer and form validation to extensions you add. Start with an [application factory](https://flask.palletsprojects.com/en/latest/patterns/appfactories/): a function that creates the app, so your tests can build it with different settings.
 
-FastHTML is [designed to create hypermedia applications](https://www.fastht.ml/about/tech): it returns HTML from the server, the approach HTMX uses, and you often won't write any JavaScript at all. It's built on Starlette and Uvicorn. Its docs say [not to assume other frameworks' best practices apply](https://www.fastht.ml/docs/ref/best_practice.html): let the function name define each route, and use only GET and POST.
+### Litestar
 
-Starlette is [a lightweight ASGI framework/toolkit](https://starlette.dev/#framework-or-toolkit): use it as a complete framework, or take any of its components on their own. Install an ASGI server such as Uvicorn next to it, and pick [any async database library](https://starlette.dev/database/) you like. Keep configuration [in environment variables or a `.env` file](https://starlette.dev/config/) that you don't commit.
+Pick Litestar for an async app that wants its structure built in rather than assembled. It ships with [dependency injection and OpenAPI schema generation](https://docs.litestar.dev/latest/), and puts class-based controllers at its core. Start by passing your route handlers to the `Litestar` app.
 
-Tornado [isn't based on WSGI](https://www.tornadoweb.org/en/stable/#threads-and-wsgi) and typically runs one thread per process, with its own web framework and HTTP server used together. Its non-blocking I/O makes it a fit for [long polling, WebSockets, and other long-lived connections](https://www.tornadoweb.org/en/stable/). Hand blocking code to `run_in_executor`, and [run one process per CPU](https://www.tornadoweb.org/en/stable/guide/running.html#processes-and-ports).
+### Starlette
 
-Litestar is [not a microframework](https://docs.litestar.dev/latest/#philosophy): it comes with ORM integration, client- and server-side sessions, and caching, though it will never have its own ORM. Class-based controllers sit at its core. Set dependencies, guards, and middleware on [any layer](https://docs.litestar.dev/latest/onboarding/flask.html), from the app down to one handler, and the setting closest to the handler wins.
+Pick Starlette for a small async service, or as the base of a framework layer of your own. It works [as a complete framework or as an ASGI toolkit](https://starlette.dev/), and you can use any of its components on their own. Start from the `Starlette` class with a list of routes.
 
-Reflex builds the [frontend, backend, and database in pure Python](https://reflex.dev/docs/getting-started/introduction/). It [compiles your UI to a React frontend](https://reflex.dev/docs/advanced-onboarding/how-reflex-works/), runs your state handlers on the server, and syncs the two over WebSockets. Change state only through event handlers on your `State` class. In production, the Reflex team runs Redis as the state manager. Keep auth data and other sensitive state in [backend-only vars](https://reflex.dev/docs/vars/base-vars/#backend-only-vars).
+### Bottle
 
-Don't deploy on the development server: [Flask](https://flask.palletsprojects.com/en/stable/deploying/) and [Django](https://docs.djangoproject.com/en/stable/howto/deployment/checklist/#switch-away-from-manage-py-runserver) both tell you to switch to a production server, and to turn debug mode off.
+Bottle's docs aim it at [prototyping, weekend projects, and small applications](https://bottlepy.org/docs/stable/faq.html). It is [a single file with no dependencies](https://bottlepy.org/docs/stable/) outside the standard library. Start with the `@route` decorator, which maps a URL to a function.
 
-For a site with forms and logins, turn on CSRF protection. Django's [CSRF middleware is on by default](https://docs.djangoproject.com/en/stable/howto/csrf/). Tornado, Pyramid, and Litestar have it as a setting you turn on. Flask [leaves it to a form library](https://flask.palletsprojects.com/en/stable/web-security/#cross-site-request-forgery-csrf), and Starlette to third-party middleware.
+### Pyramid
+
+Pick Pyramid for an app that starts small but may grow large. Its docs say you [shouldn't have to rewrite a small application](https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/introduction.html) in another framework once it gets too big. Start with a `Configurator`, which registers your routes and views.
+
+### FastHTML
+
+Pick FastHTML for [hypermedia apps](https://fastht.ml/about/tech), where your handlers return HTML and HTMX puts it on the page. Its docs say you [need to understand HTML and HTTP](https://fastht.ml/docs/) to use it fully. Start with `fast_app()`, which creates the app and its route decorator.
+
+### Tornado
+
+Pick Tornado for connections held open to each user, served by [its own HTTP server](https://www.tornadoweb.org/en/latest/guide/running.html) instead of a WSGI container. Its docs call it [ideal for long polling and WebSockets](https://www.tornadoweb.org/en/latest/). Start with a `RequestHandler` subclass for each URL.
+
+### Reflex
+
+Pick Reflex to write a dashboard or an internal tool [entirely in Python](https://reflex.dev/docs/getting-started/introduction/), with no JavaScript. Its docs say you need no web development experience. Reflex [compiles the interface to React](https://reflex.dev/docs/advanced-onboarding/how-reflex-works/) and runs your state handlers on the server. Start with a subclass of `rx.State`, which holds your app's data.
+
+### APIs and add-on packages
+
+For an API that serves no HTML pages, see the [Web APIs](/categories/web-apis/) page. For packages that extend Django or Flask, see [awesome-django](https://github.com/wsvincent/awesome-django) and [awesome-flask](https://github.com/humiaozuzu/awesome-flask).
