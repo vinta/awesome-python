@@ -1,4 +1,4 @@
-If uv locks your Python dependencies, uv audit checks them for known vulnerabilities; otherwise run pip-audit. Betterleaks catches secrets leaked into git history.
+If uv locks your Python dependencies, uv audit checks them for known vulnerabilities; otherwise run pip-audit. Betterleaks catches secrets in your git history.
 
 How to choose:
 

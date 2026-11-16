@@ -1,4 +1,4 @@
-For scraping, start with Beautiful Soup as your Python HTML library, running on lxml's parser. Use plain lxml when speed matters or CSS selectors do the whole job.
+For scraping, start with Beautiful Soup as your Python HTML library, on lxml's parser. Use plain lxml when speed matters or CSS selectors do the whole job.
 
 How to choose:
 

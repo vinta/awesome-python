@@ -1,4 +1,4 @@
-For a Python scheduler inside your app, APScheduler runs cron rules and can keep jobs across restarts. A small script can use schedule; workflows need an orchestrator.
+For a Python scheduler in your app, APScheduler runs cron rules and can keep jobs across restarts. Small scripts use schedule; workflows need an orchestrator.
 
 How to choose:
 

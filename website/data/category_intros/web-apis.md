@@ -1,4 +1,4 @@
-FastAPI is the Python API framework for a new standalone service. In a Django project, use Django REST framework, or Django Ninja for type-hinted endpoints.
+For a new standalone service, use FastAPI as your Python API framework. On Django, use Django REST framework, or Django Ninja for type-hinted endpoints.
 
 How to choose:
 

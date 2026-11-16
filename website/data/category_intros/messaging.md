@@ -1,4 +1,4 @@
-Your broker sets the Python messaging library: confluent-kafka for Kafka, Pika for RabbitMQ, paho-mqtt for MQTT. FastStream builds asyncio services on all three brokers.
+Your broker sets the Python messaging library: confluent-kafka for Kafka, Pika for RabbitMQ, paho-mqtt for MQTT. FastStream builds asyncio services on all 3.
 
 How to choose:
 

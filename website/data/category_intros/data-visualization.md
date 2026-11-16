@@ -1,4 +1,4 @@
-Matplotlib is the Python data visualization library for figures you publish or print, and Plotly for interactive charts. Streamlit turns a script into a dashboard.
+Among Python data visualization libraries, Matplotlib draws figures you publish, and Plotly interactive charts. Streamlit turns a script into a dashboard.
 
 How to choose:
 

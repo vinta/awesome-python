@@ -1,4 +1,4 @@
-For file manipulation, Python's built-in pathlib handles paths, and zipfile and tarfile handle archives. Install watchfiles to rerun your code when files change.
+For file manipulation, Python's built-in pathlib handles paths, and zipfile and tarfile handle archives. Install watchfiles to rerun code when files change.
 
 How to choose:
 

@@ -1,4 +1,4 @@
-As a Python environment manager, uv installs interpreters and creates virtual environments. Add mise when a repo pins other languages, or pyenv to compile Python.
+As a Python environment manager, uv installs interpreters and creates virtual environments. Add mise if a repo pins other languages, or pyenv to compile Python.
 
 How to choose:
 

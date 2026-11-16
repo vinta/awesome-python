@@ -1,4 +1,4 @@
-scikit-learn is the Python machine learning library for tabular data. For boosted trees, LightGBM trains fastest and CatBoost suits categorical columns.
+Use scikit-learn as your Python machine learning library for tabular data. For boosted trees, LightGBM trains fastest and CatBoost suits categorical columns.
 
 How to choose:
 

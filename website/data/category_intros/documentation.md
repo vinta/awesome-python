@@ -1,4 +1,4 @@
-Sphinx is the Python documentation generator for docs built around an API reference. Docs that are mostly guides start on Zensical, or stay on Material for MkDocs.
+For docs built around an API reference, pick Sphinx as your Python documentation generator. Guide-first docs start on Zensical, or stay on Material for MkDocs.
 
 How to choose:
 

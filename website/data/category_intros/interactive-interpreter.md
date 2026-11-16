@@ -1,4 +1,4 @@
-IPython is the Python interactive interpreter for a terminal prompt with magic commands. Notebooks go in Jupyter Notebook, or marimo for cells that rerun themselves.
+In a terminal, IPython is the Python interactive interpreter with magic commands. Notebooks go in Jupyter Notebook, or marimo for cells that rerun themselves.
 
 How to choose:
 

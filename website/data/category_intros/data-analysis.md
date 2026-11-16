@@ -1,4 +1,4 @@
-Start with pandas, the Python data analysis library for exploring tables in memory. Move pipelines over large files to Polars, and let Ibis query your SQL database.
+Start with pandas, the Python data analysis library for exploring tables in memory. Move large-file pipelines to Polars, and let Ibis query your SQL database.
 
 How to choose:
 

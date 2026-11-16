@@ -1,4 +1,4 @@
-Install Sorted Containers to keep a list, dict, or set sorted as it changes. To learn how an algorithm works, read The Algorithms - Python or the algorithms package.
+Install Sorted Containers to keep a list, dict, or set sorted as it changes. To learn an algorithm, read The Algorithms - Python or the algorithms package.
 
 How to choose:
 

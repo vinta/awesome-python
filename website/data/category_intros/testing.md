@@ -1,4 +1,4 @@
-Write your tests in pytest, a Python testing framework that also runs unittest suites. Robot Framework suits acceptance tests non-technical stakeholders must read.
+Write your tests in pytest, a Python testing framework that also runs unittest suites. Robot Framework suits acceptance tests non-technical stakeholders read.
 
 How to choose:
 

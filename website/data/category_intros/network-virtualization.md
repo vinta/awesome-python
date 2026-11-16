@@ -1,4 +1,4 @@
-For Python network automation, Netmiko sends CLI commands over SSH to many vendors' devices, and NAPALM gives several platforms one API. Scapy crafts raw packets.
+For Python network automation, Netmiko sends CLI commands over SSH to many vendors' devices, and NAPALM gives several platforms one API. Scapy crafts packets.
 
 How to choose:
 

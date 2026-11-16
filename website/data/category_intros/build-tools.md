@@ -1,4 +1,4 @@
-Run the commands named in pyproject.toml with Poe the Poet, or tasks written in Python with Invoke. To rebuild only what changed, use doit, or SCons for C and C++.
+Run commands named in pyproject.toml with Poe the Poet, or tasks written in Python with Invoke. To rebuild only what changed, use doit, or SCons for C and C++.
 
 How to choose:
 
