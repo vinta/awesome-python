@@ -1,20 +1,22 @@
 ---
 name: audit-the-list
 description: Audit README.md sections against the shortlist rules — re-verify every entry's verdict with live data, promote or demote challengers, restructure oversized use cases, prune, and evaluate proposed additions. Fire when the maintainer asks to audit, sweep, prune, re-check, or maintain sections, or asks whether an entry (or a proposed one) deserves its slot.
-argument-hint: [all or specific sections]
+argument-hint: [all, specific sections, or none for a recommendation]
 ---
 
 # Audit the list
 
-An Audit re-runs the admission test over live sections of README.md: every entry re-verified against current data, tiers reassessed, structure reconsidered, then the maintainer adjudicates and the result is committed. The rules live in CONTRIBUTING.md (Admission, Evidence, Entry Ordering) and CONTEXT.md (vocabulary) — this skill is the process that applies them, not a second copy of them. Entry changes land only on the maintainer's explicit go.
+An Audit re-runs the admission test over live sections of README.md: every entry re-verified against current data, tiers reassessed, structure reconsidered, then the maintainer adjudicates and the result is committed. The rules live in CONTRIBUTING.md (Admission, Evidence, Entry Ordering) — this skill is the process that applies them, not a second copy of them. Entry changes land only on the maintainer's explicit go.
 
 ## 1. Scope
 
-Resolve the scope from the arguments. Named sections mean exactly those, whether or not they were audited before (a re-run is how a past verdict gets rechecked). `all` is ambiguous — `AskUserQuestion` whether it means every section or only never-audited ones; prior audits are recorded in git history (`git log --oneline --grep="sweep\|audit"`). With no arguments, AskUserQuestion listing the never-audited Thematic Groups. Batch the work one Thematic Group per sitting. Done when the section list is settled.
+Resolve the scope from the arguments. Named sections mean exactly those, whether or not they were audited before (a re-run is how a past verdict gets rechecked). `all` is ambiguous — `AskUserQuestion` whether it means every section or only never-audited ones. Batch the work one Thematic Group per sitting. Done when the section list is settled.
+
+With no arguments, or to see which sections were never audited, run `uv run python .claude/skills/audit-the-list/scripts/audit_priority.py`. It dates each section's last audit from commit subjects starting `audit: sweep`, `prune: sweep`, or `style: audit` and then the section or its Thematic Group, plus the Last Audited lines in `docs/audit-logs.md`, then ranks sections: entries added or removed since that audit first, most changes first, then unchanged sections by oldest audit, never-audited first. Print its ranking, then AskUserQuestion with the top four sections as options, the first marked Recommended, each description carrying its changed entries or its last-audit date. A renamed section loses its audit history and ranks as never audited; the script lists the orphaned subjects, so say so when that happens.
 
 ## 2. Evidence
 
-Fetch live evidence for every entry in scope before judging anything (CLAUDE.md verification rule):
+Fetch live evidence for every entry in scope before judging anything (AGENTS.md verification rule):
 
 - **Downloads/month**: `cd website && uv run python fetch_pypi_downloads_via_clickpy.py` — free keyless ClickPy sweep of the full README, sole writer of `data/pypi_downloads.tsv` (rewritten from scratch each run; header row, every row stamped with its `fetched_at` date). A cache whose `fetched_at` is within the last 7 days is current enough for verdicts — skip the sweep; older than that, re-run it (costs ~1s). Cross-checks print to stdout, take explicit names, and never touch the cache: `fetch_pypi_downloads_via_bigquery.py <name> ...` (canonical source, maintainer's own GCP account, `--dry-run` first — the docstring carries the cost constraints; full-README sweeps exceed the free tier, keep name lists small), `fetch_pypi_downloads_via_pepy.py <name> ...` (needs `PEPY_TECH_API_KEY` in repo-root `.env`, throttled to 5 requests/minute), or `https://pypistats.org/api/packages/{name}/recent` paced 8s or slower. pypistats excludes mirror/CI traffic; ClickPy, BigQuery, and pepy include it — never mix sources within one comparison.
 - **Repo state**: archived flag, last push, created date, stars, description — `gh api repos/{owner}/{repo}`, GitLab API for GitLab-hosted projects.
@@ -25,7 +27,7 @@ Done when every entry in scope has downloads (or a stated no-signal reason), rep
 
 ## 3. Verdicts
 
-Draft a verdict and reason for every entry, restructure before cap: decide Splits, mints, and re-homes first — cutting before restructuring destroys entries — then apply the cap tier by tier, including promotions and demotions between obvious choice and challenger. Ground every reason in the fetched evidence; label anything unverifiable as a judgment call. Where fresh evidence contradicts the standing verdict, say so in the reason instead of silently keeping the seed.
+Draft a verdict and reason for every entry, restructure before cap: decide Splits, mints, and re-homes first — cutting before restructuring destroys entries — then apply the cap tier by tier, including promotions and demotions between obvious choice and challenger. Ground every reason in the fetched evidence; label anything unverifiable as a judgment call. Where fresh evidence contradicts the standing verdict, say so in the reason instead of silently keeping the seed. A proposed addition under `docs/audit-logs.md` "Rejected Additions" seeds as reject from that line. Check every description in scope against CONTRIBUTING.md Description Style, since taglines copied verbatim often break it; put each fix in its row's reason as old and new text, so the maintainer reviews it with the verdict.
 
 ## 4. Review and go
 
@@ -33,8 +35,8 @@ Run the `preview-verdicts` skill: it generates the interactive review page and d
 
 ## 5. Execute
 
-One commit per section: body lists each removal with its reason and downloads figure; restructures, tier moves, and reorders ride the same commit. Format-only outcomes (no removals) are a single style commit. `make test` before every commit, `make build` after the last one. Generic commit helpers tend to split a section audit into structural and per-subcategory commits — if that happens, squash back to one commit per section. Done when the tree is clean, tests passed before each commit, and the build count reconciles with the adjudicated changes.
+When the run opens a branch, name it `audit/<section-slug>`, such as `audit/documentation`. One commit per section, with the subject `audit: sweep <Section>`, since the ranking script dates audits only from the step 1 prefixes: body lists each removal with its reason and downloads figure, naming the figure's source and fetch date so a later audit can tell whether a trend compares like with like (ClickPy counts mirror traffic, pypistats does not); restructures, tier moves, and reorders ride the same commit. Name each demotion into the Second Tier in the body as `Second Tier: <entry>`, since nothing in README.md marks it and later work reads it from these bodies. A restructure that renames or dissolves a category or subcategory adds `"old path": "new path"` to `website/data/redirects.json` in that commit, so the old URL keeps its search ranking; the build fails when a redirect target no longer exists, so a later rename also updates the entries pointing at the renamed path. Format-only outcomes (no removals) are a single style commit whose subject starts `style: audit <Section>`. A section whose audit changes nothing gets a line under Last Audited in `docs/audit-logs.md` instead (`- <Section> -- <yyyy-mm-dd>, no changes.`, replacing its earlier line), committed, since the ranking script reads an audit only from a commit or that line. `make test` before every commit. After the last add or rename, re-run the ClickPy sweep, since new names have no cache row and the build would count them without downloads, then `make build`. Generic commit helpers tend to split a section audit into structural and per-subcategory commits — if that happens, squash back to one commit per section. Done when the tree is clean, tests passed before each commit, and the build count reconciles with the adjudicated changes.
 
 ## 6. Record
 
-A conclusion that outlives the sitting goes into the repo before the audit ends: admission or evidence rules into CONTRIBUTING.md, repo process and environment facts into CLAUDE.md and AGENTS.md (kept in sync), vocabulary into CONTEXT.md. Done when nothing the next audit needs is stranded in conversation.
+A conclusion that outlives the sitting goes into the repo before the audit ends: admission or evidence rules into CONTRIBUTING.md, repo process and environment facts into AGENTS.md. Done when nothing the next audit needs is stranded in conversation.

@@ -1,6 +1,7 @@
 """Tests for fetch_github_stars module."""
 
 import json
+from datetime import UTC
 
 from fetch_github_stars import (
     build_graphql_query,
@@ -161,11 +162,10 @@ class TestMainSkipsFreshCache:
     """Verify that main() skips fetching when all cache entries are fresh."""
 
     def test_skips_fetch_when_cache_is_fresh(self, tmp_path, monkeypatch, capsys):
-        from datetime import datetime, timedelta, timezone
+        from datetime import datetime, timedelta
 
         from fetch_github_stars import main
 
-        # Set up a minimal README with one repo
         readme = tmp_path / "README.md"
         readme.write_text("* [req](https://github.com/psf/requests) - HTTP.\n")
         monkeypatch.setattr("fetch_github_stars.README_PATH", readme)
@@ -174,7 +174,7 @@ class TestMainSkipsFreshCache:
         data_dir = tmp_path / "data"
         data_dir.mkdir()
         cache_file = data_dir / "github_stars.json"
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         fresh_cache = {
             "psf/requests": {
                 "stars": 52000,
@@ -201,12 +201,11 @@ class TestMainSkipsFreshCache:
         assert "Cache is up to date" in output
 
     def test_fetches_when_cache_is_stale(self, tmp_path, monkeypatch, capsys):
-        from datetime import datetime, timedelta, timezone
+        from datetime import datetime, timedelta
         from unittest.mock import MagicMock
 
         from fetch_github_stars import main
 
-        # Set up a minimal README with one repo
         readme = tmp_path / "README.md"
         readme.write_text("* [req](https://github.com/psf/requests) - HTTP.\n")
         monkeypatch.setattr("fetch_github_stars.README_PATH", readme)
@@ -215,7 +214,7 @@ class TestMainSkipsFreshCache:
         data_dir = tmp_path / "data"
         data_dir.mkdir()
         cache_file = data_dir / "github_stars.json"
-        now = datetime.now(timezone.utc)
+        now = datetime.now(UTC)
         stale_cache = {
             "psf/requests": {
                 "stars": 52000,
@@ -235,7 +234,6 @@ class TestMainSkipsFreshCache:
         monkeypatch.setattr("fetch_github_stars.DATA_DIR", data_dir)
         monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
 
-        # Mock httpx.Client to avoid real API calls
         mock_response = MagicMock()
         mock_response.json.return_value = {
             "data": {
@@ -256,7 +254,7 @@ class TestMainSkipsFreshCache:
         mock_client.__enter__ = MagicMock(return_value=mock_client)
         mock_client.__exit__ = MagicMock(return_value=False)
         mock_client.post.return_value = mock_response
-        monkeypatch.setattr("fetch_github_stars.httpx.Client", lambda **kwargs: mock_client)
+        monkeypatch.setattr("fetch_github_stars.httpx2.Client", lambda **kwargs: mock_client)
 
         main()
 

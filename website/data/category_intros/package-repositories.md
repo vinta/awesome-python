@@ -1,0 +1,16 @@
+Private packages can live on a Python package repository you host, such as pypiserver. devpi serves them too, next to a cache of PyPI.
+
+How to choose:
+
+- Your own packages, served from a plain folder: pypiserver
+- A PyPI cache that keeps installs working when PyPI is down: devpi
+- Your own indexes, with releases tested and staged before they go to PyPI: devpi
+- A copy of PyPI, whole or filtered, for a network that can't reach it: bandersnatch
+
+pypiserver is a [minimal PyPI-compatible server](https://github.com/pypiserver/pypiserver) that serves packages from regular directories, so pip and twine talk to it as they would to PyPI. [Start it on a folder](https://github.com/pypiserver/pypiserver#quickstart-installation-and-usage) with `pypi-server run -p 8080 ~/packages`, then copy your packages in, or upload them with twine. Its docs strongly advise you to [password-protect uploads](https://github.com/pypiserver/pypiserver#uploading-packages-remotely) with an htpasswd file. A package it doesn't have [redirects pip to PyPI](https://github.com/pypiserver/pypiserver#client-side-configurations).
+
+devpi pairs a [PyPI-compatible server with a command-line tool](https://devpi.net/docs/devpi/devpi/latest/+doc/index.html) for packaging, testing, and release. For a cache alone, install devpi-server and [point pip at its `root/pypi` index](https://devpi.net/docs/devpi/devpi/latest/+doc/quickstart-pypimirror.html). Once pip has fetched a file through it, that file installs offline too. For your own packages, add devpi-web and devpi-client, and [create an index based on `root/pypi`](https://devpi.net/docs/devpi/devpi/latest/+doc/quickstart-releaseprocess.html), so all of PyPI shows up beside your uploads. `devpi upload` publishes a release there, `devpi test` runs tox against it and records the result, and `devpi push` sends it on to a staging index or to PyPI. A package you upload [hides PyPI's packages of the same name](https://devpi.net/docs/devpi/devpi/latest/+doc/userman/devpi_indices.html#modifying-the-mirror-whitelist) by default, which prevents dependency confusion attacks.
+
+bandersnatch is the Python Packaging Authority's [PyPI mirror client](https://bandersnatch.readthedocs.io/en/latest/): it syncs PyPI's packages to disk as static files, and [any web server can serve them](https://bandersnatch.readthedocs.io/en/latest/serving.html). [Run `bandersnatch mirror`](https://github.com/pypa/bandersnatch#quickstart) once to create its config file, adjust the config, then run it again to fill the mirror. To mirror only what you use, list projects in an allowlist, which can also [read your requirements files](https://bandersnatch.readthedocs.io/en/latest/filtering_configuration.html#requirements-files-filtering).
+
+Whichever you run, set it as pip's `index-url`, so it replaces PyPI instead of sitting beside it. pip's docs call [`--extra-index-url` for private packages unsafe](https://pip.pypa.io/en/latest/cli/pip_install/#cmdoption-extra-index-url), since anyone can publish a package with the same name on PyPI. Serve it over HTTPS too, as the [Python Packaging User Guide highly recommends](https://packaging.python.org/en/latest/guides/hosting-your-own-index/).

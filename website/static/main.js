@@ -4,50 +4,22 @@ function getScrollBehavior() {
   return reducedMotion.matches ? "auto" : "smooth";
 }
 
-let activeFilter = null;
-let activeSort = { col: "downloads", order: "desc" };
+const table = document.querySelector(".table");
+// Category pages list rows in editorial (README) order until a column is sorted
+const defaultSort =
+  table && table.dataset.defaultSort === "editorial"
+    ? { col: "editorial", order: "asc" }
+    : { col: "downloads", order: "desc" };
+let activeSort = defaultSort;
 const searchInput = document.querySelector(".search");
-const filterBar = document.querySelector(".filter-bar");
-const filterValue = document.querySelector(".filter-value");
-const filterClear = document.querySelector(".filter-clear");
+// The full placeholder is cut off on phones
+if (searchInput && window.matchMedia("(max-width: 680px)").matches) {
+  searchInput.placeholder = searchInput.dataset.shortPlaceholder;
+}
 const noResults = document.querySelector(".no-results");
 const rows = document.querySelectorAll(".table tbody tr.row");
-const tags = document.querySelectorAll(".tag");
 const tbody = document.querySelector(".table tbody");
-
-function initRevealSections() {
-  const sections = document.querySelectorAll("[data-reveal]");
-  if (!sections.length) return;
-
-  if (!("IntersectionObserver" in window)) {
-    sections.forEach(function (section) {
-      section.classList.add("is-visible");
-    });
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      threshold: 0.12,
-      rootMargin: "0px 0px -8% 0px",
-    },
-  );
-
-  sections.forEach(function (section, index) {
-    section.classList.add("will-reveal");
-    section.style.transitionDelay = Math.min(index * 70, 180) + "ms";
-    observer.observe(section);
-  });
-}
-
-initRevealSections();
+const groupRows = document.querySelectorAll(".table tbody tr.group-row");
 
 // Smooth scroll without hash in URL
 document.querySelectorAll("[data-scroll-to]").forEach(function (link) {
@@ -72,16 +44,6 @@ if (window.location.hash === "#library-index") {
   );
 }
 
-// Pause hero animations when scrolled out of view
-(function () {
-  const hero = document.querySelector(".hero");
-  if (!hero || !("IntersectionObserver" in window)) return;
-  const observer = new IntersectionObserver(function (entries) {
-    hero.classList.toggle("offscreen", !entries[0].isIntersecting);
-  });
-  observer.observe(hero);
-})();
-
 function relativeTime(isoStr) {
   const date = new Date(isoStr);
   const now = new Date();
@@ -94,7 +56,7 @@ function relativeTime(isoStr) {
   if (diffDays === 1) return "yesterday";
   if (diffDays < 30) return diffDays + " days ago";
   const diffMonths = Math.floor(diffDays / 30);
-  if (diffMonths < 12)
+  if (diffDays < 365)
     return diffMonths === 1 ? "1 month ago" : diffMonths + " months ago";
   const diffYears = Math.floor(diffDays / 365);
   return diffYears === 1 ? "1 year ago" : diffYears + " years ago";
@@ -111,6 +73,12 @@ document
     time.textContent = relativeTime(time.getAttribute("datetime"));
   });
 
+let currentGroupRow = null;
+Array.prototype.forEach.call(tbody ? tbody.rows : [], function (tr) {
+  if (tr.classList.contains("group-row")) currentGroupRow = tr;
+  else if (tr.classList.contains("row")) tr._groupRow = currentGroupRow;
+});
+
 rows.forEach(function (row, i) {
   row._origIndex = i;
   let next = row.nextElementSibling;
@@ -121,31 +89,34 @@ rows.forEach(function (row, i) {
   row._expandRow = next;
 });
 
+function setRowOpen(row, open) {
+  row.classList.toggle("open", open);
+  row.setAttribute("aria-expanded", String(open));
+  // The homepage shows a row's description only while the row is open
+  if (isIndexDocument && row._descRow) row._descRow.hidden = !open;
+}
+
 function collapseAll() {
   if (!tbody) return;
   const openRows = tbody.querySelectorAll("tr.row.open");
   openRows.forEach(function (row) {
-    row.classList.remove("open");
-    row.setAttribute("aria-expanded", "false");
+    setRowOpen(row, false);
   });
 }
 
 function applyFilters() {
   const query = searchInput ? searchInput.value.toLowerCase().trim() : "";
-  const descRowsVisible = !isIndexDocument || activeFilter !== null;
+  const descRowsVisible = !isIndexDocument;
   let visibleCount = 0;
 
   collapseAll();
 
-  rows.forEach(function (row) {
+  // Number rows in their sorted DOM order, not the load order `rows` keeps
+  const orderedRows = tbody ? tbody.querySelectorAll("tr.row") : rows;
+  orderedRows.forEach(function (row) {
     let show = true;
 
-    if (activeFilter) {
-      const rowTags = row.dataset.tags;
-      show = rowTags ? rowTags.split("||").includes(activeFilter) : false;
-    }
-
-    if (show && query) {
+    if (query) {
       if (!row._searchText) {
         let text = row.textContent.toLowerCase();
         if (row._descRow) {
@@ -176,42 +147,28 @@ function applyFilters() {
     }
   });
 
-  if (noResults) noResults.hidden = visibleCount > 0;
-
-  tags.forEach(function (tag) {
-    tag.classList.toggle("active", activeFilter === tag.dataset.value);
+  groupRows.forEach(function (groupRow) {
+    groupRow.hidden = true;
   });
-
-  if (filterBar) {
-    if (activeFilter) {
-      filterBar.classList.add("visible");
-      if (filterValue) filterValue.textContent = activeFilter;
-    } else {
-      filterBar.classList.remove("visible");
-    }
+  if (activeSort.col === "editorial") {
+    rows.forEach(function (row) {
+      if (!row.hidden && row._groupRow) row._groupRow.hidden = false;
+    });
   }
+
+  if (noResults) noResults.hidden = visibleCount > 0;
 
   updateURL();
 }
 
-const filterUrlsScript = document.getElementById("filter-urls");
-const filterToUrl = filterUrlsScript
-  ? JSON.parse(filterUrlsScript.textContent)
-  : {};
-
 const isIndexDocument =
   location.pathname === "/" || location.pathname === "/index.html";
-
-const urlToFilter = {};
-Object.keys(filterToUrl).forEach(function (k) {
-  urlToFilter[filterToUrl[k]] = k;
-});
 
 function buildQueryString() {
   const params = new URLSearchParams();
   const query = searchInput ? searchInput.value.trim() : "";
   if (query) params.set("q", query);
-  if (activeSort.col !== "downloads" || activeSort.order !== "desc") {
+  if (activeSort.col !== defaultSort.col || activeSort.order !== defaultSort.order) {
     params.set("sort", activeSort.col);
     params.set("order", activeSort.order);
   }
@@ -221,12 +178,12 @@ function buildQueryString() {
 
 function updateURL() {
   if (!isIndexDocument) return;
-  const path =
-    activeFilter && filterToUrl[activeFilter] ? filterToUrl[activeFilter] : "/";
-  history.replaceState(null, "", path + buildQueryString());
+  history.replaceState(null, "", "/" + buildQueryString());
 }
 
 function getSortValue(row, col) {
+  // +1 keeps the first row above the "no value" cutoff in sortRows
+  if (col === "editorial") return row._origIndex + 1;
   if (col === "name") {
     return row.querySelector(".col-name a").textContent.trim().toLowerCase();
   }
@@ -282,7 +239,12 @@ function sortRows() {
   });
 
   const frag = document.createDocumentFragment();
+  let lastGroupRow = null;
   arr.forEach(function (row) {
+    if (col === "editorial" && row._groupRow && row._groupRow !== lastGroupRow) {
+      frag.appendChild(row._groupRow);
+      lastGroupRow = row._groupRow;
+    }
     frag.appendChild(row);
     if (row._descRow) frag.appendChild(row._descRow);
     if (row._expandRow) frag.appendChild(row._expandRow);
@@ -294,6 +256,7 @@ function sortRows() {
 const sortHeaders = document.querySelectorAll("th[data-sort]");
 
 function updateSortIndicators() {
+  if (table) table.classList.toggle("sorted", activeSort.col !== "editorial");
   sortHeaders.forEach(function (th) {
     th.classList.remove("sort-asc", "sort-desc");
     if (th.dataset.sort === activeSort.col) {
@@ -308,11 +271,9 @@ function updateSortIndicators() {
   });
 }
 
-// Expand/collapse: event delegation on tbody
 if (tbody) {
   tbody.addEventListener("click", function (e) {
-    // Don't toggle if clicking a link or tag button
-    if (e.target.closest("a") || e.target.closest(".tag")) return;
+    if (e.target.closest("a")) return;
 
     let row = e.target.closest("tr.row");
     if (!row) {
@@ -321,53 +282,16 @@ if (tbody) {
     }
     if (!row) return;
 
-    const isOpen = row.classList.contains("open");
-    if (isOpen) {
-      row.classList.remove("open");
-      row.setAttribute("aria-expanded", "false");
-    } else {
-      row.classList.add("open");
-      row.setAttribute("aria-expanded", "true");
-    }
+    setRowOpen(row, !row.classList.contains("open"));
   });
 
-  // Keyboard: Enter or Space on focused .row toggles expand
   tbody.addEventListener("keydown", function (e) {
     if (e.key !== "Enter" && e.key !== " ") return;
+    if (e.target.closest("a")) return;
     const row = e.target.closest("tr.row");
     if (!row) return;
     e.preventDefault();
     row.click();
-  });
-}
-
-tags.forEach(function (tag) {
-  tag.addEventListener("click", function (e) {
-    e.preventDefault();
-    const value = tag.dataset.value;
-    const url = tag.dataset.url;
-    if (isIndexDocument) {
-      activeFilter = activeFilter === value ? null : value;
-      if (activeFilter && url) {
-        history.pushState(null, "", url + buildQueryString());
-      } else {
-        history.pushState(null, "", "/" + buildQueryString());
-      }
-      applyFilters();
-    } else if (url) {
-      window.location.href = url + "#library-index";
-    }
-  });
-});
-
-if (filterClear) {
-  filterClear.addEventListener("click", function () {
-    if (!isIndexDocument) {
-      window.location.href = "/#library-index";
-      return;
-    }
-    activeFilter = null;
-    applyFilters();
   });
 }
 
@@ -379,7 +303,6 @@ if (noResultsClear) {
       return;
     }
     if (searchInput) searchInput.value = "";
-    activeFilter = null;
     applyFilters();
   });
 }
@@ -392,13 +315,58 @@ sortHeaders.forEach(function (th) {
     if (activeSort.col === col) {
       if (activeSort.order === defaultOrder)
         activeSort = { col: col, order: altOrder };
-      else activeSort = { col: "downloads", order: "desc" };
+      else activeSort = defaultSort;
     } else {
       activeSort = { col: col, order: defaultOrder };
     }
     sortRows();
     updateSortIndicators();
   });
+});
+
+function openEntryRow(row) {
+  if (row.hidden && searchInput) {
+    searchInput.value = "";
+    applyFilters();
+  }
+  setRowOpen(row, true);
+}
+
+function openHashedRow() {
+  const linkedRow = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (linkedRow && linkedRow.matches("tr.row")) openEntryRow(linkedRow);
+}
+
+// Editing the hash or going back/forward on the same page does not reload it
+window.addEventListener("hashchange", openHashedRow);
+
+// Group headings are hidden while sorted flat or filtered out by search, so a link to one must restore them first
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[href*="#"]');
+  if (!link || link.pathname !== location.pathname) return;
+  const target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+  if (target && target.matches("tr.row")) {
+    openEntryRow(target);
+    return;
+  }
+  const groupRow = target ? target.closest(".group-row") : null;
+  if (!groupRow) return;
+  if (activeSort.col !== "editorial") {
+    activeSort = defaultSort;
+    sortRows();
+    updateSortIndicators();
+  }
+  if (groupRow.hidden && searchInput) {
+    searchInput.value = "";
+    applyFilters();
+  }
+});
+
+// Mailto clicks leave no page view, so the sponsor funnel needs its own event
+document.addEventListener("click", function (e) {
+  const link = e.target.closest('a[href^="mailto:sponsorship@"]');
+  if (!link || typeof gtag !== "function") return;
+  gtag("event", "sponsor_contact", { tier: link.dataset.tier });
 });
 
 if (searchInput) {
@@ -422,7 +390,6 @@ if (searchInput) {
     }
     if (e.key === "Escape" && document.activeElement === searchInput) {
       searchInput.value = "";
-      activeFilter = null;
       applyFilters();
       searchInput.blur();
     }
@@ -483,20 +450,10 @@ if (backToTop) {
   ) {
     activeSort = { col: sort, order: order };
   }
-  const matched = urlToFilter[location.pathname];
-  if (matched) activeFilter = matched;
-  if (q || activeFilter || sort) {
+  if (q || sort) {
     sortRows();
   }
-  if (activeFilter) {
-    applyFilters();
-  }
   updateSortIndicators();
+  // Filtering collapses rows, so open a linked entry after restoring URL state.
+  if (location.hash) openHashedRow();
 })();
-
-window.addEventListener("popstate", function () {
-  if (!isIndexDocument) return;
-  const matched = urlToFilter[location.pathname];
-  activeFilter = matched || null;
-  applyFilters();
-});

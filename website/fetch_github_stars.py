@@ -15,7 +15,8 @@ from datetime import UTC, datetime, timedelta
 from itertools import batched
 from pathlib import Path
 
-import httpx
+import httpx2
+
 from build import extract_github_repo, load_stars
 
 CACHE_MAX_AGE_HOURS = 12
@@ -83,7 +84,7 @@ def parse_graphql_response(
     return result
 
 
-def fetch_batch(repos: Sequence[str], client: httpx.Client) -> dict[str, dict]:
+def fetch_batch(repos: Sequence[str], client: httpx2.Client) -> dict[str, dict]:
     """Fetch star data for a batch of repos via GitHub GraphQL API."""
     query = build_graphql_query(repos)
     if not query:
@@ -113,13 +114,11 @@ def main() -> None:
     cache = load_stars(CACHE_FILE)
     now = datetime.now(UTC)
 
-    # Prune entries not in current README
     pruned = {k: v for k, v in cache.items() if k in current_repos}
     if len(pruned) < len(cache):
         print(f"Pruned {len(cache) - len(pruned)} stale cache entries")
     cache = pruned
 
-    # Determine which repos need fetching (missing or stale)
     max_age = timedelta(hours=CACHE_MAX_AGE_HOURS)
     to_fetch = []
     for repo in sorted(current_repos):
@@ -137,16 +136,15 @@ def main() -> None:
         print("Cache is up to date.")
         return
 
-    # Fetch in batches
     fetched_count = 0
     skipped_repos: list[str] = []
 
     now_iso = now.isoformat()
     total_batches = (len(to_fetch) + BATCH_SIZE - 1) // BATCH_SIZE
 
-    with httpx.Client(
+    with httpx2.Client(
         headers={"Authorization": f"bearer {token}", "Content-Type": "application/json"},
-        transport=httpx.HTTPTransport(retries=2),
+        transport=httpx2.HTTPTransport(retries=2, proxy=os.environ.get("HTTPS_PROXY") or None),
         timeout=30,
     ) as client:
         for batch_num, batch in enumerate(batched(to_fetch, BATCH_SIZE), 1):
@@ -154,7 +152,7 @@ def main() -> None:
 
             try:
                 results = fetch_batch(batch, client)
-            except httpx.HTTPStatusError as e:
+            except httpx2.HTTPStatusError as e:
                 print(f"HTTP error {e.response.status_code}", file=sys.stderr)
                 if e.response.status_code == 401:
                     print("Error: Invalid GITHUB_TOKEN.", file=sys.stderr)

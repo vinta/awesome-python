@@ -8,7 +8,7 @@ All submissions must satisfy **ALL** of these:
 
 1. **Serves Python Developers**: Python developers use it in their Python work. Implementation language and packaging are irrelevant — uv and ty are written in Rust, and agent skill packs are markdown, yet all belong; a pure-Python project nobody uses in Python work does not.
 2. **Active**: Commits within the last 12 months
-3. **Stable**: Production-ready, not alpha/beta/experimental
+3. **Stable**: Production-ready, not alpha/beta/experimental. A PyPI "Development Status" classifier alone does not decide this; judge by releases, documentation, and production use.
 4. **Documented**: Clear README with examples and use cases
 5. **Established**: Repository at least 1 month old
 
@@ -27,17 +27,21 @@ Hard maximum: 5 entries per use case. This is a qualitative bar first and a nume
 
 **Displacement**: once a use case is at its cap, the only way in is to name the entry your project replaces and argue that yours does that entry's job better. One in, one out.
 
-**Dual-listing**: a tool may hold entries in multiple use cases, but only when it earns its slot in each independently. List the full entry in each home with identical lines; never a "see X above" note, since the website only renders list items. Description edits update every copy in the same commit. Each slot is audited on its own: dropping one home keeps the other, and dropping the tool entirely removes all copies in one commit. Dual-listing is a maintainer decision; a PR adding a second home for an existing entry is treated as a duplicate.
+**Dual-listing**: a tool may hold entries in multiple use cases, but only when it is an obvious choice in each. List the full entry in each home with identical lines; never a "see X above" note, since the website only renders list items. Description edits update every copy in the same commit. Each slot is audited on its own: dropping one home keeps the other, and dropping the tool entirely removes all copies in one commit. Dual-listing is a maintainer decision; a PR adding a second home for an existing entry is treated as a duplicate.
 
 **Standard library**: a standard-library module is listed only where the stdlib is itself the obvious choice for the use case (tomllib yes, unittest no).
 
-**Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, large-but-specific audiences misread as "niche"). The maintainer's decision is final.
+**Python versions**: missing support for the newest Python releases is not by itself grounds for removal while the entry still has a large user base; it can place the entry in the Second Tier instead.
+
+**Second Tier**: a challenger slot held by a demoted former obvious choice instead of a rising successor. It counts against the two challenger slots, and the adoption-trajectory bar gates only new admissions, not demotions.
+
+**Evidence**: admission is decided by maintainer editorial judgment, informed primarily by PyPI download counts rather than GitHub stars. Judgment overrides the signal's known failure modes (CI-inflated counts, model releases consumed as weights rather than pip installs, projects used outside pip such as SDK downloads (renpy) or deployed services (thumbor), large-but-specific audiences misread as "niche"). The maintainer's decision is final.
 
 Looking for an exhaustive catalog instead? Follow the awesome-\* lists linked under individual entries (for example awesome-python-testing) — they exist precisely so this list doesn't have to be one.
 
 ## Entry Format Reference
 
-**Use GitHub repository URLs** whenever possible. Projects linked to a GitHub repo are ranked higher on [awesome-python.com](https://awesome-python.com/).
+**Use GitHub repository URLs** whenever possible. [awesome-python.com](https://awesome-python.com/) shows stars and last-commit dates only for GitHub repos, and ranks entries without PyPI downloads by stars.
 
 ### Naming Convention
 
@@ -48,6 +52,14 @@ Use the **PyPI package name** as the display name so developers can copy it dire
 ```markdown
 - [pypi-name](https://github.com/owner/repo) - Description ending with period.
 ```
+
+### Description Length
+
+Aim for a rendered line of 100 characters or fewer: the name, ` - `, and the description, not counting the URL. Lines that long fit on one line in the GitHub README, which starts wrapping them around 105. This is a soft cap. When a draft lands near 105, cut filler words to get under it; when the content needs more room, let the line wrap rather than drop meaning.
+
+### Description Style
+
+Write descriptions in sentence case with correct grammar. Proper nouns keep their capitals, and compound modifiers before a noun take hyphens: "A cross-platform Bluetooth Low Energy client", not "A cross platform Bluetooth Low Energy Client". A project's own tagline is no exception: when it breaks these rules, fix it instead of copying it.
 
 ### Standard Library Module
 
@@ -76,6 +88,8 @@ A feature that ships inside a larger library, framework, or tool rather than as 
   - [awesome-project](https://github.com/someone/awesome-project)
 ```
 
+Only awesome-\* lists go here, placed by the maintainer. A sub-item holds no slot, does not count against the cap, and moves or goes away with its parent. A companion project either earns its own entry or is not listed.
+
 ### Subcategory Format
 
 ```markdown
@@ -95,6 +109,8 @@ Adding sections or subcategories is maintainer-only (see Admission). For maintai
 2. Add the section under the appropriate thematic group (e.g., **AI & ML**, **Web**, **Data & Science**)
 3. Add the section title to the Table of Contents under its group
 4. Order entries per Entry Ordering above
+
+A subcategory never repeats its section's name: one named like its section competes with the section page in search results. Name the section's catch-all or main use case General instead.
 
 ## Review Process
 

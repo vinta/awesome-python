@@ -1,0 +1,21 @@
+Users without Python installed can still run your app once PyInstaller takes it from Python script to exe. Pyarmor obfuscates the code you ship.
+
+How to choose:
+
+- An executable with the least setup: PyInstaller
+- Obfuscated scripts, or ones that expire or run on one machine only: Pyarmor
+- Your code compiled to C rather than bundled as bytecode: Nuitka
+- One file to copy to your servers and laptops: pex
+- A Windows installer or macOS disk image along with the executable: cx_Freeze
+
+PyInstaller [reads your script, finds every module and library it needs](https://pyinstaller.org/en/stable/operating-mode.html), and collects them with the Python interpreter into one folder, or optionally into one executable file. For most programs that takes one command, `pyinstaller myscript.py`, and your users don't need Python installed at all. It [bundles major packages like NumPy and the Qt bindings out of the box](https://github.com/pyinstaller/pyinstaller). The bundle holds compiled `.pyc` files instead of your source code, but those [could in principle be decompiled](https://pyinstaller.org/en/stable/operating-mode.html#hiding-the-source-code) to reveal your logic.
+
+Pyarmor is a command-line tool for [obfuscating Python scripts, binding them to specific machines, and setting expiration dates](https://pyarmor.readthedocs.io/en/latest/tutorial/getting-started.html#what-s-pyarmor). The obfuscated scripts stay standard `.py` files: `pyarmor gen foo.py` writes them to `dist/` with a runtime package, and you [copy all of `dist/`](https://pyarmor.readthedocs.io/en/latest/tutorial/getting-started.html#distributing-the-obfuscated-script) to the target. For an executable, Pyarmor [packs the obfuscated scripts with PyInstaller](https://pyarmor.readthedocs.io/en/latest/tutorial/obfuscation.html#packing-obfuscated-scripts). Pyarmor is commercial software: its free version [covers scripts that won't make you much money](https://pyarmor.readthedocs.io/en/latest/licenses.html), and anything else needs a paid license.
+
+Nuitka [translates your Python modules into a C program](https://github.com/Nuitka/Nuitka) that runs on `libpython` the way CPython does, so building takes [a C compiler](https://nuitka.net/user-documentation/user-manual.html#c-compiler). Its homepage pitches that compile step for [protecting your source code](https://nuitka.net/) and for speed. Run it as [`python -m nuitka`](https://nuitka.net/user-documentation/user-manual.html#recommended-way), so you know which interpreter compiles your program. Its default mode still needs Python on the target. For users without Python, build in standalone or onefile mode.
+
+pex builds `.pex` files, [self-contained executable Python virtual environments](https://docs.pex-tool.org/whatispex.html) in a single zip file, so deploying your app comes down to `scp`. Pass it your requirements as you would to pip, [`pex -r requirements.txt -o my_application.pex`](https://docs.pex-tool.org/buildingpex.html#specifying-requirements), and give it an entry point to run, or the file starts an interpreter. A plain `.pex` runs on the target's own Python; [build it as a scie](https://docs.pex-tool.org/scie.html) to get a native executable with the interpreter inside.
+
+cx_Freeze [normally produces a folder](https://cx-freeze.readthedocs.io/en/stable/overview.html) with your executable and the shared libraries it needs, and it can also wrap that in a simple Windows installer or a macOS disk image. Keep its options in a [`[tool.cxfreeze]` table in `pyproject.toml`](https://cx-freeze.readthedocs.io/en/stable/setup_script.html), then run `cxfreeze build`.
+
+Get the folder build working before you switch to a single file, since both [PyInstaller](https://pyinstaller.org/en/stable/operating-mode.html#bundling-to-one-file) and [Nuitka](https://nuitka.net/user-documentation/use-cases.html#standalone-program-distribution) say problems are much easier to debug that way. Then build on each operating system you ship for, as [PyInstaller](https://pyinstaller.org/en/stable/usage.html#supporting-multiple-operating-systems) and [cx_Freeze](https://cx-freeze.readthedocs.io/en/stable/faq.html#freezing-for-other-platforms) both tell you to.

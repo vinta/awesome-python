@@ -4,23 +4,30 @@
 import json
 import re
 import shutil
+import subprocess
 import xml.etree.ElementTree as ET
 from collections import Counter
 from collections.abc import Sequence
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import TypedDict
+from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+
+from jinja2 import Environment, FileSystemLoader
+from markdown_it import MarkdownIt
+from markdown_it.tree import SyntaxTreeNode
 
 from fetch_pypi_downloads_via_clickpy import OVERRIDES_FILE, normalize
-from jinja2 import Environment, FileSystemLoader
-from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, slugify
+from readme_parser import AlsoSee, ParsedGroup, ParsedSection, parse_readme, parse_sponsors, render_inline_text, slugify
 
 GITHUB_REPO_URL_RE = re.compile(r"^https?://github\.com/([^/]+/[^/]+?)(?:\.git)?/?$")
 MARKDOWN_LINK_RE = re.compile(r"\[([^\]]+)\]\(([^)\s]+)\)")
 BULLET_LINE_RE = re.compile(r"^\s*-\s")
+ANCHOR_LINK_ATTRS_RE = re.compile(r'href="(#[^"]*)" target="_blank" rel="noopener"')
 SITE_URL = "https://awesome-python.com/"
 SITEMAP_URL = f"{SITE_URL}sitemap.xml"
 SITEMAP_NS = "http://www.sitemaps.org/schemas/sitemap/0.9"
+PLURAL_NOUNS = {"Clients", "Drivers", "Engines", "Files", "Frameworks", "Generators", "Implementations", "Panels", "Queues", "Repositories", "Schedulers", "Servers", "Stdlib", "Tools"}
 
 BUILTIN_FILTER = "Stdlib"
 BUILTIN_SLUG = "built-in"
@@ -29,9 +36,45 @@ BUILTIN_PUBLIC_URL = f"{SITE_URL}categories/{BUILTIN_SLUG}/"
 
 SPONSORSHIP_PATH = "/sponsorship/"
 SPONSORSHIP_PUBLIC_URL = f"{SITE_URL}sponsorship/"
-SPONSORSHIP_DESCRIPTION = "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+SPONSORSHIP_DESCRIPTION = "Sponsorship for Awesome Python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
 
 BUNDLED_PREFIX_RE = re.compile(r"^\(part of ")
+
+# Category intros name projects as their docs do, README entries by their PyPI name
+PICK_ALIASES = {
+    "Airflow": "apache-airflow",
+    "Beautiful Soup": "beautifulsoup4",
+    "Cacheops": "django-cacheops",
+    "Chroma": "chromadb",
+    "Coverage.py": "coverage",
+    "Django AI Skills": "django-ai-plugins",
+    "Django ORM": "django.db.models",
+    "Faiss": "faiss-cpu",
+    "gRPC": "grpcio",
+    "Google Cloud client libraries": "google-cloud-python",
+    "Grappelli": "django-grappelli",
+    "Hydra": "hydra-core",
+    "Ibis": "ibis-framework",
+    "Jupyter Notebook": "notebook",
+    "Material for MkDocs": "mkdocs-material",
+    "MCP Python SDK": "mcp",
+    "Monty": "pydantic-monty",
+    "OpenAI Agents SDK": "openai-agents",
+    "OpenCV": "opencv-python",
+    "Playwright": "playwright-python",
+    "PyAV": "av",
+    "Python-Markdown": "markdown",
+    "python-oracledb": "oracledb",
+    "Ray Core": "ray",
+    "redis-py": "redis",
+    "Sherlock": "sherlock-project",
+    "Silk": "django-silk",
+    "Surprise": "scikit-surprise",
+    "Temporal": "temporalio",
+    "The Algorithms - Python": "thealgorithms",
+    "Unfold": "django-unfold",
+    "Vega-Altair": "altair",
+}
 
 SOURCE_TYPE_DOMAINS = {
     "docs.python.org": BUILTIN_FILTER,
@@ -64,6 +107,14 @@ class TemplateEntry(TypedDict):
     also_see: list[AlsoSee]
 
 
+class EntryGroup(TypedDict):
+    name: str  # empty for a page with a single unnamed group
+    slug: str
+    url: str  # links the group heading to its own page, empty when it has none
+    lead: str  # the section intro's first paragraph as HTML, shown under the heading on group pages
+    entries: list[TemplateEntry]
+
+
 class SyntheticCategory(TypedDict):
     name: str
     slug: str
@@ -90,6 +141,16 @@ def extract_github_repo(url: str) -> str | None:
     """Extract owner/repo from a GitHub repo URL. Returns None for non-GitHub URLs."""
     m = GITHUB_REPO_URL_RE.match(url)
     return m.group(1) if m else None
+
+
+def sponsor_website_url(url: str) -> str:
+    """Set utm_content=website so sponsors can tell website clicks from README clicks."""
+    parts = urlsplit(url)
+    pairs = parse_qsl(parts.query, keep_blank_values=True)
+    if not any(k == "utm_content" for k, _ in pairs):
+        return url
+    query = [(k, "website" if k == "utm_content" else v) for k, v in pairs]
+    return urlunsplit(parts._replace(query=urlencode(query)))
 
 
 def load_stars(path: Path) -> dict[str, dict]:
@@ -213,26 +274,134 @@ def build_homepage_json_ld(entries: Sequence[TemplateEntry], total_categories: i
 
 def category_meta_title(name: str, parent_name: str | None = None) -> str:
     if parent_name:
-        title = f"{name} for {parent_name} - Awesome Python"
-        if len(title) <= 60:
-            return title
-        title = f"{parent_name}: {name} - Awesome Python"
-        if len(title) <= 60:
-            return title
-        return f"{name} - Awesome Python"
-    title = f"{name} Python Libraries - Awesome Python"
+        # Lead with the section's title so the page matches searches like "python jwt library".
+        title = f"{category_meta_title(parent_name).removesuffix(' - Awesome Python')}: {name}"
+        # Google shows the site name above each result, so a long title drops it rather than get cut off.
+        return f"{title} - Awesome Python" if len(title) <= 43 else title
+    # Names ending in one of these nouns already say what the entries are.
+    noun = "" if name.rsplit(" ", 1)[-1] in PLURAL_NOUNS else " Libraries"
+    prefix = "" if name.startswith("Python ") else "Python "
+    title = f"{prefix}{name}{noun} - Awesome Python"
     if len(title) <= 60:
         return title
     return f"{name} - Awesome Python"
 
 
-def category_meta_description(name: str, entry_count: int, description: str, parent_name: str | None = None) -> str:
-    target = f"{name} for {parent_name}" if parent_name else name
-    count_sentence = f"Explore {entry_count} curated Python projects in {target}."
+def category_meta_description(name: str, entry_count: int, description: str) -> str:
+    count_sentence = f"Explore {entry_count} curated Python project{'s' if entry_count != 1 else ''} in {name}."
     if description:
         lead = description if description.endswith((".", "!", "?")) else f"{description}."
         return f"{lead} {count_sentence}"
-    return f"{count_sentence} Part of the Awesome Python catalog."
+    return f"{count_sentence} Part of the Awesome Python list."
+
+
+def subcategory_meta_description(name: str, parent_name: str, entry_names: Sequence[str]) -> str:
+    names = entry_names[0] if len(entry_names) == 1 else f"{', '.join(entry_names[:-1])}{',' if len(entry_names) > 2 else ''} and {entry_names[-1]}"
+    return f"The {name} picks in Awesome Python's {parent_name} list: {names}."
+
+
+def entry_name_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def link_pick_names(pick: str, slugs_by_key: dict[str, str]) -> str:
+    """Link entry names in a "How to choose" pick to their rows, preferring the longest match.
+
+    Names match ignoring case and punctuation, so the README's PyPI-style
+    "django-ninja" matches the intro's "Django Ninja".
+    """
+    words = list(re.finditer(r"`[^`]*`|[^\s,]+", pick))
+    parts, pos, i = [], 0, 0
+    while i < len(words):
+        for j in range(min(len(words), i + 4), i, -1):
+            start, end = words[i].start(), words[j - 1].end()
+            span = pick[start:end]
+            slug = slugs_by_key.get(entry_name_key(span))
+            # Code spans and dangling punctuation like "Django -" stay outside links
+            if slug and span[0].isalnum() and span[-1].isalnum() and "," not in span and "`" not in span:
+                parts.append(f"{pick[pos:start]}[{span}](#entry-{slug})")
+                pos, i = end, j
+                break
+        else:
+            i += 1
+    return "".join(parts) + pick[pos:]
+
+
+def link_intro_picks(text: str, entry_names: Sequence[str]) -> str:
+    """Link the picks in an intro's "How to choose:" list to their rows in the table below."""
+    head, marker, rest = text.partition("\nHow to choose:\n\n")
+    if not marker:
+        return text
+    slugs_by_key = {entry_name_key(name): slugify(name) for name in entry_names}
+    for alias, name in PICK_ALIASES.items():
+        if entry_name_key(name) in slugs_by_key:
+            slugs_by_key[entry_name_key(alias)] = slugs_by_key[entry_name_key(name)]
+    lines = rest.split("\n")
+    for i, line in enumerate(lines):
+        if not line.startswith("- "):
+            break
+        situation, _, pick = line.rpartition(": ")
+        lines[i] = f"{situation}: {link_pick_names(pick, slugs_by_key)}"
+    return head + marker + "\n".join(lines)
+
+
+def load_category_intro(path: Path, entry_names: Sequence[str] = ()) -> tuple[str, str, str, str]:
+    """Render a category intro file to HTML, split at the end of its "How to choose:" list.
+
+    Returns the part shown above the table, the guide shown below it, and the
+    first paragraph as plain text for the meta description and as HTML for
+    group pages. A file without the list, like a one-project category's,
+    keeps only its lead above the table.
+    Returns empty strings if the category has no intro file.
+    """
+    if not path.exists():
+        return "", "", "", ""
+    md = MarkdownIt("commonmark")
+    tokens = md.parse(link_intro_picks(path.read_text(encoding="utf-8"), entry_names))
+    for token in tokens:
+        for child in token.children or []:
+            if child.type == "link_open" and not str(child.attrGet("href")).startswith("#"):
+                child.attrSet("target", "_blank")
+                child.attrSet("rel", "noopener")
+    lead = next(node for node in SyntaxTreeNode(tokens).children if node.type == "paragraph")
+    split_at = next(j for j, token in enumerate(tokens) if token.type == "paragraph_close" and token.level == 0) + 1
+    for i, token in enumerate(tokens):
+        if token.type == "inline" and token.level == 1 and token.content == "How to choose:" and i + 2 < len(tokens) and tokens[i + 2].type == "bullet_list_open":
+            split_at = next(j for j in range(i + 3, len(tokens)) if tokens[j].type == "bullet_list_close" and tokens[j].level == 0) + 1
+            break
+    render = md.renderer.render
+    return (
+        render(tokens[:split_at], md.options, {}),
+        render(tokens[split_at:], md.options, {}),
+        render_inline_text(lead.children[0].children),
+        render(lead.to_tokens(), md.options, {}),
+    )
+
+
+def group_section_entries(section: ParsedSection, entries_by_key: dict[tuple[str, str], TemplateEntry]) -> list[EntryGroup]:
+    """Group a section's entries by use case (subcategory), both in README order."""
+    groups: dict[str, EntryGroup] = {}
+    for parsed in section["entries"]:
+        name = parsed["subcategory"]
+        slug = slugify(name) if name else ""
+        group = groups.setdefault(name, EntryGroup(name=name, slug=slug, url=subcategory_path(section["slug"], slug) if name else "", lead="", entries=[]))
+        group["entries"].append(entries_by_key[(parsed["url"], parsed["name"])])
+    return list(groups.values())
+
+
+def group_entries_by_section(sections: Sequence[ParsedSection], entries_by_key: dict[tuple[str, str], TemplateEntry], intros_dir: Path) -> list[EntryGroup]:
+    """Group a thematic group's entries by section, both in README order, listing each entry once."""
+    placed: set[tuple[str, str]] = set()
+    groups: list[EntryGroup] = []
+    for section in sections:
+        entries: list[TemplateEntry] = []
+        for parsed in section["entries"]:
+            key = (parsed["url"], parsed["name"])
+            if key not in placed:
+                placed.add(key)
+                entries.append(entries_by_key[key])
+        groups.append(EntryGroup(name=section["name"], slug=section["slug"], url=category_path(section), lead=load_category_intro(intros_dir / f"{section['slug']}.md")[3], entries=entries))
+    return groups
 
 
 def build_breadcrumb_json_ld(items: Sequence[tuple[str, str]]) -> dict:
@@ -328,6 +497,20 @@ def synthetic_category(name: str, slug: str) -> SyntheticCategory:
     return {"name": name, "slug": slug, "description": "", "description_html": ""}
 
 
+def git_last_change_date(repo_root: Path, *log_args: str) -> str:
+    """Return the date of the last commit matching `git log` args, or "" without git history."""
+    result = subprocess.run(["git", "log", "-1", "--format=%cs", "--no-patch", *log_args], cwd=repo_root, capture_output=True, text=True, check=False)
+    return result.stdout.strip()
+
+
+def section_line_range(readme_text: str, name: str) -> str:
+    """Return a section's README lines as a `git log -L` range, from its heading to the line before the next heading."""
+    lines = readme_text.split("\n")
+    start = next(i for i, line in enumerate(lines) if re.fullmatch(rf"#+ {re.escape(name)}", line))
+    end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("#")), len(lines))
+    return f"{start + 1},{end}:README.md"
+
+
 def write_sitemap_xml(path: Path, urls: Sequence[tuple[str, str]]) -> None:
     ET.register_namespace("", SITEMAP_NS)
     urlset = ET.Element(f"{{{SITEMAP_NS}}}urlset")
@@ -402,6 +585,21 @@ def link_llms_category_index_to_canonical_pages(markdown: str, categories: Seque
         out.append(MARKDOWN_LINK_RE.sub(replace_link, line))
 
     return "".join(out)
+
+
+def link_description_anchors_to_category_pages(categories: Sequence[ParsedSection]) -> None:
+    """Point README anchor links in section descriptions at category pages, which lack those anchors."""
+    category_paths = {}
+    for category in categories:
+        category_paths[f"#{category['slug']}"] = category_path(category)
+        category_paths[github_markdown_anchor(category["name"])] = category_path(category)
+
+    def replace_attrs(match: re.Match[str]) -> str:
+        path = category_paths.get(match.group(1))
+        return f'href="{path}"' if path else match.group(0)
+
+    for category in categories:
+        category["description_html"] = ANCHOR_LINK_ATTRS_RE.sub(replace_attrs, category["description_html"])
 
 
 def build_llms_txt(
@@ -575,6 +773,8 @@ def build(repo_root: Path) -> None:
 
     parsed_groups = parse_readme(readme_text)
     sponsors = parse_sponsors(readme_text)
+    for sponsor in sponsors:
+        sponsor["url"] = sponsor_website_url(sponsor["url"])
 
     categories = [cat for g in parsed_groups for cat in g["categories"]]
     cat_slugs = [cat["slug"] for cat in categories]
@@ -583,6 +783,7 @@ def build(repo_root: Path) -> None:
     duplicates = {s for s, n in Counter(all_top_level_slugs).items() if n > 1}
     if duplicates:
         raise ValueError(f"slug collision in /categories/ namespace: {sorted(duplicates)}. Rename a category or group so their slugs differ.")
+    link_description_anchors_to_category_pages(categories)
     total_entries = sum(c["entry_count"] for c in categories)
     entries = extract_entries(categories, parsed_groups)
     build_date = datetime.now(UTC)
@@ -617,12 +818,7 @@ def build(repo_root: Path) -> None:
     filter_urls: dict[str, str] = dict(category_urls)
     for group in parsed_groups:
         filter_urls[group["name"]] = group_path(group["slug"])
-    for entry in entries:
-        for sub in entry.get("subcategories", []):
-            filter_urls[sub["value"]] = sub["url"]
     builtin_entries = [e for e in entries if e.get("source_type") == BUILTIN_FILTER]
-    if builtin_entries:
-        filter_urls[BUILTIN_FILTER] = BUILTIN_PATH
 
     env = Environment(
         loader=FileSystemLoader(website / "templates"),
@@ -630,12 +826,12 @@ def build(repo_root: Path) -> None:
         trim_blocks=True,
         lstrip_blocks=True,
     )
+    env.filters["slugify"] = slugify
     site_dir = website / "output"
     if site_dir.exists():
         shutil.rmtree(site_dir)
     site_dir.mkdir(parents=True)
 
-    filter_urls_json = json.dumps(filter_urls, sort_keys=True, ensure_ascii=False).replace("</", "<\\/")
     homepage_json_ld = json.dumps(
         build_homepage_json_ld(entries, len(categories)),
         ensure_ascii=False,
@@ -650,11 +846,9 @@ def build(repo_root: Path) -> None:
             total_entries=total_entries,
             total_categories=len(categories),
             repo_stars=repo_stars,
-            build_date=build_date.strftime("%B %d, %Y"),
             sponsors=sponsors,
             category_urls=category_urls,
             filter_urls=filter_urls,
-            filter_urls_json=filter_urls_json,
             homepage_json_ld=homepage_json_ld,
         ),
         encoding="utf-8",
@@ -672,17 +866,27 @@ def build(repo_root: Path) -> None:
         page_dir: Path,
         parent_category: ParsedSection | None = None,
         group_categories: Sequence[ParsedSection] | None = None,
+        entry_groups: Sequence[EntryGroup] = (),
     ) -> None:
         page_dir.mkdir(parents=True, exist_ok=True)
         parent_name = parent_category["name"] if parent_category else None
         category_title = category_meta_title(category["name"], parent_name)
-        category_description = category_meta_description(category["name"], len(entries), category["description"], parent_name)
+        page_entries = [entry for group in entry_groups for entry in group["entries"]] if entry_groups else entries
+        intro_html, guide_html, intro_lead, _ = load_category_intro(
+            website / "data" / "category_intros" / f"{current_path.removeprefix('/categories/').strip('/')}.md", [e["name"] for e in page_entries]
+        )
+        if intro_lead:
+            category_description = intro_lead
+        elif parent_name:
+            category_description = subcategory_meta_description(category["name"], parent_name, [e["name"] for e in entries])
+        else:
+            category_description = category_meta_description(category["name"], len(entries), category["description"])
         breadcrumbs = [("Awesome Python", SITE_URL)]
         if parent_category:
             breadcrumbs.append((parent_category["name"], category_public_url(parent_category)))
         breadcrumbs.append((category["name"], category_url))
         category_json_ld = json.dumps(
-            build_category_json_ld(category_title.removesuffix(" - Awesome Python"), category_url, category_description, entries, breadcrumbs),
+            build_category_json_ld(category_title.removesuffix(" - Awesome Python"), category_url, category_description, page_entries, breadcrumbs),
             ensure_ascii=False,
         ).replace("</", "<\\/")
         (page_dir / "index.html").write_text(
@@ -691,19 +895,24 @@ def build(repo_root: Path) -> None:
                 category_title=category_title,
                 category_url=category_url,
                 category_description=category_description,
+                intro_html=intro_html,
+                guide_html=guide_html,
                 entries=entries,
+                entry_groups=entry_groups,
                 total_categories=len(categories),
                 category_urls=category_urls,
                 current_path=current_path,
                 filter_urls=filter_urls,
-                filter_urls_json=filter_urls_json,
                 parent_category=parent_category,
                 group_categories=group_categories,
                 category_json_ld=category_json_ld,
+                sponsors=sponsors,
             ),
             encoding="utf-8",
         )
 
+    entries_by_key = {(e["url"], e["name"]): e for e in entries}
+    section_groups = {category["name"]: group_section_entries(category, entries_by_key) for category in categories}
     for category in categories:
         render_category(
             category,
@@ -711,6 +920,7 @@ def build(repo_root: Path) -> None:
             entries=[e for e in entries if category["name"] in e["categories"]],
             current_path=category_path(category),
             page_dir=categories_dir / category["slug"],
+            entry_groups=section_groups[category["name"]],
         )
 
     for group in parsed_groups:
@@ -721,6 +931,7 @@ def build(repo_root: Path) -> None:
             current_path=group_path(group["slug"]),
             page_dir=categories_dir / group["slug"],
             group_categories=group["categories"],
+            entry_groups=group_entries_by_section(group["categories"], entries_by_key, website / "data" / "category_intros"),
         )
 
     if builtin_entries:
@@ -738,7 +949,6 @@ def build(repo_root: Path) -> None:
     hero_stats: list[str] = []
     if repo_stars:
         hero_stats.append(f"{repo_stars}+ stars on GitHub")
-    hero_stats.append(f"Updated {build_date.strftime('%B %d, %Y')}")
     (sponsorship_dir / "index.html").write_text(
         tpl_sponsorship.render(
             hero_stats=hero_stats,
@@ -770,36 +980,57 @@ def build(repo_root: Path) -> None:
             current_path=subcategory_path(cat_slug, sub_slug),
             page_dir=categories_dir / cat_slug / sub_slug,
             parent_category=cat_by_slug[cat_slug],
+            entry_groups=[EntryGroup(name="", slug="", url="", lead="", entries=group["entries"]) for group in section_groups[cat_by_slug[cat_slug]["name"]] if group["name"] == sub_name],
         )
+
+    redirects_file = website / "data" / "redirects.json"
+    redirects = json.loads(redirects_file.read_text(encoding="utf-8")) if redirects_file.exists() else {}
+    for old_path, new_path in redirects.items():
+        tpl_redirect = env.get_template("redirect.html")
+        stub = site_dir / old_path.strip("/") / "index.html"
+        if stub.exists():
+            raise ValueError(f"redirect source {old_path} is a live page; remove it from redirects.json")
+        if not (site_dir / new_path.strip("/") / "index.html").exists():
+            raise ValueError(f"redirect target {new_path} for {old_path} does not exist")
+        stub.parent.mkdir(parents=True, exist_ok=True)
+        stub.write_text(tpl_redirect.render(target_url=SITE_URL + new_path.lstrip("/")), encoding="utf-8")
 
     static_src = website / "static"
     static_dst = site_dir / "static"
     if static_src.exists():
         shutil.copytree(static_src, static_dst, dirs_exist_ok=True)
 
-    sponsorship_md = repo_root / "SPONSORSHIP.md"
-    sponsorship_md_mtime = datetime.fromtimestamp(sponsorship_md.stat().st_mtime, tz=UTC).date().isoformat()
     llms_template = (website / "templates" / "llms.txt").read_text(encoding="utf-8")
     llms_txt = build_llms_txt(
         llms_template,
         readme_text=readme_text,
         subtitle=subtitle,
-        build_date=build_date.strftime("%Y/%m/%d"),
+        build_date=build_date.date().isoformat(),
         stars_data=stars_data,
         downloads_data=downloads_data,
         categories=categories,
         total_entries=total_entries,
     )
     (site_dir / "robots.txt").write_text(build_robots_txt(), encoding="utf-8")
-    sitemap_date = build_date.date().isoformat()
-    sitemap_urls = [(SITE_URL, sitemap_date)]
-    sitemap_urls.extend((category_public_url(c), sitemap_date) for c in categories)
-    sitemap_urls.extend((group_public_url(g["slug"]), sitemap_date) for g in parsed_groups)
+    # Daily star and download refreshes are not significant changes, so lastmod follows commits to the page's own content.
+    build_day = build_date.date().isoformat()
+    readme_date = git_last_change_date(repo_root, "--", "README.md") or build_day
+    section_dates = {
+        c["slug"]: max(
+            git_last_change_date(repo_root, "-L", section_line_range(readme_text, c["name"])),
+            git_last_change_date(repo_root, "--", f"website/data/category_intros/{c['slug']}.md"),
+        )
+        or build_day
+        for c in categories
+    }
+    sitemap_urls = [(SITE_URL, readme_date)]
+    sitemap_urls.extend((category_public_url(c), section_dates[c["slug"]]) for c in categories)
+    sitemap_urls.extend((group_public_url(g["slug"]), max(section_dates[c["slug"]] for c in g["categories"])) for g in parsed_groups)
     if builtin_entries:
-        sitemap_urls.append((BUILTIN_PUBLIC_URL, sitemap_date))
+        sitemap_urls.append((BUILTIN_PUBLIC_URL, readme_date))
     for cat_slug, sub_slug, _ in sorted(subcat_meta.values()):
-        sitemap_urls.append((subcategory_public_url(cat_slug, sub_slug), sitemap_date))
-    sitemap_urls.append((SPONSORSHIP_PUBLIC_URL, sponsorship_md_mtime))
+        sitemap_urls.append((subcategory_public_url(cat_slug, sub_slug), section_dates[cat_slug]))
+    sitemap_urls.append((SPONSORSHIP_PUBLIC_URL, git_last_change_date(repo_root, "--", "SPONSORSHIP.md") or build_day))
     write_sitemap_xml(site_dir / "sitemap.xml", sitemap_urls)
     (site_dir / "llms.txt").write_text(llms_txt, encoding="utf-8")
 

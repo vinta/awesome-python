@@ -2,7 +2,9 @@
 
 import json
 import os
+import re
 import shutil
+import subprocess
 import textwrap
 import xml.etree.ElementTree as ET
 from datetime import UTC, date, datetime
@@ -10,17 +12,21 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 import pytest
+
 from build import (
     TemplateEntry,
     annotate_entries_with_stats,
     build,
+    category_meta_title,
     detect_source_type,
     extract_entries,
     extract_github_repo,
+    load_category_intro,
     load_downloads,
     load_pypi_badges,
     load_stars,
     sort_entries,
+    sponsor_website_url,
     subcategory_path,
 )
 from readme_parser import parse_readme, slugify
@@ -59,11 +65,6 @@ class HeadMetadataParser(HTMLParser):
             self.title += data
 
 
-# ---------------------------------------------------------------------------
-# slugify
-# ---------------------------------------------------------------------------
-
-
 class TestSlugify:
     def test_simple(self):
         assert slugify("Admin Panels") == "admin-panels"
@@ -81,11 +82,6 @@ class TestSlugify:
 class TestSubcategoryPath:
     def test_builds_path(self):
         assert subcategory_path("web-frameworks", "synchronous") == "/categories/web-frameworks/synchronous/"
-
-
-# ---------------------------------------------------------------------------
-# build (integration)
-# ---------------------------------------------------------------------------
 
 
 class TestBuild:
@@ -196,9 +192,6 @@ class TestBuild:
             Help!
         """)
         self._make_repo(tmp_path, readme)
-        sponsorship_mtime = datetime(2024, 1, 2, tzinfo=UTC).timestamp()
-        os.utime(tmp_path / "SPONSORSHIP.md", (sponsorship_mtime, sponsorship_mtime))
-        expected_sponsorship_lastmod = "2024-01-02"
         start_date = datetime.now(UTC).date()
         build(tmp_path)
         end_date = datetime.now(UTC).date()
@@ -212,7 +205,6 @@ class TestBuild:
         ns = {"sitemap": "http://www.sitemaps.org/schemas/sitemap/0.9"}
         locs = [loc.text or "" for loc in root.findall("sitemap:url/sitemap:loc", ns)]
         lastmods = [lastmod.text or "" for lastmod in root.findall("sitemap:url/sitemap:lastmod", ns)]
-        lastmod_by_loc = dict(zip(locs, lastmods, strict=True))
 
         assert root.tag == "{http://www.sitemaps.org/schemas/sitemap/0.9}urlset"
         assert locs == [
@@ -223,10 +215,65 @@ class TestBuild:
             "https://awesome-python.com/sponsorship/",
         ]
         assert len(lastmods) == len(locs)
-        assert lastmod_by_loc["https://awesome-python.com/sponsorship/"] == expected_sponsorship_lastmod
-        assert all(start_date <= date.fromisoformat(lastmod) <= end_date for loc, lastmod in lastmod_by_loc.items() if loc != "https://awesome-python.com/sponsorship/")
+        # Outside a git repository every page falls back to the build date
+        assert all(start_date <= date.fromisoformat(lastmod) <= end_date for lastmod in lastmods)
         assert all(loc.startswith("https://awesome-python.com/") for loc in locs)
         assert all("?" not in loc for loc in locs)
+
+    def test_sitemap_lastmod_follows_git_history_of_each_page(self, tmp_path, monkeypatch):
+        # Inside a git hook or `git rebase --exec`, inherited GIT_DIR points every git call below at the real repo
+        for key in [k for k in os.environ if k.startswith("GIT_")]:
+            monkeypatch.delenv(key)
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## Projects
+
+            **Tools**
+
+            ### Widgets
+
+            - Sync
+
+                - [w1](https://example.com/w1) - A widget.
+
+            ### Gadgets
+
+            - [g1](https://example.com/g1) - A gadget.
+
+            ## Contributing
+
+            Help!
+        """)
+        self._make_repo(tmp_path, readme)
+
+        def commit(day, message):
+            env = {**os.environ, "GIT_CONFIG_GLOBAL": "/dev/null", "GIT_AUTHOR_DATE": f"{day}T12:00:00Z", "GIT_COMMITTER_DATE": f"{day}T12:00:00Z"}
+            subprocess.run(["git", "add", "-A"], cwd=tmp_path, check=True)
+            subprocess.run(["git", "-c", "user.name=t", "-c", "user.email=t@t", "commit", "-qm", message], cwd=tmp_path, env=env, check=True)
+
+        subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+        commit("2024-01-01", "initial")
+        (tmp_path / "README.md").write_text(readme.replace("A gadget.", "A better gadget."), encoding="utf-8")
+        commit("2024-02-01", "edit gadgets")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use w1.\n", encoding="utf-8")
+        commit("2024-03-01", "add widgets intro")
+        build(tmp_path)
+
+        sitemap = (tmp_path / "website" / "output" / "sitemap.xml").read_text(encoding="utf-8")
+        lastmod_by_loc = dict(re.findall(r"<loc>https://awesome-python\.com(\S*?)</loc>\s*<lastmod>(\S+)</lastmod>", sitemap))
+        assert lastmod_by_loc == {
+            "/": "2024-02-01",
+            "/categories/widgets/": "2024-03-01",
+            "/categories/gadgets/": "2024-02-01",
+            "/categories/tools/": "2024-03-01",
+            "/categories/widgets/sync/": "2024-03-01",
+            "/sponsorship/": "2024-01-01",
+        }
 
     def test_build_creates_category_pages_with_metadata_and_links(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -279,21 +326,55 @@ class TestBuild:
         parser.feed(category_html)
 
         assert 'href="/categories/widgets/"' in index_html
-        assert 'data-value="Widgets"' in index_html
-        assert parser.title.strip() == "Widgets Python Libraries - Awesome Python"
+        assert parser.title.strip() == "Python Widgets Libraries - Awesome Python"
         assert parser.meta_by_name["description"] == "Widget libraries. Also see awesome-widgets. Explore 2 curated Python projects in Widgets."
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/categories/widgets/"
         assert parser.meta_by_property["og:url"] == "https://awesome-python.com/categories/widgets/"
         assert '<link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs text entry point" />' not in category_html
-        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in category_html
+        assert '<a href="/sponsorship/" class="hero-topbar-link hero-topbar-link-strong">Sponsorship</a>' in category_html
         assert "<h1>Widgets</h1>" in category_html
         assert 'Widget libraries. Also see <a href="https://example.com/widgets" target="_blank" rel="noopener">awesome-widgets</a>.' in category_html
         assert 'href="https://example.com/w1"' in category_html
         assert "A widget." in category_html
         assert 'href="https://github.com/owner/w2"' in category_html
-        assert '<table class="table">' in category_html
+        assert '<table class="table" data-default-sort="editorial">' in category_html
         assert "42" in category_html
         assert "2026-01-01T00:00:00+00:00" in category_html
+
+    def test_build_links_description_anchors_to_category_pages(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## Projects
+
+            **Tools**
+
+            ## Audio & Video
+
+            _Media tools._
+
+            - [a1](https://example.com/a1) - A media tool.
+
+            ## Widgets
+
+            _Widget libraries. Also see [Audio & Video](#audio--video) and [Gadgets](#gadgets)._
+
+            - [w1](https://example.com/w1) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'Also see <a href="/categories/audio-video/">Audio &amp; Video</a>' in category_html
+        assert '<a href="#gadgets" target="_blank" rel="noopener">Gadgets</a>' in category_html
 
     def test_build_creates_llms_text_alternate_without_sponsors(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -368,6 +449,68 @@ class TestBuild:
         assert llms_txt != readme
         assert "# Contributing" not in llms_txt
 
+    def test_homepage_sponsor_link_tags_website_clicks(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com/?ref=x&utm_source=awesome-python&utm_content=readme) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        index_html = (tmp_path / "website" / "output" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com/?ref=x&amp;utm_source=awesome-python&amp;utm_content=website"' in index_html
+        assert "utm_content=readme" not in index_html
+
+    def test_category_page_shows_sponsor_band(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## **Sponsors**
+
+            - [Sponsor](https://sponsor.example.com) - Sponsored tool.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            - [w1](https://example.com) - A widget.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'href="https://sponsor.example.com"' in category_html
+        assert '<span class="sponsor-name">Sponsor</span>' in category_html
+
     def test_build_cleans_stale_output(self, tmp_path):
         readme = textwrap.dedent("""\
             # T
@@ -410,12 +553,10 @@ class TestBuild:
         """)
         (tmp_path / "README.md").write_text(readme, encoding="utf-8")
 
-        # Copy real templates
         real_tpl = Path(__file__).parent / ".." / "templates"
         tpl_dir = tmp_path / "website" / "templates"
         shutil.copytree(real_tpl, tpl_dir)
 
-        # Create mock star data
         data_dir = tmp_path / "website" / "data"
         data_dir.mkdir(parents=True)
         stars = {
@@ -430,10 +571,8 @@ class TestBuild:
         # Star-sorted: high-stars (5000) before low-stars (100) before no-stars (None)
         assert html.index("high-stars") < html.index("low-stars")
         assert html.index("low-stars") < html.index("no-stars")
-        # Formatted star counts
         assert "5,000" in html
         assert "100" in html
-        # Expand content present
         assert "expand-content" in html
 
     def test_build_with_downloads_renders_column(self, tmp_path):
@@ -530,7 +669,7 @@ class TestBuild:
         assert parser.meta_by_name["twitter:description"] == expected_description
         assert parser.meta_by_name["twitter:image"] == expected_image
         assert "<head>\n    <meta charset" in html
-        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
+        assert '<a href="/sponsorship/" class="hero-topbar-link hero-topbar-link-strong">Sponsorship</a>' in html
         assert 'id="hero-category-heading">Browse by category</h2>' in html
         assert 'class="hero-category-link" href="/categories/ai-and-agents/"' in html
 
@@ -622,7 +761,7 @@ class TestBuild:
         assert set(graph) == {"WebSite", "CollectionPage", "BreadcrumbList"}
         assert graph["WebSite"]["@id"] == "https://awesome-python.com/#website"
         collection = graph["CollectionPage"]
-        assert collection["name"] == "Widgets Python Libraries"
+        assert collection["name"] == "Python Widgets Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/widgets/"
         assert collection["url"] == "https://awesome-python.com/categories/widgets/"
         assert collection["description"] == "Widget libraries. Explore 2 curated Python projects in Widgets."
@@ -643,6 +782,39 @@ class TestBuild:
             {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
             {"@type": "ListItem", "position": 2, "name": "Widgets", "item": "https://awesome-python.com/categories/widgets/"},
         ]
+
+    def test_category_json_ld_follows_page_order(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # Awesome Python
+
+            Intro.
+
+            ## Projects
+
+            **Tools**
+
+            ## Widgets
+
+            _Widget libraries._
+
+            - [zeta](https://example.com/zeta) - Listed first.
+            - [alpha](https://example.com/alpha) - Listed second.
+
+            # Contributing
+
+            Help!
+        """)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        self._copy_real_templates(tmp_path)
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        marker = '<script type="application/ld+json">'
+        start = category_html.index(marker) + len(marker)
+        data = json.loads(category_html[start : category_html.index("</script>", start)])
+        collection = next(node for node in data["@graph"] if node["@type"] == "CollectionPage")
+        items = collection["mainEntity"]["itemListElement"]
+        assert [(item["position"], item["name"]) for item in items] == [(1, "zeta"), (2, "alpha")]
 
     def test_group_page_falls_back_to_default_description_in_json_ld(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -672,10 +844,52 @@ class TestBuild:
 
         graph = {node["@type"]: node for node in data["@graph"]}
         collection = graph["CollectionPage"]
-        assert collection["name"] == "AI & ML Python Libraries"
+        assert collection["name"] == "Python AI & ML Libraries"
         assert collection["@id"] == "https://awesome-python.com/categories/ai-ml/"
         assert collection["url"] == "https://awesome-python.com/categories/ai-ml/"
-        assert collection["description"] == "Explore 1 curated Python projects in AI & ML. Part of the Awesome Python catalog."
+        assert collection["description"] == "Explore 1 curated Python project in AI & ML. Part of the Awesome Python list."
+
+    def test_category_title_skips_libraries_after_plural_noun(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **Web Development**
+
+            ## Web Frameworks
+
+            - [wf1](https://example.com/wf1) - WF.
+
+            ## Web APIs
+
+            - [api1](https://example.com/api1) - API.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        categories_dir = tmp_path / "website" / "output" / "categories"
+        frameworks_html = (categories_dir / "web-frameworks" / "index.html").read_text(encoding="utf-8")
+        apis_html = (categories_dir / "web-apis" / "index.html").read_text(encoding="utf-8")
+        parser = HeadMetadataParser()
+        parser.feed(frameworks_html)
+        marker = '<script type="application/ld+json">'
+        start = frameworks_html.index(marker) + len(marker)
+        end = frameworks_html.index("</script>", start)
+        graph = {node["@type"]: node for node in json.loads(frameworks_html[start:end])["@graph"]}
+
+        assert parser.title.strip() == "Python Web Frameworks - Awesome Python"
+        assert parser.meta_by_property["og:title"] == "Python Web Frameworks - Awesome Python"
+        assert graph["CollectionPage"]["name"] == "Python Web Frameworks"
+        assert "<title>Python Web APIs Libraries - Awesome Python</title>" in apis_html
+
+    def test_category_title_does_not_repeat_leading_python(self):
+        assert category_meta_title("Python Language") == "Python Language Libraries - Awesome Python"
 
     def test_build_creates_subcategory_pages(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -743,14 +957,14 @@ class TestBuild:
 
         parser = HeadMetadataParser()
         parser.feed(sync)
-        assert parser.title.strip() == "Synchronous for Web Frameworks - Awesome Python"
-        assert parser.meta_by_name["description"] == "Explore 1 curated Python projects in Synchronous for Web Frameworks. Part of the Awesome Python catalog."
+        assert parser.title.strip() == "Python Web Frameworks: Synchronous - Awesome Python"
+        assert parser.meta_by_name["description"] == "The Synchronous picks in Awesome Python's Web Frameworks list: django."
 
         marker = '<script type="application/ld+json">'
         start = sync.index(marker) + len(marker)
         end = sync.index("</script>", start)
         graph = {node["@type"]: node for node in json.loads(sync[start:end])["@graph"]}
-        assert graph["CollectionPage"]["name"] == "Synchronous for Web Frameworks"
+        assert graph["CollectionPage"]["name"] == "Python Web Frameworks: Synchronous"
         assert graph["BreadcrumbList"]["itemListElement"] == [
             {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
             {
@@ -797,10 +1011,10 @@ class TestBuild:
 
         assert parser.title.strip() == "Sponsor Awesome Python"
         assert parser.meta_by_name["description"] == (
-            "Sponsorship for awesome-python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
+            "Sponsorship for Awesome Python: tiers, audience, and how to get your product in front of professional Python developers evaluating tools for production use."
         )
         assert parser.links_by_rel["canonical"] == "https://awesome-python.com/sponsorship/"
-        assert '<a href="/sponsorship/" class="hero-topbar-link">Sponsorship</a>' in html
+        assert '<a href="/sponsorship/" class="hero-topbar-link hero-topbar-link-strong">Sponsorship</a>' in html
 
         marker = '<script type="application/ld+json">'
         start = html.index(marker) + len(marker)
@@ -814,75 +1028,6 @@ class TestBuild:
             {"@type": "ListItem", "position": 1, "name": "Awesome Python", "item": "https://awesome-python.com/"},
             {"@type": "ListItem", "position": 2, "name": "Sponsorship", "item": "https://awesome-python.com/sponsorship/"},
         ]
-
-    def test_index_embeds_filter_urls_json(self, tmp_path):
-        readme = textwrap.dedent("""\
-            # T
-
-            ## Projects
-
-            **AI & ML**
-
-            ## Deep Learning
-
-            - [dl1](https://example.com/dl1) - DL.
-
-            ## Machine Learning
-
-            - Classical
-
-                - [ml1](https://example.com/ml1) - ML.
-
-            # Contributing
-
-            Done.
-        """)
-        self._copy_real_templates(tmp_path)
-        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
-        build(tmp_path)
-
-        site = tmp_path / "website" / "output"
-        index_html = (site / "index.html").read_text(encoding="utf-8")
-
-        marker = '<script type="application/json" id="filter-urls">'
-        assert marker in index_html
-        start = index_html.index(marker) + len(marker)
-        end = index_html.index("</script>", start)
-        data = json.loads(index_html[start:end])
-
-        assert data["Deep Learning"] == "/categories/deep-learning/"
-        assert data["Machine Learning"] == "/categories/machine-learning/"
-        assert data["AI & ML"] == "/categories/ai-ml/"
-        assert data["Machine Learning > Classical"] == "/categories/machine-learning/classical/"
-
-    def test_filter_urls_json_escapes_closing_script_tag(self, tmp_path):
-        readme = textwrap.dedent("""\
-            # T
-
-            ## Projects
-
-            ## Sneaky </script><script>x=1</script>
-
-            - [a](https://example.com) - A.
-
-            # Contributing
-
-            Done.
-        """)
-        self._copy_real_templates(tmp_path)
-        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
-        build(tmp_path)
-
-        site = tmp_path / "website" / "output"
-        index_html = (site / "index.html").read_text(encoding="utf-8")
-
-        marker = '<script type="application/json" id="filter-urls">'
-        start = index_html.index(marker) + len(marker)
-        end = index_html.index("</script>", start)
-        block = index_html[start:end]
-        assert "</script>" not in block
-        data = json.loads(block)
-        assert any("Sneaky" in key for key in data)
 
     def test_build_creates_group_pages(self, tmp_path):
         readme = textwrap.dedent("""\
@@ -924,7 +1069,7 @@ class TestBuild:
         assert "wf1" in web_dev
         assert "dl1" not in web_dev
 
-    def test_tag_buttons_have_data_url(self, tmp_path):
+    def test_tags_link_to_pages_and_subcategory_anchors(self, tmp_path):
         readme = textwrap.dedent("""\
             # T
 
@@ -949,16 +1094,209 @@ class TestBuild:
         site = tmp_path / "website" / "output"
         index_html = (site / "index.html").read_text(encoding="utf-8")
 
-        assert 'data-value="Deep Learning"' in index_html
-        assert 'data-url="/categories/deep-learning/"' in index_html
-        assert 'data-value="AI &amp; ML"' in index_html or 'data-value="AI & ML"' in index_html
-        assert 'data-url="/categories/ai-ml/"' in index_html
-        assert 'data-url="/categories/deep-learning/vision/"' in index_html
+        category_html = (site / "categories" / "deep-learning" / "index.html").read_text(encoding="utf-8")
 
+        for html in (index_html, category_html):
+            assert 'href="/categories/deep-learning/#vision"' in html
+            assert 'href="/categories/ai-ml/"' in html
+            assert "data-url=" not in html
+        assert 'href="/categories/deep-learning/"' in index_html
+        assert 'id="vision"' in category_html
 
-# ---------------------------------------------------------------------------
-# extract_github_repo
-# ---------------------------------------------------------------------------
+    _REDIRECT_README = textwrap.dedent("""\
+        # Awesome Python
+
+        Intro.
+
+        ## Projects
+
+        **Tools**
+
+        ### Widgets
+
+        - [w1](https://example.com/w1) - A widget.
+
+        ## Contributing
+
+        Help!
+    """)
+
+    def _write_redirects(self, tmp_path, redirects):
+        data_dir = tmp_path / "website" / "data"
+        data_dir.mkdir(parents=True)
+        (data_dir / "redirects.json").write_text(json.dumps(redirects), encoding="utf-8")
+
+    def test_build_writes_redirect_stub_outside_sitemap(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        self._write_redirects(tmp_path, {"/categories/old-widgets/": "/categories/widgets/"})
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output"
+        stub = (site / "categories" / "old-widgets" / "index.html").read_text(encoding="utf-8")
+        assert '<link rel="canonical" href="https://awesome-python.com/categories/widgets/">' in stub
+        assert '<meta http-equiv="refresh" content="0; url=https://awesome-python.com/categories/widgets/">' in stub
+        assert "noindex" not in stub
+        assert "old-widgets" not in (site / "sitemap.xml").read_text(encoding="utf-8")
+
+    def test_build_renders_category_intro_and_uses_lead_as_meta_description(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use `w1` for most apps.\n\nSee [the docs](https://example.com/docs).\n\nHow to choose:\n\n- Small apps: w1\n", encoding="utf-8")
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        parser = HeadMetadataParser()
+        parser.feed(category_html)
+        assert parser.meta_by_name["description"] == "Use w1 for most apps."
+        assert '<div class="category-intro"><p>Use <code>w1</code> for most apps.</p>' in category_html
+        assert '<li>Small apps: <a href="#entry-w1">w1</a></li>' in category_html
+        assert '<a href="https://example.com/docs" target="_blank" rel="noopener">the docs</a>' in category_html
+
+    def test_build_renders_category_guide_below_table(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "widgets.md").write_text("Use w1.\n\nHow to choose:\n\n- Small apps: w1\n\nSet up w1 once per process.\n", encoding="utf-8")
+        build(tmp_path)
+
+        category_html = (tmp_path / "website" / "output" / "categories" / "widgets" / "index.html").read_text(encoding="utf-8")
+        intro_html = category_html.split('<div class="category-intro">', 1)[1].split("</div>", 1)[0]
+        assert '<li>Small apps: <a href="#entry-w1">w1</a></li>' in intro_html
+        assert "Set up w1" not in intro_html
+        guide_html = category_html.split('<section class="guide-band" id="guide">', 1)[1]
+        assert "<h2>Widgets guide</h2>" in guide_html
+        assert "<p>Set up w1 once per process.</p>" in guide_html
+        assert category_html.index('id="guide"') > category_html.index("</table>")
+        assert '<a class="jump-link" href="#guide">Widgets guide</a>' in category_html
+
+    def test_section_page_groups_rows_by_use_case_in_readme_order(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **Tools**
+
+            ### Widgets
+
+            - Small
+              - [w2](https://example.com/w2) - Second.
+              - [w1](https://example.com/w1) - First.
+            - Large
+              - [w3](https://example.com/w3) - Third.
+              - [sqlite3](https://docs.python.org/3/library/sqlite3.html) - Stdlib.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        site = tmp_path / "website" / "output" / "categories"
+        html = (site / "widgets" / "index.html").read_text(encoding="utf-8")
+        assert 'data-default-sort="editorial"' in html
+        positions = [html.index(marker) for marker in ('<h2 id="small">', ">w2</a", ">w1</a", '<h2 id="large">', ">w3</a")]
+        assert positions == sorted(positions)
+        assert '<a class="jump-link" href="#small">Small</a>' in html
+        assert '<a href="/categories/widgets/small/">Small</a>' in html
+        assert '<a class="tag repeats-heading" href="/categories/widgets/#small">' in html
+        assert '<tr class="desc-row">' in html
+
+        subcategory_html = (site / "widgets" / "small" / "index.html").read_text(encoding="utf-8")
+        assert 'data-default-sort="editorial"' in subcategory_html
+        assert "group-row" not in subcategory_html
+        assert subcategory_html.index(">w2</a") < subcategory_html.index(">w1</a")
+
+        builtin_html = (site / "built-in" / "index.html").read_text(encoding="utf-8")
+        assert "data-default-sort" not in builtin_html
+        assert "group-row" not in builtin_html
+
+    def test_group_page_groups_rows_by_section_with_links(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **AI & ML**
+
+            ## Machine Learning
+
+            - [ml1](https://example.com/ml1) - ML.
+
+            ## Deep Learning
+
+            - [dl1](https://example.com/dl1) - DL.
+            - [ml1](https://example.com/ml1) - ML again.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        build(tmp_path)
+
+        html = (tmp_path / "website" / "output" / "categories" / "ai-ml" / "index.html").read_text(encoding="utf-8")
+        assert 'data-default-sort="editorial"' in html
+        ml_heading = html.index('<a href="/categories/machine-learning/">Machine Learning</a>')
+        dl_heading = html.index('<a href="/categories/deep-learning/">Deep Learning</a>')
+        assert ml_heading < html.index(">ml1</a") < dl_heading < html.index(">dl1</a")
+        assert html.count(">ml1</a") == 1
+        assert "repeats-heading" not in html
+        assert 'class="jump-links"' not in html
+
+    def test_group_page_shows_section_intro_lead_under_section_heading(self, tmp_path):
+        readme = textwrap.dedent("""\
+            # T
+
+            ## Projects
+
+            **AI & ML**
+
+            ## Machine Learning
+
+            - [ml1](https://example.com/ml1) - ML.
+
+            ## Deep Learning
+
+            - [dl1](https://example.com/dl1) - DL.
+
+            # Contributing
+
+            Done.
+        """)
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(readme, encoding="utf-8")
+        intros_dir = tmp_path / "website" / "data" / "category_intros"
+        intros_dir.mkdir(parents=True)
+        (intros_dir / "machine-learning.md").write_text("Start with [`ml1`](https://example.com/ml1).\n\nMore detail.\n", encoding="utf-8")
+        build(tmp_path)
+
+        html = (tmp_path / "website" / "output" / "categories" / "ai-ml" / "index.html").read_text(encoding="utf-8")
+        lead = html.index('<div class="group-lead"><p>Start with <a href="https://example.com/ml1" target="_blank" rel="noopener"><code>ml1</code></a>.</p>')
+        assert html.index('<a href="/categories/machine-learning/">Machine Learning</a>') < lead < html.index(">ml1</a")
+        assert "More detail." not in html
+        assert html.count('class="group-lead"') == 1
+
+    def test_build_rejects_redirect_to_missing_page(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        self._write_redirects(tmp_path, {"/categories/old-widgets/": "/categories/gone/"})
+        with pytest.raises(ValueError, match="does not exist"):
+            build(tmp_path)
+
+    def test_build_rejects_redirect_over_live_page(self, tmp_path):
+        self._copy_real_templates(tmp_path)
+        (tmp_path / "README.md").write_text(self._REDIRECT_README, encoding="utf-8")
+        self._write_redirects(tmp_path, {"/categories/widgets/": "/"})
+        with pytest.raises(ValueError, match="is a live page"):
+            build(tmp_path)
 
 
 class TestExtractGithubRepo:
@@ -984,9 +1322,16 @@ class TestExtractGithubRepo:
         assert extract_github_repo("https://github.com/org") is None
 
 
-# ---------------------------------------------------------------------------
-# load_stars
-# ---------------------------------------------------------------------------
+class TestSponsorWebsiteUrl:
+    def test_replaces_readme_utm_content(self):
+        url = "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=readme"
+        assert sponsor_website_url(url) == "https://example.com?utm_source=awesome-python&utm_medium=sponsorship&utm_campaign=sponsor&utm_content=website"
+
+    def test_keeps_path_and_other_params(self):
+        assert sponsor_website_url("https://example.com/landing?ref=x&utm_content=readme") == "https://example.com/landing?ref=x&utm_content=website"
+
+    def test_leaves_untagged_url_unchanged(self):
+        assert sponsor_website_url("https://example.com") == "https://example.com"
 
 
 class TestLoadStars:
@@ -1006,11 +1351,6 @@ class TestLoadStars:
         f.write_text("not json", encoding="utf-8")
         result = load_stars(f)
         assert result == {}
-
-
-# ---------------------------------------------------------------------------
-# sort_entries
-# ---------------------------------------------------------------------------
 
 
 class TestLoadPypiBadges:
@@ -1086,11 +1426,6 @@ class TestSortEntries:
         assert [e["name"] for e in result] == ["starred", "builtin", "unstarred"]
 
 
-# ---------------------------------------------------------------------------
-# detect_source_type
-# ---------------------------------------------------------------------------
-
-
 class TestDetectSourceType:
     def test_github_repo_returns_none(self):
         assert detect_source_type("https://github.com/psf/requests") is None
@@ -1109,11 +1444,6 @@ class TestDetectSourceType:
 
     def test_github_non_repo_returns_none(self):
         assert detect_source_type("https://github.com/org/repo/wiki") is None
-
-
-# ---------------------------------------------------------------------------
-# extract_entries
-# ---------------------------------------------------------------------------
 
 
 class TestExtractEntries:
@@ -1218,11 +1548,6 @@ class TestExtractEntries:
         ]
 
 
-# ---------------------------------------------------------------------------
-# annotate_entries_with_stats
-# ---------------------------------------------------------------------------
-
-
 class TestAnnotateEntriesWithStats:
     def test_appends_star_count_to_bullet(self):
         markdown = "- [foo](https://github.com/owner/foo) - A foo.\n"
@@ -1282,3 +1607,41 @@ class TestLoadDownloads:
 
     def test_missing_file_returns_empty(self, tmp_path):
         assert load_downloads(tmp_path / "nope.tsv") == {}
+
+
+class TestLoadCategoryIntro:
+    def test_splits_after_how_to_choose_list(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use `w1` for most apps.\n\nHow to choose:\n\n- Small apps: w1\n- Big apps: w2\n\nConfigure w1 once.\n\nPin w2.\n", encoding="utf-8")
+        intro_html, guide_html, lead, lead_html = load_category_intro(path)
+        assert intro_html == "<p>Use <code>w1</code> for most apps.</p>\n<p>How to choose:</p>\n<ul>\n<li>Small apps: w1</li>\n<li>Big apps: w2</li>\n</ul>\n"
+        assert guide_html == "<p>Configure w1 once.</p>\n<p>Pin w2.</p>\n"
+        assert lead == "Use w1 for most apps."
+        assert lead_html == "<p>Use <code>w1</code> for most apps.</p>\n"
+
+    def test_splits_after_lead_without_how_to_choose_list(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\n- Small apps: w1\n\nConfigure w1 once.\n", encoding="utf-8")
+        intro_html, guide_html, _, _ = load_category_intro(path)
+        assert intro_html == "<p>Use w1.</p>\n"
+        assert guide_html == "<ul>\n<li>Small apps: w1</li>\n</ul>\n<p>Configure w1 once.</p>\n"
+
+    def test_returns_empty_strings_without_intro_file(self, tmp_path):
+        assert load_category_intro(tmp_path / "missing.md") == ("", "", "", "")
+
+    def test_links_picks_to_entry_rows(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text(
+            "Use w1.\n\nHow to choose:\n\n- Small apps: Django Ninja, or `uv tool` on uv\n- Big apps: Django\n- Old apps: Django - LTS releases\n\nSee [w1](https://w1.example).\n", encoding="utf-8"
+        )
+        intro_html, guide_html, _, _ = load_category_intro(path, ["django-ninja", "Django", "uv"])
+        assert '<li>Small apps: <a href="#entry-django-ninja">Django Ninja</a>, or <code>uv tool</code> on <a href="#entry-uv">uv</a></li>' in intro_html
+        assert '<li>Big apps: <a href="#entry-django">Django</a></li>' in intro_html
+        assert '<li>Old apps: <a href="#entry-django">Django</a> - LTS releases</li>' in intro_html
+        assert '<a href="https://w1.example" target="_blank" rel="noopener">w1</a>' in guide_html
+
+    def test_links_pick_aliases_to_entry_rows(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\nHow to choose:\n\n- Vision: OpenCV\n", encoding="utf-8")
+        intro_html, _, _, _ = load_category_intro(path, ["opencv-python"])
+        assert '<li>Vision: <a href="#entry-opencv-python">OpenCV</a></li>' in intro_html
