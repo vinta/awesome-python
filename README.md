@@ -1058,6 +1058,7 @@ _Awesome game development libraries._
   - [pygame-ce](https://github.com/pygame-community/pygame-ce) - An actively developed drop-in replacement with new features and performance improvements ([pygame](https://github.com/pygame/pygame) fork).
   - [pygame](https://github.com/pygame/pygame) - Pygame is a set of Python modules designed for writing games.
   - [arcade](https://github.com/pythonarcade/arcade) - An easy-to-use library for creating 2D arcade games.
+  - [pyxel](https://github.com/kitao/pyxel) - Retro game engine with built-in pixel art, tilemap, sound and music editors.
 - Visual Novels
   - [renpy](https://github.com/renpy/renpy) - A visual novel engine.
 
