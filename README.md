@@ -205,6 +205,8 @@ _Frameworks for neural networks and deep learning. Also see [awesome-deep-learni
 - Reinforcement Learning
   - [gymnasium](https://github.com/Farama-Foundation/Gymnasium) - A standard API for reinforcement learning environments with popular reference environments ([gym](https://github.com/openai/gym) successor).
   - [stable-baselines3](https://github.com/DLR-RM/stable-baselines3) - PyTorch implementations of Stable Baselines (deep) reinforcement learning algorithms.
+- Compiler
+  - [OpenAssembler](https://github.com/lucialuka/OpenAssembler) - Open source compiler for machine learning repo written in Python to compile and execute in sass/cubin
 
 ### Machine Learning
 
