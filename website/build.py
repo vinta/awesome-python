@@ -46,6 +46,7 @@ PICK_ALIASES = {
     "Beautiful Soup": "beautifulsoup4",
     "Cacheops": "django-cacheops",
     "Chroma": "chromadb",
+    "Colour": "colour-science",
     "Coverage.py": "coverage",
     "Django AI Skills": "django-ai-plugins",
     "Django ORM": "django.db.models",
@@ -340,8 +341,12 @@ def link_intro_picks(text: str, entry_names: Sequence[str]) -> str:
     for i, line in enumerate(lines):
         if not line.startswith("- "):
             break
-        situation, _, pick = line.rpartition(": ")
-        lines[i] = f"{situation}: {link_pick_names(pick, slugs_by_key)}"
+        # A line can pair several situations with their picks: "- Physical units: Pint; astronomy: Astropy"
+        segments = []
+        for segment in line.split("; "):
+            situation, sep, pick = segment.rpartition(": ")
+            segments.append(f"{situation}{sep}{link_pick_names(pick, slugs_by_key)}" if sep else segment)
+        lines[i] = "; ".join(segments)
     return head + marker + "\n".join(lines)
 
 
