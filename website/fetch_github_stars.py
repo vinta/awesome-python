@@ -157,8 +157,10 @@ def main() -> None:
                 if e.response.status_code == 401:
                     print("Error: Invalid GITHUB_TOKEN.", file=sys.stderr)
                     sys.exit(1)
-                print("Saving partial cache and exiting.", file=sys.stderr)
-                save_cache(cache)
+                # An empty file would pass the deploy's "star data exists" check and ship a site without stars
+                if cache:
+                    print("Saving partial cache and exiting.", file=sys.stderr)
+                    save_cache(cache)
                 sys.exit(1)
 
             for repo in batch:
