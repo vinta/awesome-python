@@ -303,6 +303,7 @@ _Libraries for building RESTful, GraphQL, and RPC APIs._
   - [fastapi](https://github.com/fastapi/fastapi) - A modern, fast web framework for building APIs with standard Python type hints.
   - [strawberry](https://github.com/strawberry-graphql/strawberry) - A GraphQL library that leverages Python type annotations for schema definition.
   - [connexion](https://github.com/spec-first/connexion) - A spec-first framework that handles requests based on your OpenAPI specification.
+  - [spartan-graphql](https://github.com/tibdex/spartan-graphql) - Compile GraphQL documents into a typed Python package with no imposed transport, no runtime dependencies, and no redundant validation.
 - RPC
   - [grpcio](https://github.com/grpc/grpc) - HTTP/2-based RPC framework with Python bindings, built by Google.
 
