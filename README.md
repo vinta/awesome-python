@@ -360,6 +360,7 @@ _Libraries for implementing authentication schemes._
 - Permissions
   - [django-guardian](https://github.com/django-guardian/django-guardian) - Implementation of per-object permissions for Django.
   - [django-rules](https://github.com/dfunckt/django-rules) - A tiny but powerful app for object-level permissions in Django, without a database.
+  - [olauth](https://github.com/kubdrabik/olauth) - A zero-config, one-line email/password authentication engine for Flask and FastAPI.
 
 ### Admin Panels
 
