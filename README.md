@@ -214,6 +214,7 @@ _Libraries for machine learning. Also see [awesome-machine-learning](https://git
   - [scikit-learn](https://github.com/scikit-learn/scikit-learn) - The most popular Python library for machine learning with extensive documentation and community support.
   - [imbalanced-learn](https://github.com/scikit-learn-contrib/imbalanced-learn) - Resampling techniques for imbalanced datasets, compatible with scikit-learn.
   - [feature-engine](https://github.com/feature-engine/feature_engine) - sklearn-compatible API with the widest toolset for feature engineering and selection.
+  - [aidflow](https://github.com/aigensys-labs/aidflow) - End-to-end, audit-ready scorecards for regulated environment in one stateful framework.
 - Gradient Boosting
   - [xgboost](https://github.com/dmlc/xgboost) - A scalable, portable, and distributed gradient boosting library.
   - [lightgbm](https://github.com/lightgbm-org/LightGBM) - A fast, distributed, high-performance gradient boosting framework.
