@@ -830,6 +830,7 @@ _Libraries for scheduling jobs._
   - [dagster](https://github.com/dagster-io/dagster) - An orchestration platform for the development, production, and observation of data assets.
   - [apache-airflow](https://github.com/apache/airflow) - Airflow is a platform to programmatically author, schedule and monitor workflows.
   - [prefect](https://github.com/PrefectHQ/prefect) - A modern workflow orchestration framework that makes it easy to build, schedule and monitor robust data pipelines.
+  - [dapr](https://github.com/dapr/python-sdk) - Dapr Python SDK with Dapr Workflow for durable, code-first workflows that recover from crashes.
 
 ### Logging
 
