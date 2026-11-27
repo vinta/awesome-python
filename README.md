@@ -1046,6 +1046,7 @@ _Libraries for manipulating audio, video, and their metadata._
   - [mutagen](https://github.com/quodlibet/mutagen) - A Python module to handle audio metadata.
   - [tinytag](https://github.com/tinytag/tinytag) - A library for reading audio file metadata of MP3, MP4, WAV, OGG, FLAC, WMA, and AIFF files.
   - [beets](https://github.com/beetbox/beets) - A music library manager and [MusicBrainz](https://musicbrainz.org/) tagger.
+  - [clearcaption](https://github.com/Andrii2203/clearcaption-youtube-transcript) - YouTube transcripts from cloud servers (AWS, GCP, Colab), drop-in fallback for youtube-transcript-api, with CLI and timestamped translation.
 
 ### Game Development
 
