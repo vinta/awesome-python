@@ -467,7 +467,7 @@ _Libraries for connecting and operating databases._
 - Other Relational Databases
   - [pyodbc](https://github.com/mkleehammer/pyodbc) - An ODBC bridge for connecting to SQL Server and any other ODBC-accessible database.
   - [oracledb](https://github.com/oracle/python-oracledb) - The official Python driver for Oracle Database, successor to cx_Oracle.
-  - [mssql-python](https://github.com/microsoft/mssql-python) - Official Microsoft driver for SQL Server and Azure SQL, built on ODBC for high performance.
+  - [mssql-python](https://github.com/microsoft/mssql-python) - Official Microsoft driver for SQL Server and Azure SQL.
 - NoSQL Databases
   - [redis](https://github.com/redis/redis-py) - The Python client for Redis.
   - [pymongo](https://github.com/mongodb/mongo-python-driver) - The official Python client for MongoDB.
@@ -623,7 +623,7 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 _Libraries for quantum computing._
 
 - [qiskit](https://github.com/Qiskit/qiskit) - An IBM-backed quantum SDK for building, simulating, and running circuits on real quantum hardware.
-- [qutip](https://github.com/qutip/qutip) - Quantum Toolbox in Python.
+- [qutip](https://github.com/qutip/qutip) - Simulates the dynamics of closed and open quantum systems.
 - [pennylane](https://github.com/PennyLaneAI/pennylane) - A cross-platform library for quantum computing, quantum ML, and quantum chemistry.
 - [cirq](https://github.com/quantumlib/Cirq) - A Google-developed framework focused on hardware-aware quantum circuit design for NISQ devices.
 
@@ -701,7 +701,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 - Benchmarking
   - [pytest-benchmark](https://github.com/ionelmc/pytest-benchmark) - A pytest fixture for benchmarking code.
 - API Testing
-  - [schemathesis](https://github.com/schemathesis/schemathesis) - Automatic property-based testing of web APIs from OpenAPI or GraphQL schemas.
+  - [schemathesis](https://github.com/schemathesis/schemathesis) - Automatic property-based testing of web APIs from OpenAPI, GraphQL, or gRPC specs.
 - Mock
   - [unittest.mock](https://docs.python.org/3/library/unittest.mock.html) - (Python standard library) A mocking and patching library.
   - [responses](https://github.com/getsentry/responses) - A utility library for mocking out the requests Python library.
@@ -722,7 +722,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
 _Libraries for debugging code._
 
 - Debuggers
-  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code for remote debugging.
+  - [debugpy](https://github.com/microsoft/debugpy) - A Debug Adapter Protocol debugger for Python, used by VS Code's Python Debugger extension.
   - [ipdb](https://github.com/gotcha/ipdb) - IPython-enabled [pdb](https://docs.python.org/3/library/pdb.html).
   - [pudb](https://github.com/inducer/pudb) - A full-screen, console-based Python debugger.
 - Tracing
@@ -744,7 +744,7 @@ _Task runners and software build tools. If you're looking for Python packaging/b
 
 - [invoke](https://github.com/pyinvoke/invoke) - A tool for managing shell-oriented subprocesses and organizing executable Python code into CLI-invokable tasks.
 - [poethepoet](https://github.com/nat-n/poethepoet) - A task runner that defines tasks in pyproject.toml and works with poetry or uv.
-- [scons](https://github.com/SCons/scons) - A software construction tool.
+- [scons](https://github.com/SCons/scons) - A cross-platform substitute for Make, with build files written in Python.
 - [doit](https://github.com/pydoit/doit) - A task runner and build tool.
 
 ### Documentation

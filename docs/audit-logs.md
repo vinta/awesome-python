@@ -11,6 +11,7 @@ awesome-python is audited section by section. Every entry gets re-verified again
 Display names follow the canonical PyPI package name. These entries keep a different name by maintainer decision:
 
 - autobahn-python -- `autobahn`.
+- devpi -- `devpi-server`.
 - django-rest-framework -- `djangorestframework`.
 - django-rules -- `rules`.
 - fasthtml -- `python-fasthtml`.
