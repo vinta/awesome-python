@@ -42,6 +42,12 @@
       crossorigin
     />
     <link rel="stylesheet" href="/static/style.css" />
+    <script>
+      // Local previews must not report to the production property.
+      if (["localhost", "127.0.0.1"].includes(location.hostname)) {
+        window["ga-disable-G-0LMLYE0HER"] = true;
+      }
+    </script>
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-0LMLYE0HER"
