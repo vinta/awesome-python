@@ -220,7 +220,7 @@ _Libraries for machine learning. Also see [awesome-machine-learning](https://git
   - [catboost](https://github.com/catboost/catboost) - A fast, scalable, high-performance gradient boosting on decision trees library.
 - Time Series Forecasting
   - [prophet](https://github.com/meta/prophet) - A tool for producing forecasts for time series with multiple seasonality and trend changes.
-  - [statsforecast](https://github.com/Nixtla/statsforecast) - Fast statistical forecasting models such as ARIMA, ETS, and Theta, compiled with numba.
+  - [statsforecast](https://github.com/Nixtla/statsforecast) - Fast statistical forecasting models such as ARIMA, ETS, and Theta.
   - [sktime](https://github.com/sktime/sktime) - A unified scikit-learn-style framework for forecasting and other time-series learning tasks.
   - [timesfm](https://github.com/google-research/timesfm) - A pretrained foundation model from Google Research for time-series forecasting, with non-commercial default weights.
 - Hyperparameter Optimization
@@ -481,7 +481,7 @@ _In-process databases usable directly from Python._
   - [duckdb](https://github.com/duckdb/duckdb) - An in-process SQL OLAP database management system, optimized for analytics and fast queries, similar to SQLite but for analytical workloads.
   - [chdb](https://github.com/chdb-io/chdb) - In-process OLAP SQL engine with the full ClickHouse dialect, zero-copy pandas/Arrow interop, and federation to remote ClickHouse clusters via `remoteSecure()`.
 - Vector
-  - [lancedb](https://github.com/lancedb/lancedb) - A developer-friendly embedded retrieval database for multimodal AI.
+  - [lancedb](https://github.com/lancedb/lancedb) - A developer-friendly embedded retrieval library for multimodal AI.
   - [chromadb](https://github.com/chroma-core/chroma) - An open-source embedding database for building AI applications with semantic search.
   - [zvec](https://github.com/alibaba/zvec) - A lightweight, in-process vector database that embeds directly into applications.
 - Key-Value & Document
@@ -555,7 +555,7 @@ _Libraries for validating data._
 
 - [pydantic](https://github.com/pydantic/pydantic) - Data validation using Python type hints.
 - [jsonschema](https://github.com/python-jsonschema/jsonschema) - An implementation of [JSON Schema](https://json-schema.org/) for Python.
-- [great-expectations](https://github.com/fivetran/great_expectations) - A data quality framework for validating, documenting, and profiling data with declarative expectations.
+- [great-expectations](https://github.com/fivetran/great_expectations) - A data quality framework for validating and documenting data with declarative expectations.
 - [pandera](https://github.com/unionai-oss/pandera) - A data validation library for dataframes, with support for pandas, polars, PySpark, and more.
 
 ### Data Visualization
@@ -656,7 +656,7 @@ _Interactive Python interpreters (REPL)._
 _Tools for static analysis, linters and code quality checkers. Also see [awesome-static-analysis](https://github.com/analysis-tools-dev/static-analysis)._
 
 - General
-  - [import-linter](https://github.com/seddonym/import-linter) - A linter that enforces architectural constraints on imports between Python modules.
+  - [import-linter](https://github.com/import-linter/import-linter) - A linter that enforces architectural constraints on imports between Python modules.
   - [vulture](https://github.com/jendrikseipp/vulture) - A tool for finding and analyzing dead Python code.
   - [complexipy](https://github.com/rohaquinlop/complexipy) - Cognitive complexity analysis for Python code, written in Rust.
   - [prospector](https://github.com/prospector-dev/prospector) - A tool to analyze Python code.
@@ -678,7 +678,7 @@ _Tools for static analysis, linters and code quality checkers. Also see [awesome
   - [ty](https://github.com/astral-sh/ty) - An extremely fast Python type checker and language server.
   - [pyright](https://github.com/microsoft/pyright) - Full-featured static type checker for Python from Microsoft, the engine behind Pylance.
   - [basedpyright](https://github.com/DetachHead/basedpyright) - A pyright fork with stricter defaults and Pylance features in its language server.
-  - [pyrefly](https://github.com/meta/pyrefly) - A fast type checker and language server for Python.
+  - [pyrefly](https://github.com/pyrefly-org/pyrefly) - A fast type checker and language server for Python.
 
 ### Testing
 
@@ -690,7 +690,7 @@ _Libraries for testing codebases and generating test data. Also see [awesome-pyt
   - [hypothesis](https://github.com/HypothesisWorks/hypothesis) - Hypothesis is an advanced QuickCheck-style property-based testing library.
   - [robotframework](https://github.com/robotframework/robotframework) - A generic test automation framework.
 - Test Runners
-  - [tox](https://github.com/tox-dev/tox) - Automatically builds and tests distributions in multiple Python versions.
+  - [tox](https://github.com/tox-dev/tox) - A generic virtual environment management and test command-line tool.
   - [nox](https://github.com/wntrblm/nox) - Flexible test automation for Python.
 - Browser Automation
   - [playwright-python](https://github.com/microsoft/playwright-python) - Python version of the Playwright testing and automation library.
@@ -1132,7 +1132,7 @@ _Libraries for Python version and virtual environment management._
 - [virtualenv](https://github.com/pypa/virtualenv) - A tool to create isolated Python environments.
 - [uv](https://github.com/astral-sh/uv) - An extremely fast Python version, package and project manager, written in Rust.
 - [pyenv](https://github.com/pyenv/pyenv) - Simple Python version management.
-- [mise](https://github.com/jdx/mise) - A polyglot tool version manager that installs Python versions and reads .python-version files.
+- [mise](https://github.com/jdx/mise) - A polyglot tool version manager that installs Python versions and can read .python-version files.
 
 ### Package Management
 
