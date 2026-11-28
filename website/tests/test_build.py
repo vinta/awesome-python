@@ -1671,3 +1671,9 @@ class TestLoadCategoryIntro:
         path.write_text("Use w1.\n\nHow to choose:\n\n- Django for everything\n", encoding="utf-8")
         intro_html, _, _, _ = load_category_intro(path, ["Django"])
         assert "<li>Django for everything</li>" in intro_html
+
+    def test_links_a_pick_continued_after_a_semicolon(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\nHow to choose:\n\n- Django: Channels; Daphne serves it\n", encoding="utf-8")
+        intro_html, _, _, _ = load_category_intro(path, ["channels", "daphne"])
+        assert '<li>Django: <a href="#entry-channels">Channels</a>; <a href="#entry-daphne">Daphne</a> serves it</li>' in intro_html

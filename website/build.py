@@ -311,7 +311,7 @@ def link_pick_names(pick: str, slugs_by_key: dict[str, str]) -> str:
     Names match ignoring case and punctuation, so the README's PyPI-style
     "django-ninja" matches the intro's "Django Ninja".
     """
-    words = list(re.finditer(r"`[^`]*`|[^\s,]+", pick))
+    words = list(re.finditer(r"`[^`]*`|[^\s,;]+", pick))
     parts, pos, i = [], 0, 0
     while i < len(words):
         for j in range(min(len(words), i + 4), i, -1):
@@ -342,8 +342,9 @@ def link_intro_picks(text: str, entry_names: Sequence[str]) -> str:
         if not line.startswith("- "):
             break
         # A line can pair several situations with their picks: "- Physical units: Pint; astronomy: Astropy"
+        # A "; " that no "situation: " follows belongs to the pick
         segments = []
-        for segment in line.split("; "):
+        for segment in re.split(r"; (?=[^;]*: )", line):
             situation, sep, pick = segment.rpartition(": ")
             segments.append(f"{situation}{sep}{link_pick_names(pick, slugs_by_key)}" if sep else segment)
         lines[i] = "; ".join(segments)
