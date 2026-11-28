@@ -44,6 +44,9 @@ def extract_github_repos(text: str) -> set[str]:
 
 def save_cache(cache: dict) -> None:
     """Write the star cache to disk, creating data/ dir if needed."""
+    # An empty file would pass the deploy's "star data exists" check and ship a site without stars
+    if not cache:
+        return
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     CACHE_FILE.write_text(
         json.dumps(cache, indent=2, ensure_ascii=False) + "\n",
