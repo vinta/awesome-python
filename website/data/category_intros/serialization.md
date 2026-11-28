@@ -1,24 +1,38 @@
-When your Python serialization library should validate too, msgspec decodes JSON straight into typed objects. Without a schema, orjson is fast and correct.
+orjson decodes JSON into plain dicts, and msgspec into typed, validated objects. Pickle functions for remote workers with cloudpickle, or whole sessions with dill.
 
 How to choose:
 
-- Decoding into typed, validated objects: msgspec
-- Faster JSON that still gives you dicts and lists: orjson
-- Compact binary data other languages can read: msgpack
-- Schemas that convert ORM or app objects for a web API: marshmallow
-- Shipping lambdas and notebook functions to remote workers: cloudpickle
-- Saving a whole interpreter session, or objects pickle refuses: dill
+- JSON in and out as plain dicts and lists: orjson
+- JSON or MessagePack decoded into typed objects, with validation: msgspec
+- Lambdas and notebook-defined functions sent to remote workers: cloudpickle
+- A drop-in pickle replacement, or saving a whole interpreter session: dill
+- MessagePack without a schema, or a stream of messages: msgpack
+- Your app's objects, like ORM models, mapped by separate schema classes: marshmallow
 
-msgspec works as a faster JSON or MessagePack library on its own. Still, its docs recommend it for the [full serialization and validation workflow](https://github.com/msgspec/msgspec): define your schemas with type annotations, encode them, then decode them back with validation. [Structs are the preferred way](https://msgspec.dev/structs) to define those types. Pass the type when you decode, and msgspec [validates while decoding](https://msgspec.dev/usage#typed-decoding) at no added runtime cost: `msgspec.json.decode(data, type=User)`. A consistent interface covers MessagePack, YAML, and TOML too.
+### orjson
 
-Moving from the standard `json` module to orjson? The [largest difference](https://github.com/ijl/orjson?tab=readme-ov-file#migrating) is that `orjson.dumps` returns `bytes`, not `str`. orjson serializes dataclasses, datetimes, and UUIDs natively. Decoding gives you only dicts, lists, and other builtins, and orjson leaves schemas to [validation libraries a level above](https://github.com/ijl/orjson?tab=readme-ov-file#questions).
+Pick orjson when you want JSON in and out as plain dicts and lists, without defining a schema. It's [a fast, correct JSON library](https://github.com/ijl/orjson) that serializes dataclass, datetime, and UUID instances natively. Call `orjson.dumps()` and `orjson.loads()`. For typed objects back, use msgspec: decoding into dataclasses or other types [needs a schema](https://github.com/ijl/orjson#questions), which orjson leaves to libraries a level above it.
 
-msgpack reads and writes MessagePack, a binary format that [lets you exchange data among languages like JSON, but faster and smaller](https://github.com/msgpack/msgpack-python). Call `packb` and `unpackb` for one-shot use, and read many objects from one stream with an [`Unpacker`](https://github.com/msgpack/msgpack-python?tab=readme-ov-file#streaming-unpacking). When the data comes from an untrusted source, [set `max_buffer_size`](https://msgpack-python.readthedocs.io/en/latest/api.html#msgpack.Unpacker) to limit the buffer.
+### msgspec
 
-marshmallow [makes no assumption about your web framework or database layer](https://marshmallow.readthedocs.io/en/latest/why.html#agnostic), so its schemas work with just about any ORM, or none. [Declare a schema](https://marshmallow.readthedocs.io/en/latest/quickstart.html#declaring-schemas) as a class that maps attribute names to fields. Its `dump` method turns your objects into primitive Python types, and `load` [validates and deserializes](https://marshmallow.readthedocs.io/en/latest/quickstart.html#deserializing-objects-loading) incoming data, raising `ValidationError` on invalid input. To get objects back instead of dicts, [decorate a schema method with `post_load`](https://marshmallow.readthedocs.io/en/latest/quickstart.html#deserializing-to-objects).
+Pick msgspec when your messages have a known shape and you want typed objects back instead of dicts. msgspec's docs call [typed decoding](https://msgspec.dev/porting/orjson#typed-decoding) its main advantage over orjson. Validation happens in the same pass, so a missing field or a wrong type raises `msgspec.ValidationError`. Define each schema as a [`msgspec.Struct`](https://msgspec.dev/structs), the preferred way to describe structured data in msgspec. Then encode with `msgspec.json.encode()` and decode with `msgspec.json.decode(data, type=User)`. JSON, MessagePack, YAML, and TOML each get a submodule with [the same interface](https://msgspec.dev/usage).
 
-cloudpickle is built for [cluster computing, where Python code is shipped over the network](https://github.com/cloudpipe/cloudpickle) to run on remote hosts. It pickles lambdas, plus functions and classes you define in a script, a shell, or a Jupyter notebook, and the result loads back with the standard `pickle.loads`. Use it only between the [exact same version of Python](https://pypi.org/project/cloudpickle/), never for long-term storage.
+### cloudpickle
 
-dill is a [drop-in replacement for `pickle`](https://dill.readthedocs.io/en/latest/#basic-usage): write `import dill as pickle`, and nested functions, lambdas, and more exotic types pickle too. Call [`dill.dump_module()`](https://dill.readthedocs.io/en/latest/dill.html#dill.session.dump_module) to save your interpreter session to a file, and `dill.load_module()` to restore it later. dill [isn't meant to be secure against maliciously constructed data](https://dill.readthedocs.io/en/latest/#about-dill), and no pickle is. Never load one from a source you don't trust: use a data format instead.
+Pick cloudpickle to send code to worker processes or remote machines. It's [especially useful for cluster computing](https://github.com/cloudpipe/cloudpickle), where Python code ships over the network to run on remote hosts. It also pickles what the standard library's `pickle` doesn't support, like lambdas and the functions and classes you define in a script, a shell, or a Jupyter notebook. Dump with `cloudpickle.dumps()`, and load on the other end with plain `pickle.loads()`. It's built for objects in transit: both ends need the exact same version of Python, and its README strongly discourages using it for long-term storage.
 
-orjson, msgspec, and msgpack all pitch speed, but msgspec's own benchmark page [encourages you to write your own benchmarks](https://msgspec.dev/benchmarks) before deciding.
+### dill
+
+Pick dill to pickle more of Python than `pickle` can, or to save a whole interpreter session. It [extends `pickle` with the same interface](https://github.com/uqfoundation/dill#about-dill), so it works as [a drop-in replacement](https://github.com/uqfoundation/dill#basic-usage): change `import pickle` to `import dill as pickle`. `dill.dump_module()` [pickles the state of `__main__` to a file](https://dill.readthedocs.io/en/latest/#dill.dump_module), and `dill.load_module()` restores it, even in a new interpreter on another computer.
+
+### MessagePack for Python
+
+Pick MessagePack for Python, imported as `msgpack`, for MessagePack data without a schema: a binary format that [exchanges data across languages like JSON, but faster and smaller](https://github.com/msgpack/msgpack-python#what-is-this). Pack with `msgpack.packb()` and unpack with `msgpack.unpackb()`. For many messages in a row, the [streaming `Unpacker`](https://github.com/msgpack/msgpack-python#streaming-unpacking) reads one object after another from a file-like object, or from bytes you `feed()` it. When your messages have a schema to decode into, msgspec reads MessagePack too.
+
+### marshmallow
+
+Pick marshmallow to convert your app's objects to and from native Python types through schema classes kept apart from those objects. It [works with just about any ORM, ODM, or no ORM at all](https://marshmallow.readthedocs.io/en/latest/why.html#agnostic), and [one schema can produce several output formats](https://marshmallow.readthedocs.io/en/latest/why.html#consistency-meets-flexibility), like a full view and a smaller one for a low-latency endpoint. [Declare a schema](https://marshmallow.readthedocs.io/en/latest/quickstart.html#declaring-schemas) as a class whose attributes are fields. Its `dump()` serializes an object, and `load()` validates and deserializes input, raising `ValidationError` on invalid data.
+
+### Loading untrusted pickles
+
+Only unpickle data you trust, whether cloudpickle or dill wrote it: loading a pickle can run any code its author put in it. cloudpickle's README says to [only load pickle data from trusted sources](https://github.com/cloudpipe/cloudpickle), and dill's says it's [not intended to be secure against maliciously constructed data](https://github.com/uqfoundation/dill#about-dill).

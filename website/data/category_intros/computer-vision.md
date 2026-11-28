@@ -1,27 +1,40 @@
-OpenCV processes images and video. Training your own detector needs more than a Python computer vision library scoped to inference, so reach for Ultralytics.
+Analyze images and video with OpenCV, and train object detectors with Ultralytics. For OCR, pytesseract reads clean print, and PaddleOCR rotated or noisy scans.
 
 How to choose:
 
-- Reading, editing, and analyzing images and video: OpenCV
-- Detecting, segmenting, or tracking objects with a trained model: Ultralytics
-- Image operations inside a PyTorch model or training loop: Kornia
-- Browsing a dataset, finding label mistakes, and seeing where a model fails: FiftyOne
-- Printed text in clean scans: pytesseract
-- Text in photos or degraded scans: EasyOCR
-- Tables and page layouts, turned into Markdown or JSON: PaddleOCR
+- Image and video processing, feature detection, and camera work: OpenCV
+- Training your own detection, segmentation, or pose model: Ultralytics
+- Clean printed text on a CPU, with the lightest setup: pytesseract
+- Rotated, noisy, or low-resolution scans, Chinese text, and tables: PaddleOCR
+- Image operations inside a PyTorch model, on GPU batches: Kornia
+- A pretrained object detector for code that can't take AGPL: Kornia
+- Curating a dataset and finding where your model fails: FiftyOne
+- The quickest OCR to add to PyTorch code: EasyOCR
 
-OpenCV's Python bindings [convert every OpenCV array to and from a NumPy array](https://github.com/opencv/opencv/blob/5.x/doc/py_tutorials/py_setup/py_intro/py_intro.markdown), so the images you load work with any other library that uses NumPy.
+### OpenCV
 
-Ultralytics runs YOLO models for detection, segmentation, pose estimation, and tracking from [one Python package and CLI](https://docs.ultralytics.com/). Load a pretrained model and [call `.train()` on your own dataset](https://docs.ultralytics.com/guides/finetuning-guide/): the weights carry over with no extra code. Ultralytics is AGPL, so [using it without open-sourcing your project](https://www.ultralytics.com/license) takes its Enterprise License.
+Start with OpenCV for image and video work: filtering, geometric transforms, feature detection, camera calibration, and video analysis. Move to Kornia when the same operations run on GPU batches inside a PyTorch model. Kornia's own README says [OpenCV wins single-image `uint8` CPU work](https://github.com/kornia/kornia#when-to-use-kornia). OpenCV's Python bindings [work on NumPy arrays](https://docs.opencv.org/4.x/d0/de3/tutorial_py_intro.html): `cv2.imread()` loads an image as one, so you can pass it straight to other NumPy-based libraries.
 
-Kornia is [a differentiable computer vision library like OpenCV, with strong GPU support](https://kornia.readthedocs.io/en/latest/get-started/introduction.html), built on PyTorch tensors. Its FAQ states the split: Kornia [provides operators to train networks, while OpenCV's scope is inference](https://kornia.readthedocs.io/en/latest/community/faqs.html).
+### Ultralytics
 
-FiftyOne is for building better datasets. [Load your images and labels as a Dataset](https://docs.voxel51.com/user_guide/basics.html) to search and sort samples and spot label mistakes. Then add your model's predictions and [evaluate them sample by sample](https://docs.voxel51.com/user_guide/evaluation/index.html) in the FiftyOne App to see where it goes wrong.
+Pick Ultralytics to train your own object detection, segmentation, or pose model. One package covers [the full lifecycle](https://docs.ultralytics.com/modes/): training, validation, prediction, export, and tracking. Start from the `YOLO` class with pretrained weights, and fine-tune it on your own data. Ultralytics is AGPL, and its [license page](https://www.ultralytics.com/license) says you need its paid Enterprise License to use it without open-sourcing your whole project. To run a pretrained detector without those terms, Kornia ships an [Apache-licensed one](https://kornia.readthedocs.io/en/latest/models/rt_detr.html).
 
-pytesseract is [a wrapper for Google's Tesseract engine](https://github.com/madmaze/pytesseract), which you install on its own. `image_to_string()` returns the text, and `image_to_data()` adds boxes and confidences.
+### Kornia
 
-EasyOCR reads [many languages and scripts](https://github.com/JaidedAI/EasyOCR) with deep learning models on PyTorch. [Create one `Reader` and reuse it](https://www.jaided.ai/easyocr/tutorial/): it loads the models into memory once, then reads as many images as you give it.
+Pick Kornia when image operations run inside a PyTorch model or training loop. Its FAQ says Kornia provides [differentiable operators to train networks](https://kornia.readthedocs.io/en/latest/community/faqs.html), so gradients pass through your image operations. For augmentation, [`AugmentationSequential`](https://kornia.readthedocs.io/en/latest/augmentation.html) applies one random draw to an image and its masks, boxes, and keypoints, so your labels stay in sync.
 
-PaddleOCR does two jobs: [general OCR](https://www.paddleocr.ai/latest/en/version3.x/pipeline_usage/OCR.html) reads text, and document parsing [turns PDFs and document images into Markdown and JSON](https://www.paddleocr.ai/latest/en/index.html) that keep the original structure.
+### FiftyOne
 
-Load and crop images with OpenCV, then pass the NumPy arrays on: [EasyOCR](https://www.jaided.ai/easyocr/tutorial/), [PaddleOCR](https://www.paddleocr.ai/latest/en/version3.x/pipeline_usage/OCR.html), and [Ultralytics](https://docs.ultralytics.com/modes/predict/) all take them as input.
+Pick FiftyOne to curate a dataset and see [where your models succeed and fail](https://docs.voxel51.com/). It works alongside the other picks rather than replacing them: you can [run your Ultralytics models](https://docs.voxel51.com/integrations/ultralytics.html) on a FiftyOne dataset. Evaluate predictions with `evaluate_detections()`, which can record results on every sample.
+
+### pytesseract
+
+Pick pytesseract for clean printed text on a CPU, with the lightest setup. It wraps the Tesseract engine, which you [install separately](https://github.com/madmaze/pytesseract#installation), and `image_to_string()` returns an image's text. Tesseract [works best at 300 DPI or more](https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html), on straight and clean scans, so resize, deskew, and threshold your images with OpenCV first.
+
+### EasyOCR
+
+Pick EasyOCR for the quickest OCR in code already on PyTorch, which it runs on. When scans get hard, reach for PaddleOCR. Create one `easyocr.Reader` for your languages and reuse it, since loading the model [takes time but needs to run only once](https://github.com/JaidedAI/EasyOCR#usage).
+
+### PaddleOCR
+
+Pick PaddleOCR for hard input: rotated, noisy, or low-resolution scans, and Chinese or multilingual text. Its OCR pipeline can [correct rotated and warped pages](https://www.paddleocr.ai/latest/en/version3.x/pipeline_usage/OCR.html) before reading them, and its document parsing turns [PDFs and images into Markdown or JSON](https://github.com/PaddlePaddle/PaddleOCR), tables included. Integrate it through the `PaddleOCR` class, since its docs keep the command line for quick tests.

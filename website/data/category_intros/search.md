@@ -1,21 +1,33 @@
-For document search, pick an engine and its official Python search library. Faiss searches vectors directly in your process.
+Meilisearch is built for the search box in your app, Elasticsearch and OpenSearch for search plus analytics, and each server has its own Python search library.
 
 How to choose:
 
-- A typo-tolerant search bar for your site or app: meilisearch
-- Log analytics and aggregations beyond search: elasticsearch
-- The same under Apache instead of the AGPL, or on Amazon OpenSearch Service: opensearch-py
-- Search over Django models, with a backend you can swap later: django-haystack
-- Similarity search over vectors you hold in NumPy arrays: Faiss
+- A search box in your app or site, typo-tolerant out of the box: meilisearch
+- Search plus analytics on an Elasticsearch server: elasticsearch
+- Search plus analytics on OpenSearch, including Amazon OpenSearch Service: opensearch-py
+- A Django site already built on Haystack: django-haystack
+- Similarity search over vectors, inside your own process: faiss-cpu
 
-Meilisearch is [an open-source search engine](https://github.com/meilisearch/meilisearch-python), and meilisearch is its Python client. Its docs call it [a perfect choice for a typo-tolerant search bar](https://www.meilisearch.com/docs/resources/comparisons/alternatives), built for instant search aimed at end users. Meilisearch [queues writes and processes them asynchronously](https://www.meilisearch.com/docs/capabilities/indexing/tasks_and_batches/async_operations), so after `add_documents()`, the Python quick start [waits for indexing to complete](https://www.meilisearch.com/docs/getting_started/sdks/python) with `client.wait_for_task(task.task_uid)`.
+### Meilisearch
 
-For log analytics and aggregations beyond search, Meilisearch's own docs point you to [Elasticsearch](https://www.meilisearch.com/docs/resources/comparisons/elasticsearch#when-to-choose-elasticsearch) or [OpenSearch](https://www.meilisearch.com/docs/resources/comparisons/opensearch#when-to-choose-opensearch). elasticsearch is Elastic's official Python client. It's [unopinionated and extensible](https://www.elastic.co/docs/reference/elasticsearch/clients/python) and covers the entire Elasticsearch API. Its docs call [the bulk helpers the recommended way to ingest data](https://www.elastic.co/docs/reference/elasticsearch/clients/python/getting-started): unlike calling `client.bulk` yourself, they handle retries and send documents chunk by chunk.
+Pick the meilisearch client when your search runs on Meilisearch, an engine built for [instant search aimed at end users](https://www.meilisearch.com/docs/resources/comparisons/alternatives). Its own comparison pages [point you to Elasticsearch](https://www.meilisearch.com/docs/resources/comparisons/elasticsearch) or OpenSearch when you need analytics beyond search, like logs and metrics. Create a `meilisearch.Client` with your server's URL and key, then [call `add_documents()` on an index](https://github.com/meilisearch/meilisearch-python). Its search is typo-tolerant without configuration: "caorl" still finds "Carol".
 
-OpenSearch is [a fork of Elasticsearch, and all of its software is Apache-licensed](https://opensearch.org/faq/). The Elasticsearch server is available [under the AGPL or source-available licenses](https://www.elastic.co/pricing/faq/licensing). OpenSearch's Python client is opensearch-py, [a fork of elasticsearch-py](https://github.com/opensearch-project/opensearch-py) that [wraps the OpenSearch REST API in Python methods](https://docs.opensearch.org/latest/clients/python-low-level/#low-level-python-client). Use it for any OpenSearch cluster, as OpenSearch's docs [recommend OpenSearch clients for OpenSearch clusters](https://docs.opensearch.org/latest/clients/#legacy-clients). On Amazon OpenSearch Service, [sign requests with `AWSV4SignerAuth`](https://docs.opensearch.org/latest/clients/python-low-level/#connecting-to-amazon-opensearch-service) and your IAM credentials.
+### Elasticsearch
 
-django-haystack gives Django [one API over pluggable search backends](https://django-haystack.readthedocs.io/en/latest/), such as Elasticsearch, so you can switch engines without rewriting your search code. Its FAQ [advises against it](https://django-haystack.readthedocs.io/en/latest/faq.html#when-should-i-not-be-using-haystack) for data that isn't in Django models and for ultra-high volume, since the abstraction costs performance and some engine features. [Create a `SearchIndex` for each model](https://django-haystack.readthedocs.io/en/latest/tutorial.html#creating-searchindexes) you index, in a `search_indexes.py` file in its app. Load your data with [`./manage.py rebuild_index`](https://django-haystack.readthedocs.io/en/latest/tutorial.html#reindex), then keep the index current with a cron job running `update_index`.
+Pick the elasticsearch package when your server is Elasticsearch, a [distributed search and analytics engine](https://www.elastic.co/elasticsearch). Its core client covers the entire Elasticsearch API, and its [DSL module](https://www.elastic.co/docs/reference/elasticsearch/clients/python) lets you write queries and documents as Python classes instead of dicts. For OpenSearch, use opensearch-py instead.
 
-Faiss is a similarity search library, not a database. It [keeps no metadata with the vectors](https://arxiv.org/html/2401.08281#S6.SS1), only integer IDs, so you store your documents elsewhere and look them up by ID. Its [tutorial](https://github.com/facebookresearch/faiss/wiki/Getting-started) builds an index for the vector dimension, adds a float32 NumPy array, and calls `search()` for the nearest neighbors. `IndexFlatL2` returns exact results. To trade some accuracy for speed or memory, [pick an index by RAM and dataset size](https://github.com/facebookresearch/faiss/wiki/Guidelines-to-choose-an-index).
+### OpenSearch
 
-Keep your data in your database, and send the search engine a copy of what people search for. Meilisearch [wasn't designed to be your main data container](https://www.meilisearch.com/docs/capabilities/indexing/advanced/indexing_best_practices#do-not-use-meilisearch-as-your-main-database), and django-haystack's docs call the database [authoritative and the search index non-authoritative](https://django-haystack.readthedocs.io/en/latest/signal_processors.html).
+Pick opensearch-py for an OpenSearch cluster, including Amazon OpenSearch Service. OpenSearch is a [search and analytics suite](https://opensearch.org/about/), and opensearch-py is the client to use there, since the elasticsearch package [refuses any server that isn't Elasticsearch](https://github.com/elastic/elasticsearch-py/blob/main/elasticsearch/_sync/client/_base.py). Rather than sending raw HTTP requests, you [create an `OpenSearch` client](https://docs.opensearch.org/latest/clients/python-low-level/) for your cluster and call its methods. Like the elasticsearch package, it ships [a high-level DSL](https://github.com/opensearch-project/opensearch-py/blob/main/guides/dsl.md) for building queries from Python objects.
+
+### Haystack
+
+Keep django-haystack for a Django site already built on it. Haystack gives Django [one search API over pluggable backends](https://django-haystack.readthedocs.io/en/latest/), so you can switch engines without modifying your code. Its tutorial has you [create a `SearchIndex` for each model](https://django-haystack.readthedocs.io/en/latest/tutorial.html) you want to search, with exactly one field marked `document=True` as the primary field to search in.
+
+### Faiss
+
+Pick Faiss for similarity search over vectors you already have, inside your own process. Its authors [describe it as neither a service nor a database](https://arxiv.org/html/2401.08281). It runs as part of your program and [builds its index in RAM](https://github.com/facebookresearch/faiss/wiki). When vectors need to live on a server next to your documents, Elasticsearch, OpenSearch, and Meilisearch search vectors too, and OpenSearch can [run Faiss as its vector engine](https://docs.opensearch.org/latest/mappings/supported-field-types/knn-methods-engines/). Start with [a flat index](https://github.com/facebookresearch/faiss/wiki/Guidelines-to-choose-an-index), the only kind that guarantees exact results.
+
+### Indexing in batches
+
+Send documents to a search server in batches, not one request each. The elasticsearch package's docs call its bulk helpers [the recommended way to perform bulk ingestion](https://www.elastic.co/docs/reference/elasticsearch/clients/python/getting-started). Meilisearch processes [a single large payload faster](https://www.meilisearch.com/docs/getting_started/good_practices) than many small ones.

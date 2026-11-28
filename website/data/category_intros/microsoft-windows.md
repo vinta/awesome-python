@@ -1,16 +1,24 @@
-On Windows, pywin32 gives Python the Win32 API and COM, from registry keys to Excel. Calling .NET needs a Python Windows library of its own: pythonnet.
+pywin32 lets Python call Windows APIs and drive COM apps like Excel. To use .NET assemblies from Python, load them with Python.NET.
 
 How to choose:
 
-- Win32 API calls, the registry, the event log, or COM automation of apps like Excel: pywin32
-- .NET assemblies from Python, or Python embedded in a .NET app: pythonnet
+- Windows API calls and COM automation: pywin32
+- .NET assemblies from Python, or Python inside a .NET app: pythonnet
 - Several Python versions on one machine, switched per folder: pyenv-win
-- A portable Python that runs from a folder, a network share, or a USB key: WinPython
+- A portable Python that runs from a folder, with nothing installed: winpython
 
-pywin32 provides [access to many of the Windows APIs, including COM](https://github.com/mhammond/pywin32). Install it with `python -m pip install --upgrade pywin32`. Outside a virtual environment, its post-install script sets up COM objects and services. [Never run it inside one](https://github.com/mhammond/pywin32#installing-via-pip). To drive an app over COM, [pass its name to `win32com.client.Dispatch()`](https://mhammond.github.io/pywin32/html/com/win32com/HTML/QuickStartClientCom.html), like `"Excel.Application"`. Then call its methods and set its properties as on any Python object.
+### pywin32
 
-pythonnet [integrates CPython with the .NET runtime](https://pythonnet.github.io/pythonnet/) instead of compiling Python to .NET code, so your existing Python code and C extensions keep working. Install it with `pip install pythonnet`. [Pick the runtime before you import `clr`](https://pythonnet.github.io/pythonnet/python.html#loading-a-runtime), with `load("coreclr")` or the `PYTHONNET_RUNTIME` environment variable, or you get the default one. Then [load each assembly with `clr.AddReference()`](https://pythonnet.github.io/pythonnet/python.html#importing-modules) and import its namespaces like Python packages. It also works the other way, to [embed Python in a .NET app](https://pythonnet.github.io/pythonnet/dotnet.html).
+Pick pywin32 when your Python code needs Windows itself: COM objects, the event log, or other Win32 API calls. Python's own Windows docs [point to it for advanced Windows-specific support](https://docs.python.org/3/using/windows.html#pywin32). To drive an app through COM, pass its name to `win32com.client.Dispatch()`, as [the quick start does with Excel](https://mhammond.github.io/pywin32/html/com/win32com/HTML/QuickStartClientCom.html).
 
-pyenv-win [brings pyenv to Windows](https://github.com/pyenv-win/pyenv-win#introduction), so you get pyenv's commands for switching between Python versions. Install it with [the PowerShell script from its quick start](https://github.com/pyenv-win/pyenv-win#quick-start), then set your default with `pyenv install <version>` and `pyenv global <version>`. In a project folder, [`pyenv local <version>`](https://github.com/pyenv-win/pyenv-win#usage) picks the Python that `python` runs there, with nothing to activate.
+### Python.NET
 
-WinPython is a [portable Python distribution](https://winpython.github.io/). Unzip it anywhere, like a network share or a USB key, and it runs, with nothing installed or written to the registry. Pick a build by [how much comes preinstalled](https://winpython.github.io/#builds): a bare Python you fill yourself, or the scientific stack with Spyder and JupyterLab ready to open. [Add packages with pip or wppm](https://winpython.github.io/#about), then zip the folder and hand it to your students or colleagues.
+Pick Python.NET when your Python code needs a .NET library, or a .NET app needs to run Python. It [runs the CPython engine with a .NET runtime](https://pythonnet.github.io/pythonnet/) instead of compiling Python to .NET code, so your existing Python packages and their C extensions keep working. Load each assembly with [`clr.AddReference()`](https://pythonnet.github.io/pythonnet/python.html), and its namespaces import like Python packages. When a .NET app embeds Python, [restrict its use to trusted code](https://pythonnet.github.io/pythonnet/dotnet.html), since the docs call Python code running under Python.NET unverifiable.
+
+### pyenv-win
+
+Pick pyenv-win to keep several Python versions on one Windows machine and switch between them. It's pyenv ported to Windows. Run `pyenv local` with an installed version in a project folder, and [that version runs whenever you call `python` there](https://github.com/pyenv-win/pyenv-win#usage).
+
+### WinPython
+
+Pick WinPython for a Python that runs from a folder. [Unzip it anywhere](https://winpython.github.io/), like a USB key, and nothing gets installed or written to the registry. It's aimed at scientific, data, and educational work, and its builds range from bare Python with pip to Spyder, JupyterLab, and the scientific stack. Add packages to the folder, then zip it up to hand the same setup to your students or colleagues.

@@ -1,30 +1,48 @@
-I/O-bound or CPU-bound? I/O-bound code wants a Python async library, and asyncio comes built in. CPU-bound work goes to a concurrent.futures process pool.
+Use asyncio for I/O-bound work. concurrent.futures runs CPU-bound work in processes, and libraries with no async support in threads.
 
 How to choose:
 
-- I/O-bound code written with async/await: asyncio
-- CPU-bound work, or blocking calls, in a pool of processes or threads: concurrent.futures
-- Trio-style task groups and cancel scopes on asyncio, or a library that runs on both asyncio and Trio: AnyIO
-- A faster, drop-in event loop for an asyncio app on Linux or macOS: uvloop
-- Structured concurrency from the ground up, with its own libraries: Trio
-- Existing synchronous code, made concurrent without async/await: gevent
-- Network servers and clients with protocols built in, like SSH, mail, and DNS: Twisted
-- Processes you manage yourself, talking through queues and pipes: multiprocessing
+- Many network connections at once, in async/await code: asyncio
+- CPU-bound work, or blocking calls from a library with no async support: concurrent.futures
+- Trio-style structured concurrency in an asyncio app, or a library that runs on both: AnyIO
+- A faster, drop-in event loop for an asyncio app: uvloop
+- New async code built for correctness, on libraries made for Trio: Trio
+- Synchronous code, like a Flask app, made concurrent without async/await: gevent
+- Ready-made SSH, mail, DNS, or IRC protocols, or existing Twisted code: Twisted
+- Processes that pass data to each other while they run: multiprocessing
 
-asyncio is the standard library's way to [write concurrent code with async/await](https://docs.python.org/3/library/asyncio.html), and many async web servers, database drivers, and task queues build on it. Start your program with `asyncio.run()`, [called once as the main entry point](https://docs.python.org/3/library/asyncio-runner.html#asyncio.run). App code should [rarely need the event loop object](https://docs.python.org/3/library/asyncio-eventloop.html) itself. Run related tasks in an `asyncio.TaskGroup`: when one task fails, it [cancels the rest, which `gather()` doesn't](https://docs.python.org/3/library/asyncio-task.html#asyncio.gather). CPU-heavy code holds up every task on the loop, so [run it in another process](https://docs.python.org/3/library/asyncio-dev.html#asyncio-handle-blocking): hand it to a `ProcessPoolExecutor` with `loop.run_in_executor()`.
+### asyncio
 
-concurrent.futures runs callables on threads or processes behind [the same interface](https://docs.python.org/3/library/concurrent.futures.html). `ThreadPoolExecutor` is [for overlapping I/O](https://docs.python.org/3/library/concurrent.futures.html#threadpoolexecutor). For CPU-bound work on a multi-core machine, the threading docs [advise processes](https://docs.python.org/3/library/threading.html) instead, and `ProcessPoolExecutor` runs them for you. It [takes only picklable functions and arguments](https://docs.python.org/3/library/concurrent.futures.html#processpoolexecutor), though. Use either executor [in a `with` block](https://docs.python.org/3/library/concurrent.futures.html#concurrent.futures.Executor.shutdown), which shuts it down and waits for its work to finish.
+Pick asyncio for new I/O-bound code, like a program that holds many network connections at once. Its docs say it's [often a perfect fit for IO-bound and high-level structured network code](https://docs.python.org/3/library/asyncio.html), and many async frameworks build on it, from web servers to database connection libraries. Start your program with [`asyncio.run()`](https://docs.python.org/3/library/asyncio-runner.html#running-an-asyncio-program), its main entry point. Run tasks side by side in a task group: when one fails, [the remaining tasks in the group are cancelled](https://docs.python.org/3/library/asyncio-task.html#task-groups).
 
-AnyIO brings [Trio-like structured concurrency to asyncio](https://anyio.readthedocs.io/en/stable/). Code written against its API runs unmodified on asyncio or Trio, so a library built on it doesn't choose for its users. Its docs see [strong merits in its APIs for applications too](https://anyio.readthedocs.io/en/stable/why.html), starting with cancel scopes for [more predictable cancellation](https://anyio.readthedocs.io/en/stable/why.html#design-problems-with-cancellation). Start with `anyio.run(main)`, which [runs on asyncio unless you pass `backend="trio"`](https://anyio.readthedocs.io/en/stable/basics.html#running-async-programs). Spawn tasks in a [task group](https://anyio.readthedocs.io/en/stable/tasks.html): when one child task raises, the rest are cancelled.
+### concurrent.futures
 
-uvloop is [a drop-in replacement for asyncio's event loop](https://github.com/MagicStack/uvloop), built on libuv. Its README prefers `uvloop.run(main())`, which configures `asyncio.run()` to use uvloop, so the rest of your asyncio code stays the same. uvloop runs on Linux and macOS.
+Pick concurrent.futures for CPU-bound work, and for blocking calls from a library with no async support. Python's docs [recommend processes](https://docs.python.org/3/library/threading.html) to make use of multiple CPU cores, and threads for I/O-bound tasks. Submit CPU-bound work to a `ProcessPoolExecutor`. The thread pool [implements the same interface](https://docs.python.org/3/library/concurrent.futures.html), so moving a job between threads and processes changes one class name. From asyncio code, [hand blocking calls to an executor](https://docs.python.org/3/library/asyncio-dev.html#running-blocking-code) instead of calling them directly, since they stall every other task while they run.
 
-Trio has [an obsessive focus on usability and correctness](https://trio.readthedocs.io/en/stable/). Child tasks run in a nursery, opened with `async with trio.open_nursery()`, and [Trio never discards their exceptions](https://trio.readthedocs.io/en/stable/tutorial.html#okay-let-s-see-something-cool-already). Functions [take no timeout arguments](https://trio.readthedocs.io/en/stable/reference-core.html#blocking-and-non-blocking-methods): you wrap the code in a cancel scope like `trio.move_on_after()`. Trio runs its own event loop, so asyncio functions [don't work inside `trio.run()`](https://trio.readthedocs.io/en/stable/tutorial.html#task-switching-illustrated). Check [the Trio library list](https://trio.readthedocs.io/en/stable/awesome-trio-libraries.html) for what you need first.
+### AnyIO
 
-gevent uses greenlets to give you [a synchronous API on top of an event loop](https://www.gevent.org/intro.html). Its monkey patching swaps the standard library's blocking sockets for cooperative ones, so code that knows nothing about gevent runs concurrently. Most programs should [patch everything with `monkey.patch_all()`](https://www.gevent.org/intro.html#beyond-sockets), and the main module should do it [before any other imports](https://www.gevent.org/api/gevent.monkey.html).
+Pick AnyIO when you want Trio-style structured concurrency without giving up asyncio's libraries, or when you write a library whose users may run either. It [implements Trio-like structured concurrency on top of asyncio](https://anyio.readthedocs.io/en/latest/), and code written against its API runs unmodified on asyncio or Trio. You can adopt it in an existing app bit by bit. Start with [`anyio.run()`](https://anyio.readthedocs.io/en/latest/basics.html#running-async-programs), which runs your program on asyncio unless you ask for Trio.
 
-Twisted is [an event-based framework for internet applications](https://github.com/twisted/twisted) that ships clients and servers for HTTP, SSH, IMAP, POP3, SMTP, DNS, IRC, and XMPP. Write new Twisted code as `async def` coroutines, which its docs [prefer over `inlineCallbacks`](https://docs.twisted.org/en/stable/core/howto/defer-intro.html#inline-callbacks-using-yield), and start one with [`Deferred.fromCoroutine()`](https://docs.twisted.org/en/stable/core/howto/defer-intro.html#coroutines-with-async-await).
+### uvloop
 
-multiprocessing runs work in subprocesses, so it can [use every processor on a machine](https://docs.python.org/3/library/multiprocessing.html#introduction). Its own docs point to `ProcessPoolExecutor` as the higher-level interface for pooled tasks. Reach for multiprocessing when you need what it adds, like killing a running process or passing data through queues and pipes. Its guidelines say to [avoid shared state](https://docs.python.org/3/library/multiprocessing.html#all-start-methods) and keep the data moving between processes small.
+Add uvloop to an asyncio app when you want a faster event loop without changing your code. It's a fast, drop-in replacement for asyncio's built-in event loop. Its README's preferred way to use it is [`uvloop.run()`](https://github.com/MagicStack/uvloop#user-content-using-uvloop).
 
-On an event loop, a blocking call holds up every other task, so push it to a worker thread: asyncio has [`asyncio.to_thread()`](https://docs.python.org/3/library/asyncio-task.html#asyncio.to_thread), AnyIO [`to_thread.run_sync()`](https://anyio.readthedocs.io/en/stable/threads.html), and Trio [`trio.to_thread.run_sync()`](https://trio.readthedocs.io/en/stable/reference-core.html#threads-if-you-must). When multiprocessing or `ProcessPoolExecutor` runs your code in child processes, define its functions in a module. Guard your entry point with `if __name__ == '__main__':` too, so each new process can [import your main module safely](https://docs.python.org/3/library/multiprocessing.html#multiprocessing-safe-main-import).
+### Trio
+
+Pick Trio for new async code when getting concurrency right matters more to you than reusing asyncio libraries. It's built with [an obsessive focus on usability and correctness](https://trio.readthedocs.io/en/latest/). Its tutorial builds on nurseries: tasks started in a [`trio.open_nursery()`](https://trio.readthedocs.io/en/latest/tutorial.html#okay-let-s-see-something-cool-already) block can't outlive it. asyncio libraries don't run under Trio, so you'll build on [libraries that support Trio](https://trio.readthedocs.io/en/latest/awesome-trio-libraries.html). If your code depends on asyncio libraries, pick AnyIO instead.
+
+### gevent
+
+Pick gevent to make synchronous code, like a Flask app, concurrent without rewriting it in async and await. Flask's docs call it [a reliable way to handle numerous, long lived, concurrent connections](https://flask.palletsprojects.com/en/latest/gevent/), with no async def or await anywhere. Call [`gevent.monkey.patch_all()`](https://www.gevent.org/intro.html#beyond-sockets) in the first lines your program runs: it swaps the standard library's blocking calls for cooperative ones, so even modules that know nothing about gevent run concurrently.
+
+### Twisted
+
+Pick Twisted when you need one of its ready-made protocol implementations, or when you already run Twisted code. Its docs cover [Conch for SSH, Mail for SMTP and IMAP, Names for DNS, and Words for IRC and XMPP](https://docs.twisted.org/en/latest/). A Twisted server starts as a [`Protocol`](https://docs.twisted.org/en/latest/core/howto/servers.html#protocols) subclass, whose methods run as events arrive from the network.
+
+### multiprocessing
+
+Use multiprocessing directly when your processes pass data to each other while they run. Start each one as a `Process`, and connect them with [queues or pipes](https://docs.python.org/3/library/multiprocessing.html#exchanging-objects-between-processes). For a plain pool of tasks, its docs [point to concurrent.futures' higher-level interface](https://docs.python.org/3/library/multiprocessing.html#introduction).
+
+### More asyncio libraries
+
+For more asyncio libraries, see [awesome-asyncio](https://github.com/timofurrer/awesome-asyncio).

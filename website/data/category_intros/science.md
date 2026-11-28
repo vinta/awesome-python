@@ -1,44 +1,93 @@
-Underneath most Python scientific computing libraries sits NumPy's array. SciPy adds algorithms on top, and Numba compiles loops that won't vectorize.
+NumPy arrays are the base of Python scientific computing, and SciPy runs the algorithms on them. When a loop won't vectorize, compile it with Numba.
 
 How to choose:
 
-- Arrays and vectorized math: NumPy
-- Optimization, integration, interpolation, and linear algebra: SciPy
+- Arrays and math on whole arrays: NumPy
+- Optimization, integration, interpolation, and other algorithms: SciPy
 - Numeric loops that won't vectorize: Numba
 - Exact, symbolic math: SymPy
-- Regression, time series, and hypothesis tests: statsmodels; causal graphs and Bayesian networks: pgmpy
-- Biological sequences and file formats: Biopython; molecules: RDKit
-- Physical units: Pint; astronomy: Astropy; seismology: ObsPy
-- Bayesian models: PyMC
-- Discrete-event simulations: SimPy; agent-based models: Mesa
+- Estimating and testing statistical models: statsmodels, or pgmpy for causal graphs
+- Molecules: RDKit, or Biopython for biological sequences
+- Physical units: Pint, or Astropy and ObsPy for astronomy and seismology
+- Bayesian models with priors and posteriors: PyMC
+- Processes queuing for shared resources: SimPy, or Mesa for agent-based models
 - Graphs and networks: NetworkX
-- Planar geometry: Shapely
-- Colour science: Colour; math animations: Manim
+- Points, lines, and polygons in a plane: Shapely
+- Colour science conversions: Colour
+- Animated math videos: Manim
 
-NumPy gives you a multidimensional array and fast routines that run on it. Write whole-array expressions instead of Python loops: [vectorization and broadcasting](https://numpy.org/doc/stable/user/whatisnumpy.html#why-is-numpy-fast) push the element-by-element work into compiled C code, and your code reads closer to the math. For random numbers, [create a Generator with `default_rng()`](https://numpy.org/doc/stable/reference/random/index.html#random-quick-start) and call its methods.
+### NumPy
 
-SciPy is [a collection of algorithms built on NumPy](https://docs.scipy.org/doc/scipy/tutorial/index.html), split into subpackages by domain, like `optimize`, `integrate`, `interpolate`, `linalg`, and `stats`. Its docs recommend [using those subpackages as namespaces](https://docs.scipy.org/doc/scipy/reference/index.html#guidelines-for-importing-functions-from-scipy): `from scipy import optimize`, then `optimize.curve_fit()`. For linear algebra, use `scipy.linalg` over `numpy.linalg`. It has everything NumPy's module has and more, and it's [always compiled with BLAS/LAPACK](https://docs.scipy.org/doc/scipy/tutorial/linalg.html#scipy-linalg-vs-numpy-linalg), so it may run faster.
+Start with NumPy: much of the scientific Python software [takes and returns NumPy arrays](https://numpy.org/doc/stable/user/whatisnumpy.html), so you need them even when another library does the work. Write math on whole arrays instead of Python loops. NumPy calls this [vectorization](https://numpy.org/doc/stable/user/whatisnumpy.html#why-is-numpy-fast), and the looping runs in pre-compiled C code behind the scenes.
 
-Numba is a just-in-time compiler that [works best on code that uses NumPy arrays and functions, and loops](https://numba.readthedocs.io/en/stable/user/5minguide.html). NumPy wants vector operations, but Numba is [happy with plain loops](https://numba.readthedocs.io/en/stable/user/performance-tips.html#loops), so it fits the numeric code you can't vectorize. Put `@jit` on the function and [let Numba decide when and how to optimize](https://numba.readthedocs.io/en/stable/user/jit.html#lazy-compilation). Keep pandas out of those functions: Numba doesn't understand it, so that code [runs in the interpreter](https://numba.readthedocs.io/en/stable/user/5minguide.html#will-numba-work-for-my-code) with Numba's overhead on top.
+### SciPy
 
-SymPy does symbolic math: expressions stay [exact, not approximate](https://docs.sympy.org/latest/tutorials/intro-tutorial/intro.html#what-is-symbolic-computation), and it's written entirely in Python. Its best practices keep symbolic and numeric code apart: [model the problem in SymPy, then turn the result into a function with `lambdify()`](https://docs.sympy.org/latest/explanation/best-practices.html#separate-symbolic-and-numeric-code) that runs on NumPy arrays. Define symbols with `symbols()` and [the assumptions you know](https://docs.sympy.org/latest/explanation/best-practices.html#defining-symbols), like `positive=True`, so more expressions simplify. Build expressions from those symbols, [not from strings](https://docs.sympy.org/latest/explanation/best-practices.html#avoid-string-inputs).
+Add SciPy for the algorithms you run on those arrays: it covers [optimization, integration, interpolation, eigenvalue problems, differential equations, and statistics](https://scipy.org/), plus data structures like sparse matrices. Its algorithms live in subpackages such as `optimize`, `integrate`, and `stats`, and its docs say to [import through those namespaces](https://docs.scipy.org/doc/scipy/reference/index.html#guidelines-for-importing-functions-from-scipy), like `from scipy import optimize`, then `optimize.curve_fit()`.
 
-statsmodels [estimates statistical models, runs hypothesis tests, and explores data](https://www.statsmodels.org/stable/index.html), and [most of its results are verified](https://www.statsmodels.org/stable/about.html#testing) against another statistical package. SciPy's stats docs [send regression, linear models, and time series analysis to statsmodels](https://docs.scipy.org/doc/scipy/reference/stats.html), while `scipy.stats` keeps the probability distributions and statistical tests. Write your model as an [R-style formula](https://www.statsmodels.org/stable/example_formulas.html) on a pandas DataFrame, like `smf.ols("y ~ x", data=df).fit()`, and read the fit with `summary()`.
+### Numba
 
-pgmpy does [causal and probabilistic reasoning with graphical models](https://pgmpy.org/). Its [quickstart](https://pgmpy.org/started/quickstart.html) follows the tasks: learn a graph's structure from data, fit the distributions for a graph you know, then query the model for probabilities or causal effects.
+Reach for Numba when a numeric loop won't vectorize, like a step that depends on the one before it. Numba is [designed to be used with NumPy arrays and functions](https://numba.pydata.org/). Its docs say it's [perfectly happy with loops](https://numba.readthedocs.io/en/stable/user/performance-tips.html#loops), so write the loop the plain way, as you would in C. Decorate the function with `@njit`, which compiles it in [nopython mode, the recommended way to use Numba](https://numba.readthedocs.io/en/stable/user/5minguide.html#what-is-object-mode).
 
-Biopython [parses bioinformatics file formats](https://biopython.org/docs/latest/Tutorial/chapter_introduction.html) like FASTA and GenBank, queries online services like NCBI, and gives you a standard sequence class. Read sequence files with `Bio.SeqIO.parse()`, or [`Bio.SeqIO.read()` when a file holds one record](https://biopython.org/docs/latest/Tutorial/chapter_seqio.html#parsing-or-reading-sequences). When you query NCBI through `Bio.Entrez`, [pass your email](https://biopython.org/docs/latest/Tutorial/chapter_entrez.html#entrez-guidelines) so NCBI can contact you if there's a problem. RDKit is a [cheminformatics toolkit with its core in C++](https://www.rdkit.org/docs/Overview.html), for 2D and 3D molecular operations and descriptors for machine learning. To compare molecules, [create a fingerprint generator](https://www.rdkit.org/docs/GettingStartedInPython.html#fingerprinting-and-molecular-similarity) for the fingerprint type you want, the docs' most consistent way to get fingerprints.
+### SymPy
 
-Pint handles [physical quantities](https://pint.readthedocs.io/en/stable/getting/overview.html): a value times a unit, in any numeric type. In a package, [create one `UnitRegistry` in a single place](https://pint.readthedocs.io/en/stable/getting/pint-in-your-projects.html#having-a-shared-registry) and import it everywhere, since quantities from different registries don't mix. Astropy is [a common core package for astronomy](https://www.astropy.org/), with affiliated packages around it. [Import the subpackage you need](https://docs.astropy.org/en/stable/importing_astropy.html#importing-astropy-and-sub-packages), like `from astropy import units as u`, and never import with `*`. ObsPy is [a framework for processing seismological data](https://docs.obspy.org/): `read()` loads [SAC, MiniSEED, and other formats into a Stream](https://docs.obspy.org/tutorial/code_snippets/reading_seismograms.html) of Traces, and its [FDSN client](https://docs.obspy.org/packages/obspy.clients.fdsn.html#basic-fdsn-client-usage) fetches data from data centers.
+Use SymPy for symbolic math, where [expressions are represented exactly](https://docs.sympy.org/latest/tutorials/intro-tutorial/intro.html), not approximately, and variables stay as symbols. Most computer algebra systems invent their own language, while SymPy is [written entirely in Python](https://www.sympy.org/en/index.html) and embeds in your own code as a library. It [isn't designed to work with NumPy arrays](https://docs.sympy.org/latest/explanation/best-practices.html#separate-symbolic-and-numeric-code), so its docs suggest two steps. Define symbols with `symbols()` and model the problem symbolically, then turn the result into a numeric function with `lambdify()` that runs on NumPy arrays.
 
-PyMC [builds Bayesian models with a simple Python API](https://www.pymc.io/welcome.html) and fits them with Markov chain Monte Carlo or variational inference. Declare the variables inside a `with pm.Model():` block, which [adds them to the model for you](https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/pymc_overview.html#model-specification), and let `pm.sample()` pick the samplers. Validate the model with [posterior predictive checks](https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/posterior_predictive.html), and run prior predictive checks too, which its docs call a crucial part of the Bayesian workflow.
+### statsmodels
 
-SimPy runs discrete-event simulations. Each process is a Python generator that [yields events and waits for them](https://simpy.readthedocs.io/en/latest/simpy_intro/basic_concepts.html), and shared resources model congestion points like servers and checkout counters. Request a resource in a `with` block so it's [released for you](https://simpy.readthedocs.io/en/latest/simpy_intro/shared_resources.html#basic-resource-usage). Its docs call it [overkill for fixed-step simulations](https://simpy.readthedocs.io/en/latest/) whose processes don't interact or share resources. Mesa builds [agent-based models](https://mesa.readthedocs.io/latest/) from core components like spatial grids, shows them in the browser, and hands the results to Python's data tools. Its best practices put [the model class in `model.py` and the agents in `agents.py`](https://mesa.readthedocs.io/latest/best-practices.html#model-layout), with an optional browser visualization in `app.py`. Its [DataCollector](https://mesa.readthedocs.io/latest/getting_started.html) collects model-level and agent-level data.
+Pick statsmodels to estimate a statistical model and test it, not only to predict with it. Its FAQ says it [focuses more on the statistics and diagnostics underlying the models](https://www.statsmodels.org/stable/faq.html#what-is-statsmodels) than on cutting-edge predictive models, and its results are tested against existing statistical packages. Fitting typically takes [three steps](https://www.statsmodels.org/stable/gettingstarted.html): describe the model, fit it, and read the results with `summary()`. Write the model as [an R-style formula on a pandas DataFrame](https://www.statsmodels.org/stable/index.html#introduction) through `statsmodels.formula.api`.
 
-NetworkX is for [the creation, manipulation, and study of complex networks](https://networkx.org/documentation/stable/index.html). [Pick the graph class first](https://networkx.org/documentation/stable/reference/introduction.html#graphs): Graph, DiGraph, MultiGraph, or MultiDiGraph. Store numeric edge data under [the `weight` key](https://networkx.org/documentation/stable/reference/introduction.html#nodes-and-edges), which algorithms like Dijkstra's shortest path read by default. Its drawing functions are basic, since its [main goal is graph analysis, not visualization](https://networkx.org/documentation/stable/reference/drawing.html), so export the graph to a dedicated visualization tool.
+### pgmpy
 
-Shapely wraps the GEOS library for [manipulation and analysis of planar geometric objects](https://shapely.readthedocs.io/en/stable/). For many geometries, put them in a NumPy array and call its [vectorized functions instead of a Python loop](https://shapely.readthedocs.io/en/stable/#usage). It doesn't read or write data files or transform coordinate systems. Operations [presume the features sit in the same Cartesian plane](https://shapely.readthedocs.io/en/stable/manual.html), so project your data to a plane before you measure it.
+Pick pgmpy when your question is about cause and effect between variables, modeled as a graph. It covers [the full workflow](https://pgmpy.org/), from learning causal graphs from data to estimating causal effects, running probabilistic inference, and simulating data from fitted models. Its docs start with [learning the graph](https://pgmpy.org/documentation.html), then estimating its conditional probability distributions from data.
 
-Colour provides [algorithms and datasets for colour science](https://colour.readthedocs.io/en/latest/). Manim [generates animations of technical concepts from Python code](https://docs.manim.community/en/stable/). It comes in more than one edition, and the one listed here is [the community-maintained one its docs recommend](https://docs.manim.community/en/stable/faq/installation.html#which-version-should-i-use), especially for beginners. Each animation lives in [the `construct()` method of a `Scene` subclass](https://docs.manim.community/en/stable/tutorials/quickstart.html), with helper functions outside the class.
+### RDKit
 
-Keep your data in NumPy arrays as it moves between most of these libraries. ObsPy already holds each trace's samples in one, and Colour [recommends them as input](https://colour.readthedocs.io/en/latest/basics.html). For results you can reproduce, seed your random numbers: [pass a seed to `default_rng()`](https://numpy.org/doc/stable/reference/random/index.html#random-quick-start) in NumPy, and [give your Mesa model a `seed` argument](https://mesa.readthedocs.io/latest/best-practices.html#randomization).
+Pick RDKit for cheminformatics: it's [a C++ toolkit with Python wrappers](https://www.rdkit.org/docs/Overview.html), covering 2D and 3D molecular operations and descriptor generation for machine learning. Most of what you need is [in `rdkit.Chem`](https://www.rdkit.org/docs/GettingStartedInPython.html): build one molecule with a function like `Chem.MolFromSmiles()`, and read a file of them through a Supplier, like `SDMolSupplier`.
+
+### Biopython
+
+Pick Biopython for computational molecular biology, starting with [parsing bioinformatics files](https://biopython.org/docs/latest/Tutorial/chapter_introduction.html) like FASTA, GenBank, and BLAST output into Python objects. Read sequences with [`Bio.SeqIO.parse()`](https://biopython.org/docs/latest/Tutorial/chapter_seqio.html#parsing-or-reading-sequences), which gives you `SeqRecord` objects one at a time, or with `Bio.SeqIO.read()` when the file holds exactly one record.
+
+### Pint
+
+Pick Pint to carry physical units through your calculations. A quantity is [a number times a unit](https://pint.readthedocs.io/en/stable/getting/overview.html), and arithmetic and unit conversions work on it, as do many NumPy operations. Start by [creating a `UnitRegistry`](https://pint.readthedocs.io/en/stable/getting/tutorial.html), multiply a number by one of its units, as in `42 * ureg.kilometers`, and convert the result with `.to()`.
+
+### Astropy
+
+Pick Astropy for astronomy and astrophysics: it holds [the key functionality and common tools](https://docs.astropy.org/en/stable/) for that work. Most of it lives in subpackages, so [import the one you need](https://docs.astropy.org/en/stable/importing_astropy.html), like `from astropy import units as u`. Then [multiply a value by one of its units](https://docs.astropy.org/en/stable/units/index.html) to get a `Quantity`.
+
+### ObsPy
+
+Pick ObsPy for seismology: it gives you [parsers for common file formats, clients for data centers, and signal processing](https://docs.obspy.org/) for seismic time series. [Load seismograms with `read()`](https://docs.obspy.org/tutorial/code_snippets/reading_seismograms.html), which takes formats like SAC and MiniSEED and returns a `Stream` of `Trace` objects, each holding its samples in a NumPy array.
+
+### PyMC
+
+Pick PyMC to build a Bayesian model and fit it with [algorithms like Markov chain Monte Carlo](https://www.pymc.io/). You write the model [in Python code, not a domain-specific language](https://www.pymc.io/projects/docs/en/stable/learn/core_notebooks/pymc_overview.html), declaring priors and the likelihood inside a `with pm.Model()` block. Then `pm.sample()` draws from the posterior. PyMC integrates with ArviZ, which plots and diagnoses the results.
+
+### SimPy
+
+Pick SimPy when processes wait on limited shared resources, like customers at checkout counters. It's [a process-based discrete-event simulation framework](https://simpy.readthedocs.io/en/stable/), and its docs call it overkill for fixed-step simulations whose processes don't interact with each other or with shared resources. Each process is [a Python generator that yields events](https://simpy.readthedocs.io/en/stable/simpy_intro/basic_concepts.html) to wait for them, and all processes live in one environment.
+
+### Mesa
+
+Pick Mesa for agent-based models, where many agents act and interact in a space. It gives you [built-in components like spatial grids](https://mesa.readthedocs.io/stable/) and a browser-based interface to visualize the model, and you analyze the results with Python's data analysis tools. Most models are [one `Model` class and one or more `Agent` classes](https://mesa.readthedocs.io/stable/overview.html), and each agent's `step()` method says what it does when activated.
+
+### NetworkX
+
+Pick NetworkX to build and analyze graphs: it's for [the creation, manipulation, and study of complex networks](https://networkx.org/documentation/stable/), like social, biological, and infrastructure networks. Create one with `nx.Graph()` and add nodes and edges, where [any hashable object can be a node](https://networkx.org/documentation/stable/reference/introduction.html), like a string or a tuple.
+
+### Shapely
+
+Pick Shapely to analyze points, lines, and polygons in a plane. It [wraps the GEOS geometry library](https://shapely.readthedocs.io/en/stable/), with a Geometry interface for single geometries and NumPy ufuncs that run one operation over a whole array of them. Every operation [presumes your features share one Cartesian plane](https://shapely.readthedocs.io/en/stable/manual.html#coordinate-systems).
+
+### Colour
+
+Pick Colour for colour science: it's [a comprehensive set of algorithms and datasets](https://www.colour-science.org/) for the field. Most objects sit in the `colour` namespace, and [`colour.convert()`](https://colour.readthedocs.io/en/latest/) finds the conversion path between two representations for you, such as from a spectral distribution to sRGB.
+
+### Manim
+
+Pick Manim to animate math in code. This Community Edition is [a fork of Grant Sanderson's original Manim](https://docs.manim.community/en/latest/). Its docs [recommend it especially for beginners](https://docs.manim.community/en/latest/faq/installation.html#which-version-should-i-use), since it's more stable, better tested, and documented. Write each animation in [the `construct()` method of a `Scene` subclass](https://docs.manim.community/en/latest/tutorials/quickstart.html), then render it with the `manim` command.
+
+### More scientific Python libraries
+
+For more scientific Python libraries and resources, see [Python-for-Scientists](https://github.com/TomNicholas/Python-for-Scientists).

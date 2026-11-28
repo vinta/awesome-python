@@ -1,39 +1,63 @@
-Charts for print come from Matplotlib, and interactive web ones from Plotly. Put either Python data visualization library in a Streamlit script for a dashboard.
+Among Python data visualization libraries, Matplotlib draws figures you publish or print, and Plotly interactive charts. Streamlit turns a script into a dashboard.
 
 How to choose:
 
-- Publication figures you control down to the last detail: Matplotlib
-- Interactive charts with little code: Plotly
-- A dashboard or data app from a plain Python script: Streamlit
-- Statistical charts straight from a pandas DataFrame: seaborn
-- Charts you declare by mapping columns to x, y, and color: Vega-Altair
-- Interactive browser plots with full control, or Python code behind them: Bokeh
-- Diagrams of nodes and edges, drawn by Graphviz: graphviz
+- Figures for papers and print, with control over every detail: Matplotlib
+- Interactive charts with hover and zoom, in notebooks or web pages: Plotly
+- A dashboard or data app built from a Python script: Streamlit
+- Statistical plots from a pandas DataFrame in a few lines: seaborn
+- Charts declared as data columns mapped to x, y, and color: Vega-Altair
+- Browser plots with low-level control, or live data on its own server: Bokeh
+- Graphs of nodes and edges, rendered by Graphviz: graphviz
 - Maps of large areas, in the projection you choose: Cartopy
-- A knowledge graph of your codebase for your AI coding assistant: graphify
-- Dashboards built from callbacks and custom layouts: Dash
-- A demo UI for an ML model or any Python function: Gradio
+- A clickable knowledge graph of your codebase, for your coding agent: Graphify
+- A larger analytical app with explicit callbacks, built around Plotly charts: Dash
+- A web demo for an ML model or any Python function: Gradio
 
-Matplotlib [makes easy things easy and hard things possible](https://matplotlib.org/), and it's built for publication-quality plots. Start with `fig, ax = plt.subplots()` and draw on the `Axes` it returns. The docs [suggest this object-oriented style](https://matplotlib.org/stable/users/explain/quick_start.html#coding-styles) for complicated plots and for code you'll reuse. The pyplot style, like `plt.plot()`, is handy for quick interactive work.
+### Matplotlib
 
-Plotly draws interactive charts that show up in Jupyter or [run inside Dash apps](https://plotly.com/python/getting-started/). Start with Plotly Express, the [recommended starting point](https://plotly.com/python/plotly-express/) for most common figures. Every Plotly Express function returns a graph objects `Figure`, so you can still fine-tune it with `update_layout()` and `add_trace()`.
+Pick Matplotlib for figures that go into papers and print, or whenever you need control over every detail of a plot. It's [a comprehensive library for creating static, animated, and interactive visualizations](https://matplotlib.org/), and seaborn and Cartopy both draw on top of it. Its docs suggest [the explicit, object-oriented style](https://matplotlib.org/stable/users/explain/quick_start.html#the-explicit-and-the-implicit-interfaces) for complicated plots and for code you reuse. Create the figure with `fig, ax = plt.subplots()`, then call methods like `ax.plot()` on the Axes. The `pyplot` style is fine for quick interactive work.
 
-Streamlit turns a Python script into a web app: add a few `st.` calls, then run it with `streamlit run`. Whenever something on the screen must update, Streamlit [reruns your entire script from top to bottom](https://docs.streamlit.io/get-started/fundamentals/main-concepts#data-flow). So wrap slow work in a cached function: [`st.cache_data`](https://docs.streamlit.io/develop/concepts/architecture/caching) for data like a loaded DataFrame or a query result, and `st.cache_resource` for ML models and database connections.
+### Plotly
 
-seaborn builds on Matplotlib and [integrates closely with pandas](https://seaborn.pydata.org/tutorial/introduction.html): you name DataFrame columns, and it draws the statistical chart. Its docs [recommend figure-level functions](https://seaborn.pydata.org/tutorial/function_overview.html#relative-merits-of-figure-level-functions) like `displot()` for most plots.
+Pick Plotly for interactive charts with hover tooltips and zoom. It draws [web-based charts that show up in Jupyter notebooks, save as standalone HTML files, or run inside a Dash app](https://plotly.com/python/getting-started/). Start with Plotly Express, which its docs call [the recommended starting point for most common figures](https://plotly.com/python/plotly-express/): one function call per chart, like `px.scatter()`. For figures that are cumbersome in Plotly Express, like [subplots of different types or dual-axis plots](https://plotly.com/python/graph-objects/), build from an empty `graph_objects.Figure` and add traces to it.
 
-Vega-Altair is declarative: you [declare links between data columns and encoding channels](https://altair-viz.github.io/getting_started/overview.html) like the x-axis, y-axis, and color, and it handles the rest.
+### seaborn
 
-Bokeh [creates JavaScript-powered visualizations without writing any JavaScript](https://docs.bokeh.org/en/latest/index.html). Build plots with `figure()` from `bokeh.plotting`, its primary interface. Add the Bokeh server when your plots need to [respond to browser events with Python code](https://docs.bokeh.org/en/latest/docs/user_guide/server/server_introduction.html), like widgets that rerun a query.
+Pick seaborn for statistical plots from a pandas DataFrame in a few lines of code. It [builds on Matplotlib and integrates closely with pandas](https://seaborn.pydata.org/tutorial/introduction.html), and its dataset-oriented API lets you focus on what each part of the plot means rather than how to draw it. Full customization still takes some Matplotlib knowledge. Its docs [recommend the figure-level functions](https://seaborn.pydata.org/tutorial/function_overview.html), like `relplot()` and `displot()`, for most plots.
 
-graphviz writes graphs in the DOT language, and [renders them with Graphviz](https://graphviz.readthedocs.io/en/latest/), which you install separately. Build a `Graph` or `Digraph`, add nodes and edges, then call [`render()`](https://graphviz.readthedocs.io/en/latest/manual.html) to save the DOT source and the rendered file.
+### Vega-Altair
 
-Cartopy draws maps on Matplotlib, and its docs say it's [especially useful for large areas](https://cartopy.readthedocs.io/latest/), where flat-map assumptions break down at the poles and the dateline. [Give the axes a map projection](https://cartopy.readthedocs.io/latest/matplotlib/intro.html), like `plt.axes(projection=ccrs.PlateCarree())`, then add coastlines and your data. Your data's coordinate system is separate from that projection, so [always pass `transform=`](https://cartopy.readthedocs.io/latest/tutorials/understanding_transform.html) when you plot.
+Pick Vega-Altair for the grammar-of-graphics approach. You [declare links between data columns and visual encoding channels](https://altair-viz.github.io/getting_started/overview.html), like the x-axis, y-axis, and color, and Vega-Altair handles the rest of the plot: `alt.Chart(df).mark_point().encode(x=..., y=..., color=...)`. Its docs call the declarative API [deliberately limited compared to the full programmatic APIs](https://altair-viz.github.io/getting_started/project_philosophy.html) of Matplotlib and Bokeh, so reach for one of those when you need that control.
 
-graphify maps your project into a knowledge graph that your AI coding assistant can [query instead of grepping](https://github.com/Graphify-Labs/graphify) through files. Code is parsed locally, with no LLM, and you can click through the graph in a browser.
+### Bokeh
 
-Dash [ties UI elements like dropdowns, sliders, and graphs](https://github.com/plotly/dash) to your Python code, and draws charts with Plotly through `dcc.Graph`. You add interactivity with [callbacks](https://dash.plotly.com/basic-callbacks): functions Dash calls whenever an input changes, to update another component.
+Pick Bokeh for interactive plots in the browser when you want low-level control over how they behave, or live data pushed from Python. [Start with `bokeh.plotting`](https://bokeh.org/) for a first chart, and move to layouts, widgets, and Bokeh models as you build a custom app. A plot saves as a standalone HTML file or embeds in a page, with no Python server. Add the Bokeh server only when the browser needs to [stay in sync with your Python code](https://docs.bokeh.org/en/latest/docs/user_guide/server/server_introduction.html).
 
-Gradio [builds a demo or web app](https://www.gradio.app/guides/quickstart) for an ML model, an API, or any Python function, with no JavaScript or CSS. Start with `gr.Interface`, which takes your function plus its inputs and outputs. Use `gr.ChatInterface` for a chatbot, and `gr.Blocks` when you need your own layout and data flow.
+### graphviz
 
-Pick the chart library and the way you share it separately. Plotly, Vega-Altair, and Bokeh all save interactive charts as standalone HTML files: [`write_html()`](https://plotly.com/python/interactive-html-export/), [`chart.save("chart.html")`](https://altair-viz.github.io/user_guide/saving_charts.html), and [`output_file()`](https://docs.bokeh.org/en/latest/docs/user_guide/intro.html). Streamlit has [chart elements](https://docs.streamlit.io/develop/api-reference/charts) for Matplotlib, Vega-Altair, Plotly, and Graphviz, and Gradio's [`gr.Plot`](https://www.gradio.app/docs/gradio/plot) takes Matplotlib, Plotly, Vega-Altair, and Bokeh figures.
+Pick graphviz to draw graphs of nodes and edges from Python. It's [a simple pure-Python interface](https://graphviz.readthedocs.io/en/stable/manual.html) to the Graphviz software: it writes the graph in the DOT language, and [Graphviz, installed on its own, renders it](https://graphviz.readthedocs.io/en/stable/). Create a `Graph` or `Digraph`, add nodes and edges with `node()` and `edge()`, then call `render()` to save the DOT source and the rendered file.
+
+### Cartopy
+
+Pick Cartopy for maps, especially of large areas, where [Cartesian assumptions break down](https://cartopy.readthedocs.io/stable/). It builds on Matplotlib to make publication quality maps. The core idea is that [your axes' projection is independent of your data's coordinate system](https://cartopy.readthedocs.io/stable/tutorials/understanding_transform.html). Pass `projection=` when you create the axes, and `transform=` to each plotting call to say what coordinates your data uses.
+
+### Graphify
+
+Graphify is a skill for your coding agent. It [maps your project, from code and docs to PDFs, images, and videos, into a knowledge graph](https://github.com/Graphify-Labs/graphify) you can query instead of grepping through files. Its output includes `graph.html`, which opens in any browser so you can click nodes, filter, and search.
+
+### Streamlit
+
+Pick Streamlit for the fastest path from a Python script to a dashboard or data app. Apps are [plain Python, with no frontend or API layer](https://docs.streamlit.io/), and `streamlit run app.py` starts one. Streamlit [reruns your whole script from top to bottom](https://docs.streamlit.io/get-started/fundamentals/main-concepts) whenever a user changes a widget. So you write the app as a script that reads each widget's current value into a variable.
+
+### Dash
+
+Pick Dash when a dashboard grows into a larger analytical app built around Plotly charts, and you want explicit control over what each input updates. Dash [ties dropdowns, sliders, and graphs to your Python code](https://github.com/plotly/dash). Lay out the page from components, then [write callbacks](https://dash.plotly.com/basic-callbacks): functions Dash calls whenever an input component's property changes, to update a property of an output component.
+
+### Gradio
+
+Pick Gradio to put a web demo in front of an ML model or any Python function, where inputs go in and outputs come out. [`gr.Interface` builds the demo](https://gradio.app/guides/quickstart) around your function, from the components you pick for its arguments and return values. Switch to `gr.Blocks` for custom layouts and data flows, or `gr.ChatInterface` for a chatbot.
+
+### Charts inside apps
+
+Streamlit and Gradio don't tie you to one plotting library. Streamlit [shows charts from Vega-Altair, Plotly, and Matplotlib](https://docs.streamlit.io/develop/api-reference/charts), plus Graphviz diagrams. Gradio's [`Plot` component](https://gradio.app/docs/gradio/plot) takes a Matplotlib, Plotly, Vega-Altair, or Bokeh figure.

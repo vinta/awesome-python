@@ -1,27 +1,39 @@
-Letting users log in with Google takes one Python authentication library: django-allauth on Django, which does password sign-up too, or Authlib elsewhere.
+Add accounts and social login to a Django app with django-allauth, and OAuth login to Flask or FastAPI with Authlib. PyJWT signs and verifies JWTs.
 
 How to choose:
 
-- Sign-up, password login, and Google or GitHub login on a Django site: django-allauth
-- Google or GitHub login, OAuth API calls, or an OAuth server outside Django: Authlib
-- Adding OAuth to a web framework or HTTP library you maintain: oauthlib
-- Your own OAuth 2.0 server on Django, or tokens for a Django REST framework API: django-oauth-toolkit
-- Signing and verifying JSON Web Tokens: PyJWT
-- Permissions you grant per object to users and groups: django-guardian
-- Permissions that follow from the object's data, with no extra tables: django-rules
+- Accounts and social login in Django: django-allauth
+- Logging in through an OAuth or OpenID Connect provider from Flask or FastAPI: Authlib
+- Signing and verifying JWTs: PyJWT
+- Adding OAuth support to a framework or HTTP library: oauthlib
+- Issuing OAuth tokens to client apps from Django: django-oauth-toolkit
+- Per-object permissions you grant and query: django-guardian
+- Permissions that follow from your data, like authors editing their own posts: django-rules
 
-django-allauth exists to handle [local and social accounts in one app](https://docs.allauth.org/en/latest/introduction/index.html): a user can sign up with a password or log in with Google. Follow the [quickstart](https://docs.allauth.org/en/latest/installation/quickstart.html): add its authentication backend, apps, and middleware, then include `allauth.urls` under `accounts/`. Its login, logout, and password views can replace the ones in `django.contrib.auth.urls`. Give each OAuth provider its client ID and secret in a [`SocialApp` or the `SOCIALACCOUNT_PROVIDERS` setting](https://docs.allauth.org/en/latest/installation/quickstart.html#post-installation). For a single-page or mobile app, add [`allauth.headless`](https://docs.allauth.org/en/latest/headless/introduction.html).
+### django-allauth
 
-Authlib covers both sides of OAuth 2.0 and OpenID Connect. As a client, it comes in [two kinds](https://docs.authlib.org/en/latest/oauth2/client/index.html): HTTP clients for scripts and service-to-service calls, and web clients that log users in through Flask, Django, Starlette, or FastAPI. For login, [create an `OAuth` registry and `register()` each provider](https://docs.authlib.org/en/latest/oauth2/client/web/index.html). For an OpenID Connect provider like Google, pass its discovery URL as [`server_metadata_url`](https://docs.authlib.org/en/latest/oauth2/client/web/index.html#parsing-id-token), and Authlib reads the other endpoints from it. To [run your own OAuth 2.0 or OpenID Connect provider](https://docs.authlib.org/en/latest/oauth2/authorization-server/index.html), it has server integrations for Flask and Django.
+Pick django-allauth when a Django app needs its own accounts and social login: it handles both in [one integrated app](https://docs.allauth.org/en/latest/introduction/index.html). Its [quickstart](https://docs.allauth.org/en/latest/installation/quickstart.html) has you include `allauth.urls` in your URL patterns. It also covers multi-factor authentication, plus a [headless mode](https://docs.allauth.org/en/latest/headless/introduction.html) for single-page and mobile apps.
 
-PyJWT [encodes and decodes JSON Web Tokens](https://pyjwt.readthedocs.io/en/latest/). Treat every token as untrusted input: [hard-code the `algorithms` you pass to `jwt.decode()`](https://pyjwt.readthedocs.io/en/latest/algorithms.html#specifying-an-algorithm), never read them from the token's own header, and don't mix HS and RS algorithms. For tokens from an OpenID Connect provider, point [`PyJWKClient` at its JWKS endpoint](https://pyjwt.readthedocs.io/en/latest/usage.html#retrieve-rsa-signing-keys-from-a-jwks-endpoint) instead of hard-coding its public keys.
+### Authlib
 
-oauthlib implements OAuth's logic [without assuming a web framework or HTTP request object](https://github.com/oauthlib/oauthlib), so a framework or library maintainer can write a thin layer on top and get OAuth support. Its FAQ says [most people use it indirectly](https://oauthlib.readthedocs.io/en/latest/faq.html#how-do-i-use-oauthlib-with-google-twitter-and-other-providers): django-oauth-toolkit and django-allauth both build on it. To build a provider on it, most of the work is [a `RequestValidator`](https://oauthlib.readthedocs.io/en/latest/oauth2/server.html#implement-a-validator) that maps its checks to your storage.
+Pick Authlib to log users in through an OAuth or OpenID Connect provider from a Flask or FastAPI app. It ships [web client integrations for Flask, Django, Starlette, and FastAPI](https://docs.authlib.org/en/stable/oauth2/client/index.html). They [share one API](https://docs.authlib.org/en/stable/oauth2/client/web/index.html): create an `OAuth()` registry, then call `oauth.register()` once per provider. To run your own provider in Flask, build an [authorization server](https://docs.authlib.org/en/stable/oauth2/authorization-server/index.html) with Authlib.
 
-django-oauth-toolkit is an [OAuth 2.0 authorization server for Django](https://django-oauth-toolkit.readthedocs.io/en/latest/): it issues and manages tokens from your existing project, and can also protect a Django or Django REST framework API. Django REST framework's docs [recommend it for OAuth 2.0](https://www.django-rest-framework.org/api-guide/authentication/#django-oauth-toolkit). [Install it](https://django-oauth-toolkit.readthedocs.io/en/latest/install.html) by adding `oauth2_provider` to `INSTALLED_APPS`, including its URLs under `o/`, and migrating. For an API, [set `OAuth2Authentication`](https://django-oauth-toolkit.readthedocs.io/en/latest/rest-framework/getting_started.html) as Django REST framework's authentication class and guard views with `TokenHasScope`.
+### PyJWT
 
-Django has [a foundation for object permissions but no implementation](https://docs.djangoproject.com/en/stable/topics/auth/customizing/#handling-object-permissions), and django-guardian fills it with an [extra authentication backend](https://django-guardian.readthedocs.io/en/latest/configuration/). Grant a permission on one object with `assign_perm()`, then check it with Django's own [`user.has_perm(perm, obj)`](https://django-guardian.readthedocs.io/en/latest/userguide/checks/). Django REST framework's `DjangoObjectPermissions` [names it as an example backend](https://www.django-rest-framework.org/api-guide/permissions/#djangoobjectpermissions).
+Pick PyJWT to sign and verify JSON Web Tokens: FastAPI's [security tutorial](https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/) uses it. Verify with `jwt.decode()` and an explicit `algorithms` list, which its docs say to [hard-code](https://pyjwt.readthedocs.io/en/latest/algorithms.html) instead of reading it from the token. Also [require the claims](https://pyjwt.readthedocs.io/en/latest/usage.html) you rely on, like `exp` and `iss`.
 
-django-rules gives Django object permissions [without a database](https://github.com/dfunckt/django-rules). A permission is a rule built from predicates, plain functions like `is_book_author(user, book)` that you combine with `|`, `&`, and `~`. Add its [backend to `AUTHENTICATION_BACKENDS`](https://github.com/dfunckt/django-rules#configuring-django), register each permission with `rules.add_perm()`, and check it with `user.has_perm()`. Keep predicates and rules in their own modules, and let [`AutodiscoverRulesConfig` import each app's `rules.py`](https://github.com/dfunckt/django-rules#best-practices) at startup.
+### oauthlib
 
-On either side of OAuth, use PKCE. django-oauth-toolkit's security guide maps [the OAuth security recommendations of RFC 9700](https://django-oauth-toolkit.readthedocs.io/en/latest/security.html) to its settings: PKCE is one, and the implicit and password grants must not be used. Authlib's client [turns PKCE on with `code_challenge_method`](https://docs.authlib.org/en/latest/oauth2/client/web/index.html#oauth-2-0-code-challenge). Also, don't pick JWTs for sessions just because they sound stateless. django-allauth's docs point out that [if a token must stop working at logout, you need state to revoke it](https://docs.allauth.org/en/latest/headless/token-strategies/jwt-tokens.html). JWTs help most when each service checks tokens without asking a central server.
+Pick oauthlib only when you're adding OAuth support to a framework or HTTP library. Its FAQ says [most people use it indirectly](https://oauthlib.readthedocs.io/en/latest/faq.html). django-allauth and Django OAuth Toolkit build on it, and to call an OAuth API from your own code, oauthlib points you to a higher-level library. To write a provider with it, most of the work is [a `RequestValidator`](https://oauthlib.readthedocs.io/en/latest/oauth2/server.html) that you map to your storage.
+
+### Django OAuth Toolkit
+
+Pick Django OAuth Toolkit to issue OAuth 2.0 tokens to client apps from a Django project you already run. It can also [protect a Django or Django REST framework API](https://django-oauth-toolkit.readthedocs.io/en/stable/) as a resource server. To start, its [tutorial](https://django-oauth-toolkit.readthedocs.io/en/stable/tutorial/tutorial_01.html) has you include `oauth2_provider.urls` in your URL patterns.
+
+### django-guardian
+
+Pick django-guardian when you grant permissions on single objects and need to list them later: it stores each grant in the database. Grant one with [`assign_perm()`](https://django-guardian.readthedocs.io/en/stable/userguide/assign/), and fetch the objects a user may access with [`get_objects_for_user()`](https://django-guardian.readthedocs.io/en/stable/api/shortcuts/).
+
+### django-rules
+
+Pick django-rules when permissions follow from your data, like authors editing their own posts. It computes them from predicate functions, [without a database](https://github.com/dfunckt/django-rules): write a check with `@rules.predicate`, then attach it to a permission with `rules.add_perm()`. Like django-guardian, it answers through Django's own `user.has_perm()`.

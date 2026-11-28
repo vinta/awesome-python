@@ -1,14 +1,19 @@
-Sending from Django, you learn no new Python email library API: django-anymail runs send_mail(). Async code sends mail through aiosmtplib.
+Send email from asyncio code with aiosmtplib, and from a Gmail script with yagmail. A Django app that sends through Amazon SES, Mailgun, or Postmark uses Anymail.
 
 How to choose:
 
-- A Django app sending through Amazon SES, Mailgun, Postmark, or another email service: django-anymail
-- A Django app that tracks delivery or receives email through that service: django-anymail
-- Async code talking to an SMTP server: aiosmtplib
-- A script sending from Gmail, or any SMTP account, with attachments: yagmail
+- Sending from asyncio code: aiosmtplib
+- A script that sends from a Gmail account: yagmail
+- A Django app on an email service like Amazon SES or Mailgun: django-anymail
 
-django-anymail extends Django's `django.core.mail` with features email services add, through [one API that doesn't lock your code to one service](https://anymail.dev/en/latest/). [Change Django's email backend to Anymail's backend for your service](https://anymail.dev/en/latest/installation/), and [`send_mail()`, `EmailMessage`, and even `mail_admins()`](https://anymail.dev/en/latest/sending/django_email/) send through it unchanged. Send from a background task, not the view: Anymail calls that a [best practice for sending email from Django](https://anymail.dev/en/latest/tips/transient_errors/), since your views respond faster. To track delivery or receive email, connect the service's webhooks to [Anymail's Django signals](https://anymail.dev/en/latest/sending/tracking/), and [protect them with https and a shared secret](https://anymail.dev/en/latest/tips/securing_webhooks/).
+### aiosmtplib
 
-aiosmtplib is an [async version of smtplib](https://aiosmtplib.readthedocs.io/en/latest/), with similar APIs. Build each message as the standard library's `EmailMessage`, which makes headers easier to work with. Then pass it to the [`send()` coroutine](https://aiosmtplib.readthedocs.io/en/latest/usage.html), which the docs recommend for most use cases.
+Pick aiosmtplib to send mail from asyncio code. It's an [async version of the `smtplib` module, with similar APIs](https://aiosmtplib.readthedocs.io/en/stable/). Its docs [recommend the `send()` coroutine for most use cases](https://aiosmtplib.readthedocs.io/en/stable/usage.html): build an `EmailMessage` and pass it in with your server's hostname and port. Where your server offers TLS from the start of the connection on port 465, [use that](https://aiosmtplib.readthedocs.io/en/stable/encryption.html) over a STARTTLS upgrade.
 
-yagmail aims to make sending email as simple as possible, with Gmail as its default server. Its [contents argument is guessed](https://yagmail.readthedocs.io/en/latest/usage.html#magical-contents) item by item: a path to a local file becomes an attachment, valid HTML becomes HTML, and anything else is text. For Gmail, sign in with an [app password or OAuth2](https://github.com/kootenpv/yagmail).
+### Anymail
+
+Pick Anymail when a Django app sends through a transactional email service and you want what the service's API offers [beyond SMTP](https://docs.djangoproject.com/en/stable/topics/email/#third-party-backends). Set its backend for your service as [its quickstart](https://anymail.dev/en/stable/quickstart/) shows, and Django's `send_mail()` sends through the service's API instead of SMTP. You get tags, metadata, template sends, and delivery events as Django signals, with [code that isn't locked to one service](https://anymail.dev/en/stable/). Tracking and inbound mail arrive through webhooks [open to the internet, so serve them over HTTPS with a webhook secret](https://anymail.dev/en/stable/installation/#configuring-tracking-and-inbound-webhooks).
+
+### yagmail
+
+Pick yagmail for a Gmail script when you'd rather not build the message yourself. Its `send()` takes a list of contents and [guesses what each item is](https://github.com/kootenpv/yagmail#magical-contents): a path to a PDF or image becomes an attachment, and an HTML string becomes HTML. Keep the password out of your script by [registering it in your system keyring](https://yagmail.readthedocs.io/en/latest/setup.html#configuring-credentials), or use [OAuth2 for credentials you can revoke](https://yagmail.readthedocs.io/en/latest/setup.html#using-oauth2). yagmail hands extra keyword arguments to `smtplib`, so pass `context=ssl.create_default_context()` to [verify the server's certificate](https://docs.python.org/3/library/ssl.html#best-defaults) before it logs in.

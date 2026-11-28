@@ -1,14 +1,18 @@
-Of the two Python static site generators here, Pelican builds your blog. Nikola also builds sites that aren't only a blog, and takes Jupyter notebooks as posts.
+Pelican builds a blog or content site from Markdown or reST files. When your posts are Jupyter notebooks, use Nikola, which supports them out of the box.
 
 How to choose:
 
-- A blog: Pelican
-- A site with more than a blog, or no blog at all: Nikola
-- Jupyter notebooks as posts: Nikola
-- Themes written in Mako: Nikola
+- A blog or content site written in Markdown or reST: Pelican
+- Posts written as Jupyter notebooks: Nikola
 
-Pelican splits content into [articles and pages](https://docs.getpelican.com/en/latest/content.html#articles-and-pages): articles are dated, like blog posts, and pages hold content that rarely changes, like an About page. Start a project with [`pelican-quickstart`](https://docs.getpelican.com/en/latest/quickstart.html#create-a-project). Then write each post as a Markdown or reStructuredText file in `content/`, with metadata headers at the top. While you write, [`pelican --autoreload --listen`](https://docs.getpelican.com/en/latest/publish.html#site-generation) rebuilds the site on every change and serves it on localhost. Themes are Jinja2 templates. The default theme is plain HTML without styling, so start from a [community theme](https://docs.getpelican.com/en/latest/themes.html) or write your own. Add features with [plugins you install with pip](https://docs.getpelican.com/en/latest/plugins.html#how-to-use-plugins), which Pelican can discover on its own. It [isn't only for blogs](https://docs.getpelican.com/en/latest/faq.html#is-pelican-only-suitable-for-blogs), though a site without one takes some theme and configuration changes.
+### Pelican
 
-Nikola [started as a blog generator but supports most kinds of sites](https://getnikola.com/handbook.html#what-s-nikola-and-what-can-you-do-with-it). It comes with [batteries included](https://getnikola.com/): comments, tags, archives, feeds, multilingual support, image galleries, and code listings. Out of the box, it takes reStructuredText, Markdown, Jupyter notebooks, and HTML. Create a site with [`nikola init --demo`](https://getnikola.com/getting-started.html#init), which runs a setup wizard. Write each post with [`nikola new_post -e`](https://getnikola.com/getting-started.html#newpost), which adds the metadata headers for you. Posts default to reStructuredText; add `-f markdown` for Markdown. `nikola build` fills the `output` directory, and [`nikola serve --browser`](https://getnikola.com/getting-started.html#serve) opens the site in your browser. For a server that rebuilds on every change, run `nikola auto --browser`. Themes are [Mako or Jinja2 templates](https://getnikola.com/theming.html). For a site with no blog, follow its [guide to building a site that isn't a blog](https://getnikola.com/creating-a-site-not-a-blog-with-nikola.html).
+Pick Pelican for a blog or content site you write in [Markdown or reStructuredText](https://docs.getpelican.com/en/latest/), and pass on it for Nikola when your posts are Jupyter notebooks. It isn't [only for blogs](https://docs.getpelican.com/en/latest/faq.html#is-pelican-only-suitable-for-blogs): a product launch site takes some theme and config changes. Start with [`pelican-quickstart`](https://docs.getpelican.com/en/latest/quickstart.html), which asks a few questions about your site and creates a skeleton project. You write themes in [Jinja](https://docs.getpelican.com/en/latest/themes.html).
 
-Both write plain HTML files: Pelican's output is [easy to host anywhere](https://docs.getpelican.com/en/latest/), and a Nikola site runs [on any web server](https://getnikola.com/). For GitHub Pages, push your Pelican sources and let [a GitHub Actions workflow](https://docs.getpelican.com/en/latest/tips.html#publishing-to-github-pages-using-a-custom-github-actions-workflow) build the site. Nikola's [`nikola github_deploy`](https://getnikola.com/handbook.html#deploying-to-github) builds the site and pushes the output to a `gh-pages` branch. Moving off WordPress works with either: Pelican [imports a WordPress XML export](https://docs.getpelican.com/en/latest/importer.html), and Nikola has [`nikola import_wordpress`](https://getnikola.com/handbook.html#importing-your-wordpress-site-into-nikola).
+### Nikola
+
+Pick Nikola when your posts start as Jupyter notebooks: it supports them [out of the box](https://getnikola.com/features/#input), along with reST, Markdown, and HTML. Start with [`nikola init`](https://getnikola.com/getting-started.html#init), which launches a wizard to configure your site. Builds are incremental, since it [rebuilds only the pages](https://getnikola.com/) that need it, and you write themes in [Mako or Jinja](https://getnikola.com/features/#extending).
+
+### Documentation sites
+
+For a project's documentation, pick a documentation generator from the [Documentation](/categories/documentation/) page.

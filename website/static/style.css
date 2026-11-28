@@ -648,6 +648,20 @@ kbd {
   padding-left: 1.25rem;
 }
 
+.guide-body h3 {
+  color: var(--hero-text);
+  font-family: var(--font-display);
+  font-size: var(--display-sm);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* Extra space above binds each heading to the paragraph below it */
+.guide-body h3:not(:first-child) {
+  margin-block-start: 1.25rem;
+}
+
 .sponsor-band {
   --band-pad: clamp(2.5rem, 5.5vw, 4rem);
   /* The sponsor name's glyphs rise above its line box, so the top gap reads 1rem smaller than the padding */

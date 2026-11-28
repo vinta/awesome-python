@@ -1,41 +1,72 @@
-Python's own argparse covers basic command-line apps. Beyond that, pick Click or Typer as your Python CLI library, and style the output with Rich.
+Pick Typer for a Python CLI if your code uses type hints, or Click for decorated commands. Small scripts need only the built-in argparse.
 
 How to choose:
 
-- Basic command-line app with no dependencies: argparse
-- Nested commands, or subcommands loaded lazily: Click
-- Options declared once as type-hinted function parameters: Typer
-- Help text read from your docstrings: cyclopts
-- Progress bar for a loop: tqdm, or alive-progress for animated bars
-- Colored text, tables, and logs: Rich, or colorama for ANSI colors on Windows
-- ASCII-art banners: pyfiglet
-- Full-screen app in the terminal or a browser: Textual
-- Interactive prompts and REPLs: prompt_toolkit
-- Terminal widgets on an event loop you already run: Urwid
+- A new CLI from functions with type hints: Typer
+- Decorated commands in nested groups, or an existing Click CLI: Click
+- A small script, or no room for a dependency: argparse
+- A type-hinted CLI with each parameter's help in the docstring: Cyclopts
+- Styled output, tables, tracebacks, and log formatting: Rich
+- Progress bars: tqdm around loops and in notebooks, alive-progress for animated long tasks
+- Raw ANSI color codes that must work on Windows: Colorama
+- Banner text in ASCII-art fonts: pyfiglet
+- A full-screen app that also runs in a browser: Textual
+- Interactive prompts with history and autocompletion: prompt_toolkit
+- A lower-level widget set for Unix-like systems: Urwid
 - Full-screen forms and ASCII animations: asciimatics
 
-argparse is in the standard library. Python's docs call it [the recommended choice](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parser) when you have no more specific needs, since it gives you the most out of the box for the least code. It [writes the help and usage messages](https://docs.python.org/3/library/argparse.html) and reports invalid arguments for you. For commands written as decorated functions, the same docs point to Click, and for a CLI that works with static type checking, to Typer.
+### Typer
 
-Click builds a CLI from [commands declared with decorators](https://click.palletsprojects.com/en/stable/quickstart/). You can nest them to any depth, and Click can [load subcommands lazily](https://click.palletsprojects.com/en/stable/) at runtime. It also [reads option values from environment variables](https://click.palletsprojects.com/en/stable/why/) and comes with helpers for ANSI colors, terminal size, and launching editors.
+Pick Typer for a new CLI when your code already uses type hints. Typer [builds on Click's features](https://typer.tiangolo.com/alternatives/#click) but reads arguments and options from your function's typed parameters. Click declares each option in a decorator instead, so you repeat its name next to the variable. Pass a single function to `typer.run()`, or for several commands, [create a `typer.Typer()` app and register each with `@app.command()`](https://typer.tiangolo.com/). The function's docstring [becomes its help text](https://typer.tiangolo.com/tutorial/first-steps/).
 
-Typer builds a CLI from your function signatures: you [declare each argument and option once](https://typer.tiangolo.com/), as a type-hinted function parameter. Write those hints with `Annotated`, which its tutorial [recommends wherever possible](https://typer.tiangolo.com/tutorial/arguments/optional/). Its docs say you get [the best results by pairing it with Rich](https://typer.tiangolo.com/tutorial/printing/): Typer structures the commands and options, and Rich displays the output.
+### Click
 
-cyclopts also builds a CLI from type-hinted functions, but reads the help text from your docstrings. Its docs call that [the preferred way to document a command](https://cyclopts.readthedocs.io/en/latest/commands.html), and reach for `Annotated` with `Parameter` only when you need more control. It follows Python's own argument binding rules, so a parameter can be passed [by position or as a keyword](https://cyclopts.readthedocs.io/en/latest/vs_typer/positional_or_keyword/README.html). It has its own parser, with no Click underneath. Register commands with `@app.command`, and the function to run when no command matches with [`@app.default`](https://cyclopts.readthedocs.io/en/latest/getting_started.html).
+Pick Click when you'd rather declare commands with decorators and compose them into nested groups, or when you're extending a CLI already built on it. Its core is [arbitrary nesting of commands](https://click.palletsprojects.com/en/latest/), with help pages generated for you and subcommands loaded lazily at runtime. [Commands are declared through decorators](https://click.palletsprojects.com/en/latest/quickstart/): `@click.command()` and `@click.option()` on a function, and `@click.group()` for a parent that other commands attach to.
 
-tqdm adds a progress bar to any loop: [wrap the iterable in `tqdm()`](https://github.com/tqdm/tqdm). Import it from `tqdm.auto`, which picks the console bar or the Jupyter widget for you. alive-progress wraps the loop in an [`alive_bar` context manager](https://github.com/rsalmei/alive-progress) instead, with a spinner that speeds up and slows down with your throughput.
+### argparse
 
-Rich writes colored text, tables, Markdown, and syntax-highlighted code to the terminal. Start with its [drop-in `print`](https://rich.readthedocs.io/en/stable/introduction.html), then create [one `Console` at module level](https://rich.readthedocs.io/en/stable/console.html) for the rest of your app. For colored logs, send the logging module's output through [`RichHandler`](https://rich.readthedocs.io/en/stable/logging.html).
+Use argparse for a small script, or wherever you can't add a dependency, since it ships with Python. The Python docs call it [the recommended choice](https://docs.python.org/3/library/optparse.html#choosing-an-argument-parser) for command-line apps when you have no more specific design constraints. Create an `ArgumentParser`, declare each input with `add_argument()`, and `parse_args()` returns them, with [help and usage messages generated automatically](https://docs.python.org/3/library/argparse.html).
 
-colorama makes ANSI escape codes work on Windows and does nothing on other platforms. If that's all you need, call [`just_fix_windows_console()`](https://github.com/tartley/colorama).
+### Cyclopts
 
-pyfiglet is [a full port of FIGlet into pure Python](https://github.com/pwaller/pyfiglet): it renders text in ASCII-art fonts, as in `pyfiglet.figlet_format("text", font="slant")`.
+Pick Cyclopts for a CLI built from type-hinted functions when you want to document each parameter in the docstring. It [generates help pages from docstrings](https://cyclopts.readthedocs.io/en/latest/), down to each entry in the docstring's Parameters section, which shows up next to that option. Pass a function to `cyclopts.run()`, or for more control, create an `App`, register commands with `@app.command`, and use `@app.default` for what runs when no command is given.
 
-Textual apps run in the terminal, and the `textual serve` command from textual-dev [serves them in a browser](https://textual.textualize.io/guide/devtools/). Build one by [subclassing `App`](https://textual.textualize.io/guide/app/), and style its widgets with [CSS](https://textual.textualize.io/guide/CSS/).
+### Rich
 
-prompt_toolkit is for interactive input. It can [replace GNU readline](https://python-prompt-toolkit.readthedocs.io/en/stable/) or build full-screen apps. For a REPL, use a [`PromptSession`](https://python-prompt-toolkit.readthedocs.io/en/stable/pages/asking_for_input.html), which keeps the history for the whole session.
+Pick Rich for styled output: [color and style, tables, Markdown, and syntax-highlighted code](https://rich.readthedocs.io/en/latest/introduction.html). The quickest start is `from rich import print`, a drop-in replacement for the built-in. Add [`RichHandler`](https://rich.readthedocs.io/en/latest/logging.html) to logging to colorize your log output. [Install Rich as the traceback handler](https://rich.readthedocs.io/en/latest/traceback.html) to render uncaught exceptions with highlighting.
 
-Urwid is a [console widget construction set](https://urwid.org/manual/overview.html) rather than a finished UI library. It runs on [your choice of event loop](https://github.com/urwid/urwid): asyncio, or another one you already use. It's [licensed under the LGPL](https://github.com/urwid/urwid/blob/master/COPYING), while Textual and asciimatics use permissive licenses.
+### tqdm
 
-asciimatics does [full-screen text UIs, from interactive forms to ASCII animations](https://github.com/peterbrittain/asciimatics): create a Screen, build a Scene from Effect objects, and let the Screen play it.
+Pick tqdm to put a progress bar on a loop: [wrap any iterable with `tqdm(iterable)`](https://tqdm.github.io/), and you're done. It works in any console and in Jupyter notebooks, which suits data processing and ML loops.
 
-Ship your CLI as an installable package with a `[project.scripts]` entry point, not a file users run with `python`. [Click recommends it](https://click.palletsprojects.com/en/stable/entry-points/), and shell completion in Click and [Typer](https://typer.tiangolo.com/tutorial/package/) works through that entry point. Test your commands in-process: Click and Typer both provide a [`CliRunner`](https://click.palletsprojects.com/en/stable/testing/), and Textual's [`run_test()`](https://textual.textualize.io/guide/testing/) drives your app as if you were using the keyboard and mouse.
+### alive-progress
+
+Pick alive-progress for long-running tasks where you want the bar animated. Its spinner [reacts to your actual processing speed](https://github.com/rsalmei/alive-progress). It also shows throughput and an ETA, and ends with a final receipt. Wrap your loop in `with alive_bar(total) as bar:` and call `bar()` per item.
+
+### Colorama
+
+Keep Colorama for code that writes raw ANSI escape codes and must run on Windows: it [makes those sequences work under MS Windows](https://github.com/tartley/colorama) and does nothing on other platforms. If that's all you need, call `just_fix_windows_console()`. For styling, its own docs point you to a fuller library like Rich, with Colorama only converting the codes. Rich [supports Windows terminals](https://rich.readthedocs.io/en/latest/introduction.html) on its own.
+
+### pyfiglet
+
+Use pyfiglet for banner text. It's [a full port of FIGlet](https://github.com/pwaller/pyfiglet) to pure Python, so it renders text in ASCII-art fonts without running an external program. `pyfiglet.figlet_format("text", font="slant")` returns the rendered string.
+
+### Textual
+
+Pick Textual for a full-screen app with widgets that [runs in the terminal or a web browser](https://textual.textualize.io/), and over SSH. It's built by the makers of Rich. Subclass `App`, build the interface from widgets in [`compose()`](https://textual.textualize.io/tutorial/), and call `run()`. To put it in a browser, [`textual serve`](https://textual.textualize.io/guide/devtools/#serve) turns your terminal app into a web application.
+
+### prompt_toolkit
+
+Pick prompt_toolkit when your CLI asks for input. It's [a pure Python replacement for GNU readline](https://python-prompt-toolkit.readthedocs.io/en/latest/), with syntax highlighting as you type, autocompletion, fish-style suggestions, and Emacs and Vi key bindings. Start with `prompt()`, which works [just like `input()`](https://python-prompt-toolkit.readthedocs.io/en/latest/pages/getting_started.html). For repeated input, use [a `PromptSession`](https://python-prompt-toolkit.readthedocs.io/en/latest/pages/asking_for_input.html), which keeps a history for the session. It also builds [full-screen applications](https://python-prompt-toolkit.readthedocs.io/en/latest/pages/full_screen_apps.html) from a layout and a set of key bindings.
+
+### Urwid
+
+Pick Urwid to assemble a terminal UI from lower-level parts. It handles the tedious parts of using curses directly, and its docs call it [a console widget construction set](https://urwid.org/manual/overview.html) rather than a finished UI library. It's LGPL, unlike the other TUI frameworks listed, and [fully supports Unix-like systems](https://urwid.org/), with limited support on Windows. The tutorial's first app puts a `Text` widget in a `Filler` and runs it with [`urwid.MainLoop(...).run()`](https://urwid.org/tutorial/index.html).
+
+### asciimatics
+
+Pick asciimatics for full-screen forms or ASCII animation effects, like sprites, particle systems, and banners. To animate, [create a `Screen`, put together a `Scene` from `Effect` objects, and have the `Screen` play it](https://asciimatics.readthedocs.io/en/latest/intro.html). Forms use [widgets with strong parallels to web input forms](https://asciimatics.readthedocs.io/en/latest/widgets.html), arranged in a `Layout` inside a `Frame`.
+
+### Installing your CLI as a command
+
+Whichever parser you pick, ship your CLI as an installable package with an entry point, so users run it by name instead of `python hello.py`. Click's docs [recommend it](https://click.palletsprojects.com/en/latest/entry-points/), and Typer's [packaging tutorial](https://typer.tiangolo.com/tutorial/package/) declares the command under `[project.scripts]` in `pyproject.toml`.

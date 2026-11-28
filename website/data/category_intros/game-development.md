@@ -1,20 +1,30 @@
-2D games need a game loop: pygame-ce has you write it; Arcade runs it. Ren'Py is built for visual novels, as Panda3D is for 3D in Python game development.
+Write 2D games in pygame-ce, or in Arcade if you'd rather have the game loop and physics built in. Panda3D builds 3D games, and Ren'Py visual novels.
 
 How to choose:
 
-- A game loop you write and control yourself: pygame-ce
-- A game loop, physics, and screen switching built in: Arcade
+- 2D games where you write the game loop yourself: pygame-ce
+- 2D games with the game loop and physics engines built in: Arcade
 - 3D games, visualizations, and simulations: Panda3D
 - Visual novels and other writing-heavy games: Ren'Py
-- Windowing, OpenGL graphics, and media with no dependencies: pyglet
-- Code already written for pygame: pygame-ce
+- Windowing, input, OpenGL, and sound, with no game engine on top: pyglet
+- Code already built on pygame: pygame
 
-pygame-ce installs as `pygame-ce` and still imports as `pygame`. It [gives you full control of program execution](https://pyga.me/docs/): you write the loop that handles events, draws the frame, and flips the display. pygame-ce is LGPL, which [still allows closed-source and commercial games](https://github.com/pygame-community/pygame-ce); only changes to pygame-ce itself must be released under a compatible license.
+### pygame-ce
 
-Arcade is built on pyglet, and it's [ideal for beginning programmers](https://github.com/pythonarcade/arcade) or anyone who wants 2D games without learning a complex framework. Give each screen its own `arcade.View` subclass that overrides `on_draw()` and `on_update()`, then [hand control to `arcade.run()`](https://api.arcade.academy/en/stable/tutorials/views/index.html). Draw sprites through a `SpriteList`, [the only way to draw a sprite](https://api.arcade.academy/en/stable/programming_guide/performance_tips.html), which batches them for you. For movement and collisions, start with the [built-in physics engines](https://api.arcade.academy/en/stable/api_docs/api/physics_engines.html): a simple one for top-down games, and a platformer one with gravity and moving platforms.
+Pick pygame-ce for a 2D game when you want [complete control of your game loop](https://pyga.me/). It's built on SDL and forked from pygame, and keeps the same `import pygame`. The fork aims for [more frequent releases, continuous bugfixes and enhancements](https://github.com/pygame-community/pygame-ce). Its docs start you on [a basic game loop](https://pyga.me/docs/) that opens the window, handles events, and updates the screen every frame. To move pygame code over, [uninstall pygame before you install pygame-ce](https://github.com/pygame-community/pygame-ce/wiki/Installing-pygame%E2%80%90ce).
 
-Panda3D is a C++ engine scripted in Python, and [its manual says you must be a skilled programmer](https://docs.panda3d.org/latest/python/introduction/index) to use it. Subclass `ShowBase`, which opens the 3D window, and [call `run()` once, as the last line](https://docs.panda3d.org/latest/python/introduction/tutorial/starting-panda3d). A model shows up only once it's [attached to the scene graph](https://docs.panda3d.org/latest/python/programming/scene-graph/index), a tree rooted at `render`.
+### Arcade
 
-To use Ren'Py, you [download it and work in its launcher](https://www.renpy.org/doc/html/quickstart.html), which creates, edits, and runs your projects. Write the story in its script language, and reach for [its screen language and Python](https://www.renpy.org/why.html) when you need custom interfaces or game logic.
+Pick Arcade over pygame-ce when you'd rather have the game loop and [physics engines](https://api.arcade.academy/en/stable/tutorials/platform_tutorial/step_05.html) built in. Its focus [is on education](https://api.arcade.academy/en/stable/about/intro.html), and it's designed to be easy to use and to teach programming concepts. Your game subclasses `arcade.Window`, and Arcade [calls its update method every frame](https://api.arcade.academy/en/stable/tutorials/platform_tutorial/step_04.html).
 
-pyglet is a windowing and multimedia library [with no external dependencies](https://pyglet.readthedocs.io/en/latest/), for games and other visually rich apps. Attach handlers like `on_draw()` with `@window.event` and call `pyglet.app.run()`, since [writing your own event loop is generally not necessary](https://pyglet.readthedocs.io/en/latest/programming_guide/quickstart.html). Draw many sprites in [a `Batch`, which the docs strongly recommend](https://pyglet.readthedocs.io/en/latest/programming_guide/image.html).
+### Panda3D
+
+Panda3D is the pick for [3D games, visualizations, and simulations](https://www.panda3d.org/). Pass on it if you're new to programming: its manual says [you must be a skilled programmer](https://docs.panda3d.org/latest/python/introduction/index#panda3d-is-not-a-beginner-s-tool-or-a-toy). Your app [inherits from `ShowBase`](https://docs.panda3d.org/latest/python/introduction/tutorial/starting-panda3d), which opens the 3D window.
+
+### Ren'Py
+
+Pick Ren'Py for visual novels and other writing-heavy games. It comes with [the features players expect](https://www.renpy.org/why.html#features-players-want) from a visual novel, like saving, rollback, and skipping. Ren'Py isn't a library you pip install: [download it and run its launcher](https://www.renpy.org/doc/html/quickstart.html), which creates and runs your projects. You write the story in Ren'Py's script language, and drop into Python with [the `python` statement](https://www.renpy.org/doc/html/python.html) for complex game logic.
+
+### pyglet
+
+Pick pyglet when you want the layer that [Arcade builds on](https://pyglet.readthedocs.io/en/latest/external_resources.html#arcade): [windowing, input, OpenGL graphics, and sound](https://pyglet.readthedocs.io/en/latest/) for games and other visually rich applications. For most games, it [needs nothing else besides Python](https://pyglet.org/). Start at [Writing a pyglet application](https://pyglet.readthedocs.io/en/latest/programming_guide/quickstart.html), which creates a `pyglet.window.Window` and lets pyglet's event loop call your handlers.

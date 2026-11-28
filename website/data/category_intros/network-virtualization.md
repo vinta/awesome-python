@@ -1,13 +1,20 @@
-Netmiko is where to start with Python network automation libraries; when many vendors need one API, move to NAPALM. Scapy works a layer down, on raw packets.
+For Python network automation, Netmiko sends CLI commands over SSH to many vendors' devices, and NAPALM gives several platforms one API. Scapy crafts raw packets.
 
 How to choose:
 
-- Running show and config commands on devices over SSH: Netmiko
-- Config changes across vendors, with a diff before commit: NAPALM
-- Forging, sending, sniffing, or dissecting packets: Scapy
+- CLI commands over SSH, on many vendors' devices: Netmiko
+- A device NAPALM has no driver for: Netmiko
+- One API across platforms, for device data and config changes: NAPALM
+- Crafting, sending, sniffing, or dissecting packets: Scapy
 
-Netmiko gathers show-command output and makes config changes [across a very broad set of platforms](https://github.com/ktbyers/netmiko#why-netmiko), and spares you most of the low-level regex matching on device prompts. Describe the device in a dict with its `device_type`, host, and credentials, and pass it to `ConnectHandler`, which [picks the right class and opens the SSH connection](https://pynet.twb-tech.com/blog/netmiko-python-library.html). Run show commands with `send_command()`, and config commands with `send_config_set()`, which [enters config mode for you](https://github.com/ktbyers/netmiko#getting-started-1).
+### Netmiko
 
-NAPALM puts [a unified API over different network operating systems](https://napalm.readthedocs.io/en/latest/). Get a driver with `get_network_driver()` and open the device in a `with` block, which [the docs say to stick with for most situations](https://napalm.readthedocs.io/en/latest/tutorials/context_manager.html), since it opens and closes the session for you. To change config, load a candidate that replaces or merges into the running one, check it with `compare_config()`, then [commit or discard it](https://napalm.readthedocs.io/en/latest/tutorials/changing_the_config.html). The docs also say to [test your workflow and try to break things on a lab first](https://napalm.readthedocs.io/en/latest/support/index.html#configuration-support-matrix).
+Pick Netmiko to run show commands and config changes on network devices, across [a very broad set of platforms](https://github.com/ktbyers/netmiko#why-netmiko). It's built on Paramiko and handles the low-level state control, so you write little regex pattern matching yourself. Describe the device in a dict keyed by `device_type` and [pass it to `ConnectHandler`](https://github.com/ktbyers/netmiko#getting-started-1). Then `send_command()` returns what a show command prints, and `send_config_set()` enters config mode and sends your lines.
 
-Scapy [sends, sniffs, dissects, and forges network packets](https://scapy.readthedocs.io/en/latest/introduction.html#about-scapy), as an interactive shell or as a library you import. Build a packet by [stacking layers with the `/` operator](https://scapy.readthedocs.io/en/latest/usage.html#stacking-layers), like `IP()/TCP()`, and override only the fields whose defaults you don't want. [Sending packets needs root privileges](https://scapy.readthedocs.io/en/latest/usage.html#starting-scapy), so start the shell with `sudo scapy`.
+### NAPALM
+
+Pick NAPALM when you manage several network platforms and want [a unified API](https://napalm.readthedocs.io/en/latest/) for all of them. It covers fewer devices than Netmiko, though. Load the driver for your platform with `get_network_driver()`. Each getter returns the dictionary [the `NetworkDriver` base class documents](https://napalm.readthedocs.io/en/latest/base.html#napalm.base.base.NetworkDriver.get_facts), so `get_facts()` gives the same keys on each core platform. Config changes follow one workflow: load a candidate that [replaces the config entirely or merges into it](https://napalm.readthedocs.io/en/latest/tutorials/changing_the_config.html), check the diff with `compare_config()`, then commit or discard it. To undo a commit, call `rollback()`. Before you deploy config this way, NAPALM's docs say to [try to break things on a lab first](https://napalm.readthedocs.io/en/latest/support/index.html#configuration-support-matrix).
+
+### Scapy
+
+Pick Scapy when you work with the packets themselves rather than a device's CLI or API. It [sends, sniffs, dissects, and forges network packets](https://scapy.readthedocs.io/en/latest/introduction.html#about-scapy), from its interactive shell or as a library. You build a packet by stacking layers, like `IP(dst="10.0.0.1")/ICMP()`. Each field has a default you can override. A reply comes back as the whole decoded packet instead of a verdict like "port closed". So you can probe once and read the answers many ways. To use it in your own tool, [import what you need from `scapy.all`](https://scapy.readthedocs.io/en/latest/extending.html#using-scapy-in-your-tools) and call a function like `sr1()`, which sends a packet and returns its reply.

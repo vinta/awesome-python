@@ -1,21 +1,33 @@
-If a Python algorithms library has to run in production, Sorted Containers gives you sorted lists, dicts, and sets. To learn, read The Algorithms - Python.
+Install Sorted Containers to keep a list, dict, or set sorted as it changes. To learn how an algorithm works, read The Algorithms - Python or the algorithms package.
 
 How to choose:
 
-- Lists, dicts, and sets that stay sorted as you add and remove: Sorted Containers
-- Small, typed implementations you can install and read: algorithms
-- Algorithm code to study, browsed by topic: The Algorithms - Python
-- How classic design patterns look in Python, and which ones to skip: python-patterns
-- Workflows as states and transitions, up to full statecharts: python-statemachine
+- A list, dict, or set that stays sorted as you add and remove items: sortedcontainers
+- Algorithms to read, browsed by topic, written for education: thealgorithms
+- Algorithms to study that you can also import and run: algorithms
+- Design patterns, and which ones to skip in Python: python-patterns
+- A workflow of states and transitions, like an order's: python-statemachine
 
-Python's standard library [is great until you need a sorted collections type](https://grantjenks.com/docs/sortedcontainers/), and Sorted Containers fills that gap in pure Python, as fast as C extensions. SortedList keeps its values in order as you `add()` them, SortedDict is [a dict that keeps a sorted list of its keys](https://grantjenks.com/docs/sortedcontainers/introduction.html#sorted-dict), and SortedSet does the same for a set.
+### Sorted Containers
 
-algorithms collects [minimal, clean, and well-documented implementations](https://github.com/keon/algorithms) of data structures and algorithms. Each file stands alone, with docstrings, type hints, and complexity notes, and its README says they're designed to be read and learned from. Install it with `pip install algorithms`, then [import an implementation by topic](https://github.com/keon/algorithms#quick-start), like a sort or a graph search.
+Pick Sorted Containers when a list, dict, or set has to stay sorted while you add and remove items. Its docs explain that one long list kept sorted with the standard library's `bisect.insort()` [gets slow as it grows](https://grantjenks.com/docs/sortedcontainers/implementation.html), which Sorted Containers avoids. They also describe priority queues that needed more than heapq's add and pop: [membership tests, removal, and sorted iteration](https://grantjenks.com/docs/sortedcontainers/performance-workload.html). Pick `SortedList`, `SortedDict`, or `SortedSet`. [Add values to a `SortedList` with `add()`](https://grantjenks.com/docs/sortedcontainers/introduction.html) instead of `append()` or `insert()`, since the list decides each value's position.
 
-The Algorithms - Python implements algorithms [for education](https://github.com/TheAlgorithms/Python), and its README says they may be less efficient than the standard library's own: read them to learn, not to ship. Start from [its directory](https://github.com/TheAlgorithms/Python/blob/master/DIRECTORY.md), which sorts them by topic. Its contributing guide asks each algorithm to [carry type hints and doctests](https://github.com/TheAlgorithms/Python/blob/master/CONTRIBUTING.md#what-is-an-algorithm) that test both valid and erroneous input, so the doctests show you how it behaves.
+### The Algorithms - Python
 
-python-patterns is [a collection of design patterns and idioms](https://github.com/faif/python-patterns) in Python, one file per pattern, grouped as creational, structural, behavioral, and more. Its README asks you to pay more attention to why you choose a pattern than to how you implement it. It also lists the patterns [not recommended in Python](https://github.com/faif/python-patterns#-anti-patterns): skip a Singleton class, since modules are already singletons, and prefer composition and delegation over deep inheritance.
+Read The Algorithms - Python to see how a known algorithm works. Its README says the implementations are [for learning purposes only](https://github.com/TheAlgorithms/Python). Browse them on GitHub, starting from [its directory](https://github.com/TheAlgorithms/Python/blob/master/DIRECTORY.md), which lists the algorithms by topic.
 
-python-statemachine builds [flat state machines or full statecharts](https://python-statemachine.readthedocs.io/en/latest/) with compound states, parallel regions, and history, in sync and async code. Declare states as class attributes and transitions with `state.to(target)`, and the [events are the names you assign them to](https://python-statemachine.readthedocs.io/en/latest/tutorial.html#your-first-state-machine).
+### algorithms
 
-Before you hand-write python-patterns' State pattern for a real workflow, read python-statemachine's guide [for coming from the State pattern](https://python-statemachine.readthedocs.io/en/latest/how-to/coming_from_state_pattern.html). The whole workflow sits in one class body, and unreachable states fail when the class is defined, not at runtime. For more places to learn and practice algorithms, see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms).
+Pick the algorithms package over The Algorithms - Python when you want to run what you study. Its README says each file is [self-contained with docstrings, type hints, and complexity notes](https://github.com/keon/algorithms), designed to be read and learned from. After `pip install algorithms`, import by topic, like `merge_sort` from `algorithms.sorting` or `dijkstra` from `algorithms.graph`.
+
+### python-patterns
+
+Read python-patterns to learn a design pattern and decide whether your code needs it. Its README says [why you choose a pattern matters more than how you implement it](https://github.com/faif/python-patterns), and each pattern is one file you read on GitHub. Its [Anti-Patterns section](https://github.com/faif/python-patterns#-anti-patterns) lists patterns not recommended in Python: instead of a Singleton class, use a module-level variable, since every module is imported only once.
+
+### python-statemachine
+
+Pick python-statemachine when an object moves through states, like an order going from pending to ready, and you'd rather declare the workflow than hand-write the State pattern. Its guide for developers [coming from the State pattern](https://python-statemachine.readthedocs.io/en/latest/how-to/coming_from_state_pattern.html) trades one class per state, with transitions scattered across them, for one class body that shows the whole workflow. Unreachable states and missing transitions get caught before the machine runs. In [its tutorial](https://python-statemachine.readthedocs.io/en/latest/tutorial.html), states are class attributes, transitions come from `state.to(target)`, and events are the names you assign them to.
+
+### More algorithm resources
+
+For more places to learn and practice algorithms, see [awesome-algorithms](https://github.com/tayllan/awesome-algorithms).

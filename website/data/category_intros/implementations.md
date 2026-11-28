@@ -1,21 +1,30 @@
-Unless you need MicroPython on a microcontroller or Pyodide in the browser, CPython is the Python implementation to run. Cython compiles your slow code to C.
+CPython is the default Python implementation. Switch to PyPy for long-running pure-Python code, MicroPython for microcontrollers, or Pyodide for the browser.
 
 How to choose:
 
-- Most projects: CPython
-- Microcontrollers and other constrained devices: MicroPython
-- Python in the browser or Node.js: Pyodide
-- Slow code to compile, or a C library to wrap: Cython
-- Long-running programs in pure Python: PyPy
+- Most projects, and the widest support for packages: CPython
+- A long-running program that spends its time in Python code, not C libraries: PyPy
+- Python on a microcontroller: MicroPython
+- Python in a web page or Node.js, with packages from PyPI: Pyodide
+- A lean web page that needs no packages from PyPI: MicroPython
+- Compiling hot functions, or wrapping a C library, while staying on CPython: Cython
 
-CPython is the [original and most-maintained implementation](https://docs.python.org/3/reference/introduction.html#alternate-implementations) of Python, written in C, and new language features generally show up there first. Give each app its own [virtual environment](https://docs.python.org/3/installing/index.html) from venv, and install packages into it with pip.
+### CPython
 
-MicroPython is a lean implementation of Python 3, [optimized to run on microcontrollers](https://micropython.org/) and in constrained environments. It includes a small subset of the standard library, plus modules like `machine` for the hardware. Flash your board with firmware from [the download page](https://micropython.org/download/), then manage it from your computer with [mpremote](https://docs.micropython.org/en/latest/reference/mpremote.html). `mpremote mip install` [installs packages](https://docs.micropython.org/en/latest/reference/packages.html#installing-packages-with-mpremote) from micropython-lib by default, not PyPI. When RAM runs short, [freeze the modules that rarely change](https://docs.micropython.org/en/latest/reference/packages.html#freezing-packages) into the firmware.
+Stay on CPython unless your code needs what another implementation is built for. It's [the original and most-maintained implementation of Python](https://docs.python.org/3/reference/introduction.html#alternate-implementations), and new language features generally appear there first. Compiled packages are written for it too: [the C extension interface is specific to CPython](https://docs.python.org/3/extending/index.html).
 
-Pyodide is [a port of CPython to WebAssembly](https://pyodide.org/en/stable/) that runs in the browser and Node.js. It installs any pure Python wheel from PyPI, and many packages with C extensions, like NumPy and pandas, have been ported for it. Install packages with [`micropip.install()`](https://pyodide.org/en/stable/usage/loading-packages.html#how-to-chose-between-micropip-install-and-pyodide-loadpackage), which its docs recommend for almost everything. In a web page, run Pyodide [in a web worker](https://pyodide.org/en/stable/usage/webworker.html), so long computations don't freeze your UI.
+### PyPy
 
-Cython isn't a separate interpreter: it [translates Python code to C](https://cython.readthedocs.io/en/latest/src/quickstart/overview.html) that runs inside CPython, to speed up slow code or wrap C libraries. Write your code in [pure Python syntax](https://cython.readthedocs.io/en/latest/src/tutorial/pure.html) to keep the file runnable by the plain interpreter, and use `.pyx` files for what that syntax can't express. The annotation report from `cython -a` shows [where types help](https://cython.readthedocs.io/en/latest/src/quickstart/cythonize.html#determining-where-to-add-types). Build your package with [a build backend](https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#compiling-with-a-build-backend), and ship [prebuilt wheels](https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#compiling-with-pyximport) to your users.
+Pick PyPy for a long-running program that spends much of its time in Python code rather than in C libraries. That's [where PyPy works best](https://pypy.org/features.html#speed), since its JIT compiler needs a few seconds to warm up. It replaces CPython, and [pure Python code works](https://pypy.org/compat.html#tl-dr) on it. Extension modules are [the most likely stumbling block](https://doc.pypy.org/faq.html#is-pypy-a-drop-in-replacement-for-cpython), and they often run much slower than on CPython, so check the dependencies that use C extensions before you switch. Then benchmark your real program, since PyPy's FAQ warns that [your tests are not a benchmark](https://doc.pypy.org/faq.html#how-fast-is-pypy).
 
-PyPy is a replacement for CPython, and speed is the reason to use it. It works best on [long-running programs that spend much of their time in Python code](https://pypy.org/features.html#speed), not on short scripts. Code built on C extension modules is a poor fit, since they [often run much slower on PyPy than on CPython](https://doc.pypy.org/faq.html#do-c-extension-modules-work-with-pypy). Packages installed for CPython aren't available to PyPy, so [install them for PyPy](https://doc.pypy.org/faq.html#module-xyz-does-not-work-with-pypy-importerror) in its own virtual environment with `pypy -m pip`.
+### MicroPython
 
-Before you switch implementations or compile anything for speed, [measure first](https://pypy.org/performance.html#profiling-vmprof) to confirm the slowdown is real. Then profile to find the slow parts, and only optimize those.
+Pick MicroPython to run Python on a microcontroller. It's [optimised for microcontrollers and constrained environments](https://micropython.org/), with a small subset of the standard library and modules such as `machine` for talking to the hardware. Since it's a subset, its docs list [where it differs from CPython](https://docs.micropython.org/en/latest/genrst/index.html). Start by flashing [the firmware for your board](https://micropython.org/download/). Packages come through mip, which [uses micropython-lib as its index by default, not PyPI](https://docs.micropython.org/en/latest/reference/packages.html).
+
+### Pyodide
+
+Pick Pyodide to run Python in a web page or Node.js with packages from PyPI. It's [a port of CPython to WebAssembly](https://pyodide.org/en/stable/#what-is-pyodide). It installs any pure Python package with a wheel on PyPI, plus many ported packages with C extensions, like NumPy and pandas. For a lean page that needs none of those, MicroPython [also runs in the web browser](https://www.python.org/download/alternatives/). In a page, [load pyodide.js and call `loadPyodide()`](https://pyodide.org/en/stable/usage/index.html#web-browsers).
+
+### Cython
+
+Pick Cython to speed up the hot spots profiling finds while staying on CPython, or to [wrap a C library](https://cython.org/). PyPy swaps the interpreter without a rewrite. Cython instead compiles your Python to C extension modules that [run within the CPython runtime](https://cython.readthedocs.io/en/stable/src/quickstart/overview.html), so your other compiled packages keep working. The Python Packaging User Guide [lists both](https://packaging.python.org/en/latest/guides/packaging-binary-extensions/#alternatives-to-handcoded-accelerator-modules) as alternatives to writing C by hand. You don't need to add types everywhere: in Cython's words, [a few types in the right spots go a long way](https://cython.readthedocs.io/en/stable/src/quickstart/cythonize.html). To compile a single file, run `cythonize`.

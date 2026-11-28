@@ -1,15 +1,23 @@
-Audit your dependencies for known vulnerabilities as part of Python supply chain security. A uv project has uv audit built in; other projects run pip-audit.
+If uv locks your Python dependencies, uv audit checks them for known vulnerabilities; otherwise run pip-audit. Betterleaks catches secrets in your git history.
 
 How to choose:
 
-- A project managed by uv: uv audit
-- Environments, requirements files, and projects outside uv: pip-audit
-- Leaked secrets in a repo's history or files: Betterleaks
+- A project with a uv.lock: uv audit
+- Requirements files or an installed environment: pip-audit
+- Secrets in your git history or staged changes: betterleaks
 
-`uv audit` comes with uv. Run it in your project, and it [audits the project's dependencies](https://docs.astral.sh/uv/reference/cli/#uv-audit) for known vulnerabilities and for statuses like deprecation and quarantine. By default, it covers every extra and dependency group.
+### uv audit
 
-pip-audit [scans Python environments for packages with known vulnerabilities](https://github.com/pypa/pip-audit), using the Python Packaging Advisory Database. Run `pip-audit` for the current environment, `pip-audit -r requirements.txt` for a requirements file, or `pip-audit .` for a local project. In CI, run it with its [official GitHub Action](https://github.com/pypa/pip-audit#github-actions). Only audit a requirements file you would install, since `pip-audit -r` is [functionally equivalent to `pip install -r`](https://github.com/pypa/pip-audit#security-model).
+Pick uv audit when uv manages your project: it works from the lockfile uv already keeps, so you need no separate tool. Run [`uv audit`](https://docs.astral.sh/uv/reference/cli/#uv-audit) in your project to check its locked dependencies against OSV.
 
-Betterleaks [scans git history, directories, and files for leaked secrets](https://github.com/betterleaks/betterleaks). Install it with Homebrew, Docker, or `go install`, then run `betterleaks git .` to scan your repository's full history. To catch a secret before it lands in a commit, add its [pre-commit hook](https://github.com/betterleaks/betterleaks/blob/main/docs/scanning.md#git), which scans staged changes and redacts the secrets it reports.
+### pip-audit
 
-Also control what gets installed, since an audit only finds vulnerabilities someone has already reported. For requirements files, pip's docs recommend [hash-checking mode](https://pip.pypa.io/en/stable/topics/secure-installs/) to protect against remote tampering. In a uv project, uv's docs suggest a [dependency cooldown](https://docs.astral.sh/uv/concepts/resolution/#dependency-cooldowns), which holds back new releases until the community has had a chance to vet them.
+Pick pip-audit when uv doesn't lock your dependencies: it audits requirements files and installed environments. It's a PyPA project, and it checks the Python Packaging Advisory Database by default, with OSV as an option. Run [`pip-audit`](https://github.com/pypa/pip-audit#examples) inside your virtual environment to audit what's installed.
+
+### Betterleaks
+
+Pick Betterleaks to catch secrets before they get committed, and to find the ones already [in your git history](https://github.com/betterleaks/betterleaks/blob/main/docs/scanning.md#git). It comes from [Gitleaks' original author](https://github.com/betterleaks/betterleaks). It's written in Go, so in a Python project, run it from its [pre-commit hook](https://github.com/betterleaks/betterleaks/blob/main/.pre-commit-hooks.yaml), which scans your staged changes before each commit.
+
+### What audits miss
+
+Both audit tools look up known vulnerabilities, so neither one is a malware scanner: pip-audit's docs say you [must not assume it defends you against malicious packages](https://github.com/pypa/pip-audit#security-model). uv's docs also call [dependency cooldowns](https://docs.astral.sh/uv/concepts/resolution/#dependency-cooldowns) a good way to improve your security posture. A cooldown holds back versions newer than a set age, so the community has time to vet a release before you install it.
