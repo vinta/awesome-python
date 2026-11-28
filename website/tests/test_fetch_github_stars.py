@@ -264,14 +264,11 @@ class TestMainSkipsFreshCache:
         mock_client.post.assert_called_once()
 
 
-class TestMainOnHttpError:
-    """Verify what main() leaves on disk when a batch fails with an HTTP error."""
+class TestMainOnFailedFetch:
+    """Verify what main() leaves on disk when a batch fails."""
 
-    def _run_with_502(self, tmp_path, monkeypatch, cache):
+    def _run(self, tmp_path, monkeypatch, cache, response):
         from unittest.mock import MagicMock
-
-        import httpx2
-        import pytest
 
         from fetch_github_stars import main
 
@@ -287,26 +284,45 @@ class TestMainOnHttpError:
         monkeypatch.setattr("fetch_github_stars.DATA_DIR", data_dir)
         monkeypatch.setenv("GITHUB_TOKEN", "fake-token")
 
-        request = httpx2.Request("POST", "https://api.github.com/graphql")
-        mock_response = MagicMock()
-        mock_response.raise_for_status.side_effect = httpx2.HTTPStatusError("Bad Gateway", request=request, response=httpx2.Response(502, request=request))
         mock_client = MagicMock()
         mock_client.__enter__ = MagicMock(return_value=mock_client)
         mock_client.__exit__ = MagicMock(return_value=False)
-        mock_client.post.return_value = mock_response
+        mock_client.post.return_value = response
         monkeypatch.setattr("fetch_github_stars.httpx2.Client", lambda **kwargs: mock_client)
 
-        with pytest.raises(SystemExit) as exc:
+        try:
             main()
-        assert exc.value.code == 1
-        return cache_file
+        except SystemExit as exc:
+            return cache_file, exc.code
+        return cache_file, 0
+
+    def _http_502(self):
+        from unittest.mock import MagicMock
+
+        import httpx2
+
+        request = httpx2.Request("POST", "https://api.github.com/graphql")
+        response = MagicMock()
+        response.raise_for_status.side_effect = httpx2.HTTPStatusError("Bad Gateway", request=request, response=httpx2.Response(502, request=request))
+        return response
 
     def test_writes_no_cache_file_when_nothing_was_fetched(self, tmp_path, monkeypatch):
         # An empty {} would pass the deploy workflow's "star data exists" check and ship a site with no stars
-        cache_file = self._run_with_502(tmp_path, monkeypatch, cache=None)
+        cache_file, code = self._run(tmp_path, monkeypatch, cache=None, response=self._http_502())
+        assert code == 1
+        assert not cache_file.exists()
+
+    def test_writes_no_cache_file_when_response_has_no_data(self, tmp_path, monkeypatch):
+        from unittest.mock import MagicMock
+
+        # GraphQL reports some failures, such as a primary rate limit, as a 200 with only an errors array
+        response = MagicMock()
+        response.json.return_value = {"errors": [{"type": "RATE_LIMITED", "message": "API rate limit exceeded"}]}
+        cache_file, _ = self._run(tmp_path, monkeypatch, cache=None, response=response)
         assert not cache_file.exists()
 
     def test_keeps_a_restored_cache(self, tmp_path, monkeypatch):
         restored = {"psf/requests": {"stars": 52000, "owner": "psf", "last_commit_at": "2025-01-01T00:00:00+00:00", "fetched_at": "2025-01-01T00:00:00+00:00"}}
-        cache_file = self._run_with_502(tmp_path, monkeypatch, cache=restored)
+        cache_file, code = self._run(tmp_path, monkeypatch, cache=restored, response=self._http_502())
+        assert code == 1
         assert json.loads(cache_file.read_text(encoding="utf-8")) == restored

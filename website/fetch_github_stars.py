@@ -44,6 +44,9 @@ def extract_github_repos(text: str) -> set[str]:
 
 def save_cache(cache: dict) -> None:
     """Write the star cache to disk, creating data/ dir if needed."""
+    # An empty file would pass the deploy's "star data exists" check and ship a site without stars
+    if not cache:
+        return
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     CACHE_FILE.write_text(
         json.dumps(cache, indent=2, ensure_ascii=False) + "\n",
@@ -157,10 +160,8 @@ def main() -> None:
                 if e.response.status_code == 401:
                     print("Error: Invalid GITHUB_TOKEN.", file=sys.stderr)
                     sys.exit(1)
-                # An empty file would pass the deploy's "star data exists" check and ship a site without stars
-                if cache:
-                    print("Saving partial cache and exiting.", file=sys.stderr)
-                    save_cache(cache)
+                print("Saving partial cache and exiting.", file=sys.stderr)
+                save_cache(cache)
                 sys.exit(1)
 
             for repo in batch:
