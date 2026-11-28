@@ -592,6 +592,8 @@ kbd {
   border-radius: 0.4rem;
   background: var(--hero-line);
   color: var(--hero-text);
+  /* "anywhere" also shrinks min-content, so long code can't widen the grid past a phone screen */
+  overflow-wrap: anywhere;
 }
 
 .jump-links {
