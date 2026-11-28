@@ -10,7 +10,7 @@ How to choose:
 - Translating an app, or formatting numbers and dates for a locale: Babel
 - Syntax highlighting for source code: Pygments
 - A grammar of your own: pyparsing to pull data from well-formatted text, parsy for a small language
-- Splitting and formatting SQL: sqlparse
+- SQL: sqlparse to split and format it, SQLGlot to translate it between dialects
 - Phone numbers: phonenumbers
 - URL slugs: python-slugify, or Unidecode for plain ASCII text
 - Short, URL-safe IDs: shortuuid
@@ -54,6 +54,10 @@ Pick parsy to write a parser for a small language as readable code. It [excels a
 ### sqlparse
 
 Pick sqlparse to split, format, or parse SQL without validating it. It [makes no assumptions about a particular SQL dialect](https://sqlparse.readthedocs.io/en/latest/), so vendor extensions and templated SQL parse too. Its [three main functions](https://sqlparse.readthedocs.io/en/latest/intro.html) are `split()`, `format()`, and `parse()`.
+
+### SQLGlot
+
+Pick SQLGlot to translate SQL between dialects, or to read and rewrite a query as an [expression tree](https://github.com/tobymao/sqlglot/blob/main/posts/ast_primer.md). Start with [`sqlglot.transpile()`](https://github.com/tobymao/sqlglot#formatting-and-transpiling), which takes your SQL with its `read` and `write` dialects. If you parse with `parse_one()`, [always pass the dialect when you know it](https://github.com/tobymao/sqlglot#faq), or valid SQL may fail to parse.
 
 ### phonenumbers
 
