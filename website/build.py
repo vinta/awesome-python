@@ -43,6 +43,7 @@ BUNDLED_PREFIX_RE = re.compile(r"^\(part of ")
 # Category intros name projects as their docs do, README entries by their PyPI name
 PICK_ALIASES = {
     "Airflow": "apache-airflow",
+    "AWS SDK for pandas": "awswrangler",
     "Beautiful Soup": "beautifulsoup4",
     "Cacheops": "django-cacheops",
     "Chroma": "chromadb",
@@ -62,6 +63,7 @@ PICK_ALIASES = {
     "Monty": "pydantic-monty",
     "OpenAI Agents SDK": "openai-agents",
     "OpenCV": "opencv-python",
+    "pgvector-python": "pgvector",
     "Playwright": "playwright-python",
     "PyAV": "av",
     "Python-Markdown": "markdown",
@@ -316,12 +318,13 @@ def link_pick_names(pick: str, slugs_by_key: dict[str, str]) -> str:
     while i < len(words):
         for j in range(min(len(words), i + 4), i, -1):
             start, end = words[i].start(), words[j - 1].end()
-            span = pick[start:end]
+            # A possessive like "Jinja's sandbox" links the name and leaves "'s" outside
+            span = pick[start:end].removesuffix("'s")
             slug = slugs_by_key.get(entry_name_key(span))
             # Code spans and dangling punctuation like "Django -" stay outside links
             if slug and span[0].isalnum() and span[-1].isalnum() and "," not in span and "`" not in span:
                 parts.append(f"{pick[pos:start]}[{span}](#entry-{slug})")
-                pos, i = end, j
+                pos, i = start + len(span), j
                 break
         else:
             i += 1

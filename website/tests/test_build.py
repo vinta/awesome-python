@@ -1672,6 +1672,12 @@ class TestLoadCategoryIntro:
         intro_html, _, _, _ = load_category_intro(path, ["Django"])
         assert "<li>Django for everything</li>" in intro_html
 
+    def test_links_a_possessive_pick(self, tmp_path):
+        path = tmp_path / "widgets.md"
+        path.write_text("Use w1.\n\nHow to choose:\n\n- Templates your users write: Jinja's sandbox\n", encoding="utf-8")
+        intro_html, _, _, _ = load_category_intro(path, ["jinja"])
+        assert '<li>Templates your users write: <a href="#entry-jinja">Jinja</a>\'s sandbox</li>' in intro_html
+
     def test_links_a_pick_continued_after_a_semicolon(self, tmp_path):
         path = tmp_path / "widgets.md"
         path.write_text("Use w1.\n\nHow to choose:\n\n- Django: Channels; Daphne serves it\n", encoding="utf-8")
