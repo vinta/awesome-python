@@ -8,6 +8,7 @@ How to choose:
 - Visual novels and other writing-heavy games: Ren'Py
 - Windowing, input, OpenGL, and sound, with no game engine on top: pyglet
 - Code already built on pygame: pygame
+- Retro pixel-art games, with image, tilemap, and sound editors built in: Pyxel
 
 ### pygame-ce
 
@@ -28,3 +29,7 @@ Pick Ren'Py for visual novels and other writing-heavy games. It comes with [the 
 ### pyglet
 
 Pick pyglet when you want the layer that [Arcade builds on](https://pyglet.readthedocs.io/en/latest/external_resources.html#arcade): [windowing, input, OpenGL graphics, and sound](https://pyglet.readthedocs.io/en/latest/) for games and other visually rich applications. For most games, it [needs nothing else besides Python](https://pyglet.org/). Start at [Writing a pyglet application](https://pyglet.readthedocs.io/en/latest/programming_guide/quickstart.html), which creates a `pyglet.window.Window` and lets pyglet's event loop call your handlers.
+
+### Pyxel
+
+Pick Pyxel for a retro-style pixel-art game, with the art and sound made in its own editors. Run `pyxel edit` to open [Pyxel Editor](https://github.com/kitao/pyxel/blob/main/docs/editor-manual.md), which draws images and tilemaps, composes sounds and music, and saves them to a resource file you load with `pyxel.load()`. Your script [calls `pyxel.init()` with the screen size](https://github.com/kitao/pyxel/blob/main/docs/user-guide.md#create-a-program), then `pyxel.run()` with an `update` function for each frame's state and a `draw` function for the screen.
