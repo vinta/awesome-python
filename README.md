@@ -617,6 +617,8 @@ _Libraries for scientific computing. Also see [Python-for-Scientists](https://gi
 - Other
   - [colour-science](https://github.com/colour-science/colour) - Implementing a comprehensive number of colour theory transformations and algorithms.
   - [manim](https://github.com/ManimCommunity/manim) - An animation engine for explanatory math videos.
+- Sustainability
+  - [EcoTrace](https://github.com/Zwony/ecotrace) - High-precision, process-scoped energy consumption and CO2 emissions measurement for Python applications and AI/LLM workloads via hardware counters (RAPL/NVML/Apple Silicon). MIT licensed, 100% offline.
 
 ### Quantum Computing
 
